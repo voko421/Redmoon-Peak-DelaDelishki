@@ -8,13 +8,21 @@
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	sharpness = IS_BLUNT
 	//dropshrink = 0.8
-	wlength = 10
+	wlength = WLENGTH_SHORT
 	slot_flags = ITEM_SLOT_HIP
 	w_class = WEIGHT_CLASS_NORMAL
 	associated_skill = /datum/skill/combat/maces
 	smeltresult = /obj/item/ash
 	grid_width = 32
 	grid_height = 64
+	var/quality = 1
+
+/obj/item/rogueweapon/hammer/attack_hand(mob/living/user)
+	if(HAS_TRAIT(user, TRAIT_CURSE_MALUM))
+		to_chat(user, span_warning("Your cursed hands burn at the touch of the hammer!"))
+		user.freak_out()
+		return
+	. = ..()
 
 /obj/item/rogueweapon/hammer/attack_obj(obj/attacked_object, mob/living/user)
 	if(!isliving(user) || !user.mind)
@@ -59,6 +67,8 @@
 			return
 		else
 			user.visible_message(span_warning("[user] fumbles trying to repair [attacked_prosthetic]!"))
+			if(do_after(user, CLICK_CD_MELEE, target = attacked_object))
+				attack_obj(attacked_object, user)
 			return
 
 	if(isitem(attacked_object) && !user.cmode)
@@ -104,7 +114,8 @@
 			return
 		else
 			user.visible_message(span_warning("[user] fumbles trying to repair [attacked_item]!"))
-			attacked_item.obj_integrity = max(0, attacked_item.obj_integrity - (10 - repair_percent))
+			if(do_after(user, CLICK_CD_MELEE, target = attacked_object))
+				attack_obj(attacked_object, user)
 			return
 
 	if(isstructure(attacked_object) && !user.cmode)
@@ -120,10 +131,11 @@
 		blacksmith.mind.add_sleep_experience(attacked_structure.hammer_repair, exp_gained) //We gain as much exp as we fix
 		playsound(src,'sound/items/bsmithfail.ogg', 100, FALSE)
 		user.visible_message(span_info("[user] repairs [attacked_structure]!"))
+		if(attacked_object.obj_integrity <= attacked_object.max_integrity && do_after(user, CLICK_CD_MELEE, target = attacked_object))
+			attack_obj(attacked_object, user)
 		return
 
 	. = ..()
-
 
 /obj/item/rogueweapon/hammer/attack(mob/living/M, mob/user)
 	testing("attack")
@@ -179,11 +191,14 @@
 
 /obj/item/rogueweapon/hammer/aalloy
 	name = "decrepit hammer"
-	desc = "A decrepit old hammer."
+	desc = "A hammer of wrought bronze. It has pounded out the beginning of a thousand legacies; of humble adventurers, of noble legionnaires, and of foolish heroes."
 	icon_state = "ahammer"
 	force = 12
 	max_integrity = 10
-	smeltresult = /obj/item/ingot/aalloy
+	smeltresult = /obj/item/ingot/aaslag
+	color = "#bb9696"
+	sellprice = 15
+
 
 
 /obj/item/rogueweapon/hammer/copper
@@ -261,7 +276,7 @@
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	sharpness = IS_BLUNT
 	//dropshrink = 0.8
-	wlength = 10
+	wlength = WLENGTH_SHORT
 	slot_flags = ITEM_SLOT_HIP
 	tool_behaviour = TOOL_IMPROVISED_HEMOSTAT
 	associated_skill = null
@@ -365,10 +380,13 @@
 
 /obj/item/rogueweapon/tongs/aalloy
 	name = "decrepit tongs"
+	desc = "Wrought bronze pincers the molten alloy, putting it before the anvil and hammer. Soon, it will fashion a new legacy; one unmarred by this dogmatic millenia."
 	icon_state = "atongs"
 	force = 5
 	smeltresult = null
 	max_integrity = 10
+	color = "#bb9696"
+	sellprice = 5
 
 /obj/item/rogueweapon/tongs/aalloy/update_icon()
 	. = ..()

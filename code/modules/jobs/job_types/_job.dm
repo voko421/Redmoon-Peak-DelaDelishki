@@ -133,6 +133,9 @@
 	///Jobs that are hidden from actor screen
 	var/hidden_job = FALSE
 
+	///Jobs that change their advclass examine as the user levels up.
+	var/adaptive_name = FALSE
+
 
 /*
 	How this works, its CTAG_DEFINE = amount_to_attempt_to_role
@@ -148,6 +151,9 @@
 
 	var/list/virtue_restrictions
 	var/list/vice_restrictions
+
+	//The job's stat UPPER ceilings, clamped after statpacks and job stats are applied.
+	var/list/stat_ceilings
 
 
 /datum/job/proc/special_job_check(mob/dead/new_player/player)
@@ -402,6 +408,14 @@
 	if(CONFIG_GET(flag/security_has_maint_access))
 		return list(ACCESS_MAINT_TUNNELS)
 	return list()
+
+/datum/job/proc/clamp_stats(var/mob/living/carbon/human/H)
+	if(length(stat_ceilings))
+		for(var/stat in stat_ceilings)
+			if(stat_ceilings[stat] < H.get_stat(stat))
+				H.change_stat(stat, (stat_ceilings[stat] - H.get_stat(stat)))
+				to_chat(H, "Your [stat] was reduced to \Roman[stat_ceilings[stat]].")
+
 
 // LETHALSTONE EDIT: Helper functions for pronoun-based clothing selection
 /proc/should_wear_masc_clothes(mob/living/carbon/human/H)

@@ -12,7 +12,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/horns/humanoid)
 	allows_disabling = TRUE
 
-/datum/customizer/organ/horns/humanoid/sissean
+/datum/customizer/organ/horns/humanoid/zardman
 	default_disabled = TRUE
 
 /datum/customizer_choice/organ/horns/humanoid
@@ -43,6 +43,7 @@
 		/datum/sprite_accessory/horns/smallramhornsalt,
 		/datum/sprite_accessory/horns/smallramhornsthree,
 		/datum/sprite_accessory/horns/liftedhorns,
+		/datum/sprite_accessory/horns/brokenliftedhorns,
 		/datum/sprite_accessory/horns/sideswept,
 		/datum/sprite_accessory/horns/bigcurlyhorns,
 		/datum/sprite_accessory/horns/billberry,
@@ -92,6 +93,7 @@
 		/datum/sprite_accessory/horns/smallramhornsalt,
 		/datum/sprite_accessory/horns/smallramhornsthree,
 		/datum/sprite_accessory/horns/liftedhorns,
+		/datum/sprite_accessory/horns/brokenliftedhorns,
 		/datum/sprite_accessory/horns/sideswept,
 		/datum/sprite_accessory/horns/bigcurlyhorns,
 		/datum/sprite_accessory/horns/billberry,
@@ -141,6 +143,7 @@
 		/datum/sprite_accessory/horns/smallramhornsalt,
 		/datum/sprite_accessory/horns/smallramhornsthree,
 		/datum/sprite_accessory/horns/liftedhorns,
+		/datum/sprite_accessory/horns/brokenliftedhorns,
 		/datum/sprite_accessory/horns/sideswept,
 		/datum/sprite_accessory/horns/bigcurlyhorns,
 		/datum/sprite_accessory/horns/billberry,

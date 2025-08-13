@@ -621,6 +621,8 @@
 		L.playsound_local(L, 'sound/misc/click.ogg', 100)
 		if(modifiers["right"])
 			L.submit()
+		else if(modifiers["middle"])
+			L.toggle_compliance()
 		else
 			L.toggle_cmode()
 			update_icon()
@@ -801,7 +803,7 @@
 			iris.icon_state = "oeye_fixed"
 		else
 			iris.icon_state = "oeye"
-	iris.color = "#" + human.eye_color
+	iris.color = human.get_eye_color()
 	. += iris
 
 /atom/movable/screen/eye_intent/proc/toggle(mob/user)
@@ -898,6 +900,8 @@
 	if(modifiers["right"])
 		if(master)
 			var/obj/item/flipper = usr.get_active_held_item()
+			if(!flipper)
+				return
 			if((!usr.Adjacent(flipper) && !usr.DirectAccess(flipper)) || !isliving(usr) || usr.incapacitated())
 				return
 			var/old_width = flipper.grid_width
@@ -1743,24 +1747,13 @@
 				hud_used.rmb_intent.collapse_intents()
 
 /mob/living/proc/cycle_rmb_intent()
-    if(!possible_rmb_intents?.len)
-        return
+	if(!possible_rmb_intents?.len)
+		return
 
-    // Find the index of the current intent
-    var/index = possible_rmb_intents.Find(rmb_intent)
+	// Find the index of the current intent
+	var/index = possible_rmb_intents.Find(rmb_intent?.type)
 
-    if(index == -1)
-        rmb_intent = possible_rmb_intents[1]
-    else
-        // Calculate the next index, wrapping around if at the end
-        index = (index % possible_rmb_intents.len) + 1
-        rmb_intent = possible_rmb_intents[index]
-
-    if(hud_used?.rmb_intent)
-    {
-        hud_used.rmb_intent.update_icon()
-        hud_used.rmb_intent.collapse_intents()
-    }
+	index == -1 ? swap_rmb_intent(possible_rmb_intents[1]) : swap_rmb_intent(possible_rmb_intents[(index % possible_rmb_intents.len) + 1])
 
 /atom/movable/screen/time
 	name = "Sir Sun"

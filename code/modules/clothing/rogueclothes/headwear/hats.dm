@@ -182,6 +182,9 @@
 	desc = "To keep ones vision away from the heavens, and focused on the sin beneath the soil."
 	icon_state = "inqhat"
 	item_state = "inqhat"
+	max_integrity = 150
+	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST)
+	armor = ARMOR_SPELLSINGER // spellsinger hat stats
 	sewrepair = TRUE
 
 /obj/item/clothing/head/roguetown/headband/red
@@ -193,6 +196,7 @@
 	icon_state = "priest"
 	//dropshrink = 0
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64.dmi'
 	dynamic_hair_suffix = "+generic"
 	sellprice = 77
 	worn_x_dimension = 64
@@ -254,6 +258,7 @@
 	desc = "Used to distinguish dangerous wizards from senile old men."
 	icon_state = "wizardhat"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64.dmi'
 	dynamic_hair_suffix = "+generic"
 	worn_x_dimension = 64
 	worn_y_dimension = 64

@@ -22,9 +22,9 @@
 
 /obj/item/clothing/ring/aalloy
 	name = "decrepit ring"
-	desc = "A decrepit old ring"
+	desc = "A coil of frayed bronze."
 	icon_state = "ring_a"
-	sellprice = 5
+	sellprice = 11
 
 
 /obj/item/clothing/ring/gold
@@ -132,9 +132,34 @@
 
 /obj/item/clothing/ring/signet
 	name = "Signet Ring"
+	name = "signet ring"
+	icon_state = "signet"
 	icon_state = "signet"
 	desc = "A large golden ring engraved with the Symbol of Psydon."
+	desc = "A large golden signet ring engraved with the Symbol of Psydon."
 	sellprice = 135
+	sellprice = 135
+	var/tallowed = FALSE
+
+/obj/item/clothing/ring/signet/silver
+	name = "silver signet ring"
+	icon_state = "signet_silver"
+	desc = "A ring of blessed silver, bearing the Archbishop's symbol. By dipping it in melted redtallow, it can seal writs of religious importance."
+	sellprice = 90
+
+/obj/item/clothing/ring/signet/attack_right(mob/user)
+	. = ..()
+	if(tallowed)
+		if(alert(user, "SCRAPE THE TALLOW OFF?", "SIGNET RING", "YES", "NO") != "NO")
+			tallowed = FALSE
+			update_icon()
+	
+/obj/item/clothing/ring/signet/update_icon()
+	. = ..()
+	if(tallowed)
+		icon_state = "[icon_state]_stamp"
+	else
+		icon_state = initial(icon_state)
 
 //silver rings
 /obj/item/clothing/ring/emeralds
@@ -235,3 +260,37 @@
 	. = ..()
 	if(!QDELETED(src))
 		dispel()
+
+/////////////////////////
+// Wedding Rings/Bands //
+/////////////////////////
+
+// These are meant to not be smelted down for anything or sell for much. Loadout items for roleplay, kinda simple.
+// Also, can rename their name/desc to put parnters name in it and stuff. Some customization. TODO: allow sprite selection between 2-3 types of wedding band sprites.
+/obj/item/clothing/ring/band
+	name = "silver weddingband"
+	desc = "A simple silver wedding band complete with an ornate design of a lover's name."
+	icon_state = "s_ring_wedding"
+	sellprice = 3	//You don't get to smelt this down or sell it. No free mams for a loadout item.
+	var/choicename = FALSE
+	var/choicedesc = FALSE
+
+/obj/item/clothing/ring/band/attack_right(mob/user)
+	if(choicename)
+		return
+	if(choicedesc)
+		return
+	var/current_time = world.time
+	var/namechoice = input(user, "Input a new name", "Rename Object")
+	var/descchoice = input(user, "Input a new description", "Describe Object")
+	if(namechoice)
+		name = namechoice
+		choicename = TRUE
+	if(descchoice)
+		desc = descchoice
+		choicedesc = TRUE
+	else
+		return
+	if(world.time > (current_time + 30 SECONDS))
+		return
+

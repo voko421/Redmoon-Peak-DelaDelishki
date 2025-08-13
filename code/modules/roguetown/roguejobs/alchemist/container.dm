@@ -14,6 +14,10 @@
 /obj/item/reagent_containers/glass/bottle/rogue/water
 	list_reagents = list(/datum/reagent/water = 48)
 
+
+/obj/item/reagent_containers/glass/bottle/mercury
+	list_reagents = list(/datum/reagent/mercury = 48)
+
 //vanderlin potion stuff//
 /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot
 	list_reagents = list(/datum/reagent/medicine/strongmana = 48)
@@ -65,6 +69,18 @@
 
 /obj/item/reagent_containers/glass/bottle/alchemical/healthpot
 	list_reagents = list(/datum/reagent/medicine/healthpot = 27)
+
+/obj/item/reagent_containers/glass/bottle/alchemical/healthpotnew
+	list_reagents = list(/datum/reagent/medicine/stronghealth = 27)
+
+/obj/item/reagent_containers/glass/bottle/alchemical/blessedwater
+	list_reagents = list(/datum/reagent/water/blessed = 27)	
+
+/obj/item/reagent_containers/glass/bottle/alchemical/manapot
+	list_reagents = list(/datum/reagent/medicine/manapot = 27)
+
+/obj/item/reagent_containers/glass/bottle/alchemical/strongmanapot
+	list_reagents = list(/datum/reagent/medicine/strongmana = 27)	
 
 //////////////////////////
 /// ALCOHOLIC BOTTLES ///
@@ -213,6 +229,14 @@
 /obj/item/reagent_containers/glass/bottle/rogue/beer/nocshine
 	list_reagents = list(/datum/reagent/consumable/ethanol/nocshine = 48)
 	desc = "A bottle with a blue, Crescent moon mark. A special brew that is extremely potent and toxic, but strengthen the body. If you dare."
+
+/obj/item/reagent_containers/glass/bottle/rogue/beer/whipwine
+	list_reagents = list(/datum/reagent/consumable/ethanol/whipwine = 48)
+	desc = "A strange bottle with a concerningly brown color. It bears the seal of a snake's head over a leaf. Markings indicate the contents are supposed to be good for health..."
+
+/obj/item/reagent_containers/glass/bottle/rogue/beer/komuchisake
+	list_reagents = list(/datum/reagent/consumable/ethanol/komuchisake = 48)
+	desc = "A dusty, ancient bottle with a red-ochre coloring. It bears an intricately detailed golden skull seal, and the markings on it are clearly of the Shogunate. It looks to be filled with herbs inside."
 
 		//////////////////////////
 		/// CLAY BOTTLES ///

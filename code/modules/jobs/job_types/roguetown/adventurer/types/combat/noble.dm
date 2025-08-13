@@ -29,13 +29,13 @@
 			neck = /obj/item/storage/belt/rogue/pouch/coins/rich
 			id = /obj/item/clothing/ring/silver
 			beltl = /obj/item/rogueweapon/sword/sabre/dec
+			l_hand = /obj/item/rogueweapon/scabbard/sword
 			if(should_wear_masc_clothes(H))
 				cloak = /obj/item/clothing/cloak/half/red
 				shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/red
 				pants = /obj/item/clothing/under/roguetown/tights/black
 			if(should_wear_femme_clothes(H))
 				shirt = /obj/item/clothing/suit/roguetown/shirt/dress/gen/purple
-				pants = /obj/item/clothing/under/roguetown/tights/stockings/silk/purple
 				cloak = /obj/item/clothing/cloak/raincloak/purple
 			H.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
@@ -124,6 +124,7 @@
 				if("Longsword")
 					H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 					beltr = /obj/item/rogueweapon/sword/long
+					r_hand = /obj/item/rogueweapon/scabbard/sword
 				if("Mace + Shield")
 					H.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
 					H.adjust_skillrank(/datum/skill/combat/shields, 1, TRUE)

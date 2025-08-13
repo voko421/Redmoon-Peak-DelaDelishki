@@ -63,10 +63,10 @@
 	verbage = "unties"
 
 /datum/crafting_recipe/roguetown/survival/clothsash
-	name = "fine sash (3 fibers, 1 goat fur)"
+	name = "fine sash (3 cloth, 1 silk)"
 	result = /obj/item/storage/belt/rogue/leather/sash
-	reqs = list(/obj/item/natural/fibers = 3,
-				/obj/item/natural/fur/goat = 1)
+	reqs = list(/obj/item/natural/cloth = 3,
+				/obj/item/natural/silk = 1)
 	craftdiff = 3
 
 /datum/crafting_recipe/roguetown/survival/ropebelt
@@ -359,7 +359,7 @@
 
 /datum/crafting_recipe/roguetown/survival/dye_brush
 	name = "dye brush"
-	result = /obj/item/needle
+	result = /obj/item/dye_brush
 	reqs = list(
 		/obj/item/grown/log/tree/stick = 2,
 		/obj/item/natural/fur = 1
@@ -390,7 +390,10 @@
 
 /datum/crafting_recipe/roguetown/survival/woodshaft
 	name = "wood shaft x2"
-	result = /obj/item/shaft/wood
+	result = list(
+		/obj/item/shaft/wood,
+		/obj/item/shaft/wood
+	)
 	tools = list(/obj/item/rogueweapon/huntingknife)
 	reqs = list(/obj/item/grown/log/tree/small = 1)
 	skillcraft = /datum/skill/craft/carpentry
@@ -454,3 +457,15 @@
 		)
 	skillcraft = /datum/skill/craft/cooking
 	craftdiff = 4
+
+/datum/crafting_recipe/roguetown/survival/cheele
+	name = "cheele (1x)"
+	result = list(
+		/obj/item/natural/worms/leech/cheele
+		)
+	reqs = list(
+		/obj/item/reagent_containers/lux = 1,
+		/obj/item/natural/worms/leech = 1,
+		)
+	skillcraft = /datum/skill/misc/medicine
+	craftdiff = SKILL_LEVEL_EXPERT

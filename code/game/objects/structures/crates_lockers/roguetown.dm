@@ -19,11 +19,17 @@
 	icon_state = "chest3"
 	base_icon_state = "chest3"
 
-/obj/structure/closet/crate/chest/reliquary
-	name = "Otavan Reliquary"
+/obj/structure/closet/crate/chest/inqreliquary
+	name = "otavan reliquary"
 	desc = "A foreboding red chest with a intricate lock design. It seems to only fit a very specific key. Choose wisely."
 	icon_state = "chestweird1"
 	base_icon_state = "chestweird1"
+
+/obj/structure/closet/crate/chest/inqcrate
+	name = "otavan chest"
+	desc = "A foreboding red chest with black dye-washed silver embellishments."
+	icon_state = "chestweird2"
+	base_icon_state = "chestweird2"	
 
 //obj/structure/closet/crate/chest/Initialize(mapload)
 //	. = ..()
@@ -180,3 +186,35 @@
 	else
 		base_icon_state = "drawer1"
 		pixel_y = 8
+/**
+ * Closet preset for the duke ().
+ * When opened for the first time by the ruler mob - spawns the blacksteel armor set.
+ * Done to prevent nobles taking regency just to loot blacksteel
+*/
+/obj/structure/closet/crate/roguecloset/lord/duke_preset
+	desc = "Covered in strange runic symbols that seem to pulse with some sort of energy in the dark."
+	/// Set to TRUE after it has spawned the gear.
+	var/has_spawned_gear = FALSE
+
+/obj/structure/closet/crate/roguecloset/lord/duke_preset/Initialize()
+	. = ..()
+	RegisterSignal(SSdcs, COMSIG_TICKER_RULERMOB_SET, PROC_REF(spawn_blacksteel))
+
+/obj/structure/closet/crate/roguecloset/lord/duke_preset/Destroy()
+	UnregisterSignal(SSdcs, COMSIG_TICKER_RULERMOB_SET)
+	return ..()
+
+/obj/structure/closet/crate/roguecloset/lord/duke_preset/proc/spawn_blacksteel(mob/living/user)
+	if(has_spawned_gear)
+		return
+
+	new /obj/item/rogueweapon/sword/long/judgement(get_turf(src))
+	new /obj/item/clothing/wrists/roguetown/bracers(get_turf(src))
+	new /obj/item/storage/belt/rogue/leather/steel/tasset(get_turf(src))
+	new /obj/item/clothing/gloves/roguetown/blacksteel/modern/plategloves(get_turf(src))
+	new /obj/item/clothing/head/roguetown/helmet/blacksteel/modern/armet(get_turf(src))
+	new /obj/item/clothing/shoes/roguetown/boots/blacksteel/modern/plateboots(get_turf(src))
+	new /obj/item/clothing/suit/roguetown/armor/plate/modern/blacksteel_full_plate(get_turf(src))
+	new /obj/item/clothing/under/roguetown/platelegs/blacksteel/modern(get_turf(src))
+	has_spawned_gear = TRUE
+	close()

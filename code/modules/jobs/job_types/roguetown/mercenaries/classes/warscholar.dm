@@ -69,13 +69,12 @@
 				H.change_stat("speed", -1)
 				H.change_stat("intelligence", 1)
 				H.change_stat("perception", 1)
-				H?.mind.adjust_spellpoints(6)
+				H.mind?.adjust_spellpoints(6)
 			H.change_stat("endurance", 2)
 			H.change_stat("speed", 2)
 			H.change_stat("constitution", -1)
 			H.change_stat("perception", 1)
 			H.change_stat("intelligence", 3)
-			H?.mind.adjust_spellpoints(15)
 			ADD_TRAIT(H, TRAIT_MAGEARMOR, TRAIT_GENERIC)
 			ADD_TRAIT(H, TRAIT_ARCYNE_T3, TRAIT_GENERIC)
 			if(H.mind)
@@ -86,6 +85,7 @@
 				H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/haste)
 				H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/fortitude)
 				H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/forcewall/greater)
+				H.mind.adjust_spellpoints(15)
 			r_hand = /obj/item/rogueweapon/woodstaff/naledi
 
 
@@ -95,9 +95,10 @@
 			shirt = /obj/item/clothing/suit/roguetown/shirt/robe/hierophant
 			pants = /obj/item/clothing/under/roguetown/trou/leather
 			backpack_contents = list(
-				/obj/item/roguekey/mercenary,
-				/obj/item/rogueweapon/huntingknife/idagger,
-				/obj/item/spellbook_unfinished/pre_arcyne,
+				/obj/item/roguekey/mercenary = 1,
+				/obj/item/rogueweapon/huntingknife/idagger = 1,
+				/obj/item/spellbook_unfinished/pre_arcyne = 1,
+				/obj/item/rogueweapon/scabbard/sheath = 1
 				)
 
 		if("Pontifex")
@@ -138,7 +139,12 @@
 			armor = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/pontifex
 			shirt = /obj/item/clothing/suit/roguetown/shirt/robe/pointfex
 			pants = /obj/item/clothing/under/roguetown/trou/leather/pontifex
-			backpack_contents = list(/obj/item/roguekey/mercenary,/obj/item/lockpick = 1,/obj/item/rogueweapon/huntingknife)
+			backpack_contents = list(
+				/obj/item/roguekey/mercenary = 1,
+				/obj/item/lockpick = 1,
+				/obj/item/rogueweapon/huntingknife = 1,
+				/obj/item/rogueweapon/scabbard/sheath = 1
+				)
 
 		if("Vizier")
 			H.set_blindness(0)
@@ -174,7 +180,11 @@
 			H.grant_language(/datum/language/celestial)
 			shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
 
-			backpack_contents = list(/obj/item/roguekey/mercenary,/obj/item/rogueweapon/huntingknife)
+			backpack_contents = list(
+				/obj/item/roguekey/mercenary = 1,
+				/obj/item/rogueweapon/huntingknife = 1,
+				/obj/item/rogueweapon/scabbard/sheath = 1
+				)
 			
 			var/datum/devotion/C = new /datum/devotion(H, H.patron)
 			C.grant_miracles(H, cleric_tier = CLERIC_T4, passive_gain = CLERIC_REGEN_MAJOR, start_maxed = TRUE)	//Starts off maxed out.
@@ -185,6 +195,8 @@
 				H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/regression)
 				H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/convergence)
 				H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/stasis)
+			
+			H.merctype = 14
 
 
 

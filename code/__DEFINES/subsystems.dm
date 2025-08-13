@@ -120,6 +120,7 @@
 #define INIT_ORDER_TICKER			55
 #define INIT_ORDER_MAPPING			50
 #define INIT_ORDER_NETWORKS			45
+#define INIT_ORDER_SPATIAL_GRID     43
 #define INIT_ORDER_ECONOMY			40
 #define INIT_ORDER_OUTPUTS			35
 #define INIT_ORDER_ATOMS			30
@@ -146,11 +147,11 @@
 // Subsystem fire priority, from lowest to highest priority
 // If the subsystem isn't listed here it's either DEFAULT or PROCESS (if it's a processing subsystem child)
 
+#define FIRE_PRIORITY_IDLE_NPC		5
 #define FIRE_PRIORITY_ROLE_CLASS_HANDLER 10
 #define FIRE_PRIORITY_PING			10
 #define FIRE_PRIORITY_WET_FLOORS	10
 #define FIRE_PRIORITY_WATER_LEVEL	10
-#define FIRE_PRIORITY_IDLE_NPC		10
 #define FIRE_PRIORITY_SERVER_MAINT	10
 #define FIRE_PRIORITY_RESEARCH		10
 #define FIRE_PRIORITY_VIS			10
@@ -160,6 +161,7 @@
 #define FIRE_PRIORITY_MOUSECHARGE	20
 #define FIRE_PRIORITY_HOTSPOTS		20
 #define FIRE_PRIORITY_NPC			20
+#define FIRE_PRIORITY_ASSETS		20
 #define FIRE_PRIORITY_NPC_MOVEMENT 	21
 #define FIRE_PRIORITY_NPC_ACTIONS 	22
 #define FIRE_PRIORITY_PROCESS		25

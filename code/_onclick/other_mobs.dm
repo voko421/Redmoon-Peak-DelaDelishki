@@ -112,20 +112,14 @@
 //	if(!user.Adjacent(src)) //alreadyu checked in rmb_on
 //		return
 	user.face_atom(src)
-	if(user.cmode)
-		if(user.rmb_intent && istype(user.rmb_intent))
-			user.rmb_intent.special_attack(user, src)
-	else
+	if(!user.cmode)
 		user.changeNext_move(CLICK_CD_RAPID)
 		ongive(user, params)
 
 /turf/attack_right(mob/user, params)
 	. = ..()
 	user.face_atom(src)
-	if(user.cmode)
-		if(user.rmb_intent && istype(user.rmb_intent))
-			user.rmb_intent.special_attack(user, src)
-	else
+	if(!user.cmode)
 		user.changeNext_move(CLICK_CD_RAPID)
 
 /atom/proc/ongive(mob/user, params)
@@ -408,7 +402,7 @@
 					return
 				if(src.incapacitated())
 					return
-				if(!get_location_accessible(src, BODY_ZONE_PRECISE_MOUTH, grabs="other"))
+				if(!get_location_accessible(src, BODY_ZONE_PRECISE_MOUTH, grabs="other") && (!HAS_TRAIT(src, TRAIT_BITERHELM)))
 					to_chat(src, span_warning("My mouth is blocked."))
 					return
 				if(HAS_TRAIT(src, TRAIT_NO_BITE))
@@ -609,8 +603,8 @@
 		return
 
 	if(pulledby && pulledby != src)
-		to_chat(src, span_warning("I'm being grabbed."))
-		resist_grab()
+		to_chat(src, span_warning("I can't jump while being grabbed."))
+		resist()
 		return
 
 	if(IsOffBalanced())

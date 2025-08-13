@@ -40,7 +40,8 @@
 	switch(classchoice)
 		if("Swordsman")
 			H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
-			beltl = /obj/item/rogueweapon/sword/falchion
+			beltl = /obj/item/rogueweapon/scabbard/sword
+			l_hand = /obj/item/rogueweapon/sword/short/falchion
 		if("Macebearer")
 			H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
 			beltl = /obj/item/rogueweapon/mace/steel/morningstar
@@ -71,3 +72,4 @@
 	
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
+	H.merctype = 10

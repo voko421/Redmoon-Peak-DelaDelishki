@@ -23,7 +23,7 @@
 	W.gender = gender
 	W.regenerate_icons()
 	W.stored_mob = src
-	W.cmode_music = 'sound/music/combat_druid.ogg'
+	W.cmode_music = 'sound/music/cmode/garrison/combat_warden.ogg'
 	playsound(W.loc, pick('sound/combat/gib (1).ogg','sound/combat/gib (2).ogg'), 200, FALSE, 3)
 	W.spawn_gibs(FALSE)
 	src.forceMove(W)
@@ -35,6 +35,8 @@
 	W.stored_experience = ensure_skills().skill_experience.Copy()
 	W.stored_spells = mind.spell_list.Copy()
 	W.voice_color = voice_color
+	W.cmode_music_override = cmode_music_override
+	W.cmode_music_override_name = cmode_music_override_name
 	mind.transfer_to(W)
 	skills?.known_skills = list()
 	skills?.skill_experience = list()

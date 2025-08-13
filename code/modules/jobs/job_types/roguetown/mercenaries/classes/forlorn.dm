@@ -26,6 +26,7 @@
 	backpack_contents = list(
 		/obj/item/rogueweapon/huntingknife,
 		/obj/item/roguekey/mercenary,
+		/obj/item/rogueweapon/scabbard/sheath
 		)
 	
 	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
@@ -47,3 +48,4 @@
 	H.change_stat("endurance", 3) // tuff boys
 	H.change_stat("constitution", 2) 
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+	H.merctype = 5

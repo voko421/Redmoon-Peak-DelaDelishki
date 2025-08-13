@@ -3,7 +3,6 @@
 /datum/supply_pack/rogue/steel_weapons
 	group = "Weapons (Steel)"
 	crate_name = "merchant guild's crate"
-	mandated_public_profit = 1 // 100% Mandatory Profit Margin on top
 	crate_type = /obj/structure/closet/crate/chest/merchant
 
 /datum/supply_pack/rogue/steel_weapons/dagger
@@ -53,7 +52,7 @@
 	name = "Falchion"
 	cost = 40 // 1 Steel Ingot
 	contains = list(
-					/obj/item/rogueweapon/sword/falchion,
+					/obj/item/rogueweapon/sword/short/falchion,
 				)
 
 /datum/supply_pack/rogue/steel_weapons/messer
@@ -87,7 +86,7 @@
 				)
 
 /datum/supply_pack/rogue/steel_weapons/kriegmesser
-	name = "Kriegmesser"
+	name = "Kriegsmesser"
 	cost = 70 // 2 Steel Ingot
 	contains = list(
 					/obj/item/rogueweapon/sword/long/kriegmesser,

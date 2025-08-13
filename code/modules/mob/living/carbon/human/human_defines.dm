@@ -46,9 +46,9 @@
 	var/accessory = "None"
 	var/detail = "None"
 	var/marking = "None"
-
+	
 	var/shavelevel = 0
-
+	var/breathe_tick = 0 // Used for gas mask delays.
 	var/socks = "Nude" //Which socks the player wants
 	var/backpack = DBACKPACK		//Which backpack type the player has chosen.
 	var/jumpsuit_style = PREF_SUIT		//suit/skirt
@@ -71,6 +71,9 @@
 	var/special_voice = "" // For changing our voice. Used by a symptom.
 
 	var/name_override //For temporary visible name changes
+
+	var/merctype = 0 // Used for mercenary backgrounds - check mail.dm
+	var/tokenclaimed = FALSE // Check for having received my medal. FUTURE: Persistent medals.
 
 	var/datum/physiology/physiology
 
@@ -116,8 +119,6 @@
 	var/is_legacy = FALSE
 	var/received_resident_key = FALSE
 
-	var/has_confessed = FALSE // Used to track if they have confessed it was written onto a confession paper
-
 	possible_rmb_intents = list(/datum/rmb_intent/feint,\
 	/datum/rmb_intent/aimed,\
 	/datum/rmb_intent/strong,\
@@ -134,3 +135,6 @@
 
 	/// Whether our FOV cone is overridden to be hidden. Simple bool.
 	var/viewcone_override
+
+	/// Whether our job title is adaptive to our skills.
+	var/adaptive_name

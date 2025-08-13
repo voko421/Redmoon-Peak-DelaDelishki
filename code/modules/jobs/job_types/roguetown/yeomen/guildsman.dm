@@ -22,6 +22,7 @@
 	max_pq = null
 	round_contrib_points = 3
 	advjob_examine = TRUE // So that everyone know which subjob they have picked
+	cmode_music = 'sound/music/cmode/towner/combat_towner3.ogg'
 
 /datum/job/roguetown/guildsman/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	. = ..()
@@ -143,6 +144,8 @@
 						/obj/item/recipe_book/ceramics = 1,
 						/obj/item/recipe_book/builder = 1,
 						/obj/item/recipe_book/survival = 1,
+						/obj/item/recipe_book/magic = 1,
+						/obj/item/chalk = 1,
 						)
 	// Not a real mage, no free spell point. Take Arcyne Potential if you want it.
 	if(H.mind)

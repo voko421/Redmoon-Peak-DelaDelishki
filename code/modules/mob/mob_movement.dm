@@ -111,6 +111,8 @@
 		return FALSE
 	else if(mob.is_shifted)
 		mob.unpixel_shift()
+	
+	mob.last_client_interact = world.time
 
 	var/mob/living/L = mob  //Already checked for isliving earlier
 	if(L.incorporeal_move)	//Move though walls
@@ -245,9 +247,18 @@
 			return FALSE
 		if (M.grab_state > GRAB_PASSIVE)
 			return FALSE
+		if (L.compliance)
+			return FALSE
 		move_delay = world.time + 10
 		to_chat(src, span_warning("[L] still has footing! I need a stronger grip!"))
 		return TRUE    
+
+	if(isanimal(mob.pulling))
+		var/mob/living/simple_animal/bound = mob.pulling
+		if(bound.binded)
+			move_delay = world.time + 10
+			to_chat(src, span_warning("[bound] is bound in a summoning circle. I can't move them!"))
+			return TRUE
 
 	if(isanimal(mob.pulling))
 		var/mob/living/simple_animal/bound = mob.pulling

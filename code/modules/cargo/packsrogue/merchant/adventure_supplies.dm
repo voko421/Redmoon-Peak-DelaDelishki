@@ -21,6 +21,11 @@
 	cost = 13
 	contains = list(/obj/item/storage/backpack/rogue/satchel)
 
+/datum/supply_pack/rogue/adventure_supplies/satchel
+	name = "Satchel, Short"
+	cost = 13
+	contains = list(/obj/item/storage/backpack/rogue/satchel/short)
+
 /datum/supply_pack/rogue/adventure_supplies/backpack
 	name = "Backpack"
 	cost = 18
@@ -43,6 +48,20 @@
 					/obj/item/storage/belt/rogue/leather,
 				)
 
+/datum/supply_pack/rogue/adventure_supplies/sheath
+	name = "Sheath"
+	cost = 12
+	contains = list(
+					/obj/item/rogueweapon/scabbard/sheath
+				)
+
+/datum/supply_pack/rogue/adventure_supplies/scabbard
+	name = "Scabbard"
+	cost = 15
+	contains = list(
+					/obj/item/rogueweapon/scabbard/sword
+				)
+
 /datum/supply_pack/rogue/adventure_supplies/ropes
 	name = "Ropes"
 	cost = 10
@@ -51,6 +70,7 @@
 					/obj/item/rope,
 					/obj/item/rope,
 				)
+
 /datum/supply_pack/rogue/adventure_supplies/woodstaff
 	name = "Six Foot Pole"
 	cost = 6

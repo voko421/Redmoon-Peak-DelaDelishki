@@ -539,7 +539,7 @@
 		stat("PER: \Roman [STAPER]")
 		stat("INT: \Roman [STAINT]")
 		stat("CON: \Roman [STACON]")
-		stat("END: \Roman [STAEND]")
+		stat("WIL: \Roman [STAWIL]")
 		stat("SPD: \Roman [STASPD]")
 		stat("FOR: \Roman [STALUC]")
 		stat("PATRON: [patron]")

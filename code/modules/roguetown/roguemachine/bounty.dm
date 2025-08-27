@@ -175,13 +175,13 @@
 	new_bounty.target_race = race
 	new_bounty.target_height = lowertext(descriptor_height)
 	new_bounty.target_body = lowertext(descriptor_body)
-	if(descriptor_body == "Average" || "Athletic")
+	if(descriptor_body == "Average" || descriptor_body == "Athletic")
 		var/bro_unreal = "an "
 		new_bounty.target_body_prefix = lowertext(bro_unreal += descriptor_body)
 	else
 		var/bro_real = "a "
 		new_bounty.target_body_prefix = lowertext(bro_real += descriptor_body)
-	if(descriptor_voice == "Ordinary" || "Anrdogynous")
+	if(descriptor_voice == "Ordinary" || descriptor_voice == "Androgynous")
 		var/bro_unreal = "an "
 		new_bounty.target_voice_prefix = lowertext(bro_unreal += descriptor_voice)
 	else

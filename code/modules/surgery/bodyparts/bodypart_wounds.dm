@@ -120,8 +120,9 @@
 
 /// Called after a bodypart is attacked so that wounds and critical effects can be applied
 /obj/item/bodypart/proc/bodypart_attacked_by(bclass = BCLASS_BLUNT, dam, mob/living/user, zone_precise = src.body_zone, silent = FALSE, crit_message = FALSE, armor)
+	RETURN_TYPE(/datum/wound)
 	if(!bclass || !dam || !owner || (owner.status_flags & GODMODE))
-		return FALSE
+		return null
 	var/do_crit = TRUE
 	var/acheck_dflag
 	switch(bclass)
@@ -197,7 +198,7 @@
 	if(user && dam)
 		if(user.goodluck(2))
 			dam += 10
-	if((bclass = BCLASS_PUNCH) && (user && dam))
+	if((bclass == BCLASS_PUNCH) && (user && dam))
 		if(user && HAS_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN))
 			dam += 15
 	if(bclass in GLOB.dislocation_bclasses)

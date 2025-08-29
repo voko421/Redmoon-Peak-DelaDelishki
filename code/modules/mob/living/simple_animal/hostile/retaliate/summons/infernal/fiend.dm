@@ -19,6 +19,7 @@
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	health = 700
 	maxHealth = 700
+	obj_damage = 150
 	melee_damage_lower = 20
 	melee_damage_upper = 30
 	vision_range = 7
@@ -99,8 +100,8 @@
 
 /mob/living/simple_animal/hostile/retaliate/rogue/infernal/fiend/proc/callforbackup()
 	var/list/spawnLists = list(/mob/living/simple_animal/hostile/retaliate/rogue/infernal/imp,
-	/mob/living/simple_animal/hostile/retaliate/rogue/infernal/imp, 
-	/mob/living/simple_animal/hostile/retaliate/rogue/infernal/hellhound, 
+	/mob/living/simple_animal/hostile/retaliate/rogue/infernal/imp,
+	/mob/living/simple_animal/hostile/retaliate/rogue/infernal/hellhound,
 	/mob/living/simple_animal/hostile/retaliate/rogue/infernal/hellhound)
 	var/reinforcement_count = 3
 	src.visible_message(span_notice("[src] summons reinforcements from the infernal abyss."))

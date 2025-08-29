@@ -557,6 +557,8 @@ GLOBAL_LIST(teleport_runes)
 	ritual_number = TRUE
 	icon_state = "summon"
 	invocation = "Rhegal vex'ultraa!"
+	max_integrity = 0
+	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	tier = 1
 	can_be_scribed = TRUE
 	var/summoning = FALSE

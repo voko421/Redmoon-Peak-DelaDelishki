@@ -19,6 +19,7 @@
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	health = 1500
 	maxHealth = 1500
+	obj_damage = 150
 	melee_damage_lower = 40
 	melee_damage_upper = 70
 	vision_range = 7

@@ -363,9 +363,9 @@
 	desc = "You feel grounded and steady, as if strength coils beneath your skin."
 
 /mob/living/simple_animal/pet/familiar/starfield_crow
-	name = "Starfield Crow"
+	name = "Starfield Zad"
 	desc = "Its glossy feathers shimmer with shifting constellations, eyes gleaming with uncanny awareness even in the darkest shadows."
-	summoning_emote = "A rift in the air reveals a fragment of the starry void, from which a sleek crow with feathers like the night sky takes flight."
+	summoning_emote = "A rift in the air reveals a fragment of the starry void, from which a sleek zad with feathers like the night sky takes flight."
 	animal_species = "Starfield Crow"
 	//buff_given = /datum/status_effect/buff/familiar/starseam
 	pass_flags = PASSTABLE | PASSMOB
@@ -600,8 +600,8 @@
     emote_see = list("darts under a nearby object.", "sits up and looks around.", "twitches its tail.")
 
 /mob/living/simple_animal/pet/familiar/crow
-    name = "Crow"
-    desc = "A clever black crow, watchful and resourceful, known for its sharp eyes and love of shiny things."
+    name = "Zad"
+    desc = "A clever black zad, watchful and resourceful, known for its sharp eyes and love of shiny things."
     animal_species = "Crow"
     icon = 'icons/roguetown/mob/monster/crow.dmi'
     icon_state = "crow_flying"
@@ -614,7 +614,7 @@
     STAEND = 6
     STASPD = 7
     STALUC = 7
-    summoning_emote = "A black feather flutters down as a crow lands nearby with a caw."
+    summoning_emote = "A black feather flutters down as a zad lands nearby with a caw."
     speak = list("Caw!", "Kraa.", "Crrk.")
     speak_emote = "caws"
     emote_hear = list("caws.", "clicks its beak.", "ruffles its feathers.")

@@ -139,6 +139,7 @@
 
 			if (!pref)
 				to_chat(user, span_warning("That familiar is no longer available."))
+				GLOB.familiar_queue -= target
 				continue
 
 			show_familiar_preview(user, pref)
@@ -152,6 +153,7 @@
 			if (!target || (!isobserver(target.mob) && !isnewplayer(target.mob)))
 				to_chat(user, span_warning("That familiar is no longer available."))
 				user.busy_summoning_familiar = FALSE
+				GLOB.familiar_queue -= target
 				revert_cast()
 				return FALSE
 

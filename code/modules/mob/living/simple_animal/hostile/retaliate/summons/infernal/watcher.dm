@@ -44,7 +44,7 @@
 	aggressive = 1
 //	stat_attack = UNCONSCIOUS
 	ranged = TRUE
-	rapid = 3
+	rapid = 2
 	ranged_cooldown = 40
 	projectiletype = /obj/projectile/magic/aoe/fireball/spitfire
 	ranged_message = "stares"

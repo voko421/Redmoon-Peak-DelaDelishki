@@ -59,6 +59,10 @@
 			bounty_total = rand(200, 300)
 		if("Horrific atrocities")
 			bounty_total = rand(300, 400) // Let's not make it TOO profitable
+			if(bounty_poster == "The Justiciary of Azuria")
+				GLOB.outlawed_players += H.real_name
+			else
+				GLOB.excommunicated_players += H.real_name
 	var/my_crime = input(H, "What is your crime?", "Crime") as text|null
 	if (!my_crime)
 		my_crime = "crimes against the Crown"

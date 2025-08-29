@@ -143,8 +143,8 @@
 
 /datum/crafting_recipe/roguetown/structure/activator
 	name = "engineer's launcher"
-	result = /obj/structure/activator
-	reqs = list(/obj/item/roguegear = 1, /obj/item/natural/wood/plank = 4, /obj/item/ingot/iron = 1)
+	result = /obj/structure/englauncher
+	reqs = list(/obj/item/roguegear = 1, /obj/item/natural/wood/plank = 4, /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow = 1)
 	verbage_simple = "engineer"
 	verbage = "engineers"
 	skillcraft = /datum/skill/craft/engineering

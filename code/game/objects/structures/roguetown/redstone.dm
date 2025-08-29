@@ -15,35 +15,89 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 				S.redstone_attached |= src
 
 /obj/structure/multitool_act(mob/living/user, obj/item/I)
+	var/obj/item/contraption/linker/multitool = I
+	var/guildmasteroverride = FALSE
+	var/trigger_structure = FALSE //if the source is something like a lever or pressure plate or some other item
+	var/trigger_buffer = FALSE //if the buffer is something like a lever or pressure plate or some other item
+	var/reaction_structure = FALSE //if the source is something like a gate or a trapdoor
+	var/reaction_buffer = FALSE //if the buffer is something like a gate or a trapdoor
 	. = ..()
 	if(!redstone_structure)
 		return
 	if(!istype(I, /obj/item/contraption/linker))
 		return
-	var/obj/item/contraption/linker/multitool = I
+	if(istype(I, /obj/item/contraption/linker/master))
+		guildmasteroverride = TRUE //this is for the guildmaster's wrench
 	if(!multitool.current_charge)
 		return
+	//check if the target is a trigger or a reaction
+	if ((istype(src, /obj/structure/pressure_plate)) || (istype(src, /obj/structure/lever)))
+		trigger_structure = TRUE
+		reaction_structure = FALSE
+	else 
+		reaction_structure = TRUE
+		trigger_structure = FALSE
+
+	//check if the buffer is a trigger or reaction
+	if ((istype(multitool.buffer, /obj/structure/pressure_plate)) || (istype(multitool.buffer, /obj/structure/lever)))
+		trigger_buffer = TRUE
+		reaction_buffer = FALSE
+	else 
+		if (isnull(multitool.buffer)) //we need to check if the buffer is empty
+			reaction_buffer = FALSE
+			trigger_buffer = FALSE
+		else
+			reaction_buffer = TRUE
+			trigger_buffer = FALSE
+
+	// no linking two levers together
+	if ((trigger_structure && trigger_buffer) && !(src == multitool.buffer))
+		to_chat(user, "You can't link two triggers together")
+		return
+
+	//no linking two gates together
+	if ((reaction_buffer && reaction_structure) && !(src == multitool.buffer))
+		to_chat(user, "You can't link two signal receivers directly together")
+		return
+
+	//check the skill level, someone needs a bit of engineering skill at least
 	if(user.get_skill_level(/datum/skill/craft/engineering) < 3)
 		to_chat(user, span_warning("I have no idea how to use [multitool]!"))
 		return
 	user.visible_message("[user] starts tinkering with [src].", "You start tinkering with [src].")
 	if(!do_after(user, 3 SECONDS, src))
 		return
-	//var/turf/front = get_turf(src)
+
+	if (reaction_structure && !guildmasteroverride && src.redstone_attached.len >= 1 ) //checks if our target is a gate or trap door with prior connections
+		to_chat(user, "Already linked to another network") //prevents multiple linkings unless its the guildmaster's wrench
+		return
+
 	if(isstructure(multitool.buffer))
 		var/obj/structure/buffer_structure = multitool.buffer
 		if(src == buffer_structure)
-			to_chat(user, "You uncalibrate [src] from all its connections.")
-			for(var/obj/structure/O in redstone_attached)
-				O.redstone_attached -= src
-				redstone_attached -= O
-			GLOB.redstone_objs -= src
+			if (guildmasteroverride)
+				for(var/obj/structure/O in redstone_attached) //the guild master wrench can clear all patterns
+					O.redstone_attached -= src
+					redstone_attached -= O
+				GLOB.redstone_objs -= src
+				to_chat(user, "I wipe out all connections to [src]")
+			else
+				to_chat(user, "[src] cannot be calibrated to itself")
+			return
+		if (reaction_structure && !guildmasteroverride && src.redstone_attached.len >= 1) //checks if a structure is a gate or trap door with prior connections
+			to_chat(user, "Already linked to another network") //prevent multiple linkings unless it's the guildmaster wrench
+			return
+		if (reaction_buffer && !guildmasteroverride && buffer_structure.redstone_attached.len >= 1) //checks if the buffer is a gate or trapdoor with prior connections
+			to_chat(user, "Already linked to another network") //prevent multiple linkings unless it's the guildmaster wrench
+			//we do this check incase someone linked something with another wrench
 			return
 		buffer_structure.redstone_attached |= src
 		redstone_attached |= buffer_structure
 		GLOB.redstone_objs |= src
 		GLOB.redstone_objs |= buffer_structure
 		to_chat(user, "You calibrate [src] to the output of [buffer_structure].")
+		if (reaction_buffer && !guildmasteroverride) //is the buffer a gate or a trap door that should only have one connection?
+			multitool.remove_buffer(multitool.buffer) //clean up any structure from the buffer if its not a lever or plate, unless this is the guildmaster wrench
 	else
 		to_chat(user, "You store the internal schematics of [src] on [multitool].")
 		multitool.set_buffer(src)
@@ -64,8 +118,6 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		redstone_attached = list()
 		redstone_id = new_id
 		for(var/obj/structure/S in GLOB.redstone_objs)
-			if(S == src)
-				continue
 			if(S.redstone_id == redstone_id)
 				redstone_attached |= S
 				S.redstone_attached |= src
@@ -181,8 +233,8 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		anchored = !anchored
 */
 
-/obj/structure/activator
-	name = "Engineer's Launcher"
+/obj/structure/englauncher
+	name = "Engineer's Launcher" 
 	desc = "A engineering contraption made to launch various objects in the direction its pointed."
 	icon = 'icons/roguetown/misc/engineering_structure.dmi'
 	icon_state = "activator"
@@ -196,20 +248,22 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 	var/datum/intent/used_intent = null //fooling it to think we're a person
 	var/mind = null //fooling it to think we're a person
 	var/firedirection = NORTH //fire direction, we'll start north
-
-/obj/structure/activator/Initialize()
+	var/firedirectiontwo = NORTHEAST //bullet variation for spread mode
+	var/firedirectionthree = NORTHWEST //bullet variation for spread mode
+	var/spreadmode = FALSE //spread out your shots, waste your ammo
+/obj/structure/englauncher/Initialize()
 	. = ..()
 	update_icon()
 
-/obj/structure/activator/ComponentInitialize()
+/obj/structure/englauncher/ComponentInitialize()
 	. = ..()
 	//AddComponent(/datum/component/simple_rotation, ROTATION_REQUIRE_WRENCH|ROTATION_IGNORE_ANCHORED) //from vanderline, we don't have these flags here
 	AddComponent(/datum/component/simple_rotation,ROTATION_ALTCLICK | ROTATION_CLOCKWISE, CALLBACK(src, PROC_REF(can_user_rotate)),CALLBACK(src, PROC_REF(can_be_rotated)),null)
 
-/obj/structure/activator/proc/changeNext_move()
+/obj/structure/englauncher/proc/changeNext_move()
 	return
 
-/obj/structure/activator/proc/can_user_rotate(mob/user)
+/obj/structure/englauncher/proc/can_user_rotate(mob/user)
 	var/mob/living/L = user
 	if(istype(L))
 		if(!user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
@@ -220,16 +274,16 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		return TRUE
 	return FALSE
 
-/obj/structure/activator/proc/can_be_rotated(mob/user)
+/obj/structure/englauncher/proc/can_be_rotated(mob/user)
 	return TRUE
 
-/obj/structure/activator/update_icon()
+/obj/structure/englauncher/update_icon()
 	. = ..()
 	cut_overlays()
 	if(!containment)
 		add_overlay("activator-e")
 
-/obj/structure/activator/attack_hand(mob/user)
+/obj/structure/englauncher/attack_hand(mob/user)
 	. = ..()
 	playsound(loc, 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
 	sleep(7)
@@ -244,70 +298,125 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 	update_icon()
 	return TRUE
 
-/obj/structure/activator/attack_right(mob/user)
+/obj/structure/englauncher/attack_right(mob/user)
+	
 	if (user.rmb_intent)
-		sleep(1)
-		switch(firedirection)
-			if(WEST)
-				say("Mode: NORTH")
-				playsound(loc, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
-				firedirection = NORTH
-			if(NORTH)
-				say("Mode: EAST")
-				playsound(loc, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
-				firedirection = EAST
-			if(EAST)
-				say("Mode: SOUTH")
-				playsound(loc, 'sound/misc/machineno.ogg', 100, FALSE, -1)
-				firedirection = SOUTH
-			if(SOUTH)
-				say("Mode: WEST")
-				playsound(loc, 'sound/misc/machineno.ogg', 100, FALSE, -1)
-				firedirection = WEST
+		if (user.is_holding_item_of_type(/obj/item/contraption/linker))
+			sleep(1)
+			switch(firedirection)
+				if(WEST)
+					say("Mode: NORTH")
+					playsound(loc, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
+					firedirection = NORTH
+					firedirectiontwo = NORTHEAST
+					firedirectionthree = NORTHWEST
+				if(NORTH)
+					say("Mode: EAST")
+					playsound(loc, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
+					firedirection = EAST
+					firedirectiontwo = NORTHEAST
+					firedirectionthree = SOUTHEAST
+				if(EAST)
+					say("Mode: SOUTH")
+					playsound(loc, 'sound/misc/machineno.ogg', 100, FALSE, -1)
+					firedirection = SOUTH
+					firedirectiontwo = SOUTHEAST
+					firedirectionthree = SOUTHWEST
+				if(SOUTH)
+					say("Mode: WEST")
+					playsound(loc, 'sound/misc/machineno.ogg', 100, FALSE, -1)
+					firedirection = WEST
+					firedirectiontwo = NORTHWEST
+					firedirectionthree = SOUTHWEST
+		else if (user.is_holding_item_of_type(/obj/item/rogueweapon/hammer))
+			sleep(1)
+			switch(spreadmode)
+				if(TRUE)
+					say("Shot: SINGLE")
+					playsound(loc, 'sound/misc/machineno.ogg', 100, FALSE, -1)
+					spreadmode = FALSE
+				if(FALSE)
+					say("Shot: SPREAD")
+					playsound(loc, 'sound/misc/machineno.ogg', 100, FALSE, -1)
+					spreadmode = TRUE
+		else
+			say("WRENCH OR HAMMER REQUIRED")
 		return
 
-/obj/structure/activator/attackby(obj/item/I, mob/user, params)
-	if(!containment && (istype(I, /obj/item/gun/ballistic/revolver/grenadelauncher) || istype(I, /obj/item/bomb) || istype(I, /obj/item/flint)))
+/obj/structure/englauncher/attackby(obj/item/I, mob/user, params)
+	if(!containment && (istype(I,/obj/item/reagent_containers) || istype(I, /obj/item/bomb) || istype(I, /obj/item/flint))) //loading in items
 		if(!user.transferItemToLoc(I, src))
 			return ..()
 		containment = I
 		playsound(src, 'sound/misc/chestclose.ogg', 25)
 		update_icon()
 		return TRUE
-	if(!ammo && istype(I, /obj/item/quiver))
+	if(!ammo && istype(I, /obj/item/quiver)) //loading in quivers of ammo to fire
+		if (istype(I, /obj/item/quiver/javelin) || istype(I, /obj/item/quiver/sling)) //javelin don't work and sling seem too low cost to be balanced
+			return
 		if(!user.transferItemToLoc(I, src))
 			return
 		playsound(src, 'sound/misc/chestclose.ogg', 25)
+		containment = I
 		ammo = I
+		update_icon()
 		return TRUE
 	return ..()
 
-/obj/structure/activator/redstone_triggered(mob/user)
+/obj/structure/englauncher/redstone_triggered(mob/user)
 	if(!containment)
 		return
+	var/turf/front = get_step(src, firedirection)
+
 	if(istype(containment, /obj/item/bomb))
 		var/obj/item/bomb/bomba = containment
 		bomba.light()
+	if(istype(containment, /obj/item/reagent_containers))
+		container_aerosolize(containment, firedirection)
 	if(istype(containment, /obj/item/flint))
 		var/datum/effect_system/spark_spread/S = new()
-		var/turf/front = get_step(src, firedirection)
 		S.set_up(1, 1, front)
 		S.start()
-	if(istype(containment, /obj/item/gun/ballistic/revolver/grenadelauncher))
-		if(!ammo)
-			return
-		if(ammo.arrows.len)
-			var/obj/item/gun/ballistic/revolver/grenadelauncher/B = containment
-			var/obj/item/ammo_box/gun_magazine = B.mag_type
-			var/obj/item/ammo_casing/caseless/gun_ammo = initial(gun_magazine?.ammo_type)
-			//var/mob/living/liveactivator = src //tricking the shooting system to think this is a person
-			for(var/obj/item/ammo_casing/BT in ammo.arrows)
-				if(istype(BT, gun_ammo))
-					ammo.arrows -= BT
-					BT.fire_casing(get_step(src, firedirection), src, null, null, null, BODY_ZONE_CHEST, 0,  src)
-					ammo.contents -= BT
-					ammo.update_icon()
-					break
+	if(istype(containment, /obj/item/quiver))
+		var/bodyzone =  BODY_ZONE_CHEST
+		bodyzone =  pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG, BODY_ZONE_CHEST, BODY_ZONE_HEAD, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM)
+		quiver_fire(firedirection, bodyzone)
+		if(spreadmode)
+			bodyzone =  pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG, BODY_ZONE_CHEST, BODY_ZONE_HEAD, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM)
+			quiver_fire(firedirectiontwo, bodyzone)
+			bodyzone =  pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG, BODY_ZONE_CHEST, BODY_ZONE_HEAD, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM)
+			quiver_fire(firedirectionthree, bodyzone)
+
+/obj/structure/englauncher/proc/quiver_fire(var/launcher_direction, var/launcher_bodyzone)
+	if(!ammo)
+		return
+	if(ammo.arrows.len)
+		for(var/obj/item/ammo_casing/BT in ammo.arrows)
+			//if(istype(BT, gun_ammo))
+			ammo.arrows -= BT
+			BT.fire_casing(get_step(src, launcher_direction), src, null, null, null, launcher_bodyzone, 0,  src)
+			ammo.contents -= BT
+			ammo.update_icon()
+			break		
+
+/obj/structure/englauncher/proc/container_aerosolize(var/launcher_liquid, var/launcher_direction)
+	var/turf/T = get_step(src, launcher_direction) //check for turf
+	if(T)
+		var/obj/item/reagent_containers/con = launcher_liquid //get the container
+		if(con)
+			if(con.spillable)
+				if(con.reagents.total_volume > 0)
+					var/datum/reagents/R = con.reagents
+					var/datum/effect_system/smoke_spread/chem/smoke = new
+					if(spreadmode)
+						smoke.set_up(R, 3, T, FALSE)
+					else 
+						smoke.set_up(R, 1, T, FALSE)
+					smoke.start()
+
+					//user.visible_message(span_warning("[user] sprays the contents of the [held_item], creating a cloud!"), span_warning("You spray the contents of the [held_item], creating a cloud!"))
+					con.reagents.clear_reagents() //empty the container
+					playsound(src, 'sound/magic/webspin.ogg', 100)
 
 /obj/structure/floordoor
 	name = "floorhatch"

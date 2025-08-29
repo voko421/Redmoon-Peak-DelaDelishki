@@ -179,6 +179,11 @@
 	grid_width = 64
 	grid_height = 32
 
+/obj/item/contraption/linker/master
+	name = "Guild Master's Wrench"
+	desc = "Able to do more advanced linking than a standard wrench. Keep it out of apprentice's hands"
+	charge_per_source = 200
+
 /obj/item/contraption/linker/hammer_action(obj/item/I, mob/user)
 	return
 

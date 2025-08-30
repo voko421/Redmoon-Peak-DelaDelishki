@@ -563,6 +563,10 @@ GLOBAL_LIST(teleport_runes)
 	can_be_scribed = TRUE
 	var/summoning = FALSE
 	var/mob/living/simple_animal/summoned_mob
+
+/obj/effect/decal/cleanable/roguerune/arcyne/summoning/ex_act(severity, target)
+	return
+
 /obj/effect/decal/cleanable/roguerune/arcyne/summoning/Destroy()
 	if(summoning)
 		REMOVE_TRAIT(summoned_mob, TRAIT_PACIFISM, TRAIT_GENERIC)	//can't kill while planar bound.

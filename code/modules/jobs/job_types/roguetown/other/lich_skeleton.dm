@@ -86,6 +86,8 @@ LICH SKELETONS
 			beltr = /obj/item/rogueweapon/flail/sflail/paflail
 			H.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
 
+	H.energy = H.max_energy
+
 // Ranged goon w/ a dumb bow. Ranger, what else is there to say.
 /datum/advclass/greater_skeleton/lich/ballistiares
 	name = "Ancient Ballistiares"
@@ -146,6 +148,8 @@ LICH SKELETONS
 			l_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/sling
 			beltl = /obj/item/quiver/sling/paalloy
 			H.adjust_skillrank(/datum/skill/combat/slings, 1, TRUE)
+
+	H.energy = H.max_energy
 
 // Heavy/Tanky goon. Not heavy armor but due to the steel + weapons they'll fare just fine.
 /datum/advclass/greater_skeleton/lich/bulwark
@@ -212,6 +216,8 @@ LICH SKELETONS
 			H.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/shields, 1, TRUE)
 
+	H.energy = H.max_energy
+
 // non-Combat crafter goon. Worse weapons + armor but does base-building. Fortnite.
 /datum/advclass/greater_skeleton/lich/sapper
 	name = "Broken-Bone Sapper"
@@ -260,3 +266,5 @@ LICH SKELETONS
 
 	beltr = /obj/item/rogueweapon/stoneaxe/woodcut
 	beltl = /obj/item/rogueweapon/pick/copper
+
+	H.energy = H.max_energy

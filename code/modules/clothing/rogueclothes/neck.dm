@@ -599,7 +599,7 @@
 
 /obj/item/clothing/neck/roguetown/shalal
 	name = "desert rider medal"
-	desc = ""
+	desc = "Made out of the metal from the Ranesheni mercenaries' first slain enemy. A tradition is kept between these hired blades: to give this one away to someone is to symbolize a debt on their favor - to be redeemed by any other mercenary in times of need."
 	icon_state = "shalal"
 	//dropshrink = 0.75
 	resistance_flags = FIRE_PROOF

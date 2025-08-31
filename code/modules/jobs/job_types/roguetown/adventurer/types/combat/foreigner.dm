@@ -126,7 +126,7 @@
 			switch(weapon_choice)
 				if("Tanto")
 					beltr = /obj/item/rogueweapon/huntingknife/idagger/steel/kazengun
-					beltl = /obj/item/rogueweapon/scabbard/sheath
+					beltl = /obj/item/rogueweapon/scabbard/sheath/kazengun
 					H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
 				if("Kodachi")
 					beltr = /obj/item/rogueweapon/sword/short/kazengun

@@ -536,7 +536,20 @@
 /obj/item/rogueweapon/scabbard/sword/kazengun/kodachi
 	name = "plain lacquer scabbard"
 	desc = "A plain lacquered scabbard with simple steel hardware. A plain dark cloth serves to hang it from a belt."
-	icon_state = "kazscab_kodachi"
-	item_state = "kazscab_kodachi"
+	icon_state = "kazscabyuruku"
+	item_state = "kazscabyuruku"
 	valid_blade = /obj/item/rogueweapon/sword/short/kazengun
 	wdefense = 4
+
+/obj/item/rogueweapon/scabbard/sheath/kazengun
+	name = "plain lacquer sheath"
+	desc = "A simple lacquered sheath, for shorter eastern-styled blades."
+	icon_state = "kazscabdagger"
+	item_state = "kazscabdagger"
+	valid_blade = /obj/item/rogueweapon/huntingknife/idagger/steel/kazengun
+	associated_skill = /datum/skill/combat/shields
+	possible_item_intents = list(SHIELD_BASH, SHIELD_BLOCK)
+	can_parry = TRUE
+	wdefense = 3
+
+	max_integrity = 0

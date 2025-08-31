@@ -94,6 +94,7 @@
 		if("Yoruku")
 			to_chat(H, span_warning("You are a Kazengunese agent trained in assassination, sabotage, and irregular combat. You are armed with daggers or a short sword, perfect \
 			for combat in the tight confines of castles and back alleys."))
+			head = /obj/item/clothing/head/roguetown/roguehood/shalal/hijab/yoruku
 			backr = /obj/item/storage/backpack/rogue/satchel
 			backpack_contents = list(
 				/obj/item/flashlight/flare/torch = 1,

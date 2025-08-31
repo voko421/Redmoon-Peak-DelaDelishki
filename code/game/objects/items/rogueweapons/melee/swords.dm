@@ -398,13 +398,9 @@
 	equip_delay_self = 0
 	unequip_delay_self = 0
 
-/obj/item/rogueweapon/sword/long/zizo/pickup(mob/living/user)
-	if(!HAS_TRAIT(user, TRAIT_CABAL))
-		to_chat(user, "<font color='purple'>UNWORTHY HANDS TOUCHING THIS SWORD, CEASE OR BE PUNISHED!</font>")
-		user.adjust_fire_stacks(5)
-		user.IgniteMob()
-		user.Stun(40)
-	..()
+/obj/item/rogueweapon/sword/long/zizo/Initialize()
+	. = ..()
+	AddComponent(/datum/component/cursed_item, TRAIT_CABAL, "SWORD")
 
 /obj/item/rogueweapon/sword/long/heirloom
 	name = "old longsword"

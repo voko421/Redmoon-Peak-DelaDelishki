@@ -17,6 +17,10 @@
 	damfactor = 1.2
 	chargetime = 0.2
 
+/datum/intent/sword/cut/short
+	clickcd = 9
+	damfactor = 1
+
 /datum/intent/sword/chop/militia
 	penfactor = 50
 	chargetime = 0.5
@@ -34,6 +38,11 @@
 	chargetime = 0
 	swingdelay = 0
 	item_d_type = "stab"
+
+/datum/intent/sword/thrust/short
+	clickcd = 8
+	damfactor = 1.1
+	penfactor = 30
 
 /datum/intent/sword/thrust/krieg
 	damfactor = 0.9
@@ -80,6 +89,9 @@
 	swingdelay = 8
 	damfactor = 1.0
 	item_d_type = "slash"
+
+/datum/intent/sword/chop/short
+	damfactor = 0.9
 
 /datum/intent/sword/cut/falx
 	penfactor = 20
@@ -586,6 +598,17 @@
 	grid_width = 32
 	grid_height = 96
 
+/obj/item/rogueweapon/sword/short/kazengun
+	name = "steel kodachi"
+	desc = "A razor-edged sword with a wavy pattern weld apparent on its blade."
+	possible_item_intents = list(
+		/datum/intent/sword/cut/short,
+		/datum/intent/sword/thrust/short,
+		/datum/intent/sword/peel,
+		/datum/intent/sword/chop/short,
+		)
+	icon_state = "eastshortsword"
+
 /obj/item/rogueweapon/sword/short/iron
 	name = "iron shortsword"
 	desc = "The arming sword's shorter and much older brother. Despite being centuries older than the swords of todae, it remains in use as a cheap sidearm for shieldbearers and archers. This iron variant predates them all."
@@ -677,15 +700,6 @@
 /obj/item/rogueweapon/sword/short/psy/preblessed/ComponentInitialize()
 	// PREBLESS IT +3 force, +100 blade int, +50 int, +1 def, make silver
 	add_psyblessed_component(is_preblessed = TRUE, bonus_force = 3, bonus_sharpness = 100, bonus_integrity = 50, bonus_wdef = 1, make_silver = TRUE)
-
-/datum/intent/sword/cut/short
-	clickcd = 9
-	damfactor = 1
-
-/datum/intent/sword/thrust/short
-	clickcd = 8
-	damfactor = 1.1
-	penfactor = 30
 
 /obj/item/rogueweapon/sword/short/messer
 	name = "messer"

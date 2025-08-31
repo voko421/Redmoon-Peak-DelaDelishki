@@ -532,3 +532,11 @@
 	item_state = "kazscab_gold"
 	valid_blade = /obj/item/rogueweapon/sword/sabre/mulyeog/rumacaptain
 	sellprice = 10
+
+/obj/item/rogueweapon/scabbard/sword/kazengun/kodachi
+	name = "plain lacquer scabbard"
+	desc = "A plain lacquered scabbard with simple steel hardware. A plain dark cloth serves to hang it from a belt."
+	icon_state = "kazscab_kodachi"
+	item_state = "kazscab_kodachi"
+	valid_blade = /obj/item/rogueweapon/sword/short/kazengun
+	wdefense = 4

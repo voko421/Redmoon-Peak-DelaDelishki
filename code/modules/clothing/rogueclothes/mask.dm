@@ -389,6 +389,14 @@
 	sellprice = 100
 	smeltresult = /obj/item/ingot/gold
 
+/obj/item/clothing/mask/rogue/facemask/yoruku_oni
+	name = "oni mask"
+	icon_state = "oni"
+
+/obj/item/clothing/mask/rogue/facemask/yoruku_kitsune
+	name = "kitsune mask"
+	icon_state = "kitsune"
+
 /obj/item/clothing/mask/rogue/shepherd
 	name = "halfmask"
 	icon_state = "shepherd"

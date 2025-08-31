@@ -6,13 +6,15 @@
 
 /datum/component/cursed_item/Initialize(god_trait, item_class, verbiage = "PUNISHED")
 	. = ..()
+	if(!isitem(parent))
+		return COMPONENT_INCOMPATIBLE
 	required_trait = god_trait
 	item_type = item_class
 	verbed = verbiage
 
-	RegisterSignal(parent, list(COMSIG_ITEM_EQUIPPED, COMSIG_ITEM_PICKUP), PROC_REF(curse_test))
+	RegisterSignal(parent, COMSIG_ITEM_EQUIPPED, PROC_REF(on_equip))
 
-/datum/component/cursed_item/proc/curse_test()
+/datum/component/cursed_item/proc/on_equip()
 	SIGNAL_HANDLER
 	var/obj/item/I = parent
 	if(!ishuman(I.loc))
@@ -20,7 +22,7 @@
 	var/mob/living/carbon/human/user = I.loc
 	if(!HAS_TRAIT(user, required_trait))
 		spawn(0)
-			to_chat(user, "<font color='red'>UNWORTHY HANDS TOUCHING THIS [item_type], CEASE OR BE [verbed]</font>")
+			to_chat(user, "<font color='red'>UNWORTHY HANDS TOUCHING THIS [item_type], CEASE OR BE [verbed]!</font>")
 			user.adjust_fire_stacks(5)
 			user.IgniteMob()
 			user.Stun(40)

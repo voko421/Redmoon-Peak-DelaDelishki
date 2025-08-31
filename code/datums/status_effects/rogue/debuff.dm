@@ -235,8 +235,9 @@
 /datum/status_effect/debuff/ritualdefiled
 	id = "ritualdefiled"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/ritualdefiled
-	effectedstats = list("strength" = -2, "perception" = -1, "intelligence" = -1, "willpower" = -2, "constitution" = -2, "speed" = -1, "fortune" = -1)
-	duration = 2 HOURS // Punishing AS FUCK, but not as punishing as being dead.
+	effectedstats = list("strength" = -1, "willpower" = -1, "constitution" = -1, "speed" = -1, "fortune" = -1)
+	duration = 1 HOURS // Punishing AS FUCK, but not as punishing as being dead.
+
 
 /atom/movable/screen/alert/status_effect/debuff/ritualdefiled
 	name = "Tainted Lux"

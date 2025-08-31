@@ -13,6 +13,7 @@
 	item_d_type = "slash"
 
 /datum/intent/sword/cut/arming
+	damfactor = 1.2
 	clickcd = 10 // Versatile, this create 26 EDPS instead of 20. But still easily beaten by the Sabre
 
 /datum/intent/sword/cut/militia

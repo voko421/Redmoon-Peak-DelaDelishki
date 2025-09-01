@@ -102,9 +102,12 @@
 			H.adjust_skillrank_up_to(/datum/skill/craft/crafting, 2, TRUE)		//Ditto
 			H.adjust_skillrank_up_to(/datum/skill/labor/mining, 3, TRUE)		//Ditto
 			H.adjust_skillrank_up_to(/datum/skill/craft/traps, 3, TRUE)			//Ditto
-			H.change_stat("strength", 2)
-			H.change_stat("endurance", 2)
+			H.change_stat("strength", 2)		//Statblock prone to revision. Probably will be revised. I don't even know why I'm making it this long. No, it's not weighted to 9, it's less.
+			H.change_stat("endurance", 3)
 			H.change_stat("constitution", 3)
+			H.change_stat("perception", 2)
+			H.change_stat("speed", -2)
+			H.change_stat("intelligence", -1)
 			ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 			ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 			H.dna.species.soundpack_m = new /datum/voicepack/male/evil()

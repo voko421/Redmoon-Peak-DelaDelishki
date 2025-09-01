@@ -26,7 +26,7 @@
 
 /datum/intent/mace/smash/flataxe
 	damfactor = 1.2
-	clickcd = 12
+	clickcd = 10
 
 /datum/intent/mace/rangedthrust
 	name = "thrust"

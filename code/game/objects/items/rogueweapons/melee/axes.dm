@@ -413,6 +413,7 @@
 	gripped_intents = list(/datum/intent/axe/cut/battle ,/datum/intent/axe/chop/battle, /datum/intent/stab, /datum/intent/sword/peel)
 	force_wielded = 25	//No damage changes for wielded/unwielded
 	icon_state = "valaska"
+	demolition_mod = 2
 	walking_stick = TRUE
 
 /datum/intent/axe/cut/battle/greataxe

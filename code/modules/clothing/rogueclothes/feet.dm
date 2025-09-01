@@ -78,6 +78,12 @@
 	salvage_amount = 2
 	salvage_result = /obj/item/natural/hide/cured
 
+/obj/item/clothing/shoes/roguetown/boots/nobleboot/steppesman
+	name = "aavnic riding boots"
+	desc = "A pair of sturdy riding boots with an iron heel and brass spurs."
+	armor = ARMOR_BOOTS
+	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_BLUNT, BCLASS_TWIST)
+
 /obj/item/clothing/shoes/roguetown/shortboots
 	name = "shortboots"
 	color = "#d5c2aa"

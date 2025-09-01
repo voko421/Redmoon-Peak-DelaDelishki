@@ -46,7 +46,7 @@
 		if("Szabrista - Saber Veteran")	//Tl;dr - medium armor class for Mount and Blade larpers who still get a saiga. Akin to Vaquero with specific drip.
 			H.set_blindness(0)
 			to_chat(H, span_warning("The Szabristas are the elites of the southern steppes, veterans of conflict across the realm. Outfitted with a shishka and shield, these warriors sacrifice their swiftness for armor and civilized respect."))
-			shoes = /obj/item/clothing/shoes/roguetown/boots/nobleboot
+			shoes = /obj/item/clothing/shoes/roguetown/boots/nobleboot/steppesman
 			head = /obj/item/clothing/head/roguetown/helmet/sallet/shishak		//Needs a unique helmet + mask combo at some point. 	//Dragonfruits to the rescue! Unique helmet with neck protection and +50 durability.
 			gloves = /obj/item/clothing/gloves/roguetown/chain
 			armor = /obj/item/clothing/suit/roguetown/armor/plate/scale/steppe	//Scale armor w/ better durability & unique sprite
@@ -83,7 +83,7 @@
 		if("Árkász - Elite Sapper")	//Tl;dr - medium armor sappers with less mobility in exchange for their different statblock and equipment.
 			H.set_blindness(0)
 			to_chat(H, span_warning("The Árkászi are frontline sappers specialized in sowing chaos and confusion in tandem with the Szabristas, focused on raw strength and will over the company's swordsmen and archers."))
-			shoes = /obj/item/clothing/shoes/roguetown/boots/nobleboot
+			shoes = /obj/item/clothing/shoes/roguetown/boots/nobleboot/steppesman
 			head = /obj/item/clothing/head/roguetown/helmet/sallet/shishak
 			gloves = /obj/item/clothing/gloves/roguetown/chain
 			armor = /obj/item/clothing/suit/roguetown/armor/plate/scale/steppe
@@ -120,7 +120,7 @@
 		if("Druzhina - Light Archer")	//Tl;dr - light armor class for Tatar-style archery. Has 'Druzhina' as a name cus czech/polish influence, couldn't think of better one.
 			H.set_blindness(0)
 			to_chat(H, span_warning("A Druzhina, a commoner of the Aavnic steppes made into a professional soldier. Hunters, herders, and various nomads from all walks of life. Equal in service, equal behind their bow, and ready to fight."))
-			shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
+			shoes = /obj/item/clothing/shoes/roguetown/boots/nobleboot/steppesman
 			head = /obj/item/clothing/head/roguetown/helmet/sallet/shishak
 			gloves = /obj/item/clothing/gloves/roguetown/fingerless_leather
 			armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/steppe

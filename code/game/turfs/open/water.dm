@@ -82,7 +82,7 @@
 
 /turf/open/water/proc/get_stamina_drain(mob/living/swimmer, travel_dir)
 	var/const/BASE_STAM_DRAIN = 15
-	var/const/MIN_STAM_DRAIN = 3
+	var/const/MIN_STAM_DRAIN = 2
 	var/const/STAM_PER_LEVEL = 5
 	var/const/UNSKILLED_ARMOR_PENALTY = 40
 	var/const/HEAVY_ARMOR_PENALTY = 30

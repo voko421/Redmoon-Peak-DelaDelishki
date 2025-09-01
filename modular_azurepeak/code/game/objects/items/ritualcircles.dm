@@ -368,8 +368,8 @@ var/forgerites = list("Ritual of Blessed Reforgance")
 		visible_message(span_warning("[src] shatters on impact!"))
 		playsound(src, 'sound/magic/lightning.ogg', 50, TRUE)
 		var/mob/thrower = throwingdatum?.thrower
-		if(thrower && HAS_TRAIT(thrower, TRAIT_HERESIARCH))
-			rune_type = /obj/structure/active_abyssor_rune/greater
+		if(thrower && HAS_TRAIT(thrower, TRAIT_HERESIARCH) && upgraded_rune_type)
+			rune_type = upgraded_rune_type
 		new rune_type(T)
 		qdel(src)
 	else

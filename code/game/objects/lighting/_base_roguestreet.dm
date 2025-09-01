@@ -52,3 +52,9 @@
 		icon_state = "[base_state]1"
 	else
 		icon_state = "[base_state]0"
+
+/obj/machinery/light/oldlight
+	name = "ancyent lightbar"
+	desc = "Two frustrums hold a glaring death-light."
+	icon = 'icons/obj/lighting.dmi'
+	icon_state = "celestial_light"

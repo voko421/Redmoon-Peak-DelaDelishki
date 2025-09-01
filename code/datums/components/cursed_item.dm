@@ -1,7 +1,9 @@
 /datum/component/cursed_item
 	dupe_mode = COMPONENT_DUPE_UNIQUE
-	var/required_trait //trait that will avoid triggering the curse
-	var/item_type //used for the text you get upon triggering the curse
+	///trait that will avoid triggering the curse
+	var/required_trait
+	///used for the text you get upon triggering the curse
+	var/item_type
 	var/verbed
 
 /datum/component/cursed_item/Initialize(god_trait, item_class, verbiage = "PUNISHED")

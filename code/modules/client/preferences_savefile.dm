@@ -248,6 +248,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	default_slot	= sanitize_integer(default_slot, 1, max_save_slots, initial(default_slot))
 	toggles			= sanitize_integer(toggles, 0, INFINITY, initial(toggles))
 	floating_text_toggles = sanitize_integer(floating_text_toggles, 0, INFINITY, initial(floating_text_toggles))
+	chat_toggles = sanitize_integer(chat_toggles, 0, INFINITY, initial(chat_toggles))
 	clientfps		= sanitize_integer(clientfps, 0, 1000, 0)
 	parallax		= sanitize_integer(parallax, PARALLAX_INSANE, PARALLAX_DISABLE, null)
 	ambientocclusion	= sanitize_integer(ambientocclusion, 0, 1, initial(ambientocclusion))

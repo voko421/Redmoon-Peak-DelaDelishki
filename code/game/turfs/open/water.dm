@@ -85,8 +85,8 @@
 	var/const/MIN_STAM_DRAIN = 3
 	var/const/STAM_PER_LEVEL = 5
 	var/const/UNSKILLED_ARMOR_PENALTY = 40
-	var/const/HEAVY_ARMOR_PENALTY = 40
-	var/const/MEDIUM_ARMOR_PENALTY = 25
+	var/const/HEAVY_ARMOR_PENALTY = 30
+	var/const/MEDIUM_ARMOR_PENALTY = 20
 	var/const/BASE_XP_GAIN = 0.5
 	var/const/HEAVY_XP_GAIN = 0.01
 	var/const/MEDIUM_XP_GAIN = 0.05
@@ -306,7 +306,9 @@
 				returned += 1.5
 			if(ARMOR_CLASS_MEDIUM)
 				returned += 1
-	return max(returned, 0.5)
+		if(HAS_TRAIT(user, TRAIT_ABYSSOR_SWIM))
+			returned -= 1
+	return max(returned, 0)
 
 //turf/open/water/Initialize()
 //	dir = pick(NORTH,SOUTH,WEST,EAST)

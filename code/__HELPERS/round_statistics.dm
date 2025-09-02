@@ -372,13 +372,15 @@ GLOBAL_LIST_INIT(featured_stats, list(
 		"name" = "TOP 10 Virtues",
 		"color" = "#df5cb8",
 		"entries" = list(),
-		"object_stat" = TRUE
+		"object_stat" = TRUE,
+		"admin_only" = TRUE
 	),
 	FEATURED_STATS_STATPACKS = list(
 		"name" = "TOP 10 Statpacks",
 		"color" = "#3aa4e2",
 		"entries" = list(),
-		"object_stat" = TRUE
+		"object_stat" = TRUE,
+		"admin_only" = TRUE
 	),
 	FEATURED_STATS_VICES = list(
 		"name" = "TOP 10 Vices",

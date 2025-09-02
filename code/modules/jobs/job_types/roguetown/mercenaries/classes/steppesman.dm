@@ -104,7 +104,7 @@
 			H.adjust_skillrank_up_to(/datum/skill/craft/traps, 3, TRUE)			//Ditto
 			H.change_stat("strength", 2)		//Statblock prone to revision. Probably will be revised. I don't even know why I'm making it this long. No, it's not weighted to 9, it's less.
 			H.change_stat("endurance", 3)
-			H.change_stat("constitution", 3)
+			H.change_stat("constitution", 2)
 			H.change_stat("perception", 2)
 			H.change_stat("speed", -2)
 			H.change_stat("intelligence", -1)

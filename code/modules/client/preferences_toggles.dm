@@ -653,9 +653,9 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 		return
 	if(!prefs)
 		return
-	prefs.chat_toggles ^= CHAT_ADMINLOOC
+	prefs.admin_chat_toggles ^= CHAT_ADMINLOOC
 	prefs.save_preferences()
-	if(prefs.chat_toggles & CHAT_ADMINLOOC)
+	if(prefs.admin_chat_toggles & CHAT_ADMINLOOC)
 		to_chat(src, span_notice("I will now hear all LOOC chatter."))
 	else
 		to_chat(src, span_info("I will now only hear LOOC chatter around me."))
@@ -667,6 +667,6 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 		return
 	if(!prefs)
 		return
-	prefs.chat_toggles ^= CHAT_ADMINSPAWN
+	prefs.admin_chat_toggles ^= CHAT_ADMINSPAWN
 	prefs.save_preferences()
-	to_chat(src, "You will [prefs.chat_toggles & CHAT_ADMINSPAWN ? "see" : "not see any"] spawn logs.")
+	to_chat(src, "You will [prefs.admin_chat_toggles & CHAT_ADMINSPAWN ? "see" : "not see any"] spawn logs.")

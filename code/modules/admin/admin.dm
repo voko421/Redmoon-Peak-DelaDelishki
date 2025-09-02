@@ -8,7 +8,7 @@
 /proc/spawn_message_admins(msg)
 	msg = "<span class=\"admin\"><span class=\"prefix\">ADMIN LOG:</span> <span class=\"message linkify\">[msg]</span></span>"
 	for(var/client/C in GLOB.admins)
-		if(check_rights_for(C, R_ADMIN) && (C.prefs.chat_toggles & CHAT_ADMINSPAWN))
+		if(check_rights_for(C, R_ADMIN) && (C.prefs.admin_chat_toggles & CHAT_ADMINSPAWN))
 			to_chat(C, msg)
 
 /proc/relay_msg_admins(msg)

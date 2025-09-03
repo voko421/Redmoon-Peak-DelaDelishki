@@ -84,7 +84,7 @@
 /datum/storyteller/ravox
 	name = "Ravox - Glory reigns. Raids, villains, and omens are more likely to occur. His favor shines upon clashing steel and the cries of war."
 	desc = "Ravox will cause raids to happen naturally instead of only when people are dying a lot."
-	welcome_text = "\"The trumpets of Zericho are echoing in the distance.."\"
+	welcome_text = "\"The trumpets of Zericho are echoing in the distance..\""
 	weight = 4
 	always_votable = TRUE
 	color_theme = "#228822"
@@ -134,7 +134,7 @@
 /datum/storyteller/xylix
 	name = "Xylix - Unpredictability reigns. Nothing is set in stone, yet everything is possible. His favor shines upon acts of chance and whimsy."
 	desc = "Xylix is a wildcard, spinning the wheels of fate."
-	welcome_text = "\"..well, that's what happens out of too much spice and wine!"\"
+	welcome_text = "\"..well, that's what happens out of too much spice and wine!\""
 	weight = 4
 	always_votable = TRUE
 	event_repetition_multiplier = 0
@@ -161,7 +161,7 @@
 /datum/storyteller/necra
 	name = "Necra - Death reigns. Occurrences happen less often, and villains are less likely. Her favor shines upon those who put the deathless back into their graves."
 	desc = "Necra takes things very slow, rarely bringing in newcomers."
-	welcome_text = "\"In the fief of Zenmarke, there was the odor of decay.."\"
+	welcome_text = "\"In the fief of Zenmarke, there was the odor of decay..\""
 	weight = 4
 	always_votable = TRUE
 	color_theme = "#888888"
@@ -237,7 +237,7 @@
 /datum/storyteller/eora
 	name = "Eora - Love reigns. Positive affairs occur more often, and raids will rarely transpire. Her favor shines upon romance."
 	desc = "Eora hates death and promotes love. Raids will never naturally progress, only death will bring them."
-	welcome_text = "\"Love is in the air? Nay; tis the smell of freshly-baked pies upon the windowsills!"\"
+	welcome_text = "\"Love is in the air? Nay; tis the smell of freshly-baked pies upon the windowsills!\""
 	color_theme = "#9966CC"
 
 	tag_multipliers = list(

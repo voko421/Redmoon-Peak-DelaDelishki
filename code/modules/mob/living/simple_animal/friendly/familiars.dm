@@ -124,7 +124,7 @@
 
 /datum/status_effect/buff/familiar/settled_weight
 	id = "settled_weight"
-	effectedstats = list("strength" = 1)
+	effectedstats = list(STATKEY_STR = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/settled_weight
 
 /atom/movable/screen/alert/status_effect/buff/familiar/settled_weight
@@ -159,7 +159,7 @@
 
 /datum/status_effect/buff/familiar/silver_glance
 	id = "silver_glance"
-	effectedstats = list("perception" = 1)
+	effectedstats = list(STATKEY_PER = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/silver_glance
 
 /atom/movable/screen/alert/status_effect/buff/familiar/silver_glance
@@ -191,7 +191,7 @@
 
 /datum/status_effect/buff/familiar/threaded_thoughts
 	id = "threaded_thoughts"
-	effectedstats = list("intelligence" = 1)
+	effectedstats = list(STATKEY_INT = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/threaded_thoughts
 
 /atom/movable/screen/alert/status_effect/buff/familiar/threaded_thoughts
@@ -222,7 +222,7 @@
 
 /datum/status_effect/buff/familiar/quiet_resilience
 	id = "quiet_resilience"
-	effectedstats = list("endurance" = 1)
+	effectedstats = list(STATKEY_WIL = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/quiet_resilience
 
 /atom/movable/screen/alert/status_effect/buff/familiar/quiet_resilience
@@ -256,7 +256,7 @@
 
 /datum/status_effect/buff/familiar/desert_bred_tenacity
 	id = "desert_bred_tenacity"
-	effectedstats = list("endurance" = 1)
+	effectedstats = list(STATKEY_WIL = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/desert_bred_tenacity
 
 /atom/movable/screen/alert/status_effect/buff/familiar/desert_bred_tenacity
@@ -289,7 +289,7 @@
 
 /datum/status_effect/buff/familiar/lightstep
 	id = "lightstep"
-	effectedstats = list("speed" = 1)
+	effectedstats = list(STATKEY_SPD = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/lightstep
 
 /atom/movable/screen/alert/status_effect/buff/familiar/lightstep
@@ -321,7 +321,7 @@
 
 /datum/status_effect/buff/familiar/soft_favor
 	id = "soft_favor"
-	effectedstats = list("fortune" = 1)
+	effectedstats = list(STATKEY_SPD = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/soft_favor
 
 /atom/movable/screen/alert/status_effect/buff/familiar/soft_favor
@@ -355,7 +355,7 @@
 
 /datum/status_effect/buff/familiar/burdened_coil
 	id = "burdened_coil"
-	effectedstats = list("strength" = 1, "endurance" = 1)
+	effectedstats = list(STATKEY_STR = 1, STATKEY_WIL = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/burdened_coil
 
 /atom/movable/screen/alert/status_effect/buff/familiar/burdened_coil
@@ -394,7 +394,7 @@
 
 /datum/status_effect/buff/familiar/starseam
 	id = "starseam"
-	effectedstats = list("perception" = 1, "fortune" = 1)
+	effectedstats = list(STATKEY_PER = 1, STATKEY_SPD = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/starseam
 
 /atom/movable/screen/alert/status_effect/buff/familiar/starseam
@@ -428,7 +428,7 @@
 
 /datum/status_effect/buff/familiar/steady_spark
 	id = "steady_spark"
-	effectedstats = list("intelligence" = 1, "constitution" = 1)
+	effectedstats = list(STATKEY_INT = 1, STATKEY_CON = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/steady_spark
 
 /atom/movable/screen/alert/status_effect/buff/familiar/steady_spark
@@ -459,7 +459,7 @@
 
 /datum/status_effect/buff/familiar/subtle_slip
 	id = "subtle_slip"
-	effectedstats = list("speed" = 1, "fortune" = 1)
+	effectedstats = list(STATKEY_SPD = 1, STATKEY_SPD = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/subtle_slip
 
 /atom/movable/screen/alert/status_effect/buff/familiar/subtle_slip
@@ -492,7 +492,7 @@
 
 /datum/status_effect/buff/familiar/noticed_thought
 	id = "noticed_thought"
-	effectedstats = list("perception" = 1, "intelligence" = 1)
+	effectedstats = list(STATKEY_PER = 1, STATKEY_INT = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/noticed_thought
 
 /atom/movable/screen/alert/status_effect/buff/familiar/noticed_thought
@@ -524,7 +524,7 @@
 
 /datum/status_effect/buff/familiar/worn_stone
 	id = "worn_stone"
-	effectedstats = list("strength" = 1, "constitution" = 1)
+	effectedstats = list(STATKEY_STR = 1, STATKEY_CON = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/worn_stone
 
 /atom/movable/screen/alert/status_effect/buff/familiar/worn_stone

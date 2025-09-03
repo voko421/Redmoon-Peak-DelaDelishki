@@ -262,7 +262,7 @@
 	grid_height = 64
 
 	force = 3
-	max_integrity = 50
+	max_integrity = 500
 	sellprice = 2
 
 /obj/item/rogueweapon/scabbard/sheath/Initialize()
@@ -493,7 +493,7 @@
 	)
 
 	force = 7
-	max_integrity = 75
+	max_integrity = 750
 	sellprice = 3
 
 

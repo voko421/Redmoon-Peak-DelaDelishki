@@ -29,7 +29,7 @@
 /datum/storyteller/psydon
 	name = "Psydon - Peace reigns. No villains will be present. His children can rest easy, for they have earned their respite."
 	desc = "Psydon will do little, events will be common as he takes a hands-off approach to the world. Consider this the 'extended' experience."
-	welcome_text = pick("A temperate breeze rolls through the quiet streets..", "\"My boy, this peace is what all true warriors strive for!"\")
+	welcome_text = pick("A temperate breeze rolls through the quiet streets..", \""My boy, this peace is what all true warriors strive for!""\)
 	weight = 6
 	always_votable = TRUE
 	color_theme = "#80ced8"
@@ -46,7 +46,7 @@
 /datum/storyteller/astrata
 	name = "Astrata - Order reigns. All occurrences are perfectly balanced out, without bias. Her favor shines upon nobility and their decrees."
 	desc = "Astrata will provide a balanced and varied experience. Consider this the default experience."
-	welcome_text = "Daelight ushers the start of a new week.."
+	welcome_text = "The warmth of daelight rouses you from your slumber.."
 	weight = 6
 	always_votable = TRUE
 	follower_modifier = LOWER_FOLLOWER_MODIFIER

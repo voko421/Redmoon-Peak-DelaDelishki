@@ -27,8 +27,13 @@
 			to_chat(user, span_warning("Not even magic can mend this item!"))
 			revert_cast()
 			return
+
 		if(I.obj_integrity < I.max_integrity)
-			var/repair_percent = 0.25
+			var/repair_percent = 0.20
+			var/int_bonus = 0.00
+
+			int_bonus = (user.STAINT * 0.01)
+			repair_percent += int_bonus
 			repair_percent *= I.max_integrity
 			I.obj_integrity = min(I.obj_integrity + repair_percent, I.max_integrity)
 			user.visible_message(span_info("[I] glows in a faint mending light."))

@@ -1,7 +1,7 @@
 /*STAT DEFINES*/
 #define STAT_STRENGTH "strength"
 #define STAT_PERCEPTION "perception"
-#define STAT_INTELLIGENCE "inteligence"
+#define STAT_INTELLIGENCE "intelligence"
 #define STAT_CONSTITUTION "constitution"
 #define STAT_WILLPOWER "willpower"
 #define STAT_SPEED "speed"

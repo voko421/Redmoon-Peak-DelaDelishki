@@ -78,10 +78,10 @@
 	rigged_outcome = 0
 	G.rigged_outcome = 0
 	if(user)
-		if(G.quantity <= 0 && user)
-			user.doUnEquip(G)
-			qdel(G)
+		user.doUnEquip(G)
 		user.update_inv_hands()
+	if(G.quantity <= 0)
+		qdel(G)
 	playsound(loc, 'sound/foley/coins1.ogg', 100, TRUE, -2)
 
 /obj/item/roguecoin/attack_right(mob/user)

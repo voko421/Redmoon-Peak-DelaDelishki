@@ -148,7 +148,7 @@
     STAPER = 11
     STAINT = 9
     STACON = 7
-    STAEND = 9
+    STAWIL = 9
     STASPD = 13
     STALUC = 9
     speak = list("...") // mostly silent
@@ -180,7 +180,7 @@
     STAPER = 9
     STAINT = 11
     STACON = 7
-    STAEND = 8
+    STAWIL = 8
     STASPD = 11
     speak = list("Skrii!", "Tik-tik.", "Chrr.")
     speak_emote = list("squeaks", "chatters")
@@ -213,7 +213,7 @@
     movement_type = FLYING
     STASTR = 4
     STACON = 11
-    STAEND = 9
+    STAWIL = 9
     STASPD = 8
     speak = list("Fffff...", "Whuuuh.")
     speak_emote = list("whispers", "murmurs")
@@ -241,7 +241,7 @@
 	STAPER = 8
 	STAINT = 9
 	STACON = 9
-	STAEND = 11
+	STAWIL = 11
 	STASPD = 8
 	STALUC = 8
 
@@ -273,7 +273,7 @@
 	STASTR = 4
 	STAPER = 9
 	STACON = 6
-	STAEND = 9
+	STAWIL = 9
 	STASPD = 9
 	STALUC = 11
 
@@ -306,7 +306,7 @@
 
 	STASTR = 6
 	STACON = 8
-	STAEND = 9
+	STAWIL = 9
 	STASPD = 9
 	STALUC = 11
 
@@ -340,7 +340,7 @@
 	STASTR = 11
 	STAPER = 8
 	STAINT = 9
-	STAEND = 11
+	STAWIL = 11
 	STASPD = 6
 	STALUC = 8
 
@@ -374,7 +374,7 @@
 	STASTR = 4
 	STAPER = 11
 	STACON = 6
-	STAEND = 8
+	STAWIL = 8
 	STALUC = 11
 
 	icon_state = "crow_flying"
@@ -413,7 +413,7 @@
 	STAPER = 8
 	STAINT = 11
 	STACON = 11
-	STAEND = 9
+	STAWIL = 9
 	STASPD = 8
 	STALUC = 8
 
@@ -444,7 +444,7 @@
 	//inherent_spell = list(/obj/effect/proc_holder/spell/self/phantom_flicker)
 	STASTR = 5
 	STACON = 8
-	STAEND = 9
+	STAWIL = 9
 	STASPD = 11
 	STALUC = 11
 
@@ -477,7 +477,7 @@
 	STAPER = 11
 	STAINT = 11
 	STACON = 7
-	STAEND = 8
+	STAWIL = 8
 	STASPD = 11
 	STALUC = 9
 
@@ -510,7 +510,7 @@
 	STAPER = 7
 	STAINT = 9
 	STACON = 11
-	STAEND = 12
+	STAWIL = 12
 	STALUC = 8
 
 	icon_state = "thornback"
@@ -548,7 +548,7 @@
     STAPER = 7
     STAINT = 4
     STACON = 5
-    STAEND = 5
+    STAWIL = 5
     STASPD = 8
     STALUC = 6
     summoning_emote = "A faint rustle as a brown mouse darts out from a shadow."
@@ -569,7 +569,7 @@
     STAPER = 7
     STAINT = 4
     STACON = 5
-    STAEND = 5
+    STAWIL = 5
     STASPD = 8
     STALUC = 6
     summoning_emote = "A soft squeak as a white mouse peeks out from behind an object."
@@ -590,7 +590,7 @@
     STAPER = 7
     STAINT = 4
     STACON = 5
-    STAEND = 5
+    STAWIL = 5
     STASPD = 8
     STALUC = 6
     summoning_emote = "A grey mouse slips quietly from a crack in the wall."
@@ -611,7 +611,7 @@
     STAPER = 8
     STAINT = 5
     STACON = 6
-    STAEND = 6
+    STAWIL = 6
     STASPD = 7
     STALUC = 7
     summoning_emote = "A black feather flutters down as a zad lands nearby with a caw."
@@ -632,7 +632,7 @@
     STAPER = 5
     STAINT = 4
     STACON = 6
-    STAEND = 6
+    STAWIL = 6
     STASPD = 5
     STALUC = 5
     summoning_emote = "A soft clucking as a grey chicken waddles into view."
@@ -653,7 +653,7 @@
     STAPER = 5
     STAINT = 4
     STACON = 6
-    STAEND = 6
+    STAWIL = 6
     STASPD = 5
     STALUC = 5
     summoning_emote = "A brown chicken bustles in, pecking at the floor."
@@ -674,7 +674,7 @@
     STAPER = 5
     STAINT = 4
     STACON = 6
-    STAEND = 6
+    STAWIL = 6
     STASPD = 5
     STALUC = 5
     summoning_emote = "A white chicken quietly settles down."
@@ -695,7 +695,7 @@
     STAPER = 5
     STAINT = 4
     STACON = 6
-    STAEND = 6
+    STAWIL = 6
     STASPD = 5
     STALUC = 5
     summoning_emote = "A black chicken struts in, head held high."
@@ -716,7 +716,7 @@
     STAPER = 7
     STAINT = 5
     STACON = 5
-    STAEND = 6
+    STAWIL = 6
     STASPD = 7
     STALUC = 6
     summoning_emote = "A rat scurries out from a dark corner, nose twitching."
@@ -737,7 +737,7 @@
     STAPER = 8
     STAINT = 4
     STACON = 5
-    STAEND = 5
+    STAWIL = 5
     STASPD = 8
     STALUC = 6
     summoning_emote = "A flutter of wings as a bat swoops down from above."
@@ -758,7 +758,7 @@
     STAPER = 6
     STAINT = 4
     STACON = 5
-    STAEND = 6
+    STAWIL = 6
     STASPD = 7
     STALUC = 5
     summoning_emote = "A green frog hops into view with a wet plop."
@@ -779,7 +779,7 @@
     STAPER = 6
     STAINT = 4
     STACON = 5
-    STAEND = 6
+    STAWIL = 6
     STASPD = 7
     STALUC = 5
     summoning_emote = "A purple frog appears with a soft splash."
@@ -800,7 +800,7 @@
     STAPER = 7
     STAINT = 6
     STACON = 5
-    STAEND = 6
+    STAWIL = 6
     STASPD = 7
     STALUC = 7
     summoning_emote = "A flash of color as a parrot swoops down, squawking."
@@ -821,7 +821,7 @@
     STAPER = 7
     STAINT = 5
     STACON = 6
-    STAEND = 6
+    STAWIL = 6
     STASPD = 7
     STALUC = 6
     summoning_emote = "A snake slithers into view, tongue flicking."
@@ -842,7 +842,7 @@
     STAPER = 5
     STAINT = 4
     STACON = 7
-    STAEND = 7
+    STAWIL = 7
     STASPD = 4
     STALUC = 5
     summoning_emote = "A mudcrab emerges from a patch of damp earth."
@@ -863,7 +863,7 @@
     STAPER = 7
     STAINT = 5
     STACON = 6
-    STAEND = 6
+    STAWIL = 6
     STASPD = 7
     STALUC = 7
     summoning_emote = "A pink, hairless cat stretches and yawns as it appears."
@@ -884,7 +884,7 @@
     STAPER = 7
     STAINT = 5
     STACON = 6
-    STAEND = 6
+    STAWIL = 6
     STASPD = 7
     STALUC = 7
     summoning_emote = "A black cat pads silently into view, tail flicking."
@@ -905,7 +905,7 @@
     STAPER = 6
     STAINT = 5
     STACON = 7
-    STAEND = 7
+    STAWIL = 7
     STASPD = 5
     STALUC = 5
     mob_biotypes = MOB_ROBOTIC
@@ -927,7 +927,7 @@
     STAPER = 6
     STAINT = 5
     STACON = 7
-    STAEND = 7
+    STAWIL = 7
     STASPD = 5
     STALUC = 5
     mob_biotypes = MOB_ROBOTIC

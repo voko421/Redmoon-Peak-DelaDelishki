@@ -471,7 +471,7 @@
 		"con" = 1 + (stage * 2),
 		"end" = 1 + (stage * 2),
 		"fort" = 1 - (stage * 2),
-		STATKEY_SPD = 1 - (stage * 2),
+		"speed" = 1 - (stage * 2),
 		"per" = -1 * stage
 	)
 
@@ -513,7 +513,7 @@
 		stats["con"],
 		stats["end"],
 		stats["fort"],
-		stats[STATKEY_SPD],
+		stats["speed"],
 		stats["per"]
 	)
 

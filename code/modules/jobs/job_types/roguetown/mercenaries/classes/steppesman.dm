@@ -103,7 +103,7 @@
 			H.adjust_skillrank_up_to(/datum/skill/labor/mining, 3, TRUE)		//Ditto
 			H.adjust_skillrank_up_to(/datum/skill/craft/traps, 3, TRUE)			//Ditto
 			H.change_stat("strength", 2)		//Statblock prone to revision. Probably will be revised. Currently weighted for 7 points and not 9.
-			H.change_stat("endurance", 3)
+			H.change_stat("willpower", 3)
 			H.change_stat("constitution", 2)
 			H.change_stat("perception", 2)
 			H.change_stat("speed", -2)

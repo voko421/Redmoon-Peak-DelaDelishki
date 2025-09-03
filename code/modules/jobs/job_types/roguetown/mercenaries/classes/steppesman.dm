@@ -63,10 +63,10 @@
 			H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/tracking, 2, TRUE)
-			H.change_stat("strength", 2)
-			H.change_stat("willpower", 1)
-			H.change_stat("constitution", 2)
-			H.change_stat("speed", 1)
+			H.change_stat(STATKEY_STR, 2)
+			H.change_stat(STATKEY_WIL, 1)
+			H.change_stat(STATKEY_CON, 2)
+			H.change_stat(STATKEY_SPD, 1)
 			ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 			H.dna.species.soundpack_m = new /datum/voicepack/male/evil() 	//Fits in my head all too well.
 		if("Druzhina - Ranged Skirmisher")	//Tl;dr - light armor class for Tatar-style archery. Has 'Druzhina' as a name cus czech/polish influence, couldn't think of better one.
@@ -92,9 +92,9 @@
 			H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/shields, 1, TRUE)
-			H.change_stat("perception", 3)
-			H.change_stat("willpower", 2)
-			H.change_stat("speed", 2)
+			H.change_stat(STATKEY_PER, 3)
+			H.change_stat(STATKEY_WIL, 2)
+			H.change_stat(STATKEY_SPD, 2)
 			ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 		if("Kozak - Melee Skirmisher")		//Tl;dr - Old Steppesman whip build, light armor, be the glass canon you always wanted to be. Live your life, king. 
 			H.set_blindness(0)
@@ -116,10 +116,10 @@
 			H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/tracking, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/shields, 1, TRUE)
-			H.change_stat("strength", 1)
-			H.change_stat("perception", 2)
-			H.change_stat("willpower", 1)
-			H.change_stat("speed", 2)
+			H.change_stat(STATKEY_STR, 1)
+			H.change_stat(STATKEY_PER, 2)
+			H.change_stat(STATKEY_WIL, 1)
+			H.change_stat(STATKEY_SPD, 2)
 			ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 			H.dna.species.soundpack_m = new /datum/voicepack/male/warrior()		//Semi-crazed warrior vibe.
 		

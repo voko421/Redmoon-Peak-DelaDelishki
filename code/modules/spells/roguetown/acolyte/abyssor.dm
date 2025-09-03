@@ -471,7 +471,7 @@
 		"con" = 1 + (stage * 2),
 		"end" = 1 + (stage * 2),
 		"fort" = 1 - (stage * 2),
-		"speed" = 1 - (stage * 2),
+		STATKEY_SPD = 1 - (stage * 2),
 		"per" = -1 * stage
 	)
 
@@ -513,7 +513,7 @@
 		stats["con"],
 		stats["end"],
 		stats["fort"],
-		stats["speed"],
+		stats[STATKEY_SPD],
 		stats["per"]
 	)
 
@@ -552,12 +552,12 @@
 	perception_malus = new_per
 
 	effectedstats = list(
-		"strength" = str_buff,
-		"constitution" = con_buff,
-		"willpower" = end_buff,
-		"fortune" = fortune_malus,
-		"speed" = speed_malus,
-		"perception" = perception_malus
+		STATKEY_STR = str_buff,
+		STATKEY_CON = con_buff,
+		STATKEY_WIL = end_buff,
+		STATKEY_LCK = fortune_malus,
+		STATKEY_SPD = speed_malus,
+		STATKEY_PER = perception_malus
 	)
 	
 	return ..()

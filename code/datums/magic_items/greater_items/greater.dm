@@ -97,6 +97,27 @@
 		attacker.visible_message(span_danger("[I] sets [attacker] on fire!"))
 		src.last_used = world.time
 
+/datum/magic_item/greater/woundclosing
+	name = "wound closing"
+	description = "It pulses with healing magick."
+	var/active_item = FALSE
+
+/datum/magic_item/greater/woundclosing/on_equip(var/obj/item/i, var/mob/living/user, slot)
+	if(slot == ITEM_SLOT_HANDS)
+		return
+	if(active_item)
+		return
+	else
+		user.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/wound_closure)
+		to_chat(user, span_notice("[i] feels warm against fingers."))
+		active_item = TRUE
+
+/datum/magic_item/greater/woundclosing/on_drop(var/obj/item/i, var/mob/living/user)
+	if(active_item)
+		active_item = FALSE
+		user.mind.RemoveSpell(/obj/effect/proc_holder/spell/invoked/wound_closure)
+		to_chat(user, span_notice("The warmth of [i] fades away."))
+
 /datum/magic_item/greater/returningweapon
 	name = "returning weapon"
 	description = "It glows with arcane sigils."

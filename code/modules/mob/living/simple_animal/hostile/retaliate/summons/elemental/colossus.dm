@@ -46,7 +46,7 @@
 	aggressive = 1
 
 	STACON = 20
-	STAEND = 20
+	STAWIL = 20
 	STASTR = 16
 	STASPD = 3
 
@@ -99,7 +99,6 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/elemental/colossus/death(gibbed)
 	..()
 	var/turf/deathspot = get_turf(src)
-	new /obj/item/magic/elementalrelic(deathspot)
 	new /obj/item/magic/elementalrelic(deathspot)
 	new /obj/item/magic/elementalfragment(deathspot)
 	new /obj/item/magic/elementalfragment(deathspot)

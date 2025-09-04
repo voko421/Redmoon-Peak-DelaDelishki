@@ -705,11 +705,11 @@ SUBSYSTEM_DEF(gamemode)
 		return storyboy.desc
 
 
-/datum/controller/subsystem/gamemode/proc/storyteller_vote_result(winner_name)
+/datum/controller/subsystem/gamemode/proc/storyteller_vote_result(html_contaminated)
 	for(var/storyteller_type in storytellers)
 		var/datum/storyteller/storyboy = storytellers[storyteller_type]
-		if(storyboy.name == winner_name)
-			selected_storyteller = storyteller_type
+		if(findtext(html_contaminated, storyboy.name))
+			selected_storyteller = storyboy.type
 			break
 
 	var/datum/storyteller/storytypecasted = selected_storyteller

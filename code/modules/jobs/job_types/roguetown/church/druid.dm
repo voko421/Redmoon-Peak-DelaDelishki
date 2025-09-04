@@ -22,7 +22,12 @@
 
 	//You're.. not REALLY a full-on church member, but being a druid implies you became a clergy-man of some sort; even if it's non-organized. So, still shouldn't be noble.
 	virtue_restrictions = list(/datum/virtue/utility/noble)
-
+	job_stats = list(
+		STATKEY_INT = 2,
+		STATKEY_WIL = 2,
+		STATKEY_SPD = 1,
+		STATKEY_PER = -1
+	)
 /datum/outfit/job/roguetown/druid
 	name = "Druid"
 	jobtype = /datum/job/roguetown/druid
@@ -59,15 +64,9 @@
 	H.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE) //To help them defend themselves with parrying
 	H.grant_language(/datum/language/beast)
 	H.put_in_hands(new /obj/item/rogueweapon/woodstaff(H), TRUE) //To encourage them to wander the forests and to help defend themselves
-	H.change_stat(STATKEY_INT, 1)
-	H.change_stat(STATKEY_WIL, 1)
-	H.change_stat(STATKEY_SPD, 1)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/magic/druidic, 1, TRUE)
-	H.change_stat(STATKEY_INT, 1)
-	H.change_stat(STATKEY_WIL, 1)
-	H.change_stat(STATKEY_PER, -1)
 	H.ambushable = FALSE
 
 	ADD_TRAIT(H, TRAIT_SEEDKNOW, TRAIT_GENERIC)

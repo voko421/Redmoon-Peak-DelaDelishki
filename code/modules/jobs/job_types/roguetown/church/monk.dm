@@ -20,7 +20,11 @@
 
 	//No nobility for you, being a member of the clergy means you gave UP your nobility. It says this in many of the church tutorial texts.
 	virtue_restrictions = list(/datum/virtue/utility/noble)
-
+	job_stats = list(
+		STATKEY_INT = 3,
+		STATKEY_WIL = 2,
+		STATKEY_SPD = 1
+	)
 /datum/outfit/job/roguetown/monk
 	name = "Acolyte"
 	jobtype = /datum/job/roguetown/monk
@@ -180,9 +184,6 @@
 	// -- End of section for god specific bonuses --
 	ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_GRAVEROBBER, TRAIT_GENERIC)
-	H.change_stat(STATKEY_INT, 3)
-	H.change_stat(STATKEY_WIL, 2)
-	H.change_stat(STATKEY_SPD, 1)
 
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
 	C.grant_miracles(H, cleric_tier = CLERIC_T4, passive_gain = CLERIC_REGEN_MAJOR, start_maxed = TRUE)	//Starts off maxed out.

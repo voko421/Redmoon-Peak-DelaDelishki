@@ -35,6 +35,13 @@ GLOBAL_LIST_EMPTY(heretical_players)
 
 	//No nobility for you, being a member of the clergy means you gave UP your nobility. It says this in many of the church tutorial texts.
 	virtue_restrictions = list(/datum/virtue/utility/noble)
+	job_stats = list(
+		STATKEY_INT = 3,
+		STATKEY_WIN = 1,
+		STATKEY_STR = -1,
+		STATKEY_CON = -1,
+		STATKEY_SPD = -1
+	)
 
 /datum/outfit/job/roguetown/priest
 	job_bitflag = BITFLAG_CHURCH
@@ -78,11 +85,6 @@ GLOBAL_LIST_EMPTY(heretical_players)
 	H.grant_language(/datum/language/grenzelhoftian)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)
-	H.change_stat(STATKEY_STR, -1)
-	H.change_stat(STATKEY_INT, 3)
-	H.change_stat(STATKEY_CON, -1)
-	H.change_stat(STATKEY_WIL, 1)
-	H.change_stat(STATKEY_SPD, -1)
 	var/datum/devotion/C = new /datum/devotion(H, H.patron) // This creates the cleric holder used for devotion spells
 	C.grant_miracles(H, cleric_tier = CLERIC_T4, passive_gain = CLERIC_REGEN_MAJOR, start_maxed = TRUE)	//Starts off maxed out.
 

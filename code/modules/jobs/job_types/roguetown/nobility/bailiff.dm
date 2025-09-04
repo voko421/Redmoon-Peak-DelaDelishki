@@ -24,6 +24,11 @@
 	cmode_music = 'sound/music/combat_knight.ogg'
 	advclass_cat_rolls = list (CTAG_MARSHAL = 20)
 
+	job_subclasses = list(
+		/datum/advclass/marshal/classic,
+		/datum/advclass/marshal/kcommander
+	)
+
 /datum/outfit/job/roguetown/marshal
 	job_bitflag = BITFLAG_ROYALTY | BITFLAG_GARRISON	//Same as Captain, you get decent combat stats so might as well be garrison.
 
@@ -50,13 +55,6 @@
 	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/tracking, 2, TRUE)
-	H.change_stat(STATKEY_STR, 2) //important leadership role, but SHOULDN'T be frontlining
-	H.change_stat(STATKEY_PER, 2)
-	H.change_stat(STATKEY_INT, 3)
-	H.change_stat(STATKEY_CON, 1)
-	H.change_stat(STATKEY_WIL, 1)
-	H.change_stat(STATKEY_SPD, 1)
-	H.change_stat(STATKEY_LCK, 1)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_PERFECT_TRACKER, TRAIT_GENERIC)
@@ -77,6 +75,15 @@
 	outfit = /datum/outfit/job/roguetown/marshal/classic
 
 	category_tags = list(CTAG_MARSHAL)
+	subclass_stats = list(
+		STATKEY_INT = 3,
+		STATKEY_PER = 3,
+		STATKEY_CON = 1,
+		STATKEY_LCK = 2,
+		STATKEY_WIL = 1,
+		STATKEY_SPD = 1,
+		STATKEY_STR = 1,
+	)
 
 /datum/outfit/job/roguetown/marshal/classic/pre_equip(mob/living/carbon/human/H)
 	armor = /obj/item/clothing/suit/roguetown/armor/brigandine/sheriff
@@ -94,6 +101,15 @@
 	outfit = /datum/outfit/job/roguetown/marshal/kcommander
 
 	category_tags = list(CTAG_MARSHAL)
+	subclass_stats = list(
+		STATKEY_INT = 3,
+		STATKEY_PER = 3,
+		STATKEY_CON = 1,
+		STATKEY_LCK = 2,
+		STATKEY_WIL = 1,
+		STATKEY_SPD = 1,
+		STATKEY_STR = 1,
+	)
 
 /datum/outfit/job/roguetown/marshal/kcommander/pre_equip(mob/living/carbon/human/H)
 	armor = /obj/item/clothing/suit/roguetown/armor/brigandine/sheriff/coat

@@ -444,6 +444,14 @@
 
 	cmode_music = 'sound/music/combat_martyrsafe.ogg'
 
+	job_stats = list(
+		STATKEY_CON = 3,
+		STATKEY_WIL = 3,
+		STATKEY_STR = 2,
+		STATKEY_PER = 1,
+		STATKEY_INT = 1
+	)
+
 	//No undeath-adjacent virtues for a role that can sacrifice itself. The Ten like their sacrifices 'pure'. (I actually didn't want to code returning those virtue traits post-sword use)
 	//They get those traits during sword activation, anyway. 
 	//Dual wielder is there to stand-in for ambidextrous in case they activate their sword in their off-hand.
@@ -495,11 +503,6 @@
 	ADD_TRAIT(H, TRAIT_SILVER_BLESSED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_MEDICINE_EXPERT, TRAIT_GENERIC)	//Tentative!
 	ADD_TRAIT(H, TRAIT_DUALWIELDER, TRAIT_GENERIC)	//You can't dual wield the unique weapon, this is more to cover for the NODROP weapon that might end up in an off-hand.
-	H.change_stat(STATKEY_STR, 2)
-	H.change_stat(STATKEY_CON, 3)
-	H.change_stat(STATKEY_WIL, 3)
-	H.change_stat(STATKEY_INT, 1)
-	H.change_stat(STATKEY_PER, 1)
 	H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
 
 

@@ -16,6 +16,11 @@
 	min_pq = 3 // Has actual responsibility and is a key figure in town.
 	max_pq = null
 	round_contrib_points = 3
+	job_stats = list(
+		STATKEY_WIL = 3,
+		STATKEY_INT = 3,
+		STATKEY_SPD = 1
+	)
 
 /datum/outfit/job/roguetown/loudmouth/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -61,9 +66,6 @@
 	ADD_TRAIT(H, TRAIT_INTELLECTUAL, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_MAGEARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_ARCYNE_T1, TRAIT_GENERIC)
-	H.change_stat(STATKEY_SPD, 1)
-	H.change_stat(STATKEY_INT, 3)
-	H.change_stat(STATKEY_WIL, 3)
 	if (H && H.mind)
 		H.mind.adjust_spellpoints(6)
 	if(H.age == AGE_OLD)

@@ -17,6 +17,13 @@
 	max_pq = null
 	round_contrib_points = 2
 	cmode_music = 'sound/music/cmode/towner/combat_towner.ogg'
+	//5 points (weighted)
+	job_stats = list(
+		STATKEY_CON = 1,
+		STATKEY_WIL = 1,
+		STATKEY_INT = 1,
+		STATKEY_SPD = 1
+	)
 	
 /datum/outfit/job/roguetown/knavewench/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -53,8 +60,4 @@
 	backpack_contents = list(
 		/obj/item/bottle_kit
 	)
-	H.change_stat(STATKEY_CON, 1)
-	H.change_stat(STATKEY_WIL, 1)
-	H.change_stat(STATKEY_INT, 1)
-	H.change_stat(STATKEY_SPD, 1) //5 points (weighted)
 	ADD_TRAIT(H, TRAIT_CICERONE, TRAIT_GENERIC)

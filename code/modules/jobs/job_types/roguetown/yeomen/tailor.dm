@@ -17,7 +17,12 @@
 	max_pq = null
 	round_contrib_points = 3
 	cmode_music = 'sound/music/cmode/towner/combat_towner3.ogg'
-
+	job_stats = list(
+		STATKEY_INT = 2,
+		STATKEY_PER = 1,
+		STATKEY_SPD = 1,
+		STATKEY_STR = -1
+	)
 /datum/outfit/job/roguetown/tailor/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
@@ -46,7 +51,3 @@
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/silkdress
 	else if(should_wear_masc_clothes(H))
 		armor = /obj/item/clothing/suit/roguetown/shirt/tunic/random
-	H.change_stat(STATKEY_INT, 2)
-	H.change_stat(STATKEY_PER, 1)
-	H.change_stat(STATKEY_SPD, 1)
-	H.change_stat(STATKEY_STR, -1)

@@ -19,6 +19,11 @@
 	required = TRUE
 	round_contrib_points = 3
 	cmode_music = 'sound/music/combat_noble.ogg'
+	job_stats = list(
+		STATKEY_PER = 3,
+		STATKEY_INT = 2,
+		STATKEY_STR = -1
+	)
 
 /datum/outfit/job/roguetown/merchant/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -53,9 +58,6 @@
 		H.dna.species.soundpack_m = new /datum/voicepack/male/wizard()
 	else if(should_wear_femme_clothes(H))
 		shoes = /obj/item/clothing/shoes/roguetown/gladiator
-	H.change_stat(STATKEY_INT, 2)
-	H.change_stat(STATKEY_PER, 3)
-	H.change_stat(STATKEY_STR, -1)
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/appraise/secular)
 

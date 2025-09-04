@@ -17,7 +17,13 @@
 	max_pq = null
 	round_contrib_points = 3
 	cmode_music = 'sound/music/cmode/towner/combat_retired.ogg'
-
+	job_stats = list(
+		STATAKEY_STR = 1,
+		STATKEY_WIL = 1,
+		STATKEY_CON = 1,
+		STATKEY_INT = 1,
+		STATKEY_SPD = 1
+	)
 /datum/outfit/job/roguetown/barkeep/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
@@ -56,11 +62,6 @@
 		/obj/item/recipe_book/survival,
 		/obj/item/bottle_kit
 	)
-	H.change_stat(STATKEY_STR, 1) ///7 points (weighted)
-	H.change_stat(STATKEY_WIL, 1)
-	H.change_stat(STATKEY_CON, 1)
-	H.change_stat(STATKEY_INT, 1)
-	H.change_stat(STATKEY_SPD, 1)
 	ADD_TRAIT(H, TRAIT_EMPATH, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)

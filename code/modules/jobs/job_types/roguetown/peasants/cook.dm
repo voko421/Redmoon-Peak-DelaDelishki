@@ -16,6 +16,12 @@
 	max_pq = null
 	round_contrib_points = 2
 	cmode_music = 'sound/music/cmode/towner/combat_towner2.ogg'
+	//5 points (weighted)
+	job_stats = list(
+		STATKEY_CON = 2,
+		STATKEY_STR = 1,
+		STATKEY_INT = 1
+	)
 
 /datum/outfit/job/roguetown/cook/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -51,7 +57,4 @@
 	backpack_contents = list(
 		/obj/item/recipe_book/survival,
 	)
-	H.change_stat(STATKEY_CON, 2)
-	H.change_stat(STATKEY_STR, 1)
-	H.change_stat(STATKEY_INT, 1) //5 points (weighted)
 	ADD_TRAIT(H, TRAIT_CICERONE, TRAIT_GENERIC)

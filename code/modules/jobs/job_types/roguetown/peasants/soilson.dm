@@ -21,6 +21,12 @@
 	min_pq = -10
 	max_pq = null
 	round_contrib_points = 3
+	job_stats = list(
+		STATKEY_WIL = 2,
+		STATKEY_STR = 1,
+		STATKEY_CON = 1,
+		STATKEY_SPD = 1
+	)
 
 /datum/outfit/job/roguetown/farmer/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -57,9 +63,6 @@
 	if(H.age == AGE_OLD)//So ppl have reason to pick this I guess?
 		H.adjust_skillrank(/datum/skill/labor/farming, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/labor/butchering, 1, TRUE)
-	H.change_stat(STATKEY_STR, 1)
-	H.change_stat(STATKEY_CON, 1)
-	H.change_stat(STATKEY_SPD, 1)
 	ADD_TRAIT(H, TRAIT_SEEDKNOW, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_LONGSTRIDER, TRAIT_GENERIC)

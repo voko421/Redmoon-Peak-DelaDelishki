@@ -23,6 +23,12 @@
 	max_pq = null
 	round_contrib_points = 3
 	cmode_music = 'sound/music/cmode/towner/combat_retired.ogg'
+	job_stats = list(
+		STATKEY_STR = 2,
+		STATKEY_CON = 2,
+		STATKEY_WIL = 2,
+		STATKEY_INT = 1
+	)
 
 /datum/outfit/job/roguetown/guildmaster/pre_equip(mob/living/carbon/human/H)
 	ADD_TRAIT(H, TRAIT_SEEPRICES, TRAIT_GENERIC)
@@ -73,11 +79,6 @@
 		belt = /obj/item/storage/belt/rogue/leather
 		beltl = /obj/item/storage/belt/rogue/pouch/coins/rich
 		beltr = /obj/item/storage/keyring/guildmaster
-
-	H.change_stat(STATKEY_STR, 2)
-	H.change_stat(STATKEY_INT, 1)
-	H.change_stat(STATKEY_WIL, 2)
-	H.change_stat(STATKEY_CON, 2)
 
 /mob/living/carbon/human/proc/guild_announcement()
 	set name = "Announcement"

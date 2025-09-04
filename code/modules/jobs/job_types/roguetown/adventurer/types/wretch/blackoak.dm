@@ -12,6 +12,14 @@
 	cmode_music = 'sound/music/combat_blackoak.ogg'
 	maximum_possible_slots = 1
 	category_tags = list(CTAG_WRETCH)
+	//lower-than-avg stats for wretch but their traits are insanely good
+	subclass_stats = list(
+		STATKEY_STR = 2,
+		STATKEY_SPD = 2,
+		STATKEY_INT = 2,
+		STATKEY_CON = -1
+	)
+	extra_context = "This subclass is race-limited to: Half-Elves, Elves, Dark Elves."
 
 /datum/outfit/job/roguetown/wretch/blackoak/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -33,10 +41,6 @@
 	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/labor/farming, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
-	H.change_stat(STATKEY_CON, -1) //lower-than-avg stats for wretch but their traits are insanely good
-	H.change_stat(STATKEY_INT, 2)
-	H.change_stat(STATKEY_STR, 2)
-	H.change_stat(STATKEY_SPD, 2)
 	ADD_TRAIT(H, TRAIT_AZURENATIVE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_HERESIARCH, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_OUTDOORSMAN, TRAIT_GENERIC)

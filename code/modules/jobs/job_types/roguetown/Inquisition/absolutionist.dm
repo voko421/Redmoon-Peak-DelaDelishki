@@ -17,6 +17,11 @@
 	wanderer_examine = FALSE
 	advjob_examine = FALSE
 	give_bank_account = 15
+	job_stats = list(
+		STATKEY_CON = 7,
+		STATKEY_WIL = 3,
+		STATKEY_SPD = -2
+	)
 
 // REMEMBER FLAGELLANT? REMEMBER LASZLO? THIS IS HIM NOW. FEEL OLD YET?
 
@@ -71,9 +76,6 @@
 		/obj/item/natural/worms/leech/cheele = 1,
 		/obj/item/roguekey/inquisition = 1,
 		)
-	H.change_stat(STATKEY_WIL, 3)
-	H.change_stat(STATKEY_CON, 7)
-	H.change_stat(STATKEY_SPD, -2)
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
 	C.grant_miracles(H, cleric_tier = CLERIC_T4, passive_gain = CLERIC_REGEN_ABSOLVER, start_maxed = TRUE) // PSYDONIAN MIRACLE-WORKER. LUX-MERGING FREEK.
 	ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC)

@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/invoked/mending
 	name = "Mending"
-	desc = "Uses arcyne energy to mend an item."
+	desc = "Uses arcyne energy to mend an item. Effect of repair scales off of your Intellegence."
 	overlay_state = "mending"
 	releasedrain = 50
 	chargetime = 5

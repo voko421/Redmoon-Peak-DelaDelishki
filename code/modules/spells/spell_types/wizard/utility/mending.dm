@@ -4,7 +4,7 @@
 	overlay_state = "mending"
 	releasedrain = 50
 	chargetime = 5
-	recharge_time = 22 SECONDS
+	recharge_time = 21 SECONDS
 	warnie = "spellwarning"
 	movement_interrupt = FALSE
 	no_early_release = FALSE

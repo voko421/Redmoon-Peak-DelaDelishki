@@ -56,13 +56,6 @@
 		return FALSE
 
 	M.buckling = src
-	if((M.cmode) && (M != usr))
-		if(istype(M, /mob/living/carbon))
-			var/mob/living/carbon/guy = M
-			if(!guy.handcuffed)
-				to_chat(usr, span_warning("I am unable to [buckleverb] [M] on [src]."))
-				M.buckling = null
-				return FALSE
 	if(!M.can_buckle() && !force)
 		if(M == usr)
 			to_chat(M, span_warning("I am unable to [buckleverb] on [src]."))

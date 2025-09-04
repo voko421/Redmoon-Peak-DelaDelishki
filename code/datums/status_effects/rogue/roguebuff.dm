@@ -1240,25 +1240,25 @@
 	desc = "I am magically swift."
 	icon_state = "buff"
 
-/datum/status_effect/buff/magicendurance
-	id = "endurance"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/endurance
-	effectedstats = list("endurance" = 3)
+/datum/status_effect/buff/magicwillpower
+	id = "willpower"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/willpower
+	effectedstats = list("willpower" = 3)
 	duration = 20 MINUTES
 
-/atom/movable/screen/alert/status_effect/buff/endurance
-	name = "arcane endurance"
+/atom/movable/screen/alert/status_effect/buff/willpower
+	name = "arcane willpower"
 	desc = "I am magically resilient."
 	icon_state = "buff"
 
-/datum/status_effect/buff/magicendurance/lesser
-	id = "lesser endurance"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/endurance/lesser
-	effectedstats = list("endurance" = 1)
+/datum/status_effect/buff/magicwillpower/lesser
+	id = "lesser willpower"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/willpower/lesser
+	effectedstats = list("willpower" = 1)
 	duration = 20 MINUTES
 
-/atom/movable/screen/alert/status_effect/buff/endurance/lesser
-	name = "lesser arcane endurance"
+/atom/movable/screen/alert/status_effect/buff/willpower/lesser
+	name = "lesser arcane willpower"
 	desc = "I am magically resilient."
 	icon_state = "buff"
 

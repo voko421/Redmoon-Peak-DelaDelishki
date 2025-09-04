@@ -48,6 +48,7 @@
 	STASPD = 6
 
 /mob/living/simple_animal/hostile/retaliate/rogue/elemental/warden/Initialize()
+	src.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 	. = ..()
 
 /mob/living/simple_animal/hostile/retaliate/rogue/elemental/warden/death(gibbed)

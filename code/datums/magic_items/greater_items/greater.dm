@@ -34,6 +34,33 @@
 			warned = FALSE
 			src.last_used = world.time
 
+/datum/magic_item/greater/lightning
+	name = "lightning"
+	description = "It has small arcs of electricity dance across it"
+	var/list/last_used = list()
+
+/datum/magic_item/greater/lightning/on_hit(obj/item/source, atom/target, mob/user, proximity_flag, click_parameters)
+	if(world.time < (src.last_used[source] + (1 MINUTES + 40 SECONDS))) //thanks borbop
+		return
+
+	if(isliving(target))
+		var/mob/living/L = target
+		L.Immobilize(0.5 SECONDS)
+		L.apply_status_effect(/datum/status_effect/debuff/clickcd, 6 SECONDS)
+		L.electrocute_act(1, src, 1, SHOCK_NOSTUN)
+		L.apply_status_effect(/datum/status_effect/buff/lightningstruck, 6 SECONDS)
+
+		for(var/mob/living/nearby in range(2, target))
+			if(nearby == target || nearby == user)
+				continue
+			if(prob(30))
+				nearby.Immobilize(0.5 SECONDS)
+				nearby.apply_status_effect(/datum/status_effect/debuff/clickcd, 6 SECONDS)
+				nearby.electrocute_act(1, src, 1, SHOCK_NOSTUN)
+				nearby.apply_status_effect(/datum/status_effect/buff/lightningstruck, 6 SECONDS)
+				new /obj/effect/temp_visual/lightning(get_turf(target), get_turf(nearby))
+	last_used[source] = world.time
+
 /datum/magic_item/greater/frostveil
 	name = "frostveil"
 	description = "It feels rather cold."
@@ -54,6 +81,20 @@
 	if(isliving(attacker) && attacker != owner)
 		attacker.apply_status_effect(/datum/status_effect/debuff/cold)
 		attacker.visible_message(span_danger("[I] chills [attacker]!"))
+		src.last_used = world.time
+
+/datum/magic_item/greater/phoenixguard
+	name = "phoenixguard"
+	description = "It gives off radiant heat."
+	var/last_used
+
+/datum/magic_item/greater/phoenixguard/on_hit_response(var/obj/item/I, var/mob/living/carbon/human/owner, var/mob/living/carbon/human/attacker)
+	if(world.time < src.last_used + 100)
+		return
+	if(isliving(attacker) && attacker != owner)
+		attacker.adjust_fire_stacks(5)
+		attacker.IgniteMob()
+		attacker.visible_message(span_danger("[I] sets [attacker] on fire!"))
 		src.last_used = world.time
 
 /datum/magic_item/greater/returningweapon
@@ -159,3 +200,24 @@
 				user.adjust_skillrank(/datum/skill/combat/slings, -2, TRUE)
 
 		to_chat(user, span_notice("I feel mundane once more"))
+
+/datum/magic_item/greater/void
+	name = "void touched"
+	description = "It seems to absorb light around it, existing partially outside reality."
+	var/list/last_used = list()
+
+/datum/magic_item/greater/void/on_hit(obj/item/source, atom/target, mob/user, proximity_flag, click_parameters)
+	if(world.time < (src.last_used[source] + (1 MINUTES + 40 SECONDS)))
+		return
+
+	if(isliving(target) && prob(15))
+		var/mob/living/L = target
+		to_chat(L, span_warning("You feel reality warp around you!"))
+		var/list/possible_turfs = list()
+		for(var/turf/T in range(3, L))
+			if(T.density)
+				continue
+			possible_turfs += T
+		if(possible_turfs.len)
+			L.forceMove(pick(possible_turfs))
+	last_used[source] = world.time

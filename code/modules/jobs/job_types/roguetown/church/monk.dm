@@ -16,7 +16,7 @@
 	give_bank_account = TRUE
 	min_pq = 1 //A step above Churchling, should funnel new players to the churchling role to learn miracles at a more sedate pace
 	max_pq = null
-	round_contrib_points = 2
+	round_contrib_points = 5
 
 	//No nobility for you, being a member of the clergy means you gave UP your nobility. It says this in many of the church tutorial texts.
 	virtue_restrictions = list(/datum/virtue/utility/noble)
@@ -30,7 +30,7 @@
 /datum/outfit/job/roguetown/monk/pre_equip(mob/living/carbon/human/H)
 	..()
 	belt = /obj/item/storage/belt/rogue/leather/rope
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
+	beltr = /obj/item/storage/belt/rogue/pouch/coins/mid
 	beltl = /obj/item/storage/keyring/churchie
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(/obj/item/ritechalk)
@@ -180,9 +180,9 @@
 	// -- End of section for god specific bonuses --
 	ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_GRAVEROBBER, TRAIT_GENERIC)
-	H.change_stat("intelligence", 3)
-	H.change_stat("endurance", 2)
-	H.change_stat("speed", 1)
+	H.change_stat(STATKEY_INT, 3)
+	H.change_stat(STATKEY_WIL, 2)
+	H.change_stat(STATKEY_SPD, 1)
 
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
 	C.grant_miracles(H, cleric_tier = CLERIC_T4, passive_gain = CLERIC_REGEN_MAJOR, start_maxed = TRUE)	//Starts off maxed out.

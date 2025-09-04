@@ -89,7 +89,7 @@
 	var/last_used
 
 /datum/magic_item/greater/phoenixguard/on_hit_response(var/obj/item/I, var/mob/living/carbon/human/owner, var/mob/living/carbon/human/attacker)
-	if(world.time < src.last_used + 100)
+	if(world.time < src.last_used + 30 SECONDS)
 		return
 	if(isliving(attacker) && attacker != owner)
 		attacker.adjust_fire_stacks(5)

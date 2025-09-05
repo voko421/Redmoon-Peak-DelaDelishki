@@ -35,6 +35,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 
 	//No nobility for you, being a member of the clergy means you gave UP your nobility. It says this in many of the church tutorial texts.
 	virtue_restrictions = list(/datum/virtue/utility/noble)
+	job_traits = list(TRAIT_CHOSEN, TRAIT_RITUALIST, TRAIT_GRAVEROBBER)
 	job_stats = list(
 		STATKEY_INT = 3,
 		STATKEY_WIN = 1,
@@ -68,9 +69,6 @@ GLOBAL_LIST_EMPTY(heretical_players)
 		/obj/item/rogueweapon/huntingknife/idagger/steel/holysee = 1,	//Unique knife from the Holy See
 		/obj/item/rogueweapon/scabbard/sheath = 1
 	)
-	ADD_TRAIT(H, TRAIT_CHOSEN, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_GRAVEROBBER, TRAIT_GENERIC)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/polearms, 5, TRUE)

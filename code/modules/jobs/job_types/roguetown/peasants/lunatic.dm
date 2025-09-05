@@ -20,6 +20,9 @@
 	display_order = JDO_LUNATIC
 
 	cmode_music = 'sound/music/combat_bum.ogg'
+
+	job_traits = list(TRAIT_JESTERPHOBIA)
+
 	job_stats = list(
 		STATKEY_SPD = 2
 	)
@@ -43,4 +46,3 @@
 	belt  = /obj/item/storage/belt/rogue/leather/rope
 	beltl = /obj/item/rogueweapon/huntingknife/stoneknife
 	beltr = /obj/item/flashlight/flare/torch
-	ADD_TRAIT(H, TRAIT_JESTERPHOBIA, TRAIT_GENERIC)

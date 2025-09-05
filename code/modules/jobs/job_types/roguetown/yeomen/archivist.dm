@@ -17,6 +17,9 @@
 	min_pq = 1 // Please do not read smut while brewing bottle bombs. It upsets the maids when they have to scrape archivists off the ceiling.
 	max_pq = null
 	round_contrib_points = 3
+
+	job_traits = list(TRAIT_ARCYNE_T2, TRAIT_MAGEARMOR, TRAIT_INTELLECTUAL, TRAIT_SEEPRICES_SHITTY)
+
 	job_stats = list(
 		STATKEY_INT = 4,
 		STATKEY_CON = -1,
@@ -64,10 +67,6 @@
 	H.grant_language(/datum/language/kazengunese)
 	H.grant_language(/datum/language/draconic)
 	H.grant_language(/datum/language/aavnic) // All but beast, which is associated with werewolves.
-	ADD_TRAIT(H, TRAIT_SEEPRICES_SHITTY, "[type]")
-	ADD_TRAIT(H, TRAIT_INTELLECTUAL, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_MAGEARMOR, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_ARCYNE_T2, TRAIT_GENERIC)
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/teach)
 		H.mind?.adjust_spellpoints(12)

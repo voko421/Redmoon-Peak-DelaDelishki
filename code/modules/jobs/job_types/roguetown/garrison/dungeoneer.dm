@@ -24,6 +24,8 @@
 
 	cmode_music = 'sound/music/combat_dungeoneer.ogg'
 
+	job_traits = list(TRAIT_STEELHEARTED, TRAIT_DUNGEONMASTER, TRAIT_GUARDSMAN)
+
 	job_stats = list(
 		STATKEY_STR = 2,
 		STATKEY_CON = 2,
@@ -74,9 +76,6 @@
 	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 	H.dna.species.soundpack_m = new /datum/voicepack/male/warrior()
 	//Torture victim is for inquisition - doesn't even work without a psicross anymore so maybe come up with a variant for him specifically?
-	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_DUNGEONMASTER, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_GUARDSMAN, TRAIT_GENERIC)
 	switch(H.patron?.type)
 		if(/datum/patron/divine/necra)
 			head = /obj/item/clothing/head/roguetown/necrahood

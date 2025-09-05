@@ -18,6 +18,8 @@
 	round_contrib_points = 3
 	cmode_music = 'sound/music/combat_noble.ogg'
 
+	job_traits = list(TRAIT_NOBLE, TRAIT_SEEPRICES)
+
 	job_stats = list(
 		STATKEY_INT = 2,
 		STATKEY_PER = 2,
@@ -55,8 +57,6 @@
 	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/appraise/secular)
-	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_SEEPRICES, type)
 	H.verbs |= /mob/living/carbon/human/proc/adjust_taxes
 
 GLOBAL_VAR_INIT(steward_tax_cooldown, -50000) // Antispam

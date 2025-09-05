@@ -24,6 +24,8 @@
 
 	cmode_music = 'sound/music/combat_physician.ogg'
 
+	job_traits = list(TRAIT_MEDICINE_EXPERT, TRAIT_NOSTINK, TRAIT_EMPATH)
+
 	job_stats = list(
 		STATKEY_INT = 4,
 		STATKEY_WIL = 1,
@@ -62,9 +64,6 @@
 		/obj/item/reagent_containers/glass/bottle/waterskin = 1,
 		/obj/item/recipe_book/alchemy = 1,
 	)
-	ADD_TRAIT(H, TRAIT_EMPATH, "[type]")
-	ADD_TRAIT(H, TRAIT_NOSTINK, "[type]")
-	ADD_TRAIT(H, TRAIT_MEDICINE_EXPERT, TRAIT_GENERIC)
 	H.adjust_skillrank(/datum/skill/misc/reading, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE) //same tier as other yeomen
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)

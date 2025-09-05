@@ -132,7 +132,6 @@
 
 		//sound volume falloff with distance
 		var/distance = get_dist(T, turf_source)
-
 		S.volume -= (distance * (0.10 * S.volume)) //10% each step
 /*
 		if(pressure_affected)
@@ -157,19 +156,19 @@
 
 		if(S.volume <= 0)
 			return FALSE //No sound
-
-		var/dx = turf_source.x - x
+		var/atom/our_turf = get_turf(src)
+		var/dx = turf_source.x - our_turf.x
 		if(dx <= 1 && dx >= -1)
 			S.x = 0
 		else
 			S.x = dx
-		var/dz = turf_source.y - y
+		var/dz = turf_source.y - our_turf.y
 		if(dz <= 1 && dz >= -1)
 			S.z = 0
 		else
 			S.z = dz
 
-		var/dy = turf_source.z - z
+		var/dy = turf_source.z - our_turf.z
 		S.y = dy
 
 		S.falloff = (falloff ? falloff : FALLOFF_SOUNDS)

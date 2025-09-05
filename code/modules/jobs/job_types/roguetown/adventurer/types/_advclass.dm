@@ -11,6 +11,7 @@
 	var/maximum_possible_slots = -1
 	var/total_slots_occupied = 0
 	var/min_pq = -100
+	var/class_select_category
 
 	var/horse = FALSE
 	var/vampcompat = TRUE

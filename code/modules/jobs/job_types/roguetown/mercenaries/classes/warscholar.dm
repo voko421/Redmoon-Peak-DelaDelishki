@@ -4,6 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/mercenary/warscholar
+	class_select_category = CLASS_CAT_NALEDI
 	category_tags = list(CTAG_MERCENARY)
 	cmode_music = 'sound/music/warscholar.ogg'
 	traits_applied = list(TRAIT_OUTLANDER, TRAIT_MAGEARMOR, TRAIT_ARCYNE_T3)

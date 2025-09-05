@@ -5,6 +5,7 @@
 	allowed_races = RACES_ALL_KINDS
 	traits_applied = list(TRAIT_OUTLANDER)
 	outfit = /datum/outfit/job/roguetown/mercenary/condottiero
+	class_select_category = CLASS_CAT_ETRUSCA
 	category_tags = list(CTAG_MERCENARY)
 	cmode_music = 'sound/music/combat_condottiero.ogg'
 	traits_applied = list(TRAIT_DODGEEXPERT)

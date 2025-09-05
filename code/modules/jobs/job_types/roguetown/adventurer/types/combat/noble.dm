@@ -4,6 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_NO_CONSTRUCT
 	outfit = /datum/outfit/job/roguetown/adventurer/noble
+	class_select_category = CLASS_CAT_NOBLE
 	traits_applied = list(TRAIT_OUTLANDER, TRAIT_NOBLE)
 	category_tags = list(CTAG_ADVENTURER, CTAG_COURTAGENT)
 

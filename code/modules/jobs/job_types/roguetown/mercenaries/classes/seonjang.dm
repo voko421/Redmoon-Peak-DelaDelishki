@@ -5,7 +5,7 @@
 	allowed_races = NON_DWARVEN_RACE_TYPES
 	outfit = /datum/outfit/job/roguetown/mercenary/seonjang
 	category_tags = list(CTAG_MERCENARY)
-	traits_applied = list(TRAIT_OUTLANDER)
+	traits_applied = list(TRAIT_OUTLANDER, TRAIT_CRITICAL_RESISTANCE, TRAIT_HARDDISMEMBER, TRAIT_NOPAINSTUN)
 	cmode_music = 'sound/music/combat_kazengite.ogg'
 	maximum_possible_slots = 1
 	subclass_stats = list(
@@ -53,9 +53,5 @@
 		armor = /obj/item/clothing/suit/roguetown/armor/basiceast/captainrobe
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/easttats
 		shoes = /obj/item/clothing/shoes/roguetown/armor/rumaclan
-
-	ADD_TRAIT(H, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_HARDDISMEMBER, TRAIT_GENERIC) // To make up for not having armor
-	ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC) //i swear this isn't as good as it sounds
 	H.grant_language(/datum/language/kazengunese)
 	H.merctype = 9

@@ -804,7 +804,7 @@
 			target.visible_message(span_warning("[source] freezes [target] with scalding ice!"))
 		if("poison")
 			if(H.reagents)
-				H.reagents.add_reagent(/datum/reagent/berrypoison, 5)
+				H.reagents.add_reagent(/datum/reagent/berrypoison, 2)
 				target.visible_message(span_warning("[source] injects [target] with vile ooze!"))
 
 	// Set cooldown
@@ -911,7 +911,7 @@
 
 /obj/item/rogueweapon/greatsword/bsword/dreamscape/active/Initialize()
 	. = ..()
-	AddComponent(/datum/component/dream_weapon, "poison", 10 SECONDS)
+	AddComponent(/datum/component/dream_weapon, "poison", 20 SECONDS)
 
 /obj/item/rogueweapon/spear/dreamscape_trident/active/Initialize()
 	. = ..()

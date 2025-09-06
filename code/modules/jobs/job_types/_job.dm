@@ -441,7 +441,7 @@
 		var/list/dat = list()
 		var/sclass_count = 0
 		if(length(job_subclasses) && length(job_stats))
-			CRASH("[src] has definitions for both class and subclass stats. They will stack unintentionally!")
+			CRASH("[REF(src)] has definitions for both class and subclass stats. Likely not intended, and they will stack!")
 		if(length(job_subclasses))
 			dat += "This class has the following subclasses: "
 			for(var/sclass in job_subclasses)
@@ -451,29 +451,32 @@
 				dat += "<details><summary><b><font color ='#ece9e9'>[adv_ref.name]</font></b></summary>"
 				dat += "<table align='center'; width='100%'; height='100%';border: 1px solid white;border-collapse: collapse>"
 				dat += "<tr style='vertical-align:top'>"
-				dat += "<td width = 60%><i><font color ='#ece9e9'>[adv_ref.tutorial]</font></i></td>"
-				dat += "<td width = 40%>"
+				dat += "<td width = 70%><i><font color ='#ece9e9'>[adv_ref.tutorial]</font></i></td>"
+				dat += "<td width = 30%; style='text-align:right'>"
 				if(length(adv_ref.subclass_stats))
 					dat += "<font color ='#7a4d0a'>Stat Bonuses:</font><font color ='#d4b164'>"
 					for(var/stat in adv_ref.subclass_stats)
 						dat += "<br>[capitalize(stat)]: <b>[adv_ref.subclass_stats[stat] < 0 ? "<font color = '#cf2a2a'>" : "<font color = '#91cf68'>"]\Roman[adv_ref.subclass_stats[stat]]</font></b>"
-				dat += "</td></tr></table></font>"
+				dat += "<br></td></tr></table></font>"
 				if(length(adv_ref.adv_stat_ceiling))
-					dat += "["<font color = '#cf2a2a'><br><b>This subclass has the following stat limits: "]<br>"
+					dat += "["<font color = '#cf2a2a'><b>This subclass has the following stat limits: "]</b></font><br>"
 					dat += " | "
 					for(var/stat in adv_ref.adv_stat_ceiling)
 						dat += "["[capitalize(stat)]: <b>\Roman[adv_ref.adv_stat_ceiling[stat]]</b>"] | "
 					dat += "<i><br>Regardless of your statpacks or race choice, you will not be able to exceed these stats on spawn.</i></font>"
 				if(length(adv_ref.traits_applied))
-					dat += "<br><font color ='#ccbb82'>This subclass gains the following traits: "
+					dat += "<font color ='#ccbb82'>This <font color ='#d6d6d6'>sub</font>class gains the following traits:</font> "
 					for(var/trait in adv_ref.traits_applied)
-						dat += "<br><b>[trait]</b>"
+						dat += "<details><summary><i><font color ='#ccbb82'>[trait]</font></i></summary>"
+						dat += "<i><font color = '#a3ffe0'>[GLOB.roguetraits[trait]]</font></i></details>"
 					dat += "</font>"
+					dat += "<br>"
 				if(adv_ref.extra_context)
-					dat += "<br><font color ='#a06c1e'>[adv_ref.extra_context]"
+					dat += "<font color ='#a06c1e'>[adv_ref.extra_context]"
 					dat += "</font></details>"
 				else
 					dat += "</details>"
+		dat += "<hr>"
 		if(length(job_stats))
 			dat += "Starting Stats:<font color ='#d4b164'>"
 			for(var/stat in job_stats)
@@ -487,20 +490,22 @@
 				dat += "<br><i>Regardless of your statpacks or race choice, you will not be able to exceed these stats on spawn.</i></font>"
 				dat += "</font>"	//Ends the stat limit colors
 		if(length(job_traits))
-			dat += "<br><font color ='#ccbb82'>This class gains the following traits: "
+			dat += "<font color ='#ccbb82'>This <font color ='#d6d6d6'>class</font> gains the following traits:</font> "
 			for(var/trait in job_traits)
-				dat += "<br><b>[trait]</b>"
+				dat += "<details><summary><i><font color ='#ccbb82'>[trait]</font></i></summary>"
+				dat += "<i><font color = '#a3ffe0'>[GLOB.roguetraits[trait]]</font></i></details>"
 			dat += "</font>"
+		dat += "<br><i>This information is not all-encompassing. Many classes have other quirks and skills that define them.</i>"
 		if(istype(src,/datum/job/roguetown/jester))
-			dat += "<font color = '#d151ab'><center>Come one, come all, where Psydon Lies! <br>Let Xylix roll the dice, <br>unto our untimely demise! <br>Ahahaha!</center>"
+			dat = list("<font color = '#d151ab'><center>Come one, come all, where Psydon Lies! <br>Let Xylix roll the dice, <br>unto our untimely demise! <br>Ahahaha!</center>")
 			dat += "<center><b><font size = 4>STR: ???</b><br>"
 			dat += "<b>INT: ???</b><br>"
 			dat += "<b>FOR: ???</b><br></center></font>"
-		dat += "<br><i>This information is not all-encompassing. Many classes have other quirks and skills that define them.</i>"
-		var/height = 400
+		var/height = 500
 		if(sclass_count >= 10)
-			height = 800
-		var/datum/browser/popup = new(usr, "Class Help", nwidth = 400, nheight = height)
+			height = 925
+		usr << browse(null, "window=classhelp")
+		var/datum/browser/popup = new(usr, "classhelp", "[title]", nwidth = 425, nheight = height)
 		popup.set_content(dat.Join())
 		popup.open(FALSE)
 	. = ..()

@@ -6,7 +6,7 @@
 	outfit = /datum/outfit/job/roguetown/adventurer/trader
 	class_select_category = CLASS_CAT_TRADER
 	category_tags = list(CTAG_ADVENTURER, CTAG_COURTAGENT)
-	traits_applied = list(TRAIT_OUTLANDER, TRAIT_SEEPRICES)
+	traits_applied = list(TRAIT_SEEPRICES)
 	subclass_stats = list(
 		STATKEY_INT = 3,
 		STATKEY_PER = 1,
@@ -144,7 +144,7 @@
 	name = "Harlequin"
 	tutorial = "You are a travelling entertainer - a jester by trade. Where you go, chaos follows - and mischief is made."
 	outfit = /datum/outfit/job/roguetown/adventurer/harlequin
-	traits_applied = list(TRAIT_OUTLANDER, TRAIT_SEEPRICES, TRAIT_NUTCRACKER)
+	traits_applied = list(TRAIT_SEEPRICES, TRAIT_NUTCRACKER)
 	subclass_stats = list(
 		STATKEY_SPD = 2,
 		STATKEY_PER = 1,
@@ -246,7 +246,7 @@
 	name = "Brewer"
 	tutorial = "You make your coin peddling imported alcohols from all over the world, though you're no stranger to the craft, and have experience brewing your own ale in a pinch. You have the equipments and know how on how to make your own distiller, too."
 	outfit = /datum/outfit/job/roguetown/adventurer/brewer
-	traits_applied = list(TRAIT_OUTLANDER, TRAIT_SEEPRICES, TRAIT_CICERONE)
+	traits_applied = list(TRAIT_SEEPRICES, TRAIT_CICERONE)
 	subclass_stats = list(
 		STATKEY_INT = 3,
 		STATKEY_PER = 1,
@@ -295,7 +295,7 @@
 	tutorial = "Whether a disciple of a culinary school, a storied royal chef, or a mercenary cook for hire, your trade is plied at the counter, \
 	the cutting board, and the hearth."
 	outfit = /datum/outfit/job/roguetown/adventurer/cuisiner
-	traits_applied = list(TRAIT_OUTLANDER, TRAIT_SEEPRICES, TRAIT_GOODLOVER)
+	traits_applied = list(TRAIT_SEEPRICES, TRAIT_GOODLOVER)
 	subclass_stats = list(
 		STATKEY_INT = 3,
 		STATKEY_PER = 1,

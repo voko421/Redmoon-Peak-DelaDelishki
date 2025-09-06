@@ -36,9 +36,29 @@ GLOBAL_LIST_EMPTY(heretical_players)
 	//No nobility for you, being a member of the clergy means you gave UP your nobility. It says this in many of the church tutorial texts.
 	virtue_restrictions = list(/datum/virtue/utility/noble)
 	job_traits = list(TRAIT_CHOSEN, TRAIT_RITUALIST, TRAIT_GRAVEROBBER)
-	job_stats = list(
-		STATKEY_INT = 3,
-		STATKEY_WIN = 1,
+	advclass_cat_rolls = list(CTAG_BISHOP = 2)
+	job_subclasses = list(
+		/datum/advclass/bishop
+	)
+
+/datum/job/roguetown/priest/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+	..()
+	if(ishuman(L))
+		var/mob/living/carbon/human/H = L
+		H.advsetup = 1
+		H.invisibility = INVISIBILITY_MAXIMUM
+		H.become_blind("advsetup")
+
+/datum/advclass/bishop
+	name = "Bishop"
+	tutorial = "The Divine is all that matters in a world of the immoral. \
+	The Weeping God abandoned us, and in his stead the TEN rule over us mortals--and you will preach their wisdom to any who still heed their will. The faithless are growing in number. \
+	It is up to you to shepherd them toward a Gods-fearing future; for you are a Bishop of the Holy See."
+	outfit = /datum/outfit/job/roguetown/priest/basic
+	category_tags = list(CTAG_BISHOP)
+	subclass_stats = list(
+		STATKEY_INT = 4,
+		STATKEY_WIL = 2,
 		STATKEY_STR = -1,
 		STATKEY_CON = -1,
 		STATKEY_SPD = -1
@@ -49,8 +69,9 @@ GLOBAL_LIST_EMPTY(heretical_players)
 	has_loadout = TRUE
 	allowed_patrons = list(/datum/patron/divine/undivided)	//We lock this cus head of church, acktully
 
-/datum/outfit/job/roguetown/priest/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/priest/basic/pre_equip(mob/living/carbon/human/H)
 	..()
+	H.adjust_blindness(-3)
 	neck = /obj/item/clothing/neck/roguetown/psicross/undivided
 	head = /obj/item/clothing/head/roguetown/priestmask
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/priest
@@ -95,7 +116,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 	H.mind?.AddSpell(new /obj/effect/proc_holder/spell/invoked/convert_heretic_priest)
 	H.mind?.AddSpell(new /obj/effect/proc_holder/spell/invoked/revive)
 
-/datum/outfit/job/roguetown/priest/choose_loadout(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/priest/basic/choose_loadout(mob/living/carbon/human/H)
 	. = ..()
 	var/t3_count = 2
 	var/list/t4 = list()

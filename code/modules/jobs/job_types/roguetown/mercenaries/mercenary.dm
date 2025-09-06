@@ -16,6 +16,7 @@
 	outfit = null	//Handled by classes
 	outfit_female = null
 	advclass_cat_rolls = list(CTAG_MERCENARY = 20)
+	job_traits = list(TRAIT_OUTLANDER, TRAIT_STEELHEARTED)
 	always_show_on_latechoices = TRUE
 	job_subclasses = list(
 		/datum/advclass/mercenary/atgervi,
@@ -25,6 +26,7 @@
 		/datum/advclass/mercenary/desert_rider/zeybek,
 		/datum/advclass/mercenary/desert_rider/almah,
 		/datum/advclass/mercenary/forlorn,
+		/datum/advclass/mercenary/vaquero,
 		/datum/advclass/mercenary/freelancer,
 		/datum/advclass/mercenary/freelancer/lancer,
 		/datum/advclass/mercenary/grenzelhoft,

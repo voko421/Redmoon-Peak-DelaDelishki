@@ -2125,6 +2125,7 @@
 #include "code\modules\roguetown\roguecrafting\leather\leather_container_recipes.dm"
 #include "code\modules\roguetown\roguecrafting\leather\leather_footwear_recipes.dm"
 #include "code\modules\roguetown\roguecrafting\leather\leather_unique_recipes.dm"
+#include "code\modules\roguetown\roguecrafting\leather\reinforcement.dm"
 #include "code\modules\roguetown\roguejobs\alchemist\container.dm"
 #include "code\modules\roguetown\roguejobs\alchemist\herb_flora.dm"
 #include "code\modules\roguetown\roguejobs\alchemist\herb_seeds.dm"

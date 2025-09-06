@@ -42,7 +42,8 @@
 	subclass_stats = list(
 		STATKEY_INT = 2,
 		STATKEY_PER = 2,
-		STATKEY_SPD = 2
+		STATKEY_SPD = 2,
+		STATKEY_STR = -2
 	)
 
 /datum/outfit/job/roguetown/steward

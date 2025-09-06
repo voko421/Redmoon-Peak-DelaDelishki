@@ -202,3 +202,16 @@ a.class_desc_YES_LINK:hover
 .subclass_title:hover .subclasses{
     visibility: visible;
 }
+
+a.class_category {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-size: 24px;
+
+    color: #e90102;
+    text-align: center;
+    background: transparent;
+    padding: 1px 4px 1px 4px;
+    margin: 0 2px 0 0;
+    cursor: default;
+}

@@ -702,10 +702,10 @@
 				m_intent = MOVE_INTENT_SNEAK
 				if(isliving(src))
 					var/mob/living/L = src
-					if(!islamia(L) && (/datum/mob_descriptor/prominent/prominent_bottom in L.mob_descriptors))
-						L.thicc_sneaking = TRUE
+					if((/datum/mob_descriptor/prominent/prominent_bottom in L.mob_descriptors))
+						L.loud_sneaking = TRUE
 					else
-						L.thicc_sneaking = FALSE
+						L.loud_sneaking = FALSE
 				update_sneak_invis()
 
 			if(MOVE_INTENT_WALK)

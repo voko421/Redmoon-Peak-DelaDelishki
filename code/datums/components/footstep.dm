@@ -53,7 +53,7 @@
 		if(!C.get_bodypart(BODY_ZONE_L_LEG) && !C.get_bodypart(BODY_ZONE_R_LEG))
 			return
 		if(C.m_intent == MOVE_INTENT_SNEAK && !T.footstepstealth)
-			if(!C.thicc_sneaking || C.rogue_sneaking)
+			if(!C.loud_sneaking || C.rogue_sneaking)
 				return// stealth
 			steps++
 			if(steps&2 == 2) // Hrrghn... Colonel, I'm trying to sneak around, but I'm dummy thicc, and the clap of my asscheeks keeps ALERTING THE GUARDS

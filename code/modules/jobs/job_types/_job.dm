@@ -464,13 +464,52 @@
 					for(var/stat in adv_ref.adv_stat_ceiling)
 						dat += "["[capitalize(stat)]: <b>\Roman[adv_ref.adv_stat_ceiling[stat]]</b>"] | "
 					dat += "<i><br>Regardless of your statpacks or race choice, you will not be able to exceed these stats on spawn.</i></font>"
+				dat += "<table align='center'; width='100%'; height='100%';border: 1px solid white;border-collapse: collapse>"
+				dat += "<tr style='vertical-align:top'>"
+				dat += "<td width = 50%>"
 				if(length(adv_ref.traits_applied))
-					dat += "<font color ='#ccbb82'>This <font color ='#d6d6d6'>sub</font>class gains the following traits:</font> "
+					dat += "<font color ='#ccbb82'><font color ='#d6d6d6'>Sub</font>class traits:</font> "
 					for(var/trait in adv_ref.traits_applied)
 						dat += "<details><summary><i><font color ='#ccbb82'>[trait]</font></i></summary>"
 						dat += "<i><font color = '#a3ffe0'>[GLOB.roguetraits[trait]]</font></i></details>"
 					dat += "</font>"
 					dat += "<br>"
+				dat += "</td>"
+				if(length(adv_ref.subclass_skills))
+					dat += "<td width = 50%; style='text-align:right'>"
+					var/list/notable_skills = list()
+					for(var/sk in adv_ref.subclass_skills)
+						if(adv_ref.subclass_skills[sk] > SKILL_LEVEL_JOURNEYMAN)
+							notable_skills[sk] = adv_ref.subclass_skills[sk]
+						else if(ispath(sk, /datum/skill/combat))
+							notable_skills[sk] = adv_ref.subclass_skills[sk]
+					if(!length(notable_skills))	//Nothing above Jman AND no Combat skills.
+						dat += "<i>This subclass has no notable skills.</i>"
+					else
+						var/max_skills = 5	//We don't want to print out /all/ of them, as it messes up the formatting.
+						var/list/filtered_skills = list()
+						var/level_check = SKILL_LEVEL_LEGENDARY
+						for(var/i in 1 to 4)	//Really hodgepodged assoc list sort algo to sort the skills from Legendary to Jman
+							for(var/sk in notable_skills)
+								if(notable_skills[sk] == level_check && max_skills > 0)
+									filtered_skills[sk] = notable_skills[sk]
+									max_skills--
+							if(max_skills <= 0)
+								break
+							level_check--
+						dat += "<font color ='#7a4d0a'>Notable Skills: </font>"
+						var/list/final_list
+						if(length(filtered_skills))
+							final_list = filtered_skills
+						else	//Nothing at Jman+ at all, so we resort to notable skills, which at this point will just be random combat skills.
+							final_list = notable_skills
+						for(var/sk in final_list)
+							var/datum/skill/skill = sk
+							dat += "<font color ='#d4b164'><br>[initial(skill.name)] — [SSskills.level_names[notable_skills[sk]]]</font>"
+						LAZYCLEARLIST(notable_skills)
+						LAZYCLEARLIST(filtered_skills)
+						LAZYCLEARLIST(final_list)
+				dat += "</td></tr></table>"
 				if(adv_ref.extra_context)
 					dat += "<font color ='#a06c1e'>[adv_ref.extra_context]"
 					dat += "</font></details>"

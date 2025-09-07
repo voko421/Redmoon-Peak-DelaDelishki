@@ -116,7 +116,7 @@
 			else
 				to_chat(user, "I begin my burial rites...")
 				if(do_after(user, 50))
-					user.say("Rest thy soul for all aeon within Necra's embrace!")
+					user.say("#Rest thy soul for all aeon within Necra's embrace!")
 					playsound(user, 'sound/misc/bellold.ogg', 20)
 					new /obj/item/soulthread((get_turf(user)))
 					corpse.burialrited = TRUE

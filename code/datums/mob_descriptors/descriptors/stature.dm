@@ -158,4 +158,4 @@
 	name = "Weerdoe"
 
 /datum/mob_descriptor/stature/plump
-	name = "Plump Figure"
+	name = "Plump figure"

@@ -6,11 +6,9 @@
 	outfit = /datum/outfit/job/roguetown/disciple
 	category_tags = list(CTAG_INQUISITION)
 	traits_applied = list(
-		TRAIT_STEELHEARTED,
 		TRAIT_CRITICAL_RESISTANCE,
+		TRAIT_CIVILIZEDBARBARIAN,
 		TRAIT_NOPAINSTUN,
-		TRAIT_INQUISITION,
-		TRAIT_OUTLANDER
 	)
 	subclass_stats = list(
 		STATKEY_STR = 3,

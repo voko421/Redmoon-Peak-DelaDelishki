@@ -138,3 +138,6 @@
 
 	/// Whether our job title is adaptive to our skills.
 	var/adaptive_name
+
+	/// Assoc list of culinary preferences of the mob
+	var/list/culinary_preferences = list()

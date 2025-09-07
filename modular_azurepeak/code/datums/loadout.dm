@@ -40,6 +40,10 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Tricorn Hat"
 	path = /obj/item/clothing/head/roguetown/helmet/tricorn
 
+/datum/loadout_item/nurseveil
+	name = "Nurse's Veil"
+	path = /obj/item/clothing/head/roguetown/veiled
+
 /datum/loadout_item/archercap
 	name = "Archer's cap"
 	path = /obj/item/clothing/head/roguetown/archercap
@@ -413,6 +417,14 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Cloth Blindfold"
 	path = /obj/item/clothing/mask/rogue/blindfold
 
+/datum/loadout_item/bases
+	name = "Cloth military skirt"
+	path = /obj/item/storage/belt/rogue/leather/battleskirt
+
+/datum/loadout_item/fauldedbelt
+	name = "Belt with faulds"
+	path = /obj/item/storage/belt/rogue/leather/battleskirt/faulds
+
 /datum/loadout_item/psicross
 	name = "Psydonian Cross"
 	path = /obj/item/clothing/neck/roguetown/psicross
@@ -452,6 +464,14 @@ GLOBAL_LIST_EMPTY(loadout_items)
 /datum/loadout_item/psicross/eora
 	name = "Amulet of Eora"
 	path = /obj/item/clothing/neck/roguetown/psicross/eora
+
+/datum/loadout_item/psicross/undivided
+	name = "Amulet of Ten"
+	path = /obj/item/clothing/neck/roguetown/psicross/undivided
+
+/datum/loadout_item/psicross/zizo
+	name = "Decrepit Zcross"
+	path = /obj/item/clothing/neck/roguetown/zcross/aalloy
 
 /datum/loadout_item/wedding_band
 	name = "silver wedding band"

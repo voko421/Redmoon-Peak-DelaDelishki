@@ -23,6 +23,7 @@
 	var/debuff_type = /datum/status_effect/debuff/revived
 	var/structure_range = 1
 	var/harms_undead = TRUE
+	priest_excluded = TRUE
 
 /obj/effect/proc_holder/spell/invoked/resurrect/cast(list/targets, mob/living/user)
 	. = ..()
@@ -192,11 +193,11 @@
 	dreamfiend_type = pickweight(dreamfiend_types)
 
 	effectedstats = list(
-		"strength" = 1,
-		"intelligence" = -5,
-		"fortune" = -5,
-		"speed" = -2,
-		"perception" = -5
+		STATKEY_STR = 1,
+		STATKEY_INT = -5,
+		STATKEY_LCK = -5,
+		STATKEY_SPD = -2,
+		STATKEY_PER = -5
 	)
 
 	// Add summoning spell to the victim
@@ -306,7 +307,7 @@
 
 /datum/status_effect/debuff/metabolic_acceleration/on_creation(mob/living/new_owner)
 	effectedstats = list(
-		"constitution" = -5
+		STATKEY_CON = -5
 	)
 
 	return ..()
@@ -407,8 +408,8 @@
 
 /datum/status_effect/debuff/malum_revival/on_creation(mob/living/new_owner)
 	effectedstats = list(
-		"endurance" = -5,
-		"strength" = -2
+		STATKEY_WIL = -5,
+		STATKEY_STR = -2
 	)
 	return ..()
 
@@ -424,8 +425,8 @@
 
 /datum/status_effect/debuff/ravox_revival/on_creation(mob/living/new_owner)
 	effectedstats = list(
-		"strength" = -5,
-		"speed" = -2
+		STATKEY_STR = -5,
+		STATKEY_SPD = -2
 	)
 	return ..()
 
@@ -441,8 +442,8 @@
 
 /datum/status_effect/debuff/dendor_revival/on_creation(mob/living/new_owner)
 	effectedstats = list(
-		"speed" = -5,
-		"constitution" = -2
+		STATKEY_SPD = -5,
+		STATKEY_CON = -2
 	)
 	return ..()
 
@@ -464,7 +465,7 @@
 	)
 
 /datum/status_effect/debuff/noc_revival/on_creation(mob/living/new_owner)
-	effectedstats = list("intelligence" = -5)
+	effectedstats = list(STATKEY_INT = -5)
 	return ..()
 
 /datum/status_effect/debuff/noc_revival/tick()
@@ -514,7 +515,7 @@
 
 /obj/effect/proc_holder/spell/invoked/resurrect/malum
 	name = "Diligent Revival"
-	desc = "Revive the target at a cost, cast on yourself to check.<br>Targets endurance and strenght will be sapped for a time."
+	desc = "Revive the target at a cost, cast on yourself to check.<br>Targets willpower and strenght will be sapped for a time."
 	required_items = list(
 		/obj/item/ingot/iron = 3
 	)
@@ -553,3 +554,13 @@
 	debuff_type = /datum/status_effect/debuff/noc_revival
 	overlay_state = "noc_revive"
 	sound = 'sound/magic/owlhoot.ogg'
+
+
+/obj/effect/proc_holder/spell/invoked/resurrect/undivided
+	name = "Decagram Revival"
+	desc = "Revive the target at a cost, cast on yourself to check."
+	required_items = list(
+		/obj/item/rogueore/gold = 1 // Was thinking Eclipsum combo of gold/silver but that'd probably be *too* expensive. Probably the costliest revival, while having a anastasis equal debuff.
+	)
+	debuff_type = /datum/status_effect/debuff/revived
+	sound = 'sound/magic/revive.ogg'

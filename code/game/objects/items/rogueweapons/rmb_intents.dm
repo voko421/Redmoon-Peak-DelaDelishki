@@ -13,6 +13,8 @@
 /mob/living/carbon/human/on_cmode()
 	if(!cmode)	//We just toggled it off.
 		addtimer(CALLBACK(src, PROC_REF(purge_bait)), 30 SECONDS, TIMER_UNIQUE | TIMER_OVERRIDE)
+	if(!HAS_TRAIT(src, TRAIT_DECEIVING_MEEKNESS))
+		filtered_balloon_alert(TRAIT_COMBAT_AWARE, (cmode ? ("<i><font color = '#831414'>Tense</font></i>") : ("<i><font color = '#c7c6c6'>Relaxed</font></i>")), y_offset = 32)
 
 /datum/rmb_intent/proc/special_attack(mob/living/user, atom/target)
 	return
@@ -41,7 +43,7 @@
 	var/target_zone = HT.zone_selected
 	var/user_zone = HU.zone_selected
 
-	if(HT.has_status_effect(/datum/status_effect/debuff/baited) && user.has_status_effect(/datum/status_effect/debuff/baitcd))
+	if(HT.has_status_effect(/datum/status_effect/debuff/baited) || user.has_status_effect(/datum/status_effect/debuff/baitcd))
 		return	//We don't do anything if either of us is affected by bait statuses
 
 	HU.visible_message(span_danger("[HU] baits an attack from [HT]!"))

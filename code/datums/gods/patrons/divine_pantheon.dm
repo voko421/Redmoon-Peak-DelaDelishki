@@ -10,7 +10,7 @@
 	mob_traits = list(TRAIT_UNDIVIDED)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison			= CLERIC_ORI, // ONLY Lower miracles of other lists. A much more varied utility miracle list, and a much wider selection. Also, our generic miracles(Lesser heal + Divine blast for acolytes) are better. But no specialization makes a lower level list. We're going to exclude Abyssor.
 					/obj/effect/proc_holder/spell/self/astrata_gaze				= CLERIC_T0,
-					/obj/effect/proc_holder/spell/targeted/touch/darkvision/miracle	= CLERIC_T1,
+					/obj/effect/proc_holder/spell/invoked/darkvision/miracle	= CLERIC_T1,
 					/obj/effect/proc_holder/spell/invoked/blood_heal			= CLERIC_T1,
 					/obj/effect/proc_holder/spell/invoked/lesser_heal 			= CLERIC_T1,
 					/obj/effect/proc_holder/spell/invoked/bless_food            = CLERIC_T1,
@@ -21,6 +21,7 @@
 					/obj/effect/proc_holder/spell/invoked/mockery				= CLERIC_T3, // you'll have to be a real xylix templar to get this pretty decent combat debuff, sorry.
 					/obj/effect/proc_holder/spell/invoked/conjure_tool			= CLERIC_T3,
 					/obj/effect/proc_holder/spell/invoked/wound_heal			= CLERIC_T3,
+					/obj/effect/proc_holder/spell/invoked/resurrect/undivided	= CLERIC_T4
 	)
 	confess_lines = list(
 		"THE HOLY DECAGRAM SHALL SHIELD MY SOUL!",
@@ -62,7 +63,7 @@
 	mob_traits = list(TRAIT_NIGHT_OWL)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison			= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/invoked/noc_sight				= CLERIC_T0,
-					/obj/effect/proc_holder/spell/targeted/touch/darkvision/miracle	= CLERIC_T0,
+					/obj/effect/proc_holder/spell/invoked/darkvision/miracle	= CLERIC_T0,
 					/obj/effect/proc_holder/spell/invoked/lesser_heal 			= CLERIC_T1,
 					/obj/effect/proc_holder/spell/invoked/blood_heal			= CLERIC_T1,
 					/obj/effect/proc_holder/spell/invoked/invisibility/miracle	= CLERIC_T1,
@@ -166,7 +167,7 @@
 					/obj/effect/proc_holder/spell/invoked/lesser_heal 			= CLERIC_T1,
 					/obj/effect/proc_holder/spell/invoked/blood_heal			= CLERIC_T1,
 					/obj/effect/proc_holder/spell/invoked/avert					= CLERIC_T1,
-					/obj/effect/proc_holder/spell/invoked/deaths_door			= CLERIC_T1,
+					// /obj/effect/proc_holder/spell/invoked/deaths_door			= CLERIC_T1, // DO NOT RE-ENABLE UNTIL THIS IS FIXED. IT CRASHES CLIENTS.
 					/obj/effect/proc_holder/spell/targeted/abrogation			= CLERIC_T2,
 					/obj/effect/proc_holder/spell/invoked/raise_spirits_vengeance = CLERIC_T2,
 					/obj/effect/proc_holder/spell/invoked/wound_heal			= CLERIC_T3,

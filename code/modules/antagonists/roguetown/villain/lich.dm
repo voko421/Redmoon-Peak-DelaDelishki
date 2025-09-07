@@ -38,7 +38,7 @@
 	var/STASTR = 10
 	var/STASPD = 10
 	var/STAINT = 10
-	var/STAEND = 10
+	var/STAWIL = 10
 	var/STAPER = 10
 
 /datum/antagonist/lich/on_gain()
@@ -62,14 +62,14 @@
 	STAPER = owner.current.STAPER
 	STAINT = owner.current.STAINT
 	STASPD = owner.current.STASPD
-	STAEND = owner.current.STAEND
+	STAWIL = owner.current.STAWIL
 
 /datum/antagonist/lich/proc/set_stats()
 	owner.current.STASTR = src.STASTR
 	owner.current.STAPER = src.STAPER
 	owner.current.STAINT = src.STAINT
 	owner.current.STASPD = src.STASPD
-	owner.current.STAEND = src.STAEND
+	owner.current.STAWIL = src.STAWIL
 
 /datum/antagonist/lich/proc/skele_look()
 	var/mob/living/carbon/human/L = owner.current
@@ -100,6 +100,7 @@
 	equip_and_traits()
 	L.equipOutfit(/datum/outfit/job/roguetown/lich)
 	L.set_patron(/datum/patron/inhumen/zizo)
+	owner.current.forceMove(pick(GLOB.vlord_starts)) // as opposed to spawning at their normal role spot as a skeleton; which is le bad
 
 
 /datum/outfit/job/roguetown/lich/pre_equip(mob/living/carbon/human/H) //Equipment is located below
@@ -121,11 +122,11 @@
 	H.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
 	H?.mind.adjust_spellpoints(27)
 	// Give it decent combat stats to make up for loss of 2 extra lives
-	H.change_stat("strength", 3)
-	H.change_stat("intelligence", 5)
-	H.change_stat("constitution", 5)
-	H.change_stat("perception", 3)
-	H.change_stat("speed", 1)
+	H.change_stat(STATKEY_STR, 3)
+	H.change_stat(STATKEY_INT, 5)
+	H.change_stat(STATKEY_CON, 5)
+	H.change_stat(STATKEY_PER, 3)
+	H.change_stat(STATKEY_SPD, 1)
 
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/bonechill)

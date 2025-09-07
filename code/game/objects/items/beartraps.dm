@@ -57,7 +57,9 @@
 				used_time -= max((C.get_skill_level(/datum/skill/craft/traps) * 2 SECONDS), 2 SECONDS)
 			if(do_after(user, used_time, target = src))
 				armed = FALSE
-				w_class = initial(w_class)
+				w_class = WEIGHT_CLASS_NORMAL
+				grid_width = 64
+				grid_height = 64
 				update_icon()
 				alpha = 255
 				C.visible_message(span_notice("[C] disarms \the [src]."), \
@@ -96,11 +98,15 @@
 	w_class = WEIGHT_CLASS_BULKY
 	armed = TRUE
 	anchored = TRUE // Pre mapped traps (bad mapping btw, don't) start anchored
+	grid_width = 256
+	grid_height = 256
 
 /obj/item/restraints/legcuffs/beartrap/armed/camouflage
 	w_class = WEIGHT_CLASS_BULKY
 	armed = TRUE
 	alpha = 80
+	grid_width = 256
+	grid_height = 256
 
 /obj/item/restraints/legcuffs/beartrap/Initialize()
 	. = ..()
@@ -124,20 +130,27 @@
 				armed = !armed
 				if(armed)
 					w_class = WEIGHT_CLASS_BULKY
+					grid_width = 256
+					grid_height = 256
 				else
-					w_class = initial(w_class)
+					w_class = WEIGHT_CLASS_NORMAL
+					grid_width = 64
+					grid_height = 64
 				update_icon()
 				to_chat(user, span_notice("[src] is now [armed ? "armed" : "disarmed"]"))
 			else
 				user.visible_message(span_warning("You couldn't get the shoddy [src.name] [armed ? "shut close!" : "to open up!"]"))
 
-/obj/item/restraints/legcuffs/beartrap/proc/close_trap()
+/obj/item/restraints/legcuffs/beartrap/proc/close_trap(play_sound = TRUE)
 	armed = FALSE
-	w_class = initial(w_class)
+	w_class = WEIGHT_CLASS_NORMAL
+	grid_width = 64
+	grid_height = 64
 	anchored = FALSE // Take it off the ground
 	alpha = 255
 	update_icon()
-	playsound(src.loc, 'sound/items/beartrap.ogg', 300, TRUE, -1)
+	if(play_sound)
+		playsound(src.loc, 'sound/items/beartrap.ogg', 300, TRUE, -1)
 
 /obj/item/restraints/legcuffs/beartrap/Crossed(AM as mob|obj)
 	if(armed && isturf(loc))
@@ -181,6 +194,24 @@
 					L.Stun(80)
 				L.consider_ambush(always = TRUE)
 	..()
+
+/obj/item/restraints/legcuffs/beartrap/dropped(mob/living/carbon/human/user)
+	..()
+	if(!armed)
+		return
+	for(var/obj/structure/fluff/traveltile/TT in range(1, src)) // don't allow armed traps to be placed near travel tiles
+		close_trap(FALSE)
+		log_combat(user, src, "armed and dropped [src] near travel tiles")
+		break
+
+/obj/item/restraints/legcuffs/beartrap/after_throw(datum/callback/callback)
+	..()
+	if(!armed)
+		return
+	for(var/obj/structure/fluff/traveltile/TT in range(1, src)) // don't allow armed traps to be placed near travel tiles
+		close_trap()
+		log_combat(src, null, "[src] was kicked towards travel tiles")
+		break
 
 // When craftable beartraps get added, make these the ones crafted.
 /obj/item/restraints/legcuffs/beartrap/crafted

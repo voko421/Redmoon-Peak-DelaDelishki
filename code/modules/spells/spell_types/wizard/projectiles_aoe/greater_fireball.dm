@@ -9,7 +9,7 @@
 	active = FALSE
 	releasedrain = 50
 	chargedrain = 1
-	chargetime = 25
+	chargetime = 15
 	recharge_time = 15 SECONDS
 	warnie = "spellwarning"
 	spell_tier = 4 // Highest tier AOE
@@ -30,5 +30,5 @@
 	exp_flash = 2
 	exp_fire = 2
 	damage = 90 // This is gonna fucking HURT
-	npc_damage_mult = 2 // HAHAHA
+	npc_simple_damage_mult = 2 // HAHAHA
 	flag = "magic"

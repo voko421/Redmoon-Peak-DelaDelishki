@@ -28,6 +28,15 @@
 	/// Whether this class will apply the adaptive name to the job it belongs to.
 	var/adaptive_name = FALSE
 
+	/// Stat ceilings for the specific subclass.
+	var/list/adv_stat_ceiling
+
+	/// Subclass stat bonuses.
+	var/list/subclass_stats
+
+	/// Extra fluff added to the role explanation in class selection.
+	var/extra_context
+
 /datum/advclass/proc/equipme(mob/living/carbon/human/H)
 	// input sleeps....
 	set waitfor = FALSE
@@ -54,6 +63,10 @@
 
 	if(adaptive_name)
 		H.adaptive_name = TRUE
+
+	if(length(subclass_stats))
+		for(var/stat in subclass_stats)
+			H.change_stat(stat, subclass_stats[stat])
 
 
 	// After the end of adv class equipping, apply a SPECIAL trait if able

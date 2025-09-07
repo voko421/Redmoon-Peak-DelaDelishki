@@ -8,7 +8,7 @@
 	sound = list('sound/magic/fireball.ogg')
 	releasedrain = 30
 	chargedrain = 1
-	chargetime = 25
+	chargetime = 15
 	recharge_time = 15 SECONDS
 	warnie = "spellwarning"
 	no_early_release = TRUE
@@ -32,7 +32,7 @@
 	exp_fire = 1
 	damage = 60
 	damage_type = BURN
-	npc_damage_mult = 2 // HAHAHA
+	npc_simple_damage_mult = 2 // HAHAHA
 	accuracy = 40 // Base accuracy is lower for burn projectiles because they bypass armor
 	nodamage = FALSE
 	flag = "magic"
@@ -43,9 +43,10 @@
 /obj/projectile/magic/aoe/fireball/rogue/on_hit(target)
 	. = ..()
 	if(ismob(target))
-		var/mob/M = target
+		var/mob/living/M = target
 		if(M.anti_magic_check())
 			visible_message(span_warning("[src] fizzles on contact with [target]!"))
 			playsound(get_turf(target), 'sound/magic/magic_nulled.ogg', 100)
 			qdel(src)
 			return BULLET_ACT_BLOCK
+		M.adjust_fire_stacks(2)

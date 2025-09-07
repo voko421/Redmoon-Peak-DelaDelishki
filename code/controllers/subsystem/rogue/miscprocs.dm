@@ -13,6 +13,7 @@
 #define CLERIC_REQ_4 1000
 
 #define CLERIC_REGEN_DEVOTEE 0.3
+#define CLERIC_REGEN_WEAK 0.1 //Would be better to just do away with devotion entirely, but oh well.
 #define CLERIC_REGEN_MINOR 0.5
 #define CLERIC_REGEN_MAJOR 0.8
 #define CLERIC_REGEN_ABSOLVER 5
@@ -108,18 +109,26 @@
 	if(!holder || !holder.mind)
 		return
 
-	if(patron && length(patron.miracles))
-		for(var/spell_type in patron.miracles)
-			var/required_tier = patron.miracles[spell_type]			
-			if(required_tier <= level)
-				if(holder.mind.has_spell(spell_type))
-					continue
+	if(patron)
+		if(length(patron.miracles))
+			for(var/spell_type in patron.miracles)
+				var/required_tier = patron.miracles[spell_type]			
+				if(required_tier <= level)
+					if(holder.mind.has_spell(spell_type))
+						continue
 
-				var/obj/effect/proc_holder/spell/newspell = new spell_type
-				if(!silent)
-					to_chat(holder, span_boldnotice("I have unlocked a new spell: [newspell]"))
-				holder.mind.AddSpell(newspell)
-				LAZYADD(granted_spells, newspell)
+					var/obj/effect/proc_holder/spell/newspell = new spell_type
+					if(!silent)
+						to_chat(holder, span_boldnotice("I have unlocked a new spell: [newspell]"))
+					holder.mind.AddSpell(newspell)
+					LAZYADD(granted_spells, newspell)
+		if(length(patron.traits_tier))
+			for(var/trait in patron.traits_tier)
+				var/required_tier = patron.traits_tier[trait]
+				if(required_tier <= level)
+					if(!silent)
+						to_chat(holder, span_boldnotice("I have unlocked a new trait: [trait]"))
+					ADD_TRAIT(holder, trait, TRAIT_MIRACLE)
 
 
 //The main proc that distributes all the needed devotion tweaks to the given class.
@@ -231,3 +240,13 @@
 		add_client_colour(/datum/client_colour/monochrome)
 	else
 		remove_client_colour(/datum/client_colour/monochrome)
+
+/mob/living/carbon/human/proc/togglecombatawareness()
+	set name = "Toggle Combat Awareness"
+	set category = "Virtue"
+
+	if(HAS_TRAIT(src, TRAIT_COMBAT_AWARE))
+		REMOVE_TRAIT(src, TRAIT_COMBAT_AWARE, TRAIT_VIRTUE) 
+	else
+		ADD_TRAIT(src, TRAIT_COMBAT_AWARE, TRAIT_VIRTUE)
+	to_chat(src, "I will see [HAS_TRAIT(src, TRAIT_COMBAT_AWARE) ? "more" : "less"] combat information now.")

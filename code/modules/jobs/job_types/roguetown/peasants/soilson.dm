@@ -49,22 +49,22 @@
 		STATKEY_SPD = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/whipsflails = 1,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/combat/knives = 1,
-		/datum/skill/combat/polearms = 3,
-		/datum/skill/craft/crafting = 2,
-		/datum/skill/labor/farming = 5,
-		/datum/skill/misc/medicine = 1,
-		/datum/skill/misc/sewing = 1,
-		/datum/skill/craft/cooking = 1,
-		/datum/skill/craft/carpentry = 2, //So they can actually even craft their makeshift weapons
-		/datum/skill/craft/masonry = 1,
-		/datum/skill/craft/tanning = 3,
-		/datum/skill/misc/riding = 3,
-		/datum/skill/labor/butchering = 5,
-		/datum/skill/misc/reading = 1,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/polearms = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/farming = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sewing = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/carpentry = SKILL_LEVEL_APPRENTICE, //So they can actually even craft their makeshift weapons
+		/datum/skill/craft/masonry = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/tanning = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/riding = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/labor/butchering = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
 	)
 	
 /datum/outfit/job/roguetown/farmer/basic/pre_equip(mob/living/carbon/human/H)

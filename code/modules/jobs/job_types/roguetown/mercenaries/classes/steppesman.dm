@@ -10,15 +10,15 @@
 	extra_context = "This subclass has 4 loadouts with various stats, skills & equipment."
 	subclass_skills = list(
 	//Universal skills
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/riding = 3,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/craft/crafting = 1,
-		/datum/skill/craft/tanning = 2,
-		/datum/skill/labor/butchering = 1,
-		/datum/skill/misc/swimming = 1,
-		/datum/skill/misc/sewing = 1,
-		/datum/skill/craft/cooking = 1,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/riding = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/crafting = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/tanning = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/butchering = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sewing = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/mercenary/steppesman/pre_equip(mob/living/carbon/human/H)

@@ -18,15 +18,15 @@
 		STATKEY_SPD = -1
 	)
 	subclass_skills = list(
-		/datum/skill/misc/athletics = 5,
-		/datum/skill/combat/unarmed = 4,
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/swimming = 3,
-		/datum/skill/misc/medicine = 2,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/craft/cooking = 1,
-		/datum/skill/magic/holy = 2,
+		/datum/skill/misc/athletics = SKILL_LEVEL_MASTER,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/medicine = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
+		/datum/skill/magic/holy = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/disciple

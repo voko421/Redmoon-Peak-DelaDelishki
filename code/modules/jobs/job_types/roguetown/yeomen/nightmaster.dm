@@ -45,19 +45,19 @@
 		STATKEY_INT = -1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/combat/unarmed = 4,
-		/datum/skill/combat/whipsflails = 3,
-		/datum/skill/misc/reading = 2,
-		/datum/skill/misc/sneaking = 4,
-		/datum/skill/misc/stealing = 4,
-		/datum/skill/misc/lockpicking = 2,
-		/datum/skill/misc/climbing = 2,
-		/datum/skill/misc/medicine = 2,
-		/datum/skill/misc/riding = 2,
-		/datum/skill/misc/swimming = 3,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/combat/knives = 3,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/stealing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/lockpicking = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/medicine = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/riding = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
 	)
 
 /datum/outfit/job/roguetown/niteman/basic/pre_equip(mob/living/carbon/human/H)

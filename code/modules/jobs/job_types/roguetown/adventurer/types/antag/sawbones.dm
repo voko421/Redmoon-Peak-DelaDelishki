@@ -13,20 +13,20 @@
 		STATKEY_LCK = 3
 	)
 	subclass_skills = list(
-		/datum/skill/combat/knives = 3,
-		/datum/skill/combat/swords = 4,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/craft/crafting = 3,
-		/datum/skill/craft/carpentry = 3,
-		/datum/skill/labor/lumberjacking = 1,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/reading = 3,
-		/datum/skill/misc/climbing = 3, //needed for getting into hideout
-		/datum/skill/misc/sneaking = 1,
-		/datum/skill/misc/medicine = 6,
-		/datum/skill/misc/sewing = 3,
-		/datum/skill/craft/alchemy = 3,
-		/datum/skill/misc/swimming = 2,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/crafting = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/carpentry = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/labor/lumberjacking = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN, //needed for getting into hideout
+		/datum/skill/misc/sneaking = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/medicine = SKILL_LEVEL_LEGENDARY,
+		/datum/skill/misc/sewing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/bandit/sawbones/pre_equip(mob/living/carbon/human/H)

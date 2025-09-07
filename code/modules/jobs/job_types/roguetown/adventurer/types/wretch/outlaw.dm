@@ -12,22 +12,22 @@
 		STATKEY_PER = 1
 	)
 	subclass_skills = list(
-		/datum/skill/misc/tracking = 5,
-		/datum/skill/combat/crossbows = 3,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/combat/swords = 3,
-		/datum/skill/combat/whipsflails = 3,
-		/datum/skill/combat/maces = 2, //A bonus rather than something to be encouraged
-		/datum/skill/misc/swimming = 3,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/climbing = 6,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/sneaking = 5,
-		/datum/skill/misc/stealing = 5,
-		/datum/skill/misc/lockpicking = 5,
-		/datum/skill/craft/traps = 5,
+		/datum/skill/misc/tracking = SKILL_LEVEL_MASTER,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/swords = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE, //A bonus rather than something to be encouraged
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/climbing = SKILL_LEVEL_LEGENDARY,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/stealing = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/lockpicking = SKILL_LEVEL_MASTER,
+		/datum/skill/craft/traps = SKILL_LEVEL_MASTER,
 	)
 
 
@@ -89,21 +89,21 @@
 		STATKEY_WIL = 1
 	)
 	subclass_skills = list(
-		/datum/skill/misc/tracking = 4,
-		/datum/skill/combat/crossbows = 2,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/combat/maces = 3,
-		/datum/skill/combat/axes = 3,
-		/datum/skill/combat/polearms = 3,
-		/datum/skill/combat/shields = 2,
-		/datum/skill/misc/swimming = 3,
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/climbing = 6,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/sneaking = 4,
-		/datum/skill/misc/stealing = 4,
+		/datum/skill/misc/tracking = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/maces = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/axes = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/polearms = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/shields = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/climbing = SKILL_LEVEL_LEGENDARY,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/stealing = SKILL_LEVEL_EXPERT,
 	)
 
 /datum/outfit/job/roguetown/wretch/marauder/pre_equip(mob/living/carbon/human/H)

@@ -14,20 +14,20 @@
 		STATKEY_INT = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/crossbows = 5, //Possibly too high, no idea.
-		/datum/skill/combat/swords = 3,
-		/datum/skill/combat/knives = 4,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/misc/sneaking = 4,
-		/datum/skill/misc/swimming = 3,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/stealing = 3,
-		/datum/skill/misc/lockpicking = 3,
-		/datum/skill/misc/tracking = 4,
-		/datum/skill/craft/traps = 3,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_MASTER, //Possibly too high, no idea.
+		/datum/skill/combat/swords = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/stealing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/lockpicking = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/tracking = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/traps = SKILL_LEVEL_JOURNEYMAN,
 	)
 
 /datum/outfit/job/roguetown/mercenary/condottiero/pre_equip(mob/living/carbon/human/H)

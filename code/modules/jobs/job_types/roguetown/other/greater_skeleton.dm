@@ -62,21 +62,21 @@ NECRO SKELETONS
 	category_tags = list(CTAG_NSKELETON)
 	subclass_skills = list(
 		//light labor skills for skeleton manual labor and some warrior-adventurer skills, equipment is still bad probably
-		/datum/skill/craft/carpentry = 1,
-		/datum/skill/craft/masonry = 1,
-		/datum/skill/craft/crafting = 1,
-		/datum/skill/misc/sewing = 1,
+		/datum/skill/craft/carpentry = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/masonry = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sewing = SKILL_LEVEL_NOVICE,
 
-		/datum/skill/combat/polearms = 3,
-		/datum/skill/combat/maces = 3,
-		/datum/skill/combat/axes = 3,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/combat/swords = 3,
-		/datum/skill/combat/shields = 2,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/misc/climbing = 2,
+		/datum/skill/combat/polearms = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/maces = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/axes = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/swords = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/shields = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/greater_skeleton/necro/shambler/pre_equip(mob/living/carbon/human/H)

@@ -484,19 +484,19 @@
 	)
 	subclass_skills = list(
 	//No, they don't get any miracles. Their miracle is being able to use their weapon at all.
-		/datum/skill/combat/swords = 4,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/tracking = 4,
-		/datum/skill/misc/medicine = 4,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/combat/shields = 3,
-		/datum/skill/misc/reading = 3,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/craft/cooking = 3,
-		/datum/skill/misc/swimming = 1,
-		/datum/skill/misc/sneaking = 1,
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/tracking = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/medicine = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/shields = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/cooking = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/martyr

@@ -46,18 +46,18 @@
 		STATKEY_STR = -2
 	)
 	subclass_skills = list(
-		/datum/skill/misc/reading = 6,
-		/datum/skill/misc/riding = 2,
-		/datum/skill/combat/crossbows = 2,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/misc/swimming = 1,
-		/datum/skill/misc/climbing = 1,
-		/datum/skill/misc/athletics = 1,
-		/datum/skill/combat/swords = 1,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/misc/medicine = 2,
-		/datum/skill/craft/cooking = 1,
+		/datum/skill/misc/reading = SKILL_LEVEL_LEGENDARY,
+		/datum/skill/misc/riding = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/swords = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/medicine = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/steward

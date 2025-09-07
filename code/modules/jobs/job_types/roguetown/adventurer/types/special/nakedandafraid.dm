@@ -14,17 +14,17 @@
 		STATKEY_INT = -2
 	)
 	subclass_skills = list(
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/craft/crafting = 4,
-		/datum/skill/craft/carpentry = 2,
-		/datum/skill/labor/lumberjacking = 1,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/swimming = 4,
-		/datum/skill/misc/medicine = 2,
-		/datum/skill/misc/sewing = 1,
-		/datum/skill/labor/farming = 3,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/carpentry = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/lumberjacking = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/swimming = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/medicine = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/sewing = SKILL_LEVEL_NOVICE,
+		/datum/skill/labor/farming = SKILL_LEVEL_JOURNEYMAN,
 	)
 
 /datum/outfit/job/roguetown/adventurer/nudist/pre_equip(mob/living/carbon/human/H)

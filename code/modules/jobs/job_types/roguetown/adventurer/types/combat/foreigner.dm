@@ -12,15 +12,15 @@
 		STATKEY_WIL = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/swords = 4,
-		/datum/skill/combat/shields = 3,		//to encourage use of the scabbard as a shield	
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/sewing = 2, 			//this shouldn't be enough to allow them to craft shit, rather just repair their prone-to-break armor
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/shields = SKILL_LEVEL_JOURNEYMAN,		//to encourage use of the scabbard as a shield	
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sewing = SKILL_LEVEL_APPRENTICE, 			//this shouldn't be enough to allow them to craft shit, rather just repair their prone-to-break armor
 	)
 
 /datum/outfit/job/roguetown/adventurer/foreigner/pre_equip(mob/living/carbon/human/H)
@@ -55,14 +55,14 @@
 		STATKEY_WIL = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/polearms = 4,		
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/sewing = 2,
+		/datum/skill/combat/polearms = SKILL_LEVEL_EXPERT,		
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sewing = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/adventurer/custodian/pre_equip(mob/living/carbon/human/H)
@@ -102,15 +102,15 @@
 		STATKEY_WIL = 1,
 	)
 	subclass_skills = list(
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/tracking = 4,
-		/datum/skill/misc/swimming = 3,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/sneaking = 4,
-		/datum/skill/misc/lockpicking = 2,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/tracking = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/lockpicking = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/adventurer/yoruku/pre_equip(mob/living/carbon/human/H)

@@ -15,15 +15,15 @@
 		STATKEY_SPD = 1,
 	)
 	subclass_skills = list(
-		/datum/skill/misc/riding = 4,
-		/datum/skill/misc/reading = 4,
-		/datum/skill/combat/swords = 2,
-		/datum/skill/combat/wrestling = 1,
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/combat/unarmed = 1,
-		/datum/skill/misc/athletics = 2,
-		/datum/skill/misc/climbing = 2,
-		/datum/skill/misc/music = 1,
+		/datum/skill/misc/riding = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/reading = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/swords = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/music = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/adventurer/noble/pre_equip(mob/living/carbon/human/H)
@@ -62,19 +62,19 @@
 		STATKEY_INT = 1,
 	)
 	subclass_skills = list(
-		/datum/skill/misc/riding = 3,
-		/datum/skill/combat/polearms = 2,
-		/datum/skill/combat/maces = 2,
-		/datum/skill/combat/swords = 2,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/combat/shields = 2,
-		/datum/skill/combat/whipsflails = 2,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/misc/swimming = 3,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/reading = 3,
+		/datum/skill/misc/riding = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/polearms = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/swords = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/shields = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
 	)
 
 /datum/outfit/job/roguetown/adventurer/knighte/pre_equip(mob/living/carbon/human/H)
@@ -165,19 +165,19 @@
 		STATKEY_SPD = 1,
 	)
 	subclass_skills = list(
-		/datum/skill/combat/polearms = 3,
-		/datum/skill/combat/maces = 2,
-		/datum/skill/combat/swords = 3,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/combat/shields = 2,
-		/datum/skill/combat/whipsflails = 2,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/reading = 2,
-		/datum/skill/misc/riding = 2,
+		/datum/skill/combat/polearms = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/swords = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/shields = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/riding = SKILL_LEVEL_APPRENTICE,
 	)
 	extra_context = "Chooses between Light Armor (Dodge Expert) and Medium Armor."
 

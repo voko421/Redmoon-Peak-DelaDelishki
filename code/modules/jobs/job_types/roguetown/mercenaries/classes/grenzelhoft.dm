@@ -15,20 +15,20 @@
 		STATKEY_SPD = -1 //They get heavy armor now + sword option; so lower speed.
 	)
 	subclass_skills = list(
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/misc/climbing = 2,
-		/datum/skill/misc/sneaking = 2,
-		/datum/skill/combat/maces = 2,
-		/datum/skill/combat/crossbows = 2,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/combat/swords = 4,
-		/datum/skill/combat/shields = 1,	//Won't be using normally with Zwiehander but useful.
-		/datum/skill/combat/polearms = 3,
-		/datum/skill/combat/whipsflails = 2,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/athletics = 4,		//Trust me, they'll need it due to stamina drain on their base-sword.
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/shields = SKILL_LEVEL_NOVICE,	//Won't be using normally with Zwiehander but useful.
+		/datum/skill/combat/polearms = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,		//Trust me, they'll need it due to stamina drain on their base-sword.
 	)
 
 /datum/outfit/job/roguetown/mercenary/grenzelhoft/pre_equip(mob/living/carbon/human/H)
@@ -79,19 +79,19 @@
 		STATKEY_PER = -1 
 	)
 	subclass_skills = list(
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/misc/climbing = 2,
-		/datum/skill/misc/sneaking = 2,
-		/datum/skill/combat/axes = 3,//Now you actually get your fabled axe skill
-		/datum/skill/combat/crossbows = 2,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/combat/swords = 2,
-		/datum/skill/combat/polearms = 4,
-		/datum/skill/combat/whipsflails = 2,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/athletics = 4,		// Foot soldier that carries the Big Fuckin Polearm around. Also polearm stam drain from the fact they gon' be catching swings all day.
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/axes = SKILL_LEVEL_JOURNEYMAN,//Now you actually get your fabled axe skill
+		/datum/skill/combat/crossbows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/swords = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/polearms = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,		// Foot soldier that carries the Big Fuckin Polearm around. Also polearm stam drain from the fact they gon' be catching swings all day.
 	)
 
 /datum/outfit/job/roguetown/mercenary/grenzelhoft_halberdier/pre_equip(mob/living/carbon/human/H)
@@ -141,23 +141,23 @@
 		STATKEY_CON = -1 
 	)
 	subclass_skills = list(
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/misc/climbing = 3,		// gotta get to a vantage point
-		/datum/skill/misc/sneaking = 3,
-		/datum/skill/combat/axes = 3,		// this is not only a tool!
-		/datum/skill/combat/crossbows = 5,		//every combat class with a ranged weapon gets this . eat my jorts. They have no dodge expert.
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/combat/unarmed = 1,
-		/datum/skill/combat/swords = 2,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/athletics = 3,		// Make your energy count, little silly individual
-		/datum/skill/labor/butchering = 2,		// meant to live off the land and set up camp.
-		/datum/skill/misc/sewing = 2,		// learn 2 maintain your uniform.
-		/datum/skill/craft/cooking = 1,		// Just so you don't suck at cooking
-		/datum/skill/misc/medicine = 2,
-		/datum/skill/labor/lumberjacking = 2,	
-		/datum/skill/craft/crafting = 2,	// crafting for pallisades, lumberjacking for not fucking up wood
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,		// gotta get to a vantage point
+		/datum/skill/misc/sneaking = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/axes = SKILL_LEVEL_JOURNEYMAN,		// this is not only a tool!
+		/datum/skill/combat/crossbows = SKILL_LEVEL_MASTER,		//every combat class with a ranged weapon gets this . eat my jorts. They have no dodge expert.
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/swords = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,		// Make your energy count, little silly individual
+		/datum/skill/labor/butchering = SKILL_LEVEL_APPRENTICE,		// meant to live off the land and set up camp.
+		/datum/skill/misc/sewing = SKILL_LEVEL_APPRENTICE,		// learn 2 maintain your uniform.
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,		// Just so you don't suck at cooking
+		/datum/skill/misc/medicine = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/lumberjacking = SKILL_LEVEL_APPRENTICE,	
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,	// crafting for pallisades, lumberjacking for not fucking up wood
 	)
 
 /datum/outfit/job/roguetown/mercenary/grenzelhoft_crossbowman/pre_equip(mob/living/carbon/human/H)

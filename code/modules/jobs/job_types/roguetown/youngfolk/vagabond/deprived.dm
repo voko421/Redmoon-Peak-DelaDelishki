@@ -9,9 +9,9 @@
 		STATKEY_LCK = 3
 	)
 	subclass_skills = list(
-		/datum/skill/combat/maces = 3,
-		/datum/skill/combat/shields = 2,
-		/datum/skill/misc/athletics = 2,
+		/datum/skill/combat/maces = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/shields = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/vagabond/deprived/pre_equip(mob/living/carbon/human/H)

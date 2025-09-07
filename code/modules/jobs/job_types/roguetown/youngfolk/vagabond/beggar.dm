@@ -13,7 +13,7 @@
 		STATKEY_INT = -4
 	)
 	subclass_skills = list(
-		/datum/skill/misc/stealing = 4,
+		/datum/skill/misc/stealing = SKILL_LEVEL_EXPERT,
 	)
 	extra_context = "Fortune is randomised."
 

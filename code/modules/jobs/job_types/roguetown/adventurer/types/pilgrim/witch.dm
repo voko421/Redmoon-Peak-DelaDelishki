@@ -12,15 +12,15 @@
 		STATKEY_LCK = 1
 	)
 	subclass_skills = list(
-		/datum/skill/misc/reading = 4,
-		/datum/skill/craft/alchemy = 4,
-		/datum/skill/misc/medicine = 2,
-		/datum/skill/labor/farming = 1,
-		/datum/skill/craft/cooking = 1,
-		/datum/skill/misc/sewing = 1,
-		/datum/skill/magic/arcane = 1,
-		/datum/skill/craft/crafting = 2,
-		/datum/skill/craft/carpentry = 2,
+		/datum/skill/misc/reading = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/medicine = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/farming = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sewing = SKILL_LEVEL_NOVICE,
+		/datum/skill/magic/arcane = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/carpentry = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/adventurer/witch/pre_equip(mob/living/carbon/human/H)

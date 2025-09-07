@@ -14,21 +14,21 @@
 		STATKEY_WIL = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/swords = 1,
-		/datum/skill/combat/maces = 1,
-		/datum/skill/combat/axes = 1,
-		/datum/skill/misc/athletics = 2,
-		/datum/skill/combat/bows = 1,
-		/datum/skill/combat/wrestling = 1,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/craft/crafting = 1,
-		/datum/skill/misc/reading = 3,
-		/datum/skill/misc/sewing = 1,
-		/datum/skill/labor/butchering = 2,
-		/datum/skill/craft/cooking = 4,
-		/datum/skill/labor/farming = 2,
-		/datum/skill/misc/medicine = 1,
+		/datum/skill/combat/swords = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/maces = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/axes = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/bows = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/crafting = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/sewing = SKILL_LEVEL_NOVICE,
+		/datum/skill/labor/butchering = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_EXPERT,
+		/datum/skill/labor/farming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/adventurer/cheesemaker/pre_equip(mob/living/carbon/human/H)

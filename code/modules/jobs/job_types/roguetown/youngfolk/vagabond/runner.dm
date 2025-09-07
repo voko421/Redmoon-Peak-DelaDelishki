@@ -11,9 +11,9 @@
 		STATKEY_INT = -2
 	)
 	subclass_skills = list(
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/sneaking = 2,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/vagabond/runner/pre_equip(mob/living/carbon/human/H)

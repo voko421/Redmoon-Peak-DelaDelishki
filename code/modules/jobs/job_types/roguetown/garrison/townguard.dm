@@ -70,23 +70,23 @@ Archer is basically a 'bounty-catcher' in function, less specialized at close-qu
 		STATKEY_SPD = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/maces = 4,
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/combat/axes = 2,
-		/datum/skill/combat/swords = 2,
-		/datum/skill/combat/shields = 2,
-		/datum/skill/combat/polearms = 3,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/combat/whipsflails = 2,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/misc/sneaking = 2,
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/medicine = 1,
-		/datum/skill/misc/riding = 2,
-		/datum/skill/misc/tracking = 1, 
+		/datum/skill/combat/maces = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/axes = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/swords = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/shields = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/polearms = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/riding = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/tracking = SKILL_LEVEL_NOVICE, 
 	)
 
 /datum/outfit/job/roguetown/guardsman/footsman/pre_equip(mob/living/carbon/human/H)
@@ -120,23 +120,23 @@ Archer is basically a 'bounty-catcher' in function, less specialized at close-qu
 		STATKEY_CON = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/bows = 4,
-		/datum/skill/combat/crossbows = 5,		//Why master? Because all it does is effect draw time, which is strength x skill / 1.2. (Bow is just skill / 1.0). You get poor bonus strength, so you get skill to offset.
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/combat/knives = 4,
-		/datum/skill/combat/maces = 2,
-		/datum/skill/combat/shields = 1,		//Maybe take away? Leaving for now just as a fall-back for non-lethal ability.
-		/datum/skill/combat/swords = 1,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/misc/sneaking = 3,
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/medicine = 1,
-		/datum/skill/craft/crafting = 1,	//For basic crafting; you'll need it due to relegated support role.
-		/datum/skill/craft/tanning = 1,	//Likely hunter background; very crappy basic skill.
-		/datum/skill/misc/tracking = 1, 
+		/datum/skill/combat/bows = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_MASTER,		//Why master? Because all it does is effect draw time, which is strength x skill / 1.2. (Bow is just skill / 1.0). You get poor bonus strength, so you get skill to offset.
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/shields = SKILL_LEVEL_NOVICE,		//Maybe take away? Leaving for now just as a fall-back for non-lethal ability.
+		/datum/skill/combat/swords = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_NOVICE,	//For basic crafting; you'll need it due to relegated support role.
+		/datum/skill/craft/tanning = SKILL_LEVEL_NOVICE,	//Likely hunter background; very crappy basic skill.
+		/datum/skill/misc/tracking = SKILL_LEVEL_NOVICE, 
 	)
 
 /datum/outfit/job/roguetown/guardsman/archer/pre_equip(mob/living/carbon/human/H)

@@ -21,21 +21,21 @@
 		STATKEY_INT = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/crossbows = 2,
-		/datum/skill/combat/wrestling = 1,
-		/datum/skill/combat/unarmed = 1,
-		/datum/skill/combat/swords = 5,
-		/datum/skill/combat/shields = 4,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/misc/swimming = 1,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/riding = 5,
-		/datum/skill/misc/athletics = 5,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/combat/polearms = 2,
-		/datum/skill/combat/axes = 2,
-		/datum/skill/combat/maces = 4,
-		/datum/skill/magic/holy = 2,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/swords = SKILL_LEVEL_MASTER,
+		/datum/skill/combat/shields = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/riding = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/athletics = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/polearms = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/axes = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/maces = SKILL_LEVEL_EXPERT,
+		/datum/skill/magic/holy = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/adventurer/crusader

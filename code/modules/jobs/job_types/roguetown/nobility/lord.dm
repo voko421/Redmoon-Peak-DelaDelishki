@@ -123,18 +123,18 @@ GLOBAL_LIST_EMPTY(lord_titles)
 		STATKEY_STR = 1,
 	)
 	subclass_skills = list(
-		/datum/skill/combat/polearms = 2,
-		/datum/skill/combat/maces = 2,
-		/datum/skill/combat/crossbows = 3,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/combat/unarmed = 1,
-		/datum/skill/combat/swords = 4,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/misc/swimming = 1,
-		/datum/skill/misc/climbing = 1,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/reading = 4,
-		/datum/skill/misc/riding = 3,
+		/datum/skill/combat/polearms = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/reading = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/riding = SKILL_LEVEL_JOURNEYMAN,
 	)
 
 /datum/outfit/job/roguetown/lord/warrior/pre_equip(mob/living/carbon/human/H)
@@ -166,18 +166,18 @@ GLOBAL_LIST_EMPTY(lord_titles)
 		STATKEY_WIL = 1,
 	)
 	subclass_skills = list(
-		/datum/skill/combat/polearms = 2,
-		/datum/skill/combat/maces = 2,
-		/datum/skill/combat/crossbows = 4, // Weapons suitable for defending yourself as a merchant.
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/combat/unarmed = 1,
-		/datum/skill/combat/swords = 2,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/misc/swimming = 1,
-		/datum/skill/misc/climbing = 1,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/misc/reading = 5,
-		/datum/skill/misc/riding = 2,
+		/datum/skill/combat/polearms = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_EXPERT, // Weapons suitable for defending yourself as a merchant.
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/swords = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/riding = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/lord/merchant/pre_equip(mob/living/carbon/human/H)
@@ -208,15 +208,15 @@ GLOBAL_LIST_EMPTY(lord_titles)
 		STATKEY_STR = -2,
 	)
 	subclass_skills = list(
-		/datum/skill/combat/bows = 1,
-		/datum/skill/combat/wrestling = 1,
-		/datum/skill/combat/unarmed = 1,
-		/datum/skill/combat/swords = 1, // Sorry you get +1 :)
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/misc/riding = 2,
-		/datum/skill/misc/reading = 3,
-		/datum/skill/craft/cooking = 1,
-		/datum/skill/misc/sewing = 1,
+		/datum/skill/combat/bows = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/swords = SKILL_LEVEL_NOVICE, // Sorry you get +1 :)
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/riding = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sewing = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/lord/inbred/pre_equip(mob/living/carbon/human/H)

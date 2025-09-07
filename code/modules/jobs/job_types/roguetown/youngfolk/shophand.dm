@@ -49,16 +49,16 @@
 	)
 	subclass_skills = list(
 		//worse skills than a normal peasant, generally, with random bad combat skill
-		/datum/skill/misc/stealing = 4,
-		/datum/skill/misc/sneaking = 2,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/reading = 2,
-		/datum/skill/misc/medicine = 1,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/misc/athletics = 2,
-		/datum/skill/misc/lockpicking = 2,
+		/datum/skill/misc/stealing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/lockpicking = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/shophand/basic/pre_equip(mob/living/carbon/human/H)

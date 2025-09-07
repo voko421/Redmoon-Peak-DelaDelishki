@@ -62,17 +62,17 @@
 		STATKEY_WIL = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/whipsflails = 4,
-		/datum/skill/combat/wrestling = 5, //hilarious
-		/datum/skill/combat/knives = 3,
-		/datum/skill/combat/unarmed = 4,
-		/datum/skill/combat/swords = 3,
-		/datum/skill/misc/medicine = 3,//Enough for majority of surgeries without grinding.
-		/datum/skill/craft/cooking = 1,
-		/datum/skill/misc/sewing = 1,
-		/datum/skill/craft/traps = 3,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/athletics = 3,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_MASTER, //hilarious
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/swords = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/medicine = SKILL_LEVEL_JOURNEYMAN,//Enough for majority of surgeries without grinding.
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sewing = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/traps = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
 	)
 	adv_stat_ceiling = list(STAT_STRENGTH = 16, STAT_CONSTITUTION = 16, STAT_WILLPOWER = 16)
 

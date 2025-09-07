@@ -17,14 +17,14 @@
 		STATKEY_CON = 2,
 	)
 	subclass_skills = list(
-		/datum/skill/combat/unarmed = 1,
-		/datum/skill/combat/knives = 4,
-		/datum/skill/misc/sewing = 1,
-		/datum/skill/misc/climbing = 1,
-		/datum/skill/labor/farming = 3,
-		/datum/skill/misc/reading = 4,
-		/datum/skill/craft/crafting = 4,
-		/datum/skill/craft/cooking = 6,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/sewing = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_NOVICE,
+		/datum/skill/labor/farming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/crafting = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/cooking = SKILL_LEVEL_LEGENDARY,
 	)
 
 /datum/outfit/job/roguetown/adventurer/masterchef/pre_equip(mob/living/carbon/human/H)

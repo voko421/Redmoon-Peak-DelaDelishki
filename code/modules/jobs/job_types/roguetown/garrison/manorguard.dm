@@ -73,22 +73,22 @@
 		STATKEY_WIL = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/polearms = 4,
-		/datum/skill/combat/swords = 4,
-		/datum/skill/combat/maces = 4,
-		/datum/skill/combat/axes = 4,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/combat/whipsflails = 2,
-		/datum/skill/combat/slings = 1,
-		/datum/skill/combat/shields = 3,
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/sneaking = 2,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/misc/riding = 1,
-		/datum/skill/misc/tracking = 1,
+		/datum/skill/combat/polearms = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/maces = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/axes = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/slings = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/shields = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/riding = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/tracking = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/manorguard/footsman/pre_equip(mob/living/carbon/human/H)
@@ -174,20 +174,20 @@
 		STATKEY_WIL = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/swords = 4,
-		/datum/skill/combat/knives = 4,
-		/datum/skill/combat/maces = 2, 		// Still have a cugel.
-		/datum/skill/combat/crossbows = 5,		//Only effects draw and reload time.
-		/datum/skill/combat/bows = 5,			//Only effects draw times.
-		/datum/skill/combat/slings = 5,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/sneaking = 3,
-		/datum/skill/misc/athletics = 4, // A little better; run fast, weak boy.
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/riding = 1,
-		/datum/skill/misc/tracking = 2,
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/knives = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE, 		// Still have a cugel.
+		/datum/skill/combat/crossbows = SKILL_LEVEL_MASTER,		//Only effects draw and reload time.
+		/datum/skill/combat/bows = SKILL_LEVEL_MASTER,			//Only effects draw times.
+		/datum/skill/combat/slings = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT, // A little better; run fast, weak boy.
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/riding = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/tracking = SKILL_LEVEL_APPRENTICE,
 	)
 	extra_context = "Chooses between Light Armor (Dodge Expert) & Medium Armor."
 
@@ -274,21 +274,21 @@
 		STATKEY_INT = 1, // No strength to account for the nominally better weapons. We'll see.
 	)
 	subclass_skills = list(
-		/datum/skill/combat/polearms = 4,
-		/datum/skill/combat/swords = 4,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/combat/maces = 3, 		// Still have a cugel.
-		/datum/skill/combat/shields = 3,
-		/datum/skill/combat/whipsflails = 3,	//Best whip training out of MAAs, they're strong.
-		/datum/skill/combat/bows = 1,			// We discourage horse archers, though.
-		/datum/skill/combat/slings = 1,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/athletics = 3, 
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/riding = 4, 		// Like the other horselords.
-		/datum/skill/misc/tracking = 3,	//Best tracker. Might as well give it something to stick-out utility wise.
+		/datum/skill/combat/polearms = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/maces = SKILL_LEVEL_JOURNEYMAN, 		// Still have a cugel.
+		/datum/skill/combat/shields = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_JOURNEYMAN,	//Best whip training out of MAAs, they're strong.
+		/datum/skill/combat/bows = SKILL_LEVEL_NOVICE,			// We discourage horse archers, though.
+		/datum/skill/combat/slings = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN, 
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/riding = SKILL_LEVEL_EXPERT, 		// Like the other horselords.
+		/datum/skill/misc/tracking = SKILL_LEVEL_JOURNEYMAN,	//Best tracker. Might as well give it something to stick-out utility wise.
 	)
 
 /datum/outfit/job/roguetown/manorguard/cavalry/pre_equip(mob/living/carbon/human/H)

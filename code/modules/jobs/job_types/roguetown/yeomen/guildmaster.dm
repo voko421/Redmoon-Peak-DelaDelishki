@@ -52,26 +52,26 @@
 		STATKEY_INT = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/axes = 3,
-		/datum/skill/combat/maces = 3,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/labor/lumberjacking = 3,
-		/datum/skill/labor/mining = 3,
-		/datum/skill/craft/crafting = 3,
-		/datum/skill/craft/carpentry = 3,
-		/datum/skill/craft/masonry = 3,
-		/datum/skill/craft/blacksmithing = 5,
-		/datum/skill/craft/armorsmithing = 5,
-		/datum/skill/craft/weaponsmithing = 5,
-		/datum/skill/craft/smelting = 4,
-		/datum/skill/craft/engineering = 3, // 2 Engineering, let them make more artificers stuffs
-		/datum/skill/misc/sewing = 2, // Worse than the real tailor, so can't steal their job right away 
-		/datum/skill/craft/tanning = 2,
-		/datum/skill/misc/lockpicking = 4,
-		/datum/skill/misc/ceramics = 2,
-		/datum/skill/craft/traps = 2,
-		/datum/skill/misc/reading = 2,
+		/datum/skill/combat/axes = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/maces = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/labor/lumberjacking = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/labor/mining = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/crafting = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/carpentry = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/masonry = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/blacksmithing = SKILL_LEVEL_MASTER,
+		/datum/skill/craft/armorsmithing = SKILL_LEVEL_MASTER,
+		/datum/skill/craft/weaponsmithing = SKILL_LEVEL_MASTER,
+		/datum/skill/craft/smelting = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/engineering = SKILL_LEVEL_JOURNEYMAN, // 2 Engineering, let them make more artificers stuffs
+		/datum/skill/misc/sewing = SKILL_LEVEL_APPRENTICE, // Worse than the real tailor, so can't steal their job right away 
+		/datum/skill/craft/tanning = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/lockpicking = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/ceramics = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/traps = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/guildmaster/basic/pre_equip(mob/living/carbon/human/H)

@@ -60,19 +60,19 @@
 		STATKEY_SPD = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/polearms = 2,
-		/datum/skill/misc/climbing = 2,
-		/datum/skill/combat/wrestling = 1,
-		/datum/skill/combat/unarmed = 1,
-		/datum/skill/misc/swimming = 1,
-		/datum/skill/misc/athletics = 1,
-		/datum/skill/craft/crafting = 2,
-		/datum/skill/misc/medicine = 1,
-		/datum/skill/misc/riding = 1,
-		/datum/skill/misc/reading = 5,
-		/datum/skill/craft/alchemy = 3,
-		/datum/skill/magic/arcane = 3,
-		/datum/skill/craft/cooking = 1,
+		/datum/skill/combat/polearms = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/riding = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_MASTER,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/magic/arcane = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/wapprentice/associate/pre_equip(mob/living/carbon/human/H)
@@ -108,20 +108,20 @@
 		STATKEY_WIL = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/polearms = 1,
-		/datum/skill/misc/reading = 5,
-		/datum/skill/craft/alchemy = 4,
-		/datum/skill/misc/medicine = 2,
-		/datum/skill/combat/wrestling = 1,
-		/datum/skill/combat/unarmed = 1,
-		/datum/skill/misc/swimming = 1,
-		/datum/skill/misc/climbing = 1,
-		/datum/skill/magic/arcane = 2,
-		/datum/skill/labor/farming = 3,
-		/datum/skill/misc/sewing = 1,
-		/datum/skill/craft/cooking = 2,
-		/datum/skill/labor/mining = 2,
-		/datum/skill/labor/fishing = 1,
+		/datum/skill/combat/polearms = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_MASTER,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/medicine = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_NOVICE,
+		/datum/skill/magic/arcane = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/farming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/sewing = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/mining = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/fishing = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/wapprentice/alchemist/pre_equip(mob/living/carbon/human/H)
@@ -156,11 +156,11 @@
 		STATKEY_LCK = 1 // this is just a carrot for the folk who are mad enough to take this role...
 	)
 	subclass_skills = list(
-		/datum/skill/misc/reading = 5,
-		/datum/skill/magic/arcane = 2,
-		/datum/skill/craft/crafting = 2,
-		/datum/skill/craft/alchemy = 2,
-		/datum/skill/combat/polearms = 1,
+		/datum/skill/misc/reading = SKILL_LEVEL_MASTER,
+		/datum/skill/magic/arcane = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/polearms = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/wapprentice/apprentice/pre_equip(mob/living/carbon/human/H)

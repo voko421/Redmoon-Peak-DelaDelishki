@@ -15,21 +15,21 @@
 		STATKEY_SPD = -1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/combat/axes = 2,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/combat/maces = 3,
-		/datum/skill/craft/cooking = 1,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/swimming = 3,
-		/datum/skill/misc/climbing = 3, 
-		/datum/skill/labor/mining = 1,
-		/datum/skill/labor/lumberjacking = 2,
-		/datum/skill/labor/farming = 1,
-		/datum/skill/labor/fishing = 2,
-		/datum/skill/misc/sneaking = 2,
-		/datum/skill/misc/stealing = 3,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/axes = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/maces = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN, 
+		/datum/skill/labor/mining = SKILL_LEVEL_NOVICE,
+		/datum/skill/labor/lumberjacking = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/farming = SKILL_LEVEL_NOVICE,
+		/datum/skill/labor/fishing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/stealing = SKILL_LEVEL_JOURNEYMAN,
 	)
 
 /datum/outfit/job/roguetown/adventurer/thug/pre_equip(mob/living/carbon/human/H)

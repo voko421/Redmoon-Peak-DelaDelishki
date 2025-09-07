@@ -41,14 +41,14 @@
 		STATKEY_PER = 1,
 	)
 	subclass_skills = list(
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/sneaking = 4,
-		/datum/skill/misc/medicine = 1,
-		/datum/skill/magic/holy = 2,
-		/datum/skill/misc/sewing = 2,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/craft/crafting = 1,
-		/datum/skill/craft/cooking = 1,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
+		/datum/skill/magic/holy = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/sewing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/churchling/basic/pre_equip(mob/living/carbon/human/H)

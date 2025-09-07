@@ -91,18 +91,18 @@
 		STATKEY_SPD = -1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/polearms = 4, //Polearms are pretty much explicitly a two-handed weapon, so I gave them a polearm option.
-		/datum/skill/combat/swords = 4,
-		/datum/skill/combat/axes = 4,
-		/datum/skill/combat/maces = 4,
-		/datum/skill/misc/riding = 1,	//Too heavy for horses.
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/reading = 2,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/misc/tracking = 2,
+		/datum/skill/combat/polearms = SKILL_LEVEL_EXPERT, //Polearms are pretty much explicitly a two-handed weapon, so I gave them a polearm option.
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/axes = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/maces = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/riding = SKILL_LEVEL_NOVICE,	//Too heavy for horses.
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/tracking = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/knight/heavy/pre_equip(mob/living/carbon/human/H)
@@ -184,18 +184,18 @@
 		STATKEY_WIL = 3,
 	)
 	subclass_skills = list(
-		/datum/skill/combat/swords = 4,
-		/datum/skill/combat/whipsflails = 4,
-		/datum/skill/combat/maces = 4, 
-		/datum/skill/combat/shields = 4,
-		/datum/skill/misc/riding = 2,	
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/reading = 2,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/misc/tracking = 2,
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/maces = SKILL_LEVEL_EXPERT, 
+		/datum/skill/combat/shields = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/riding = SKILL_LEVEL_APPRENTICE,	
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/tracking = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/knight/footknight/pre_equip(mob/living/carbon/human/H)
@@ -273,19 +273,19 @@
 		STATKEY_PER = 2
 	)
 	subclass_skills = list(
-		/datum/skill/combat/polearms = 4,
-		/datum/skill/combat/swords = 4,
-		/datum/skill/combat/maces = 4,
-		/datum/skill/misc/riding = 4,
-		/datum/skill/combat/crossbows = 4,
-		/datum/skill/combat/bows = 4,
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/reading = 2,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/misc/tracking = 3,
+		/datum/skill/combat/polearms = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/maces = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/riding = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/bows = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/tracking = SKILL_LEVEL_JOURNEYMAN,
 	)
 
 /datum/outfit/job/roguetown/knight/mountedknight/pre_equip(mob/living/carbon/human/H)
@@ -378,20 +378,20 @@
 		STATKEY_SPD = 2
 	)
 	subclass_skills = list(
-		/datum/skill/combat/swords = 4, //Swords and knives class.
-		/datum/skill/combat/knives = 4,	
-		/datum/skill/combat/whipsflails = 4, //Whips can work as a light class weapon.	
-		/datum/skill/combat/shields = 3,	
-		/datum/skill/misc/riding = 2,	
-		/datum/skill/combat/crossbows = 4, //Bows fit a light/speedy class pretty well, gave them ranged options.
-		/datum/skill/combat/bows = 4,
-		/datum/skill/misc/climbing = 4,		
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/sneaking = 2,
-		/datum/skill/misc/reading = 2,
-		/datum/skill/misc/tracking = 2,
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT, //Swords and knives class.
+		/datum/skill/combat/knives = SKILL_LEVEL_EXPERT,	
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_EXPERT, //Whips can work as a light class weapon.	
+		/datum/skill/combat/shields = SKILL_LEVEL_JOURNEYMAN,	
+		/datum/skill/misc/riding = SKILL_LEVEL_APPRENTICE,	
+		/datum/skill/combat/crossbows = SKILL_LEVEL_EXPERT, //Bows fit a light/speedy class pretty well, gave them ranged options.
+		/datum/skill/combat/bows = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,		
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/tracking = SKILL_LEVEL_APPRENTICE,
 	)
 
 

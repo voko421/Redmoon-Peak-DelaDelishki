@@ -12,11 +12,11 @@
 		STATKEY_CON = -1
 	)
 	subclass_skills = list(
-		/datum/skill/misc/riding = 1,
-		/datum/skill/labor/farming = 3,
-		/datum/skill/craft/cooking = 1,
-		/datum/skill/craft/carpentry = 3,
-		/datum/skill/misc/athletics = 2,
+		/datum/skill/misc/riding = SKILL_LEVEL_NOVICE,
+		/datum/skill/labor/farming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/carpentry = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/vagabond/goatherd/pre_equip(mob/living/carbon/human/H)

@@ -21,17 +21,17 @@
 		STATKEY_PER = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/maces = 2,
-		/datum/skill/combat/axes = 2,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/craft/crafting = 2,
-		/datum/skill/craft/masonry = 2,
-		/datum/skill/craft/carpentry = 2,
-		/datum/skill/craft/blacksmithing = 6,
-		/datum/skill/craft/armorsmithing = 6,
-		/datum/skill/craft/weaponsmithing = 6,
-		/datum/skill/craft/smelting = 6,
-		/datum/skill/misc/reading = 1,
+		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/axes = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/masonry = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/carpentry = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/blacksmithing = SKILL_LEVEL_LEGENDARY,
+		/datum/skill/craft/armorsmithing = SKILL_LEVEL_LEGENDARY,
+		/datum/skill/craft/weaponsmithing = SKILL_LEVEL_LEGENDARY,
+		/datum/skill/craft/smelting = SKILL_LEVEL_LEGENDARY,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/adventurer/masterblacksmith/pre_equip(mob/living/carbon/human/H)

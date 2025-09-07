@@ -16,28 +16,28 @@
 		STATKEY_CON = 1,
 	)
 	subclass_skills = list(
-		/datum/skill/combat/polearms = 3, // Jman Polearms, for better parrying without making them bandit level 
-		/datum/skill/combat/axes = 2, // They get apprentice in a wide spread of weapons for synergy with conjuration, especially if they take virtues
-		/datum/skill/combat/maces = 2,
-		/datum/skill/combat/swords = 2,
-		/datum/skill/combat/whipsflails = 2,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/combat/bows = 1,
-		/datum/skill/combat/wrestling = 1,
-		/datum/skill/combat/unarmed = 1,
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/misc/climbing = 3, //needs climbing to get into hideout
-		/datum/skill/misc/athletics = 2, // Standards for athletics is 3, give them 2
-		/datum/skill/combat/swords = 1,
-		/datum/skill/combat/knives = 1,
-		/datum/skill/craft/crafting = 1,
-		/datum/skill/misc/medicine = 1,
-		/datum/skill/misc/riding = 1,
-		/datum/skill/misc/reading = 4,
-		/datum/skill/craft/alchemy = 3,
-		/datum/skill/magic/arcane = 4,
+		/datum/skill/combat/polearms = SKILL_LEVEL_JOURNEYMAN, // Jman Polearms, for better parrying without making them bandit level 
+		/datum/skill/combat/axes = SKILL_LEVEL_APPRENTICE, // They get apprentice in a wide spread of weapons for synergy with conjuration, especially if they take virtues
+		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/swords = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/bows = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN, //needs climbing to get into hideout
+		/datum/skill/misc/athletics = SKILL_LEVEL_APPRENTICE, // Standards for athletics is 3, give them 2
+		/datum/skill/combat/swords = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/riding = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/magic/arcane = SKILL_LEVEL_EXPERT,
 	)
 
 /datum/outfit/job/roguetown/bandit/roguemage/pre_equip(mob/living/carbon/human/H)

@@ -11,9 +11,9 @@
 		STATKEY_CON = -2,
 	)
 	subclass_skills = list(
-		/datum/skill/misc/riding = 4,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/craft/cooking = 1,
+		/datum/skill/misc/riding = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/vagabond/courier/pre_equip(mob/living/carbon/human/H)

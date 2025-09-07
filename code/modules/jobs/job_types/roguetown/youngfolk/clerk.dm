@@ -36,16 +36,16 @@
 		STATKEY_STR = -1
 	)
 	subclass_skills = list(
-		/datum/skill/misc/reading = 3,
-		/datum/skill/combat/knives = 1,
-		/datum/skill/misc/medicine = 1,
-		/datum/skill/craft/cooking = 1,
-		/datum/skill/misc/sewing = 1,
-		/datum/skill/combat/unarmed = 1,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/craft/cooking = 1,
-		/datum/skill/misc/athletics = 2,
-		/datum/skill/craft/crafting = 1,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sewing = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_NOVICE,
 	)
 	category_tags = list(CTAG_CLERK)
 	outfit = /datum/outfit/job/roguetown/clerk/basic

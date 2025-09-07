@@ -74,16 +74,16 @@
 		STATKEY_STR = 1,
 	)
 	subclass_skills = list(
-		/datum/skill/combat/maces = 4,
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/misc/tracking = 4,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/reading = 3,
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/combat/crossbows = 2,
-		/datum/skill/misc/climbing = 2,
-		/datum/skill/misc/riding = 2,
+		/datum/skill/combat/maces = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/tracking = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/riding = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/marshal/classic/pre_equip(mob/living/carbon/human/H)
@@ -111,16 +111,16 @@
 		STATKEY_STR = 1,
 	)
 	subclass_skills = list(
-		/datum/skill/combat/swords = 4,
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/misc/tracking = 4,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/reading = 3,
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/combat/crossbows = 2,
-		/datum/skill/misc/climbing = 2,
-		/datum/skill/misc/riding = 2,
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/tracking = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/riding = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/marshal/kcommander/pre_equip(mob/living/carbon/human/H)

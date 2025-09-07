@@ -17,20 +17,20 @@
 		STATKEY_STR = 2
 	)
 	subclass_skills = list(
-		/datum/skill/combat/polearms = 4,
-		/datum/skill/combat/maces = 4,
-		/datum/skill/combat/axes = 4,
-		/datum/skill/combat/swords = 4,
-		/datum/skill/combat/knives = 4,
-		/datum/skill/combat/shields = 4,
-		/datum/skill/combat/whipsflails = 4,
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/misc/swimming = 4,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/riding = 4,
-		/datum/skill/misc/reading = 3,
+		/datum/skill/combat/polearms = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/maces = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/axes = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/knives = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/shields = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/swimming = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/riding = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
 	)
 /datum/outfit/job/roguetown/wretch/deserter/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -144,21 +144,21 @@
 		STATKEY_PER = 1,
 	)
 	subclass_skills = list(
-		/datum/skill/combat/polearms = 4,
-		/datum/skill/combat/swords = 4,
-		/datum/skill/combat/maces = 4,
-		/datum/skill/combat/axes = 4,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/combat/whipsflails = 3,
-		/datum/skill/combat/shields = 3,
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/climbing = 4, // Better at climbing away than your average MaA. Only slightly.
-		/datum/skill/misc/swimming = 3, // Worse at swimming than the above class.
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/riding = 3, // That saiga was stolen. Probably.
-		/datum/skill/misc/tracking = 1,
+		/datum/skill/combat/polearms = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/maces = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/axes = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/shields = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT, // Better at climbing away than your average MaA. Only slightly.
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN, // Worse at swimming than the above class.
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/riding = SKILL_LEVEL_JOURNEYMAN, // That saiga was stolen. Probably.
+		/datum/skill/misc/tracking = SKILL_LEVEL_NOVICE,
 	)
 /datum/outfit/job/roguetown/wretch/desertermaa/pre_equip(mob/living/carbon/human/H)
 	..()

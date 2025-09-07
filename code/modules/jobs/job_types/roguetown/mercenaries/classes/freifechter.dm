@@ -14,12 +14,12 @@
 		STATKEY_CON = 2
 	)
 	subclass_skills = list(
-		/datum/skill/combat/swords = 5,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/misc/reading = 2,
-		/datum/skill/misc/climbing = 2,	//I got told that having zero climbing is a PITA. Bare minimum for a combat class.
+		/datum/skill/combat/swords = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,	//I got told that having zero climbing is a PITA. Bare minimum for a combat class.
 	)
 
 /datum/outfit/job/roguetown/mercenary/freelancer/pre_equip(mob/living/carbon/human/H)
@@ -69,12 +69,12 @@
 		STATKEY_WIL = -2
 	)
 	subclass_skills = list(
-		/datum/skill/combat/polearms = 5,	//This is the danger zone. Ultimately, the class won't be picked without this. I took the liberty of adjusting everything around to make this somewhat inoffensive, but we'll see if it sticks.
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/combat/wrestling = 1,	//Wrestling is a swordsman's luxury.
-		/datum/skill/misc/reading = 2,
-		/datum/skill/misc/climbing = 2,	//I got told that having zero climbing is a PITA. Bare minimum for a combat class.
+		/datum/skill/combat/polearms = SKILL_LEVEL_MASTER,	//This is the danger zone. Ultimately, the class won't be picked without this. I took the liberty of adjusting everything around to make this somewhat inoffensive, but we'll see if it sticks.
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_NOVICE,	//Wrestling is a swordsman's luxury.
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,	//I got told that having zero climbing is a PITA. Bare minimum for a combat class.
 	)
 
 /datum/outfit/job/roguetown/mercenary/freelancer_lancer/pre_equip(mob/living/carbon/human/H)

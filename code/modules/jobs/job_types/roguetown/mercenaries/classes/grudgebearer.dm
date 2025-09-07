@@ -20,16 +20,16 @@
 		STATKEY_SPD = -2
 	)
 	subclass_skills = list(
-		/datum/skill/misc/reading = 4,
-		/datum/skill/craft/armorsmithing = 4,	//Shouldn't be better than the smith (though the stats are already)
-		/datum/skill/craft/blacksmithing = 3,
-		/datum/skill/craft/smelting = 3,
-		/datum/skill/combat/maces = 3,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/craft/weaponsmithing = 1,
-		/datum/skill/misc/climbing = 1,
+		/datum/skill/misc/reading = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/armorsmithing = SKILL_LEVEL_EXPERT,	//Shouldn't be better than the smith (though the stats are already)
+		/datum/skill/craft/blacksmithing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/smelting = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/maces = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/weaponsmithing = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_NOVICE,
 	)
 
 //Because the armor is race-exclusive for repairs, these guys *should* be able to repair their own guys armor layers. A Dwarf smith isn't guaranteed, after all.
@@ -69,15 +69,15 @@
 		STATKEY_SPD = -2
 	)
 	subclass_skills = list(
-		/datum/skill/combat/axes = 4,
-		/datum/skill/combat/maces = 4,
-		/datum/skill/misc/reading = 4,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/misc/tracking = 3,
-		/datum/skill/craft/armorsmithing = 2,	//Only here so they'd be able to repair their own armor integrity
-		/datum/skill/misc/climbing = 1,
+		/datum/skill/combat/axes = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/maces = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/reading = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/tracking = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/armorsmithing = SKILL_LEVEL_APPRENTICE,	//Only here so they'd be able to repair their own armor integrity
+		/datum/skill/misc/climbing = SKILL_LEVEL_NOVICE,
 	)
 /datum/outfit/job/roguetown/mercenary/grudgebearer_soldier/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -226,7 +226,7 @@
 	repair_items = list(/obj/machinery/anvil)
 
 	repair_skills = list(
-		/datum/skill/craft/armorsmithing = 2,
+		/datum/skill/craft/armorsmithing = SKILL_LEVEL_APPRENTICE,
 	)
 
 	race_repair = list(

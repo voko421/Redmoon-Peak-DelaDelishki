@@ -12,20 +12,20 @@
 		STATKEY_CON = 2
 	)
 	subclass_skills = list(
-		/datum/skill/combat/bows = 2,
-		/datum/skill/combat/knives = 4,
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/combat/wrestling = 4, // To escape grapplers, fuck you
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/craft/crafting = 3,
-		/datum/skill/craft/carpentry = 3, //Build your gooncave 
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/misc/reading = 3,
-		/datum/skill/misc/medicine = 4, //Disgraced medicine man. 
-		/datum/skill/misc/sewing = 3,
-		/datum/skill/craft/alchemy = 5, // This is literally their whole thing
-		/datum/skill/labor/farming = 3, // Farm ingredients so you have something to do that isn't grinding skills
+		/datum/skill/combat/bows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT, // To escape grapplers, fuck you
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/crafting = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/carpentry = SKILL_LEVEL_JOURNEYMAN, //Build your gooncave 
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/medicine = SKILL_LEVEL_EXPERT, //Disgraced medicine man. 
+		/datum/skill/misc/sewing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_MASTER, // This is literally their whole thing
+		/datum/skill/labor/farming = SKILL_LEVEL_JOURNEYMAN, // Farm ingredients so you have something to do that isn't grinding skills
 	)
 
 /datum/outfit/job/roguetown/wretch/plaguebearer/pre_equip(mob/living/carbon/human/H)

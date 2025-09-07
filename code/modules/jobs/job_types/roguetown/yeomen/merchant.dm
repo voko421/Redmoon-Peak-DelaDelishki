@@ -49,20 +49,20 @@
 		STATKEY_STR = -1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/swords = 3,
-		/datum/skill/combat/maces = 2,
-		/datum/skill/combat/crossbows = 2,
-		/datum/skill/combat/bows = 2,
-		/datum/skill/combat/wrestling = 1,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/misc/reading = 5,
-		/datum/skill/misc/sneaking = 2,
-		/datum/skill/misc/stealing = 2,
-		/datum/skill/misc/medicine = 2,
-		/datum/skill/craft/cooking = 2,
-		/datum/skill/misc/riding = 3,
-		/datum/skill/misc/lockpicking = 2,
+		/datum/skill/combat/swords = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/bows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/stealing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/medicine = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/riding = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/lockpicking = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/merchant/basic/pre_equip(mob/living/carbon/human/H)

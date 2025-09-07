@@ -11,11 +11,11 @@
 		STATKEY_WIL = -1
 	)
 	subclass_skills = list(
-		/datum/skill/magic/holy = 1,
-		/datum/skill/misc/reading = 3,
-		/datum/skill/misc/medicine = 2,
-		/datum/skill/craft/cooking = 1,
-		/datum/skill/craft/crafting = 2,
+		/datum/skill/magic/holy = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/medicine = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/vagabond/excommunicated/pre_equip(mob/living/carbon/human/H)

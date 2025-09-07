@@ -51,24 +51,24 @@
 		STATKEY_PER = -1
 	)
 	subclass_skills = list(
-		/datum/skill/misc/sewing = 1,
-		/datum/skill/craft/tanning = 1,
-		/datum/skill/misc/medicine = 2,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/misc/reading = 2,
-		/datum/skill/craft/alchemy = 3,
-		/datum/skill/magic/holy = 4,
-		/datum/skill/craft/crafting = 3,
-		/datum/skill/labor/farming = 3,
-		/datum/skill/craft/carpentry = 1,
-		/datum/skill/misc/athletics = 2,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/magic/druidic = 3, //Shapeshifting.
-		/datum/skill/misc/tracking = 4, //Druids know the forest and when it has been disturbed
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/combat/whipsflails = 1,
-		/datum/skill/combat/polearms = 1, //To help them defend themselves with parrying
+		/datum/skill/misc/sewing = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/tanning = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/medicine = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/magic/holy = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/crafting = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/labor/farming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/carpentry = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/magic/druidic = SKILL_LEVEL_JOURNEYMAN, //Shapeshifting.
+		/datum/skill/misc/tracking = SKILL_LEVEL_EXPERT, //Druids know the forest and when it has been disturbed
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/polearms = SKILL_LEVEL_NOVICE, //To help them defend themselves with parrying
 	)
 
 /datum/outfit/job/roguetown/druid

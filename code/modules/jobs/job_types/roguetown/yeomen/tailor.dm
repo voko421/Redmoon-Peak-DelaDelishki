@@ -42,14 +42,14 @@
 		STATKEY_STR = -1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/knives = 3,
-		/datum/skill/misc/sewing = 5,
-		/datum/skill/craft/crafting = 3,
-		/datum/skill/craft/tanning = 4,
-		/datum/skill/misc/reading = 3,
-		/datum/skill/misc/medicine = 2,
-		/datum/skill/labor/farming = 1,
-		/datum/skill/craft/cooking = 1,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/sewing = SKILL_LEVEL_MASTER,
+		/datum/skill/craft/crafting = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/tanning = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/medicine = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/farming = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/tailor/basic/pre_equip(mob/living/carbon/human/H)

@@ -14,24 +14,24 @@
 		STATKEY_CON = 1
 	)
 	subclass_skills = list(
-		/datum/skill/misc/tracking = 4,
-		/datum/skill/combat/bows = 4,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/combat/axes = 2,
-		/datum/skill/combat/maces = 2,
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/sneaking = 3,
-		/datum/skill/misc/stealing = 2,
-		/datum/skill/craft/traps = 4,
+		/datum/skill/misc/tracking = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/bows = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/axes = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/stealing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/traps = SKILL_LEVEL_EXPERT,
 		//these people live in the forest so let's give them some peasant skills
-		/datum/skill/craft/crafting = 1,
-		/datum/skill/craft/tanning = 1,
-		/datum/skill/craft/cooking = 1,
-		/datum/skill/labor/butchering = 1,
+		/datum/skill/craft/crafting = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/tanning = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
+		/datum/skill/labor/butchering = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/wretch/poacher/pre_equip(mob/living/carbon/human/H)

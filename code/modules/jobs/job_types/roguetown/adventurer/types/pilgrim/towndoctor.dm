@@ -12,18 +12,18 @@
 		STATKEY_LCK = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/knives = 3,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/craft/crafting = 2,
-		/datum/skill/craft/carpentry = 2,
-		/datum/skill/labor/lumberjacking = 1,
-		/datum/skill/misc/athletics = 2,
-		/datum/skill/misc/reading = 3,
-		/datum/skill/misc/climbing = 1,
-		/datum/skill/misc/sneaking = 1,
-		/datum/skill/misc/medicine = 5,
-		/datum/skill/misc/sewing = 3,
-		/datum/skill/craft/alchemy = 2,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/carpentry = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/lumberjacking = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/medicine = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/sewing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/adventurer/doctor/pre_equip(mob/living/carbon/human/H)

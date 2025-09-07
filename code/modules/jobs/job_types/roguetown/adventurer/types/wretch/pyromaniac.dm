@@ -12,20 +12,20 @@
 		STATKEY_INT = 3
 	)
 	subclass_skills = list(
-		/datum/skill/combat/bows = 2,
-		/datum/skill/combat/crossbows = 2,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/misc/athletics = 4, // RUN BOY RUN
-		/datum/skill/combat/wrestling = 4, // To escape grapplers, fuck you
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/reading = 2,
-		/datum/skill/craft/traps = 4,
-		/datum/skill/craft/alchemy = 4,
-		/datum/skill/craft/crafting = 2,
-		/datum/skill/craft/engineering = 1,
-		/datum/skill/labor/farming = 1,
+		/datum/skill/combat/bows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT, // RUN BOY RUN
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT, // To escape grapplers, fuck you
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/traps = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/engineering = SKILL_LEVEL_NOVICE,
+		/datum/skill/labor/farming = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/wretch/pyromaniac/pre_equip(mob/living/carbon/human/H)

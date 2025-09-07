@@ -15,18 +15,18 @@
 		STATKEY_CON = -1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/polearms = 3,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/misc/swimming = 1,
-		/datum/skill/misc/climbing = 2,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/craft/crafting = 2,
-		/datum/skill/misc/medicine = 3,
-		/datum/skill/misc/riding = 2,
-		/datum/skill/misc/reading = 4,
-		/datum/skill/craft/alchemy = 3,
-		/datum/skill/magic/arcane = 4,
-		/datum/skill/misc/sewing = 2,
+		/datum/skill/combat/polearms = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/medicine = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/riding = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/magic/arcane = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/sewing = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/mercenary/warscholar
@@ -104,17 +104,17 @@
 		STATKEY_CON = -1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/combat/unarmed = 4,
-		/datum/skill/misc/swimming = 1,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/misc/medicine = 1,
-		/datum/skill/misc/reading = 3,
-		/datum/skill/magic/arcane = 2,
-		/datum/skill/misc/sneaking = 3,
-		/datum/skill/misc/stealing = 3,
-		/datum/skill/misc/lockpicking = 3,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/swimming = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/magic/arcane = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/stealing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/lockpicking = SKILL_LEVEL_JOURNEYMAN,
 	)
 
 /datum/outfit/job/roguetown/mercenary/warscholar_pontifex
@@ -181,19 +181,19 @@
 		STATKEY_WIL = 2,
 	)
 	subclass_skills = list(
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/misc/swimming = 1,
-		/datum/skill/misc/climbing = 1,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/craft/crafting = 1,
-		/datum/skill/misc/medicine = 3,
-		/datum/skill/misc/reading = 4,
-		/datum/skill/combat/polearms = 2,
-		/datum/skill/craft/alchemy = 2,
-		/datum/skill/combat/crossbows = 2,
-		/datum/skill/misc/sewing = 2,
-		/datum/skill/magic/holy = 4,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/crafting = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/medicine = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/polearms = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/sewing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/magic/holy = SKILL_LEVEL_EXPERT,
 	)
 
 /datum/outfit/job/roguetown/mercenary/warscholar_vizier

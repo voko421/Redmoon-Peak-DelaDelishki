@@ -16,20 +16,20 @@
 		STATKEY_PER = -1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/maces = 3,
-		/datum/skill/combat/swords = 3,
-		/datum/skill/combat/axes = 3,
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/swimming = 4,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/sneaking = 3,
-		/datum/skill/misc/tracking = 3,
-		/datum/skill/misc/medicine = 1,
-		/datum/skill/craft/tanning = 2,
-		/datum/skill/craft/cooking = 1,
-		/datum/skill/labor/butchering = 1,
+		/datum/skill/combat/maces = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/swords = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/axes = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/tracking = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/tanning = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
+		/datum/skill/labor/butchering = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/wretch/berserker/pre_equip(mob/living/carbon/human/H)

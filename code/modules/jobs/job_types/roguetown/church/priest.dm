@@ -64,17 +64,17 @@ GLOBAL_LIST_EMPTY(heretical_players)
 		STATKEY_SPD = -1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/wrestling = 5,
-		/datum/skill/combat/unarmed = 5,
-		/datum/skill/combat/polearms = 5,
-		/datum/skill/misc/reading = 6,
-		/datum/skill/misc/medicine = 4,
-		/datum/skill/craft/cooking = 2,
-		/datum/skill/craft/crafting = 3,
-		/datum/skill/misc/sewing = 2,
-		/datum/skill/labor/farming = 2,
-		/datum/skill/magic/holy = 5,
-		/datum/skill/craft/alchemy = 3,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_MASTER,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_MASTER,
+		/datum/skill/combat/polearms = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/reading = SKILL_LEVEL_LEGENDARY,
+		/datum/skill/misc/medicine = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/cooking = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/sewing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/farming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/magic/holy = SKILL_LEVEL_MASTER,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_JOURNEYMAN,
 	)
 
 /datum/outfit/job/roguetown/priest

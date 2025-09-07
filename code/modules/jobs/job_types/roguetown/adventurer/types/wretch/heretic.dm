@@ -14,18 +14,18 @@
 		STATKEY_WIL = 1
 	)
 	subclass_skills = list(
-		/datum/skill/magic/holy = 4,
-		/datum/skill/combat/maces = 3,
-		/datum/skill/combat/swords = 3,
-		/datum/skill/combat/axes = 3,
-		/datum/skill/combat/shields = 3,
-		/datum/skill/combat/whipsflails = 3,
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/misc/swimming = 3,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/reading = 3,
+		/datum/skill/magic/holy = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/maces = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/swords = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/axes = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/shields = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
 	)
 
 /datum/outfit/job/roguetown/wretch/heretic/pre_equip(mob/living/carbon/human/H)
@@ -167,20 +167,20 @@
 		STATKEY_INT = 1
 	)
 	subclass_skills = list(
-		/datum/skill/magic/holy = 4,
-		/datum/skill/misc/tracking = 4,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/combat/swords = 3,
-		/datum/skill/misc/swimming = 3,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/climbing = 5,
-		/datum/skill/misc/reading = 3,
-		/datum/skill/misc/sneaking = 4,
-		/datum/skill/misc/stealing = 4,
-		/datum/skill/misc/lockpicking = 4,
-		/datum/skill/craft/traps = 3,
+		/datum/skill/magic/holy = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/tracking = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/swords = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/climbing = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/stealing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/lockpicking = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/traps = SKILL_LEVEL_JOURNEYMAN,
 	)
 
 /datum/outfit/job/roguetown/wretch/hereticspy/pre_equip(mob/living/carbon/human/H)

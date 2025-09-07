@@ -14,16 +14,16 @@
 		STATKEY_SPD = -1
 	)
 	subclass_skills = list(
-		/datum/skill/misc/athletics = 3, // Potters are fairly active, having to source their own clay.
-		/datum/skill/combat/unarmed = 3, // They mostly work with their bare hands...?
-		/datum/skill/combat/wrestling = 3, // Something about wrestling clay into shape?
-		/datum/skill/combat/knives = 1,
-		/datum/skill/misc/climbing = 2,
-		/datum/skill/craft/crafting = 3,
-		/datum/skill/craft/carpentry = 2, // They probably have some insight in carpentry and masonry.
-		/datum/skill/craft/masonry = 2, // They probably have some insight in carpentry and masonry.
-		/datum/skill/misc/reading = 2,
-		/datum/skill/misc/ceramics = 5,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN, // Potters are fairly active, having to source their own clay.
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN, // They mostly work with their bare hands...?
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN, // Something about wrestling clay into shape?
+		/datum/skill/combat/knives = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/carpentry = SKILL_LEVEL_APPRENTICE, // They probably have some insight in carpentry and masonry.
+		/datum/skill/craft/masonry = SKILL_LEVEL_APPRENTICE, // They probably have some insight in carpentry and masonry.
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/ceramics = SKILL_LEVEL_MASTER,
 	)
 
 /datum/outfit/job/roguetown/adventurer/potter/pre_equip(mob/living/carbon/human/H)

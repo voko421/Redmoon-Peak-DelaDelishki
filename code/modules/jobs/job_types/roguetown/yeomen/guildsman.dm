@@ -51,17 +51,17 @@
 		STATKEY_INT = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/axes = 2,
-		/datum/skill/combat/maces = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/craft/crafting = 3,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/craft/blacksmithing = 5,
-		/datum/skill/craft/armorsmithing = 5,
-		/datum/skill/craft/weaponsmithing = 5,
-		/datum/skill/craft/smelting = 4,
-		/datum/skill/craft/engineering = 1, // 1 Engineering to allow them to sub for Artificer role occaisonally
-		/datum/skill/misc/reading = 2,
+		/datum/skill/combat/axes = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/blacksmithing = SKILL_LEVEL_MASTER,
+		/datum/skill/craft/armorsmithing = SKILL_LEVEL_MASTER,
+		/datum/skill/craft/weaponsmithing = SKILL_LEVEL_MASTER,
+		/datum/skill/craft/smelting = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/engineering = SKILL_LEVEL_NOVICE, // 1 Engineering to allow them to sub for Artificer role occaisonally
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/guildsman/blacksmith/pre_equip(mob/living/carbon/human/H)
@@ -121,24 +121,24 @@
 		STATKEY_PER = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/axes = 2,
-		/datum/skill/combat/maces = 2,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/craft/crafting = 2, //reduced for tradeoff
-		/datum/skill/craft/carpentry = 2, //they are builders, but not as good as craftsmen
-		/datum/skill/craft/masonry = 2,
-		/datum/skill/craft/engineering = 5, //raising so they don't need to early week grind to get items out, in parity to a smith's armor or weapon skill
-		/datum/skill/craft/blacksmithing = 2, // Artificer makes for a crappy substitute blacksmith but have the same spread
-		/datum/skill/craft/armorsmithing = 2, 
-		/datum/skill/craft/weaponsmithing = 2,
-		/datum/skill/magic/arcane = 2,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/lockpicking = 4,
-		/datum/skill/craft/smelting = 4,
-		/datum/skill/craft/traps = 2,
-		/datum/skill/misc/reading = 2,
-		/datum/skill/misc/ceramics = 3,	//Just for basic pottery/glass stuff.
+		/datum/skill/combat/axes = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE, //reduced for tradeoff
+		/datum/skill/craft/carpentry = SKILL_LEVEL_APPRENTICE, //they are builders, but not as good as craftsmen
+		/datum/skill/craft/masonry = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/engineering = SKILL_LEVEL_MASTER, //raising so they don't need to early week grind to get items out, in parity to a smith's armor or weapon skill
+		/datum/skill/craft/blacksmithing = SKILL_LEVEL_APPRENTICE, // Artificer makes for a crappy substitute blacksmith but have the same spread
+		/datum/skill/craft/armorsmithing = SKILL_LEVEL_APPRENTICE, 
+		/datum/skill/craft/weaponsmithing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/magic/arcane = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/lockpicking = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/smelting = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/traps = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/ceramics = SKILL_LEVEL_JOURNEYMAN,	//Just for basic pottery/glass stuff.
 	)
 
 /datum/outfit/job/roguetown/guildsman/artificer/pre_equip(mob/living/carbon/human/H)
@@ -188,22 +188,22 @@
 		STATKEY_CON = 1,
 	)
 	subclass_skills = list(
-		/datum/skill/combat/axes = 2,
-		/datum/skill/combat/maces = 2,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/labor/lumberjacking = 3,
-		/datum/skill/labor/mining = 3,
-		/datum/skill/misc/athletics = 4, 
-		/datum/skill/craft/crafting = 4,
-		/datum/skill/craft/carpentry = 4,
-		/datum/skill/craft/masonry = 4,
-		/datum/skill/craft/engineering = 4,
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/craft/traps = 2,
-		/datum/skill/misc/reading = 2,
-		/datum/skill/misc/ceramics = 2,
+		/datum/skill/combat/axes = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/lumberjacking = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/labor/mining = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT, 
+		/datum/skill/craft/crafting = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/carpentry = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/masonry = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/engineering = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/traps = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/ceramics = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/guildsman/architect/pre_equip(mob/living/carbon/human/H)

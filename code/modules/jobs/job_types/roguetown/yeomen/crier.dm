@@ -46,15 +46,15 @@
 		STATKEY_SPD = 1
 	)
 	subclass_skills = list(
-		/datum/skill/misc/reading = 6,
-		/datum/skill/craft/alchemy = 3,
-		/datum/skill/misc/medicine = 2,
-		/datum/skill/misc/riding = 2,
-		/datum/skill/combat/wrestling = 1,
-		/datum/skill/combat/unarmed = 1,
-		/datum/skill/misc/swimming = 1,
-		/datum/skill/misc/climbing = 1,
-		/datum/skill/magic/arcane = 2,
+		/datum/skill/misc/reading = SKILL_LEVEL_LEGENDARY,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/medicine = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/riding = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_NOVICE,
+		/datum/skill/magic/arcane = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/loudmouth/basic/pre_equip(mob/living/carbon/human/H)

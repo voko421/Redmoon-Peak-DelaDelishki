@@ -11,9 +11,9 @@
 		STATKEY_INT = -1
 	)
 	subclass_skills = list(
-		/datum/skill/misc/sneaking = 4,
-		/datum/skill/misc/stealing = 4,
-		/datum/skill/misc/climbing = 4,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/stealing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
 	)
 	extra_context = "This class starts with a bounty."
 

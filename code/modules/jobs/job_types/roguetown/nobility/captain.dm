@@ -86,20 +86,20 @@
 		STATKEY_LCK = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/swords = 4,
-		/datum/skill/combat/polearms = 4,
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/combat/maces = 4,
-		/datum/skill/combat/shields = 4,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/riding = 4,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/reading = 3,
-		/datum/skill/combat/crossbows = 2,
-		/datum/skill/combat/bows = 2,
-		/datum/skill/misc/swimming = 2,
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/polearms = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/maces = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/shields = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/riding = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/bows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/captain/infantry/pre_equip(mob/living/carbon/human/H)

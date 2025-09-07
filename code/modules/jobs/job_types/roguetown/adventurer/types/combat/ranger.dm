@@ -11,23 +11,23 @@
 		STATKEY_SPD = 2,
 	)
 	subclass_skills = list(
-		/datum/skill/combat/crossbows = 2,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/combat/bows = 2,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/combat/wrestling = 1,
-		/datum/skill/combat/unarmed = 1,
-		/datum/skill/misc/swimming = 3,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/craft/crafting = 2,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/sneaking = 2,
-		/datum/skill/craft/tanning = 2,
-		/datum/skill/labor/fishing = 2,
-		/datum/skill/labor/butchering = 2,
-		/datum/skill/craft/traps = 2,
-		/datum/skill/craft/cooking = 2,
-		/datum/skill/misc/tracking = 2,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/bows = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/tanning = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/fishing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/butchering = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/traps = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/tracking = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/adventurer/ranger/pre_equip(mob/living/carbon/human/H)
@@ -75,18 +75,18 @@
 		STATKEY_WIL = 1,
 	)
 	subclass_skills = list(
-		/datum/skill/combat/swords = 2,
-		/datum/skill/combat/crossbows = 3,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/craft/traps = 3,
-		/datum/skill/misc/sneaking = 3,
-		/datum/skill/misc/tracking = 4,
-		/datum/skill/misc/lockpicking = 2,
+		/datum/skill/combat/swords = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/traps = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/tracking = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/lockpicking = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/adventurer/assassin/pre_equip(mob/living/carbon/human/H)
@@ -125,15 +125,15 @@
 		STATKEY_CON = 1,
 	)
 	subclass_skills = list(
-		/datum/skill/combat/maces = 2,
-		/datum/skill/misc/athletics = 2,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/misc/climbing = 2,
-		/datum/skill/misc/reading = 2,
-		/datum/skill/craft/traps = 4,
-		/datum/skill/craft/alchemy = 4,
-		/datum/skill/craft/crafting = 2,
+		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/traps = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/adventurer/bombadier/pre_equip(mob/living/carbon/human/H)
@@ -171,20 +171,20 @@
 		STATKEY_INT = 1,
 	)
 	subclass_skills = list(
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/combat/bows = 1, // Base skill, if not wanted, pick another weapon.
-		/datum/skill/combat/knives = 2,
-		/datum/skill/combat/axes = 3,
-		/datum/skill/combat/wrestling = 2, // On par with battlemaster.
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/misc/swimming = 3,
-		/datum/skill/misc/climbing = 3,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/sneaking = 2,
-		/datum/skill/craft/tanning = 1, // Still a ranger, nerfed. Want more? Go do it yourself, buddy.
-		/datum/skill/labor/butchering = 1,
-		/datum/skill/craft/cooking = 1, // Won't really equate to much.
-		/datum/skill/misc/tracking = 3,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/bows = SKILL_LEVEL_NOVICE, // Base skill, if not wanted, pick another weapon.
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/axes = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE, // On par with battlemaster.
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/tanning = SKILL_LEVEL_NOVICE, // Still a ranger, nerfed. Want more? Go do it yourself, buddy.
+		/datum/skill/labor/butchering = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE, // Won't really equate to much.
+		/datum/skill/misc/tracking = SKILL_LEVEL_JOURNEYMAN,
 	)
 	extra_context = "Selecting Light Armor grants +1 SPD. Selecting Medium Armor grants +1 STR along with the corresponding traits."
 

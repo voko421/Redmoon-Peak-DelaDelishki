@@ -13,10 +13,10 @@
 		STATKEY_SPD = -1
 	)
 	subclass_skills = list(
-		/datum/skill/magic/arcane = 1,
-		/datum/skill/misc/reading = 4,
-		/datum/skill/craft/alchemy = 1,
-		/datum/skill/craft/crafting = 2,
+		/datum/skill/magic/arcane = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
 	)
 
 /datum/outfit/job/roguetown/vagabond/mage/pre_equip(mob/living/carbon/human/H)

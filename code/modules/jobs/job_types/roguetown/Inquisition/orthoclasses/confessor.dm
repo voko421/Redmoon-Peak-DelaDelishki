@@ -20,17 +20,17 @@
 		STATKEY_STR = -1//weazel
 	)
 	subclass_skills = list(
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/athletics = 4, // Quick
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/medicine = 3, // Stitch up your prey
-		/datum/skill/misc/sneaking = 5,
-		/datum/skill/misc/stealing = 5,
-		/datum/skill/misc/lockpicking = 5,
-		/datum/skill/misc/tracking = 4,
-		/datum/skill/combat/crossbows = 4,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT, // Quick
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/medicine = SKILL_LEVEL_JOURNEYMAN, // Stitch up your prey
+		/datum/skill/misc/sneaking = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/stealing = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/lockpicking = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/tracking = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_EXPERT,
 	)
 /datum/outfit/job/roguetown/confessor
 	job_bitflag = BITFLAG_CHURCH

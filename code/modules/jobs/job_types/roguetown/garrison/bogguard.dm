@@ -61,25 +61,25 @@
 		STATKEY_WIL = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/bows = 4,
-		/datum/skill/combat/slings = 4, 
-		/datum/skill/combat/crossbows = 3,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/combat/axes = 2,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/sneaking = 4,
-		/datum/skill/misc/swimming = 4,
-		/datum/skill/misc/medicine = 1,
-		/datum/skill/craft/tanning = 2,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/tracking = 4,
-		/datum/skill/craft/crafting = 2,
-		/datum/skill/misc/riding = 2,
-		/datum/skill/labor/butchering = 1,
-		/datum/skill/craft/cooking = 1, // This should let them fry meat on fires.
+		/datum/skill/combat/bows = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/slings = SKILL_LEVEL_EXPERT, 
+		/datum/skill/combat/crossbows = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/axes = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/swimming = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/tanning = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/tracking = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/riding = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/butchering = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE, // This should let them fry meat on fires.
 	)
 
 /datum/outfit/job/roguetown/bogguardsman/ranger/pre_equip(mob/living/carbon/human/H)
@@ -134,27 +134,27 @@
 		STATKEY_PER = 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/axes = 4,
-		/datum/skill/combat/polearms = 3,
-		/datum/skill/combat/shields = 2,
-		/datum/skill/combat/slings = 2,
-		/datum/skill/combat/bows = 1,
-		/datum/skill/combat/crossbows = 1,
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/sneaking = 3,
-		/datum/skill/misc/swimming = 4,
-		/datum/skill/misc/medicine = 1,
-		/datum/skill/craft/tanning = 2,
-		/datum/skill/misc/reading = 1,
-		/datum/skill/misc/tracking = 4,
-		/datum/skill/craft/crafting = 2,
-		/datum/skill/misc/riding = 2,
-		/datum/skill/labor/butchering = 1,
-		/datum/skill/craft/cooking = 1, // This should let them fry meat on fires.
+		/datum/skill/combat/axes = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/polearms = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/shields = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/slings = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/bows = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_NOVICE,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/tanning = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/tracking = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/riding = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/labor/butchering = SKILL_LEVEL_NOVICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE, // This should let them fry meat on fires.
 	)
 
 /datum/outfit/job/roguetown/bogguardsman/forester/pre_equip(mob/living/carbon/human/H)

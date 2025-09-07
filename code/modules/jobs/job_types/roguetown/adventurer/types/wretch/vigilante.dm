@@ -9,16 +9,16 @@
 	maximum_possible_slots = 1 // There can only be one. 
 	extra_context = "This class is best experienced without preparation."
 	subclass_skills = list(
-		/datum/skill/misc/swimming = 4, //To make a clean getaway from the constables
-		/datum/skill/misc/athletics = 4, // RUN BOY RUN
-		/datum/skill/combat/wrestling = 4, // To escape grapplers, fuck you
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/reading = 2,
-		/datum/skill/craft/crafting = 2,
-		/datum/skill/misc/sewing = 2, //To make your own costumes.
-		/datum/skill/misc/medicine = 2, //You WILL be getting neckstabbed A LOT. 
-		/datum/skill/misc/tracking = 4, //SNIFF OUT JUSTICE.
+		/datum/skill/misc/swimming = SKILL_LEVEL_EXPERT, //To make a clean getaway from the constables
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT, // RUN BOY RUN
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT, // To escape grapplers, fuck you
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/sewing = SKILL_LEVEL_APPRENTICE, //To make your own costumes.
+		/datum/skill/misc/medicine = SKILL_LEVEL_APPRENTICE, //You WILL be getting neckstabbed A LOT. 
+		/datum/skill/misc/tracking = SKILL_LEVEL_EXPERT, //SNIFF OUT JUSTICE.
 	)
 
 /datum/outfit/job/roguetown/wretch/vigilante/pre_equip(mob/living/carbon/human/H)

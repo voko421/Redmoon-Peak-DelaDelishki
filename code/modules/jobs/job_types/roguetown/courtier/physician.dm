@@ -56,15 +56,15 @@
 		STATKEY_CON = -1,
 	)
 	subclass_skills = list(
-		/datum/skill/misc/reading = 5,
-		/datum/skill/combat/polearms = 3, //same tier as other yeomen
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/craft/alchemy = 5,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/craft/crafting = 2,
-		/datum/skill/misc/sewing = 3,
-		/datum/skill/misc/medicine = 6,
+		/datum/skill/misc/reading = SKILL_LEVEL_MASTER,
+		/datum/skill/combat/polearms = SKILL_LEVEL_JOURNEYMAN, //same tier as other yeomen
+		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/alchemy = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/sewing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/medicine = SKILL_LEVEL_LEGENDARY,
 	)
 
 /datum/outfit/job/roguetown/physician

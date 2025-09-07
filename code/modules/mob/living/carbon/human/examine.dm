@@ -95,6 +95,14 @@
 			else
 				. = list(span_info("ø ------------ ø\nThis is the <EM>[used_name]</EM>, the [race_name]."))
 
+		if(HAS_TRAIT(user, TRAIT_DNR) && src != user)
+			if(HAS_TRAIT(src, TRAIT_CABAL))
+				. += span_danger("Their soul [user.stat == DEAD ? "is" : "will be"] Hers. This is it for them.")
+			else if(HAS_TRAIT(src, TRAIT_SOUL_EXAMINE))
+				. += span_danger("They extrude a pale aura. Necra [user.stat == DEAD ? "does not" : "will not"] have them.")
+			else if(user.stat == DEAD)
+				. += span_danger("This was their only chance at lyfe.")
+
 		if(HAS_TRAIT(src, TRAIT_WITCH))
 			if(HAS_TRAIT(user, TRAIT_NOBLE) || HAS_TRAIT(user, TRAIT_INQUISITION) || HAS_TRAIT(user, TRAIT_WITCH))
 				. += span_warning("A witch! Their presence brings an unsettling aura.")

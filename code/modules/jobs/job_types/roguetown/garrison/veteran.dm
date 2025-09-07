@@ -63,6 +63,24 @@
 		STATKEY_CON = 1,
 		STATKEY_PER = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 5,
+		/datum/skill/combat/maces = 5,
+		/datum/skill/combat/axes = 4,
+		/datum/skill/combat/shields = 4,
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/combat/unarmed = 4,
+		/datum/skill/combat/polearms = 4,
+		/datum/skill/combat/bows = 4,
+		/datum/skill/combat/crossbows = 3,
+		/datum/skill/combat/whipsflails = 3,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/misc/athletics = 2,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/medicine = 3,
+	)
 
 // Normal veteran start, from the olden days.
 
@@ -82,22 +100,6 @@
 		/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-	H.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
@@ -120,6 +122,24 @@
 		STATKEY_STR = 1,
 		STATKEY_PER = 1,
 		STATKEY_WIL = 1
+	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 4,
+		/datum/skill/combat/maces = 4,
+		/datum/skill/combat/axes = 3,
+		/datum/skill/combat/shields = 4, // this is a kinda scary skill to give them, surely it won't go wrong though.
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/combat/unarmed = 4,
+		/datum/skill/combat/polearms = 5,
+		/datum/skill/combat/bows = 4,
+		/datum/skill/combat/crossbows = 4,
+		/datum/skill/combat/whipsflails = 2,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/misc/athletics = 3, // two handed weapons require a LOT of stamina.
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/medicine = 2,
 	)
 
 // No hero, just a normal guy who happened to survive war.
@@ -146,22 +166,6 @@
 		/obj/item/rope/chain = 1,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 4, TRUE) // this is a kinda scary skill to give them, surely it won't go wrong though.
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE) // two handed weapons require a LOT of stamina.
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)
 		H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
@@ -186,6 +190,25 @@
 		STATKEY_INT = 1,
 		STATKEY_SPD = -1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 4,
+		/datum/skill/combat/maces = 3,
+		/datum/skill/combat/axes = 4,
+		/datum/skill/combat/shields = 4,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/polearms = 4,
+		/datum/skill/combat/bows = 3,
+		/datum/skill/combat/crossbows = 4,
+		/datum/skill/combat/whipsflails = 4,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/misc/athletics = 2,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/medicine = 3,
+		/datum/skill/misc/riding = 4,
+	)
 
 // You get a SAIGA. Saigas are pretty good, you lose out on your legendary weapon skills and you suck more on foot though.
 
@@ -206,23 +229,6 @@
 		/obj/item/rogueweapon/scabbard/sheath = 1,
 		/obj/item/storage/keyring/guardcastle = 1
 		)
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
@@ -267,6 +273,24 @@
 		STATKEY_INT = 1,
 		STATKEY_SPD = -1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 4,
+		/datum/skill/combat/maces = 4,
+		/datum/skill/combat/axes = 4,
+		/datum/skill/combat/shields = 4,
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/polearms = 4,
+		/datum/skill/combat/bows = 3,
+		/datum/skill/combat/crossbows = 3,
+		/datum/skill/combat/whipsflails = 3,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/misc/athletics = 2,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/medicine = 3,
+	)
 
 // Normal veteran start, from the olden days
 
@@ -288,22 +312,6 @@
 		/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/combat/axes, 1, TRUE)
@@ -343,6 +351,27 @@
 		STATKEY_SPD = 1,// You get -2 speed from being old.
 		STATKEY_STR = -1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 4,
+		/datum/skill/combat/maces = 3,
+		/datum/skill/combat/axes = 4,
+		/datum/skill/combat/shields = 3,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/polearms = 3,
+		/datum/skill/combat/bows = 4, // I very rarely see ranged weapons outside of PVE. Maybe this'll fix that?
+		/datum/skill/combat/crossbows = 4,
+		/datum/skill/combat/whipsflails = 3,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/sneaking = 4,
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/medicine = 3,
+		/datum/skill/misc/tracking = 4,
+		/datum/skill/misc/stealing = 2,
+	)
 
 // Originally was meant to be a horse archer. I decided that was a bad idea.
 // Former Bogmaster maybe? I feel like that'd be cooler than just an archer guy. 
@@ -366,25 +395,6 @@
 		/obj/item/storage/keyring/guardcastle = 1,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 4, TRUE) // I very rarely see ranged weapons outside of PVE. Maybe this'll fix that?
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 2, TRUE)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
 		H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
@@ -409,6 +419,28 @@
 		STATKEY_SPD = 1,
 		STATKEY_STR = -2
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 3,
+		/datum/skill/combat/maces = 3,
+		/datum/skill/combat/axes = 3,
+		/datum/skill/combat/shields = 3,
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/polearms = 2,
+		/datum/skill/combat/bows = 3,
+		/datum/skill/combat/crossbows = 4,
+		/datum/skill/combat/whipsflails = 4,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/misc/sneaking = 4,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/reading = 4,
+		/datum/skill/misc/medicine = 3,
+		/datum/skill/misc/lockpicking = 4,
+		/datum/skill/misc/tracking = 2,
+		/datum/skill/misc/stealing = 4,
+	)
 
 // The sneaker. Not really typical, but hey, wildcard. Wanna-be Spymaster. I guess that just makes them a normal spy, or, once one.
 
@@ -432,26 +464,6 @@
 		/obj/item/reagent_containers/glass/bottle/rogue/poison = 1,
 		/obj/item/lockpickring/mundane,
 		)
-	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE) ///Having Master Knives is extremely negligible for a singular role that isn't even meant to be combative.
 		H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)

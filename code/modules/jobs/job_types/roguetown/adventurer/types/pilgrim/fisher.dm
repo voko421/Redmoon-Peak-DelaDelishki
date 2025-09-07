@@ -12,30 +12,32 @@
 		STATKEY_FOR = 2,
 		STATKEY_SPD = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 1,
+		/datum/skill/combat/axes = 1,
+		/datum/skill/combat/maces = 1,
+		/datum/skill/combat/crossbows = 1,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/combat/bows = 1,
+		/datum/skill/combat/wrestling = 2, //Wrestling down those nasty carp.
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/combat/polearms = 1,
+		/datum/skill/misc/swimming = 4,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/sewing = 1,
+		/datum/skill/labor/butchering = 3,
+		/datum/skill/craft/traps = 1,
+		/datum/skill/misc/medicine = 2,
+		/datum/skill/misc/sneaking = 2,
+		/datum/skill/craft/cooking = 2,
+		/datum/skill/craft/carpentry = 1,
+	)
 
 /datum/outfit/job/roguetown/adventurer/fisher/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE) //Wrestling down those nasty carp.
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/butchering, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/traps, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/labor/fishing, 5, TRUE)
 	else

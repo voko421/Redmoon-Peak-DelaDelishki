@@ -14,6 +14,25 @@
 		STATKEY_LCK = 2,
 		STATKEY_WIL = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/axes = 3,
+		/datum/skill/misc/athletics = 4, // Tough. Well fed. The strongest of the strong.
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/knives = 1,
+		/datum/skill/combat/polearms = 3,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/craft/traps = 2,
+		/datum/skill/craft/engineering = 1,
+		/datum/skill/craft/carpentry = 1,
+		/datum/skill/craft/masonry = 3,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/labor/mining = 4,
+		/datum/skill/craft/smelting = 4,
+		/datum/skill/misc/reading = 1,
+	)
 
 /datum/outfit/job/roguetown/adventurer/miner/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -40,20 +59,3 @@
 		armor = /obj/item/clothing/suit/roguetown/armor/workervest
 		pants = /obj/item/clothing/under/roguetown/trou
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
-	H.adjust_skillrank(/datum/skill/combat/axes, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE) // Tough. Well fed. The strongest of the strong.
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/traps, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/engineering, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/masonry, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/mining, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/smelting, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)

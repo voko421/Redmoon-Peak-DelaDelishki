@@ -8,6 +8,18 @@
 	cmode_music = 'sound/music/combat_steppe.ogg'
 	horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled
 	extra_context = "This subclass has 4 loadouts with various stats, skills & equipment."
+	subclass_skills = list(
+	//Universal skills
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/riding = 3,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/craft/crafting = 1,
+		/datum/skill/craft/tanning = 2,
+		/datum/skill/labor/butchering = 1,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/misc/sewing = 1,
+		/datum/skill/craft/cooking = 1,
+	)
 
 /datum/outfit/job/roguetown/mercenary/steppesman/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -25,17 +37,6 @@
 		/obj/item/rogueweapon/whip/nagaika,
 		/obj/item/rogueweapon/scabbard/sheath
 		)
-
-	//Universal skills
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/tanning, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/butchering, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 
 	// CLASS ARCHETYPES
 	H.adjust_blindness(-3)

@@ -14,42 +14,43 @@
 		STATKEY_PER = 1,
 		STATKEY_LCK = 1,	
 	)
+	subclass_skills = list(
+		/datum/skill/labor/farming = 2,
+		/datum/skill/combat/axes = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/combat/wrestling = 1,
+
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/stealing = 2,
+		/datum/skill/misc/music = 2,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/misc/medicine = 2,
+		/datum/skill/misc/sewing = 2,
+		/datum/skill/misc/ceramics = 2,
+		/datum/skill/misc/tracking = 2,
+		/datum/skill/misc/lockpicking = 2,
+		/datum/skill/misc/sneaking = 2,
+		/datum/skill/misc/riding = 2,
+
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/craft/carpentry = 2,
+		/datum/skill/craft/masonry = 2,
+		/datum/skill/craft/engineering = 2,
+		/datum/skill/craft/traps = 2,
+		/datum/skill/craft/alchemy = 2,
+		/datum/skill/craft/tanning = 2,
+		/datum/skill/craft/cooking = 2,
+
+		/datum/skill/labor/lumberjacking = 2,
+		/datum/skill/labor/fishing = 2,
+		/datum/skill/labor/butchering = 2,
+	)
 
 /datum/outfit/job/roguetown/homesteader/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank_up_to(/datum/skill/combat/axes, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, 1, TRUE)
-
-	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/stealing, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/music, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/medicine, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/sewing, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/ceramics, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/tracking, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/lockpicking, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/sneaking, 2, TRUE)
-	H.adjust_skillrank_down_to(/datum/skill/misc/riding, 2, TRUE)
-
-	H.adjust_skillrank_up_to(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/craft/carpentry, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/craft/masonry, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/craft/engineering, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/craft/traps, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/craft/alchemy, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/craft/tanning, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/craft/cooking, 2, TRUE)
-
-	H.adjust_skillrank_up_to(/datum/skill/labor/lumberjacking, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/labor/fishing, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/labor/butchering, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/farming, 2, TRUE)
-
 	head = pick(/obj/item/clothing/head/roguetown/hatfur,
 	/obj/item/clothing/head/roguetown/hatblu,
 	/obj/item/clothing/head/roguetown/nightman,

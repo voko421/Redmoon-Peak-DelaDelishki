@@ -85,6 +85,22 @@
 		STATKEY_PER = 1,
 		STATKEY_LCK = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 4,
+		/datum/skill/combat/polearms = 4,
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/combat/maces = 4,
+		/datum/skill/combat/shields = 4,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/riding = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/combat/crossbows = 2,
+		/datum/skill/combat/bows = 2,
+		/datum/skill/misc/swimming = 2,
+	)
 
 /datum/outfit/job/roguetown/captain/infantry/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -95,20 +111,6 @@
 		/obj/item/rogueweapon/scabbard/sheath = 1,
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 1,
 		)
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/order/movemovemove)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/order/takeaim)

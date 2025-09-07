@@ -13,24 +13,26 @@
 		STATKEY_CON = 2,//Cheeese diet
 		STATKEY_WIL = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 1,
+		/datum/skill/combat/maces = 1,
+		/datum/skill/combat/axes = 1,
+		/datum/skill/misc/athletics = 2,
+		/datum/skill/combat/bows = 1,
+		/datum/skill/combat/wrestling = 1,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/craft/crafting = 1,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/misc/sewing = 1,
+		/datum/skill/labor/butchering = 2,
+		/datum/skill/craft/cooking = 4,
+		/datum/skill/labor/farming = 2,
+		/datum/skill/misc/medicine = 1,
+	)
 
 /datum/outfit/job/roguetown/adventurer/cheesemaker/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/butchering, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/farming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
 	mouth = /obj/item/rogueweapon/huntingknife
 	belt = /obj/item/storage/belt/rogue/leather
 	pants = /obj/item/clothing/under/roguetown/tights/random

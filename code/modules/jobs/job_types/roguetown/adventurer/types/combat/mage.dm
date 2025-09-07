@@ -11,6 +11,17 @@
 		STATKEY_PER = 2,
 		STATKEY_SPD = 1,
 	)
+	subclass_skills = list(
+		/datum/skill/combat/polearms = 2,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/misc/athletics = 1,
+		/datum/skill/combat/wrestling = 1,
+		/datum/skill/combat/unarmed = 1,
+		/datum/skill/misc/reading = 4,
+		/datum/skill/craft/alchemy = 2,
+		/datum/skill/magic/arcane = 3,
+		/datum/skill/misc/swimming = 1,
+	)
 
 /datum/outfit/job/roguetown/adventurer/mage/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -35,15 +46,6 @@
 		/obj/item/recipe_book/magic = 1,
 		/obj/item/chalk = 1
 		)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/arcane, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
 	H.dna.species.soundpack_m = new /datum/voicepack/male/wizard()
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
@@ -66,6 +68,17 @@
 		STATKEY_CON = 1,
 		STATKEY_WIL = 1,
 	)
+	subclass_skills = list(
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/combat/swords = 3,
+		/datum/skill/combat/shields = 1,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/athletics = 2,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/magic/arcane = 2,
+		/datum/skill/misc/swimming = 1,
+	)
 
 /datum/outfit/job/roguetown/adventurer/spellblade/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -87,15 +100,6 @@
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/enchant_weapon)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/conjure_weapon)
 		H.mind.adjust_spellpoints(12)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
 	H.cmode_music = 'sound/music/cmode/adventurer/combat_outlander3.ogg'
 	var/weapons = list("Longsword", "Falchion & Wooden Shield", "Messer & Wooden Shield", "Hwando") // Much smaller selection with only three swords. You will probably want to upgrade.
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
@@ -134,6 +138,17 @@
 		STATKEY_SPD = 2,
 		STATKEY_WIL = 1,
 	)
+	subclass_skills = list(
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/music = 4,
+		/datum/skill/combat/swords = 3,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/athletics = 2,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/magic/arcane = 2,
+		/datum/skill/misc/swimming = 1,
+	)
 /datum/outfit/job/roguetown/adventurer/spellsinger/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, span_warning("You belong to a school of bards renowned for their study of both the arcane and the arts."))
@@ -157,15 +172,6 @@
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/enchant_weapon)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/conjure_weapon)
 		H.mind.adjust_spellpoints(12)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/music, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
 	H.cmode_music = 'sound/music/cmode/adventurer/combat_outlander3.ogg'
 	switch(H.patron?.type)
 		if(/datum/patron/inhumen/zizo)

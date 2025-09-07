@@ -44,6 +44,21 @@
 		STATKEY_CON = 1,
 		STATKEY_INT = -1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/combat/unarmed = 4,
+		/datum/skill/combat/whipsflails = 3,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/misc/sneaking = 4,
+		/datum/skill/misc/stealing = 4,
+		/datum/skill/misc/lockpicking = 2,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/misc/medicine = 2,
+		/datum/skill/misc/riding = 2,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/combat/knives = 3,
+	)
 
 /datum/outfit/job/roguetown/niteman/basic/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -64,19 +79,6 @@
 		/obj/item/reagent_containers/powder/spice = 1,
 		)
 	H.grant_language(/datum/language/thievescant)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
 
 	if(should_wear_masc_clothes(H))
 		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor/nightman

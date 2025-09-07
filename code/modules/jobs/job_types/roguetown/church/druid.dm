@@ -50,6 +50,26 @@
 		STATKEY_SPD = 1,
 		STATKEY_PER = -1
 	)
+	subclass_skills = list(
+		/datum/skill/misc/sewing = 1,
+		/datum/skill/craft/tanning = 1,
+		/datum/skill/misc/medicine = 2,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/craft/alchemy = 3,
+		/datum/skill/magic/holy = 4,
+		/datum/skill/craft/crafting = 3,
+		/datum/skill/labor/farming = 3,
+		/datum/skill/craft/carpentry = 1,
+		/datum/skill/misc/athletics = 2,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/magic/druidic = 3, //Shapeshifting.
+		/datum/skill/misc/tracking = 4, //Druids know the forest and when it has been disturbed
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/combat/whipsflails = 1,
+		/datum/skill/combat/polearms = 1, //To help them defend themselves with parrying
+	)
 
 /datum/outfit/job/roguetown/druid
 	name = "Druid"
@@ -68,24 +88,6 @@
 	wrists = /obj/item/clothing/neck/roguetown/psicross/dendor
 	shirt = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
 	backpack_contents = list(/obj/item/ritechalk)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/tanning, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/holy, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/farming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/druidic, 3, TRUE) //Shapeshifting.
-	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE) //Druids know the forest and when it has been disturbed
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE) //To help them defend themselves with parrying
 	H.grant_language(/datum/language/beast)
 	H.put_in_hands(new /obj/item/rogueweapon/woodstaff(H), TRUE) //To encourage them to wander the forests and to help defend themselves
 	if(H.age == AGE_OLD)

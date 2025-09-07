@@ -12,6 +12,22 @@
 		STATKEY_SPD = 3,
 		STATKEY_LCK = 3
 	)
+	subclass_skills = list(
+		/datum/skill/combat/knives = 3,
+		/datum/skill/combat/swords = 4,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/craft/crafting = 3,
+		/datum/skill/craft/carpentry = 3,
+		/datum/skill/labor/lumberjacking = 1,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/misc/climbing = 3, //needed for getting into hideout
+		/datum/skill/misc/sneaking = 1,
+		/datum/skill/misc/medicine = 6,
+		/datum/skill/misc/sewing = 3,
+		/datum/skill/craft/alchemy = 3,
+		/datum/skill/misc/swimming = 2,
+	)
 
 /datum/outfit/job/roguetown/bandit/sawbones/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -33,20 +49,6 @@
 					/obj/item/flashlight/flare/torch = 1,
 					/obj/item/bedroll = 1,
 					)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/lumberjacking, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE) //needed for getting into hideout
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	if(H.age == AGE_OLD)
 		H.change_stat(STATKEY_SPD, -1)
 		H.change_stat(STATKEY_INT, 1)

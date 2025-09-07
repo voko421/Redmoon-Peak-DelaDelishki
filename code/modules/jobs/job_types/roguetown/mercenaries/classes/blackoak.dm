@@ -20,24 +20,26 @@
 		STATKEY_PER = 1,
 		STATKEY_INT = -1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/polearms = 4,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/misc/sneaking = 3,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/misc/tracking = 2,
+		/datum/skill/craft/carpentry = 2,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/craft/tanning = 2,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/labor/farming = 2,
+	)
 
 /datum/outfit/job/roguetown/mercenary/blackoak/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/tanning, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/farming, 2, TRUE)
 	head = /obj/item/clothing/head/roguetown/helmet/heavy/elven_helm
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/elven_plate
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
@@ -70,24 +72,26 @@
 		STATKEY_PER = 2,
 		STATKEY_CON = -1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/bows = 5,
+		/datum/skill/combat/knives = 4,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/tracking = 4,
+		/datum/skill/misc/sneaking = 4,
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/craft/carpentry = 2,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/craft/tanning = 2,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/labor/farming = 2,
+	)
 
 /datum/outfit/job/roguetown/mercenary/blackoak_ranger/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/combat/bows, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/tanning, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/farming, 2, TRUE)
 	head = /obj/item/clothing/head/roguetown/helmet/sallet/elven
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/trophyfur
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/full

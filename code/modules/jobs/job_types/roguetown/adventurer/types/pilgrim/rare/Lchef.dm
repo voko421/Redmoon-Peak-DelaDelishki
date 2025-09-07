@@ -16,17 +16,19 @@
 		STATKEY_INT = 3,
 		STATKEY_CON = 2,
 	)
+	subclass_skills = list(
+		/datum/skill/combat/unarmed = 1,
+		/datum/skill/combat/knives = 4,
+		/datum/skill/misc/sewing = 1,
+		/datum/skill/misc/climbing = 1,
+		/datum/skill/labor/farming = 3,
+		/datum/skill/misc/reading = 4,
+		/datum/skill/craft/crafting = 4,
+		/datum/skill/craft/cooking = 6,
+	)
 
 /datum/outfit/job/roguetown/adventurer/masterchef/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/farming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 6, TRUE)
 	belt = /obj/item/storage/belt/rogue/leather
 	pants = /obj/item/clothing/under/roguetown/tights/random
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/random

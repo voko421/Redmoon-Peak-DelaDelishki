@@ -13,28 +13,36 @@
 	The 451st crusade is sure to be the last."
 
 	category_tags = list(CTAG_DISABLED)
+	subclass_stats = list(
+		STATKEY_STR = 2,
+		STATKEY_CON = 2,
+		STATKEY_WIL = 2,
+		STATKEY_PER = 1,
+		STATKEY_INT = 1
+	)
+	subclass_skills = list(
+		/datum/skill/combat/crossbows = 2,
+		/datum/skill/combat/wrestling = 1,
+		/datum/skill/combat/unarmed = 1,
+		/datum/skill/combat/swords = 5,
+		/datum/skill/combat/shields = 4,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/riding = 5,
+		/datum/skill/misc/athletics = 5,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/combat/polearms = 2,
+		/datum/skill/combat/axes = 2,
+		/datum/skill/combat/maces = 4,
+		/datum/skill/magic/holy = 2,
+	)
 
 /datum/outfit/job/roguetown/adventurer/crusader
 	name = "Crusader"
 
 /datum/outfit/job/roguetown/adventurer/crusader/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/holy, 2, TRUE)
-
 	belt = /obj/item/storage/belt/rogue/leather/plaquegold
 	pants = /obj/item/clothing/under/roguetown/chainlegs
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
@@ -52,12 +60,6 @@
 						/obj/item/storage/belt/rogue/pouch/coins/rich = 1,
 						/obj/item/flashlight/flare/torch = 1,
 						)
-
-	H.change_stat(STATKEY_WIL, 2)
-	H.change_stat(STATKEY_CON, 2)
-	H.change_stat(STATKEY_INT, 1)
-	H.change_stat(STATKEY_PER, 1)
-	H.change_stat(STATKEY_STR, 2)
 
 	for(var/I in SSrole_class_handler.sorted_class_categories[CTAG_ALLCLASS])
 		var/datum/advclass/A = I

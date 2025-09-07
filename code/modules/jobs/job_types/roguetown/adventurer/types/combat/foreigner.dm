@@ -11,6 +11,17 @@
 		STATKEY_CON = 2,
 		STATKEY_WIL = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 4,
+		/datum/skill/combat/shields = 3,		//to encourage use of the scabbard as a shield	
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/sewing = 2, 			//this shouldn't be enough to allow them to craft shit, rather just repair their prone-to-break armor
+	)
 
 /datum/outfit/job/roguetown/adventurer/foreigner/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -26,15 +37,6 @@
 	beltl = /obj/item/rogueweapon/sword/sabre/mulyeog
 	belt = /obj/item/storage/belt/rogue/leather/black
 	backr = /obj/item/storage/backpack/rogue/satchel
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)		//to encourage use of the scabbard as a shield	
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE) 			//this shouldn't be enough to allow them to craft shit, rather just repair their prone-to-break armor
 	backpack_contents = list(
 		/obj/item/recipe_book/survival = 1,
 		/obj/item/flashlight/flare/torch/lantern,
@@ -52,6 +54,16 @@
 		STATKEY_CON = 2,
 		STATKEY_WIL = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/polearms = 4,		
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/sewing = 2,
+	)
 
 /datum/outfit/job/roguetown/adventurer/custodian/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -65,14 +77,6 @@
 	belt = /obj/item/storage/belt/rogue/leather/
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	backl = /obj/item/storage/backpack/rogue/satchel
-	H.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)		
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
 	backpack_contents = list(/obj/item/recipe_book/survival = 1)
 	H.set_blindness(0)
 	var/weapons = list("Naginata","Quarterstaff")
@@ -97,6 +101,17 @@
 		STATKEY_PER = 1,
 		STATKEY_WIL = 1,
 	)
+	subclass_skills = list(
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/misc/tracking = 4,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/sneaking = 4,
+		/datum/skill/misc/lockpicking = 2,
+	)
 
 /datum/outfit/job/roguetown/adventurer/yoruku/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -115,15 +130,6 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/eastshirt1
 	cloak = /obj/item/clothing/cloak/thief_cloak/yoruku
 	shoes = /obj/item/clothing/shoes/roguetown/boots
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 2, TRUE)
 	H.set_blindness(0)
 	var/weapons = list("Tanto","Kodachi")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons

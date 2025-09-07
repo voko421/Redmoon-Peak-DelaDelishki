@@ -14,6 +14,23 @@
 		STATKEY_PER = 1,
 		STATKEY_SPD = -1
 	)
+	subclass_skills = list(
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/misc/sneaking = 2,
+		/datum/skill/combat/maces = 2,
+		/datum/skill/combat/crossbows = 2,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/combat/swords = 2,
+		/datum/skill/combat/shields = 3,
+		/datum/skill/combat/polearms = 3,
+		/datum/skill/combat/whipsflails = 2,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/riding = 2,
+	)
 
 /datum/outfit/job/roguetown/mercenary/routier/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -24,21 +41,6 @@
 	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
 	H.set_blindness(0)
 	to_chat(H, span_warning("You are a Knight of Otava, well experienced in the use of your chosen arms."))
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)   
 	switch(classchoice)
 		if("Swordsman")
 			H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)

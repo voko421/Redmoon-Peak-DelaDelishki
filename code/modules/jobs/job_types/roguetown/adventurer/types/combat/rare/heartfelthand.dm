@@ -9,6 +9,24 @@
 	pickprob = 100
 	traits_applied = list(TRAIT_HEAVYARMOR, TRAIT_SEEPRICES)
 	category_tags = list(CTAG_DISABLED)
+	subclass_stats = list(
+		STATKEY_PER = 3,
+		STATKEY_INT = 3,
+		STATKEY_STR = 2
+	)
+	subclass_skills = list(
+		/datum/skill/combat/maces = 2,
+		/datum/skill/misc/medicine = 4,
+		/datum/skill/craft/cooking = 4,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/swords = 3,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/reading = 4,
+		/datum/skill/misc/riding = 2,
+	)
 
 /datum/outfit/job/roguetown/adventurer/heartfelthand/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -28,21 +46,3 @@
 						)
 	mask = /obj/item/clothing/mask/rogue/spectacles/golden
 	id = /obj/item/scomstone
-	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
-	H.change_stat(STATKEY_STR, 2)
-	H.change_stat(STATKEY_PER, 3)
-	H.change_stat(STATKEY_INT, 3)
-
-	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_SEEPRICES, TRAIT_GENERIC)
-

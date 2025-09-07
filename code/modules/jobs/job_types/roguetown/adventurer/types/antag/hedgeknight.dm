@@ -9,12 +9,27 @@
 	cmode_music = 'sound/music/cmode/antag/combat_thewall.ogg' // big chungus gets the wall too
 	traits_applied = list(TRAIT_MEDIUMARMOR, TRAIT_HEAVYARMOR, TRAIT_NOBLE)
 	subclass_stats = list(
+		STATKEY_CON = 3, //dark souls 3 dual greatshield moment
 		STATKEY_STR = 2,
 		STATKEY_WIL = 2,
-		STATKEY_CON = 3, //dark souls 3 dual greatshield moment
+		STATKEY_LCK = 2,
 		STATKEY_INT = 1,
 		STATKEY_SPD = 1,
-		STATKEY_LCK = 2,
+	)
+	subclass_skills = list(
+		/datum/skill/combat/polearms = 3,
+		/datum/skill/combat/swords = 5,
+		/datum/skill/combat/shields = 3,
+		/datum/skill/combat/maces = 3,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/misc/riding = 4,
+		/datum/skill/craft/cooking = 1,
+		/datum/skill/labor/butchering = 1,
 	)
 
 /datum/outfit/job/roguetown/bandit/hedgeknight/pre_equip(mob/living/carbon/human/H)
@@ -39,19 +54,6 @@
 					/obj/item/flashlight/flare/torch = 1,
 					/obj/item/rogueweapon/scabbard/sheath = 1
 					)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/butchering, 1, TRUE)
 
 	if(!istype(H.patron, /datum/patron/inhumen/matthios))
 		var/inputty = input(H, "Would you like to change your patron to Matthios?", "The Transactor calls", "No") as anything in list("Yes", "No")

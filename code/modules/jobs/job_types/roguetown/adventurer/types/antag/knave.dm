@@ -15,32 +15,34 @@
 		STATKEY_WIL = 1,
 		STATKEY_CON = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/polearms = 3,
+		/datum/skill/combat/axes = 3,
+		/datum/skill/combat/maces = 3,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/swords = 4,
+		/datum/skill/combat/whipsflails = 3,
+		/datum/skill/combat/knives = 4,
+		/datum/skill/combat/bows = 3,
+		/datum/skill/combat/crossbows = 3,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/craft/carpentry = 1,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/misc/sewing = 1,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/misc/sneaking = 4,
+		/datum/skill/misc/stealing = 4,
+		/datum/skill/misc/lockpicking = 4,
+		/datum/skill/craft/traps = 3,
+		/datum/skill/misc/tracking = 3,
+		/datum/skill/misc/swimming = 3,
+	)
 
 /datum/outfit/job/roguetown/bandit/knave/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/traps, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
 	belt = /obj/item/storage/belt/rogue/leather/knifebelt/black/steel
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/random

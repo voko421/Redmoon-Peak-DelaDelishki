@@ -45,6 +45,20 @@
 		STATKEY_SPD = 2,
 		STATKEY_STR = -2
 	)
+	subclass_skills = list(
+		/datum/skill/misc/reading = 6,
+		/datum/skill/misc/riding = 2,
+		/datum/skill/combat/crossbows = 2,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/misc/climbing = 1,
+		/datum/skill/misc/athletics = 1,
+		/datum/skill/combat/swords = 1,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/misc/medicine = 2,
+		/datum/skill/craft/cooking = 1,
+	)
 
 /datum/outfit/job/roguetown/steward
 	job_bitflag = BITFLAG_ROYALTY
@@ -63,19 +77,6 @@
 	beltr = /obj/item/storage/keyring/steward
 	backr = /obj/item/storage/backpack/rogue/satchel
 	id = /obj/item/scomstone
-
-	H.adjust_skillrank(/datum/skill/misc/reading, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/appraise/secular)
 	H.verbs |= /mob/living/carbon/human/proc/adjust_taxes

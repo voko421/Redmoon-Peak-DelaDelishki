@@ -47,15 +47,6 @@
 		/obj/item/signal_horn = 1,
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 1,
 		)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
 	H.verbs |= /mob/proc/haltyell
 	H.verbs |= list(/mob/living/carbon/human/proc/request_outlaw, /mob/living/carbon/human/proc/request_law, /mob/living/carbon/human/proc/request_law_removal, /mob/living/carbon/human/proc/request_purge)
 
@@ -82,6 +73,18 @@
 		STATKEY_SPD = 1,
 		STATKEY_STR = 1,
 	)
+	subclass_skills = list(
+		/datum/skill/combat/maces = 4,
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/misc/tracking = 4,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/combat/crossbows = 2,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/misc/riding = 2,
+	)
 
 /datum/outfit/job/roguetown/marshal/classic/pre_equip(mob/living/carbon/human/H)
 	armor = /obj/item/clothing/suit/roguetown/armor/brigandine/sheriff
@@ -91,7 +94,6 @@
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	beltl = /obj/item/storage/keyring/sheriff
 	head = /obj/item/clothing/head/roguetown/chaperon/noble/bailiff
-	H.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE)
 
 /datum/advclass/marshal/kcommander
 	name = "Knight Commander"
@@ -108,6 +110,18 @@
 		STATKEY_SPD = 1,
 		STATKEY_STR = 1,
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 4,
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/misc/tracking = 4,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/combat/crossbows = 2,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/misc/riding = 2,
+	)
 
 /datum/outfit/job/roguetown/marshal/kcommander/pre_equip(mob/living/carbon/human/H)
 	armor = /obj/item/clothing/suit/roguetown/armor/brigandine/sheriff/coat
@@ -115,7 +129,6 @@
 	belt = /obj/item/storage/belt/rogue/leather
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	beltl = /obj/item/storage/keyring/sheriff
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
 
 /mob/living/carbon/human/proc/request_law()
 	set name = "Request Law"

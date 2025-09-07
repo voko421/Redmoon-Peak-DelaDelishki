@@ -11,17 +11,19 @@
 		STATKEY_SPD = 1,
 		STATKEY_LCK = 1
 	)
+	subclass_skills = list(
+		/datum/skill/misc/music = 4,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/misc/sneaking = 2,
+		/datum/skill/misc/stealing = 2,
+		/datum/skill/misc/athletics = 1,
+		/datum/skill/craft/crafting = 1,
+		/datum/skill/combat/unarmed = 1,
+	)
 
 /datum/outfit/job/roguetown/adventurer/minstrel/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/misc/music, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	cloak = /obj/item/clothing/cloak/half
 	shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/white

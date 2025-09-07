@@ -17,27 +17,28 @@
 		STATKEY_WIL = 2,
 		STATKEY_STR = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/axes = 3,
+		/datum/skill/combat/maces = 2,
+		/datum/skill/labor/lumberjacking = 3,
+		/datum/skill/labor/mining = 3,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/craft/crafting = 5,
+		/datum/skill/craft/carpentry = 4,
+		/datum/skill/craft/masonry = 6,
+		/datum/skill/craft/engineering = 5,
+		/datum/skill/misc/lockpicking = 3,
+		/datum/skill/craft/smelting = 6,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/medicine = 2,
+		/datum/skill/craft/smelting = 6,
+		/datum/skill/misc/ceramics = 4,
+	)
 /datum/outfit/job/roguetown/adventurer/grandmastermason/pre_equip(mob/living/carbon/human/H)
 	..()
-
-	H.adjust_skillrank(/datum/skill/combat/axes, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/lumberjacking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/mining, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/masonry, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/engineering, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/smelting, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/smelting, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/ceramics, 4, TRUE)
 	head = /obj/item/clothing/head/roguetown/hatblu
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
 	cloak = /obj/item/clothing/cloak/apron/waist/bar

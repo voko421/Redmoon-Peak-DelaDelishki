@@ -12,6 +12,12 @@
 		STATKEY_WIL = -2,
 		STATKEY_SPD = -1
 	)
+	subclass_skills = list(
+		/datum/skill/magic/arcane = 1,
+		/datum/skill/misc/reading = 4,
+		/datum/skill/craft/alchemy = 1,
+		/datum/skill/craft/crafting = 2,
+	)
 
 /datum/outfit/job/roguetown/vagabond/mage/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -30,11 +36,6 @@
 		gloves = /obj/item/clothing/gloves/roguetown/fingerless
 	
 	r_hand = /obj/item/rogueweapon/woodstaff
-
-	H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 		H.mind.adjust_spellpoints(9)

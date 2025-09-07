@@ -11,6 +11,17 @@
 		STATKEY_SPD = 2,
 		STATKEY_LCK = 1
 	)
+	subclass_skills = list(
+		/datum/skill/misc/reading = 4,
+		/datum/skill/craft/alchemy = 4,
+		/datum/skill/misc/medicine = 2,
+		/datum/skill/labor/farming = 1,
+		/datum/skill/craft/cooking = 1,
+		/datum/skill/misc/sewing = 1,
+		/datum/skill/magic/arcane = 1,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/craft/carpentry = 2,
+	)
 
 /datum/outfit/job/roguetown/adventurer/witch/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -44,15 +55,6 @@
 		armor = /obj/item/clothing/suit/roguetown/armor/corset
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/lowcut
 		pants = /obj/item/clothing/under/roguetown/skirt/red
-	H.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/farming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 2, TRUE)
 	if(H.age == AGE_OLD)
 		H.change_stat(STATKEY_SPD, -1)
 		H.change_stat(STATKEY_INT, 1)

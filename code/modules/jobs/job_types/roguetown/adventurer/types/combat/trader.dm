@@ -12,20 +12,22 @@
 		STATKEY_STR = 1,
 		STATKEY_WIL = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/wrestling = 1,
+		/datum/skill/combat/unarmed = 1,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/craft/blacksmithing = 3,
+		/datum/skill/craft/weaponsmithing = 2,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/labor/mining = 2,
+		/datum/skill/craft/smelting = 2,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/misc/climbing = 1,
+	)
 
 /datum/outfit/job/roguetown/adventurer/trader/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, span_warning("You make your coin peddling exotic jewelry, gems, and shiny things."))
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/blacksmithing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/weaponsmithing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/mining, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/smelting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
 	mask = /obj/item/clothing/mask/rogue/lordmask
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	pants = /obj/item/clothing/under/roguetown/tights/black
@@ -58,20 +60,22 @@
 		STATKEY_STR = 1,
 		STATKEY_CON = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/wrestling = 1,
+		/datum/skill/combat/axes = 1,
+		/datum/skill/combat/unarmed = 1,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/craft/carpentry = 3,
+		/datum/skill/craft/masonry = 3,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/labor/lumberjacking = 2,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/misc/climbing = 2,
+	)
 
 /datum/outfit/job/roguetown/adventurer/doomsayer/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, span_warning("THE WORLD IS ENDING!!! At least, that's what you want your clients to believe. You'll offer them a safe place in the new world, of course - built by yours truly."))
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/masonry, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/lumberjacking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 	head = /obj/item/clothing/head/roguetown/roguehood/black
 	mask = /obj/item/clothing/mask/rogue/skullmask
 	shoes = /obj/item/clothing/shoes/roguetown/boots
@@ -103,18 +107,20 @@
 		STATKEY_SPD = 1,
 		STATKEY_WIL = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/knives = 1,
+		/datum/skill/combat/wrestling = 1,
+		/datum/skill/combat/unarmed = 1,
+		/datum/skill/misc/reading = 6,
+		/datum/skill/craft/crafting = 3,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/misc/climbing = 1,
+		/datum/skill/craft/alchemy = 4,
+	)
 
 /datum/outfit/job/roguetown/adventurer/scholar/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, span_warning("You are a scholar traveling the world in order to write a book about your ventures. You trade in stories and tales of your travels."))
-	H.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 4, TRUE)
 	head = /obj/item/clothing/head/roguetown/roguehood/black
 	mask = /obj/item/clothing/mask/rogue/spectacles/golden
 	shoes = /obj/item/clothing/shoes/roguetown/boots
@@ -150,6 +156,15 @@
 		STATKEY_WIL = 1,
 		STATKEY_INT = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/knives = 2,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/misc/sneaking = 3,
+		/datum/skill/misc/stealing = 4,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/music = 4,
+		/datum/skill/misc/lockpicking = 2,
+	)
 
 /datum/outfit/job/roguetown/adventurer/harlequin/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -171,13 +186,6 @@
 		/obj/item/recipe_book/survival = 1,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/music, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 2, TRUE)
 	var/weapons = list("Harp","Lute","Accordion","Guitar","Hurdy-Gurdy","Viola","Vocal Talisman")
 	var/weapon_choice = input("Choose your instrument.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
@@ -206,21 +214,23 @@
 		STATKEY_PER = 2,
 		STATKEY_SPD = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/wrestling = 1,
+		/datum/skill/combat/unarmed = 1,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/misc/stealing = 2,
+		/datum/skill/misc/sneaking = 2,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/misc/medicine = 3,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/misc/climbing = 1,
+		/datum/skill/craft/alchemy = 3,
+	)
 
 /datum/outfit/job/roguetown/adventurer/peddler/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, span_warning("You make your coin peddling in spices and performing back-alley 'medical' procedures. Hope your patient didn't need that kidney."))
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 3, TRUE)
 	head = /obj/item/clothing/head/roguetown/roguehood
 	mask = /obj/item/clothing/mask/rogue/facemask/steel
 	shoes = /obj/item/clothing/shoes/roguetown/boots
@@ -252,20 +262,22 @@
 		STATKEY_CON = 1,
 		STATKEY_STR = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/combat/maces = 1,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/craft/cooking = 3,
+		/datum/skill/craft/engineering = 1, // CBT to make a copper distillery
+		/datum/skill/labor/farming = 3,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/misc/climbing = 1,
+	)
 
 /datum/outfit/job/roguetown/adventurer/brewer/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, span_warning("You make your coin peddling imported alcohols from all over the world, though you're no stranger to the craft, and have experience brewing your own ale in a pinch. You have the equipments and know how on how to make your own distiller, too."))
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/engineering, 1, TRUE) // CBT to make a copper distillery
-	H.adjust_skillrank(/datum/skill/labor/farming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
 	mask = /obj/item/clothing/mask/rogue/ragmask/black
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	neck = /obj/item/storage/belt/rogue/pouch/coins/mid
@@ -301,21 +313,23 @@
 		STATKEY_CON = 1,
 		STATKEY_SPD = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/combat/maces = 1,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/craft/cooking = 4,
+		/datum/skill/labor/farming = 2,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/misc/climbing = 2,
+	)
 
 /datum/outfit/job/roguetown/adventurer/cuisiner/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, span_warning("Whether a disciple of a culinary school, a storied royal chef, or a mercenary cook for hire, your trade is plied at the counter, \
 	the cutting board, and the hearth."))
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/farming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 	if(H.age == AGE_MIDDLEAGED)
 		H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)

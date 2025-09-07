@@ -11,21 +11,23 @@
 		STATKEY_WIL = 1,
 		STATKEY_CON = 2,
 	)
+	subclass_skills = list(
+		/datum/skill/combat/polearms = 2,
+		/datum/skill/combat/maces = 2,
+		/datum/skill/combat/axes = 2,
+		/datum/skill/combat/swords = 2,
+		/datum/skill/combat/shields = 1,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/reading = 1,
+	)
 
 /datum/outfit/job/roguetown/adventurer/sfighter/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, span_warning("You are a seasoned weapon specialist, clad in maille, with years of experience in warfare and battle under your belt."))
-	H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 	H.dna.species.soundpack_m = new /datum/voicepack/male/warrior()
 	H.set_blindness(0)
 	H.cmode_music = 'sound/music/cmode/adventurer/combat_outlander2.ogg'
@@ -110,19 +112,21 @@
 		STATKEY_WIL = 1,
 		STATKEY_SPD = 1,
 	)
+	subclass_skills = list(
+		/datum/skill/combat/knives = 2,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/combat/swords = 2,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/combat/shields = 2,
+	)
 
 /datum/outfit/job/roguetown/adventurer/duelist/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, span_warning("You are an esteemed swordsman who foregoes armor in exchange for a more nimble fighting style."))
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)
 	H.set_blindness(0)
 	H.cmode_music = 'sound/music/cmode/adventurer/combat_outlander2.ogg'
 	var/weapons = list("Rapier","Dagger")
@@ -168,20 +172,22 @@
 		STATKEY_CON = 1,
 		STATKEY_INT = 1,
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 3,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/misc/tracking = 4,
+		/datum/skill/craft/alchemy = 2,
+	)
 
 /datum/outfit/job/roguetown/adventurer/mhunter/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	to_chat(H, span_warning("You specialize in hunting down monsters and the undead, carrying two blades - one of silver, one of steel."))
-	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 2, TRUE)
 	H.cmode_music = 'sound/music/cmode/adventurer/combat_outlander2.ogg'
 	var/steel = list("Parrying Dagger","Sword","Dagger")
 	var/steel_choice = input("Choose your steel.", "PURGE THE LIVING") as anything in steel
@@ -242,19 +248,21 @@
 		STATKEY_WIL = 1,
 		STATKEY_INT = -2,
 	)
+	subclass_skills = list(
+		/datum/skill/combat/maces = 2,
+		/datum/skill/combat/axes = 2,
+		/datum/skill/combat/swords = 2,
+		/datum/skill/combat/polearms = 2,
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/climbing = 3,
+	)
 
 /datum/outfit/job/roguetown/adventurer/barbarian/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	to_chat(H, span_warning("You are a brutal warrior who foregoes armor in order to showcase your raw strength. You specialize in unarmed combat and wrestling."))
-	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 	H.dna.species.soundpack_m = new /datum/voicepack/male/warrior()
 	H.cmode_music = 'sound/music/cmode/antag/combat_darkstar.ogg'
 	H.set_blindness(0)
@@ -317,17 +325,19 @@
 		STATKEY_STR = -2,
 		STATKEY_INT = -2,
 	)
+	subclass_skills = list(
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/whipsflails = 4,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/misc/reading = 2,
+	)
 
 /datum/outfit/job/roguetown/adventurer/flagellant/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	to_chat(H, span_warning("You are a pacifistic warrior who embraces suffering, believing pain is the path to enlightenment."))
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
 	H.set_blindness(0)
 	H.cmode_music = 'sound/music/cmode/adventurer/combat_outlander2.ogg'
 
@@ -352,6 +362,20 @@
 		STATKEY_STR = 2,
 		STATKEY_WIL = 2,
 		STATKEY_CON = 1,
+	)
+	subclass_skills = list(
+		/datum/skill/combat/polearms = 2,
+		/datum/skill/combat/maces = 2,
+		/datum/skill/combat/axes = 2,
+		/datum/skill/combat/swords = 2,
+		/datum/skill/combat/shields = 2,
+		/datum/skill/combat/whipsflails = 2,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/misc/reading = 1,
 	)
 
 /datum/outfit/job/roguetown/adventurer/ironclad/pre_equip(mob/living/carbon/human/H, visualsOnly)
@@ -399,18 +423,6 @@
 		/obj/item/storage/belt/rogue/pouch/coins/poor = 1,
 		/obj/item/recipe_book/survival = 1,
 		)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 	H.dna.species.soundpack_m = new /datum/voicepack/male/warrior()
 	H.set_blindness(0)
 	var/weapons = list("Executioner's Sword","Warhammer + Shield","Flail + Shield","Lucerne","Greataxe")

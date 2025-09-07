@@ -68,22 +68,24 @@
 		STATKEY_WIL = 2,
 		STATKEY_SPD = 1,
 	)
+	subclass_skills = list(
+		/datum/skill/misc/lockpicking = 5,
+		/datum/skill/misc/tracking = 5,
+		/datum/skill/misc/sneaking = 5,
+		/datum/skill/combat/knives = 4,
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/combat/crossbows = 3,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/misc/medicine = 3,
+		/datum/skill/misc/sewing = 2,
+	)
 
 /datum/outfit/job/roguetown/puritan/inspector/pre_equip(mob/living/carbon/human/H)
 	..()
 	has_loadout = TRUE
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
 	H.verbs |= /mob/living/carbon/human/proc/faith_test
 	H.verbs |= /mob/living/carbon/human/proc/torture_victim
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
@@ -159,17 +161,19 @@
 		STATKEY_STR = 2,
 		STATKEY_PER = 2
 	)
+	subclass_skills = list(
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/combat/unarmed = 4,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/misc/medicine = 3,
+		/datum/skill/misc/tracking = 5,
+	)
 
 /datum/outfit/job/roguetown/puritan/ordinator/pre_equip(mob/living/carbon/human/H)
 	..()
 	has_loadout = TRUE
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 5, TRUE)
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
 	C.grant_miracles(H, cleric_tier = CLERIC_T1, passive_gain = CLERIC_REGEN_WEAK, devotion_limit = CLERIC_REQ_1) //Capped to T1 miracles.
 	H.verbs |= /mob/living/carbon/human/proc/faith_test

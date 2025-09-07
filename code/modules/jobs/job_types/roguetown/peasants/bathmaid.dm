@@ -54,6 +54,23 @@
 		STATKEY_WIL = 2,
 		STATKEY_STR = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/misc/sneaking = 3,
+		/datum/skill/misc/stealing = 3,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/music = 2,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/misc/riding = 2,
+		/datum/skill/misc/medicine = 2,
+		/datum/skill/combat/whipsflails = 1,
+		/datum/skill/combat/knives = 1,
+		/datum/skill/craft/cooking = 2,
+		/datum/skill/craft/crafting = 3,
+		/datum/skill/misc/lockpicking = 1,
+	)
 
 /datum/outfit/job/roguetown/nightmaiden/attendant/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -74,21 +91,6 @@
 	else
 		belt = /obj/item/storage/belt/rogue/leather
 		pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/shorts
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/music, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 1, TRUE)
 
 /datum/advclass/nightmaiden/concubine
 	name = "Concubine"
@@ -100,6 +102,20 @@
 		STATKEY_PER = 3,
 		STATKEY_WIL = 2,
 		STATKEY_STR = 1
+	)
+	subclass_skills = list(
+		/datum/skill/combat/whipsflails = 2,
+		/datum/skill/misc/sneaking = 3,
+		/datum/skill/misc/stealing = 2,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/athletics = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/misc/music = 4,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/misc/riding = 3,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/misc/sewing = 3,
 	)
 
 /datum/outfit/job/roguetown/nightmaiden/concubine/pre_equip(mob/living/carbon/human/H)
@@ -125,18 +141,6 @@
 		pants = /obj/item/clothing/under/roguetown/trou/leathertights
 		belt = /obj/item/storage/belt/rogue/leather/black
 		shoes = /obj/item/clothing/shoes/roguetown/sandals
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/music, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
 
 	var/weapons = list("Harp","Lute","Accordion","Guitar","Hurdy-Gurdy","Viola","Vocal Talisman","Flute")
 	var/weapon_choice = input("Choose your instrument.", "TAKE UP ARMS") as anything in weapons
@@ -169,6 +173,20 @@
 		STATKEY_SPD = 3,
 		STATKEY_WIL = 2,
 		STATKEY_PER = 1
+	)
+	subclass_skills = list(
+		/datum/skill/combat/knives = 2,
+		/datum/skill/misc/sneaking = 3,
+		/datum/skill/misc/lockpicking = 3,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/athletics = 2,
+		/datum/skill/misc/music = 4,
+		/datum/skill/misc/reading = 4,
+		/datum/skill/misc/sewing = 2,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/misc/riding = 3,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/craft/cooking = 1,
 	)
 
 /datum/outfit/job/roguetown/nightmaiden/courtesan/pre_equip(mob/living/carbon/human/H)
@@ -209,18 +227,6 @@
 		pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/otavan
 		belt = /obj/item/storage/belt/rogue/leather/black
 		shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced/short
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/music, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 
 	var/weapons = list("Harp","Lute","Accordion","Guitar","Hurdy-Gurdy","Viola","Vocal Talisman","Flute")
 	var/weapon_choice = input("Choose your instrument.", "TAKE UP ARMS") as anything in weapons

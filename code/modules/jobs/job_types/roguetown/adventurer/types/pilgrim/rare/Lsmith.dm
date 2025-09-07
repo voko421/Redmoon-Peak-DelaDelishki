@@ -11,6 +11,7 @@
 	maximum_possible_slots = 1
 	pickprob = 5
 	category_tags = list(CTAG_TOWNER)
+	traits_applied = list(TRAIT_TRAINED_SMITH)
 	subclass_stats = list(
 		STATKEY_LCK = 4,
 		STATKEY_STR = 2,
@@ -18,6 +19,19 @@
 		STATKEY_WIL = 2,
 		STATKEY_CON = 1,
 		STATKEY_PER = 1
+	)
+	subclass_skills = list(
+		/datum/skill/combat/maces = 2,
+		/datum/skill/combat/axes = 2,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/craft/masonry = 2,
+		/datum/skill/craft/carpentry = 2,
+		/datum/skill/craft/blacksmithing = 6,
+		/datum/skill/craft/armorsmithing = 6,
+		/datum/skill/craft/weaponsmithing = 6,
+		/datum/skill/craft/smelting = 6,
+		/datum/skill/misc/reading = 1,
 	)
 
 /datum/outfit/job/roguetown/adventurer/masterblacksmith/pre_equip(mob/living/carbon/human/H)
@@ -42,18 +56,6 @@
 						/obj/item/flashlight/flare/torch = 1,
 						/obj/item/rogueweapon/scabbard/sheath = 1
 						)
-	ADD_TRAIT(H, TRAIT_TRAINED_SMITH, TRAIT_GENERIC)
-	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/masonry, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/blacksmithing, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/armorsmithing, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/weaponsmithing, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/smelting, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/craft/blacksmithing, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/craft/armorsmithing, 1, TRUE)

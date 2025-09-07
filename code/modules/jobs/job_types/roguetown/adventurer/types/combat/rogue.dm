@@ -13,6 +13,21 @@
 		STATKEY_WIL = 1,
 		STATKEY_SPD = 3,
 	)
+	subclass_skills = list(
+		/datum/skill/misc/tracking = 3,
+		/datum/skill/combat/swords = 2,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/combat/whipsflails = 2,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/climbing = 5,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/misc/sneaking = 3,
+		/datum/skill/misc/stealing = 3,
+		/datum/skill/misc/lockpicking = 3,
+		/datum/skill/craft/traps = 3,
+	)
 
 /datum/outfit/job/roguetown/adventurer/rogue/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -35,19 +50,6 @@
 		/obj/item/recipe_book/survival = 1,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/traps, 3, TRUE)
 	H.cmode_music = 'sound/music/cmode/adventurer/combat_outlander3.ogg'
 	var/weapons = list("Sabre","Whip")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
@@ -72,6 +74,22 @@
 		STATKEY_PER = 1,
 		STATKEY_WIL = 1,
 		STATKEY_SPD = 3,
+	)
+	subclass_skills = list(
+		/datum/skill/misc/tracking = 4,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/combat/bows = 2,
+		/datum/skill/combat/maces = 3,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/climbing = 6,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/sneaking = 4,
+		/datum/skill/misc/stealing = 4,
+		/datum/skill/misc/lockpicking = 4,
+		/datum/skill/craft/traps = 4,
 	)
 
 /datum/outfit/job/roguetown/adventurer/thief/pre_equip(mob/living/carbon/human/H)
@@ -98,20 +116,6 @@
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
 	H.cmode_music = 'sound/music/cmode/antag/combat_cutpurse.ogg'
-	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/traps, 4, TRUE)
 	H.grant_language(/datum/language/thievescant)
 
 /datum/advclass/rogue/bard
@@ -124,23 +128,25 @@
 		STATKEY_SPD = 2,
 		STATKEY_WIL = 1,
 	)
+	subclass_skills = list(
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/combat/swords = 2,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/misc/reading = 4,
+		/datum/skill/misc/sneaking = 3,
+		/datum/skill/misc/stealing = 3,
+		/datum/skill/misc/music = 5,
+		/datum/skill/misc/lockpicking = 3,
+		/datum/skill/craft/traps = 2,
+	)
 
 /datum/outfit/job/roguetown/adventurer/bard/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, span_warning("You make your fortune in brothels, flop houses, and taverns – gaining fame for your songs and legends. If there is any truth to them, that is."))
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/music, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/traps, 2, TRUE)
 	head = /obj/item/clothing/head/roguetown/bardhat
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
@@ -190,6 +196,20 @@
 		STATKEY_STR = 1,
 		STATKEY_WIL = 1,
 	)
+	subclass_skills = list(
+		/datum/skill/combat/knives = 2,
+		/datum/skill/combat/swords = 3,
+		/datum/skill/misc/swimming = 4,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/sneaking = 3,
+		/datum/skill/misc/stealing = 3,
+		/datum/skill/misc/music = 2,
+		/datum/skill/misc/lockpicking = 2,
+	)
 
 /datum/outfit/job/roguetown/adventurer/swashbuckler/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -214,15 +234,3 @@
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
 	H.cmode_music = 'sound/music/cmode/adventurer/combat_outlander3.ogg'
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/music, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 2, TRUE)

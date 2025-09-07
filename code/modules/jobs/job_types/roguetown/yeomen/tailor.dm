@@ -41,18 +41,20 @@
 		STATKEY_SPD = 1,
 		STATKEY_STR = -1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/knives = 3,
+		/datum/skill/misc/sewing = 5,
+		/datum/skill/craft/crafting = 3,
+		/datum/skill/craft/tanning = 4,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/misc/medicine = 2,
+		/datum/skill/labor/farming = 1,
+		/datum/skill/craft/cooking = 1,
+	)
 
 /datum/outfit/job/roguetown/tailor/basic/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_blindness(-3)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/tanning, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/farming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	pants = /obj/item/clothing/under/roguetown/tights
 	belt = /obj/item/storage/belt/rogue/leather/cloth

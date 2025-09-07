@@ -47,6 +47,18 @@
 		STATKEY_PER = 2,
 		STATKEY_SPD = 1,
 	)
+	subclass_skills = list(
+		/datum/skill/combat/knives = 2,
+		/datum/skill/combat/polearms = 2, //enhances survival chances. 
+		/datum/skill/combat/wrestling = 1,
+		/datum/skill/craft/crafting = 1,
+		/datum/skill/misc/athletics = 1,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/misc/medicine = 5,
+		/datum/skill/misc/sewing = 2,
+		/datum/skill/craft/alchemy = 3,
+	)
+
 /datum/outfit/job/roguetown/apothecary/basic/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_blindness(-3)
@@ -67,14 +79,5 @@
 		/obj/item/recipe_book/alchemy = 1,
 		/obj/item/clothing/mask/rogue/physician = 1,
 	)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE) //enhances survival chances. 
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 3, TRUE)
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)

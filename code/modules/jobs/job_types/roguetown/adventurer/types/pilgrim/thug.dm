@@ -14,24 +14,26 @@
 		STATKEY_INT = -1,
 		STATKEY_SPD = -1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/axes = 2,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/combat/maces = 3,
+		/datum/skill/craft/cooking = 1,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/climbing = 3, 
+		/datum/skill/labor/mining = 1,
+		/datum/skill/labor/lumberjacking = 2,
+		/datum/skill/labor/farming = 1,
+		/datum/skill/labor/fishing = 2,
+		/datum/skill/misc/sneaking = 2,
+		/datum/skill/misc/stealing = 3,
+	)
 
 /datum/outfit/job/roguetown/adventurer/thug/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE) 
-	H.adjust_skillrank(/datum/skill/labor/mining, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/lumberjacking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/farming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/fishing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
 	var/weapons = list("Knuckles","Cudgel")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)

@@ -17,6 +17,23 @@
 		STATKEY_LCK = 2,//We have a total of +12 in stats. 
 		STATKEY_CON = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/maces = 3,
+		/datum/skill/combat/shields = 3,
+		/datum/skill/magic/holy = 4,
+		/datum/skill/combat/whipsflails = 4, // Whips/Flails so we can use the Gilded Flail if we want.
+		/datum/skill/combat/polearms = 3, // Poles or maces if we're a wimp and don't want to engage with unarmed. Not ideal.
+		/datum/skill/combat/unarmed = 5,
+		/datum/skill/combat/wrestling = 5,  // Unarmed if we want to kick ass for the lord(you do, this is what you SHOULD DO!!)
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/craft/carpentry = 1,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/sewing = 1,
+		/datum/skill/misc/medicine = 3, // We can substitute for a sawbones, but aren't as good and dont have access to surgical tools
+		/datum/skill/misc/athletics = 5, //We are the True Mathlete
+		/datum/skill/misc/swimming = 2,
+	)
 	cmode_music = 'sound/music/Iconoclast.ogg'
 
 /datum/outfit/job/roguetown/bandit/iconoclast/pre_equip(mob/living/carbon/human/H)
@@ -24,21 +41,6 @@
 	if (!(istype(H.patron, /datum/patron/inhumen/matthios)))	//This is the only class that forces Matthios. Needed for miracles + limited slot.
 		to_chat(H, span_warning("Matthios embraces me.. I must uphold his creed. I am his light in the darkness."))
 		H.set_patron(/datum/patron/inhumen/matthios)
-	H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/holy, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE) // Whips/Flails so we can use the Gilded Flail if we want.
-	H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE) // Poles or maces if we're a wimp and don't want to engage with unarmed. Not ideal.
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 5, TRUE)  // Unarmed if we want to kick ass for the lord(you do, this is what you SHOULD DO!!)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE) // We can substitute for a sawbones, but aren't as good and dont have access to surgical tools
-	H.adjust_skillrank(/datum/skill/misc/athletics, 5, TRUE) //We are the True Mathlete
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	belt = /obj/item/storage/belt/rogue/leather
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 	r_hand = /obj/item/rogueweapon/woodstaff

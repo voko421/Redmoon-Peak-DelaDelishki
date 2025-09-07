@@ -15,6 +15,18 @@
 		STATKEY_PER = 1,
 		STATKEY_SPD = -1
 	)
+	subclass_skills = list(
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/misc/sneaking = 2,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/combat/swords = 4,
+		/datum/skill/combat/shields = 4,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/athletics = 3,
+	)
 
 /datum/outfit/job/roguetown/mercenary/seonjang/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -27,16 +39,6 @@
 		/obj/item/flashlight/flare/torch,
 		/obj/item/flashlight/flare/torch/lantern,
 		)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 	H.adjust_blindness(-3)
 
 	if(should_wear_masc_clothes(H))

@@ -14,28 +14,30 @@
 		STATKEY_CON = 1,
 		STATKEY_PER = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/axes = 3, // AXE MEN! GIVE ME SPLINTERS!
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/combat/polearms = 1,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/craft/carpentry = 1,
+		/datum/skill/craft/masonry = 1,
+		/datum/skill/craft/engineering = 1,
+		/datum/skill/misc/sewing = 1,
+		/datum/skill/labor/butchering = 1,
+		/datum/skill/labor/lumberjacking = 4,
+		/datum/skill/craft/traps = 1,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/craft/cooking = 1,
+		/datum/skill/misc/reading = 1,
+	)
 
 /datum/outfit/job/roguetown/adventurer/woodcutter/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/combat/axes, 3, TRUE) // AXE MEN! GIVE ME SPLINTERS!
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/masonry, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/engineering, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/butchering, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/lumberjacking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/traps, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 	belt = /obj/item/storage/belt/rogue/leather
 	head = /obj/item/clothing/head/roguetown/roguehood
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather

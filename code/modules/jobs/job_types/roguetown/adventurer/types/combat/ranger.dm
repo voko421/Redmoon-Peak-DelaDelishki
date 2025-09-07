@@ -10,6 +10,25 @@
 		STATKEY_PER = 3,
 		STATKEY_SPD = 2,
 	)
+	subclass_skills = list(
+		/datum/skill/combat/crossbows = 2,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/combat/bows = 2,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/combat/wrestling = 1,
+		/datum/skill/combat/unarmed = 1,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/sneaking = 2,
+		/datum/skill/craft/tanning = 2,
+		/datum/skill/labor/fishing = 2,
+		/datum/skill/labor/butchering = 2,
+		/datum/skill/craft/traps = 2,
+		/datum/skill/craft/cooking = 2,
+		/datum/skill/misc/tracking = 2,
+	)
 
 /datum/outfit/job/roguetown/adventurer/ranger/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -31,23 +50,6 @@
 		/obj/item/recipe_book/survival = 1,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/tanning, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/fishing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/butchering, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/traps, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 2, TRUE)
 	H.cmode_music = 'sound/music/cmode/adventurer/combat_outlander3.ogg'
 	var/weapons = list("Recurve Bow","Crossbow")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
@@ -72,6 +74,20 @@
 		STATKEY_SPD = 2,
 		STATKEY_WIL = 1,
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 2,
+		/datum/skill/combat/crossbows = 3,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/craft/traps = 3,
+		/datum/skill/misc/sneaking = 3,
+		/datum/skill/misc/tracking = 4,
+		/datum/skill/misc/lockpicking = 2,
+	)
 
 /datum/outfit/job/roguetown/adventurer/assassin/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -94,18 +110,6 @@
 		/obj/item/recipe_book/survival = 1,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/traps, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 2, TRUE)
 	H.cmode_music = 'sound/music/cmode/adventurer/combat_outlander.ogg'
 	H.grant_language(/datum/language/thievescant)
 	H.set_blindness(0)
@@ -119,6 +123,17 @@
 		STATKEY_STR = 2,
 		STATKEY_INT = 2,
 		STATKEY_CON = 1,
+	)
+	subclass_skills = list(
+		/datum/skill/combat/maces = 2,
+		/datum/skill/misc/athletics = 2,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/craft/traps = 4,
+		/datum/skill/craft/alchemy = 4,
+		/datum/skill/craft/crafting = 2,
 	)
 
 /datum/outfit/job/roguetown/adventurer/bombadier/pre_equip(mob/living/carbon/human/H)
@@ -142,15 +157,6 @@
 		/obj/item/recipe_book/survival = 1,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/traps, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
 	H.cmode_music = 'sound/music/cmode/adventurer/combat_outlander2.ogg'
 	H.set_blindness(0)
 
@@ -163,6 +169,22 @@
 		STATKEY_PER = 2,
 		STATKEY_WIL = 2,
 		STATKEY_INT = 1,
+	)
+	subclass_skills = list(
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/combat/bows = 1, // Base skill, if not wanted, pick another weapon.
+		/datum/skill/combat/knives = 2,
+		/datum/skill/combat/axes = 3,
+		/datum/skill/combat/wrestling = 2, // On par with battlemaster.
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/sneaking = 2,
+		/datum/skill/craft/tanning = 1, // Still a ranger, nerfed. Want more? Go do it yourself, buddy.
+		/datum/skill/labor/butchering = 1,
+		/datum/skill/craft/cooking = 1, // Won't really equate to much.
+		/datum/skill/misc/tracking = 3,
 	)
 	extra_context = "Selecting Light Armor grants +1 SPD. Selecting Medium Armor grants +1 STR along with the corresponding traits."
 
@@ -183,20 +205,6 @@
 		/obj/item/flashlight/flare/torch/lantern = 1,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE) // Base skill, if not wanted, pick another weapon.
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE) // On par with battlemaster.
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/tanning, 1, TRUE) // Still a ranger, nerfed. Want more? Go do it yourself, buddy.
-	H.adjust_skillrank(/datum/skill/labor/butchering, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE) // Won't really equate to much.
-	H.adjust_skillrank(/datum/skill/misc/tracking, 3, TRUE)
 	H.cmode_music = 'sound/music/cmode/adventurer/combat_outlander4.ogg'
 	var/weapons = list("Recurve Bow","Billhook","Sling","Crossbow")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons

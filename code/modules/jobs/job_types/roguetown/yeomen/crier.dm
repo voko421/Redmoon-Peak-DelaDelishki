@@ -45,6 +45,17 @@
 		STATKEY_INT = 3,
 		STATKEY_SPD = 1
 	)
+	subclass_skills = list(
+		/datum/skill/misc/reading = 6,
+		/datum/skill/craft/alchemy = 3,
+		/datum/skill/misc/medicine = 2,
+		/datum/skill/misc/riding = 2,
+		/datum/skill/combat/wrestling = 1,
+		/datum/skill/combat/unarmed = 1,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/misc/climbing = 1,
+		/datum/skill/magic/arcane = 2,
+	)
 
 /datum/outfit/job/roguetown/loudmouth/basic/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -65,16 +76,6 @@
 	backpack_contents = list(
 		/obj/item/recipe_book/alchemy
 	)
-
-	H.adjust_skillrank(/datum/skill/misc/reading, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
 	H.grant_language(/datum/language/elvish)
 	H.grant_language(/datum/language/dwarvish)
 	H.grant_language(/datum/language/celestial)

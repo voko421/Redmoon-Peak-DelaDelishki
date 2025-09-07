@@ -15,7 +15,30 @@
 		STATKEY_SPD = 1,
 		STATKEY_CON = 1,
 	)
-	
+	subclass_skills = list(
+		/datum/skill/combat/polearms = 3, // Jman Polearms, for better parrying without making them bandit level 
+		/datum/skill/combat/axes = 2, // They get apprentice in a wide spread of weapons for synergy with conjuration, especially if they take virtues
+		/datum/skill/combat/maces = 2,
+		/datum/skill/combat/swords = 2,
+		/datum/skill/combat/whipsflails = 2,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/combat/bows = 1,
+		/datum/skill/combat/wrestling = 1,
+		/datum/skill/combat/unarmed = 1,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/climbing = 3, //needs climbing to get into hideout
+		/datum/skill/misc/athletics = 2, // Standards for athletics is 3, give them 2
+		/datum/skill/combat/swords = 1,
+		/datum/skill/combat/knives = 1,
+		/datum/skill/craft/crafting = 1,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/misc/riding = 1,
+		/datum/skill/misc/reading = 4,
+		/datum/skill/craft/alchemy = 3,
+		/datum/skill/magic/arcane = 4,
+	)
 
 /datum/outfit/job/roguetown/bandit/roguemage/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -38,28 +61,6 @@
 	id = /obj/item/mattcoin
 
 	r_hand = /obj/item/rogueweapon/woodstaff/diamond
-	H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE) // Jman Polearms, for better parrying without making them bandit level 
-	H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE) // They get apprentice in a wide spread of weapons for synergy with conjuration, especially if they take virtues
-	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE) //needs climbing to get into hideout
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE) // Standards for athletics is 3, give them 2
-	H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/arcane, 4, TRUE)
 	if(H.age == AGE_OLD)
 		head = /obj/item/clothing/head/roguetown/wizhat/gen
 		armor = /obj/item/clothing/suit/roguetown/shirt/robe

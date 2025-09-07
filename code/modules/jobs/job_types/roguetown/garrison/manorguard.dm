@@ -72,25 +72,27 @@
 		STATKEY_CON = 1,
 		STATKEY_WIL = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/polearms = 4,
+		/datum/skill/combat/swords = 4,
+		/datum/skill/combat/maces = 4,
+		/datum/skill/combat/axes = 4,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/combat/whipsflails = 2,
+		/datum/skill/combat/slings = 1,
+		/datum/skill/combat/shields = 3,
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/sneaking = 2,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/riding = 1,
+		/datum/skill/misc/tracking = 1,
+	)
 
 /datum/outfit/job/roguetown/manorguard/footsman/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/slings, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 1, TRUE)
 
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
 	neck = /obj/item/clothing/neck/roguetown/gorget
@@ -171,25 +173,26 @@
 		STATKEY_PER = 2,
 		STATKEY_WIL = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 4,
+		/datum/skill/combat/knives = 4,
+		/datum/skill/combat/maces = 2, 		// Still have a cugel.
+		/datum/skill/combat/crossbows = 5,		//Only effects draw and reload time.
+		/datum/skill/combat/bows = 5,			//Only effects draw times.
+		/datum/skill/combat/slings = 5,
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/misc/sneaking = 3,
+		/datum/skill/misc/athletics = 4, // A little better; run fast, weak boy.
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/riding = 1,
+		/datum/skill/misc/tracking = 2,
+	)
 	extra_context = "Chooses between Light Armor (Dodge Expert) & Medium Armor."
 
 /datum/outfit/job/roguetown/manorguard/skirmisher/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE) 		// Still have a cugel.
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 5, TRUE)		//Only effects draw and reload time.
-	H.adjust_skillrank(/datum/skill/combat/bows, 5, TRUE)			//Only effects draw times.
-	H.adjust_skillrank(/datum/skill/combat/slings, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE) // A little better; run fast, weak boy.
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 2, TRUE)
-
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson			// Cant wear chainmail anymoooree
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/studded		//Helps against arrows; makes sense for a ranged-type role.
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
@@ -270,24 +273,26 @@
 		STATKEY_STR = 1,
 		STATKEY_INT = 1, // No strength to account for the nominally better weapons. We'll see.
 	)
+	subclass_skills = list(
+		/datum/skill/combat/polearms = 4,
+		/datum/skill/combat/swords = 4,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/combat/maces = 3, 		// Still have a cugel.
+		/datum/skill/combat/shields = 3,
+		/datum/skill/combat/whipsflails = 3,	//Best whip training out of MAAs, they're strong.
+		/datum/skill/combat/bows = 1,			// We discourage horse archers, though.
+		/datum/skill/combat/slings = 1,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/athletics = 3, 
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/riding = 4, 		// Like the other horselords.
+		/datum/skill/misc/tracking = 3,	//Best tracker. Might as well give it something to stick-out utility wise.
+	)
 
 /datum/outfit/job/roguetown/manorguard/cavalry/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE) 		// Still have a cugel.
-	H.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)	//Best whip training out of MAAs, they're strong.
-	H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)			// We discourage horse archers, though.
-	H.adjust_skillrank(/datum/skill/combat/slings, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE) 
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE) 		// Like the other horselords.
-	H.adjust_skillrank(/datum/skill/misc/tracking, 3, TRUE)	//Best tracker. Might as well give it something to stick-out utility wise.
 
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson		//Bit worse shirt protection than the archer -- as foot soldier.
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/scale			//Makes up for worse shirt protection with kinda better armor protection

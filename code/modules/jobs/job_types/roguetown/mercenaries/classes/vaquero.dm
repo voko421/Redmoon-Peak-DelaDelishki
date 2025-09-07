@@ -11,6 +11,24 @@
 		STATKEY_INT = 2,
 		STATKEY_WIL = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 4,
+		/datum/skill/combat/crossbows = 2,
+		/datum/skill/combat/bows = 2,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/misc/sneaking = 3,
+		/datum/skill/misc/stealing = 3,
+		/datum/skill/misc/riding = 4,
+		/datum/skill/misc/lockpicking = 3,
+		/datum/skill/misc/music = 4,
+	)
+
 /datum/advclass/mercenary/vaquero/equipme(mob/living/carbon/human/H)
 	if(should_wear_femme_clothes(H))
 		horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled
@@ -18,21 +36,6 @@
 
 /datum/outfit/job/roguetown/mercenary/vaquero/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/music, 4, TRUE)
 	head = /obj/item/clothing/head/roguetown/bardhat
 	mouth = /obj/item/alch/rosa
 	shoes = /obj/item/clothing/shoes/roguetown/boots

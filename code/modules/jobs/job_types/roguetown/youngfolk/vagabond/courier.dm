@@ -10,6 +10,11 @@
 		STATKEY_SPD = 2,
 		STATKEY_CON = -2,
 	)
+	subclass_skills = list(
+		/datum/skill/misc/riding = 4,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/craft/cooking = 1,
+	)
 
 /datum/outfit/job/roguetown/vagabond/courier/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -29,8 +34,3 @@
 	
 	if(prob(10))
 		r_hand = /obj/item/rogue/instrument/flute
-
-	if (H.mind)
-		H.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)

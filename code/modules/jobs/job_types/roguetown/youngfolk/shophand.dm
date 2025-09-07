@@ -47,6 +47,19 @@
 		STATKEY_INT = 1,
 		STATKEY_LCK = 1
 	)
+	subclass_skills = list(
+		//worse skills than a normal peasant, generally, with random bad combat skill
+		/datum/skill/misc/stealing = 4,
+		/datum/skill/misc/sneaking = 2,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/misc/athletics = 2,
+		/datum/skill/misc/lockpicking = 2,
+	)
 
 /datum/outfit/job/roguetown/shophand/basic/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -67,17 +80,6 @@
 		beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 		beltl = /obj/item/storage/keyring/merchant
 		backr = /obj/item/storage/backpack/rogue/satchel
-	//worse skills than a normal peasant, generally, with random bad combat skill
-	H.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 2, TRUE)
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/appraise/secular)
 	if(prob(33))

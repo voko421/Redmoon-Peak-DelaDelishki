@@ -15,6 +15,24 @@
 		STATKEY_LCK = 1,
 		STATKEY_SPD = -1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 1,
+		/datum/skill/combat/maces = 2,
+		/datum/skill/combat/axes = 2,
+		/datum/skill/combat/crossbows = 1,
+		/datum/skill/misc/athletics = 2,
+		/datum/skill/combat/bows = 1,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/unarmed = 3, // The strongest fists in the land.
+		/datum/skill/combat/knives = 1,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/craft/engineering = 2,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/craft/blacksmithing = 4,
+		/datum/skill/craft/armorsmithing = 4,
+		/datum/skill/craft/weaponsmithing = 4,
+		/datum/skill/craft/smelting = 4,
+	)
 
 /datum/outfit/job/roguetown/adventurer/blacksmith/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -42,19 +60,3 @@
 	else
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
 		shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE) // The strongest fists in the land.
-	H.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/engineering, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/blacksmithing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/armorsmithing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/weaponsmithing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/smelting, 4, TRUE)

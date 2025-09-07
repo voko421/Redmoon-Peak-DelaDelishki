@@ -14,6 +14,18 @@
 		STATKEY_PER = 1,
 		STATKEY_SPD = -1
 	)
+	subclass_skills = list(
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/misc/sneaking = 2,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/combat/swords = 4,
+		/datum/skill/combat/shields = 4,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/athletics = 3,
+	)
 	extra_context = "This subclass is race-limited from: Dwarves."
 
 /datum/outfit/job/roguetown/mercenary/rumaclan/pre_equip(mob/living/carbon/human/H)
@@ -33,16 +45,6 @@
 		/obj/item/roguekey/mercenary,
 		/obj/item/flashlight/flare/torch/lantern,
 		)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 	H.grant_language(/datum/language/kazengunese)
 	H.merctype = 9
 
@@ -56,6 +58,19 @@
 		STATKEY_WIL = 2,
 		STATKEY_STR = -1,
 		STATKEY_CON = -1
+	)
+	subclass_skills = list(
+		/datum/skill/combat/bows = 5,
+		/datum/skill/combat/knives = 4,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/tracking = 4,
+		/datum/skill/misc/sneaking = 4,
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/craft/carpentry = 2,
 	)
 
 /datum/outfit/job/roguetown/mercenary/rumaclan_sasu/pre_equip(mob/living/carbon/human/H)
@@ -79,16 +94,5 @@
 		/obj/item/rogueweapon/huntingknife/idagger,
 		/obj/item/rogueweapon/scabbard/sheath = 1,
 		)
-	H.adjust_skillrank(/datum/skill/combat/bows, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 2, TRUE)
 	H.grant_language(/datum/language/kazengunese)
 	H.merctype = 9

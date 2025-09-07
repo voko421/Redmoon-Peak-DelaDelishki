@@ -60,6 +60,27 @@
 		STATKEY_SPD = 2,
 		STATKEY_WIL = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/bows = 4,
+		/datum/skill/combat/slings = 4, 
+		/datum/skill/combat/crossbows = 3,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/combat/axes = 2,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/misc/sneaking = 4,
+		/datum/skill/misc/swimming = 4,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/craft/tanning = 2,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/tracking = 4,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/misc/riding = 2,
+		/datum/skill/labor/butchering = 1,
+		/datum/skill/craft/cooking = 1, // This should let them fry meat on fires.
+	)
 
 /datum/outfit/job/roguetown/bogguardsman/ranger/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -77,25 +98,6 @@
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 1,
 		/obj/item/signal_horn = 1
 		)
-	H.adjust_skillrank(/datum/skill/combat/bows, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/slings, 4, TRUE) 
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/tanning, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/butchering, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE) // This should let them fry meat on fires.
 	H.verbs |= /mob/proc/haltyell
 	H.set_blindness(0)
 
@@ -131,6 +133,29 @@
 		STATKEY_WIL = 1,
 		STATKEY_PER = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/axes = 4,
+		/datum/skill/combat/polearms = 3,
+		/datum/skill/combat/shields = 2,
+		/datum/skill/combat/slings = 2,
+		/datum/skill/combat/bows = 1,
+		/datum/skill/combat/crossbows = 1,
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/misc/sneaking = 3,
+		/datum/skill/misc/swimming = 4,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/craft/tanning = 2,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/tracking = 4,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/misc/riding = 2,
+		/datum/skill/labor/butchering = 1,
+		/datum/skill/craft/cooking = 1, // This should let them fry meat on fires.
+	)
 
 /datum/outfit/job/roguetown/bogguardsman/forester/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -148,27 +173,6 @@
 		/obj/item/rogueweapon/scabbard/sheath = 1,
 		/obj/item/signal_horn = 1
 		)
-	H.adjust_skillrank(/datum/skill/combat/axes, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/slings, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/tanning, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/butchering, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE) // This should let them fry meat on fires.
 	H.verbs |= /mob/proc/haltyell
 	H.set_blindness(0)
 

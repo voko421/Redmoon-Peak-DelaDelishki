@@ -55,6 +55,17 @@
 		STATKEY_STR = -1,
 		STATKEY_CON = -1,
 	)
+	subclass_skills = list(
+		/datum/skill/misc/reading = 5,
+		/datum/skill/combat/polearms = 3, //same tier as other yeomen
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/craft/alchemy = 5,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/misc/sewing = 3,
+		/datum/skill/misc/medicine = 6,
+	)
 
 /datum/outfit/job/roguetown/physician
 	job_bitflag = BITFLAG_ROYALTY
@@ -86,15 +97,6 @@
 		/obj/item/reagent_containers/glass/bottle/waterskin = 1,
 		/obj/item/recipe_book/alchemy = 1,
 	)
-	H.adjust_skillrank(/datum/skill/misc/reading, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE) //same tier as other yeomen
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 6, TRUE)
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
 	if(H.age == AGE_MIDDLEAGED)

@@ -61,6 +61,19 @@
 		STATKEY_CON = 2,
 		STATKEY_WIL = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/whipsflails = 4,
+		/datum/skill/combat/wrestling = 5, //hilarious
+		/datum/skill/combat/knives = 3,
+		/datum/skill/combat/unarmed = 4,
+		/datum/skill/combat/swords = 3,
+		/datum/skill/misc/medicine = 3,//Enough for majority of surgeries without grinding.
+		/datum/skill/craft/cooking = 1,
+		/datum/skill/misc/sewing = 1,
+		/datum/skill/craft/traps = 3,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/athletics = 3,
+	)
 	adv_stat_ceiling = list(STAT_STRENGTH = 16, STAT_CONSTITUTION = 16, STAT_WILLPOWER = 16)
 
 /datum/outfit/job/roguetown/dungeoneer/base/pre_equip(mob/living/carbon/human/H)
@@ -81,17 +94,6 @@
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 2,
 		/obj/item/flashlight/flare/torch/lantern = 1,
 		) //No armoury access
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 5, TRUE) //hilarious
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)//Enough for majority of surgeries without grinding.
-	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/traps, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 	H.dna.species.soundpack_m = new /datum/voicepack/male/warrior()
 	//Torture victim is for inquisition - doesn't even work without a psicross anymore so maybe come up with a variant for him specifically?
 	switch(H.patron?.type)

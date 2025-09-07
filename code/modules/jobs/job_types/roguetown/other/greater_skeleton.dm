@@ -60,6 +60,24 @@ NECRO SKELETONS
 	outfit = /datum/outfit/job/roguetown/greater_skeleton/necro/shambler
 
 	category_tags = list(CTAG_NSKELETON)
+	subclass_skills = list(
+		//light labor skills for skeleton manual labor and some warrior-adventurer skills, equipment is still bad probably
+		/datum/skill/craft/carpentry = 1,
+		/datum/skill/craft/masonry = 1,
+		/datum/skill/craft/crafting = 1,
+		/datum/skill/misc/sewing = 1,
+
+		/datum/skill/combat/polearms = 3,
+		/datum/skill/combat/maces = 3,
+		/datum/skill/combat/axes = 3,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/combat/swords = 3,
+		/datum/skill/combat/shields = 2,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/misc/climbing = 2,
+	)
 
 /datum/outfit/job/roguetown/greater_skeleton/necro/shambler/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -70,23 +88,6 @@ NECRO SKELETONS
 	H.STACON = rand(9,11)
 	H.STAWIL = rand(12,15)
 	H.STAINT = 1
-
-	//light labor skills for skeleton manual labor and some warrior-adventurer skills, equipment is still bad probably
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/masonry, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
-
-	H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 
 	shirt = prob(50) ? /obj/item/clothing/suit/roguetown/shirt/undershirt/vagrant : /obj/item/clothing/suit/roguetown/shirt/undershirt/vagrant/l
 	r_hand = prob(50) ? /obj/item/rogueweapon/sword : /obj/item/rogueweapon/stoneaxe/woodcut

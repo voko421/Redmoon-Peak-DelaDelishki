@@ -11,6 +11,24 @@
 		STATKEY_WIL = 2,
 		STATKEY_PER = 1
 	)
+	subclass_skills = list(
+		/datum/skill/misc/tracking = 5,
+		/datum/skill/combat/crossbows = 3,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/combat/swords = 3,
+		/datum/skill/combat/whipsflails = 3,
+		/datum/skill/combat/maces = 2, //A bonus rather than something to be encouraged
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/climbing = 6,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/sneaking = 5,
+		/datum/skill/misc/stealing = 5,
+		/datum/skill/misc/lockpicking = 5,
+		/datum/skill/craft/traps = 5,
+	)
 
 
 /datum/outfit/job/roguetown/wretch/outlaw/pre_equip(mob/living/carbon/human/H)
@@ -40,22 +58,6 @@
 		/obj/item/ammo_casing/caseless/rogue/bolt/water = 3,
 		/obj/item/reagent_containers/glass/bottle/alchemical/healthpot = 1,	//Small health vial
 		)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE) //A bonus rather than something to be encouraged
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/traps, 5, TRUE)
 	H.cmode_music = 'sound/music/cmode/antag/combat_cutpurse.ogg'
 	var/weapons = list("Rapier","Dagger", "Whip")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
@@ -86,6 +88,23 @@
 		STATKEY_STR = 1,
 		STATKEY_WIL = 1
 	)
+	subclass_skills = list(
+		/datum/skill/misc/tracking = 4,
+		/datum/skill/combat/crossbows = 2,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/combat/maces = 3,
+		/datum/skill/combat/axes = 3,
+		/datum/skill/combat/polearms = 3,
+		/datum/skill/combat/shields = 2,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/misc/climbing = 6,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/sneaking = 4,
+		/datum/skill/misc/stealing = 4,
+	)
 
 /datum/outfit/job/roguetown/wretch/marauder/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -109,21 +128,6 @@
 		/obj/item/rope/chain = 1,
 		/obj/item/storage/roguebag = 1,
 		)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
 	H.cmode_music = 'sound/music/cmode/antag/combat_thewall.ogg'
 	var/weapons = list("Just A Heater Shield","Dagger + Crossbow", "Militia Warpick + Heater Shield", "Militia Spear + Heater Shield")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons

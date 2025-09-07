@@ -8,6 +8,11 @@
 	subclass_stats = list(
 		STATKEY_LCK = 3
 	)
+	subclass_skills = list(
+		/datum/skill/combat/maces = 3,
+		/datum/skill/combat/shields = 2,
+		/datum/skill/misc/athletics = 2,
+	)
 
 /datum/outfit/job/roguetown/vagabond/deprived/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -17,8 +22,3 @@
 		armor = /obj/item/clothing/suit/roguetown/shirt/rags
 	else if(should_wear_masc_clothes(H))
 		pants = /obj/item/clothing/under/roguetown/loincloth
-
-	if (H.mind)
-		H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)

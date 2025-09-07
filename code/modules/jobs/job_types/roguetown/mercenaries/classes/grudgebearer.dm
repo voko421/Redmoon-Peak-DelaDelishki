@@ -19,21 +19,23 @@
 		STATKEY_STR = 1,
 		STATKEY_SPD = -2
 	)
+	subclass_skills = list(
+		/datum/skill/misc/reading = 4,
+		/datum/skill/craft/armorsmithing = 4,	//Shouldn't be better than the smith (though the stats are already)
+		/datum/skill/craft/blacksmithing = 3,
+		/datum/skill/craft/smelting = 3,
+		/datum/skill/combat/maces = 3,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/craft/weaponsmithing = 1,
+		/datum/skill/misc/climbing = 1,
+	)
 
 //Because the armor is race-exclusive for repairs, these guys *should* be able to repair their own guys armor layers. A Dwarf smith isn't guaranteed, after all.
 /datum/outfit/job/roguetown/mercenary/grudgebearer/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
-		H.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/armorsmithing, 4, TRUE)	//Shouldn't be better than the smith (though the stats are already)
-		H.adjust_skillrank(/datum/skill/craft/blacksmithing, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/smelting, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/weaponsmithing, 1, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
 		shoes = /obj/item/clothing/shoes/roguetown/boots/armor/dwarven
 		cloak = /obj/item/clothing/cloak/forrestercloak/snow
 		belt = /obj/item/storage/belt/rogue/leather/black
@@ -66,18 +68,20 @@
 		STATKEY_STR = 2,
 		STATKEY_SPD = -2
 	)
+	subclass_skills = list(
+		/datum/skill/combat/axes = 4,
+		/datum/skill/combat/maces = 4,
+		/datum/skill/misc/reading = 4,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/misc/tracking = 3,
+		/datum/skill/craft/armorsmithing = 2,	//Only here so they'd be able to repair their own armor integrity
+		/datum/skill/misc/climbing = 1,
+	)
 /datum/outfit/job/roguetown/mercenary/grudgebearer_soldier/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
-		H.adjust_skillrank(/datum/skill/combat/axes, 4, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/tracking, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/armorsmithing, 2, TRUE)	//Only here so they'd be able to repair their own armor integrity
-		H.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
 		shoes = /obj/item/clothing/shoes/roguetown/boots/armor/dwarven
 		cloak = /obj/item/clothing/cloak/forrestercloak/snow
 		belt = /obj/item/storage/belt/rogue/leather/black

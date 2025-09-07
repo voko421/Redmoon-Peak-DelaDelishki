@@ -46,6 +46,23 @@
 		STATKEY_STR = -1,
 		STATKEY_CON = -1,
 	)
+	subclass_skills = list(
+		/datum/skill/combat/polearms = 3,
+		/datum/skill/combat/swords = 2,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/combat/wrestling = 1,
+		/datum/skill/combat/unarmed = 1,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/misc/athletics = 2, // more stam for holding spells
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/misc/medicine = 2,
+		/datum/skill/misc/riding = 2,
+		/datum/skill/misc/reading = 6,
+		/datum/skill/craft/alchemy = 4,
+		/datum/skill/magic/arcane = 5,
+		/datum/skill/craft/cooking = 1,
+	)
 
 /datum/outfit/job/roguetown/magician
 	job_bitflag = BITFLAG_ROYALTY
@@ -81,22 +98,6 @@
 		/obj/item/book/spellbook,
 		/obj/item/rogueweapon/huntingknife/idagger/silver/arcyne
 	)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE) // more stam for holding spells
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/arcane, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
-
 	if(H.mind)
 		H.mind.adjust_spellpoints(36)
 	if(H.age == AGE_OLD)

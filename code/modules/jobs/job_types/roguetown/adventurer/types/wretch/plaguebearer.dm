@@ -11,6 +11,22 @@
 		STATKEY_PER = 3,
 		STATKEY_CON = 2
 	)
+	subclass_skills = list(
+		/datum/skill/combat/bows = 2,
+		/datum/skill/combat/knives = 4,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/combat/wrestling = 4, // To escape grapplers, fuck you
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/craft/crafting = 3,
+		/datum/skill/craft/carpentry = 3, //Build your gooncave 
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/misc/medicine = 4, //Disgraced medicine man. 
+		/datum/skill/misc/sewing = 3,
+		/datum/skill/craft/alchemy = 5, // This is literally their whole thing
+		/datum/skill/labor/farming = 3, // Farm ingredients so you have something to do that isn't grinding skills
+	)
 
 /datum/outfit/job/roguetown/wretch/plaguebearer/pre_equip(mob/living/carbon/human/H)
 	head = /obj/item/clothing/head/roguetown/physician
@@ -35,20 +51,6 @@
 		/obj/item/reagent_containers/glass/bottle/alchemical/healthpot = 1,	//Small health vial
 		/obj/item/rogueweapon/huntingknife/idagger/steel/corroded = 1,
 		)
-	H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE) // To escape grapplers, fuck you
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE) //Build your gooncave 
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 4, TRUE) //Disgraced medicine man. 
-	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 5, TRUE) // This is literally their whole thing
-	H.adjust_skillrank(/datum/skill/labor/farming, 3, TRUE) // Farm ingredients so you have something to do that isn't grinding skills
 	H.cmode_music = 'sound/music/combat_physician.ogg'
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
 	H.dna.species.soundpack_m = new /datum/voicepack/male/wizard()

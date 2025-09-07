@@ -45,24 +45,26 @@
 		STATKEY_INT = 1,
 		STATKEY_SPD = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 3,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/misc/athletics = 2,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/craft/cooking = 4,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/labor/butchering = 3,
+		/datum/skill/labor/farming = 2,
+		/datum/skill/craft/carpentry = 2, //apprentice to do some basic repairs around the inn if need be
+		/datum/skill/misc/music = 2,
+	)
 	
 /datum/outfit/job/roguetown/barkeep/basic/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_blindness(-3)
-	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/butchering, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/farming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 2, TRUE) //apprentice to do some basic repairs around the inn if need be
-	H.adjust_skillrank(/datum/skill/misc/music, 2, TRUE)
 	if(H.age == AGE_MIDDLEAGED)
 		H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/misc/music, 1, TRUE)

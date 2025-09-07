@@ -13,16 +13,18 @@
 		STATKEY_PER = 3,
 		STATKEY_CON = 2
 	)
+	subclass_skills = list(
+		/datum/skill/combat/swords = 5,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/misc/climbing = 2,	//I got told that having zero climbing is a PITA. Bare minimum for a combat class.
+	)
 
 /datum/outfit/job/roguetown/mercenary/freelancer/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, span_warning("You are a master in the arts of the longsword. Wielder of Psydonia's most versatile and noble weapon, you needn't anything else. You can choose a regional longsword."))
-	H.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)	//I got told that having zero climbing is a PITA. Bare minimum for a combat class.
 	l_hand = /obj/item/rogueweapon/scabbard/sword
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/fencer	//Experimental.
 	var/weapons = list("Modified Training Sword !!!CHALLENGE!!!", "Etruscan Longsword", "Kriegsmesser", "Field Longsword")
@@ -66,16 +68,18 @@
 		STATKEY_STR = 1,
 		STATKEY_WIL = -2
 	)
+	subclass_skills = list(
+		/datum/skill/combat/polearms = 5,	//This is the danger zone. Ultimately, the class won't be picked without this. I took the liberty of adjusting everything around to make this somewhat inoffensive, but we'll see if it sticks.
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/combat/wrestling = 1,	//Wrestling is a swordsman's luxury.
+		/datum/skill/misc/reading = 2,
+		/datum/skill/misc/climbing = 2,	//I got told that having zero climbing is a PITA. Bare minimum for a combat class.
+	)
 
 /datum/outfit/job/roguetown/mercenary/freelancer_lancer/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, span_warning("You put complete trust in your polearm, the most effective weapon the world has seen. Why wear armour when you cannot be hit? You can choose your polearm, and are exceptionally accurate."))
-	H.adjust_skillrank(/datum/skill/combat/polearms, 5, TRUE)	//This is the danger zone. Ultimately, the class won't be picked without this. I took the liberty of adjusting everything around to make this somewhat inoffensive, but we'll see if it sticks.
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)	//Wrestling is a swordsman's luxury.
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)	//I got told that having zero climbing is a PITA. Bare minimum for a combat class.
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/freifechter
 	backl = /obj/item/rogueweapon/scabbard/gwstrap
 	var/weapons = list("Graduate's Spear", "Boar Spear", "Lucerne")

@@ -14,28 +14,30 @@
 		STATKEY_CON = 1,
 		STATKEY_LCK = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/polearms = 4,
+		/datum/skill/combat/axes = 3,
+		/datum/skill/combat/maces = 3,
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/swords = 4,
+		/datum/skill/combat/whipsflails = 4,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/combat/bows = 2,
+		/datum/skill/combat/crossbows = 3,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/craft/carpentry = 1,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/sewing = 1,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/combat/shields = 3,
+		/datum/skill/misc/swimming = 2,
+	)
 
 /datum/outfit/job/roguetown/bandit/sellsword/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	belt = /obj/item/storage/belt/rogue/leather
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson

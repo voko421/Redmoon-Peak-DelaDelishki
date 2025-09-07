@@ -42,22 +42,25 @@
 	outfit = /datum/outfit/job/roguetown/lunatic/basic
 	category_tags = list(CTAG_LUNATIC)
 	subclass_stats = list(
-		STATKEY_SPD = 2
+		STATKEY_SPD = 2,
+		STATKEY_CON = 4
+	)
+	subclass_skills = list(
+		/datum/skill/misc/sneaking = 2,
+		/datum/skill/misc/stealing = 2,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/craft/crafting = 1,
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/misc/athletics = 2,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/craft/cooking = 1,
 	)
 
 /datum/outfit/job/roguetown/lunatic/basic/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_blindness(-3)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 	H.STALUC = rand(3, 8)
 	armor = /obj/item/clothing/suit/roguetown/shirt/rags
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/vagrant

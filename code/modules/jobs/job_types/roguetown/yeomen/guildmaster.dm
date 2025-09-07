@@ -51,6 +51,28 @@
 		STATKEY_WIL = 2,
 		STATKEY_INT = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/axes = 3,
+		/datum/skill/combat/maces = 3,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/labor/lumberjacking = 3,
+		/datum/skill/labor/mining = 3,
+		/datum/skill/craft/crafting = 3,
+		/datum/skill/craft/carpentry = 3,
+		/datum/skill/craft/masonry = 3,
+		/datum/skill/craft/blacksmithing = 5,
+		/datum/skill/craft/armorsmithing = 5,
+		/datum/skill/craft/weaponsmithing = 5,
+		/datum/skill/craft/smelting = 4,
+		/datum/skill/craft/engineering = 3, // 2 Engineering, let them make more artificers stuffs
+		/datum/skill/misc/sewing = 2, // Worse than the real tailor, so can't steal their job right away 
+		/datum/skill/craft/tanning = 2,
+		/datum/skill/misc/lockpicking = 4,
+		/datum/skill/misc/ceramics = 2,
+		/datum/skill/craft/traps = 2,
+		/datum/skill/misc/reading = 2,
+	)
 
 /datum/outfit/job/roguetown/guildmaster/basic/pre_equip(mob/living/carbon/human/H)
 	H.adjust_blindness(-3)
@@ -60,26 +82,6 @@
 		// Skillset is a combo of Artificer + Blacksmith with Labor Skills. 
 		// And Tailor / Leathercrafting
 		H.verbs += /mob/living/carbon/human/proc/guild_announcement
-		H.adjust_skillrank(/datum/skill/combat/axes, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/labor/lumberjacking, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/labor/mining, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/masonry, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/blacksmithing, 5, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/armorsmithing, 5, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/weaponsmithing, 5, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/smelting, 4, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/engineering, 3, TRUE) // 2 Engineering, let them make more artificers stuffs
-		H.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE) // Worse than the real tailor, so can't steal their job right away 
-		H.adjust_skillrank(/datum/skill/craft/tanning, 2, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/lockpicking, 4, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/ceramics, 2, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/traps, 2, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
 		if(H.age == AGE_OLD)
 			H.adjust_skillrank(/datum/skill/craft/blacksmithing, 1, TRUE)
 			H.adjust_skillrank(/datum/skill/craft/armorsmithing, 1, TRUE)

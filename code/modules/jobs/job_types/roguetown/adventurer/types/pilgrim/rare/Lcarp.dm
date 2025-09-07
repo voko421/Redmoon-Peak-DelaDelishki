@@ -19,26 +19,26 @@
 		STATKEY_CON = 1,
 		STATKEY_SPD = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/axes = 4, // They use hammers, sawes and axes all day.
+		/datum/skill/combat/maces = 3, 
+		/datum/skill/misc/athletics = 4, 
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/climbing = 4, // They work at great heights.
+		/datum/skill/craft/crafting = 4,
+		/datum/skill/craft/carpentry = 6,
+		/datum/skill/craft/engineering = 4,
+		/datum/skill/misc/reading = 2,
+		/datum/skill/craft/traps = 2,
+		/datum/skill/labor/lumberjacking = 4,
+		/datum/skill/misc/medicine = 2,
+	)
 
 /datum/outfit/job/roguetown/adventurer/mastercarpenter/pre_equip(mob/living/carbon/human/H)
 	..()
-	
-	H.adjust_skillrank(/datum/skill/combat/axes, 4, TRUE) // They use hammers, sawes and axes all day.
-	H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE) 
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE) 
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE) // They work at great heights.
-	H.adjust_skillrank(/datum/skill/craft/crafting, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/engineering, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/traps, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/lumberjacking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
-	
 	head = /obj/item/clothing/head/roguetown/hatblu
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/dendor 
 	pants = /obj/item/clothing/under/roguetown/trou

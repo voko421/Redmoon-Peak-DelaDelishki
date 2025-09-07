@@ -14,6 +14,20 @@
 		STATKEY_PER = 1,
 		STATKEY_CON = -1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/polearms = 3,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/misc/climbing = 2,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/misc/medicine = 3,
+		/datum/skill/misc/riding = 2,
+		/datum/skill/misc/reading = 4,
+		/datum/skill/craft/alchemy = 3,
+		/datum/skill/magic/arcane = 4,
+		/datum/skill/misc/sewing = 2,
+	)
 
 /datum/outfit/job/roguetown/mercenary/warscholar
 	var/detailcolor
@@ -38,18 +52,6 @@
 	detailcolor = input("Choose a color.", "NALEDIAN COLORPLEX") as anything in naledicolors
 	detailcolor = naledicolors[detailcolor]
 	to_chat(H, span_warning("You are a Naledi Hierophant, a magician who studied under cloistered sages, well-versed in all manners of arcyne. You prioritize enhancing your teammates and distracting foes while staying in the backline."))
-	H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/arcane, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
 	H.grant_language(/datum/language/celestial)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
@@ -101,6 +103,19 @@
 		STATKEY_PER = -1,
 		STATKEY_CON = -1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/combat/unarmed = 4,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/magic/arcane = 2,
+		/datum/skill/misc/sneaking = 3,
+		/datum/skill/misc/stealing = 3,
+		/datum/skill/misc/lockpicking = 3,
+	)
 
 /datum/outfit/job/roguetown/mercenary/warscholar_pontifex
 	var/detailcolor
@@ -125,17 +140,6 @@
 	detailcolor = input("Choose a color.", "NALEDIAN COLORPLEX") as anything in naledicolors
 	detailcolor = naledicolors[detailcolor]
 	to_chat(H, span_warning("You are a Naledi Pontifex, a warrior trained into a hybridized style of movement-controlling magic and hand-to-hand combat. Though your abilities in magical fields are lacking, you are far more dangerous than other magi in a straight fight. You manifest your calm, practiced skill into a killing intent that takes the shape of an arcyne blade."))
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 3, TRUE)
 	H.grant_language(/datum/language/celestial)
 	H.grant_language(/datum/language/thievescant)
 	if(H.mind)
@@ -176,6 +180,21 @@
 		STATKEY_SPD = 2,
 		STATKEY_WIL = 2,
 	)
+	subclass_skills = list(
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/misc/climbing = 1,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/craft/crafting = 1,
+		/datum/skill/misc/medicine = 3,
+		/datum/skill/misc/reading = 4,
+		/datum/skill/combat/polearms = 2,
+		/datum/skill/craft/alchemy = 2,
+		/datum/skill/combat/crossbows = 2,
+		/datum/skill/misc/sewing = 2,
+		/datum/skill/magic/holy = 4,
+	)
 
 /datum/outfit/job/roguetown/mercenary/warscholar_vizier
 	var/detailcolor
@@ -200,19 +219,6 @@
 	detailcolor = input("Choose a color.", "NALEDIAN COLORPLEX") as anything in naledicolors
 	detailcolor = naledicolors[detailcolor]
 	to_chat(H, span_warning("You are a Naledi Vizier. Your research into miracles and holy incantations has lead you to esoteric magycks. Though psydonians have long struggled to channel their all-father's divinity, a combination of the saint's power may be similar enough."))
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/holy, 4, TRUE)
 	r_hand = /obj/item/rogueweapon/woodstaff/naledi
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/magered
 

@@ -13,6 +13,22 @@
 		STATKEY_SPD = 2,
 		STATKEY_INT = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/crossbows = 5, //Possibly too high, no idea.
+		/datum/skill/combat/swords = 3,
+		/datum/skill/combat/knives = 4,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/combat/wrestling = 2,
+		/datum/skill/misc/sneaking = 4,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/climbing = 4,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/stealing = 3,
+		/datum/skill/misc/lockpicking = 3,
+		/datum/skill/misc/tracking = 4,
+		/datum/skill/craft/traps = 3,
+	)
 
 /datum/outfit/job/roguetown/mercenary/condottiero/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -37,20 +53,6 @@
 		/obj/item/rogueweapon/scabbard/sheath = 1,
 		/obj/item/lockpick = 1
 		)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 5, TRUE) //Possibly too high, no idea.
-	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/traps, 3, TRUE)
 
 	H.grant_language(/datum/language/etruscan)
 	H.grant_language(/datum/language/thievescant)

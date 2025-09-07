@@ -63,6 +63,19 @@ GLOBAL_LIST_EMPTY(heretical_players)
 		STATKEY_CON = -1,
 		STATKEY_SPD = -1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/wrestling = 5,
+		/datum/skill/combat/unarmed = 5,
+		/datum/skill/combat/polearms = 5,
+		/datum/skill/misc/reading = 6,
+		/datum/skill/misc/medicine = 4,
+		/datum/skill/craft/cooking = 2,
+		/datum/skill/craft/crafting = 3,
+		/datum/skill/misc/sewing = 2,
+		/datum/skill/labor/farming = 2,
+		/datum/skill/magic/holy = 5,
+		/datum/skill/craft/alchemy = 3,
+	)
 
 /datum/outfit/job/roguetown/priest
 	job_bitflag = BITFLAG_CHURCH
@@ -90,17 +103,6 @@ GLOBAL_LIST_EMPTY(heretical_players)
 		/obj/item/rogueweapon/huntingknife/idagger/steel/holysee = 1,	//Unique knife from the Holy See
 		/obj/item/rogueweapon/scabbard/sheath = 1
 	)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/farming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/holy, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 3, TRUE)
 	H.grant_language(/datum/language/grenzelhoftian)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)

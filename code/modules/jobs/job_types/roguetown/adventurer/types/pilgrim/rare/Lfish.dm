@@ -16,6 +16,17 @@
 		STATKEY_PER = 2,
 		STATKEY_SPD = 2
 	)
+	subclass_skills = list(
+		/datum/skill/combat/wrestling = 1,
+		/datum/skill/combat/unarmed = 1,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/misc/swimming = 5,
+		/datum/skill/craft/cooking = 3,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/labor/fishing = 6,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/misc/athletics = 3,
+	)
 
 /datum/outfit/job/roguetown/adventurer/fishermaster/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -37,15 +48,6 @@
 							/obj/item/rogueweapon/shovel/small=1,
 							/obj/item/flashlight/flare/torch = 1,
 							)
-		H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/swimming, 5, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/cooking, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-		H.adjust_skillrank(/datum/skill/labor/fishing, 6, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 		if(H.age == AGE_OLD)
 			H.adjust_skillrank(/datum/skill/labor/fishing, 1, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
@@ -65,15 +67,6 @@
 			/obj/item/rogueweapon/shovel/small=1,
 			/obj/item/rogueweapon/scabbard/sheath = 1
 			)
-		H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-		H.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/swimming, 5, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/cooking, 3, TRUE)
-		H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-		H.adjust_skillrank(/datum/skill/labor/fishing, 6, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-		H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 		if(H.age == AGE_OLD)
 			H.adjust_skillrank(/datum/skill/labor/fishing, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)

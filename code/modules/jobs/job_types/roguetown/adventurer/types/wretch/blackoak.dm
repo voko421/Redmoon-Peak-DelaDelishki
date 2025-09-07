@@ -20,27 +20,29 @@
 		STATKEY_INT = 2,
 		STATKEY_CON = -1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/polearms = 4,
+		/datum/skill/misc/athletics = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/knives = 3,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/misc/sneaking = 3,
+		/datum/skill/misc/swimming = 3,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/reading = 3,
+		/datum/skill/misc/tracking = 2,
+		/datum/skill/craft/carpentry = 2,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/craft/tanning = 2,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/labor/farming = 2,
+		/datum/skill/magic/arcane = 2,
+	)
 	extra_context = "This subclass is race-limited to: Half-Elves, Elves, Dark Elves."
 
 /datum/outfit/job/roguetown/wretch/blackoak/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/carpentry, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/tanning, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/farming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
-
+	H.set_blindness(-3)
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/elven_boots
 	cloak = /obj/item/clothing/cloak/forrestercloak
 	gloves = /obj/item/clothing/gloves/roguetown/elven_gloves

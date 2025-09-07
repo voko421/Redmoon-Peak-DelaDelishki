@@ -34,6 +34,9 @@
 	/// Subclass stat bonuses.
 	var/list/subclass_stats
 
+	/// Subclass skills. Levelled UP TO.
+	var/list/subclass_skills
+
 	/// Extra fluff added to the role explanation in class selection.
 	var/extra_context
 
@@ -68,6 +71,9 @@
 		for(var/stat in subclass_stats)
 			H.change_stat(stat, subclass_stats[stat])
 
+	if(length(subclass_skills))
+		for(var/skill in subclass_skills)
+			H.adjust_skillrank_up_to(skill, subclass_skills[skill], TRUE)
 
 	// After the end of adv class equipping, apply a SPECIAL trait if able
 

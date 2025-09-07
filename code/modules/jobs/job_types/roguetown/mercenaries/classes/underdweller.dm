@@ -20,6 +20,23 @@
 		STATKEY_STR = 1,
 		STATKEY_LCK = 1
 	)
+	subclass_skills = list(
+		/datum/skill/combat/axes = 4,
+		/datum/skill/labor/mining = 4,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/shields = 3,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/combat/knives = 2,
+		/datum/skill/craft/crafting = 2,
+		/datum/skill/craft/alchemy = 2,	//Gets this for bomb making.
+		/datum/skill/craft/engineering = 1,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/misc/swimming = 1,
+		/datum/skill/misc/medicine = 1,
+		/datum/skill/craft/smelting = 2,	//Accompanies mining; they know how to smelt, not make armor though.
+	)
 	extra_context = "This subclass is race-limited to: Dwarves, Dark Elves, Kobolds, Goblins & Verminvolk."
 
 /datum/outfit/job/roguetown/mercenary/underdweller/pre_equip(mob/living/carbon/human/H)
@@ -44,21 +61,6 @@
 		/obj/item/bomb = 2,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-	H.adjust_skillrank(/datum/skill/combat/axes, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/mining, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/alchemy, 2, TRUE)	//Gets this for bomb making.
-	H.adjust_skillrank(/datum/skill/craft/engineering, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/smelting, 2, TRUE)	//Accompanies mining; they know how to smelt, not make armor though.
 	H.merctype = 12
 
 

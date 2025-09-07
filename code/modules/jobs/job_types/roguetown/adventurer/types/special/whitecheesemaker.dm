@@ -10,30 +10,39 @@
 
 	horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigabuck/tame/saddled
 	category_tags = list(CTAG_DISABLED)
+	subclass_stats = list(
+		STATKEY_STR = 4,
+		STATKEY_CON = 4,
+		STATKEY_WIL = 4,
+		STATKEY_INT = 3,
+		STATKEY_SPD = 2,
+	)
+	subclass_skills = list(
+		/datum/skill/combat/polearms = 2,
+		/datum/skill/combat/maces = 2,
+		/datum/skill/combat/axes = 2,
+		/datum/skill/combat/crossbows = 3,
+		/datum/skill/combat/wrestling = 4,
+		/datum/skill/combat/unarmed = 2,
+		/datum/skill/combat/swords = 6,
+		/datum/skill/misc/sneaking = 4,
+		/datum/skill/combat/knives = 1,
+		/datum/skill/combat/bows = 1,
+		/datum/skill/misc/swimming = 2,
+		/datum/skill/misc/climbing = 3,
+		/datum/skill/misc/riding = 5,
+		/datum/skill/misc/athletics = 5,
+		/datum/skill/misc/sewing = 3,
+		/datum/skill/magic/arcane = 3,
+		/datum/skill/misc/reading = 1,
+		/datum/skill/craft/crafting = 4,
+	)
 
 /datum/outfit/job/roguetown/adventurer/whitecheese
 	name = "WHITE CHEESE"
 
 /datum/outfit/job/roguetown/adventurer/whitecheese/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 6, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/riding, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/arcane, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/carpentry, rand(4,5), TRUE)
 	H.adjust_skillrank(/datum/skill/craft/masonry, rand(1,2), TRUE)
 
@@ -46,12 +55,6 @@
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/rich
 
 	H.dna.species.soundpack_m = new /datum/voicepack/male/evil/blkknight()
-
-	H.change_stat(STATKEY_INT, 3)
-	H.change_stat(STATKEY_STR, 4)
-	H.change_stat(STATKEY_WIL, 4)
-	H.change_stat(STATKEY_CON, 4)
-	H.change_stat(STATKEY_SPD, 2)
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/lightningbolt)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/fetch)

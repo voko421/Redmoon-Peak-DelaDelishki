@@ -122,6 +122,7 @@
 		/datum/mob_descriptor/stature/fiend,
 		/datum/mob_descriptor/stature/adventurer,
 		/datum/mob_descriptor/stature/valiant,
+		/datum/mob_descriptor/stature/plump,
 		/datum/mob_descriptor/stature/daredevil,
 		/datum/mob_descriptor/stature/stoic,
 		/datum/mob_descriptor/stature/stooge,
@@ -246,9 +247,11 @@
 	default_descriptor = /datum/mob_descriptor/height/moderate
 	descriptors = list(
 		/datum/mob_descriptor/height/moderate,
+		/datum/mob_descriptor/height/middling,
 		/datum/mob_descriptor/height/tall,
 		/datum/mob_descriptor/height/short,
 		/datum/mob_descriptor/height/towering,
+		/datum/mob_descriptor/height/giant,
 		/datum/mob_descriptor/height/tiny,
 	)
 

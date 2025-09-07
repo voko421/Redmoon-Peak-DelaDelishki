@@ -156,3 +156,6 @@
 
 /datum/mob_descriptor/stature/weerdoe
 	name = "Weerdoe"
+
+/datum/mob_descriptor/stature/plump
+	name = "Plump Figure"

@@ -482,3 +482,27 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define ARMOR_CLASS_MEDIUM 2
 #define ARMOR_CLASS_HEAVY 3
 
+/*
+	Defines for class select categories
+*/
+
+//Adventurer categories
+#define CLASS_CAT_NOBLE	"Noble"
+#define CLASS_CAT_CLERIC "Cleric"
+#define CLASS_CAT_ROGUE	"Rogue"
+#define CLASS_CAT_RANGER "Ranger"
+#define CLASS_CAT_MAGE "Mage"
+#define CLASS_CAT_WARRIOR "Warrior"
+#define CLASS_CAT_TRADER "Trader"
+#define CLASS_CAT_NOMAD "Nomad"
+
+//Mercenary categories
+#define CLASS_CAT_ETRUSCA "Etrusca"
+#define CLASS_CAT_GRENZELHOFT "Grenzelhoft"
+#define CLASS_CAT_NALEDI "Naledi"
+#define CLASS_CAT_RANESHENI "Ranesheni"
+#define CLASS_CAT_AAVNR "Aavnr"
+#define CLASS_CAT_GRONN "Gronn"
+#define CLASS_CAT_OTAVA "Otava"
+#define CLASS_CAT_KAZENGUN "Kazengun"
+#define CLASS_CAT_RACIAL "Race Exclusive" //Used for black oaks, grudgebearer dwarves, etc.

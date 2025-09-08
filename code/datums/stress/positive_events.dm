@@ -252,3 +252,9 @@
 	stressadd = -3
 	desc = span_green("I am near my Champion! Oh, oh, Champion!")
 	timer = 1 MINUTES
+
+/datum/stressevent/blessed_weapon
+	stressadd = -3
+	timer = 999 MINUTES
+	desc = span_green("I'm wielding a BLESSED weapon!")
+

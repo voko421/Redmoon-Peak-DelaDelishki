@@ -323,29 +323,24 @@
 	desc = span_red("Oww, my head...")
 
 /datum/stressevent/psycurse
-
 	stressadd = 3
 	desc = span_boldred("Oh no! I've received divine punishment!")
 	timer = 999 MINUTES
 
 /datum/stressevent/excommunicated
-
 	stressadd = 5
 	desc = span_boldred("The Ten have forsaken me!")
 	timer = 999 MINUTES
 
 /datum/stressevent/apostasy
-
 	stressadd = 3
 	desc = span_boldred("The apostasy's mark is upon me!")
 	timer = 999 MINUTES
 
 /datum/stressevent/heretic_on_sermon
-
 	stressadd = 5
 	desc = span_red("My PATRON is NOT PROUD of ME!")
 	timer = 20 MINUTES
-
 
 /datum/stressevent/lostchampion
 	stressadd = 8
@@ -356,3 +351,8 @@
 	stressadd = 8
 	desc = span_red("I have failed my ward! My ribbon fades in color!")
 	timer = 25 MINUTES
+
+/datum/stressevent/blessed_weapon
+	stressadd = -3
+	timer = 999 MINUTES
+	desc = span_green("I'm wielding a BLESSED weapon!")

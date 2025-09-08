@@ -439,6 +439,7 @@
 /datum/job/Topic(href, list/href_list)
 	if(href_list["explainjob"])
 		var/list/dat = list()
+		var/show_job_traits = TRUE
 		var/sclass_count = 0
 		if(length(job_subclasses) && length(job_stats))
 			CRASH("[REF(src)] has definitions for both class and subclass stats. Likely not intended, and they will stack!")
@@ -467,9 +468,16 @@
 				dat += "<table align='center'; width='100%'; height='100%';border: 1px solid white;border-collapse: collapse>"
 				dat += "<tr style='vertical-align:top'>"
 				dat += "<td width = 50%>"
-				if(length(adv_ref.traits_applied))
-					dat += "<font color ='#ccbb82'><font color ='#d6d6d6'>Sub</font>class traits:</font> "
-					for(var/trait in adv_ref.traits_applied)
+				if(length(adv_ref.traits_applied) || (!length(adv_ref.traits_applied) && length(job_traits)))
+					var/list/traitlist
+					if(length(adv_ref.traits_applied))
+						traitlist = adv_ref.traits_applied
+						dat += "<font color ='#ccbb82'><font color ='#d6d6d6'>Sub</font>class traits:</font> "
+					else if(!length(adv_ref.traits_applied) && length(job_traits))
+						traitlist = job_traits
+						show_job_traits = FALSE
+						dat += "<font color ='#ccbb82'><font color ='#d6d6d6'>Class</font> traits:</font> "
+					for(var/trait in traitlist)
 						dat += "<details><summary><i><font color ='#ccbb82'>[trait]</font></i></summary>"
 						dat += "<i><font color = '#a3ffe0'>[GLOB.roguetraits[trait]]</font></i></details>"
 					dat += "</font>"
@@ -528,7 +536,7 @@
 					dat += "["[capitalize(stat)]: <b>\Roman[stat_ceilings[stat]]</b>"] | "
 				dat += "<br><i>Regardless of your statpacks or race choice, you will not be able to exceed these stats on spawn.</i></font>"
 				dat += "</font>"	//Ends the stat limit colors
-		if(length(job_traits))
+		if(length(job_traits) && (show_job_traits || sclass_count > 1))
 			dat += "<font color ='#ccbb82'>This <font color ='#d6d6d6'>class</font> gains the following traits:</font> "
 			for(var/trait in job_traits)
 				dat += "<details><summary><i><font color ='#ccbb82'>[trait]</font></i></summary>"
@@ -536,14 +544,18 @@
 			dat += "</font>"
 		dat += "<br><i>This information is not all-encompassing. Many classes have other quirks and skills that define them.</i>"
 		if(istype(src,/datum/job/roguetown/jester))
+			LAZYCLEARLIST(dat)
 			dat = list("<font color = '#d151ab'><center>Come one, come all, where Psydon Lies! <br>Let Xylix roll the dice, <br>unto our untimely demise! <br>Ahahaha!</center>")
 			dat += "<center><b><font size = 4>STR: ???</b><br>"
+			dat += "<b>WIL: ???</b><br>"
+			dat += "<b>CON: ???</b><br>"
+			dat += "<b>PER: ???</b><br>"
 			dat += "<b>INT: ???</b><br>"
 			dat += "<b>FOR: ???</b><br></center></font>"
-		var/height = 500
+		var/height = 550
 		if(sclass_count >= 10)
 			height = 925
-		var/datum/browser/popup = new(usr, "classhelp", "<div style='text-align: center'>[title]</div>", nwidth = 425, nheight = height)
+		var/datum/browser/popup = new(usr, "classhelp", "<div style='text-align: center'>[title]</div>", nwidth = 475, nheight = height)
 		popup.set_content(dat.Join())
 		popup.open(FALSE)
 		if(winexists(usr, "classhelp"))

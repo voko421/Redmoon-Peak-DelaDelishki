@@ -38,6 +38,7 @@
 		In return, you have proven time and time again as justicar and trusted advisor to their reign."
 	outfit = /datum/outfit/job/roguetown/magician/basic
 
+	subclass_spellpoints = 36
 	category_tags = list(CTAG_COURTMAGE)
 	subclass_stats = list(
 		STATKEY_INT = 5,// Automatic advanced magic for most spells. (I.E summon weapon being upgraded to steel from iron/etc)
@@ -98,8 +99,6 @@
 		/obj/item/book/spellbook,
 		/obj/item/rogueweapon/huntingknife/idagger/silver/arcyne
 	)
-	if(H.mind)
-		H.mind.adjust_spellpoints(36)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 		H.change_stat(STATKEY_SPD, -1)

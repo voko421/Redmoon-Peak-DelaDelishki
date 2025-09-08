@@ -4,6 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/wretch/outlaw
+	cmode_music = 'sound/music/cmode/antag/combat_cutpurse.ogg'
 	category_tags = list(CTAG_WRETCH)
 	subclass_languages = list(/datum/language/thievescant)
 	traits_applied = list(TRAIT_DODGEEXPERT)
@@ -59,7 +60,6 @@
 		/obj/item/ammo_casing/caseless/rogue/bolt/water = 3,
 		/obj/item/reagent_containers/glass/bottle/alchemical/healthpot = 1,	//Small health vial
 		)
-	H.cmode_music = 'sound/music/cmode/antag/combat_cutpurse.ogg'
 	var/weapons = list("Rapier","Dagger", "Whip")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
@@ -81,6 +81,7 @@
 	name = "Marauder"
 	tutorial = "You are a brigand and a pillager - you prefer to get your coins with direct means from unfortunate victims."
 	outfit = /datum/outfit/job/roguetown/wretch/marauder
+	cmode_music = 'sound/music/cmode/antag/combat_thewall.ogg'
 	subclass_languages = list(/datum/language/thievescant)
 	//Still the speed class
 	subclass_stats = list(
@@ -129,7 +130,6 @@
 		/obj/item/rope/chain = 1,
 		/obj/item/storage/roguebag = 1,
 		)
-	H.cmode_music = 'sound/music/cmode/antag/combat_thewall.ogg'
 	var/weapons = list("Just A Heater Shield","Dagger + Crossbow", "Militia Warpick + Heater Shield", "Militia Spear + Heater Shield")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)

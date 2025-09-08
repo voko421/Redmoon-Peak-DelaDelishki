@@ -66,6 +66,7 @@
 	name = "Spear-Hunter"
 	tutorial = "You are a hunter. With your bow you hunt the fauna of the glade, skinning what you kill and cooking any meat left over. The job is dangerous but important in the circulation of clothing and light armor."
 	outfit = /datum/outfit/job/roguetown/adventurer/hunter_spear
+	cmode_music = 'sound/music/cmode/towner/combat_towner2.ogg'
 	subclass_stats = list(
 		STATKEY_STR = 2,
 		STATKEY_CON = 1,
@@ -115,5 +116,4 @@
 				/obj/item/rogueweapon/scabbard/sheath = 1
 				)
 	gloves = /obj/item/clothing/gloves/roguetown/fingerless_leather
-	H.cmode_music = 'sound/music/cmode/towner/combat_towner2.ogg'
 	return

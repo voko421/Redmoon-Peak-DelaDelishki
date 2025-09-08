@@ -7,14 +7,11 @@
 	category_tags = list(CTAG_INQUISITION)
 	cmode_music = 'sound/music/cmode/antag/combat_deadlyshadows.ogg'
 	traits_applied = list(
-		TRAIT_STEELHEARTED,
 		TRAIT_DODGEEXPERT,
 		TRAIT_BLACKBAGGER,
 		TRAIT_SILVER_BLESSED,
-		TRAIT_INQUISITION,
 		TRAIT_PERFECT_TRACKER,
 		TRAIT_PSYDONITE,
-		TRAIT_OUTLANDER
 	)
 	subclass_stats = list(
 		STATKEY_SPD = 3,

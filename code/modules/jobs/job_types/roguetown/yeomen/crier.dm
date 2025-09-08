@@ -55,7 +55,7 @@
 		pants = /obj/item/clothing/under/roguetown/tights/black
 	shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/black
 	armor = /obj/item/clothing/suit/roguetown/shirt/dress/silkdress/loudmouth
-	head = /obj/item/clothing/head/roguetown/loudmouth
+	head = /obj/item/clothing/head/roguetown/veiled/loudmouth
 	backr = /obj/item/storage/backpack/rogue/satchel
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	belt = /obj/item/storage/belt/rogue/leather/plaquesilver

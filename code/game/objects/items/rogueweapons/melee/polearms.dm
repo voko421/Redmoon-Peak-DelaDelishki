@@ -277,7 +277,7 @@
 /obj/item/rogueweapon/spear/trident
 	// Better one handed & throwing weapon, flimsier.
 	name = "bronze trident"
-	desc = "A bronze trident from the seas. Feels balanced in your hand, like you could throw it quite easily."
+	desc = "A bronze trident from the seas designed to pierce fish upon its hooked teeth. Feels balanced in your hand, like you could throw it quite easily."
 	icon_state = "bronzetri"
 	force = 25
 	force_wielded = 20
@@ -285,6 +285,78 @@
 	max_blade_int = 175
 	max_integrity = 225
 	throwforce = 30
+	possible_item_intents = list(SPEAR_THRUST, SPEAR_BASH, SPEAR_CAST)
+	fishingMods=list(
+		"commonFishingMod" = 0.8,
+		"rareFishingMod" = 1.4,
+		"treasureFishingMod" = 0,
+		"trashFishingMod" = 0,
+		"dangerFishingMod" = 0.9,
+		"ceruleanFishingMod" = 0, // 1 on cerulean aril, 0 on everything else
+	)
+
+/obj/item/rogueweapon/spear/trident/afterattack(obj/target, mob/user, proximity)
+	var/sl = user.get_skill_level(/datum/skill/labor/fishing)
+	var/ft = 150
+	var/fpp =  130 - (40 + (sl * 15))
+	var/frwt = list(/turf/open/water/river, /turf/open/water/cleanshallow, /turf/open/water/pond)
+	var/salwt_coast = list(/turf/open/water/ocean)
+	var/salwt_deep = list(/turf/open/water/ocean/deep)
+	var/mud = list(/turf/open/water/swamp, /turf/open/water/swamp/deep)
+	if(istype(target, /turf/open/water))
+		if(user.used_intent.type == SPEAR_CAST && !user.doing)
+			if(target in range(user,3))
+				user.visible_message("<span class='warning'>[user] searches for a fish!</span>", \
+									"<span class='notice'>I begin looking for a fish to spear.</span>")
+				playsound(src.loc, 'sound/items/fishing_plouf.ogg', 100, TRUE)
+				ft -= (sl * 20)
+				ft = max(20,ft)
+				if(do_after(user,ft, target = target))
+					var/fishchance = 100
+					if(user.mind)
+						if(!sl)
+							fishchance -= 50
+						else
+							fishchance -= fpp
+					var/mob/living/fisherman = user
+					if(prob(fishchance))
+						var/A
+						if(target.type in frwt)
+							A = pickweightAllowZero(createFreshWaterFishWeightListModlist(fishingMods))
+						else if(target.type in salwt_coast)
+							A = pickweightAllowZero(createCoastalSeaFishWeightListModlist(fishingMods))
+						else if(target.type in salwt_deep)
+							A = pickweightAllowZero(createDeepSeaFishWeightListModlist(fishingMods))
+						else if(target.type in mud)
+							A = pickweightAllowZero(createMudFishWeightListModlist(fishingMods))
+						if(A)
+							var/ow = 30 + (sl * 10)
+							to_chat(user, "<span class='notice'>You see something!</span>")
+							playsound(src.loc, 'sound/items/fishing_plouf.ogg', 100, TRUE)
+							if(!do_after(user,ow, target = target))
+								if(ismob(A))
+									var/mob/M = A
+									if(M.type in subtypesof(/mob/living/simple_animal/hostile))
+										new M(target)
+									else
+										new M(user.loc)
+									user.mind.add_sleep_experience(/datum/skill/labor/fishing, fisherman.STAINT*2)
+								else
+									new A(user.loc)
+									teleport_to_dream(user, 10000, 1)
+									to_chat(user, "<span class='warning'>Pull 'em in!</span>")
+									user.mind.add_sleep_experience(/datum/skill/labor/fishing, round(fisherman.STAINT, 2), FALSE)
+									record_featured_stat(FEATURED_STATS_FISHERS, fisherman)
+									GLOB.azure_round_stats[STATS_FISH_CAUGHT]++
+									playsound(src.loc, 'sound/items/Fish_out.ogg', 100, TRUE)	
+							else
+								to_chat(user, "<span class='warning'>Damn, it got away... I should <b>pull away</b> next time.</span>")								
+					else
+						to_chat(user, "<span class='warning'>Not a single fish...</span>")
+						user.mind.add_sleep_experience(/datum/skill/labor/fishing, fisherman.STAINT/2)
+				else
+					to_chat(user, "<span class='warning'>I must stand still to fish.</span>")
+			update_icon()
 
 /obj/item/rogueweapon/spear/aalloy
 	name = "decrepit spear"

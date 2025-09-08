@@ -346,7 +346,7 @@
 /datum/advclass/sfighter/ironclad
 	name = "Ironclad"
 	tutorial = "You are a warrior who puts their trust in durable armor. The best offense is a good defense."
-	outfit = /datum/outfit/job/roguetown/adventurer/flagellant
+	outfit = /datum/outfit/job/roguetown/adventurer/ironclad
 	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_HEAVYARMOR)
 	subclass_stats = list(
 		STATKEY_STR = 2,
@@ -354,7 +354,7 @@
 		STATKEY_CON = 1,
 	)
 
-/datum/outfit/job/roguetown/adventurer/flagellant/pre_equip(mob/living/carbon/human/H, visualsOnly)
+/datum/outfit/job/roguetown/adventurer/ironclad/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	to_chat(H, span_warning("You put your trust into your durable armor. The best offense is a good defense."))
 	var/helmets = list(

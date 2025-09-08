@@ -6,7 +6,7 @@
 	outfit = /datum/outfit/job/roguetown/psydoniantemplar
 	category_tags = list(CTAG_INQUISITION)
 	cmode_music = 'sound/music/templarofpsydonia.ogg'
-	traits_applied = list(TRAIT_INQUISITION, TRAIT_HEAVYARMOR, TRAIT_STEELHEARTED, TRAIT_OUTLANDER)
+	traits_applied = list(TRAIT_HEAVYARMOR)
 	subclass_stats = list(
 		STATKEY_WIL = 3,
 		STATKEY_CON = 2,

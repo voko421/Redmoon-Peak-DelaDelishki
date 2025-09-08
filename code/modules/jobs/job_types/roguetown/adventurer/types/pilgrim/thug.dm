@@ -5,8 +5,8 @@
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/thug
 	cmode_music = 'sound/music/cmode/towner/combat_towner2.ogg'
-	
 	category_tags = list(CTAG_TOWNER)
+	subclass_languages = list(/datum/language/thievescant)
 	subclass_stats = list(
 		STATKEY_CON = 3,
 		STATKEY_STR = 2,
@@ -52,4 +52,3 @@
 	gloves = /obj/item/clothing/gloves/roguetown/fingerless
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	armor = /obj/item/clothing/suit/roguetown/armor/workervest
-	H.grant_language(/datum/language/thievescant)

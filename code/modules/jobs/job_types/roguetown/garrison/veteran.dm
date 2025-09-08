@@ -264,6 +264,7 @@
 	tutorial = "You were a sell-sword, a warrior of coin. Your pockets were never light, you always had a warm place to stay and food in your belly, but you knew that every battle could be your last. You're the last of your unit, and you can't help but regret it. You specialize in swords and polearms, or axes and polearms."
 	outfit = /datum/outfit/job/roguetown/vet/merc
 
+	subclass_languages = list(/datum/language/grenzelhoftian)
 	category_tags = list(CTAG_VETERAN)
 	traits_applied = list(TRAIT_HEAVYARMOR, TRAIT_MEDIUMARMOR, TRAIT_STEELHEARTED)
 	subclass_stats = list(
@@ -318,7 +319,6 @@
 		H.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE) // two handed weapons require a LOT of stamina.
 	H.verbs |= /mob/proc/haltyell
-	H.grant_language(/datum/language/grenzelhoftian)
 	H.cmode_music = 'sound/music/combat_grenzelhoft.ogg'
 
 	H.adjust_blindness(-3)
@@ -409,7 +409,8 @@
 	name = "Ex-Spy"
 	tutorial = "You didn't serve on the frontlines, you were an informant, a spy, an assassin. You wove your way through enemy courts, finding information, neutralizing loose ends. You lived old in a career that many die young. It's a miracle you stand here today. You specialize in knives, whips, and stealth."
 	outfit = /datum/outfit/job/roguetown/vet/spy
-
+	subclass_languages = list(/datum/language/thievescant)
+	cmode_music = 'sound/music/cmode/nobility/combat_spymaster.ogg'
 	category_tags = list(CTAG_VETERAN)
 	traits_applied = list(TRAIT_DODGEEXPERT, TRAIT_CICERONE, TRAIT_STEELHEARTED)
 	subclass_stats = list(
@@ -475,5 +476,3 @@
 		H.change_stat(STATKEY_SPD, 1) // You get -2 speed from being old. You are still in the negative stat wise from picking old.
 		H.change_stat(STATKEY_PER, 2) // You get -2 perception from being old. I want you to at least have a positive perception, to represent that you're observant. The highest perception you can get with this is a 13, so I think we'll be okayed.
 	H.verbs |= /mob/proc/haltyell
-	H.grant_language(/datum/language/thievescant)
-	H.cmode_music = 'sound/music/cmode/nobility/combat_spymaster.ogg'

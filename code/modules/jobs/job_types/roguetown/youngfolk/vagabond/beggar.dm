@@ -4,6 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/vagabond/beggar
+	subclass_languages = list(/datum/language/thievescant)
 	category_tags = list(CTAG_VAGABOND)
 	traits_applied = list(TRAIT_NOSTINK, TRAIT_NASTY_EATER)
 	subclass_stats = list(
@@ -60,5 +61,4 @@
 		H.adjust_skillrank(/datum/skill/misc/climbing, rand(1,5), TRUE)
 		H.adjust_skillrank(/datum/skill/misc/lockpicking, pick (1,2,3,4,5), TRUE)
 		H.STALUC = rand(5, 15)
-		H.grant_language(/datum/language/thievescant)
 		

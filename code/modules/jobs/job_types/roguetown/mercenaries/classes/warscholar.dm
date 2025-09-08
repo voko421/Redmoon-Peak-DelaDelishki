@@ -4,6 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/mercenary/warscholar
+	subclass_languages = list(/datum/language/celestial)
 	class_select_category = CLASS_CAT_NALEDI
 	category_tags = list(CTAG_MERCENARY)
 	cmode_music = 'sound/music/warscholar.ogg'
@@ -53,7 +54,6 @@
 	detailcolor = input("Choose a color.", "NALEDIAN COLORPLEX") as anything in naledicolors
 	detailcolor = naledicolors[detailcolor]
 	to_chat(H, span_warning("You are a Naledi Hierophant, a magician who studied under cloistered sages, well-versed in all manners of arcyne. You prioritize enhancing your teammates and distracting foes while staying in the backline."))
-	H.grant_language(/datum/language/celestial)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 		H.change_stat(STATKEY_SPD, -1)
@@ -96,6 +96,7 @@
 	name = "Naledi Pontifex"
 	tutorial = "You are a Naledi Pontifex, a warrior trained into a hybridized style of movement-controlling magic and hand-to-hand combat. Though your abilities in magical fields are lacking, you are far more dangerous than other magi in a straight fight. You manifest your calm, practiced skill into a killing intent that takes the shape of an arcyne blade."
 	outfit = /datum/outfit/job/roguetown/mercenary/warscholar_pontifex
+	subclass_languages = list(/datum/language/celestial, /datum/language/thievescant)
 	traits_applied = list(TRAIT_DODGEEXPERT, TRAIT_CIVILIZEDBARBARIAN, TRAIT_ARCYNE_T1)
 	subclass_stats = list(
 		STATKEY_STR = 3,
@@ -141,8 +142,6 @@
 	detailcolor = input("Choose a color.", "NALEDIAN COLORPLEX") as anything in naledicolors
 	detailcolor = naledicolors[detailcolor]
 	to_chat(H, span_warning("You are a Naledi Pontifex, a warrior trained into a hybridized style of movement-controlling magic and hand-to-hand combat. Though your abilities in magical fields are lacking, you are far more dangerous than other magi in a straight fight. You manifest your calm, practiced skill into a killing intent that takes the shape of an arcyne blade."))
-	H.grant_language(/datum/language/celestial)
-	H.grant_language(/datum/language/thievescant)
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/fetch) // In an attempt to make them less Possibly Wildly OP, they can't freely pick their spells. Casts at apprentice level, but doesn't get the spellbuy points it'd provide.
@@ -237,7 +236,6 @@
 	beltl = /obj/item/flashlight/flare/torch
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 	shoes = /obj/item/clothing/shoes/roguetown/sandals
-	H.grant_language(/datum/language/celestial)
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
 
 	backpack_contents = list(

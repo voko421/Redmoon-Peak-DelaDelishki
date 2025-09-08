@@ -474,6 +474,7 @@
 	name = "Martyr"
 	tutorial = "Martyrs are hand-picked among the most devout of the Holy See. They are given one of the See's cherished relics to protect the Church, and to inspire hope and lead by example of grace, kindness and vicious intolerance to any who do not share the belief of the Ten. They have sworn an Oath in the sight of the gods, and will fulfill it to the bitter end."
 	outfit = /datum/outfit/job/roguetown/martyr/basic
+	subclass_languages = list(/datum/language/grenzelhoftian)
 	category_tags = list(CTAG_MARTYR)
 	subclass_stats = list(
 		STATKEY_CON = 3,
@@ -524,7 +525,6 @@
 		/obj/item/rogueweapon/huntingknife/idagger/silver = 1,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-	H.grant_language(/datum/language/grenzelhoftian)
 	H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
 
 

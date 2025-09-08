@@ -4,6 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = NON_DWARVEN_RACE_TYPES //no dwarf sprites
 	outfit = /datum/outfit/job/roguetown/mercenary/rumaclan
+	subclass_languages = list(/datum/language/kazengunese)
 	class_select_category = CLASS_CAT_KAZENGUN
 	category_tags = list(CTAG_MERCENARY)
 	traits_applied = list(TRAIT_CRITICAL_RESISTANCE, TRAIT_HARDDISMEMBER, TRAIT_NOPAINSTUN)
@@ -46,7 +47,6 @@
 		/obj/item/roguekey/mercenary,
 		/obj/item/flashlight/flare/torch/lantern,
 		)
-	H.grant_language(/datum/language/kazengunese)
 	H.merctype = 9
 
 /datum/advclass/mercenary/rumaclan/sasu
@@ -95,5 +95,4 @@
 		/obj/item/rogueweapon/huntingknife/idagger,
 		/obj/item/rogueweapon/scabbard/sheath = 1,
 		)
-	H.grant_language(/datum/language/kazengunese)
 	H.merctype = 9

@@ -6,6 +6,7 @@
 	outfit = /datum/outfit/job/roguetown/mercenary/condottiero
 	class_select_category = CLASS_CAT_ETRUSCA
 	category_tags = list(CTAG_MERCENARY)
+	subclass_languages = list(/datum/language/etruscan, /datum/language/thievescant)
 	cmode_music = 'sound/music/combat_condottiero.ogg'
 	traits_applied = list(TRAIT_DODGEEXPERT)
 	subclass_stats = list(
@@ -54,7 +55,4 @@
 		/obj/item/rogueweapon/scabbard/sheath = 1,
 		/obj/item/lockpick = 1
 		)
-
-	H.grant_language(/datum/language/etruscan)
-	H.grant_language(/datum/language/thievescant)
 	H.merctype = 3

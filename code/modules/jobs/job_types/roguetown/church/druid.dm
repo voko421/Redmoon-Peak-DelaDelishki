@@ -44,6 +44,7 @@
 	The forest is the most comfortable place for you, toiling alongside soilsons and soilbrides...although sometimes what lies beyond the gates fills your soul with a feral yearning."
 	outfit = /datum/outfit/job/roguetown/druid/basic
 	category_tags = list(CTAG_DRUID)
+	subclass_languages = list(/datum/language/beast)
 	subclass_stats = list(
 		STATKEY_INT = 2,
 		STATKEY_WIL = 2,
@@ -89,7 +90,6 @@
 	wrists = /obj/item/clothing/neck/roguetown/psicross/dendor
 	shirt = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
 	backpack_contents = list(/obj/item/ritechalk)
-	H.grant_language(/datum/language/beast)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/magic/druidic, 1, TRUE)

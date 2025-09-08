@@ -37,6 +37,20 @@
 	tutorial = "The Archivist meticulously preserves and organizes ancient scrolls and tomes, safeguarding the collective knowledge of the realm for generations to come. Nobles and Peasants alike often seek your expertise on matters of history and fact, and your keenly-kept records on the events of this week will likely stand a testament to your Duke's benevolence and their realm's prosperity...or not. After all, you hold the true power: \
 	The power to dictate how the future generations will look back on these coming days."
 	outfit = /datum/outfit/job/roguetown/archivist/basic
+	subclass_languages = list(
+		/datum/language/elvish,
+		/datum/language/dwarvish,
+		/datum/language/celestial,
+		/datum/language/hellspeak,
+		/datum/language/orcish,
+		/datum/language/grenzelhoftian,
+		/datum/language/otavan,
+		/datum/language/etruscan,
+		/datum/language/gronnic,
+		/datum/language/kazengunese,
+		/datum/language/draconic,
+		/datum/language/aavnic, // All but beast, which is associated with werewolves.
+	)
 	category_tags = list(CTAG_ARCHIVIST)
 	subclass_stats = list(
 		STATKEY_INT = 4,
@@ -77,18 +91,6 @@
 		/obj/item/recipe_book/alchemy
 	)
 
-	H.grant_language(/datum/language/elvish)
-	H.grant_language(/datum/language/dwarvish)
-	H.grant_language(/datum/language/celestial)
-	H.grant_language(/datum/language/hellspeak)
-	H.grant_language(/datum/language/orcish)
-	H.grant_language(/datum/language/grenzelhoftian)
-	H.grant_language(/datum/language/otavan)
-	H.grant_language(/datum/language/etruscan)
-	H.grant_language(/datum/language/gronnic)
-	H.grant_language(/datum/language/kazengunese)
-	H.grant_language(/datum/language/draconic)
-	H.grant_language(/datum/language/aavnic) // All but beast, which is associated with werewolves.
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/teach)
 		H.mind?.adjust_spellpoints(12)

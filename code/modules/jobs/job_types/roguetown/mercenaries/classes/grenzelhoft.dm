@@ -7,6 +7,7 @@
 	class_select_category = CLASS_CAT_GRENZELHOFT
 	category_tags = list(CTAG_MERCENARY)
 	cmode_music = 'sound/music/combat_grenzelhoft.ogg'
+	subclass_languages = list(/datum/language/grenzelhoftian)
 	traits_applied = list(TRAIT_HEAVYARMOR, TRAIT_STEELHEARTED)
 	subclass_stats = list(
 		STATKEY_CON = 3,
@@ -63,8 +64,6 @@
 		/obj/item/rogueweapon/huntingknife = 1,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-
-	H.grant_language(/datum/language/grenzelhoftian)
 	H.merctype = 7
 
 /datum/advclass/mercenary/grenzelhoft/halberdier
@@ -124,8 +123,6 @@
 		/obj/item/rogueweapon/huntingknife = 1,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-
-	H.grant_language(/datum/language/grenzelhoftian)
 	H.merctype = 7
 
 //crossbow and axe class. Rearguard. Utility skills, no medium armor, no dodge expert. This is NOT a go-face-first-into-war class.
@@ -191,7 +188,5 @@
 		/obj/item/rogueweapon/huntingknife = 1,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-
-	H.grant_language(/datum/language/grenzelhoftian)
 	H.merctype = 7
 

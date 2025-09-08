@@ -466,6 +466,12 @@
 					for(var/stat in adv_ref.adv_stat_ceiling)
 						dat += "["[capitalize(stat)]: <b>\Roman[adv_ref.adv_stat_ceiling[stat]]</b>"] | "
 					dat += "<i><br>Regardless of your statpacks or race choice, you will not be able to exceed these stats on spawn.</i></font>"
+				if(length(adv_ref.subclass_languages))
+					dat += "<details><summary><i>Known Languages</i></summary>"
+					for(var/i in 1 to length(adv_ref.subclass_languages))
+						var/datum/language/lang = adv_ref.subclass_languages[i]
+						dat += "<i>[initial(lang.name)][i == length(adv_ref.subclass_languages) ? "" : ", "]</i>"
+					dat += "</details>"
 				dat += "<table align='center'; width='100%'; height='100%';border: 1px solid white;border-collapse: collapse>"
 				dat += "<tr style='vertical-align:top'>"
 				dat += "<td width = 50%>"	//Table for SubClass Traits | Class Skills

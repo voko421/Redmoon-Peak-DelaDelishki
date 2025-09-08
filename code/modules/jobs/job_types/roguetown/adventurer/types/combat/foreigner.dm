@@ -7,6 +7,8 @@
 	class_select_category = CLASS_CAT_NOMAD
 	traits_applied = list(TRAIT_STEELHEARTED)
 	category_tags = list(CTAG_ADVENTURER, CTAG_COURTAGENT)
+	subclass_languages = list(/datum/language/kazengunese)
+	cmode_music = 'sound/music/combat_kazengite.ogg'
 	subclass_stats = list(
 		STATKEY_STR = 2,
 		STATKEY_CON = 2,
@@ -43,13 +45,14 @@
 		/obj/item/flashlight/flare/torch/lantern,
 		)
 	H.set_blindness(0)
-	H.cmode_music = 'sound/music/combat_kazengite.ogg'
 
 /datum/advclass/foreigner/custodian
 	name = "Custodian"
 	tutorial = "You are an ex-guardian, whenever that be for a petty noble, or a small shrine. You excel in defense with quarterstaffs, or have taken up the Naginata's offensive martial capabilities."
 	allowed_races = NON_DWARVEN_RACE_TYPES //roughneck & custodian sprites dont have dwarf variants - adjust if/when a second update comes out with dwarf sprites
 	outfit = /datum/outfit/job/roguetown/adventurer/custodian
+	subclass_languages = list(/datum/language/kazengunese)
+	cmode_music = 'sound/music/combat_kazengite.ogg'
 	subclass_stats = list(
 		STATKEY_STR = 2,
 		STATKEY_CON = 2,
@@ -87,8 +90,6 @@
 			r_hand = /obj/item/rogueweapon/spear/naginata
 		if("Quarterstaff")
 			backr = /obj/item/rogueweapon/woodstaff/quarterstaff/steel
-	H.cmode_music = 'sound/music/combat_kazengite.ogg'
-	H.grant_language(/datum/language/kazengunese)
 
 /datum/advclass/foreigner/yoruku
 	name = "Yoruku"
@@ -96,6 +97,8 @@
 	for combat in the tight confines of castles and back alleys."
 	allowed_races = NON_DWARVEN_RACE_TYPES //roughneck & custodian sprites dont have dwarf variants - adjust if/when a second update comes out with dwarf sprites
 	outfit = /datum/outfit/job/roguetown/adventurer/yoruku
+	subclass_languages = list(/datum/language/kazengunese)
+	cmode_music = 'sound/music/combat_kazengite.ogg'
 	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_DODGEEXPERT)
 	subclass_stats = list(
 		STATKEY_SPD = 3,
@@ -150,6 +153,3 @@
 			mask = /obj/item/clothing/mask/rogue/facemask/yoruku_oni
 		if("Kitsune")
 			mask = /obj/item/clothing/mask/rogue/facemask/yoruku_kitsune
-
-	H.cmode_music = 'sound/music/combat_kazengite.ogg'
-	H.grant_language(/datum/language/kazengunese)

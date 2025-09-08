@@ -5,6 +5,7 @@
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/confessor
 	category_tags = list(CTAG_INQUISITION)
+	subclass_languages = list(/datum/language/otavan)
 	cmode_music = 'sound/music/cmode/antag/combat_deadlyshadows.ogg'
 	traits_applied = list(
 		TRAIT_DODGEEXPERT,
@@ -61,7 +62,6 @@
 		/obj/item/grapplinghook = 1,
 		/obj/item/paper/inqslip/arrival/ortho = 1
 		)
-	H.grant_language(/datum/language/otavan)
 
 /datum/outfit/job/roguetown/confessor/choose_loadout(mob/living/carbon/human/H)
 	. = ..()

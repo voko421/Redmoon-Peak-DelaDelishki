@@ -38,6 +38,9 @@
 	/// Subclass skills. Levelled UP TO.
 	var/list/subclass_skills
 
+	/// Subclass languages.
+	var/list/subclass_languages
+
 	/// Extra fluff added to the role explanation in class selection.
 	var/extra_context
 
@@ -67,6 +70,10 @@
 
 	if(adaptive_name)
 		H.adaptive_name = TRUE
+
+	if(length(subclass_languages))
+		for(var/lang in subclass_languages)
+			H.grant_language(lang)
 
 	if(length(subclass_stats))
 		for(var/stat in subclass_stats)

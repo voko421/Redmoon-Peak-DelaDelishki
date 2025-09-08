@@ -99,6 +99,7 @@
 	outfit = /datum/outfit/job/roguetown/hand/spymaster
 
 	category_tags = list(CTAG_HAND)
+	subclass_languages = list(/datum/language/thievescant)
 	traits_applied = list(TRAIT_MEDIUMARMOR, TRAIT_DODGEEXPERT, TRAIT_PERFECT_TRACKER)
 	subclass_stats = list(
 		STATKEY_SPD = 3,
@@ -148,7 +149,6 @@
 		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/hand
 		pants = /obj/item/clothing/under/roguetown/tights/black
 		id = /obj/item/scomstone/garrison
-	H.grant_language(/datum/language/thievescant)
 
 /datum/advclass/hand/advisor
 	name = "Advisor"

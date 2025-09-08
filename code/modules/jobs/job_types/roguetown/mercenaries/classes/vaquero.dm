@@ -6,6 +6,7 @@
 	horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigabuck/tame/saddled
 	cmode_music = 'sound/music/combat_vaquero.ogg'
 	category_tags = list(CTAG_MERCENARY)
+	subclass_languages = list(/datum/language/etruscan)
 	traits_applied = list(TRAIT_DODGEEXPERT, TRAIT_DECEIVING_MEEKNESS, TRAIT_MEDIUMARMOR)
 	subclass_stats = list(
 		STATKEY_SPD = 3,
@@ -81,5 +82,4 @@
 			backr = /obj/item/rogue/instrument/vocals
 		if("Flute")
 			backr = /obj/item/rogue/instrument/flute
-	H.grant_language(/datum/language/etruscan)
 	H.merctype = 13

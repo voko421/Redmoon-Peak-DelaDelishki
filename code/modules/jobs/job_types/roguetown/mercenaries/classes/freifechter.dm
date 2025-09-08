@@ -4,6 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/mercenary/freelancer
+	subclass_languages = list(/datum/language/aavnic)//Your character could not have possibly "graduated" without atleast some basic knowledge of Aavnic.
 	class_select_category = CLASS_CAT_AAVNR
 	category_tags = list(CTAG_MERCENARY)
 	cmode_music = 'sound/music/combat_noble.ogg'
@@ -51,15 +52,14 @@
 	gloves = /obj/item/clothing/gloves/roguetown/fingerless_leather
 	backr = /obj/item/storage/backpack/rogue/satchel/short
 
-	backpack_contents = list(/obj/item/roguekey/mercenary)
-
-	H.grant_language(/datum/language/aavnic)		//Your character could not have possibly "graduated" without atleast some basic knowledge of Aavnic.
+	backpack_contents = list(/obj/item/roguekey/mercenary)	
 	H.merctype = 6
 
 /datum/advclass/mercenary/freelancer/lancer
 	name = "Lancer"
 	tutorial = "You put complete trust in your polearm, the most effective weapon the world has seen. Why wear armour when you cannot be hit? You can choose your polearm, and are exceptionally accurate."
 	outfit = /datum/outfit/job/roguetown/mercenary/freelancer_lancer
+	subclass_languages = list(/datum/language/aavnic)//Your character could not have possibly "graduated" without atleast some basic knowledge of Aavnic.
 	traits_applied = list(TRAIT_BADTRAINER)
 	//To give you an edge in specialty moves like feints and stop you from being feinted
 	subclass_stats = list(
@@ -105,6 +105,4 @@
 	backr = /obj/item/storage/backpack/rogue/satchel/short
 
 	backpack_contents = list(/obj/item/roguekey/mercenary)
-
-	H.grant_language(/datum/language/aavnic)		//Your character could not have possibly "graduated" without atleast some basic knowledge of Aavnic.
 	H.merctype = 6

@@ -4,6 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = NON_DWARVEN_RACE_TYPES
 	outfit = /datum/outfit/job/roguetown/mercenary/routier
+	subclass_languages = list(/datum/language/otavan)
 	class_select_category = CLASS_CAT_OTAVA
 	category_tags = list(CTAG_MERCENARY)
 	traits_applied = list(TRAIT_HEAVYARMOR, TRAIT_NOBLE)
@@ -72,7 +73,4 @@
 		/obj/item/roguekey/mercenary = 1,
 		/obj/item/flashlight/flare/torch = 1,
 		)
-
-	H.grant_language(/datum/language/otavan)
-	
 	H.merctype = 10

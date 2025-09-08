@@ -39,6 +39,20 @@
 	Nobles and cutpurses alike shuffle up to your counter, coins in hand, desperate for a moment in the golden glow of the broadcast horn. \
 	In your upstairs studio, you host debates, recite gossip, and spin tales that will ripple through every corner of town. After all, you hold the true power: the power to decide what all of the city hears... and how loudly."
 	outfit = /datum/outfit/job/roguetown/loudmouth/basic
+	subclass_languages = list(
+		/datum/language/elvish,
+		/datum/language/dwarvish,
+		/datum/language/celestial,
+		/datum/language/hellspeak,
+		/datum/language/orcish,
+		/datum/language/grenzelhoftian,
+		/datum/language/otavan,
+		/datum/language/etruscan,
+		/datum/language/gronnic,
+		/datum/language/kazengunese,
+		/datum/language/draconic,
+		/datum/language/aavnic, // All but beast, which is associated with werewolves.
+	)
 	category_tags = list(CTAG_TOWNCRIER)
 	subclass_stats = list(
 		STATKEY_WIL = 3,
@@ -76,18 +90,6 @@
 	backpack_contents = list(
 		/obj/item/recipe_book/alchemy
 	)
-	H.grant_language(/datum/language/elvish)
-	H.grant_language(/datum/language/dwarvish)
-	H.grant_language(/datum/language/celestial)
-	H.grant_language(/datum/language/hellspeak)
-	H.grant_language(/datum/language/orcish)
-	H.grant_language(/datum/language/grenzelhoftian)
-	H.grant_language(/datum/language/otavan)
-	H.grant_language(/datum/language/etruscan)
-	H.grant_language(/datum/language/gronnic)
-	H.grant_language(/datum/language/kazengunese)
-	H.grant_language(/datum/language/draconic)
-	H.grant_language(/datum/language/aavnic) // All but beast, which is associated with werewolves.
 	if (H && H.mind)
 		H.mind.adjust_spellpoints(6)
 	if(H.age == AGE_OLD)

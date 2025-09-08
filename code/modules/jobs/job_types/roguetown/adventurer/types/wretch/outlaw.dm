@@ -5,6 +5,7 @@
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/wretch/outlaw
 	category_tags = list(CTAG_WRETCH)
+	subclass_languages = list(/datum/language/thievescant)
 	traits_applied = list(TRAIT_DODGEEXPERT)
 	subclass_stats = list(
 		STATKEY_SPD = 3,
@@ -74,13 +75,13 @@
 		if ("Whip")
 			H.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
 			beltl = /obj/item/rogueweapon/whip
-	H.grant_language(/datum/language/thievescant)
 	wretch_select_bounty(H)
 
 /datum/advclass/wretch/outlaw/marauder
 	name = "Marauder"
 	tutorial = "You are a brigand and a pillager - you prefer to get your coins with direct means from unfortunate victims."
 	outfit = /datum/outfit/job/roguetown/wretch/marauder
+	subclass_languages = list(/datum/language/thievescant)
 	//Still the speed class
 	subclass_stats = list(
 		STATKEY_CON = 2,
@@ -151,5 +152,4 @@
 			H.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
 			l_hand = /obj/item/rogueweapon/spear/militia
 			backr = /obj/item/rogueweapon/shield/heater
-	H.grant_language(/datum/language/thievescant)
 	wretch_select_bounty(H)

@@ -5,6 +5,7 @@
 	allowed_races = RACES_NO_CONSTRUCT
 	outfit = /datum/outfit/job/roguetown/adventurer/noble
 	traits_applied = list(TRAIT_NOBLE)
+	class_select_category = CLASS_CAT_NOBLE
 	category_tags = list(CTAG_ADVENTURER, CTAG_COURTAGENT)
 
 	cmode_music = 'sound/music/combat_knight.ogg'

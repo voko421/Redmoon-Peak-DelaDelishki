@@ -35,7 +35,7 @@
 	/// Subclass stat bonuses.
 	var/list/subclass_stats
 
-	/// Subclass skills. Levelled UP TO.
+	/// Subclass skills. Is NOT capped to the listed level, but instead gives that number of levels.. EX. list(/datum/skill = SKILL_LEVEL_JOURNEYMAN)
 	var/list/subclass_skills
 
 	/// Subclass languages.
@@ -84,7 +84,8 @@
 
 	if(length(subclass_skills))
 		for(var/skill in subclass_skills)
-			H.adjust_skillrank_up_to(skill, subclass_skills[skill], TRUE)
+			if(H.get_skill_level(skill) < subclass_skills[skill])
+				H.adjust_skillrank(skill, subclass_skills[skill], TRUE)
 
 	if(subclass_spellpoints > 0)
 		H.mind?.adjust_spellpoints(subclass_spellpoints)

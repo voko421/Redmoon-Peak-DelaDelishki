@@ -64,7 +64,7 @@
 		return
 	if(!stat)
 		var/pain_threshold = HAS_TRAIT(src, TRAIT_ADRENALINE_RUSH) ? ((STAWIL + 5) * 10) : (STAWIL * 10)
-		if(has_flaw(/datum/charflaw/masochist)) // Masochists handle pain better by about 1 endurance point
+		if(has_flaw(/datum/charflaw/addiction/masochist)) // Masochists handle pain better by about 1 endurance point
 			pain_threshold += 10
 		var/painpercent = get_complex_pain() / pain_threshold
 		painpercent = painpercent * 100

@@ -93,7 +93,7 @@
 		return
 	if(isliving(attacker) && attacker != owner)
 		attacker.adjust_fire_stacks(5)
-		attacker.IgniteMob()
+		attacker.ignite_mob()
 		attacker.visible_message(span_danger("[I] sets [attacker] on fire!"))
 		src.last_used = world.time
 

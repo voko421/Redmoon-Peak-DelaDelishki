@@ -175,6 +175,7 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 
 	var/botched_butcher_results
 	var/perfect_butcher_results
+	var/list/inherent_spells = list()
 
 	///What distance should we be checking for interesting things when considering idling/deidling? Defaults to AI_DEFAULT_INTERESTING_DIST
 	var/interesting_dist = AI_DEFAULT_INTERESTING_DIST
@@ -434,7 +435,7 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	var/botch_chance = 0
 	if(length(botched_butcher_results) && butchery_skill_level < SKILL_LEVEL_JOURNEYMAN)
 		botch_chance = 70 - (20 * butchery_skill_level) // 70% at unskilled, 20% lower for each level above it, 0% at journeyman or higher
-	
+
 	var/perfect_chance = 0
 	if(length(perfect_butcher_results))
 		switch(butchery_skill_level)
@@ -492,7 +493,7 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 			if(rotstuff && istype(I,/obj/item/reagent_containers/food/snacks))
 				var/obj/item/reagent_containers/food/snacks/F = I
 				F.become_rotten()
-		
+
 		if(user.mind)
 			user.mind.add_sleep_experience(/datum/skill/labor/butchering, user.STAINT * 0.5)
 		playsound(src, 'sound/foley/gross.ogg', 100, FALSE)
@@ -928,6 +929,8 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 		toggle_ai(initial(AIStatus))
 
 /mob/living/simple_animal/Move()
+	if(binded)
+		return FALSE
 	. = ..()
 //	if(!stat)
 //		eat_plants()

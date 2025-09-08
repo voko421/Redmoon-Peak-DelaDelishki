@@ -46,14 +46,12 @@
 	aggressive = 1
 	ranged = TRUE
 	rapid = TRUE
-	projectiletype = /obj/projectile/magic/aoe/fireball/rogue
+	projectiletype = /obj/projectile/magic/aoe/fireball/rogue/great
 	ranged_message = "throws fire"
 	var/flame_cd = 0
 	var/summon_cd = 0
-
-/mob/living/simple_animal/hostile/retaliate/rogue/infernal/fiend/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_SILVER_WEAK, TRAIT_GENERIC)
+	inherent_spells = list(/obj/effect/proc_holder/spell/self/call_infernals,
+	/obj/effect/proc_holder/spell/invoked/fiend_meteor)
 
 /mob/living/simple_animal/hostile/retaliate/rogue/infernal/fiend/death(gibbed)
 	..()
@@ -77,12 +75,12 @@
 		return
 	visible_message(span_danger("<b>[src]</b> [ranged_message] at [A]!"))
 
-	if(world.time >= src.flame_cd + 250)
+	if(world.time >= src.flame_cd + 250 && !mind)
 		var/mob/living/targetted = target
 		create_meteors(targetted)
 		src.flame_cd = world.time
 
-	if(world.time >= src.summon_cd + 200) // Adjusted from 250 to give them a bit more strength in summoning instead to compensate for no meteors
+	if(world.time >= src.summon_cd + 200 && !mind)
 		callforbackup()
 
 		src.summon_cd = world.time
@@ -95,6 +93,14 @@
 		Shoot(A)
 	ranged_cooldown = world.time + ranged_cooldown_time
 
+/obj/effect/proc_holder/spell/invoked/fiend_meteor
+	name = "Meteor storm"
+	desc = "Summons forth dangerous meteors from the sky to scatter and smash foes."
+	overlay_state = "meteor_storm"
+	recharge_time = 20 SECONDS
+	chargetime = 0
+	range = 15
+	antimagic_allowed = TRUE
 
 /mob/living/simple_animal/hostile/retaliate/rogue/infernal/fiend/proc/create_meteors(atom/target)
 	if(!target)
@@ -127,3 +133,20 @@
 
 /mob/living/simple_animal/hostile/retaliate/rogue/infernal/fiend/simple_add_wound(datum/wound/wound, silent = FALSE, crit_message = FALSE)	//no wounding the fiend
 	return
+
+/obj/effect/proc_holder/spell/self/call_infernals
+	name = "Call Infernals"
+	recharge_time = 20 SECONDS
+	sound = list('sound/magic/whiteflame.ogg')
+	overlay_state = "burning"
+
+/obj/effect/proc_holder/spell/self/call_infernals/cast(list/targets, mob/living/user = usr)
+	if(istype(user, /mob/living/simple_animal/hostile/retaliate/rogue/infernal/fiend))
+		var/mob/living/simple_animal/hostile/retaliate/rogue/infernal/fiend/demonguy = user
+		if(world.time <= demonguy.summon_cd + 200)//shouldn't ever happen cuz the spell cd is the same as summon_cd but I'd rather it check with the internal cd just in case
+			to_chat(user,span_warning("Too soon!"))
+			revert_cast()
+			return FALSE
+		demonguy.callforbackup()
+		demonguy.say("To me, my minions!")
+		demonguy.summon_cd = world.time

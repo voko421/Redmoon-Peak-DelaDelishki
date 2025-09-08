@@ -9,6 +9,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	grid_width = 32
 	grid_height = 32
+	var/tier = 0 //used for determining potency for mob healing
 
 // MELD
 /obj/item/magic/melded
@@ -104,6 +105,7 @@
     resistance_flags = FIRE_PROOF
     w_class = WEIGHT_CLASS_SMALL
     sellprice = 10
+    tier = 1
 
 /obj/item/magic/hellhoundfang//T2 mage summon loot
     name = "hellhound fang"
@@ -112,6 +114,7 @@
     resistance_flags = FIRE_PROOF
     w_class = WEIGHT_CLASS_SMALL
     sellprice = 20
+    tier = 2
 
 /obj/item/magic/infernalcore// T3 mage summon loot
     name = "infernal core"
@@ -120,6 +123,7 @@
     resistance_flags = FIRE_PROOF
     w_class = WEIGHT_CLASS_SMALL
     sellprice = 50
+    tier = 3
 
 /obj/item/magic/abyssalflame//T4 mage summon loot
     name = "abyssal flame"
@@ -128,6 +132,7 @@
     resistance_flags = FIRE_PROOF
     w_class = WEIGHT_CLASS_SMALL
     sellprice = 250
+    tier = 4
 
 //FAIRY
 /obj/item/magic/fairydust	//T1 mage summon loot
@@ -137,6 +142,7 @@
     resistance_flags = FIRE_PROOF
     w_class = WEIGHT_CLASS_SMALL
     sellprice = 20
+    tier = 1
 
 /obj/item/magic/iridescentscale	//T2 mage summon loot
     name = "iridescent scales"
@@ -145,6 +151,7 @@
     resistance_flags = FIRE_PROOF
     w_class = WEIGHT_CLASS_SMALL
     sellprice = 30
+    tier = 2
 
 /obj/item/magic/heartwoodcore	//T3 mage summon loot
     name = "heartwood core"
@@ -153,6 +160,7 @@
     resistance_flags = FIRE_PROOF
     w_class = WEIGHT_CLASS_SMALL
     sellprice = 50
+    tier = 3
 
 /obj/item/magic/sylvanessence	//T4 mage summon loot
     name = "sylvan essence"
@@ -161,6 +169,7 @@
     resistance_flags = FIRE_PROOF
     w_class = WEIGHT_CLASS_SMALL
     sellprice = 250
+    tier = 4
 
 //ELEMENTAL
 /obj/item/magic/elementalmote
@@ -170,6 +179,7 @@
     resistance_flags = FIRE_PROOF
     w_class = WEIGHT_CLASS_SMALL
     sellprice = 15
+    tier = 1
 
 /obj/item/magic/elementalshard
     name = "elemental shard"
@@ -178,6 +188,7 @@
     resistance_flags = FIRE_PROOF
     w_class = WEIGHT_CLASS_SMALL
     sellprice = 30
+    tier = 2
 
 /obj/item/magic/elementalfragment
     name = "elemental fragment"
@@ -186,6 +197,7 @@
     resistance_flags = FIRE_PROOF
     w_class = WEIGHT_CLASS_SMALL
     sellprice = 100
+    tier = 3
 
 /obj/item/magic/elementalrelic
     name = "elemental relic"
@@ -194,3 +206,4 @@
     resistance_flags = FIRE_PROOF
     w_class = WEIGHT_CLASS_SMALL
     sellprice = 250
+    tier = 4

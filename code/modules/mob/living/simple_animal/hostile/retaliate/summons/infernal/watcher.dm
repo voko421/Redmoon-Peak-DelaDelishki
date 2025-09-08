@@ -44,9 +44,8 @@
 	aggressive = 1
 //	stat_attack = UNCONSCIOUS
 	ranged = TRUE
-	rapid = 2
 	ranged_cooldown = 40
-	projectiletype = /obj/projectile/magic/aoe/fireball/spitfire
+	projectiletype = /obj/projectile/magic/aoe/fireball/rogue
 	ranged_message = "stares"
 
 /mob/living/simple_animal/hostile/retaliate/rogue/infernal/watcher/Initialize()

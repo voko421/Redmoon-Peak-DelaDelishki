@@ -6,6 +6,8 @@
 	ADD_TRAIT(src, TRAIT_NOFIRE, "[type]")
 	ADD_TRAIT(src, TRAIT_NOBREATH, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_TOXIMMUNE, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_SILVER_WEAK, TRAIT_GENERIC)
+	weather_immunities += "lava"
 
 /mob/living/simple_animal/hostile/retaliate/rogue/infernal/Life()
 	..()
@@ -55,9 +57,18 @@
 			return "foreleg"
 	return ..()
 
-/mob/living/simple_animal/hostile/retaliate/rogue/infernal/attackby(obj/item/P, mob/living/carbon/human/user, params)
-	if(istype(P, /obj/item/magic/infernalash))
-		src.health += 100
-	if(istype(P, /obj/item/magic/melded))
-		src.health = src.maxHealth
+/mob/living/simple_animal/hostile/retaliate/rogue/infernal/attackby(obj/item/I, mob/living/carbon/human/user, params)
+	if(istype(I, /obj/item/magic/))
+		var/obj/item/magic/magicmaterial = I
+		if(istype(magicmaterial, /obj/item/magic/infernalash) || istype(magicmaterial, /obj/item/magic/hellhoundfang) || istype(magicmaterial, /obj/item/magic/infernalcore) || istype(magicmaterial, /obj/item/magic/abyssalflame))
+			if(health == maxHealth)
+				to_chat(user, "[src] is already healthy!")
+				return
+			to_chat(user, "I start healing [src] with [magicmaterial].")
+			if(do_mob(user, src, 20))
+				var/tier_diff = max((summon_tier - magicmaterial.tier), 1)//find the percentage of the guy we're healing based on the tier of our magic material
+				visible_message("[src] absorbs [magicmaterial] and is healed.")
+				adjustBruteLoss(-maxHealth / tier_diff)
+				qdel(magicmaterial)
+				return
 	..()

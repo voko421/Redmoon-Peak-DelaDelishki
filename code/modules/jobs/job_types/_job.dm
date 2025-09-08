@@ -467,7 +467,7 @@
 					dat += "<i><br>Regardless of your statpacks or race choice, you will not be able to exceed these stats on spawn.</i></font>"
 				dat += "<table align='center'; width='100%'; height='100%';border: 1px solid white;border-collapse: collapse>"
 				dat += "<tr style='vertical-align:top'>"
-				dat += "<td width = 50%>"
+				dat += "<td width = 50%>"	//Table for SubClass Traits | Class Skills
 				if(length(adv_ref.traits_applied) || (!length(adv_ref.traits_applied) && length(job_traits)))
 					var/list/traitlist
 					if(length(adv_ref.traits_applied))
@@ -482,7 +482,7 @@
 						dat += "<i><font color = '#a3ffe0'>[GLOB.roguetraits[trait]]</font></i></details>"
 					dat += "</font>"
 					dat += "<br>"
-				dat += "</td>"
+				dat += "</td>"	//Trait Table end
 				if(length(adv_ref.subclass_skills))
 					dat += "<td width = 50%; style='text-align:right'>"
 					var/list/notable_skills = list()
@@ -494,30 +494,16 @@
 					if(!length(notable_skills))	//Nothing above Jman AND no Combat skills.
 						dat += "<i>This subclass has no notable skills.</i>"
 					else
+						notable_skills = sortTim(notable_skills,/proc/cmp_numeric_dsc, TRUE)
 						var/max_skills = 5	//We don't want to print out /all/ of them, as it messes up the formatting.
-						var/list/filtered_skills = list()
-						var/level_check = SKILL_LEVEL_LEGENDARY
-						for(var/i in 1 to 4)	//Really hodgepodged assoc list sort algo to sort the skills from Legendary to Jman
-							for(var/sk in notable_skills)
-								if(notable_skills[sk] == level_check && max_skills > 0)
-									filtered_skills[sk] = notable_skills[sk]
-									max_skills--
-							if(max_skills <= 0)
-								break
-							level_check--
 						dat += "<font color ='#7a4d0a'>Notable Skills: </font>"
-						var/list/final_list
-						if(length(filtered_skills))
-							final_list = filtered_skills
-						else	//Nothing at Jman+ at all, so we resort to notable skills, which at this point will just be random combat skills.
-							final_list = notable_skills
-						for(var/sk in final_list)
-							var/datum/skill/skill = sk
-							dat += "<font color ='#d4b164'><br>[initial(skill.name)] — [SSskills.level_names[notable_skills[sk]]]</font>"
+						for(var/sk in notable_skills)
+							if(max_skills > 0)
+								var/datum/skill/skill = sk
+								dat += "<font color ='#d4b164'><br>[initial(skill.name)] — [SSskills.level_names[notable_skills[sk]]]</font>"
+								max_skills--
 						LAZYCLEARLIST(notable_skills)
-						LAZYCLEARLIST(filtered_skills)
-						LAZYCLEARLIST(final_list)
-				dat += "</td></tr></table>"
+				dat += "</td></tr></table>"//Skill table end
 				if(adv_ref.extra_context)
 					dat += "<font color ='#a06c1e'>[adv_ref.extra_context]"
 					dat += "</font></details>"

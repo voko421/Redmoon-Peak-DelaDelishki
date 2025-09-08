@@ -889,7 +889,6 @@ var/forgerites = list("Ritual of Blessed Reforgance")
 				loc.visible_message(span_warning("[user] draws spectral strands of Lux up through the air, tearing the veil between lyfe and death!"))
 				playsound(user, 'sound/vo/mobs/ghost/whisper (3).ogg', 100, FALSE, -1)
 				if(do_after(user, 60))
-					loc.visible_message(span_warning("A terrible cold fills the air!"))
 					playsound(user, 'sound/vo/mobs/ghost/whisper (1).ogg', 100, FALSE, -1)
 					if(do_after(user, 60))
 						loc.visible_message(span_warning("[user] moves their lips but no words can be heard, speaking to a massive spectral figure on the other side!"))
@@ -964,11 +963,13 @@ var/forgerites = list("Ritual of Blessed Reforgance")
 
 /obj/item/soulthread
 	name = "lux-thread"
-	desc = "eerie glowing thread, cometh from the grave"
+	desc = "Eerie glowing thread, cometh from the grave"
 	icon = 'icons/roguetown/items/natural.dmi'
 	icon_state = "luxthread"
 	var/strungtogether = 1
 	sellprice = 3
+	grid_width = 32
+	grid_height = 32
 
 
 /obj/item/soulthread/examine(mob/user)
@@ -988,11 +989,12 @@ var/forgerites = list("Ritual of Blessed Reforgance")
 		qdel(src)
 
 /obj/item/thetoll
+	grid_width = 32
+	grid_height = 32
 	name = "toll"
-	desc = "bound lux-thread into a form. My pact for another chance."
+	desc = "Proof of ten souls being sent to Necra, formed of a material that is not metal, constantly weeping a minute amount of blood. Ten souls for one, the Ferryman may send one back before Necra fully has them."
 	icon = 'icons/roguetown/underworld/enigma_husks.dmi'
 	icon_state = "soultoken"
-	dropshrink = 0.2
 	sellprice = 30
 
 

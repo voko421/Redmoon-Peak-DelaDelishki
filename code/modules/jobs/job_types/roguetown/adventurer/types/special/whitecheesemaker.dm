@@ -17,6 +17,7 @@
 		STATKEY_INT = 3,
 		STATKEY_SPD = 2,
 	)
+	subclass_spellpoints = 9
 	subclass_skills = list(
 		/datum/skill/combat/polearms = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/combat/maces = SKILL_LEVEL_APPRENTICE,
@@ -58,6 +59,5 @@
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/lightningbolt)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/fetch)
-		H.mind.adjust_spellpoints(9)
 
 	H.ambushable = FALSE

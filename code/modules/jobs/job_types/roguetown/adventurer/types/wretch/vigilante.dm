@@ -4,6 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/wretch/vigilante
+	cmode_music = 'sound/music/combatmaniac.ogg'
 	category_tags = list(CTAG_WRETCH)
 	traits_applied = list(TRAIT_DECEIVING_MEEKNESS, TRAIT_PERFECT_TRACKER)
 	maximum_possible_slots = 1 // There can only be one. 
@@ -36,7 +37,6 @@
 		/obj/item/rope/chain = 1,
 		/obj/item/reagent_containers/glass/bottle/alchemical/healthpot = 1,	//Small health vial
 		)
-	H.cmode_music = 'sound/music/combatmaniac.ogg'
 	var/classes = list("The Watchman", "The Gadgeteer", "I AM JUSTICE INCARNATE!!!")
 	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
 	switch(classchoice)

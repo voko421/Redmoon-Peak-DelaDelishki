@@ -16,6 +16,7 @@
 		STATKEY_PER = 1,
 		STATKEY_CON = -1
 	)
+	subclass_spellpoints = 15
 	subclass_skills = list(
 		/datum/skill/combat/polearms = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
@@ -61,14 +62,12 @@
 		H.change_stat(STATKEY_PER, 1)
 		H.mind?.adjust_spellpoints(6)
 	if(H.mind)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/giants_strength)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/longstrider)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/guidance)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/haste)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/fortitude)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/forcewall/greater)
-		H.mind.adjust_spellpoints(15)
 	r_hand = /obj/item/rogueweapon/woodstaff/naledi
 
 

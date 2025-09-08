@@ -5,6 +5,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/wretch/hedgemage
+	cmode_music = 'sound/music/combat_bandit_mage.ogg'
 	category_tags = list(CTAG_WRETCH)
 	traits_applied = list(TRAIT_MAGEARMOR, TRAIT_ARCYNE_T3)
 	// Same stat spread as necromancer, same reasoning
@@ -14,6 +15,7 @@
 		STATKEY_WIL = 1,
 		STATKEY_SPD = 1
 	)
+	subclass_spellpoints = 27 // Unlike Rogue Mage, who gets 6 but DExpert, this one don't have DExpert but have more spell points than anyone but the CM. 
 	subclass_skills = list(
 		/datum/skill/combat/polearms = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
@@ -54,11 +56,7 @@
 		/obj/item/reagent_containers/glass/bottle/alchemical/healthpot = 1,	//Small health vial
 	)
 	H.dna.species.soundpack_m = new /datum/voicepack/male/wizard()
-	H.cmode_music = 'sound/music/combat_bandit_mage.ogg'
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 		H.mind?.adjust_spellpoints(6)
-	if(H.mind)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
-		H.mind.adjust_spellpoints(27) // Unlike Rogue Mage, who gets 6 but DExpert, this one don't have DExpert but have more spell points than anyone but the CM. 
 	wretch_select_bounty(H)

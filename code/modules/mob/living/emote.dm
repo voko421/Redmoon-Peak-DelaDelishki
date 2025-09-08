@@ -765,9 +765,9 @@
 	if(.)
 		for(var/mob/living/carbon/human/L in viewers(7,user))
 			if(L == user)
+				if(L.has_flaw(/datum/charflaw/addiction/masochist))
+					L.sate_addiction()
 				continue
-			if(L.has_flaw(/datum/charflaw/addiction/masochist))
-				L.sate_addiction()
 			if(L.has_flaw(/datum/charflaw/addiction/sadist))
 				L.sate_addiction()
 

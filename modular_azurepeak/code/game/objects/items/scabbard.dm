@@ -74,10 +74,10 @@
 			span_warning("[user] begins to force [A] into [src]!"),
 			span_warningbig("I begin to force [A] into [src].")
 		)
-		if(!move_after(user, 2 SECONDS, target = src))
+		if(!move_after(user, 2 SECONDS, target = user))
 			return FALSE
 		return FALSE
-	if(!move_after(user, sheathe_time, target = src))
+	if(!move_after(user, sheathe_time, target = user))
 		return FALSE
 
 	A.forceMove(src)
@@ -102,9 +102,9 @@
 			span_warning("[user] begins to force [sheathed] out of [src]!"),
 			span_warningbig("I begin to force [sheathed] out of [src].")
 		)
-		if(!move_after(user, 2 SECONDS, target = src))
+		if(!move_after(user, 2 SECONDS, target = user))
 			return FALSE
-	if(!move_after(user, sheathe_time, target = src))
+	if(!move_after(user, sheathe_time, target = user))
 		return FALSE
 
 	sheathed.forceMove(user.loc)

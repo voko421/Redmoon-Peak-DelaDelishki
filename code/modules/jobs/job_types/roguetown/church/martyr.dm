@@ -474,6 +474,7 @@
 	name = "Martyr"
 	tutorial = "Martyrs are hand-picked among the most devout of the Holy See. They are given one of the See's cherished relics to protect the Church, and to inspire hope and lead by example of grace, kindness and vicious intolerance to any who do not share the belief of the Ten. They have sworn an Oath in the sight of the gods, and will fulfill it to the bitter end."
 	outfit = /datum/outfit/job/roguetown/martyr/basic
+	subclass_languages = list(/datum/language/grenzelhoftian)
 	category_tags = list(CTAG_MARTYR)
 	subclass_stats = list(
 		STATKEY_CON = 3,
@@ -481,6 +482,22 @@
 		STATKEY_STR = 2,
 		STATKEY_PER = 1,
 		STATKEY_INT = 1
+	)
+	subclass_skills = list(
+	//No, they don't get any miracles. Their miracle is being able to use their weapon at all.
+		/datum/skill/combat/swords = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/tracking = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/medicine = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/shields = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/cooking = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/sneaking = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/martyr
@@ -508,22 +525,6 @@
 		/obj/item/rogueweapon/huntingknife/idagger/silver = 1,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-
-	//No, they don't get any miracles. Their miracle is being able to use their weapon at all.
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 1, TRUE)
-	H.grant_language(/datum/language/grenzelhoftian)
 	H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
 
 

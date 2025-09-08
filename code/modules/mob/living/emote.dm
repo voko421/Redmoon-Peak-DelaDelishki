@@ -766,6 +766,8 @@
 		for(var/mob/living/carbon/human/L in viewers(7,user))
 			if(L == user)
 				continue
+			if(L.has_flaw(/datum/charflaw/addiction/masochist))
+				L.sate_addiction()
 			if(L.has_flaw(/datum/charflaw/addiction/sadist))
 				L.sate_addiction()
 
@@ -788,7 +790,9 @@
 	if(.)
 		for(var/mob/living/carbon/human/L in viewers(7,user))
 			if(L == user)
-				continue
+				if(L.has_flaw(/datum/charflaw/addiction/masochist))
+					L.sate_addiction()
+				continue // i hope this shit works.
 			if(L.has_flaw(/datum/charflaw/addiction/sadist))
 				L.sate_addiction()
 
@@ -804,7 +808,9 @@
 	if(.)
 		for(var/mob/living/carbon/human/L in viewers(7,user))
 			if(L == user)
-				continue
+				if(L.has_flaw(/datum/charflaw/addiction/masochist))
+					L.sate_addiction()
+				continue // i hope this shit works.
 			if(L.has_flaw(/datum/charflaw/addiction/sadist))
 				L.sate_addiction()
 

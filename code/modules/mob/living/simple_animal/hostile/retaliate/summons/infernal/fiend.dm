@@ -56,15 +56,15 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/infernal/fiend/death(gibbed)
 	..()
 	var/turf/deathspot = get_turf(src)
-	new /obj/item/magic/abyssalflame(deathspot)
-	new /obj/item/magic/infernalcore(deathspot)
-	new /obj/item/magic/infernalcore(deathspot)
-	new /obj/item/magic/hellhoundfang(deathspot)
-	new /obj/item/magic/hellhoundfang(deathspot)
-	new /obj/item/magic/infernalash(deathspot)
-	new /obj/item/magic/infernalash(deathspot)
-	new /obj/item/magic/infernalash(deathspot)
-	new /obj/item/magic/infernalash(deathspot)
+	new /obj/item/magic/infernal/flame(deathspot)
+	new /obj/item/magic/infernal/core(deathspot)
+	new /obj/item/magic/infernal/core(deathspot)
+	new /obj/item/magic/infernal/fang(deathspot)
+	new /obj/item/magic/infernal/fang(deathspot)
+	new /obj/item/magic/infernal/ash(deathspot)
+	new /obj/item/magic/infernal/ash(deathspot)
+	new /obj/item/magic/infernal/ash(deathspot)
+	new /obj/item/magic/infernal/ash(deathspot)
 	new /obj/item/magic/melded/t2(deathspot)
 	update_icon()
 	spill_embedded_objects()
@@ -101,6 +101,21 @@
 	chargetime = 0
 	range = 15
 	antimagic_allowed = TRUE
+
+/obj/effect/proc_holder/spell/invoked/fiend_meteor/cast(list/targets, mob/user = usr)
+	var/turf/T = get_turf(targets[1])
+	playsound(T,'sound/magic/meteorstorm.ogg', 80, TRUE)
+	sleep(2)
+	create_meteors(T)
+
+/obj/effect/proc_holder/spell/invoked/fiend_meteor/proc/create_meteors(atom/target)
+	if(!target)
+		return
+	target.visible_message(span_boldwarning("Fire rains from the sky!"))
+	var/turf/targetturf = get_turf(target)
+	for(var/turf/turf as anything in RANGE_TURFS(4,targetturf))
+		if(prob(20))
+			new /obj/effect/temp_visual/target(turf)
 
 /mob/living/simple_animal/hostile/retaliate/rogue/infernal/fiend/proc/create_meteors(atom/target)
 	if(!target)

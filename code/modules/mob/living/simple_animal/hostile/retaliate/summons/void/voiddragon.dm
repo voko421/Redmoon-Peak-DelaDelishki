@@ -44,6 +44,21 @@ It will also call down lightning strikes from the sky, and fling people with it'
 /mob/living/simple_animal/hostile/retaliate/rogue/voiddragon/proc/unrage()
 	enraged = FALSE
 
+/mob/living/simple_animal/hostile/retaliate/rogue/voiddragon/attackby(obj/item/I, mob/living/carbon/human/user, params)
+	if(istype(I, /obj/item/magic))
+		var/obj/item/magic/magicmaterial = I
+		if(istype(magicmaterial, /obj/item/magic/voidstone))
+			if(health == maxHealth)
+				to_chat(user, "[src] is already healthy!")
+				return
+			to_chat(user, "I start healing [src] with [magicmaterial].")
+			if(do_mob(user, src, 20))
+				var/tier_diff = 0.5 //Voidstone is uncommon, and if your trying to heal the dragon, you deserve the half health heal.
+				visible_message("[src] absorbs [magicmaterial] and is healed.")
+				adjustBruteLoss(-maxHealth * tier_diff)
+				qdel(magicmaterial)
+				return
+	..()
 
 /mob/living/simple_animal/hostile/retaliate/rogue/voiddragon
 	name = "void dragon"

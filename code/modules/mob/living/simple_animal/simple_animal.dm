@@ -196,6 +196,9 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	set_new_cells()
 //	if(dextrous)
 //		AddComponent(/datum/component/personal_crafting)
+	for(var/spell in inherent_spells)
+		var/obj/effect/proc_holder/spell/newspell = new spell()
+		AddSpell(newspell)
 
 /mob/living/simple_animal/Destroy()
 	our_cells = null
@@ -578,6 +581,8 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 		..()
 
 /mob/living/simple_animal/proc/CanAttack(atom/the_target)
+	if(binded)
+		return FALSE
 	if(see_invisible < the_target.invisibility)
 		return FALSE
 	if(ismob(the_target))

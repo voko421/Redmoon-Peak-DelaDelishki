@@ -347,7 +347,14 @@
 	timer = 20 MINUTES
 
 
+
 /datum/stressevent/necrarevive
 	stressadd = 15
 	desc = span_boldred("SO CLOSE TO BEING GRASPED, SO COLD!")
 	timer = 15 MINUTES
+
+/datum/stressevent/blessed_weapon
+	stressadd = -3
+	timer = 999 MINUTES
+	desc = span_green("I'm wielding a BLESSED weapon!")
+

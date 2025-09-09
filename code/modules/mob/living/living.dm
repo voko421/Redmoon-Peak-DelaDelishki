@@ -126,7 +126,7 @@
 	if(!M.buckled && !M.has_buckled_mobs())
 		var/mob_swap = FALSE
 		var/too_strong = (M.move_resist > move_force) //can't swap with immovable objects unless they help us
-		if(istype(M,/mob/living/simple_animal/hostile/retaliate)) 
+		if(istype(M,/mob/living/simple_animal/hostile/retaliate))
 			if(!M:aggressive)
 				mob_swap = TRUE
 		if(!they_can_move) //we have to physically move them
@@ -600,7 +600,7 @@
 				var/obj/item/inqarticles/garrote/gcord = src.get_active_held_item()
 				if(!gcord)
 					gcord = src.get_inactive_held_item()
-				gcord.wipeslate(src)	
+				gcord.wipeslate(src)
 
 		if(forced) //if false, called by the grab item itself, no reason to drop it again
 			if(istype(get_active_held_item(), /obj/item/grabbing))
@@ -651,7 +651,7 @@
 		return
 	if (InCritical() || health <= 0 || (blood_volume < BLOOD_VOLUME_SURVIVE))
 		log_message("Has [whispered ? "whispered his final words" : "succumbed to death"] while in [InFullCritical() ? "hard":"soft"] critical with [round(health, 0.1)] points of health!", LOG_ATTACK)
-		
+
 		if(istype(src.loc, /turf/open/water) && !HAS_TRAIT(src, TRAIT_NOBREATH) && lying && client)
 			GLOB.azure_round_stats[STATS_PEOPLE_DROWNED]++
 
@@ -808,6 +808,25 @@
 	staminaloss = getStaminaLoss()
 	update_stat()
 	SEND_SIGNAL(src, COMSIG_LIVING_HEALTH_UPDATE)
+
+/mob/living/proc/check_revive(mob/living/user)
+	if(src == user)
+		return FALSE
+	if(!mind)
+		return FALSE
+	if(!mind.active)
+		to_chat(user, span_warning("Astrata is not done with [src], yet."))
+		return FALSE
+	if(HAS_TRAIT(src, TRAIT_DNR))
+		to_chat(user, span_danger("None of the Ten have them. Their only chance is spent. Where did they go?"))
+		return FALSE
+	if(HAS_TRAIT(src, TRAIT_NECRAS_VOW))
+		to_chat(user, span_warning("This one has pledged themselves whole to Necra. They are Hers."))
+		return FALSE
+	if(stat < DEAD)
+		to_chat(user, span_warning("Nothing happens."))
+		return FALSE
+	return TRUE
 
 //Proc used to resuscitate a mob, for full_heal see fully_heal()
 /mob/living/proc/revive(full_heal = FALSE, admin_revive = FALSE)
@@ -1180,7 +1199,7 @@
 			combat_modifier -= 0.3
 		else
 			if(HAS_TRAIT(L, TRAIT_BLACKBAGGER))
-				combat_modifier -= 0.3	
+				combat_modifier -= 0.3
 	for(var/obj/item/grabbing/G in grabbedby)
 		if(G.chokehold == TRUE)
 			combat_modifier -= 0.15
@@ -1210,7 +1229,7 @@
 				gcord = L.get_inactive_held_item()
 			to_chat(pulledby, span_warning("[src] struggles against the [gcord]!"))
 			gcord.take_damage(25)
-		if(!HAS_TRAIT(src, TRAIT_GARROTED))	
+		if(!HAS_TRAIT(src, TRAIT_GARROTED))
 			visible_message(span_warning("[src] struggles to break free from [L]'s grip!"), \
 						span_warning("I struggle against [L]'s grip![rchance]"), null, null, L)
 		else
@@ -1218,7 +1237,7 @@
 			if(!gcord)
 				gcord = L.get_inactive_held_item()
 			visible_message(span_warning("[src] struggles to break free from [L]'s [gcord]!"), \
-						span_warning("I struggle against [L]'s [gcord]![rchance]"), null, null, L)					
+						span_warning("I struggle against [L]'s [gcord]![rchance]"), null, null, L)
 		playsound(src.loc, 'sound/combat/grabstruggle.ogg', 50, TRUE, -1)
 		if(!HAS_TRAIT(src, TRAIT_GARROTED))
 			to_chat(pulledby, span_warning("[src] struggles against my grip!"))
@@ -1230,7 +1249,7 @@
 	else
 		var/obj/item/inqarticles/garrote/gcord = L.get_active_held_item()
 		if(!gcord)
-			gcord = L.get_inactive_held_item()	
+			gcord = L.get_inactive_held_item()
 		visible_message(span_warning("[src] breaks free of [L]'s [gcord]!"), \
 						span_notice("I break free of [L]'s [gcord]!"), null, null, L)
 		to_chat(L, span_danger("[src] breaks free from my [gcord]!"))
@@ -1239,7 +1258,7 @@
 		if(!gcord)
 			gcord = L.get_inactive_held_item()
 		gcord.take_damage(gcord.max_integrity)
-		gcord.wipeslate(src)	
+		gcord.wipeslate(src)
 	log_combat(L, src, "broke grab")
 	L.changeNext_move(agg_grab ? CLICK_CD_GRABBING : CLICK_CD_GRABBING + 1 SECONDS)
 	playsound(src.loc, 'sound/combat/grabbreak.ogg', 50, TRUE, -1)
@@ -1326,7 +1345,7 @@
 
 	if(!who.Adjacent(src))
 		return
-		
+
 	who.visible_message(span_warning("[src] tries to remove [who]'s [what.name]."), \
 					span_danger("[src] tries to remove my [what.name]."), null, null, src)
 	to_chat(src, span_danger("I try to remove [who]'s [what.name]..."))
@@ -1525,6 +1544,8 @@
 
 //Mobs on Fire
 /mob/living/proc/ignite_mob(silent)
+	if("lava" in weather_immunities)//immune to lava = immune to burning
+		return FALSE
 	if(fire_stacks <= 0)
 		return FALSE
 

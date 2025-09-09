@@ -162,8 +162,6 @@
 						/obj/item/recipe_book/ceramics = 1,
 						/obj/item/recipe_book/builder = 1,
 						/obj/item/recipe_book/survival = 1,
-						/obj/item/recipe_book/magic = 1,
-						/obj/item/chalk = 1,
 						/obj/item/clothing/mask/rogue/spectacles/golden = 1, //putting them in the bag because bad eye sight virtue strips these
 						/obj/item/contraption/linker = 1,
 						)

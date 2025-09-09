@@ -192,6 +192,7 @@ GLOBAL_LIST(teleport_runes)
 					rituals += GLOB.buffrunerituallist
 				else
 					rituals+= GLOB.t2buffrunerituallist
+			else if(istype(src,/obj/effect/decal/cleanable/roguerune/arcyne/enchantment))
 				if(tier >= 3)
 					rituals += GLOB.t4enchantmentrunerituallist
 				else

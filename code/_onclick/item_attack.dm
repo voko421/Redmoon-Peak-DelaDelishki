@@ -267,7 +267,7 @@
 			strmod += strcappedmod
 		else
 			strmod = ((used_str - 10) * STRENGTH_MULT)
-		if(dullness_ratio)
+		if(dullness_ratio && I.sharpness != IS_BLUNT)
 			if(dullness_ratio <= SHARPNESS_TIER1_FLOOR)
 				strmod = 0
 			else if(dullness_ratio < SHARPNESS_TIER1_THRESHOLD)
@@ -442,7 +442,7 @@
 				if(BCLASS_PICK)
 					dullfactor = DULLFACTOR_ANTAG
 	var/newdam = (I.force_dynamic * user.used_intent.damfactor) - I.force_dynamic
-	if(user.used_intent.damfactor > 1)	//Only relevant if damfactor actually adds damage.
+	if(user.used_intent.damfactor > 1 && I.sharpness != IS_BLUNT)	//Only relevant if damfactor actually adds damage.
 		if(dullness_ratio <= SHARPNESS_TIER1_FLOOR)
 			newdam = 0
 		else if(dullness_ratio <= SHARPNESS_TIER1_THRESHOLD)
@@ -456,7 +456,7 @@
 		newforce *= 0.5
 	newforce = round(newforce,1)
 	newforce = max(newforce, 1)
-	if(dullness_ratio)
+	if(dullness_ratio && I.sharpness != IS_BLUNT)
 		if(dullness_ratio < SHARPNESS_TIER2_THRESHOLD)
 			var/lerpratio = LERP(0, SHARPNESS_TIER2_THRESHOLD, (dullness_ratio / SHARPNESS_TIER2_THRESHOLD))	//Yes, it's meant to LERP between 0 and 0.x using ratio / tier2. The damage falls off a cliff. Intended!
 			if(prob(33))

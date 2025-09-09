@@ -57,7 +57,7 @@
 //As far as I am aware, you cannot pat out fire as a familiar at least not in time for it to not kill you, this seems fair.
 /mob/living/simple_animal/pet/familiar/fire_act(added, maxstacks)
 	. = ..()
-	addtimer(CALLBACK(src, TYPE_PROC_REF(/mob/living, ExtinguishMob)), 1 SECONDS)
+	addtimer(CALLBACK(src, TYPE_PROC_REF(/mob/living, extinguish_mob)), 1 SECONDS)
 
 /mob/living/simple_animal/pet/familiar/Initialize()
 	. = ..()

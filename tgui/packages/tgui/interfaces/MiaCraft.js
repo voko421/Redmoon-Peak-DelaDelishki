@@ -15,7 +15,7 @@ export const MiaCraft = (props, context) => {
   const [subcategory, setSubcategory] = useState();
   const craftability = Object.entries(data.craftability);
   const [crafting_recipes] = useState(data.crafting_recipes);
-  const [onlyCraftable, setOnlyCraftable] = useState(true);
+  let onlyCraftable = data.showonlycraftable;
   
   return(
     <Window title='Crafting' width={800} height={600} resizeable>
@@ -24,7 +24,7 @@ export const MiaCraft = (props, context) => {
           <Flex.Item basis="30%">
             <LabeledList>
               <LabeledList.Item label="Show only craftables">
-                <input type="checkbox" checked={onlyCraftable} onClick={() => setOnlyCraftable(!onlyCraftable)} />
+                <input type="checkbox" checked={onlyCraftable} onClick={() => ToggleOnlyCraftable()} />
               </LabeledList.Item>
             </LabeledList>
           </Flex.Item>
@@ -39,6 +39,11 @@ export const MiaCraft = (props, context) => {
       </Window.Content>
     </Window>
   );
+
+  function ToggleOnlyCraftable() {
+    act('checkboxonlycraftable', { state : !onlyCraftable });
+  }
+
   
 };
 

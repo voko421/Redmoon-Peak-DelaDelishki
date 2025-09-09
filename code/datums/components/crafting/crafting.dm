@@ -26,7 +26,7 @@
 	var/datum/action/innate/crafting/button
 	var/display_craftable_only = TRUE
 	var/display_compact = TRUE
-
+	var/showonlycraftable = TRUE
 
 
 
@@ -497,6 +497,7 @@
 		craftability[R.name] = check_contents(R, surroundings)
 
 	data["craftability"] = craftability
+	data["showonlycraftable"] = showonlycraftable
 	return data
 
 /datum/component/personal_crafting/ui_static_data(mob/user)
@@ -539,6 +540,8 @@
 			var/recipe = new path
 			construct_item(usr, recipe)
 			usr.mind.lastrecipe = recipe
+		if("checkboxonlycraftable")
+			showonlycraftable = params["state"]
 	
 	/*if(..())
 		return

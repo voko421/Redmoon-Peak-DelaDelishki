@@ -84,8 +84,7 @@
 
 	if(length(subclass_skills))
 		for(var/skill in subclass_skills)
-			if(H.get_skill_level(skill) < subclass_skills[skill])
-				H.adjust_skillrank(skill, subclass_skills[skill], TRUE)
+			H.adjust_skillrank_up_to(skill, subclass_skills[skill], TRUE)
 
 	if(subclass_spellpoints > 0)
 		H.mind?.adjust_spellpoints(subclass_spellpoints)

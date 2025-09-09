@@ -51,13 +51,13 @@
 			backr = /obj/item/rogueweapon/stoneaxe/battle
 		if("Short Sword & Iron Shield")
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_EXPERT, TRUE)
-			H.adjust_skillrank_up_to(/datum/skill/combat/shields, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			backr = /obj/item/rogueweapon/shield/iron
 			beltr = /obj/item/rogueweapon/scabbard/sword
 			r_hand = /obj/item/rogueweapon/sword/short/iron
 		if("Iron Saber & Wood Shield")
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_EXPERT, TRUE)
-			H.adjust_skillrank_up_to(/datum/skill/combat/shields, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			r_hand = /obj/item/rogueweapon/sword/saber/iron
 			beltr = /obj/item/rogueweapon/scabbard/sword
 			backr = /obj/item/rogueweapon/shield/wood

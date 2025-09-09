@@ -56,14 +56,14 @@
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Heavy Mace")
-			H.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/maces, 4, TRUE)
 			backl = /obj/item/rogueweapon/mace/goden
 		if("Shamshir and Shield")
-			H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
 			r_hand = /obj/item/rogueweapon/sword/sabre/shamshir
 			backl = /obj/item/rogueweapon/shield/tower/raneshen
 		if("Spear and Shield")
-			H.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 4, TRUE)
 			r_hand = /obj/item/rogueweapon/spear
 			backl = /obj/item/rogueweapon/shield/tower/raneshen
 

@@ -69,30 +69,42 @@ export const MiaCraft = (props, context) => {
   }
   function CraftingRecipe({ recipe, key, craftability, actfunc }) {
     return(
-      <Collapsible title={recipe.name} key={key} style={{ 'margin-left': '10px', backgroundColor: craftability.some(object => object[0] === recipe.name && object[1] === 1) ? "" : "grey" }}>
-        <LabeledList >
-          <LabeledList.Item label="Ingredients" style={{ 'margin-left': '20px' }}>
-            {recipe.req_text}
-          </LabeledList.Item>
-          <LabeledList.Item label="Difficulty" style={{ 'margin-left': '20px' }}>
-            {recipe.craftingdifficulty}
-          </LabeledList.Item>
-          <LabeledList.Item label="Tool" style={{ 'margin-left': '20px' }}>
-            {recipe.tool_text}
-          </LabeledList.Item>
-          <LabeledList.Item label="Catalyst" style={{ 'margin-left': '20px' }}>
-            {recipe.catalyst_text}
-          </LabeledList.Item>
-          <LabeledList.Item label="Craft it!" style={{ 'margin-left': '20px' }}>
-            <Button content="Craft" onClick={() => {
-              actfunc('craft', {
-                item : recipe.path,
-              });
-            }}
-            />
-          </LabeledList.Item>
-        </LabeledList>
-      </Collapsible>
+      <Flex>
+        <Flex.Item basis="80%">
+          <Collapsible title={recipe.name} key={key} style={{ 'margin-left': '10px', backgroundColor: craftability.some(object => object[0] === recipe.name && object[1] === 1) ? "" : "grey" }}>
+            <LabeledList >
+              <LabeledList.Item label="Ingredients" style={{ 'margin-left': '20px' }}>
+                {recipe.req_text}
+              </LabeledList.Item>
+              <LabeledList.Item label="Difficulty" style={{ 'margin-left': '20px' }}>
+                {recipe.craftingdifficulty}
+              </LabeledList.Item>
+              <LabeledList.Item label="Tool" style={{ 'margin-left': '20px' }}>
+                {recipe.tool_text}
+              </LabeledList.Item>
+              <LabeledList.Item label="Catalyst" style={{ 'margin-left': '20px' }}>
+                {recipe.catalyst_text}
+              </LabeledList.Item>
+              <LabeledList.Item label="Craft it!" style={{ 'margin-left': '20px' }}>
+                <Button content="Craft" onClick={() => {
+                  actfunc('craft', {
+                    item : recipe.path,
+                  });
+                }}
+                />
+              </LabeledList.Item>
+            </LabeledList>
+          </Collapsible>
+        </Flex.Item>
+        <Flex.Item basis="20%">
+          <Button content="Craft" onClick={() => {
+            actfunc('craft', {
+              item : recipe.path,
+            });
+          }}
+          />
+        </Flex.Item>
+      </Flex>
     );
 
   }

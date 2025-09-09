@@ -694,6 +694,7 @@
 	desc = "A spear against the darkness, a glimmer of Eclipsum in its metal veins. "
 	icon_state = "gsspear"
 	force = 25 // better in one hand. Use it with the shield.
+	smeltresult = /obj/item/ingot/steel
 
 /obj/item/rogueweapon/halberd/bardiche
 	possible_item_intents = list(/datum/intent/spear/thrust/eaglebeak, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs

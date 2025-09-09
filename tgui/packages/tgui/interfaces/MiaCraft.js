@@ -30,7 +30,7 @@ export const MiaCraft = (props, context) => {
           </Flex.Item>
           <Flex.Item basis="70%">
             {
-              Object.entries(crafting_recipes).map(([key, item]) => (
+              Object.entries(crafting_recipes).sort(([a], [b]) => String(a).localeCompare(String(b))).map(([key, item]) => (
                 <CraftingCategory crafties={item} key3={key} onlyCraftable={onlyCraftable} craftability={craftability} key={key} actfunc={act} />
               ))
             }
@@ -42,12 +42,12 @@ export const MiaCraft = (props, context) => {
   
 };
 
-  function CraftingCategory({ crafties, key3, onlyCraftable, craftability, key, actfunc}) {
-    const visibleElements = Object.entries(crafties).filter(([key2, item2]) => !onlyCraftable || craftability.some(object => object[0] === item2.name && object[1] === 1));
+  function CraftingCategory({ crafties, key3, onlyCraftable, craftability, key, actfunc }) {
+    const visibleElements = Object.entries(crafties).filter(([key2, item2]) => !onlyCraftable || craftability.some(object => object[0] === item2.name && object[1] === 1)).sort(([, aVal], [, bVal]) => String(aVal.name).localeCompare(String(bVal.name)));
       return (visibleElements.length > 0 ? 
         <Collapsible title={key3}>
           {visibleElements.map(([key2, item2]) => (
-            <CraftingRecipe recipe={item2} key={key2} craftability={craftability} actfunc={actfunc}/>
+            <CraftingRecipe recipe={item2} key={key2} craftability={craftability} actfunc={actfunc} />
           ))}
           
         </Collapsible> 

@@ -77,3 +77,26 @@
 	if(container)
 		// Remove all leftover water
 		container.reagents.del_reagent(/datum/reagent/water)
+
+/datum/reagent/consumable/milk
+	name = "Milk"
+	description = "An opaque white liquid produced by the mammary glands of mammals."
+	color = "#DFDFDF" // rgb: 223, 223, 223
+	taste_description = "milk"
+	glass_icon_state = "glass_white"
+	glass_name = "glass of milk"
+	glass_desc = ""
+
+/datum/reagent/consumable/milk/on_mob_life(mob/living/carbon/M)
+	if(M.getBruteLoss() && prob(20))
+		M.heal_bodypart_damage(1,0, 0)
+		. = 1
+	if(holder.has_reagent(/datum/reagent/consumable/capsaicin))
+		holder.remove_reagent(/datum/reagent/consumable/capsaicin, 2)
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(!HAS_TRAIT(H, TRAIT_NOHUNGER))
+			H.adjust_hydration(10)
+		if(H.blood_volume < BLOOD_VOLUME_NORMAL)
+			H.blood_volume = min(H.blood_volume+10, BLOOD_VOLUME_NORMAL)
+	..()

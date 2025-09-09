@@ -5,8 +5,9 @@ import {
   LabeledList,
   Collapsible,
   Flex,
+  Input,
 } from 'tgui-core/components';
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 
 export const MiaCraft = (props, context) => {
   const { act, data } = useBackend();
@@ -16,6 +17,7 @@ export const MiaCraft = (props, context) => {
   const craftability = Object.entries(data.craftability);
   const [crafting_recipes] = useState(data.crafting_recipes);
   let onlyCraftable = data.showonlycraftable;
+  const [searchText, setSearchText] = useState("");
   
   return(
     <Window title='Crafting' width={800} height={600} resizeable>
@@ -26,12 +28,15 @@ export const MiaCraft = (props, context) => {
               <LabeledList.Item label="Show only craftables">
                 <input type="checkbox" checked={onlyCraftable} onClick={() => ToggleOnlyCraftable()} />
               </LabeledList.Item>
+              <LabeledList.Item>
+                <input placeholder="Search..." autoFocus value={searchText} onInput={(e) => SearcTextModify(e.target.value.toLowerCase())} />
+              </LabeledList.Item>
             </LabeledList>
           </Flex.Item>
           <Flex.Item basis="70%">
             {
               Object.entries(crafting_recipes).sort(([a], [b]) => String(a).localeCompare(String(b))).map(([key, item]) => (
-                <CraftingCategory crafties={item} key3={key} onlyCraftable={onlyCraftable} craftability={craftability} key={key} actfunc={act} />
+                <CraftingCategory crafties={item} key3={key} onlyCraftable={onlyCraftable} craftability={craftability} key={key} actfunc={act} searchText={searchText} />
               ))
             }
           </Flex.Item>
@@ -43,12 +48,16 @@ export const MiaCraft = (props, context) => {
   function ToggleOnlyCraftable() {
     act('checkboxonlycraftable', { state : !onlyCraftable });
   }
+  function SearcTextModify(val) {
+    setSearchText(val);
+  }
+
 
   
 };
 
-  function CraftingCategory({ crafties, key3, onlyCraftable, craftability, key, actfunc }) {
-    const visibleElements = Object.entries(crafties).filter(([key2, item2]) => !onlyCraftable || craftability.some(object => object[0] === item2.name && object[1] === 1)).sort(([, aVal], [, bVal]) => String(aVal.name).localeCompare(String(bVal.name)));
+  function CraftingCategory({ crafties, key3, onlyCraftable, craftability, key, actfunc, searchText }) {
+    const visibleElements = Object.entries(crafties).filter(([key2, item2]) => !onlyCraftable || craftability.some(object => object[0] === item2.name && object[1] === 1)).sort(([, aVal], [, bVal]) => String(aVal.name).localeCompare(String(bVal.name))).filter(([id, item]) => { return item.name.toLowerCase().includes(searchText); });
       return (visibleElements.length > 0 ? 
         <Collapsible title={key3}>
           {visibleElements.map(([key2, item2]) => (

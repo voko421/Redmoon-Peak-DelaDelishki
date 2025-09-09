@@ -63,16 +63,16 @@
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Dagger")
-			H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/knives, 4, TRUE)
 			beltr = /obj/item/rogueweapon/scabbard/sheath
 			r_hand = /obj/item/rogueweapon/huntingknife/idagger/steel
 		if("Axe")
-			H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/axes, 4, TRUE)
 			beltr = /obj/item/rogueweapon/stoneaxe/woodcut
 		if ("Cudgel")
-			H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/maces, 4, TRUE)
 			beltr = /obj/item/rogueweapon/mace/cudgel
 		if ("My Bow Is Enough")
-			H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/bows, 5, TRUE)
 			head = /obj/item/clothing/head/roguetown/duelhat
 	wretch_select_bounty(H)

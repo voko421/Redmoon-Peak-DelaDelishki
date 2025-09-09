@@ -57,11 +57,11 @@
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Sabre")
-			H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			beltr = /obj/item/rogueweapon/sword/sabre
 			r_hand = /obj/item/rogueweapon/scabbard/sword
 		if("Whip")
-			H.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			beltr = /obj/item/rogueweapon/whip
 
 /datum/advclass/rogue/thief

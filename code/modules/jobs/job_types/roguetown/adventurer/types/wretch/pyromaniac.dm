@@ -57,15 +57,15 @@
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Archery")
-			H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/bows, 4, TRUE)
 			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
 			beltl = /obj/item/quiver/pyroarrows
 		if("Crossbows")
-			H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/crossbows, 4, TRUE)
 			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 			beltl = /obj/item/quiver/pyrobolts
 		if("LET THERE BE FLAME!!!")
-			H.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/magic/arcane, 2, TRUE)
 			backr = /obj/item/rogueweapon/woodstaff/toper
 			if(H.mind)
 				H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)

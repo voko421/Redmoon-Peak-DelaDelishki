@@ -59,11 +59,11 @@
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Archery")
-			H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/bows, 4, TRUE)
 			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
 			beltl = /obj/item/quiver/poisonarrows
 		if("LET THERE BE PLAGUE!!!")
-			H.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/magic/arcane, 4, TRUE)
 			backr = /obj/item/rogueweapon/woodstaff/toper
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/acidsplash)

@@ -67,6 +67,7 @@
 
 /datum/outfit/job/roguetown/magician
 	job_bitflag = BITFLAG_ROYALTY
+	has_loadout = TRUE
 
 /datum/job/roguetown/magician/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
@@ -75,6 +76,34 @@
 		H.advsetup = 1
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("advsetup")
+
+/datum/outfit/job/roguetown/magician/choose_loadout(mob/living/carbon/human/H)
+	. = ..()
+	if(H.age == AGE_OLD)
+		H.adjust_skillrank_up_to(/datum/skill/magic/arcane, 6, TRUE)
+		H.change_stat(STATKEY_SPD, -1)
+		H.change_stat(STATKEY_INT, 1)
+		H.change_stat(STATKEY_PER, 1)
+		H.mind?.adjust_spellpoints(6)
+		if(ishumannorthern(H))
+			belt = /obj/item/storage/belt/rogue/leather/plaquegold
+			cloak = null
+			head = /obj/item/clothing/head/roguetown/wizhat
+			armor = /obj/item/clothing/suit/roguetown/shirt/robe/wizard
+			H.dna.species.soundpack_m = new /datum/voicepack/male/wizard()
+	switch(H.patron?.type)
+		if(/datum/patron/inhumen/zizo)
+			H.cmode_music = 'sound/music/combat_heretic.ogg'
+			ADD_TRAIT(H, TRAIT_HERESIARCH, TRAIT_GENERIC)
+		if(/datum/patron/inhumen/matthios)
+			H.cmode_music = 'sound/music/combat_matthios.ogg'
+			ADD_TRAIT(H, TRAIT_HERESIARCH, TRAIT_GENERIC)
+		if(/datum/patron/inhumen/graggar)
+			H.cmode_music = 'sound/music/combat_graggar.ogg'
+			ADD_TRAIT(H, TRAIT_HERESIARCH, TRAIT_GENERIC)
+		if(/datum/patron/inhumen/baotha)
+			H.cmode_music = 'sound/music/combat_baotha.ogg'
+			ADD_TRAIT(H, TRAIT_HERESIARCH, TRAIT_GENERIC)
 
 /datum/outfit/job/roguetown/magician/basic/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -99,28 +128,3 @@
 		/obj/item/book/spellbook,
 		/obj/item/rogueweapon/huntingknife/idagger/silver/arcyne
 	)
-	if(H.age == AGE_OLD)
-		H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
-		H.change_stat(STATKEY_SPD, -1)
-		H.change_stat(STATKEY_INT, 1)
-		H.change_stat(STATKEY_PER, 1)
-		H.mind?.adjust_spellpoints(6)
-		if(ishumannorthern(H))
-			belt = /obj/item/storage/belt/rogue/leather/plaquegold
-			cloak = null
-			head = /obj/item/clothing/head/roguetown/wizhat
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/wizard
-			H.dna.species.soundpack_m = new /datum/voicepack/male/wizard()
-	switch(H.patron?.type)
-		if(/datum/patron/inhumen/zizo)
-			H.cmode_music = 'sound/music/combat_heretic.ogg'
-			ADD_TRAIT(H, TRAIT_HERESIARCH, TRAIT_GENERIC)
-		if(/datum/patron/inhumen/matthios)
-			H.cmode_music = 'sound/music/combat_matthios.ogg'
-			ADD_TRAIT(H, TRAIT_HERESIARCH, TRAIT_GENERIC)
-		if(/datum/patron/inhumen/graggar)
-			H.cmode_music = 'sound/music/combat_graggar.ogg'
-			ADD_TRAIT(H, TRAIT_HERESIARCH, TRAIT_GENERIC)
-		if(/datum/patron/inhumen/baotha)
-			H.cmode_music = 'sound/music/combat_baotha.ogg'
-			ADD_TRAIT(H, TRAIT_HERESIARCH, TRAIT_GENERIC)

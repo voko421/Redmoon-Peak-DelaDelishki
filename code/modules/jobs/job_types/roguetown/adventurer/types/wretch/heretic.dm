@@ -28,6 +28,9 @@
 		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
 	)
 
+/datum/outfit/job/roguetown/wretch/heretic
+	has_loadout = TRUE
+
 /datum/outfit/job/roguetown/wretch/heretic/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, span_warning("You father your unholy cause through the most time-tested of ways: hard, heavy steel in both arms and armor."))
@@ -83,7 +86,6 @@
 
 /datum/outfit/job/roguetown/wretch/heretic/choose_loadout(mob/living/carbon/human/H)
 	. = ..()
-	has_loadout = TRUE
 	switch(H.patron?.type)
 		if(/datum/patron/inhumen/zizo)
 			H.cmode_music = 'sound/music/combat_heretic.ogg'
@@ -187,9 +189,11 @@
 		/datum/skill/craft/traps = SKILL_LEVEL_JOURNEYMAN,
 	)
 
+/datum/outfit/job/roguetown/wretch/hereticspy
+	has_loadout = TRUE
+
 /datum/outfit/job/roguetown/wretch/hereticspy/pre_equip(mob/living/carbon/human/H)
 	..()
-	has_loadout = TRUE
 	to_chat(H, span_warning("Nimble of dagger and foot both, you are the shadowy herald of the cabal. They will not see you coming."))
 	H.mind.current.faction += "[H.name]_faction"
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants

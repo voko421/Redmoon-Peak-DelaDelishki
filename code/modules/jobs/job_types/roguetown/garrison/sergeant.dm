@@ -169,15 +169,18 @@
 			to_chat(user, span_alert("I must say something to give an order!"))
 			return
 		if(user.job == "Sergeant")
-			if(!target.job == "Man at Arms")
+			if(!(target.job in list("Man at Arms", "Watchman")))
 				to_chat(user, span_alert("I cannot order one not of my ranks!"))
+				revert_cast()
 				return
 		if(user.job == "Knight Captain")
 			if(!(target.job in list("Knight", "Squire")))
 				to_chat(user, span_alert("I cannot order one not of my ranks!"))
+				revert_cast()
 				return		
 		if(target == user)
 			to_chat(user, span_alert("I cannot order myself!"))
+			revert_cast()
 			return
 		user.say("[msg]")
 		target.apply_status_effect(/datum/status_effect/buff/order/movemovemove)
@@ -232,15 +235,18 @@
 			to_chat(user, span_alert("I must say something to give an order!"))
 			return
 		if(user.job == "Sergeant")
-			if(!target.job == "Man at Arms")
+			if(!(target.job in list("Man at Arms", "Watchman")))
 				to_chat(user, span_alert("I cannot order one not of my ranks!"))
+				revert_cast()
 				return
 		if(user.job == "Knight Captain")
 			if(!(target.job in list("Knight", "Squire")))
 				to_chat(user, span_alert("I cannot order one not of my ranks!"))
+				revert_cast()
 				return		
 		if(target == user)
 			to_chat(user, span_alert("I cannot order myself!"))
+			revert_cast()
 			return
 		user.say("[msg]")
 		target.apply_status_effect(/datum/status_effect/buff/order/takeaim)
@@ -264,15 +270,18 @@
 			to_chat(user, span_alert("I must say something to give an order!"))
 			return
 		if(user.job == "Sergeant")
-			if(!target.job == "Man at Arms")
+			if(!(target.job in list("Man at Arms", "Watchman")))
 				to_chat(user, span_alert("I cannot order one not of my ranks!"))
+				revert_cast()
 				return
 		if(user.job == "Knight Captain")
 			if(!(target.job in list("Knight", "Squire")))
 				to_chat(user, span_alert("I cannot order one not of my ranks!"))
+				revert_cast()
 				return		
 		if(target == user)
 			to_chat(user, span_alert("I cannot order myself!"))
+			revert_cast()
 			return
 		user.say("[msg]")
 		target.apply_status_effect(/datum/status_effect/buff/order/onfeet)
@@ -323,15 +332,18 @@
 			to_chat(user, span_alert("I must say something to give an order!"))
 			return
 		if(user.job == "Sergeant")
-			if(!target.job == "Man at Arms")
+			if(!(target.job in list("Man at Arms", "Watchman")))
 				to_chat(user, span_alert("I cannot order one not of my ranks!"))
+				revert_cast()
 				return
 		if(user.job == "Knight Captain")
 			if(!(target.job in list("Knight", "Squire")))
 				to_chat(user, span_alert("I cannot order one not of my ranks!"))
+				revert_cast()
 				return		
 		if(target == user)
 			to_chat(user, span_alert("I cannot order myself!"))
+			revert_cast()
 			return
 		user.say("[msg]")
 		target.apply_status_effect(/datum/status_effect/buff/order/hold)

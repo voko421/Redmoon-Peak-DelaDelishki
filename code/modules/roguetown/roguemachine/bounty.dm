@@ -104,9 +104,8 @@
 	var/list/eligible_players = list()
 
 	if(user.mind.known_people.len)
-		for(var/mob/living/carbon/human/H in world)
+		for(var/mob/living/carbon/human/H in GLOB.human_list)
 			if(H.real_name in user.mind.known_people)
-				// Use the real_name as the input option, but map it to the mob
 				eligible_players[H.real_name] = H
 	else
 		to_chat(user, span_warning("I don't know anyone."))

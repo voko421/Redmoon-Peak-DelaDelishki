@@ -12,6 +12,7 @@
 		STATKEY_PER = 2,
 		STATKEY_SPD = 1,
 	)
+	subclass_spellpoints = 18
 	subclass_skills = list(
 		/datum/skill/combat/polearms = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
@@ -49,10 +50,8 @@
 		)
 	H.dna.species.soundpack_m = new /datum/voicepack/male/wizard()
 	if(H.age == AGE_OLD)
-		H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
+		H.adjust_skillrank_up_to(/datum/skill/magic/arcane, SKILL_LEVEL_EXPERT, TRUE)
 		H.mind?.adjust_spellpoints(6)
-	H.mind?.adjust_spellpoints(18)
-	H.mind?.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 	H.cmode_music = 'sound/music/cmode/adventurer/combat_outlander4.ogg'
 	switch(H.patron?.type)
 		if(/datum/patron/inhumen/zizo)
@@ -69,6 +68,7 @@
 		STATKEY_CON = 1,
 		STATKEY_WIL = 1,
 	)
+	subclass_spellpoints = 12
 	subclass_skills = list(
 		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/swords = SKILL_LEVEL_JOURNEYMAN,
@@ -96,11 +96,9 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/recipe_book/survival = 1)
 	if(H.mind)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/airblade)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/enchant_weapon)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/conjure_weapon)
-		H.mind.adjust_spellpoints(12)
 	H.cmode_music = 'sound/music/cmode/adventurer/combat_outlander3.ogg'
 	var/weapons = list("Longsword", "Falchion & Wooden Shield", "Messer & Wooden Shield", "Hwando") // Much smaller selection with only three swords. You will probably want to upgrade.
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
@@ -114,13 +112,13 @@
 			backr = /obj/item/rogueweapon/shield/wood
 			r_hand = /obj/item/rogueweapon/sword/short/falchion
 			armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat
-			H.adjust_skillrank(/datum/skill/combat/shields, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_APPRENTICE, TRUE)
 		if("Messer & Wooden Shield")
 			beltr = /obj/item/rogueweapon/scabbard/sword
 			backr = /obj/item/rogueweapon/shield/wood
 			r_hand = /obj/item/rogueweapon/sword/short/messer/iron
 			armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat
-			H.adjust_skillrank(/datum/skill/combat/shields, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_APPRENTICE, TRUE)
 		if("Hwando")
 			r_hand = /obj/item/rogueweapon/sword/sabre/mulyeog // Meant to not have the special foreign scabbards.
 			beltr = /obj/item/rogueweapon/scabbard/sword
@@ -139,6 +137,7 @@
 		STATKEY_SPD = 2,
 		STATKEY_WIL = 1,
 	)
+	subclass_spellpoints = 12
 	subclass_skills = list(
 		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/music = SKILL_LEVEL_EXPERT,
@@ -168,11 +167,9 @@
 	r_hand = /obj/item/rogueweapon/sword/sabre
 	backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/recipe_book/survival = 1)
 	if(H.mind)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/mockery)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/enchant_weapon)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/conjure_weapon)
-		H.mind.adjust_spellpoints(12)
 	H.cmode_music = 'sound/music/cmode/adventurer/combat_outlander3.ogg'
 	switch(H.patron?.type)
 		if(/datum/patron/inhumen/zizo)

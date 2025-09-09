@@ -4,6 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/wretch/berserker
+	cmode_music = 'sound/music/cmode/antag/combat_darkstar.ogg'
 	category_tags = list(CTAG_WRETCH)
 	traits_applied = list(TRAIT_STRONGBITE, TRAIT_CRITICAL_RESISTANCE, TRAIT_NOPAINSTUN)
 	// Literally same stat spread as Atgervi Shaman
@@ -52,32 +53,31 @@
 		/obj/item/rogueweapon/scabbard/sheath = 1,
 		/obj/item/reagent_containers/glass/bottle/alchemical/healthpot = 1,	//Small health vial
 		)
-	H.cmode_music = 'sound/music/cmode/antag/combat_darkstar.ogg'
 	H.dna.species.soundpack_m = new /datum/voicepack/male/warrior()
 	var/weapons = list("Katar","Steel Knuckles","Punch Dagger","MY BARE HANDS!!!","Battle Axe","Mace","Sword")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if ("Katar")
-			H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 5, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_MASTER, TRUE)
 			beltr = /obj/item/rogueweapon/katar
 		if ("Steel Knuckles")
-			H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 5, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_MASTER, TRUE)
 			beltr = /obj/item/rogueweapon/knuckles
 		if ("Punch Dagger")
-			H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 5, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_MASTER, TRUE)
 			beltr = /obj/item/rogueweapon/katar/punchdagger
 		if ("MY BARE HANDS!!!")
-			H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 5, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_MASTER, TRUE)
 			ADD_TRAIT(H, TRAIT_CIVILIZEDBARBARIAN, TRAIT_GENERIC)
 		if ("Battle Axe")
-			H.adjust_skillrank(/datum/skill/combat/axes, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_EXPERT, TRUE)
 			beltr = /obj/item/rogueweapon/stoneaxe/battle
 		if ("Mace")
-			H.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_EXPERT, TRUE)
 			beltr = /obj/item/rogueweapon/mace/goden/steel
 		if ("Sword")
-			H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_EXPERT, TRUE)
 			beltr = /obj/item/rogueweapon/scabbard/sword
 			r_hand = /obj/item/rogueweapon/sword/falx
 	wretch_select_bounty(H)

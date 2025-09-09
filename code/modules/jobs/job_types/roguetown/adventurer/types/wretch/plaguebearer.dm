@@ -3,6 +3,7 @@
 	tutorial = "A disgraced physician forced into exile and years of hardship, you have turned to a private practice surrounding the only things you've ever known - poisons and plague. Revel in the spreading of blight, and unleash craven pestilence."
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/wretch/plaguebearer
+	cmode_music = 'sound/music/combat_physician.ogg'
 	category_tags = list(CTAG_WRETCH)
 	traits_applied = list( TRAIT_CICERONE, TRAIT_NOSTINK, TRAIT_MEDICINE_EXPERT)
 	maximum_possible_slots = 1 //They spawn with killer's ice lol I'm limiting this shit 
@@ -51,7 +52,6 @@
 		/obj/item/reagent_containers/glass/bottle/alchemical/healthpot = 1,	//Small health vial
 		/obj/item/rogueweapon/huntingknife/idagger/steel/corroded = 1,
 		)
-	H.cmode_music = 'sound/music/combat_physician.ogg'
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
 	H.dna.species.soundpack_m = new /datum/voicepack/male/wizard()
 	var/weapons = list("Archery", "LET THERE BE PLAGUE!!!")
@@ -59,11 +59,11 @@
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Archery")
-			H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/bows, 4, TRUE)
 			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
 			beltl = /obj/item/quiver/poisonarrows
 		if("LET THERE BE PLAGUE!!!")
-			H.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/magic/arcane, 4, TRUE)
 			backr = /obj/item/rogueweapon/woodstaff/toper
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/acidsplash)

@@ -4,6 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/wretch/pyromaniac
+	cmode_music = 'sound/music/Iconoclast.ogg'
 	category_tags = list(CTAG_WRETCH)
 	traits_applied = list(TRAIT_MEDIUMARMOR)
 	subclass_stats = list(
@@ -51,21 +52,20 @@
 		/obj/item/reagent_containers/glass/bottle/alchemical/healthpot = 1,	//Small health vial
 		)
 	wretch_select_bounty(H)
-	H.cmode_music = 'sound/music/Iconoclast.ogg'
 	var/weapons = list("Archery", "Crossbows", "LET THERE BE FLAME!!!")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Archery")
-			H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/bows, 4, TRUE)
 			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
 			beltl = /obj/item/quiver/pyroarrows
 		if("Crossbows")
-			H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/crossbows, 4, TRUE)
 			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 			beltl = /obj/item/quiver/pyrobolts
 		if("LET THERE BE FLAME!!!")
-			H.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/magic/arcane, 2, TRUE)
 			backr = /obj/item/rogueweapon/woodstaff/toper
 			if(H.mind)
 				H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)

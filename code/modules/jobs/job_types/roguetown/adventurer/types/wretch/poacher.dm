@@ -4,6 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/wretch/poacher
+	cmode_music = 'sound/music/combat_poacher.ogg'
 	category_tags = list(CTAG_WRETCH)
 	traits_applied = list(TRAIT_DODGEEXPERT, TRAIT_WOODSMAN, TRAIT_OUTDOORSMAN)
 	// No straight upgrade to perception / speed to not stack one stat too high, but still stronger than MAA Skirm out of town.
@@ -57,22 +58,21 @@
 		/obj/item/rope/chain = 1,
 		/obj/item/reagent_containers/glass/bottle/alchemical/healthpot = 1,	//Small health vial
 		)
-	H.cmode_music = 'sound/music/combat_poacher.ogg'
 	var/weapons = list("Dagger","Axe", "Cudgel", "My Bow Is Enough")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Dagger")
-			H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/knives, 4, TRUE)
 			beltr = /obj/item/rogueweapon/scabbard/sheath
 			r_hand = /obj/item/rogueweapon/huntingknife/idagger/steel
 		if("Axe")
-			H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/axes, 4, TRUE)
 			beltr = /obj/item/rogueweapon/stoneaxe/woodcut
 		if ("Cudgel")
-			H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/maces, 4, TRUE)
 			beltr = /obj/item/rogueweapon/mace/cudgel
 		if ("My Bow Is Enough")
-			H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/bows, 5, TRUE)
 			head = /obj/item/clothing/head/roguetown/duelhat
 	wretch_select_bounty(H)

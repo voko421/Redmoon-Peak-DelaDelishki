@@ -4,6 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/wretch/vigilante
+	cmode_music = 'sound/music/combatmaniac.ogg'
 	category_tags = list(CTAG_WRETCH)
 	traits_applied = list(TRAIT_DECEIVING_MEEKNESS, TRAIT_PERFECT_TRACKER)
 	maximum_possible_slots = 1 // There can only be one. 
@@ -36,7 +37,6 @@
 		/obj/item/rope/chain = 1,
 		/obj/item/reagent_containers/glass/bottle/alchemical/healthpot = 1,	//Small health vial
 		)
-	H.cmode_music = 'sound/music/combatmaniac.ogg'
 	var/classes = list("The Watchman", "The Gadgeteer", "I AM JUSTICE INCARNATE!!!")
 	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
 	switch(classchoice)
@@ -51,8 +51,8 @@
 			bullshit_equip(H)
 
 /datum/outfit/job/roguetown/wretch/vigilante/proc/watchman_equip(mob/living/carbon/human/H)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE) //No civilized barbarian. Sorry chud. Go play Berserker if you want that. 
-	H.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE) //I can do this all day. 
+	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 5, TRUE) //No civilized barbarian. Sorry chud. Go play Berserker if you want that. 
+	H.adjust_skillrank_up_to(/datum/skill/misc/athletics, 5, TRUE) //I can do this all day. 
 	backl = /obj/item/storage/backpack/rogue/backpack/bagpack
 	beltl = /obj/item/rogueweapon/knuckles
 	beltr = /obj/item/rogueweapon/stoneaxe/hurlbat
@@ -81,14 +81,14 @@
 		/obj/item/flashlight/flare/torch/lantern/prelit = 1,
 		/obj/item/rope/chain = 1,
 		)
-	H.adjust_skillrank(/datum/skill/misc/lockpicking, 4, TRUE) //Investigations
-	H.adjust_skillrank(/datum/skill/combat/slings, 4, TRUE) // Funny as shit to use. 
-	H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE) //Last resort CQC. Enough def on a quarterstaff to fight defensively, not enough to be truly offensive.
-	H.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE) //I lurk in the shadows...
-	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE) //Crafty
-	H.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE) // Escape routes
-	H.adjust_skillrank(/datum/skill/craft/engineering, 3, TRUE) //Make your own tinkering tools and smokebombs
-	H.adjust_skillrank(/datum/skill/craft/smelting, 3, TRUE) //Just so your smelted ingots aren't ruined
+	H.adjust_skillrank_up_to(/datum/skill/misc/lockpicking, 4, TRUE) //Investigations
+	H.adjust_skillrank_up_to(/datum/skill/combat/slings, 4, TRUE) // Funny as shit to use. 
+	H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 3, TRUE) //Last resort CQC. Enough def on a quarterstaff to fight defensively, not enough to be truly offensive.
+	H.adjust_skillrank_up_to(/datum/skill/misc/sneaking, 4, TRUE) //I lurk in the shadows...
+	H.adjust_skillrank_up_to(/datum/skill/craft/crafting, 4, TRUE) //Crafty
+	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, 5, TRUE) // Escape routes
+	H.adjust_skillrank_up_to(/datum/skill/craft/engineering, 3, TRUE) //Make your own tinkering tools and smokebombs
+	H.adjust_skillrank_up_to(/datum/skill/craft/smelting, 3, TRUE) //Just so your smelted ingots aren't ruined
 	H.change_stat(STATKEY_INT, 3) 
 	H.change_stat(STATKEY_WIL, 3)
 	H.change_stat(STATKEY_PER, 3)
@@ -102,10 +102,10 @@
 	backl = /obj/item/quiver/javelin/steel
 	cloak = /obj/item/clothing/cloak/cape
 	mask = /obj/item/clothing/mask/rogue/facemask
-	H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/magic/arcane, 1, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/reading, 2, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/medicine, 2, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/craft/cooking, 1, TRUE)
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/magicians_brick) //Trust the plan. 
 	ADD_TRAIT(H, TRAIT_MAGEARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC) // You LITERALLY get no weapon skills. You're throwing shit at enemies. 

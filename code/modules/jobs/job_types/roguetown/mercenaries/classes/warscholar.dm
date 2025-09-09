@@ -16,6 +16,7 @@
 		STATKEY_PER = 1,
 		STATKEY_CON = -1
 	)
+	subclass_spellpoints = 15
 	subclass_skills = list(
 		/datum/skill/combat/polearms = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
@@ -55,20 +56,18 @@
 	detailcolor = naledicolors[detailcolor]
 	to_chat(H, span_warning("You are a Naledi Hierophant, a magician who studied under cloistered sages, well-versed in all manners of arcyne. You prioritize enhancing your teammates and distracting foes while staying in the backline."))
 	if(H.age == AGE_OLD)
-		H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
+		H.adjust_skillrank_up_to(/datum/skill/magic/arcane, 5, TRUE)
 		H.change_stat(STATKEY_SPD, -1)
 		H.change_stat(STATKEY_INT, 1)
 		H.change_stat(STATKEY_PER, 1)
 		H.mind?.adjust_spellpoints(6)
 	if(H.mind)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/giants_strength)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/longstrider)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/guidance)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/haste)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/fortitude)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/forcewall/greater)
-		H.mind.adjust_spellpoints(15)
 	r_hand = /obj/item/rogueweapon/woodstaff/naledi
 
 

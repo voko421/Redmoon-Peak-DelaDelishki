@@ -238,8 +238,8 @@
 	range = 5
 	associated_skill = /datum/skill/misc/athletics
 	devotion_cost = 0
-	chargedrain = 1
-	chargetime = 15
+	chargedrain = 0
+	chargetime = 0
 	releasedrain = 80 // 
 	recharge_time = 2 MINUTES
 	miracle = FALSE
@@ -248,6 +248,9 @@
 
 /obj/effect/proc_holder/spell/invoked/order/retreat
 	name = "Tactical Retreat!"
+	chargedrain = 0
+	chargetime = 0
+	desc = "Gives 3 SPD for your brothers!"
 	overlay_state = "movemovemove"
 
 /obj/effect/proc_holder/spell/invoked/order/retreat/cast(list/targets, mob/living/user)
@@ -291,12 +294,15 @@
 
 /obj/effect/proc_holder/spell/invoked/order/bolster
 	name = "Hold the Line!"
+	desc = "Gives 2 CON and 3 WIL for your brothers!"
 	overlay_state = "takeaim"
+	chargedrain = 0
+	chargetime = 0
 
 /datum/status_effect/buff/order/bolster
 	id = "takeaim"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/order/bolster
-	effectedstats = list(STATKEY_CON = 5)
+	effectedstats = list(STATKEY_CON = 2, STATKEY_WIL = 3)
 	duration = 1 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/order/bolster
@@ -331,8 +337,10 @@
 
 /obj/effect/proc_holder/spell/invoked/order/brotherhood
 	name = "For the Brotherhood!"
+	desc = "Your brothers won't feel any pain for a bit, also it'll help them get back on feet!"
 	overlay_state = "onfeet"
-
+	chargedrain = 0
+	chargetime = 0
 /obj/effect/proc_holder/spell/invoked/order/brotherhood/cast(list/targets, mob/living/user)
 	. = ..()
 	if(isliving(targets[1]))
@@ -384,8 +392,10 @@
 
 /obj/effect/proc_holder/spell/invoked/order/charge
 	name = "Charge!"
+	desc = "Gives 2 STR and 2 PER for your brothers!"
 	overlay_state = "hold"
-
+	chargedrain = 0
+	chargetime = 0
 
 /obj/effect/proc_holder/spell/invoked/order/charge/cast(list/targets, mob/living/user)
 	. = ..()
@@ -412,7 +422,7 @@
 /datum/status_effect/buff/order/charge
 	id = "hold"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/order/charge
-	effectedstats = list(STATKEY_STR = 2, STATKEY_LCK = 2)
+	effectedstats = list(STATKEY_STR = 2, STATKEY_PER = 2)
 	duration = 1 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/order/charge

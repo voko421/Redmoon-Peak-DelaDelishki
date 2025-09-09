@@ -91,8 +91,8 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
 	backpack_contents = list(/obj/item/ritechalk)
 	if(H.age == AGE_OLD)
-		H.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)
-		H.adjust_skillrank(/datum/skill/magic/druidic, 1, TRUE)
+		H.adjust_skillrank_up_to(/datum/skill/magic/holy, 5, TRUE)
+		H.adjust_skillrank_up_to(/datum/skill/magic/druidic, 5, TRUE)
 	H.ambushable = FALSE
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
 	C.grant_miracles(H, cleric_tier = CLERIC_T4, passive_gain = CLERIC_REGEN_MAJOR, start_maxed = TRUE)	//Starts off maxed out.

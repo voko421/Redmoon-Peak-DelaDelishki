@@ -43,7 +43,6 @@ GLOBAL_VAR_INIT(adventurer_hugbox_duration_still, 3 MINUTES)
 		/datum/advclass/sfighter,
 		/datum/advclass/sfighter/duelist,
 		/datum/advclass/sfighter/mhunter,
-		/datum/advclass/sfighter/flagellant,
 		/datum/advclass/sfighter/barbarian,
 		/datum/advclass/sfighter/ironclad,
 		/datum/advclass/rogue,
@@ -68,8 +67,10 @@ GLOBAL_VAR_INIT(adventurer_hugbox_duration_still, 3 MINUTES)
 		/datum/advclass/trader/brewer,
 		/datum/advclass/trader/cuisiner,
 		/datum/advclass/foreigner,
-		/datum/advclass/foreigner/custodian,
-		/datum/advclass/foreigner/yoruku
+		/datum/advclass/foreigner/yoruku,
+		/datum/advclass/foreigner/repentant,
+		/datum/advclass/foreigner/refugee,
+		/datum/advclass/foreigner/slaver
 	)
 
 /datum/job/roguetown/adventurer/after_spawn(mob/living/L, mob/M, latejoin = TRUE)

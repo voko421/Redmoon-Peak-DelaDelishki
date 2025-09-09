@@ -4,6 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/wretch/outlaw
+	cmode_music = 'sound/music/cmode/antag/combat_cutpurse.ogg'
 	category_tags = list(CTAG_WRETCH)
 	subclass_languages = list(/datum/language/thievescant)
 	traits_applied = list(TRAIT_DODGEEXPERT)
@@ -59,21 +60,20 @@
 		/obj/item/ammo_casing/caseless/rogue/bolt/water = 3,
 		/obj/item/reagent_containers/glass/bottle/alchemical/healthpot = 1,	//Small health vial
 		)
-	H.cmode_music = 'sound/music/cmode/antag/combat_cutpurse.ogg'
 	var/weapons = list("Rapier","Dagger", "Whip")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Rapier")
-			H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_EXPERT, TRUE)
 			beltl = /obj/item/rogueweapon/scabbard/sword
 			l_hand = /obj/item/rogueweapon/sword/rapier
 		if("Dagger")
-			H.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/knives, SKILL_LEVEL_EXPERT, TRUE)
 			beltl = /obj/item/rogueweapon/scabbard/sheath
 			l_hand = /obj/item/rogueweapon/huntingknife/idagger/steel/special // Why were they spawning with an elven dagger in the first place??? Please LMK.
 		if ("Whip")
-			H.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, SKILL_LEVEL_EXPERT, TRUE)
 			beltl = /obj/item/rogueweapon/whip
 	wretch_select_bounty(H)
 
@@ -81,6 +81,7 @@
 	name = "Marauder"
 	tutorial = "You are a brigand and a pillager - you prefer to get your coins with direct means from unfortunate victims."
 	outfit = /datum/outfit/job/roguetown/wretch/marauder
+	cmode_music = 'sound/music/cmode/antag/combat_thewall.ogg'
 	subclass_languages = list(/datum/language/thievescant)
 	//Still the speed class
 	subclass_stats = list(
@@ -129,27 +130,26 @@
 		/obj/item/rope/chain = 1,
 		/obj/item/storage/roguebag = 1,
 		)
-	H.cmode_music = 'sound/music/cmode/antag/combat_thewall.ogg'
 	var/weapons = list("Just A Heater Shield","Dagger + Crossbow", "Militia Warpick + Heater Shield", "Militia Spear + Heater Shield")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Just An Iron Shield")
-			H.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
-			H.adjust_skillrank(/datum/skill/combat/shields, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_EXPERT, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			backr = /obj/item/rogueweapon/shield/iron
 		if("Dagger + Crossbow")
-			H.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/knives, SKILL_LEVEL_EXPERT, TRUE)
 			beltl = /obj/item/rogueweapon/scabbard/sheath
 			l_hand = /obj/item/rogueweapon/huntingknife/idagger/steel
 			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 			beltr = /obj/item/quiver/bolts
 		if ("Militia Warpick + Heater Shield")
-			H.adjust_skillrank(/datum/skill/combat/axes, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_EXPERT, TRUE)
 			beltl = /obj/item/rogueweapon/pick/militia
 			backr = /obj/item/rogueweapon/shield/iron
 		if ("Militia Spear + Heater Shield")
-			H.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, SKILL_LEVEL_EXPERT, TRUE)
 			l_hand = /obj/item/rogueweapon/spear/militia
 			backr = /obj/item/rogueweapon/shield/heater
 	wretch_select_bounty(H)

@@ -34,7 +34,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	pants = /obj/item/clothing/under/roguetown/tights/random
 	belt = /obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/storage/magebag
+	beltl = /obj/item/storage/magebag/associate
 	beltr = /obj/item/storage/keyring/mageapprentice
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backr = /obj/item/rogueweapon/woodstaff
@@ -59,6 +59,7 @@
 		STATKEY_PER = 2,
 		STATKEY_SPD = 1
 	)
+	subclass_spellpoints = 21
 	subclass_skills = list(
 		/datum/skill/combat/polearms = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
@@ -79,7 +80,7 @@
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/mage
 	head = /obj/item/clothing/head/roguetown/roguehood/mage
 	backpack_contents = list(
-		/obj/item/roguegem/amethyst = 1, 
+		/obj/item/roguegem/amethyst = 1,
 		/obj/item/spellbook_unfinished/pre_arcyne = 1,
 		/obj/item/recipe_book/alchemy = 1,
 		/obj/item/recipe_book/magic = 1,
@@ -90,7 +91,6 @@
 		H.change_stat(STATKEY_SPD, -1)
 		H.change_stat(STATKEY_INT, 1)
 		H.mind?.adjust_spellpoints(6)
-	H.mind?.adjust_spellpoints(21)
 	switch(H.patron?.type)
 		if(/datum/patron/inhumen/zizo)
 			H.cmode_music = 'sound/music/combat_heretic.ogg'
@@ -107,6 +107,7 @@
 		STATKEY_PER = 3,
 		STATKEY_WIL = 1
 	)
+	subclass_spellpoints = 18
 	subclass_skills = list(
 		/datum/skill/combat/polearms = SKILL_LEVEL_NOVICE,
 		/datum/skill/misc/reading = SKILL_LEVEL_MASTER,
@@ -126,8 +127,8 @@
 
 /datum/outfit/job/roguetown/wapprentice/alchemist/pre_equip(mob/living/carbon/human/H)
 	backpack_contents = list(
-		/obj/item/roguegem/amethyst = 1, 
-		/obj/item/seeds/swampweed = 1, 
+		/obj/item/roguegem/amethyst = 1,
+		/obj/item/seeds/swampweed = 1,
 		/obj/item/seeds/pipeweed = 1,
 		/obj/item/recipe_book/alchemy = 1,
 		/obj/item/recipe_book/magic = 1,
@@ -138,7 +139,6 @@
 		H.adjust_skillrank(/datum/skill/craft/alchemy, 1, TRUE)
 		H.change_stat(STATKEY_PER, -1)
 		H.change_stat(STATKEY_INT, 1)
-	H.mind?.adjust_spellpoints(18)
 	switch(H.patron?.type)
 		if(/datum/patron/inhumen/zizo)
 			H.cmode_music = 'sound/music/combat_heretic.ogg'
@@ -155,6 +155,7 @@
 		STATKEY_SPD = 1,
 		STATKEY_LCK = 1 // this is just a carrot for the folk who are mad enough to take this role...
 	)
+	subclass_spellpoints = 18
 	subclass_skills = list(
 		/datum/skill/misc/reading = SKILL_LEVEL_MASTER,
 		/datum/skill/magic/arcane = SKILL_LEVEL_APPRENTICE,
@@ -165,13 +166,12 @@
 
 /datum/outfit/job/roguetown/wapprentice/apprentice/pre_equip(mob/living/carbon/human/H)
 	backpack_contents = list(
-		/obj/item/roguegem/amethyst = 1, 
+		/obj/item/roguegem/amethyst = 1,
 		/obj/item/recipe_book/alchemy = 1,
 		/obj/item/recipe_book/magic = 1,
 		/obj/item/spellbook_unfinished/pre_arcyne = 1,
 		/obj/item/chalk = 1,
 		)
-	H.mind?.adjust_spellpoints(18)
 	if(H.age == AGE_OLD)
 		H.adjust_skillrank(/datum/skill/craft/alchemy, 1, TRUE)
 		H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)

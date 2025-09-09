@@ -69,7 +69,7 @@
 						/obj/item/flashlight/flare/torch = 1,
 						/obj/item/rogueweapon/scabbard/sheath = 1
 						) //rogue gets lockpicks
-			H.adjust_skillrank(/datum/skill/combat/crossbows, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/crossbows, SKILL_LEVEL_EXPERT, TRUE)
 		if("Bow & Sword") //Poacher
 			backl= /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
 			l_hand = /obj/item/rogueweapon/sword/short
@@ -83,7 +83,7 @@
 						/obj/item/restraints/legcuffs/beartrap = 2,
 						/obj/item/flashlight/flare/torch = 1,
 						) //poacher gets mantraps
-			H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
+			H.adjust_skillrank(/datum/skill/combat/bows, SKILL_LEVEL_EXPERT, TRUE)
 
 	if(!istype(H.patron, /datum/patron/inhumen/matthios))
 		var/inputty = input(H, "Would you like to change your patron to Matthios?", "The Transactor calls", "No") as anything in list("Yes", "No")

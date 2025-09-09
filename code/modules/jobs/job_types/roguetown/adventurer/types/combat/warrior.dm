@@ -313,47 +313,6 @@
 		beltl = /obj/item/rogueweapon/huntingknife
 	backpack_contents = list(/obj/item/flashlight/flare/torch = 1)
 
-
-/datum/advclass/sfighter/flagellant
-	name = "Flagellant"
-	tutorial = "You are a pacifistic warrior who embraces suffering, believing pain is the path to enlightenment. You take the suffering of others upon yourself."
-	outfit = /datum/outfit/job/roguetown/adventurer/flagellant
-	cmode_music = 'sound/music/cmode/adventurer/combat_outlander2.ogg'
-	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_CRITICAL_RESISTANCE, TRAIT_NOPAINSTUN, TRAIT_DODGEEXPERT)
-	subclass_stats = list(
-		STATKEY_CON = 5,
-		STATKEY_WIL = 5,
-		STATKEY_SPD = 1,
-		STATKEY_STR = -2,
-		STATKEY_INT = -2,
-	)
-	subclass_skills = list(
-		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/combat/whipsflails = SKILL_LEVEL_EXPERT,
-		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
-		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
-		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
-	)
-
-/datum/outfit/job/roguetown/adventurer/flagellant/pre_equip(mob/living/carbon/human/H, visualsOnly)
-	..()
-	to_chat(H, span_warning("You are a pacifistic warrior who embraces suffering, believing pain is the path to enlightenment."))
-	H.set_blindness(0)
-
-	pants = /obj/item/clothing/under/roguetown/tights/black
-	shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/black
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	backl = /obj/item/storage/backpack/rogue/satchel
-	belt = /obj/item/storage/belt/rogue/leather
-	beltr = /obj/item/rogueweapon/whip
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
-	backpack_contents = list(
-		/obj/item/recipe_book/survival = 1,
-		/obj/item/flashlight/flare/torch = 1,
-		)
-
 /datum/advclass/sfighter/ironclad
 	name = "Ironclad"
 	tutorial = "You are a warrior who puts their trust in durable armor. The best offense is a good defense."

@@ -536,7 +536,9 @@
 	switch(action)
 		if("craft")
 			var/path = text2path(params["item"])
-			construct_item(usr, new path)
+			var/recipe = new path
+			construct_item(usr, recipe)
+			usr.mind.lastrecipe = recipe
 	
 	/*if(..())
 		return

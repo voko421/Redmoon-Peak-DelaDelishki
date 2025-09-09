@@ -85,6 +85,9 @@ export const MiaCraft = (props, context) => {
               <LabeledList.Item label="Catalyst" style={{ 'margin-left': '20px' }}>
                 {recipe.catalyst_text}
               </LabeledList.Item>
+              <LabeledList.Item label="Sell price" style={{ 'margin-left': '20px' }}>
+                {recipe.sellprice}
+              </LabeledList.Item>
               <LabeledList.Item label="Craft it!" style={{ 'margin-left': '20px' }}>
                 <Button content="Craft" onClick={() => {
                   actfunc('craft', {

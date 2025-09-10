@@ -1022,75 +1022,65 @@
 	var/stored_zil = 0
 
 /obj/structure/broadcast_horn/paid/attackby(obj/item/P, mob/user, params)
+	// Handle locking/unlocking with crier key
 	if(istype(P, /obj/item/roguekey/crier))
 		is_locked = !is_locked
 		listening = FALSE
 		playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
-		if(is_locked)
-			say("Streetpipe has been locked.")
-		else
-			say("Streetpipe has been unlocked.")
+		say(is_locked ? "Streetpipe has been locked." : "Streetpipe has been unlocked.")
+		return
+
+	// Handle coin payment
 	if(istype(P, /obj/item/roguecoin))
-		var/has_paid = FALSE
-		var/paid_zen = FALSE
-		if(HAS_TRAIT(user, TRAIT_OUTLANDER))
-			if(istype(P, /obj/item/roguecoin/silver))
-				has_paid = TRUE
-			else
-				say("Foreigners pay extra. Insert a ziliqua.")
-				playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
-				return
-		else if(istype(P, /obj/item/roguecoin/copper))
-			has_paid = TRUE
-			paid_zen = TRUE
-		if(!has_paid)
-			return
 		if(is_locked)
 			say("Streetpipe is locked. Consult the crier.")
 			playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 			return
+
 		if(listening)
 			say("Coin already loaded.")
 			playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 			return
+
+		var/mammon_value = 0
+		var is_valid_payment = FALSE
+
+		if(HAS_TRAIT(user, TRAIT_OUTLANDER))
+			if(istype(P, /obj/item/roguecoin/silver))
+				mammon_value = 5
+				is_valid_payment = TRUE
+			else
+				say("Foreigners pay extra. Insert a ziliqua.")
+				playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
+				return
+		else
+			if(istype(P, /obj/item/roguecoin/silver))
+				mammon_value = 5
+				is_valid_payment = TRUE
+			else if(istype(P, /obj/item/roguecoin/copper))
+				mammon_value = 1
+				is_valid_payment = TRUE
+
+		if(!is_valid_payment)
+			return
+
 		var/obj/item/roguecoin/C = P
 		if(C.quantity > 1)
 			return
+
+		// Mark pipe as active and consume coin
 		listening = TRUE
 		qdel(C)
-		if(paid_zen)
-			stored_zen += 1
-		else
-			stored_zil +=1
+
+		// Route payment to the central crier machine
+		for(var/obj/structure/roguemachine/crier/Crier in world)
+			Crier.total_payments += mammon_value
+			break //Prevents fucky behavior if for some reason there's more than one rousmaster in the world.
+
 		playsound(src, 'sound/misc/coininsert.ogg', 100, FALSE, -1)
 		return
-	..()
 
-/obj/structure/broadcast_horn/paid/attack_right(mob/user)
-	if(.)
-		return
-	if(!ishuman(user))
-		return
-	var/mob/living/carbon/human/H = user
-	if(H.job == "Town Crier")
-		var/dispensed = FALSE
-		if(stored_zen)
-			var/obj/item/roguecoin/Z = new /obj/item/roguecoin/copper(H, stored_zen)
-			if(H)
-				H.put_in_hands(Z)
-				stored_zen = 0
-				dispensed = TRUE
-				playsound(src, 'sound/misc/coindispense.ogg', 100, FALSE, -1)
-		if(stored_zil)
-			var/obj/item/roguecoin/S = new /obj/item/roguecoin/silver(H, stored_zil)
-			if(H)
-				H.put_in_hands(S)
-				stored_zil = 0
-				dispensed = TRUE
-				playsound(src, 'sound/misc/coindispense.ogg', 100, FALSE, -1)
-		else if(!dispensed)
-			say("There's no mammon inside.")
-			playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
+	..()
 
 /obj/structure/broadcast_horn/Initialize()
 	. = ..()

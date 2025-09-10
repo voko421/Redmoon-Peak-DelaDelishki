@@ -16,6 +16,7 @@
 	var/current_tab = TAB_ROUSMAIN
 	var/locked = FALSE
 	var/keycontrol = "crier"
+	var/total_payments = 0 // Central storage of all broadcaster payments.
 
 /obj/structure/roguemachine/crier/attackby(obj/item/P, mob/user, params)
 	if(istype(P, /obj/item/roguekey))
@@ -46,6 +47,27 @@
 		return
 	if(href_list["switchtab"])
 		current_tab = text2num(href_list["switchtab"])
+	if(href_list["togglehorn"])
+		var/obj/structure/broadcast_horn/paid/H = locate(href_list["togglehorn"])
+		if(H && (H in SSroguemachine.broadcaster_machines))
+			H.is_locked = !H.is_locked
+			to_chat(usr, span_notice("You [H.is_locked ? "lock" : "unlock"] [H]."))
+	if(href_list["withdraw"])
+		if(total_payments <= 0)
+			to_chat(usr, span_warning("No mammon to withdraw."))
+			return
+
+		var/amount = total_payments
+		total_payments = 0
+
+		while(amount >= 5)
+			new /obj/item/roguecoin/silver(get_turf(src))
+			amount -= 5
+		while(amount >= 1)
+			new /obj/item/roguecoin/copper(get_turf(src))
+			amount -= 1
+		to_chat(usr, span_notice("You withdraw the broadcaster payments."))
+
 	return attack_hand(usr)
 
 /obj/structure/roguemachine/crier/attack_hand(mob/living/user)
@@ -62,9 +84,10 @@
 	switch(current_tab)
 		if(TAB_ROUSMAIN)
 			contents += "<center>ROUS MASTER<BR>"
+			contents += "Total stored mammon: [total_payments]<br><br>"
+			contents += "<a href='?src=\ref[src];withdraw=1'>Withdraw All</a><br>"
 			contents += "--------------<BR>"
 			contents += "<a href='?src=\ref[src];switchtab=[TAB_SCOMLOG]'>\[Broadcast Log\]</a><BR>"
-			contents += "<a href='?src=\ref[src];switchtab=[TAB_PAYMENTS]'>\[Broadcaster Payments\]</a><BR>"
 			contents += "<a href='?src=\ref[src];switchtab=[TAB_MANAGESCOMS]'>\[Manage Broadcasters\]</a><BR>"
 			contents += "</center>"
 	
@@ -83,6 +106,20 @@
 
 					contents += "#[num][tag ? " ([tag])" : ""] @ [time]:<br>"
 					contents += "[msg]<br><hr>"
+
+			contents += "<br><a href='?src=\ref[src];switchtab=[TAB_ROUSMAIN]'>\[Back\]</a>"
+
+		if(TAB_MANAGESCOMS)
+			contents += "<center><b>Manage Broadcasters</b></center><hr>"
+
+			if(!length(SSroguemachine.broadcaster_machines))
+				contents += "<i>No broadcasters found.</i><br>"
+			else
+				for(var/obj/structure/broadcast_horn/paid/H in SSroguemachine.broadcaster_machines)
+					var/locked_text = H.is_locked ? "Locked" : "Unlocked"
+					contents += "Horn #[H.broadcaster_number][H.broadcaster_tag ? " ([H.broadcaster_tag])" : ""] "
+					contents += "[locked_text] "
+					contents += "<a href='?src=\ref[src];togglehorn=\ref[H]'>\[Toggle\]</a><br>"
 
 			contents += "<br><a href='?src=\ref[src];switchtab=[TAB_ROUSMAIN]'>\[Back\]</a>"
 

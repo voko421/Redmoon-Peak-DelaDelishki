@@ -531,7 +531,7 @@
 				dat += "<br><i>Regardless of your statpacks or race choice, you will not be able to exceed these stats on spawn.</i></font>"
 				dat += "</font>"	//Ends the stat limit colors
 		if(length(job_traits) && (show_job_traits || sclass_count > 1))
-			dat += "<font color ='#7a4d0a'><b>Class</b></font> Traits:</font> "
+			dat += "<b>Class</b></font> Traits: "
 			for(var/trait in job_traits)
 				dat += "<details><summary><i><font color ='#ccbb82'>[trait]</font></i></summary>"
 				dat += "<i><font color = '#a3ffe0'>[GLOB.roguetraits[trait]]</font></i></details>"

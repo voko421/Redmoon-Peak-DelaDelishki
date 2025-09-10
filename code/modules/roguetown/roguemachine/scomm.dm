@@ -267,7 +267,7 @@
 	animate(pixel_x = oldx-1, time = 0.5)
 	animate(pixel_x = oldx, time = 0.5)
 
-/obj/structure/roguemachine/scomm/proc/repeat_message(message, atom/A, tcolor, message_language)
+/obj/structure/roguemachine/scomm/proc/repeat_message(message, atom/A, tcolor, message_language, list/tspans, broadcaster_number, broadcaster_tag)
 	if(A == src)
 		return
 	if(tcolor)
@@ -966,6 +966,16 @@
 	tspans |= speech_span
 	if(speech_color)
 		raw_message = "<span style='color: [speech_color]'>[raw_message]</span>"
+
+	//Log the broadcast here
+	GLOB.broadcast_list += list(list(
+		"message"   = raw_message,
+		"number"    = broadcaster_number,
+		"tag"       = broadcaster_tag,
+		"timestamp" = station_time_timestamp("hh:mm:ss")
+	))
+
+	//Forward to all listeners
 	for(var/obj/structure/roguemachine/scomm/S in SSroguemachine.scomm_machines)
 		if(!S.calling && (!loudmouth || S.loudmouth_listening))
 			S.repeat_message(raw_message, src, usedcolor, message_language, tspans)

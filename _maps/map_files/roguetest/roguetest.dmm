@@ -98,6 +98,10 @@
 	},
 /turf/open/floor/rogue/hay,
 /area/rogue/indoors)
+"dE" = (
+/obj/machinery/light/rogue/firebowl/stump,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/indoors)
 "dN" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -183,6 +187,16 @@
 /obj/structure/flora/roguegrass/herb/random,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors)
+"im" = (
+/obj/structure/table/cooling,
+/obj/structure/broadcast_horn/paid{
+	dir = 8;
+	pixel_y = 12;
+	broadcaster_tag = "Test Broadcaster"
+	},
+/obj/machinery/light/rogue/wallfire/candle/r,
+/turf/open/floor/rogue/tile/harem,
+/area/rogue/indoors)
 "iq" = (
 /obj/effect/decal/mossy{
 	dir = 1
@@ -230,6 +244,11 @@
 "kn" = (
 /obj/structure/fluff/alch,
 /turf/open/floor/rogue/blocks/newstone/alt,
+/area/rogue/indoors)
+"kv" = (
+/obj/structure/roguemachine/crier,
+/obj/machinery/light/rogue/wallfire/candle/l,
+/turf/open/floor/rogue/tile/harem,
 /area/rogue/indoors)
 "kz" = (
 /turf/open/floor/rogue/cobblerock,
@@ -279,6 +298,10 @@
 "mL" = (
 /obj/item/inhand_tester,
 /turf/open/floor/rogue/cobblerock,
+/area/rogue/indoors)
+"nk" = (
+/obj/structure/fluff/railing/corner/south_east,
+/turf/open/floor/rogue/tile/harem,
 /area/rogue/indoors)
 "nv" = (
 /obj/effect/landmark/latejoin,
@@ -520,6 +543,11 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/bull,
 /turf/open/floor/rogue/hay,
 /area/rogue/indoors)
+"tW" = (
+/obj/structure/stairs,
+/obj/structure/roguemachine/scomm/l,
+/turf/open/floor/rogue/grass,
+/area/rogue/indoors)
 "tX" = (
 /obj/structure/stairs{
 	dir = 1
@@ -607,6 +635,10 @@
 /obj/item/ingot/steel,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors)
+"wv" = (
+/obj/machinery/light/rogue/firebowl/stump,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/bog/north)
 "wE" = (
 /turf/open/floor/rogue/carpet/lord/right,
 /area/rogue/indoors)
@@ -840,6 +872,12 @@
 /obj/effect/landmark/start,
 /turf/open/floor/rogue/carpet/lord/left,
 /area/rogue/indoors)
+"DG" = (
+/obj/structure/fluff/railing/border{
+	dir = 4
+	},
+/turf/open/floor/rogue/tile/harem,
+/area/rogue/indoors)
 "DO" = (
 /obj/structure/table/wood{
 	icon_state = "longtable_mid";
@@ -864,6 +902,9 @@
 /obj/structure/roguemachine/stockpile,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
+"Ey" = (
+/turf/open/floor/rogue/tile/harem,
+/area/rogue/indoors)
 "EG" = (
 /obj/structure/table/wood{
 	icon_state = "longtable"
@@ -1053,6 +1094,15 @@
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods/north)
+"MZ" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/roguekey/crier,
+/turf/open/floor/rogue/tile/harem,
+/area/rogue/indoors)
+"Nb" = (
+/obj/structure/stairs,
+/turf/open/floor/rogue/grass,
+/area/rogue/indoors)
 "Np" = (
 /obj/machinery/anvil,
 /turf/open/floor/rogue/ruinedwood,
@@ -1080,6 +1130,10 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/blocks/stonered/tiny,
+/area/rogue/indoors)
+"Of" = (
+/obj/structure/fluff/railing/corner/north_east,
+/turf/open/floor/rogue/tile/harem,
 /area/rogue/indoors)
 "Oh" = (
 /obj/structure/table/cooling,
@@ -1304,6 +1358,10 @@
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors)
+"WY" = (
+/obj/machinery/light/rogue/firebowl/stump,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/woods/north)
 "Xs" = (
 /obj/structure/table/wood{
 	icon_state = "longtable_mid";
@@ -2862,10 +2920,10 @@ rT
 rT
 rT
 vq
-wX
-wX
-wX
-wX
+WY
+zo
+zo
+zo
 wX
 wX
 wX
@@ -2914,11 +2972,11 @@ rT
 rT
 rT
 vq
-hh
-hh
-hh
-hh
-hh
+zo
+zo
+kv
+zo
+zo
 hh
 ej
 ej
@@ -2965,13 +3023,13 @@ rT
 rT
 rT
 rT
-vq
-hh
-hh
-hh
-hh
-hh
-hh
+rT
+tW
+Ey
+Ey
+Ey
+zo
+zo
 ej
 ej
 ej
@@ -3017,13 +3075,13 @@ rT
 rT
 rT
 rT
-vq
-hh
-hh
-hh
-hh
-hh
-hh
+rT
+Nb
+Ey
+Ey
+Ey
+MZ
+zo
 ej
 ej
 ej
@@ -3055,7 +3113,7 @@ xy
 xy
 CZ
 CZ
-CZ
+dE
 rT
 rT
 rT
@@ -3069,13 +3127,13 @@ rT
 rT
 rT
 rT
-vq
-hh
-hh
-hh
-hh
-hh
-hh
+rT
+Nb
+nk
+DG
+Of
+zo
+zo
 ej
 ej
 ej
@@ -3122,11 +3180,11 @@ rT
 rT
 rT
 vq
-hh
-hh
-hh
-hh
-hh
+zo
+zo
+im
+zo
+zo
 hh
 ej
 ej
@@ -3173,11 +3231,11 @@ rT
 rT
 rT
 vq
-mq
-Ln
-Ln
-Ln
-Ln
+vq
+wv
+zo
+zo
+zo
 Dp
 Ln
 Ln

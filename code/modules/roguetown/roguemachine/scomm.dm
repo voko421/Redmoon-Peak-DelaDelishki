@@ -922,6 +922,8 @@
 	var/listening = FALSE
 	var/speech_color = null
 	var/loudmouth = FALSE
+	var/broadcaster_tag
+	var/broadcaster_number
 
 /obj/structure/broadcast_horn/examine(mob/user)
 	. = ..()
@@ -929,6 +931,8 @@
 		. += "There's a faint skittering coming out of it."
 	else
 		. += "The rats within are quiet."
+	if(broadcaster_number)
+		. += "Its designation is #[broadcaster_number][broadcaster_tag ? ", labeled as [broadcaster_tag]" : ""]."
 
 /obj/structure/broadcast_horn/redstone_triggered()
 	toggle_horn()
@@ -1081,6 +1085,8 @@
 /obj/structure/broadcast_horn/Initialize()
 	. = ..()
 	become_hearing_sensitive()
+	SSroguemachine.broadcaster_machines += src
+	broadcaster_number = SSroguemachine.broadcaster_machines.len
 
 /obj/structure/broadcast_horn/Destroy()
 	lose_hearing_sensitivity()

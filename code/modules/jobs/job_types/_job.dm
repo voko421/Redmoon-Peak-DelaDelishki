@@ -437,6 +437,12 @@
 	return (H.pronouns == SHE_HER || H.pronouns == THEY_THEM_F || H.pronouns == HE_HIM_F)
 // LETHALSTONE EDIT END
 
+/datum/job/proc/get_informed_title(mob/mob)
+	if(mob.gender == FEMALE && f_title)
+		return f_title
+
+	return title
+
 /datum/job/Topic(href, list/href_list)
 	if(href_list["explainjob"])
 		var/list/dat = list()
@@ -531,7 +537,7 @@
 				dat += "<br><i>Regardless of your statpacks or race choice, you will not be able to exceed these stats on spawn.</i></font>"
 				dat += "</font>"	//Ends the stat limit colors
 		if(length(job_traits) && (show_job_traits || sclass_count > 1))
-			dat += "<font color ='#7a4d0a'><b>Class</b></font> Traits:</font> "
+			dat += "<b>Class</b></font> Traits: "
 			for(var/trait in job_traits)
 				dat += "<details><summary><i><font color ='#ccbb82'>[trait]</font></i></summary>"
 				dat += "<i><font color = '#a3ffe0'>[GLOB.roguetraits[trait]]</font></i></details>"

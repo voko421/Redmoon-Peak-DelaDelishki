@@ -50,7 +50,7 @@
 		)
 	H.dna.species.soundpack_m = new /datum/voicepack/male/wizard()
 	if(H.age == AGE_OLD)
-		H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
+		H.adjust_skillrank_up_to(/datum/skill/magic/arcane, SKILL_LEVEL_EXPERT, TRUE)
 		H.mind?.adjust_spellpoints(6)
 	H.cmode_music = 'sound/music/cmode/adventurer/combat_outlander4.ogg'
 	switch(H.patron?.type)
@@ -112,13 +112,13 @@
 			backr = /obj/item/rogueweapon/shield/wood
 			r_hand = /obj/item/rogueweapon/sword/short/falchion
 			armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat
-			H.adjust_skillrank(/datum/skill/combat/shields, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_APPRENTICE, TRUE)
 		if("Messer & Wooden Shield")
 			beltr = /obj/item/rogueweapon/scabbard/sword
 			backr = /obj/item/rogueweapon/shield/wood
 			r_hand = /obj/item/rogueweapon/sword/short/messer/iron
 			armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat
-			H.adjust_skillrank(/datum/skill/combat/shields, 1, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_APPRENTICE, TRUE)
 		if("Hwando")
 			r_hand = /obj/item/rogueweapon/sword/sabre/mulyeog // Meant to not have the special foreign scabbards.
 			beltr = /obj/item/rogueweapon/scabbard/sword

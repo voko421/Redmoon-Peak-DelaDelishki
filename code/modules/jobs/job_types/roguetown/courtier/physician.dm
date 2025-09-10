@@ -100,9 +100,9 @@
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
 	if(H.age == AGE_MIDDLEAGED)
-		H.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
+		H.adjust_skillrank_up_to(/datum/skill/misc/sewing, 4, TRUE)
 	if(H.age == AGE_OLD)
-		H.adjust_skillrank(/datum/skill/craft/alchemy, 1, TRUE) //small carrot to play old
+		H.adjust_skillrank_up_to(/datum/skill/craft/alchemy, 6, TRUE) //small carrot to play old
 		H.change_stat(STATKEY_SPD, -1)
 		H.change_stat(STATKEY_INT, 1)
 		H.change_stat(STATKEY_PER, 1)

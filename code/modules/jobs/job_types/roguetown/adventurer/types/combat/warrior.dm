@@ -36,28 +36,28 @@
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)
 		if("Longsword")
-			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_EXPERT, TRUE)
 			backr = /obj/item/rogueweapon/sword/long
 			beltr = /obj/item/rogueweapon/scabbard/sword
 		if("Mace")
-			H.adjust_skillrank_up_to(/datum/skill/combat/maces, 4, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_EXPERT, TRUE)
 			beltr = /obj/item/rogueweapon/mace
 		if("Billhook")
-			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 4, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, SKILL_LEVEL_EXPERT, TRUE)
 			r_hand = /obj/item/rogueweapon/spear/billhook
 			backr = /obj/item/rogueweapon/scabbard/gwstrap
 		if("Battle Axe")
-			H.adjust_skillrank_up_to(/datum/skill/combat/axes, 4, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_EXPERT, TRUE)
 			backr = /obj/item/rogueweapon/stoneaxe/battle
 		if("Short Sword & Iron Shield")
-			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
-			H.adjust_skillrank_up_to(/datum/skill/combat/shields, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_EXPERT, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			backr = /obj/item/rogueweapon/shield/iron
 			beltr = /obj/item/rogueweapon/scabbard/sword
 			r_hand = /obj/item/rogueweapon/sword/short/iron
 		if("Iron Saber & Wood Shield")
-			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
-			H.adjust_skillrank_up_to(/datum/skill/combat/shields, 2, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_EXPERT, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			r_hand = /obj/item/rogueweapon/sword/saber/iron
 			beltr = /obj/item/rogueweapon/scabbard/sword
 			backr = /obj/item/rogueweapon/shield/wood
@@ -134,11 +134,11 @@
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)
 		if("Rapier")
-			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_EXPERT, TRUE)
 			l_hand = /obj/item/rogueweapon/sword/rapier
 			r_hand = /obj/item/rogueweapon/scabbard/sword
 		if("Dagger")
-			H.adjust_skillrank_up_to(/datum/skill/combat/knives, 4, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/knives, SKILL_LEVEL_EXPERT, TRUE)
 			r_hand = /obj/item/rogueweapon/huntingknife/idagger/steel
 			beltr = /obj/item/rogueweapon/scabbard/sheath
 	armor = /obj/item/clothing/suit/roguetown/armor/leather
@@ -271,23 +271,23 @@
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)
 		if ("Katar")
-			H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 4, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_EXPERT, TRUE)
 			beltr = /obj/item/rogueweapon/katar
 		if("Axe")
-			H.adjust_skillrank_up_to(/datum/skill/combat/axes, 3, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			beltr = /obj/item/rogueweapon/stoneaxe/boneaxe
 		if("Sword")
-			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 3, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			beltr = /obj/item/rogueweapon/scabbard/sword
 			r_hand = /obj/item/rogueweapon/sword/short
 		if("Club")
-			H.adjust_skillrank_up_to(/datum/skill/combat/maces, 3, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			beltr = /obj/item/rogueweapon/mace/woodclub
 		if("Spear")
-			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 3, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			r_hand = /obj/item/rogueweapon/spear/bonespear
 		if ("MY BARE HANDS!!!")
-			H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 4, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_EXPERT, TRUE)
 			ADD_TRAIT(H, TRAIT_CIVILIZEDBARBARIAN, TRAIT_GENERIC)
 	if(should_wear_masc_clothes(H))
 		H.dna.species.soundpack_m = new /datum/voicepack/male/warrior()
@@ -312,47 +312,6 @@
 		neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 		beltl = /obj/item/rogueweapon/huntingknife
 	backpack_contents = list(/obj/item/flashlight/flare/torch = 1)
-
-
-/datum/advclass/sfighter/flagellant
-	name = "Flagellant"
-	tutorial = "You are a pacifistic warrior who embraces suffering, believing pain is the path to enlightenment. You take the suffering of others upon yourself."
-	outfit = /datum/outfit/job/roguetown/adventurer/flagellant
-	cmode_music = 'sound/music/cmode/adventurer/combat_outlander2.ogg'
-	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_CRITICAL_RESISTANCE, TRAIT_NOPAINSTUN, TRAIT_DODGEEXPERT)
-	subclass_stats = list(
-		STATKEY_CON = 5,
-		STATKEY_WIL = 5,
-		STATKEY_SPD = 1,
-		STATKEY_STR = -2,
-		STATKEY_INT = -2,
-	)
-	subclass_skills = list(
-		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/combat/whipsflails = SKILL_LEVEL_EXPERT,
-		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
-		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
-		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
-	)
-
-/datum/outfit/job/roguetown/adventurer/flagellant/pre_equip(mob/living/carbon/human/H, visualsOnly)
-	..()
-	to_chat(H, span_warning("You are a pacifistic warrior who embraces suffering, believing pain is the path to enlightenment."))
-	H.set_blindness(0)
-
-	pants = /obj/item/clothing/under/roguetown/tights/black
-	shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/black
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	backl = /obj/item/storage/backpack/rogue/satchel
-	belt = /obj/item/storage/belt/rogue/leather
-	beltr = /obj/item/rogueweapon/whip
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
-	backpack_contents = list(
-		/obj/item/recipe_book/survival = 1,
-		/obj/item/flashlight/flare/torch = 1,
-		)
 
 /datum/advclass/sfighter/ironclad
 	name = "Ironclad"
@@ -430,23 +389,23 @@
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)
 		if("Executioner's Sword")
-			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 3, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			backr = /obj/item/rogueweapon/sword/long/exe
 		if("Warhammer + Shield")
-			H.adjust_skillrank_up_to(/datum/skill/combat/maces, 3, TRUE)
-			H.adjust_skillrank_up_to(/datum/skill/combat/shields, 3, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_JOURNEYMAN, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			beltr = /obj/item/rogueweapon/mace/warhammer
 			backr = /obj/item/rogueweapon/shield/iron
 		if("Flail + Shield")
-			H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, 3, TRUE)
-			H.adjust_skillrank_up_to(/datum/skill/combat/shields, 3, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, SKILL_LEVEL_JOURNEYMAN, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			beltr = /obj/item/rogueweapon/flail
 			backr = /obj/item/rogueweapon/shield/iron
 		if("Lucerne")
-			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 3, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			r_hand = /obj/item/rogueweapon/eaglebeak/lucerne
 			backr = /obj/item/rogueweapon/scabbard/gwstrap
 		if("Greataxe")
-			H.adjust_skillrank_up_to(/datum/skill/combat/axes, 3, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			r_hand = /obj/item/rogueweapon/greataxe
 			backr = /obj/item/rogueweapon/scabbard/gwstrap

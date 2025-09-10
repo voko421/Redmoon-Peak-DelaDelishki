@@ -44,9 +44,8 @@
 	aggressive = 1
 //	stat_attack = UNCONSCIOUS
 	ranged = TRUE
-	rapid = 2
 	ranged_cooldown = 40
-	projectiletype = /obj/projectile/magic/aoe/fireball/spitfire
+	projectiletype = /obj/projectile/magic/aoe/fireball/rogue
 	ranged_message = "stares"
 
 /mob/living/simple_animal/hostile/retaliate/rogue/infernal/watcher/Initialize()
@@ -73,12 +72,12 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/infernal/watcher/death(gibbed)
 	..()
 	var/turf/deathspot = get_turf(src)
-	new /obj/item/magic/infernalcore(deathspot)
-	new /obj/item/magic/infernalcore(deathspot)
-	new /obj/item/magic/hellhoundfang(deathspot)
-	new /obj/item/magic/hellhoundfang(deathspot)
-	new /obj/item/magic/infernalash(deathspot)
-	new /obj/item/magic/infernalash(deathspot)
+	new /obj/item/magic/infernal/core(deathspot)
+	new /obj/item/magic/infernal/core(deathspot)
+	new /obj/item/magic/infernal/fang(deathspot)
+	new /obj/item/magic/infernal/fang(deathspot)
+	new /obj/item/magic/infernal/ash(deathspot)
+	new /obj/item/magic/infernal/ash(deathspot)
 	new /obj/item/magic/melded/t1(deathspot)
 
 	update_icon()

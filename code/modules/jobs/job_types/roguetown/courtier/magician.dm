@@ -67,6 +67,7 @@
 
 /datum/outfit/job/roguetown/magician
 	job_bitflag = BITFLAG_ROYALTY
+	has_loadout = TRUE
 
 /datum/job/roguetown/magician/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
@@ -76,31 +77,10 @@
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("advsetup")
 
-/datum/outfit/job/roguetown/magician/basic/pre_equip(mob/living/carbon/human/H)
-	..()
-	H.adjust_blindness(-3)
-	neck = /obj/item/clothing/neck/roguetown/talkstone
-	cloak = /obj/item/clothing/cloak/black_cloak
-	armor = /obj/item/clothing/suit/roguetown/shirt/robe/black
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-	pants = /obj/item/clothing/under/roguetown/tights/random
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	belt = /obj/item/storage/belt/rogue/leather/plaquesilver
-	beltr = /obj/item/storage/keyring/mage
-	beltl = /obj/item/storage/magebag
-	id = /obj/item/clothing/ring/gold
-	r_hand = /obj/item/rogueweapon/woodstaff/riddle_of_steel/magos
-	backl = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(
-		/obj/item/reagent_containers/glass/bottle/rogue/poison, 
-		/obj/item/reagent_containers/glass/bottle/rogue/healthpot,
-		/obj/item/recipe_book/alchemy,
-		/obj/item/recipe_book/magic,
-		/obj/item/book/spellbook,
-		/obj/item/rogueweapon/huntingknife/idagger/silver/arcyne
-	)
+/datum/outfit/job/roguetown/magician/choose_loadout(mob/living/carbon/human/H)
+	. = ..()
 	if(H.age == AGE_OLD)
-		H.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
+		H.adjust_skillrank_up_to(/datum/skill/magic/arcane, 6, TRUE)
 		H.change_stat(STATKEY_SPD, -1)
 		H.change_stat(STATKEY_INT, 1)
 		H.change_stat(STATKEY_PER, 1)
@@ -124,3 +104,27 @@
 		if(/datum/patron/inhumen/baotha)
 			H.cmode_music = 'sound/music/combat_baotha.ogg'
 			ADD_TRAIT(H, TRAIT_HERESIARCH, TRAIT_GENERIC)
+
+/datum/outfit/job/roguetown/magician/basic/pre_equip(mob/living/carbon/human/H)
+	..()
+	H.adjust_blindness(-3)
+	neck = /obj/item/clothing/neck/roguetown/talkstone
+	cloak = /obj/item/clothing/cloak/black_cloak
+	armor = /obj/item/clothing/suit/roguetown/shirt/robe/black
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+	pants = /obj/item/clothing/under/roguetown/tights/random
+	shoes = /obj/item/clothing/shoes/roguetown/shortboots
+	belt = /obj/item/storage/belt/rogue/leather/plaquesilver
+	beltr = /obj/item/storage/keyring/mage
+	beltl = /obj/item/storage/magebag/associate
+	id = /obj/item/clothing/ring/gold
+	r_hand = /obj/item/rogueweapon/woodstaff/riddle_of_steel/magos
+	backl = /obj/item/storage/backpack/rogue/satchel
+	backpack_contents = list(
+		/obj/item/reagent_containers/glass/bottle/rogue/poison,
+		/obj/item/reagent_containers/glass/bottle/rogue/healthpot,
+		/obj/item/recipe_book/alchemy,
+		/obj/item/recipe_book/magic,
+		/obj/item/book/spellbook,
+		/obj/item/rogueweapon/huntingknife/idagger/silver/arcyne
+	)

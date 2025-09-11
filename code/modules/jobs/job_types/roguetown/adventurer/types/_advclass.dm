@@ -47,14 +47,17 @@
 	/// Extra fluff added to the role explanation in class selection.
 	var/extra_context
 
-/datum/advclass/proc/equipme(mob/living/carbon/human/H)
+/datum/advclass/proc/equipme(mob/living/carbon/human/H, dummy = FALSE)
 	// input sleeps....
 	set waitfor = FALSE
 	if(!H)
 		return FALSE
 
 	if(outfit)
-		H.equipOutfit(outfit)
+		H.equipOutfit(outfit, dummy)
+
+		if(dummy)	//This means we're doing a Char Sheet preview. We don't need to equip the dummy with anything else, the outfits are likely to runtime on their own.
+			return
 
 	post_equip(H)
 

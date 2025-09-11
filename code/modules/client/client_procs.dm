@@ -140,6 +140,11 @@ GLOBAL_LIST_EMPTY(respawncounts)
 	if(href_list["schizohelp"])
 		answer_schizohelp(locate(href_list["schizohelp"]))
 		return
+	
+	if(href_list["viewchronicle"])
+		var/tab = href_list["chronicletab"] || "The Realm"
+		show_chronicle(tab)
+		return
 
 	switch(href_list["_src_"])
 		if("holder")
@@ -658,7 +663,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 	return "<font color='[color]'>[display_num]</font>"
 
 /client/proc/view_stats()
-	set name = "View Statistics"
+	set name = "View Chronicle"
 	set category = "OOC"
 
 	show_round_stats(pick_assoc(GLOB.featured_stats))
@@ -1675,3 +1680,4 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 		log_game("COMMEND: [ckey] commends [theykey].")
 		log_admin("COMMEND: [ckey] commends [theykey].")
 	return
+

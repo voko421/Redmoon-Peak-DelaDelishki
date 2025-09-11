@@ -58,22 +58,22 @@
 	..()
 	user.remove_status_effect(/datum/status_effect/buff/dragonhide)
 
-/obj/item/clothing/suit/roguetown/dragonhide/dragonhide/proc/dispel()
+/obj/item/clothing/suit/roguetown/dragonhide/proc/dispel()
 	if(!QDELETED(src))
 		src.visible_message(span_warning("The [src]'s borders begin to shimmer and fade, before it vanishes entirely!"))
 		qdel(src)
 
-/obj/item/clothing/suit/roguetown/dragonhide/dragonhide/obj_break()
+/obj/item/clothing/suit/roguetown/dragonhide/obj_break()
 	. = ..()
 	if(!QDELETED(src))
 		dispel()
 
-/obj/item/clothing/suit/roguetown/dragonhide/dragonhide/attack_hand(mob/user)
+/obj/item/clothing/suit/roguetown/dragonhide/attack_hand(mob/user)
 	. = ..()
 	if(!QDELETED(src))
 		dispel()
 	
-/obj/item/clothing/suit/roguetown/dragonhide/dragonhide/dropped()
+/obj/item/clothing/suit/roguetown/dragonhide/dropped()
 	. = ..()
 	if(!QDELETED(src))
 		dispel()

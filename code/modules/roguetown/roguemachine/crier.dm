@@ -99,11 +99,10 @@
 				for(var/i = length(GLOB.broadcast_list), i > 0, i--)
 					var/entry = GLOB.broadcast_list[i]
 					var/msg = entry["message"]
-					var/num = entry["number"]
 					var/tag = entry["tag"]
 					var/time = entry["timestamp"]
 
-					contents += "ID-[num][tag ? " ( [tag] )" : ""] broadcasted at [time]:<br>"
+					contents += "[tag ? " ( [tag] )" : ""] broadcasted at [time]:<br>"
 					contents += "[msg]<br><hr>"
 
 			contents += "<br><a href='?src=\ref[src];switchtab=[TAB_ROUSMAIN]'>\[Back\]</a>"
@@ -116,7 +115,7 @@
 			else
 				for(var/obj/structure/broadcast_horn/paid/H in SSroguemachine.broadcaster_machines)
 					var/locked_text = H.is_locked ? "Locked" : "Unlocked"
-					contents += "Streetpipe #[H.broadcaster_number][H.broadcaster_tag ? " ( [H.broadcaster_tag] )" : ""] "
+					contents += "Streetpipe [H.broadcaster_tag ? " ( [H.broadcaster_tag] )" : ""] "
 					contents += "<span style='float:right;'>[locked_text] <a href='?src=\ref[src];togglehorn=\ref[H]'>\[Toggle\]</a></span><br>"
 			contents += "<br><a href='?src=\ref[src];switchtab=[TAB_ROUSMAIN]'>\[Back\]</a>"
 

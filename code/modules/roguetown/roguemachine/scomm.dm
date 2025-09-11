@@ -271,7 +271,7 @@
 	animate(pixel_x = oldx-1, time = 0.5)
 	animate(pixel_x = oldx, time = 0.5)
 
-/obj/structure/roguemachine/scomm/proc/repeat_message(message, atom/A, tcolor, message_language, list/tspans, broadcaster_number, broadcaster_tag)
+/obj/structure/roguemachine/scomm/proc/repeat_message(message, atom/A, tcolor, message_language, list/tspans, broadcaster_tag)
 	if(A == src)
 		return
 	if(tcolor)
@@ -399,8 +399,7 @@
 	//Log message to global broadcast list.
 	GLOB.broadcast_list += list(list(
 	"message"   = input_text,
-	"number"    = scomstone_number,
-	"tag"		= "SCOMSTONE",
+	"tag"		= "SCOMSTONE #[scomstone_number]",
 	"timestamp" = station_time_timestamp("hh:mm:ss")
 	))
 
@@ -908,8 +907,7 @@
 	//Log messages that aren't sent on the garrison line.
 	GLOB.broadcast_list += list(list(
 	"message"   = input_text,
-	"number"    = scomstone_number,
-	"tag"		= "CROWNSTONE",
+	"tag"		= "CROWNSTONE #[scomstone_number]",
 	"timestamp" = station_time_timestamp("hh:mm:ss")
 	))
 
@@ -951,7 +949,6 @@
 	var/speech_color = null
 	var/loudmouth = FALSE
 	var/broadcaster_tag
-	var/broadcaster_number
 
 /obj/structure/broadcast_horn/examine(mob/user)
 	. = ..()
@@ -959,8 +956,8 @@
 		. += "There's a faint skittering coming out of it."
 	else
 		. += "The rats within are quiet."
-	if(broadcaster_number)
-		. += "Its designation is ([broadcaster_number])[broadcaster_tag ? ", labeled as [broadcaster_tag]" : ""]."
+	if(broadcaster_tag)
+		. += "It's[broadcaster_tag ? " labeled as [broadcaster_tag]" : ""]."
 
 /obj/structure/broadcast_horn/redstone_triggered()
 	toggle_horn()
@@ -998,7 +995,6 @@
 	//Log the broadcast here
 	GLOB.broadcast_list += list(list(
 		"message"   = raw_message,
-		"number"    = broadcaster_number,
 		"tag"       = broadcaster_tag,
 		"timestamp" = station_time_timestamp("hh:mm:ss")
 	))
@@ -1116,11 +1112,6 @@
 	. = ..()
 	become_hearing_sensitive()
 	SSroguemachine.broadcaster_machines += src
-	broadcaster_number = SSroguemachine.broadcaster_machines.len
-
-	// Converts broadcaster numbers to letters to differentiate broadcaster IDs from SCOM IDs (1 > A, 2 > B, etc.)
-	var/letter = ascii2text(64 + broadcaster_number)
-	broadcaster_number = letter
 
 /obj/structure/broadcast_horn/Destroy()
 	lose_hearing_sensitivity()

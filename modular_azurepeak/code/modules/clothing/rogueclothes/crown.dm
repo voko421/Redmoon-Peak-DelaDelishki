@@ -55,7 +55,6 @@
 
 			GLOB.broadcast_list += list(list(
 			"message"   = input_text,
-			"number"	= "0", //The crown is always ID 0.
 			"tag"		= "The Crown of Azuria",
 			"timestamp" = station_time_timestamp("hh:mm:ss")
 			))

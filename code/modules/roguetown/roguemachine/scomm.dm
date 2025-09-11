@@ -960,7 +960,7 @@
 	else
 		. += "The rats within are quiet."
 	if(broadcaster_number)
-		. += "Its designation is #[broadcaster_number][broadcaster_tag ? ", labeled as [broadcaster_tag]" : ""]."
+		. += "Its designation is ([broadcaster_number])[broadcaster_tag ? ", labeled as [broadcaster_tag]" : ""]."
 
 /obj/structure/broadcast_horn/redstone_triggered()
 	toggle_horn()
@@ -1117,6 +1117,10 @@
 	become_hearing_sensitive()
 	SSroguemachine.broadcaster_machines += src
 	broadcaster_number = SSroguemachine.broadcaster_machines.len
+
+	// Converts broadcaster numbers to letters to differentiate broadcaster IDs from SCOM IDs (1 > A, 2 > B, etc.)
+	var/letter = ascii2text(64 + broadcaster_number)
+	broadcaster_number = letter
 
 /obj/structure/broadcast_horn/Destroy()
 	lose_hearing_sensitivity()

@@ -179,7 +179,7 @@
 	owner.on_fire_stack(wait * 0.1, src)
 
 	var/turf/location = get_turf(owner)
-	location?.hotspot_expose(700, 25, TRUE)
+	location?.hotspot_expose(700, 25 * wait * 0.1, TRUE)
 
 /**
  * Used to deal damage to humans and count their protection.

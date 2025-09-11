@@ -909,7 +909,7 @@
 	GLOB.broadcast_list += list(list(
 	"message"   = input_text,
 	"number"    = scomstone_number,
-	"tag"		= "SCOMSTONE",
+	"tag"		= "CROWNSTONE",
 	"timestamp" = station_time_timestamp("hh:mm:ss")
 	))
 

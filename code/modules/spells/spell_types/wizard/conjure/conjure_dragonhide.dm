@@ -9,7 +9,7 @@
 	chargedrain = 1
 	chargetime = 3 SECONDS
 	no_early_release = TRUE
-	recharge_time = 3 MINUTES
+	recharge_time = 3 SECONDS
 
 	warnie = "spellwarning"
 	no_early_release = TRUE
@@ -52,11 +52,9 @@
 
 /obj/item/clothing/suit/roguetown/dragonhide/equipped(mob/living/user)
 	. = ..()
-	user.apply_status_effect(/datum/status_effect/buff/dragonhide)
+	if(!QDELETED(src))
+		user.apply_status_effect(/datum/status_effect/buff/dragonhide)
 
-/obj/item/clothing/suit/roguetown/dragonhide/dropped(mob/living/user)
-	..()
-	user.remove_status_effect(/datum/status_effect/buff/dragonhide)
 
 /obj/item/clothing/suit/roguetown/dragonhide/proc/dispel()
 	if(!QDELETED(src))
@@ -68,13 +66,14 @@
 	if(!QDELETED(src))
 		dispel()
 
-/obj/item/clothing/suit/roguetown/dragonhide/attack_hand(mob/user)
+/obj/item/clothing/suit/roguetown/dragonhide/attack_hand(mob/living/user)
 	. = ..()
 	if(!QDELETED(src))
 		dispel()
 	
-/obj/item/clothing/suit/roguetown/dragonhide/dropped()
+/obj/item/clothing/suit/roguetown/dragonhide/dropped(mob/living/user)
 	. = ..()
+	user.remove_status_effect(/datum/status_effect/buff/dragonhide)
 	if(!QDELETED(src))
 		dispel()
 

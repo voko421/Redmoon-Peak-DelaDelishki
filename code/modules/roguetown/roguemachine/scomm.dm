@@ -187,7 +187,7 @@
 			return
 		var/obj/structure/roguemachine/scomm/S = SSroguemachine.scomm_machines[nightcall]
 		if(istype(S, /obj/item/scomstone))
-			say("The jabberline's rats cannot travel to SCOMstones.") //This is temporary until I can figure out how to make scomstones callable.
+			say("The jabberline's rats cannot travel to SCOMstones.") //Check prevents a runtime and leaves room to potentially make scomstones callable by ID later.
 			playsound(src, 'sound/vo/mobs/rat/rat_life.ogg', 100, TRUE, -1)
 			return
 		if(!S)

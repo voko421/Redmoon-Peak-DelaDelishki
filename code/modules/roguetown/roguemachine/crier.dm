@@ -116,7 +116,7 @@
 			else
 				for(var/obj/structure/broadcast_horn/paid/H in SSroguemachine.broadcaster_machines)
 					var/locked_text = H.is_locked ? "Locked" : "Unlocked"
-					contents += "Horn #[H.broadcaster_number][H.broadcaster_tag ? " ( [H.broadcaster_tag] )" : ""] "
+					contents += "Streetpipe #[H.broadcaster_number][H.broadcaster_tag ? " ( [H.broadcaster_tag] )" : ""] "
 					contents += "<span style='float:right;'>[locked_text] <a href='?src=\ref[src];togglehorn=\ref[H]'>\[Toggle\]</a></span><br>"
 			contents += "<br><a href='?src=\ref[src];switchtab=[TAB_ROUSMAIN]'>\[Back\]</a>"
 

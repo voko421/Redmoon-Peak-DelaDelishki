@@ -103,7 +103,7 @@
 					var/tag = entry["tag"]
 					var/time = entry["timestamp"]
 
-					contents += "Horn #[num][tag ? " ( [tag] )" : ""] broadcasted at [time]:<br>"
+					contents += "ID#[num][tag ? " ( [tag] )" : ""] broadcasted at [time]:<br>"
 					contents += "[msg]<br><hr>"
 
 			contents += "<br><a href='?src=\ref[src];switchtab=[TAB_ROUSMAIN]'>\[Back\]</a>"

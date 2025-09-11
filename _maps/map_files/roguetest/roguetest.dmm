@@ -199,8 +199,7 @@
 /obj/structure/table/vtable/v2,
 /obj/structure/broadcast_horn/loudmouth/guest{
 	pixel_y = 18;
-	dir = 4;
-	broadcaster_tag = "Crier's Guest"
+	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors)

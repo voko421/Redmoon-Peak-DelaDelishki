@@ -1,7 +1,6 @@
 #define TAB_ROUSMAIN 1
 #define TAB_SCOMLOG 2
-#define TAB_PAYMENTS 3
-#define TAB_MANAGESCOMS 4
+#define TAB_MANAGESCOMS 3
 
 /obj/structure/roguemachine/crier
 	name = "rous master"
@@ -104,7 +103,7 @@
 					var/tag = entry["tag"]
 					var/time = entry["timestamp"]
 
-					contents += "#[num][tag ? " ([tag])" : ""] @ [time]:<br>"
+					contents += "Horn #[num][tag ? " ( [tag] )" : ""] broadcasted at [time]:<br>"
 					contents += "[msg]<br><hr>"
 
 			contents += "<br><a href='?src=\ref[src];switchtab=[TAB_ROUSMAIN]'>\[Back\]</a>"
@@ -117,19 +116,16 @@
 			else
 				for(var/obj/structure/broadcast_horn/paid/H in SSroguemachine.broadcaster_machines)
 					var/locked_text = H.is_locked ? "Locked" : "Unlocked"
-					contents += "Horn #[H.broadcaster_number][H.broadcaster_tag ? " ([H.broadcaster_tag])" : ""] "
-					contents += "[locked_text] "
-					contents += "<a href='?src=\ref[src];togglehorn=\ref[H]'>\[Toggle\]</a><br>"
-
+					contents += "Horn #[H.broadcaster_number][H.broadcaster_tag ? " ( [H.broadcaster_tag] )" : ""] "
+					contents += "<span style='float:right;'>[locked_text] <a href='?src=\ref[src];togglehorn=\ref[H]'>\[Toggle\]</a></span><br>"
 			contents += "<br><a href='?src=\ref[src];switchtab=[TAB_ROUSMAIN]'>\[Back\]</a>"
 
 	if(!canread)
 		contents = stars(contents)
-	var/datum/browser/popup = new(user, "VENDORTHING", "", 700, 800)
+	var/datum/browser/popup = new(user, "VENDORTHING", "", 400, 500)
 	popup.set_content(contents)
 	popup.open()
 
 #undef TAB_ROUSMAIN
 #undef TAB_SCOMLOG
-#undef TAB_PAYMENTS
 #undef TAB_MANAGESCOMS

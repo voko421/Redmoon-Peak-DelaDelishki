@@ -9,7 +9,7 @@
 	chargedrain = 1
 	chargetime = 3 SECONDS
 	no_early_release = TRUE
-	recharge_time = 3 SECONDS
+	recharge_time = 3 MINUTES
 
 	warnie = "spellwarning"
 	no_early_release = TRUE
@@ -27,6 +27,13 @@
 	objtoequip = /obj/item/clothing/suit/roguetown/dragonhide
 	slottoequip = SLOT_ARMOR
 	checkspot = "armor"
+
+/obj/effect/proc_holder/spell/self/conjure_armor/conjure_dragonhide/Destroy()
+	if(src.conjured_armor)
+		conjured_armor.visible_message(span_warning("The [conjured_armor]'s borders begin to shimmer and fade, before it vanishes entirely!"))
+		qdel(conjured_armor)
+	return ..()
+
 
 
 /obj/item/clothing/suit/roguetown/dragonhide
@@ -47,8 +54,6 @@
 	blocksound = PLATEHIT
 	armor = ARMOR_DRAGONHIDE
 	body_parts_covered = COVERAGE_FULL | COVERAGE_HEAD_NOSE | NECK | HANDS | FEET
-
-
 
 /obj/item/clothing/suit/roguetown/dragonhide/equipped(mob/living/user)
 	. = ..()

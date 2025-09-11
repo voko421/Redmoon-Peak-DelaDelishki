@@ -152,7 +152,7 @@
 
 	if(do_crit)
 		var/datum/component/silverbless/psyblessed = weapon?.GetComponent(/datum/component/silverbless)
-		var/sundering = HAS_TRAIT(owner, TRAIT_SILVER_WEAK) && weapon?.is_silver && psyblessed?.is_blessed
+		var/sundering = HAS_TRAIT(owner, TRAIT_SILVER_WEAK) && istype(weapon) && weapon?.is_silver && psyblessed?.is_blessed
 		var/crit_attempt = try_crit(sundering ? BCLASS_SUNDER : bclass, dam, user, zone_precise, silent, crit_message)
 		if(crit_attempt)
 			return crit_attempt
@@ -435,7 +435,7 @@
 		if(HAS_TRAIT(owner, TRAIT_SILVER_WEAK) && !owner.has_status_effect(STATUS_EFFECT_ANTIMAGIC))
 			used = round(damage_dividend * 20 + (dam / 2) - 10 * resistance, 1)
 			if(prob(used))
-				attempted_wounds += /datum/wound/sunder
+				attempted_wounds += /datum/wound/sunder/head
 
 	for(var/wound_type in shuffle(attempted_wounds))
 		var/datum/wound/applied = add_wound(wound_type, silent, crit_message)

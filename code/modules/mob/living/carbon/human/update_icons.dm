@@ -77,7 +77,8 @@ There are several things that need to be remembered:
 		var/filter = get_filter(SUNDER_FILTER)
 		if(!filter)
 			add_filter(SUNDER_FILTER, 2, list("type" = "outline", "color" = "#ffffff", "alpha" = 60, "size" = 1))
-		sunder_light_obj = mob_light("#f5edda", 5, 5)
+		if(!sunder_light_obj)
+			sunder_light_obj = mob_light("#f5edda", 5, 5)
 		remove_overlay(SUNDER_LAYER)
 		var/mutable_appearance/new_fire_overlay = mutable_appearance('icons/mob/OnFire.dmi', "sunder_burning", -SUNDER_LAYER)
 		new_fire_overlay.appearance_flags = RESET_COLOR

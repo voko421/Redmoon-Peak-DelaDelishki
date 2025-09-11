@@ -744,6 +744,7 @@
 	var/label = null
 	var/inqdesc = null
 	var/hidden = FALSE
+	layer = TURF_LAYER
 	var/active = FALSE
 	var/datum/status_effect/bugged/effect
 

@@ -35,7 +35,7 @@
 	/// Subclass stat bonuses.
 	var/list/subclass_stats
 
-	/// Subclass skills. Is NOT capped to the listed level, but instead gives that number of levels.. EX. list(/datum/skill = SKILL_LEVEL_JOURNEYMAN)
+	/// Subclass skills. Everything here is leveled UP TO using adjust_skillrank_up_to EX. list(/datum/skill = SKILL_LEVEL_JOURNEYMAN)
 	var/list/subclass_skills
 
 	/// Subclass languages.

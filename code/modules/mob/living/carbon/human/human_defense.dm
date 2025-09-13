@@ -45,8 +45,9 @@
 		if(istype(used_weapon) && used_weapon.is_silver && ((used.smeltresult in list(/obj/item/ingot/aaslag, /obj/item/ingot/aalloy, /obj/item/ingot/purifiedaalloy)) || used.GetComponent(/datum/component/cursed_item)))
 			// Blessed silver delivers more int damage against "cursed" alloys, see component for multiplier values
 			var/datum/component/silverbless/bless = used_weapon.GetComponent(/datum/component/silverbless)
-			// Default multiplier to 1 if no bless component is present
-			var/mult = bless ? bless.cursed_item_intdamage : 1
+			if(bless.is_blessed)
+				// Apply multiplier if the blessing is active.
+				intdamage = round(intdamage * bless.cursed_item_intdamage)
 		used.take_damage(intdamage, damage_flag = d_type, sound_effect = FALSE, armor_penetration = 100)
 	if(physiology)
 		protection += physiology.armor.getRating(d_type)

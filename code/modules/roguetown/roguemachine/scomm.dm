@@ -1059,6 +1059,7 @@
 
 	// Handle coin payment
 	if(istype(P, /obj/item/roguecoin))
+		var/obj/item/roguecoin/C = P
 		if(is_locked)
 			say("Streetpipe is locked. Consult the crier.")
 			playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
@@ -1069,40 +1070,18 @@
 			playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 			return
 
-		var/mammon_value = 0
-		var is_valid_payment = FALSE
-
-		if(HAS_TRAIT(user, TRAIT_OUTLANDER))
-			if(istype(P, /obj/item/roguecoin/silver))
-				mammon_value = 5
-				is_valid_payment = TRUE
-			else
-				say("Foreigners pay extra. Insert a ziliqua.")
-				playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
-				return
-		else
-			if(istype(P, /obj/item/roguecoin/silver))
-				mammon_value = 5
-				is_valid_payment = TRUE
-			else if(istype(P, /obj/item/roguecoin/copper))
-				mammon_value = 1
-				is_valid_payment = TRUE
-
-		if(!is_valid_payment)
+		if(C.get_real_price() != 5)
+			to_chat(user, span_warning("Invalid payment! Insert coin worth 5 mammon."))
+			playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 			return
 
-		var/obj/item/roguecoin/C = P
-		if(C.quantity > 1)
-			return
-
-		// Mark pipe as active and consume coin
 		listening = TRUE
 		qdel(C)
 
-		// Route payment to the central crier machine
+		// Route payments to rousmaster
 		for(var/obj/structure/roguemachine/crier/Crier in world)
-			Crier.total_payments += mammon_value
-			break //Prevents fucky behavior if for some reason there's more than one rousmaster in the world.
+			Crier.total_payments += 5
+			break // Safety. Prevents a runtime if more than 1 rousmaster exists.
 
 		playsound(src, 'sound/misc/coininsert.ogg', 100, FALSE, -1)
 		return

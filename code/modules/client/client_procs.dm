@@ -140,6 +140,11 @@ GLOBAL_LIST_EMPTY(respawncounts)
 	if(href_list["schizohelp"])
 		answer_schizohelp(locate(href_list["schizohelp"]))
 		return
+	
+	if(href_list["viewchronicle"])
+		var/tab = href_list["chronicletab"] || "The Realm"
+		show_chronicle(tab)
+		return
 
 	switch(href_list["_src_"])
 		if("holder")
@@ -155,6 +160,13 @@ GLOBAL_LIST_EMPTY(respawncounts)
 			return
 		if("vars")
 			return view_var_Topic(href,href_list,hsrc)
+		if("familiar_prefs")
+			if (inprefs)
+				return
+			inprefs = TRUE
+			. = prefs.familiar_prefs.fam_process_link(usr,href_list)
+			inprefs = FALSE
+			return
 
 	switch(href_list["action"])
 		if("openLink")
@@ -167,7 +179,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 	..()	//redirect to hsrc.Topic()
 
 /client/proc/view_stats()
-	set name = "View Statistics"
+	set name = "View Chronicle"
 	set category = "OOC"
 
 	show_round_stats(pick_assoc(GLOB.featured_stats))
@@ -1184,3 +1196,4 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 		log_game("COMMEND: [ckey] commends [theykey].")
 		log_admin("COMMEND: [ckey] commends [theykey].")
 	return
+

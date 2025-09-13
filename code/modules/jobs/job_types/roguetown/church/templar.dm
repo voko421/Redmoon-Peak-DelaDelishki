@@ -80,13 +80,14 @@
 	switch(H.patron?.type)
 		if(/datum/patron/divine/undivided)
 			neck = /obj/item/clothing/neck/roguetown/psicross/undivided
-			var/cloaks = list("Cloak", "Tabard")
-			var/cloakchoice = input(H,"Choose your covering", "TAKE UP FASHION") as anything in cloaks
-			switch(cloakchoice)
-				if("Cloak")
-					cloak = /obj/item/clothing/cloak/undivided
-				if("Tabard")
-					cloak = /obj/item/clothing/cloak/templar/undivided
+			if(H.mind)
+				var/cloaks = list("Cloak", "Tabard")
+				var/cloakchoice = input(H,"Choose your covering", "TAKE UP FASHION") as anything in cloaks
+				switch(cloakchoice)
+					if("Cloak")
+						cloak = /obj/item/clothing/cloak/undivided
+					if("Tabard")
+						cloak = /obj/item/clothing/cloak/templar/undivided
 		if(/datum/patron/divine/astrata)
 			neck = /obj/item/clothing/neck/roguetown/psicross/astrata
 			cloak = /obj/item/clothing/cloak/tabard/crusader/astrata

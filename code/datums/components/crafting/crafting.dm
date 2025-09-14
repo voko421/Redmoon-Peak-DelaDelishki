@@ -219,7 +219,6 @@
 					return
 				continue
 			if(R.structurecraft && istype(S, R.structurecraft))
-				testing("isstructurecraft")
 				continue
 			if(S.density)
 				to_chat(user, span_warning("Something is in the way."))
@@ -542,35 +541,8 @@
 			usr.mind.lastrecipe = recipe
 		if("checkboxonlycraftable")
 			showonlycraftable = params["state"]
-	
-	/*if(..())
-		return
-	switch(action)
-		if("make")
-			var/datum/crafting_recipe/TR = locate(params["recipe"]) in GLOB.crafting_recipes
-			busy = TRUE
-			ui_interact(usr)
-			var/fail_msg = construct_item(usr, TR)
-			if(!fail_msg)
-				to_chat(usr, span_notice("[TR.name] crafted."))
-			else
-				to_chat(usr, span_warning("craft failed: [fail_msg]"))
-			busy = FALSE
-		if("toggle_recipes")
-			display_craftable_only = TRUE
-			. = TRUE
-		if("toggle_compact")
-			display_compact = TRUE
-			. = TRUE
-		if("set_category")
-			if(!isnull(params["category"]))
-				cur_category = params["category"]
-			if(!isnull(params["subcategory"]))
-				if(params["subcategory"] == "0")
-					cur_subcategory = ""
-				else
-					cur_subcategory = params["subcategory"]
-			. = TRUE*/
+
+
 
 /datum/component/personal_crafting/proc/build_recipe_data(datum/crafting_recipe/R)
 	var/list/data = list()
@@ -605,7 +577,7 @@
 	tool_text = replacetext(tool_text,",","",-1)
 	data["tool_text"] = tool_text
 
-	data["craftingdifficulty"] = R.craftdiff
+	data["craftingdifficulty"] = skill_to_string(R.craftdiff)
 
 
 	return data

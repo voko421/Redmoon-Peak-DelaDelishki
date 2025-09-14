@@ -1041,7 +1041,7 @@
 
 /obj/structure/broadcast_horn/paid
 	name = "\improper Streetpipe"
-	desc = "Also known as the People's Mouth, so long as the people can afford the ratfeed to pay for it. Insert a zenny to send a message over the SCOM network. Foreigners pay extra."
+	desc = "Also known as the People's Mouth, so long as the people can afford the ratfeed to pay for it. Insert a ziliqua to broadcast a message to every SCOM."
 	icon_state = "broadcaster_crass"
 	icon = 'icons/roguetown/misc/machines.dmi'
 	var/is_locked = FALSE

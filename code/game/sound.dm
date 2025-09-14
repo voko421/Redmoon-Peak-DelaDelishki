@@ -54,7 +54,7 @@
 					continue
 			if(M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, channel, pressure_affected, S, repeat))
 				. += M
-	//This slop never runs because muffled listeners will always be empty and instead muffling runs on playsound_local
+	//This never runs because muffled listeners will always be empty and instead muffling runs on playsound_local
 	/*for(var/mob/M as anything in muffled_listeners)
 		if(get_dist(M, turf_source) <= maxdistance)
 			if(animal_pref)

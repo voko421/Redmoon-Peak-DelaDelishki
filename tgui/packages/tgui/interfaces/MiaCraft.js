@@ -91,7 +91,7 @@ export const MiaCraft = (props, context) => {
                 <Button content="3x" onClick={() => {
                   actfunc('craft', {
                     item: recipe.path,
-                    amount: 5,
+                    amount: 3,
                   });
                 }}
                 />

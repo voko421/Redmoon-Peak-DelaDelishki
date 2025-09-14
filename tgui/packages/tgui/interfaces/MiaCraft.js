@@ -74,31 +74,38 @@ export const MiaCraft = (props, context) => {
               <LabeledList.Item label="Sell Price" style={{ 'margin-left': '20px' }}>
                 {recipe.sellprice}
               </LabeledList.Item>
-              <LabeledList.Item label="Craft it!" style={{ 'margin-left': '20px','gap': '4px'}}>
+              <LabeledList.Item label="Craft it!" style={{ 'margin-left': '20px', 'gap': '4px' }}>
                 <Button content="1x" onClick={() => {
                   actfunc('craft', {
                     item : recipe.path,
                   });
                 }}
                 />
-                <Button content="5x" onClick={() => {
+                <Button content="2x" onClick={() => {
                   actfunc('craft', {
                     item: recipe.path,
-                    amount: 5
+                    amount: 2,
                   });
                 }}
                 />
-                <Button content="10x" onClick={() => {
+                <Button content="3x" onClick={() => {
                   actfunc('craft', {
-                    item : recipe.path,
-                    amount: 10
+                    item: recipe.path,
+                    amount: 5,
+                  });
+                }}
+                />
+                <Button content="5x" onClick={() => {
+                  actfunc('craft', {
+                    item: recipe.path,
+                    amount: 5,
                   });
                 }}
                 />
                 <Button content="∞" onClick={() => {
                   actfunc('craft', {
                     item : recipe.path,
-                    auto: true
+                    auto: true,
                   });
                 }}
                 />
@@ -136,7 +143,7 @@ export const MiaCraft = (props, context) => {
   };
   
   return(
-    <Window title='Crafting' width={600} height={600} resizeable>
+    <Window title='Crafting' width={425} height={600} resizeable>
       <Window.Content scrollable>
         <Stack horizontal>
           {renderColumn()}

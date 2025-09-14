@@ -35,7 +35,9 @@
 	get_surroundings - takes a list of things and makes a list of key-types to values-amounts of said type in the list
 	check_contents - takes a recipe and a key-type list and checks if said recipe can be done with available stuff
 	check_tools - takes recipe, a key-type list, and a user and checks if there are enough tools to do the stuff, checks bugs one level deep
-	construct_item - takes a recipe and a user, call all the checking procs, calls do_after, checks all the things again, calls del_reqs, creates result, calls CheckParts of said result with argument being list returned by deel_reqs
+	construct_item - takes a recipe and a user, call all the checking procs, calls do_after, 
+	checks all the things again, calls del_reqs, creates result, 
+	calls CheckParts of said result with argument being list returned by del_reqs
 	del_reqs - takes recipe and a user, loops over the recipes reqs var and tries to find everything in the list make by get_environment and delete it/add to parts list, then returns the said list
 */
 
@@ -186,6 +188,12 @@
 			return NORTHEAST
 	return FALSE
 
+/datum/component/personal_crafting/proc/construct_item_repeatable(mob/user, datum/crafting_recipe/R, amount, auto)
+	while(amount > 0 || auto)
+		amount--
+		var/result = construct_item(user, R)
+		if(!result)
+			break
 
 /datum/component/personal_crafting/proc/construct_item(mob/user, datum/crafting_recipe/R)
 	if (HAS_TRAIT(user, TRAIT_CURSE_MALUM))
@@ -243,16 +251,14 @@
 		if(check_tools(user, R, contents))
 			if(R.craftsound)
 				playsound(T, R.craftsound, 100, TRUE)
-//			var/time2use = round(R.time / 3)
 			var/time2use = 10
 			for(var/i = 1 to 100)
 				if(do_after(user, time2use, target = user))
 					contents = get_surroundings(user)
 					if(!check_contents(R, contents))
-						return ", missing component."
+						return FALSE
 					if(!check_tools(user, R, contents))
-						return ", missing tool."
-
+						return FALSE
 					var/prob2craft = 25
 					if(R.craftdiff)
 						prob2craft -= (25*R.craftdiff)
@@ -306,13 +312,9 @@
 								amt2raise += (R.craftdiff * 10) // also gets more
 							if(amt2raise > 0)
 								user.mind.add_sleep_experience(R.skillcraft, amt2raise, FALSE)
-					return
-//				if(isitem(I))
-//					user.put_in_hands(I)
-//				if(send_feedback)
-//					SSblackbox.record_feedback("tally", "object_crafted", 1, I.type)
-				return 0
-			return "."
+					return TRUE
+				return FALSE
+			return FALSE
 		var/str
 		var/toollen = R.tools.len
 		if(toollen)
@@ -325,8 +327,8 @@
 				for(var/obj/O as anything in R.tools)
 					str += "[initial(O.name)]"
 		to_chat(usr, span_warning("I'm missing a tool. I need: <b>[str]</b>"))
-		return
-	return ", missing component."
+		return FALSE
+	return FALSE
 
 
 /*Del reqs works like this:
@@ -536,8 +538,10 @@
 	switch(action)
 		if("craft")
 			var/path = text2path(params["item"])
+			var/amount = params["amount"] || 1
+			var/auto = params["auto"]
 			var/recipe = new path
-			construct_item(usr, recipe)
+			construct_item_repeatable(usr, recipe, amount, auto)
 			usr.mind.lastrecipe = recipe
 		if("checkboxonlycraftable")
 			showonlycraftable = params["state"]
@@ -645,7 +649,7 @@
 			realdata = sortNames(realdata)
 			var/r = input(user, "What should I craft?") as null|anything in realdata
 			if(r)
-				construct_item(user, r)
+				construct_item_repeatable(user, r)
 				user.mind.lastrecipe = r
 
 

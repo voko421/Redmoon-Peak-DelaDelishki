@@ -1045,8 +1045,6 @@
 	icon_state = "broadcaster_crass"
 	icon = 'icons/roguetown/misc/machines.dmi'
 	var/is_locked = FALSE
-	var/stored_zen = 0
-	var/stored_zil = 0
 
 /obj/structure/broadcast_horn/paid/attackby(obj/item/P, mob/user, params)
 	// Handle locking/unlocking with crier key

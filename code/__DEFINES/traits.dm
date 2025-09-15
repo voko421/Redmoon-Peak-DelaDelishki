@@ -13,6 +13,7 @@
 #define TRAIT_SEEPRICES "Skilled Appraiser"
 #define TRAIT_SEEPRICES_SHITTY "Appraiser"
 #define TRAIT_STRONGBITE "Strong Bite"
+#define TRAIT_STRONGKICK "Strong Kick"
 #define TRAIT_NOBLE "Noble Blooded"
 #define TRAIT_DEFILED_NOBLE "Drained Noble Blood"
 #define TRAIT_EMPATH "Empath"
@@ -236,6 +237,9 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_SEEPRICES = "I can tell the prices of things down to the zenny.",
 	TRAIT_SEEPRICES_SHITTY = "I can tell the prices of things... <i>Kind of</i>.",
 	TRAIT_STRONGBITE = span_info("Stronger bites, critical bite attacks."),
+	TRAIT_STRONGKICK = span_info("My kicks knock people down and back a step, consistently. There's no need for obstacles."),
+	TRAIT_IGNORESLOWDOWN = span_info("Nothing stops this carriage!"),
+	TRAIT_IGNOREDAMAGESLOWDOWN = span_info("Hits slow me down no longer."),
 	TRAIT_NOBLE = span_blue("I'm of noble blood."),
 	TRAIT_PACIFISM = span_info("I cannot harm another living being."),
 	TRAIT_DEFILED_NOBLE = span_blue("I'm of noble blood but... Something feels off!"),

@@ -188,7 +188,7 @@
 			return NORTHEAST
 	return FALSE
 
-/datum/component/personal_crafting/proc/construct_item_repeatable(mob/user, datum/crafting_recipe/R, amount, auto)
+/datum/component/personal_crafting/proc/construct_item_repeatable(mob/user, datum/crafting_recipe/R, amount = 1, auto)
 	while(amount > 0 || auto)
 		amount--
 		var/result = construct_item(user, R)

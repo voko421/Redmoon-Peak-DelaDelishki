@@ -1220,19 +1220,19 @@
 	icon_state = "kover"
 
 /obj/effect/decal/carpet/kover_darkred
-	name = "exotic red rug"
+	name = "rustic red rug"
 	desc = "Dazzling symmetrical patterns flow with an old culture's style."
 	icon = 'icons/roguetown/misc/64x64.dmi'
 	icon_state = "kover_darkred"
 
 /obj/effect/decal/carpet/kover_purple
-	name = "exotic purple rug"
+	name = "rustic purple rug"
 	desc = "Dazzling symmetrical patterns flow with an old culture's style."
 	icon = 'icons/roguetown/misc/64x64.dmi'
 	icon_state = "kover_purple"
 
 /obj/effect/decal/carpet/kover_black
-	name = "exotic black carpet"
+	name = "rustic black carpet"
 	desc = "Dazzling symmetrical patterns flow with an old culture's style."
 	icon = 'icons/roguetown/misc/64x64.dmi'
 	icon_state = "kover_black"

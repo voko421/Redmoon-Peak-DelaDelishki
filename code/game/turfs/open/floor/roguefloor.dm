@@ -1251,6 +1251,19 @@
 	icon = 'icons/roguetown/misc/64x64.dmi'
 	icon_state = "blackcarpet"
 
+/obj/structure/giantfur
+	name = "giant fur"
+	desc = "Pelt of some gigantic animal, made into a mat."
+	icon = 'icons/roguetown/misc/96x96.dmi'
+	icon_state = "fur"
+	density = FALSE
+	anchored = TRUE
+
+/obj/structure/giantfur/small // the irony
+	name = "fur pelt"
+	desc = "Pelt of a young animal, made into a mat."
+	icon_state = "fur_alt"
+
 /turf/open/floor/rogue/tile
 	icon_state = "chess"
 	desc = "Feet march across a grid of plots and schemes."

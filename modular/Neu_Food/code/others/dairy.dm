@@ -98,6 +98,7 @@
 	list_reagents = list(/datum/reagent/consumable/nutriment = 2)
 
 /obj/item/reagent_containers/food/snacks/butterslice/attackby(obj/item/I, mob/living/user, params)
+	var/found_table = locate(/obj/structure/table) in (loc)
 	update_cooktime(user)
 	if(istype(I, /obj/item/reagent_containers/food/snacks/sugar))
 		if(isturf(loc)&& (found_table))

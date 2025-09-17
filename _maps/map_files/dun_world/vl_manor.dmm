@@ -243,6 +243,10 @@
 "dJ" = (
 /turf/closed/wall/mineral/rogue/stone/moss,
 /area/rogue/indoors)
+"dN" = (
+/obj/structure/curtain/red,
+/turf/open/floor/carpet/royalblack,
+/area/rogue/indoors)
 "dO" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/r,
 /obj/structure/table/wood/poor,
@@ -548,6 +552,11 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors)
+"iX" = (
+/obj/structure/table/wood/fancy/royalblack,
+/obj/structure/curtain/red,
+/turf/open/floor/carpet/purple,
+/area/rogue/indoors)
 "jg" = (
 /obj/machinery/light/rogue/smelter/great,
 /turf/open/floor/rogue/cobble/mossy,
@@ -850,6 +859,10 @@
 /obj/structure/table/wood/fancy/purple,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors)
+"ph" = (
+/obj/structure/curtain/red,
+/turf/open/floor/carpet/red,
+/area/rogue/indoors)
 "pk" = (
 /obj/structure/table/wood/long_table,
 /obj/item/storage/keyring,
@@ -1120,6 +1133,7 @@
 /area/rogue/indoors)
 "tn" = (
 /obj/structure/table/vtable/v2,
+/obj/structure/curtain/red,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors)
 "tr" = (
@@ -1252,6 +1266,7 @@
 /obj/item/candle/candlestick/gold/lit{
 	pixel_y = 16
 	},
+/obj/structure/curtain/red,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors)
 "wb" = (
@@ -1632,6 +1647,7 @@
 /area/rogue/indoors)
 "AE" = (
 /obj/structure/table/vtable,
+/obj/structure/curtain/red,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors)
 "AG" = (
@@ -2139,6 +2155,7 @@
 /obj/item/candle/candlestick/gold/lit{
 	pixel_y = 16
 	},
+/obj/structure/curtain/red,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors)
 "JW" = (
@@ -2195,6 +2212,11 @@
 "KA" = (
 /obj/structure/fluff/wallclock/vampire,
 /turf/open/floor/carpet/purple,
+/area/rogue/indoors)
+"KE" = (
+/obj/structure/table/wood/fancy/royalblack,
+/obj/structure/curtain/red,
+/turf/open/floor/carpet/red,
 /area/rogue/indoors)
 "KH" = (
 /obj/structure/table/vtable/v2,
@@ -2504,6 +2526,7 @@
 /obj/effect/decal/cleanable/dirt/cobweb{
 	dir = 4
 	},
+/obj/structure/curtain/red,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors)
 "OW" = (
@@ -3129,6 +3152,7 @@
 /obj/effect/decal/cleanable/dirt/cobweb{
 	dir = 8
 	},
+/obj/structure/curtain/red,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors)
 "XL" = (
@@ -3203,6 +3227,10 @@
 	icon_state = "cobbleedge-e"
 	},
 /turf/open/floor/rogue/cobble/mossy,
+/area/rogue/indoors)
+"YA" = (
+/obj/structure/curtain/red,
+/turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors)
 "YE" = (
 /obj/structure/table/wood{
@@ -8048,7 +8076,7 @@ qi
 qi
 TF
 kf
-kf
+dN
 vi
 bM
 YN
@@ -8120,7 +8148,7 @@ UY
 qi
 kf
 kf
-kf
+dN
 vi
 bM
 YN
@@ -9701,7 +9729,7 @@ Aq
 Aq
 UY
 UY
-UY
+ph
 vi
 nz
 fe
@@ -9773,7 +9801,7 @@ Aq
 Aq
 UY
 UY
-UY
+ph
 vi
 bM
 YN
@@ -11865,7 +11893,7 @@ gK
 sX
 sX
 sq
-ij
+YA
 vi
 GL
 GL
@@ -11937,7 +11965,7 @@ ij
 Xi
 sX
 pG
-UY
+ph
 vi
 GL
 GL
@@ -12009,7 +12037,7 @@ ij
 ij
 UA
 AO
-UY
+ph
 vi
 GL
 GL
@@ -12366,7 +12394,7 @@ sp
 UY
 sp
 UY
-nr
+iX
 vi
 GL
 GL
@@ -13662,7 +13690,7 @@ UY
 kf
 UY
 kf
-GE
+KE
 vi
 GL
 GL
@@ -14025,7 +14053,7 @@ ij
 ij
 vp
 mF
-UY
+ph
 vi
 GL
 GL
@@ -14097,7 +14125,7 @@ ij
 mj
 sX
 ym
-UY
+ph
 vi
 GL
 GL

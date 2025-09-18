@@ -81,6 +81,9 @@
 		/datum/skill/misc/medicine = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/sewing = SKILL_LEVEL_APPRENTICE,
 	)
+	subclass_stashed_items = list(
+		"Of Psydon" = /obj/item/book/rogue/bibble/psy
+	)
 
 /datum/outfit/job/roguetown/puritan/inspector/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -169,6 +172,9 @@
 		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/medicine = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/tracking = SKILL_LEVEL_MASTER,
+	)
+	subclass_stashed_items = list(
+		"Of Psydon" = /obj/item/book/rogue/bibble/psy
 	)
 
 /datum/outfit/job/roguetown/puritan/ordinator/pre_equip(mob/living/carbon/human/H)

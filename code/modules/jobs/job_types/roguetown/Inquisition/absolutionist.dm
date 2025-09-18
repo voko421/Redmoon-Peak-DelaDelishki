@@ -66,6 +66,9 @@
 		/datum/skill/craft/crafting = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/magic/holy = SKILL_LEVEL_EXPERT, // Psydon's Holiest Guy
 	)
+	subclass_stashed_items = list(
+		"Of Psydon" = /obj/item/book/rogue/bibble/psy
+	)
 
 // REMEMBER FLAGELLANT? REMEMBER LASZLO? THIS IS HIM NOW. FEEL OLD YET?
 

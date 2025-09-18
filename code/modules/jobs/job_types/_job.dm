@@ -497,6 +497,11 @@
 						dat += "<i><font color = '#a3ffe0'>[GLOB.roguetraits[trait]]</font></i></details>"
 					dat += "</font>"
 					dat += "<br>"
+				if(length(adv_ref.subclass_stashed_items))
+					dat += "<br><font color ='#7a4d0a'>Stashed Items:</font><font color ='#d4b164'>"
+					for(var/stashed_item in adv_ref.subclass_stashed_items)
+						dat += "<br> - <i>[stashed_item]</i>"
+					dat += "</font>"
 				dat += "</td>"	//Trait Table end
 				if(length(adv_ref.subclass_skills))
 					dat += "<td width = 50%; style='text-align:right'>"

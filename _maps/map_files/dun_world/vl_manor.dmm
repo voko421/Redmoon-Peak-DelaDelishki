@@ -23,80 +23,80 @@
 "am" = (
 /obj/structure/chair/wood/rogue/fancy,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "az" = (
 /obj/structure/mineral_door/wood{
 	lockid = "mansionvampire"
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "aB" = (
 /obj/structure/table/wood/fancy/purple,
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/tile,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "aD" = (
 /obj/machinery/light/rogue/wallfire/candle/floorcandle/alt{
 	pixel_y = -14
 	},
 /turf/open/floor/rogue/tile/bath,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "aR" = (
 /turf/open/floor/rogue/dirt/ambush,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "aW" = (
 /obj/machinery/light/rogue/wallfire/candle,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ba" = (
 /obj/structure/table/wood/fancy/royalblack,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "bd" = (
 /obj/structure/closet/crate/roguecloset,
 /obj/item/clothing/suit/roguetown/shirt/tunic/noblecoat,
 /obj/item/clothing/suit/roguetown/shirt/dress/silkydress,
 /obj/item/clothing/shoes/roguetown/boots/nobleboot,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "bh" = (
 /obj/structure/stairs{
 	dir = 8
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "bo" = (
 /obj/effect/landmark/vteleport,
 /obj/machinery/light/rogue/wallfire/candle/blue/r,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "bp" = (
 /obj/structure/fluff/railing/border/east,
 /obj/structure/fluff/statue/knight/interior/r,
 /turf/open/floor/rogue/tile/masonic,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "bB" = (
 /obj/structure/closet/crate/roguecloset/inn,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "bC" = (
 /obj/structure/table/vtable/v2,
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "bE" = (
 /obj/structure/mineral_door/wood{
 	lockid = "mansionvampire_maid"
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "bJ" = (
 /obj/machinery/light/rogue/wallfire{
 	pixel_y = 33
 	},
 /turf/open/floor/carpet/purple,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "bM" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/grass,
@@ -104,7 +104,7 @@
 "bS" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "bX" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -114,7 +114,7 @@
 	icon_state = "cobbleedge-sread"
 	},
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "cl" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 4
@@ -135,11 +135,11 @@
 /obj/structure/closet/crate/coffin/vampire,
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "cE" = (
 /obj/structure/fluff/railing/corner/south_east,
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "cF" = (
 /obj/effect/decal/cobbleedge{
 	dir = 5
@@ -148,16 +148,16 @@
 	icon_state = "cobbleedge-sread"
 	},
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "cR" = (
 /obj/structure/fluff/railing/border/east,
 /obj/structure/fluff/railing/border/west,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "cT" = (
 /obj/structure/chair/bench/coucha/r,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "cU" = (
 /obj/structure/table/wood/poor,
 /obj/item/cooking/platter/silver{
@@ -168,10 +168,10 @@
 	pixel_y = -4
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "cV" = (
 /turf/closed/wall/mineral/rogue/stone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "cX" = (
 /obj/structure/table/wood/long_table/mid/alt,
 /obj/item/roguekey/vampire/guest,
@@ -185,21 +185,21 @@
 /obj/item/roguekey/vampire/guest,
 /obj/item/roguekey/vampire/guest,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "db" = (
 /turf/closed/mineral/rogue/bedrock,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "dc" = (
 /obj/structure/chair/wood/rogue/fancy,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "dj" = (
 /obj/structure/stairs{
 	dir = 1;
 	icon_state = "stairs"
 	},
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "dm" = (
 /obj/structure/closet/crate/roguecloset,
 /obj/item/rogueweapon/huntingknife/cleaver,
@@ -219,13 +219,13 @@
 /obj/item/kitchen/fork/iron,
 /obj/item/kitchen/rollingpin,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "dB" = (
 /obj/structure/stairs{
 	dir = 8
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "dF" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1
@@ -239,14 +239,14 @@
 	},
 /obj/item/reagent_containers/glass/cup/skull,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "dJ" = (
 /turf/closed/wall/mineral/rogue/stone/moss,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "dN" = (
 /obj/structure/curtain/red,
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "dO" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/r,
 /obj/structure/table/wood/poor,
@@ -259,7 +259,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/rogue/tile/bath,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "dV" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/dirt/ambush,
@@ -269,13 +269,13 @@
 	lockid = "mansionvampire_guest"
 	},
 /turf/open/floor/rogue/tile,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ef" = (
 /obj/effect/decal/cobbleedge{
 	dir = 6
 	},
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ep" = (
 /obj/machinery/light/rogue/torchholder/c,
 /turf/open/floor/rogue/dirt/road,
@@ -287,11 +287,11 @@
 "ev" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/tile/bath,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "eG" = (
 /obj/structure/chair/bench/couchamagenta,
 /turf/open/floor/rogue/tile,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "eJ" = (
 /obj/effect/decal/cobbleedge{
 	dir = 6;
@@ -302,7 +302,7 @@
 	icon_state = "cobbleedge-e"
 	},
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "eO" = (
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/cobble,
@@ -326,21 +326,21 @@
 /obj/machinery/light/rogue/wallfire/candle/r,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "fe" = (
 /obj/structure/flora/roguegrass/herb/random,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/woods)
 "fk" = (
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "fn" = (
 /obj/structure/fluff/railing/corner/south_east,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/woods)
 "fq" = (
 /turf/closed/wall/mineral/rogue/wooddark,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "fs" = (
 /obj/structure/stairs{
 	dir = 1;
@@ -349,7 +349,7 @@
 /obj/structure/fluff/railing/border/west,
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "fz" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 10
@@ -364,7 +364,7 @@
 /turf/open/floor/rogue/tile/masonic{
 	dir = 8
 	},
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "fG" = (
 /obj/effect/landmark/mapGenerator/rogue/forest{
 	endTurfX = 54;
@@ -375,37 +375,37 @@
 "fL" = (
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "fN" = (
 /obj/structure/table/wood/long_table,
 /obj/structure/mirror/fancy,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "fQ" = (
 /obj/item/rogueweapon/pick,
 /turf/open/floor/rogue/dirt/ambush,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "fW" = (
 /obj/structure/table/wood/long_table/right,
 /obj/item/candle/candlestick/silver/single/lit{
 	pixel_y = 9
 	},
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "fY" = (
 /turf/closed/wall/mineral/rogue/wooddark/horizontal,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "gh" = (
 /obj/structure/stairs{
 	dir = 4;
 	icon_state = "stairs"
 	},
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "gk" = (
 /obj/structure/stairs,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "gm" = (
 /obj/structure/flora/roguetree/burnt,
 /turf/open/floor/rogue/grasscold,
@@ -416,7 +416,7 @@
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "gy" = (
 /obj/machinery/light/rogue/oven/south,
 /obj/structure/table/wood/poor,
@@ -424,13 +424,13 @@
 	pixel_y = 8
 	},
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "gK" = (
 /obj/structure/mineral_door/wood{
 	lockid = "mansionvampire"
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "gN" = (
 /obj/structure/fluff/statue/gargoyle/moss/candles,
 /turf/open/floor/rogue/blocks,
@@ -441,7 +441,7 @@
 	},
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "hz" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-sread"
@@ -454,7 +454,7 @@
 /obj/item/rogueore/coal,
 /obj/item/rogueore/coal,
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "hC" = (
 /obj/structure/bed/rogue/inn/double{
 	dir = 1
@@ -463,19 +463,19 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "hF" = (
 /obj/structure/stairs{
 	dir = 1;
 	icon_state = "stairs"
 	},
 /turf/open/floor/rogue/tile/masonic,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "hJ" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "hY" = (
 /obj/structure/stairs{
 	dir = 1;
@@ -484,10 +484,10 @@
 /turf/open/floor/rogue/tile/masonic{
 	dir = 1
 	},
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ib" = (
 /turf/closed/wall/mineral/rogue/wooddark/end/west,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ie" = (
 /obj/structure/stairs{
 	dir = 4;
@@ -495,18 +495,18 @@
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ig" = (
 /obj/effect/decal/cleanable/dirt/cobweb,
 /obj/structure/fluff/wallclock/vampire,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ij" = (
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "im" = (
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ix" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -514,14 +514,14 @@
 	},
 /obj/item/reagent_containers/glass/cup/golden,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "iA" = (
 /obj/structure/table/wood/long_table/right,
 /obj/item/candle/skull/lit{
 	pixel_y = 11
 	},
 /turf/open/floor/carpet/purple,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "iD" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -534,7 +534,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "iG" = (
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/grassred,
@@ -545,26 +545,26 @@
 	icon_state = "stairs"
 	},
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "iO" = (
 /obj/effect/decal/cleanable/dirt/cobweb{
 	dir = 4
 	},
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "iX" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/structure/curtain/red,
 /turf/open/floor/carpet/purple,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "jg" = (
 /obj/machinery/light/rogue/smelter/great,
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "jh" = (
 /obj/structure/fluff/statue/knight/interior/r,
 /turf/open/floor/rogue/blocks/stonered,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "jk" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 6
@@ -574,11 +574,11 @@
 "jw" = (
 /obj/structure/fluff/clock,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "jB" = (
 /obj/structure/closet/crate/chest/crate,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "jU" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -589,23 +589,23 @@
 "jV" = (
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "kf" = (
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "kh" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/effect/decal/cleanable/dirt/cobweb{
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "kr" = (
 /obj/structure/mineral_door/wood{
 	lockid = "mansionvampire_guest"
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ky" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 6
@@ -619,14 +619,14 @@
 /obj/effect/decal/cleanable/dirt/cobweb,
 /obj/machinery/tanningrack,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "kD" = (
 /turf/closed/wall/mineral/rogue/wooddark/vertical,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "kG" = (
 /obj/effect/landmark/start/vampirelord,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "kJ" = (
 /obj/structure/mannequin,
 /obj/item/clothing/suit/roguetown/armor/plate/half/aalloy,
@@ -635,7 +635,7 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/guard/aalloy,
 /obj/item/clothing/gloves/roguetown/plate/aalloy,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "kL" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/grassyel,
@@ -643,25 +643,25 @@
 "kP" = (
 /obj/machinery/light/rogue/firebowl/standing,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "kS" = (
 /obj/structure/fluff/railing/border,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "kU" = (
 /obj/structure/table/wood{
 	dir = 1;
 	icon_state = "largetable"
 	},
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "kW" = (
 /obj/structure/chair/wood/rogue/fancy{
 	dir = 8;
 	icon_state = "chair1"
 	},
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "lb" = (
 /obj/structure/table/vtable/v2,
 /obj/item/candle/candlestick/gold/lit{
@@ -669,10 +669,10 @@
 	pixel_y = 13
 	},
 /turf/open/floor/rogue/tile/masonic,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ld" = (
 /turf/open/floor/rogue/blocks/stonered,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ll" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/grass,
@@ -688,25 +688,25 @@
 	pixel_x = 0
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "lp" = (
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "lr" = (
 /obj/structure/table/wood{
 	dir = 10;
 	icon_state = "largetable"
 	},
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "lw" = (
 /obj/structure/chair/wood/rogue/fancy{
 	dir = 1;
 	icon_state = "chair1"
 	},
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "lJ" = (
 /obj/structure/chair/wood/rogue/fancy{
 	dir = 8;
@@ -714,14 +714,14 @@
 	},
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/tile,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "lZ" = (
 /turf/closed/wall/mineral/rogue/wooddark/end,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "mj" = (
 /obj/structure/bookcase/random,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "mr" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/item/grown/log/tree/small,
@@ -731,7 +731,7 @@
 /obj/item/grown/log/tree/small,
 /obj/item/grown/log/tree/small,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ms" = (
 /obj/structure/fluff/railing/border/west,
 /obj/structure/stairs{
@@ -739,15 +739,15 @@
 	icon_state = "stairs"
 	},
 /turf/open/floor/rogue/tile,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "mv" = (
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "mA" = (
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "mE" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -759,7 +759,7 @@
 "mF" = (
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "mH" = (
 /obj/structure/well,
 /turf/open/floor/rogue/grass,
@@ -767,24 +767,24 @@
 "nl" = (
 /obj/structure/fluff/statue/gargoyle/moss/candles,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "nm" = (
 /obj/structure/rack/rogue,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "nr" = (
 /obj/structure/table/wood/fancy/royalblack,
 /turf/open/floor/carpet/purple,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "nv" = (
 /obj/structure/table/wood/fancy/royalblack,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ny" = (
 /obj/structure/bookcase/random,
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "nz" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/grassred,
@@ -801,48 +801,48 @@
 	icon_state = "chair1"
 	},
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "nM" = (
 /obj/structure/fluff/railing/wood/west,
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "nP" = (
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "nZ" = (
 /obj/structure/closet/crate/coffin/vampire,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "oc" = (
 /obj/structure/bed/rogue/inn/hay,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "of" = (
 /obj/structure/fluff/railing/border/east,
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "og" = (
 /obj/structure/table/wood/fancy,
 /obj/item/candle/skull{
 	pixel_y = 8
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ok" = (
 /obj/structure/chair/bench/couchablack,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "oB" = (
 /obj/structure/fluff/statue/gargoyle/moss,
 /turf/open/floor/rogue/blocks/stonered,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "oC" = (
 /obj/structure/fluff/railing/corner/south_east,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "oH" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 8
@@ -854,15 +854,15 @@
 /obj/machinery/light/rogue/wallfire/candle,
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "oZ" = (
 /obj/structure/table/wood/fancy/purple,
 /turf/open/floor/rogue/tile,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ph" = (
 /obj/structure/curtain/red,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "pk" = (
 /obj/structure/table/wood/long_table,
 /obj/item/storage/keyring,
@@ -876,7 +876,7 @@
 /obj/item/storage/keyring,
 /obj/item/storage/keyring,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "pm" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -891,7 +891,7 @@
 /turf/open/floor/rogue/tile/masonic{
 	dir = 1
 	},
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "pu" = (
 /obj/structure/closet/crate/roguecloset/dark,
 /obj/item/clothing/under/roguetown/loincloth,
@@ -899,7 +899,7 @@
 /obj/item/clothing/under/roguetown/loincloth,
 /obj/item/clothing/under/roguetown/loincloth,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "pz" = (
 /obj/structure/stairs{
 	dir = 1;
@@ -907,7 +907,7 @@
 	},
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "pC" = (
 /obj/structure/fluff/railing/border/north,
 /obj/effect/decal/cobble/mossy{
@@ -919,19 +919,19 @@
 /obj/structure/chair/bench/couch/r,
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "pQ" = (
 /obj/structure/table/wood/long_table,
 /obj/structure/mirror/fancy,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "pT" = (
 /obj/structure/bookcase/random,
 /obj/effect/decal/cleanable/dirt/cobweb{
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "qd" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/item/reagent_containers/food/snacks/grown/apple,
@@ -942,41 +942,41 @@
 /obj/item/reagent_containers/food/snacks/grown/berries/rogue,
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "qf" = (
 /obj/structure/stairs{
 	dir = 4
 	},
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "qi" = (
 /turf/open/floor/rogue/tile,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "qk" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "qm" = (
 /obj/structure/stairs{
 	dir = 1;
 	icon_state = "stairs"
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "qw" = (
 /obj/structure/table/vtable,
 /turf/open/floor/rogue/tile/masonic{
 	dir = 4
 	},
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "qA" = (
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "qB" = (
 /turf/closed/mineral/random/rogue/high,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "qC" = (
 /obj/structure/fluff/railing/border/east,
 /obj/effect/decal/cobble/mossy{
@@ -990,18 +990,18 @@
 	},
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "qN" = (
 /obj/structure/fluff/railing/wood/east,
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "qP" = (
 /obj/structure/fluff/statue/femalestatue{
 	pixel_y = 0
 	},
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "qS" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/grassyel,
@@ -1010,17 +1010,17 @@
 /obj/structure/table/vtable,
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "rb" = (
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "rg" = (
 /obj/structure/table/wood{
 	dir = 4;
 	icon_state = "largetable"
 	},
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ri" = (
 /obj/structure/closet/dirthole/grave,
 /turf/open/floor/rogue/dirt/ambush,
@@ -1028,41 +1028,41 @@
 "rj" = (
 /obj/structure/fluff/railing/corner/south_west,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "rx" = (
 /obj/structure/closet/crate/drawer/random{
 	pixel_x = 1;
 	pixel_y = 3
 	},
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ry" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "rG" = (
 /obj/machinery/light/rogue/wallfire/candle,
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "rP" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "rS" = (
 /obj/structure/table/wood/poor,
 /obj/item/millstone{
 	pixel_y = 12
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "rW" = (
 /obj/structure/fluff/walldeco/maidendrape,
 /obj/structure/vampire/bloodpool{
 	pixel_x = -18
 	},
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "rX" = (
 /obj/structure/stairs{
 	dir = 1;
@@ -1071,7 +1071,7 @@
 /turf/open/floor/rogue/tile/masonic{
 	dir = 4
 	},
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "se" = (
 /obj/structure/table/wood/poor,
 /obj/item/kitchen/spoon{
@@ -1079,7 +1079,7 @@
 	pixel_y = 5
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "sf" = (
 /obj/structure/closet/dirthole/closed,
 /turf/open/floor/rogue/dirt/ambush,
@@ -1087,23 +1087,23 @@
 "sj" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "sp" = (
 /turf/open/floor/carpet/purple,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "sq" = (
 /obj/structure/chair/bench/couch,
 /obj/effect/decal/cleanable/dirt/cobweb,
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "sr" = (
 /turf/open/water/bath,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "sG" = (
 /obj/structure/table/wood/fancy/blue,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "sQ" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -1114,50 +1114,50 @@
 	},
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "sX" = (
 /turf/closed/wall/mineral/rogue/stonebrick,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ta" = (
 /obj/structure/closet/crate/roguecloset/dark,
 /turf/open/floor/rogue/blocks/stonered,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "th" = (
 /obj/structure/table/wood/fancy/cyan,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "tj" = (
 /obj/structure/chair/bench/couch/r,
 /obj/structure/fluff/wallclock/vampire,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "tn" = (
 /obj/structure/table/vtable/v2,
 /obj/structure/curtain/red,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "tr" = (
 /obj/structure/bars,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "tu" = (
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "tv" = (
 /obj/machinery/light/rogue/chand,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "tw" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10
 	},
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ty" = (
 /turf/open/floor/rogue/tile/masonic/single,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "tG" = (
 /obj/structure/flora/roguegrass/herb/random,
 /obj/effect/decal/cobble/mossy{
@@ -1172,14 +1172,14 @@
 "tK" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "tX" = (
 /obj/effect/decal/cobbleedge{
 	dir = 6;
 	pixel_y = 1
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "un" = (
 /obj/structure/mannequin,
 /obj/item/clothing/suit/roguetown/armor/plate/half/aalloy,
@@ -1190,12 +1190,12 @@
 /turf/open/floor/rogue/tile/masonic{
 	dir = 1
 	},
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "up" = (
 /obj/structure/fluff/railing/border/north,
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "uF" = (
 /obj/structure/fluff/railing/border/north,
 /obj/structure/closet/crate/roguecloset/dark,
@@ -1203,12 +1203,12 @@
 	pixel_y = 32
 	},
 /turf/open/floor/carpet/purple,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "uH" = (
 /obj/structure/closet/crate/drawer,
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "uV" = (
 /obj/structure/table/wood/long_table/right,
 /obj/item/roguekey/vampire/maid,
@@ -1222,7 +1222,7 @@
 /obj/item/roguekey/vampire/maid,
 /obj/item/roguekey/vampire/maid,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "uX" = (
 /obj/structure/flora/roguegrass/herb/random,
 /turf/open/floor/rogue/grass,
@@ -1230,7 +1230,7 @@
 "vi" = (
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "vp" = (
 /obj/structure/curtain/red,
 /obj/structure/stairs{
@@ -1239,23 +1239,23 @@
 	},
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "vD" = (
 /obj/structure/fluff/railing/wood/west,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "vJ" = (
 /obj/structure/bookcase/random,
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "vL" = (
 /obj/effect/decal/cobbleedge,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "vN" = (
 /obj/machinery/light/rogue/firebowl/standing,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "vP" = (
 /obj/structure/fluff/walldeco/sparrowflag,
 /turf/closed/wall/mineral/rogue/stone,
@@ -1268,7 +1268,7 @@
 	},
 /obj/structure/curtain/red,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "wb" = (
 /obj/structure/roguemachine/bounty{
 	color = "#F75D59"
@@ -1279,12 +1279,12 @@
 /obj/structure/table/wood/fancy/blue,
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "wk" = (
 /obj/structure/fluff/railing/border/north,
 /obj/structure/closet/crate/drawer/random,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "wn" = (
 /obj/structure/flora/roguetree/burnt,
 /turf/open/floor/rogue/grassyel,
@@ -1293,48 +1293,48 @@
 /obj/structure/bed/rogue/inn/double,
 /obj/item/bedsheet/rogue/fabric_double,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "wE" = (
 /obj/effect/decal/cobbleedge{
 	dir = 5;
 	pixel_x = -1
 	},
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "wJ" = (
 /obj/structure/table/wood{
 	dir = 1;
 	icon_state = "largetable_mid"
 	},
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "wK" = (
 /obj/structure/fluff/statue/knight/interior,
 /turf/open/floor/rogue/blocks/stonered,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "wL" = (
 /obj/structure/closet/crate/drawer,
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/carpet/purple,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "wO" = (
 /obj/structure/stairs{
 	dir = 8
 	},
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "wR" = (
 /turf/open/floor/rogue/tile/masonic/inverted,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "wS" = (
 /obj/structure/vampire/portalmaker,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "wX" = (
 /obj/structure/bed/rogue/shit,
 /turf/open/floor/rogue/dirt,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "wZ" = (
 /obj/structure/table/vtable/v2,
 /obj/item/candle/candlestick/gold/lit{
@@ -1344,14 +1344,14 @@
 /turf/open/floor/rogue/tile/masonic{
 	dir = 1
 	},
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "xg" = (
 /obj/effect/decal/cleanable/dirt/cobweb{
 	icon_state = "cobweb2"
 	},
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/blocks/stonered,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "xl" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10
@@ -1374,21 +1374,21 @@
 /obj/item/reagent_containers/food/snacks/grown/cabbage/rogue,
 /obj/item/reagent_containers/food/snacks/grown/cabbage/rogue,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "xx" = (
 /obj/item/roguebin/water/gross,
 /obj/effect/decal/cobbleedge{
 	dir = 6
 	},
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "xy" = (
 /obj/structure/table/vtable/v2,
 /obj/effect/decal/cleanable/dirt/cobweb{
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "xB" = (
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/cobble/mossy,
@@ -1397,7 +1397,7 @@
 /obj/structure/table/wood/poor,
 /obj/item/kitchen/rollingpin,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "xH" = (
 /obj/structure/mineral_door/bars,
 /obj/structure/fluff/railing/border/east,
@@ -1411,18 +1411,18 @@
 	},
 /obj/item/kitchen/spoon,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "xP" = (
 /obj/structure/closet/crate/coffin/vampire,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "xR" = (
 /obj/structure/fluff/railing/corner,
 /obj/structure/fluff/walldeco/painting{
 	pixel_y = 32
 	},
 /turf/open/floor/rogue/tile,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "xV" = (
 /obj/machinery/light/rogue/wallfire/candle/r,
 /obj/structure/closet/crate/roguecloset,
@@ -1430,7 +1430,7 @@
 /obj/item/clothing/suit/roguetown/shirt/dress/silkydress,
 /obj/item/clothing/suit/roguetown/shirt/tunic/noblecoat,
 /turf/open/floor/carpet/purple,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ya" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -1493,16 +1493,16 @@
 /obj/item/reagent_containers/glass/bowl/gold,
 /obj/item/reagent_containers/glass/bowl/gold,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "yg" = (
 /obj/structure/stairs,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ym" = (
 /obj/structure/chair/bench/coucha,
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "yn" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
 /obj/item/clothing/shoes/roguetown/boots/nobleboot,
@@ -1510,7 +1510,7 @@
 /obj/item/clothing/suit/roguetown/shirt/dress/silkydress,
 /obj/item/clothing/suit/roguetown/shirt/tunic/noblecoat,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "yp" = (
 /obj/structure/mannequin,
 /obj/item/clothing/suit/roguetown/armor/plate/half/aalloy,
@@ -1519,13 +1519,13 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/guard/aalloy,
 /obj/item/clothing/gloves/roguetown/plate/aalloy,
 /turf/open/floor/rogue/tile,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "yt" = (
 /obj/structure/rack/rogue/shelf/big,
 /obj/structure/rack/rogue/shelf,
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "yG" = (
 /obj/structure/fluff/railing/corner/north_east,
 /obj/structure/flora/roguegrass,
@@ -1536,15 +1536,15 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "yL" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/tile/masonic,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "yP" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "yW" = (
 /obj/structure/fluff/railing/corner/south_east,
 /turf/open/floor/rogue/dirt/ambush,
@@ -1552,7 +1552,7 @@
 "yY" = (
 /obj/structure/table/wood/fancy/purple,
 /turf/open/floor/carpet/purple,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "yZ" = (
 /obj/structure/fluff/railing/border/east,
 /obj/structure/stairs{
@@ -1560,24 +1560,24 @@
 	icon_state = "stairs"
 	},
 /turf/open/floor/rogue/tile,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "za" = (
 /obj/structure/mineral_door/wood{
 	lockid = "mansionvampire_maid"
 	},
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "zc" = (
 /obj/structure/table/wood/poor,
 /obj/item/book/rogue/yeoldecookingmanual,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "zf" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/l,
 /obj/structure/fluff/railing/border/east,
 /obj/structure/closet/crate/chest,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "zj" = (
 /obj/structure/bars/cemetery,
 /turf/open/floor/rogue/blocks,
@@ -1587,13 +1587,13 @@
 /obj/effect/decal/cleanable/dirt/cobweb,
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "zv" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "zw" = (
 /obj/structure/stairs{
 	dir = 1;
@@ -1601,7 +1601,7 @@
 	},
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "zC" = (
 /obj/structure/flora/roguegrass/bush,
 /turf/open/floor/rogue/grass,
@@ -1613,52 +1613,52 @@
 /area/rogue/outdoors/woods)
 "Ac" = (
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ad" = (
 /turf/open/floor/rogue/tile/masonic{
 	dir = 1
 	},
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Am" = (
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/woods)
 "Aq" = (
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ar" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10
 	},
 /turf/open/floor/rogue/dirt/ambush,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "At" = (
 /obj/structure/fluff/railing/border/west,
 /obj/structure/fluff/railing/border/east,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Aw" = (
 /obj/machinery/light/rogue/wallfire/candle,
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ay" = (
 /obj/structure/bars,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "AE" = (
 /obj/structure/table/vtable,
 /obj/structure/curtain/red,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "AG" = (
 /obj/structure/chair/bench/couch,
 /obj/structure/rogue/trophy/deer,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "AO" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "AP" = (
 /obj/machinery/light/rogue/oven/south,
 /obj/structure/table/wood/poor,
@@ -1667,7 +1667,7 @@
 	},
 /obj/item/cooking/pan,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "AT" = (
 /obj/structure/fluff/walldeco/bigpainting{
 	pixel_x = 2;
@@ -1675,7 +1675,7 @@
 	},
 /obj/structure/chair/bench/couch/r,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Bf" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/cobble/mossy,
@@ -1687,7 +1687,7 @@
 	},
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Bj" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
 /obj/structure/closet/crate/chest/crate,
@@ -1698,17 +1698,17 @@
 /obj/item/grown/log/tree/small,
 /obj/item/grown/log/tree/small,
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Bk" = (
 /obj/machinery/light/rogue/firebowl/standing,
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Bl" = (
 /obj/structure/table/wood/long_table/right,
 /obj/item/handmirror,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Bt" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/dirt,
@@ -1719,7 +1719,7 @@
 	lockid = "mansionvampire_maid"
 	},
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "BS" = (
 /obj/structure/closet/crate/drawer/random{
 	pixel_x = 1;
@@ -1727,15 +1727,15 @@
 	},
 /obj/structure/fluff/wallclock/vampire,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "BT" = (
 /turf/closed/wall/mineral/rogue/wooddark/end/north,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "BU" = (
 /obj/structure/fluff/wallclock/vampire,
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Cf" = (
 /obj/structure/flora/roguegrass/herb/random,
 /turf/open/floor/rogue/grasscold,
@@ -1746,7 +1746,7 @@
 /obj/item/clothing/shoes/roguetown/boots/nobleboot,
 /obj/item/clothing/suit/roguetown/shirt/tunic/noblecoat,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Cl" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/woods)
@@ -1757,7 +1757,7 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "CD" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/item/paper/scroll,
@@ -1772,7 +1772,7 @@
 /obj/item/paper/scroll,
 /obj/item/natural/feather,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "CR" = (
 /obj/structure/mannequin,
 /obj/item/clothing/suit/roguetown/armor/plate/half/aalloy,
@@ -1781,12 +1781,12 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/guard/aalloy,
 /obj/item/clothing/gloves/roguetown/plate/aalloy,
 /turf/open/floor/rogue/tile/masonic/inverted,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "CS" = (
 /obj/structure/fluff/railing/border/west,
 /obj/structure/fluff/statue/knight/interior,
 /turf/open/floor/rogue/tile/masonic/inverted,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Df" = (
 /obj/structure/closet/crate/roguecloset/inn,
 /obj/item/paper,
@@ -1803,7 +1803,7 @@
 /obj/item/paper,
 /obj/item/natural/feather,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Dn" = (
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/dirt/ambush,
@@ -1813,48 +1813,48 @@
 	pixel_y = 32
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "DB" = (
 /obj/effect/decal/cobbleedge{
 	dir = 8
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "DG" = (
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/outdoors/woods)
 "DM" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "DQ" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "DV" = (
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "DZ" = (
 /turf/open/floor/rogue/dirt,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ec" = (
 /obj/structure/fluff/railing/border/east,
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "El" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/r,
 /turf/open/water/bath,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ey" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/l,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "EC" = (
 /obj/structure/rogue/trophy/deer,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "EE" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-n";
@@ -1869,7 +1869,7 @@
 	},
 /obj/item/reagent_containers/glass/cup/skull,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "EN" = (
 /obj/machinery/light/rogue/wallfire/candle/r,
 /obj/item/reagent_containers/glass/bottle/rogue/healthpot,
@@ -1877,15 +1877,15 @@
 /obj/item/reagent_containers/glass/bottle/rogue/healthpot,
 /obj/structure/closet/crate/roguecloset/inn/chest,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "EQ" = (
 /obj/structure/fluff/railing/border/west,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ET" = (
 /obj/structure/fluff/railing/wood/east,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "EY" = (
 /obj/structure/stairs{
 	dir = 4;
@@ -1893,7 +1893,7 @@
 	},
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Fn" = (
 /obj/structure/closet/crate/roguecloset,
 /obj/item/soap/bath,
@@ -1903,11 +1903,11 @@
 	sellprice = 8
 	},
 /turf/open/floor/rogue/tile/bath,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Fu" = (
 /obj/machinery/anvil,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Fz" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 4
@@ -1923,34 +1923,34 @@
 	pixel_x = -1
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "FF" = (
 /obj/structure/bookcase/random/adult,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "FN" = (
 /obj/structure/table/wood/fancy/purple,
 /obj/item/candle/skull{
 	pixel_y = 8
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "FZ" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/tile,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ge" = (
 /obj/structure/fluff/railing/corner/south_west,
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Gg" = (
 /obj/structure/table/wood/fancy/purple,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Gj" = (
 /obj/structure/table/wood/long_table,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Gp" = (
 /obj/structure/fluff/railing/border/east,
 /obj/structure/fluff/statue/knight/interior/r,
@@ -1958,7 +1958,7 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/tile/masonic/single,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Gs" = (
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/grassyel,
@@ -1967,20 +1967,20 @@
 /obj/structure/mirror,
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "GA" = (
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/woods)
 "GE" = (
 /obj/structure/table/wood/fancy/royalblack,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "GH" = (
 /obj/structure/table/wood/long_table,
 /obj/structure/mirror/fancy,
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "GL" = (
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/mountains)
@@ -1990,7 +1990,7 @@
 /area/rogue/outdoors/woods)
 "GZ" = (
 /turf/open/floor/rogue/tile/masonic,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Hc" = (
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
@@ -2003,16 +2003,16 @@
 /obj/item/grown/log/tree/small,
 /obj/item/grown/log/tree/small,
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Hi" = (
 /obj/structure/fluff/railing/border/east,
 /obj/machinery/light/rogue/firebowl/standing,
 /turf/open/floor/rogue/tile/masonic,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Hk" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/tile,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Hl" = (
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/grass,
@@ -2022,7 +2022,7 @@
 /turf/open/floor/rogue/tile/masonic{
 	dir = 8
 	},
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Hq" = (
 /obj/structure/flora/roguegrass/bush,
 /turf/open/floor/rogue/grassyel,
@@ -2031,7 +2031,7 @@
 /obj/structure/fluff/railing/border/west,
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Hy" = (
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/indoors/cave)
@@ -2044,19 +2044,19 @@
 	lockid = "mansionvampire_maid"
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "HQ" = (
 /obj/structure/chair/bench/coucha/r,
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "HT" = (
 /obj/structure/table/vtable,
 /obj/item/candle/gold/lit{
 	pixel_y = 8
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "HX" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/item/grown/log/tree/small,
@@ -2066,7 +2066,7 @@
 /obj/item/grown/log/tree/small,
 /obj/item/grown/log/tree/small,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "If" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -2074,7 +2074,7 @@
 	},
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Im" = (
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/dirt,
@@ -2087,7 +2087,7 @@
 	pixel_y = 3
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "IE" = (
 /obj/structure/fluff/railing/corner/south_west,
 /obj/structure/flora/roguegrass,
@@ -2097,58 +2097,64 @@
 /obj/structure/stairs,
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "IQ" = (
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
+"IV" = (
+/mob/living/simple_animal/pet/cat/rogue{
+	name = "vampire lord manor - debug cat for teleporting to"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
 "Jh" = (
 /obj/machinery/light/rogue/wallfire/candle/floorcandle/alt,
 /turf/open/floor/rogue/tile/bath,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Jn" = (
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods)
 "Ju" = (
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Jv" = (
 /obj/structure/closet/crate/roguecloset/dark,
 /obj/item/clothing/under/roguetown/loincloth,
 /obj/item/clothing/under/roguetown/loincloth,
 /obj/item/clothing/under/roguetown/loincloth,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Jx" = (
 /obj/structure/rack/rogue,
 /obj/item/rogueweapon/shield/wood,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "JD" = (
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/tile,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "JE" = (
 /obj/structure/closet/crate/coffin/vampire,
 /obj/effect/decal/cleanable/dirt/cobweb,
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "JG" = (
 /obj/structure/bed/rogue/shit,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "JJ" = (
 /turf/open/floor/rogue/tile/bath,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "JO" = (
 /obj/effect/decal/cobbleedge{
 	dir = 5;
 	pixel_x = -16
 	},
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "JV" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/machinery/light/rogue/wallfire/candle/l,
@@ -2157,18 +2163,18 @@
 	},
 /obj/structure/curtain/red,
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "JW" = (
 /obj/structure/chair/bench/couchablack/r,
 /turf/open/floor/rogue/tile/bath,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "JX" = (
 /obj/structure/stairs{
 	dir = 8
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Kf" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
@@ -2178,23 +2184,23 @@
 	pixel_y = 8
 	},
 /turf/open/floor/rogue/tile,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Km" = (
 /obj/item/roguebin/water,
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Kq" = (
 /obj/structure/mineral_door/wood{
 	lockid = "mansionvampire_maid"
 	},
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Kr" = (
 /obj/structure/fluff/railing/border/north,
 /obj/structure/fluff/railing/border/west,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Kv" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/item/grown/log/tree/small,
@@ -2204,49 +2210,49 @@
 /obj/item/grown/log/tree/small,
 /obj/item/grown/log/tree/small,
 /turf/open/floor/rogue/tile,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Kz" = (
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "KA" = (
 /obj/structure/fluff/wallclock/vampire,
 /turf/open/floor/carpet/purple,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "KE" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/structure/curtain/red,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "KH" = (
 /obj/structure/table/vtable/v2,
 /obj/item/candle/gold/lit{
 	pixel_y = 8
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "KL" = (
 /obj/structure/fluff/railing/corner/south_west,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "KO" = (
 /obj/structure/stairs{
 	dir = 1;
 	icon_state = "stairs"
 	},
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "KP" = (
 /obj/structure/table/wood/fancy/purple,
 /obj/item/candle/skull{
 	pixel_y = 8
 	},
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "KT" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "La" = (
 /obj/machinery/light/rogue/firebowl/standing,
 /turf/open/floor/rogue/grass,
@@ -2258,46 +2264,46 @@
 	},
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Lf" = (
 /mob/living/simple_animal/pet/cat/rogue/black,
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Lh" = (
 /obj/structure/stairs{
 	dir = 8
 	},
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Lt" = (
 /obj/structure/chair/wood/rogue/fancy{
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "LB" = (
 /obj/effect/decal/cobbleedge{
 	dir = 4;
 	pixel_x = -10
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "LC" = (
 /turf/open/floor/rogue/tile/masonic{
 	dir = 8
 	},
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "LI" = (
 /turf/open/floor/rogue/rooftop/green/east,
 /area/rogue/outdoors/mountains)
 "LJ" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "LK" = (
 /obj/structure/fermentation_keg/water,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "LO" = (
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue/outdoors/woods)
@@ -2306,16 +2312,16 @@
 	dir = 6
 	},
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "LV" = (
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "LX" = (
 /obj/structure/fluff/railing/corner/north_east,
 /obj/structure/closet/crate/roguecloset/dark,
 /turf/open/floor/carpet/purple,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "LY" = (
 /obj/structure/fluff/railing/corner,
 /obj/structure/flora/roguegrass/bush/wall/tall,
@@ -2325,7 +2331,7 @@
 /obj/structure/fluff/railing/border/north,
 /obj/structure/fluff/railing/border/east,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Mi" = (
 /obj/effect/decal/cobbleedge{
 	dir = 9
@@ -2337,7 +2343,7 @@
 /obj/structure/rack/rogue/shelf,
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Mk" = (
 /obj/structure/stairs{
 	dir = 1;
@@ -2345,13 +2351,13 @@
 	},
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Mq" = (
 /obj/effect/decal/cobbleedge,
 /obj/structure/fermentation_keg/water,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Mu" = (
 /obj/structure/bed/rogue/inn/double{
 	dir = 1
@@ -2360,13 +2366,13 @@
 	dir = 1
 	},
 /turf/open/floor/carpet/purple,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "MC" = (
 /obj/effect/decal/cobbleedge{
 	pixel_y = 1
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ME" = (
 /obj/structure/fluff/railing/border/east,
 /obj/structure/flora/roguegrass/bush,
@@ -2378,18 +2384,18 @@
 /obj/item/clothing/suit/roguetown/shirt/dress/silkydress,
 /obj/item/clothing/suit/roguetown/shirt/tunic/noblecoat,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "MI" = (
 /obj/structure/closet/crate/drawer,
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "MO" = (
 /obj/structure/mineral_door/wood{
 	lockid = "mansionvampire_maid"
 	},
 /turf/open/floor/rogue/blocks/stonered,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "MT" = (
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/outdoors/mountains)
@@ -2400,12 +2406,12 @@
 	},
 /obj/item/natural/feather,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Nh" = (
 /obj/structure/table/wood/long_table/right,
 /obj/structure/fluff/wallclock/vampire,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ni" = (
 /obj/structure/fluff/walldeco/chains{
 	pixel_x = 22;
@@ -2413,7 +2419,7 @@
 	},
 /obj/structure/closet/crate/coffin/vampire,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ns" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/dirt/ambush,
@@ -2429,7 +2435,7 @@
 "Nx" = (
 /obj/structure/fluff/statue/gargoyle/moss/candles,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ny" = (
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/dirt,
@@ -2437,13 +2443,13 @@
 "NB" = (
 /obj/structure/table/vtable,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "NG" = (
 /obj/effect/decal/cobbleedge{
 	dir = 5
 	},
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "NK" = (
 /obj/structure/bed/rogue/inn/double,
 /obj/effect/decal/cleanable/dirt/cobweb{
@@ -2451,28 +2457,28 @@
 	},
 /obj/item/bedsheet/rogue/fabric_double,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "NM" = (
 /obj/structure/stairs,
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "NN" = (
 /obj/structure/table/wood/fancy,
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Oe" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/blocks/stonered,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Oh" = (
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue/outdoors/mountains)
 "Oj" = (
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ol" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 5
@@ -2485,12 +2491,12 @@
 	dir = 5
 	},
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ou" = (
 /obj/structure/table/wood/poor,
 /obj/item/natural/bundle/cloth/roll,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ow" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/item/grown/log/tree/small,
@@ -2502,7 +2508,7 @@
 /obj/item/grown/log/tree/small,
 /obj/item/grown/log/tree/small,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "OA" = (
 /obj/structure/closet/crate/roguecloset,
 /obj/item/candle/yellow,
@@ -2513,22 +2519,22 @@
 /obj/item/natural/cloth,
 /obj/item/natural/cloth,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "OI" = (
 /obj/structure/fluff/railing/corner/south_east,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "OL" = (
 /obj/machinery/light/rogue/forge,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "OT" = (
 /obj/effect/decal/cleanable/dirt/cobweb{
 	dir = 4
 	},
 /obj/structure/curtain/red,
 /turf/open/floor/rogue/tile,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "OW" = (
 /obj/structure/fluff/railing/border/north,
 /obj/effect/decal/cobble/mossy{
@@ -2545,18 +2551,18 @@
 "Pi" = (
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Pl" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10
 	},
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Pt" = (
 /obj/structure/fluff/clock,
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Py" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/grass,
@@ -2564,7 +2570,7 @@
 "PB" = (
 /obj/structure/closet/crate/drawer,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "PE" = (
 /obj/structure/flora/roguegrass/bush/wall/tall,
 /turf/open/floor/rogue/grass,
@@ -2580,20 +2586,20 @@
 	pixel_y = -1
 	},
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "PR" = (
 /obj/machinery/light/rogue/wallfire/candle,
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Qa" = (
 /obj/effect/decal/cleanable/blood/gibs/down,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Qf" = (
 /obj/structure/chair/bench/couchablack,
 /turf/open/floor/rogue/tile/bath,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Qh" = (
 /obj/structure/mannequin,
 /obj/item/clothing/suit/roguetown/armor/plate/half/aalloy,
@@ -2602,25 +2608,25 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/guard/aalloy,
 /obj/item/clothing/gloves/roguetown/plate/aalloy,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Qi" = (
 /obj/structure/table/wood{
 	dir = 6;
 	icon_state = "largetable"
 	},
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Qj" = (
 /obj/structure/table/wood{
 	dir = 8;
 	icon_state = "largetable"
 	},
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ql" = (
 /obj/structure/table/wood/long_table/right,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Qs" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/machinery/light/rogue/wallfire/candle/r,
@@ -2628,14 +2634,14 @@
 	pixel_y = 16
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Qy" = (
 /obj/structure/closet/crate/roguecloset/dark,
 /obj/item/clothing/suit/roguetown/shirt/tunic/white,
 /obj/item/clothing/suit/roguetown/shirt/tunic/white,
 /obj/item/clothing/suit/roguetown/shirt/tunic/white,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "QK" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/item/storage/roguebag,
@@ -2643,7 +2649,7 @@
 /obj/item/storage/roguebag,
 /obj/item/storage/roguebag,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "QL" = (
 /obj/structure/stairs{
 	dir = 1;
@@ -2652,11 +2658,11 @@
 /obj/structure/fluff/railing/border/east,
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "QO" = (
 /obj/structure/fluff/railing/corner/south_east,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "QP" = (
 /obj/structure/table/vtable,
 /obj/structure/vampire/necromanticbook{
@@ -2664,29 +2670,29 @@
 	pixel_y = 3
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "QS" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "QT" = (
 /obj/structure/chair/wood/rogue/fancy,
 /turf/open/floor/carpet/purple,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Rg" = (
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/tile/bath,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Rn" = (
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Rr" = (
 /obj/structure/rack/rogue,
 /obj/item/rogueweapon/shield/wood,
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ru" = (
 /obj/structure/flora/roguegrass/herb/random,
 /turf/open/floor/rogue/grassyel,
@@ -2703,18 +2709,18 @@
 	pixel_y = 8
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "RF" = (
 /obj/structure/bookcase/random,
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "RI" = (
 /obj/structure/fluff/walldeco/stone{
 	icon_state = "walldec6"
 	},
 /turf/closed/wall/mineral/rogue/stonebrick,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "RR" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-sread";
@@ -2732,7 +2738,7 @@
 /obj/item/clothing/mask/cigarette/rollie/nicotine,
 /obj/item/clothing/mask/cigarette/rollie/nicotine,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Sb" = (
 /obj/structure/fluff/railing/corner/north_east,
 /obj/structure/flora/roguegrass/bush/wall/tall,
@@ -2743,12 +2749,12 @@
 	pixel_y = 32
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Sr" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
 /obj/structure/bookcase/random,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Sw" = (
 /obj/structure/table/wood/fancy/cyan,
 /obj/item/candle/skull{
@@ -2756,19 +2762,19 @@
 	},
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Sx" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Sy" = (
 /obj/structure/fluff/walldeco/chains{
 	icon_state = "chains5"
 	},
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Tg" = (
 /obj/structure/flora/roguegrass/water/reeds,
 /turf/open/water/cleanshallow,
@@ -2776,7 +2782,7 @@
 "Th" = (
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Tj" = (
 /obj/structure/flora/roguegrass/bush/wall/tall,
 /turf/open/floor/rogue/grassyel,
@@ -2791,11 +2797,11 @@
 	},
 /obj/structure/bars,
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Tn" = (
 /obj/structure/table/wood/poor,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Tx" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/dirt/ambush,
@@ -2807,30 +2813,30 @@
 /obj/item/clothing/shoes/roguetown/boots/nobleboot,
 /obj/item/clothing/suit/roguetown/shirt/dress/silkydress,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "TF" = (
 /obj/structure/chair/bench/couchamagenta/r,
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "TM" = (
 /obj/structure/bookcase/random,
 /obj/effect/decal/cleanable/dirt/cobweb{
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "TY" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "TZ" = (
 /obj/structure/fermentation_keg/water,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Uh" = (
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/carpet/royalblack,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Uk" = (
 /obj/structure/table/wood{
 	dir = 2;
@@ -2838,11 +2844,11 @@
 	},
 /obj/item/reagent_containers/glass/cup/silver,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Uo" = (
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/blocks/stonered,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Up" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-sread"
@@ -2852,24 +2858,24 @@
 	icon_state = "cobbleedge-e"
 	},
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ut" = (
 /obj/structure/globe,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Uw" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/tile/masonic{
 	dir = 4
 	},
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ux" = (
 /obj/structure/stairs{
 	dir = 1;
 	icon_state = "stairs"
 	},
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "UA" = (
 /obj/structure/curtain/red,
 /obj/structure/stairs{
@@ -2878,7 +2884,7 @@
 	},
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "UR" = (
 /obj/structure/fluff/walldeco/bigpainting{
 	pixel_x = 0;
@@ -2889,11 +2895,11 @@
 	pixel_y = 3
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "US" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "UT" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 8
@@ -2902,7 +2908,7 @@
 /area/rogue/outdoors/woods)
 "UY" = (
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Vd" = (
 /obj/structure/table/wood/long_table,
 /obj/item/roguekey/vampire,
@@ -2916,7 +2922,7 @@
 /obj/item/roguekey/vampire,
 /obj/item/roguekey/vampire,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Ve" = (
 /obj/structure/stairs{
 	dir = 1;
@@ -2924,21 +2930,21 @@
 	},
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Vj" = (
 /obj/structure/table/wood{
 	dir = 2;
 	icon_state = "largetable"
 	},
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Vm" = (
 /obj/structure/mineral_door/bars{
 	locked = 1;
 	lockid = "mansionvampire"
 	},
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Vo" = (
 /obj/machinery/light/rogue/wallfire{
 	pixel_y = 33
@@ -2951,11 +2957,11 @@
 /obj/item/grown/log/tree/small,
 /obj/item/grown/log/tree/small,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Vq" = (
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Vv" = (
 /obj/structure/closet/crate/roguecloset,
 /obj/item/clothing/suit/roguetown/shirt/vampire,
@@ -2965,11 +2971,11 @@
 /obj/item/clothing/suit/roguetown/shirt/dress/gown,
 /obj/item/clothing/suit/roguetown/shirt/dress/royal,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "VN" = (
 /obj/structure/chair/bench/couch,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "VO" = (
 /obj/structure/rack/rogue/shelf/big,
 /obj/structure/rack/rogue/shelf,
@@ -3003,7 +3009,7 @@
 	pixel_y = 14
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "VQ" = (
 /obj/structure/healingfountain,
 /turf/open/floor/rogue/cobble/mossy,
@@ -3015,7 +3021,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "VY" = (
 /obj/structure/fluff/statue/gargoyle/moss,
 /turf/open/floor/rogue/blocks,
@@ -3031,11 +3037,11 @@
 	pixel_y = 1
 	},
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Wi" = (
 /obj/structure/chair/bench/couch/r,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Wm" = (
 /obj/structure/table/wood/long_table/right,
 /obj/item/storage/keyring/vampire,
@@ -3049,7 +3055,7 @@
 /obj/item/storage/keyring/vampire,
 /obj/item/storage/keyring/vampire,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Wn" = (
 /obj/structure/mineral_door/bars,
 /obj/structure/fluff/railing/border/west,
@@ -3060,7 +3066,7 @@
 	icon_state = "chains3"
 	},
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "WD" = (
 /obj/effect/decal/cobbleedge{
 	dir = 5;
@@ -3072,18 +3078,18 @@
 "WG" = (
 /obj/structure/fluff/railing/border/east,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "WN" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/effect/decal/cleanable/dirt/cobweb{
 	icon_state = "cobweb2"
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "WS" = (
 /obj/structure/fluff/railing/corner/south_east,
 /turf/open/transparent/openspace,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "WT" = (
 /obj/structure/flora/roguetree/burnt,
 /turf/open/floor/rogue/grass,
@@ -3098,7 +3104,7 @@
 /obj/item/flashlight/flare/torch/metal,
 /obj/item/flashlight/flare/torch/metal,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Xi" = (
 /obj/structure/closet/crate/roguecloset,
 /obj/effect/decal/cleanable/dirt/cobweb{
@@ -3108,35 +3114,35 @@
 /obj/item/clothing/suit/roguetown/shirt/dress/silkydress,
 /obj/item/clothing/shoes/roguetown/boots/nobleboot,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Xm" = (
 /obj/structure/chair/wood/rogue/fancy{
 	dir = 1
 	},
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Xp" = (
 /obj/structure/fluff/walldeco/chains,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/rogue/dirt,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Xx" = (
 /obj/item/roguebin/water,
 /obj/machinery/light/rogue/wallfire/candle/r,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Xy" = (
 /obj/structure/fluff/clock,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "XB" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
 	pixel_y = 1
 	},
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "XD" = (
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/woods)
@@ -3147,26 +3153,26 @@
 	},
 /obj/item/paper,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "XJ" = (
 /obj/effect/decal/cleanable/dirt/cobweb{
 	dir = 8
 	},
 /obj/structure/curtain/red,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "XL" = (
 /obj/machinery/light/rogue/wallfire{
 	pixel_y = 33
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "XM" = (
 /obj/effect/decal/cleanable/dirt/cobweb{
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "XN" = (
 /obj/effect/decal/cobbleedge{
 	dir = 6;
@@ -3181,7 +3187,7 @@
 	pixel_y = -2
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "XT" = (
 /obj/structure/mannequin,
 /obj/item/clothing/suit/roguetown/armor/plate/half/aalloy,
@@ -3190,11 +3196,11 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/guard/aalloy,
 /obj/item/clothing/gloves/roguetown/plate/aalloy,
 /turf/open/floor/rogue/tile/masonic/single,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "XU" = (
 /obj/structure/table/wood/long_table,
 /turf/open/floor/carpet/purple,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "XV" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/grass,
@@ -3203,7 +3209,7 @@
 /obj/machinery/light/rogue/wallfire/candle/l,
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/rogue/blocks,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Yg" = (
 /obj/structure/fluff/railing/border,
 /obj/effect/decal/cobble/mossy{
@@ -3214,24 +3220,24 @@
 "Yo" = (
 /obj/structure/table/wood/fancy,
 /turf/open/floor/rogue/tile/bfloorz,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Yw" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10
 	},
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Yz" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
 	icon_state = "cobbleedge-e"
 	},
 /turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "YA" = (
 /obj/structure/curtain/red,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "YE" = (
 /obj/structure/table/wood{
 	dir = 9;
@@ -3239,19 +3245,19 @@
 	},
 /obj/item/reagent_containers/glass/cup/skull,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "YF" = (
 /obj/structure/stairs{
 	dir = 4
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "YI" = (
 /obj/structure/table/wood/poor,
 /obj/item/needle,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "YJ" = (
 /obj/structure/fluff/traveltile/vampire{
 	aportalgoesto = "vampexit";
@@ -3272,11 +3278,11 @@
 /turf/open/floor/rogue/tile/masonic{
 	dir = 8
 	},
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "YY" = (
 /obj/structure/fluff/railing/corner/south_west,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Zb" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/item/reagent_containers/food/snacks/rogue/honey,
@@ -3292,7 +3298,7 @@
 /obj/item/reagent_containers/food/snacks/butter,
 /obj/item/reagent_containers/food/snacks/butter,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Zf" = (
 /obj/structure/table/vtable/v2,
 /obj/structure/fluff/walldeco/mona,
@@ -3302,23 +3308,23 @@
 	},
 /obj/item/natural/feather,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Zj" = (
 /turf/open/floor/rogue/tile/masonic{
 	dir = 4
 	},
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Zp" = (
 /obj/structure/fluff/walldeco/chains,
 /obj/structure/closet/crate/coffin/vampire,
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "Zq" = (
 /obj/effect/landmark/vteleportsending,
 /obj/machinery/light/rogue/wallfire/candle/blue/l,
 /turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ZK" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/item/reagent_containers/food/snacks/grown/apple,
@@ -3329,29 +3335,29 @@
 /obj/item/reagent_containers/food/snacks/grown/berries/rogue,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ZL" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ZM" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/item/candle/gold/lit{
 	pixel_y = 8
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ZO" = (
 /obj/structure/fluff/wallclock/vampire,
 /turf/open/floor/carpet/red,
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 "ZT" = (
 /obj/structure/fluff/railing/border/west,
 /obj/machinery/light/rogue/firebowl/standing,
 /turf/open/floor/rogue/tile/masonic{
 	dir = 4
 	},
-/area/rogue/indoors)
+/area/rogue/indoors/vampire_manor)
 
 (1,1,1) = {"
 Hy
@@ -7316,7 +7322,7 @@ fG
 "}
 (2,1,2) = {"
 DG
-DG
+IV
 DG
 DG
 DG

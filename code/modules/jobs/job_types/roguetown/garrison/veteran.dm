@@ -239,7 +239,7 @@
 	H.adjust_blindness(-3)
 	if(H.mind)
 		var/weapons = list("Sword + Recurve Bow","Axe + Crossbow","Spear + Shield")
-		var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+		var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 		H.set_blindness(0)
 		switch(weapon_choice)
 			if("Sword + Recurve Bow")
@@ -328,7 +328,7 @@
 	H.adjust_blindness(-3)
 	if(H.mind)
 		var/weapons = list("Zweihander","Halberd")
-		var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+		var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 		H.set_blindness(0)
 		switch(weapon_choice)
 			if("Zweihander")

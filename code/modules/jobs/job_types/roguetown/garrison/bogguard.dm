@@ -101,7 +101,7 @@
 			"Path of the Bear"		= /obj/item/clothing/head/roguetown/helmet/sallet/warden/bear,
 			"None"
 		)
-		var/helmchoice = input("Choose your Path.", "HELMET SELECTION") as anything in helmets
+		var/helmchoice = input(H, "Choose your Path.", "HELMET SELECTION") as anything in helmets
 		if(helmchoice != "None")
 			head = helmets[helmchoice]
 
@@ -110,7 +110,7 @@
 			"Antlered Shroud"		= /obj/item/clothing/head/roguetown/roguehood/warden/antler,
 			"None"
 		)
-		var/hoodchoice = input("Choose your Shroud.", "HOOD SELECTION") as anything in hoods
+		var/hoodchoice = input(H, "Choose your Shroud.", "HOOD SELECTION") as anything in hoods
 		if(helmchoice != "None")
 			mask = hoods[hoodchoice]
 
@@ -177,7 +177,7 @@
 			"Path of the Bear"		= /obj/item/clothing/head/roguetown/helmet/sallet/warden/bear,
 			"None"
 		)
-		var/helmchoice = input("Choose your Path.", "HELMET SELECTION") as anything in helmets
+		var/helmchoice = input(H, "Choose your Path.", "HELMET SELECTION") as anything in helmets
 		if(helmchoice != "None")
 			head = helmets[helmchoice]
 
@@ -186,6 +186,6 @@
 			"Antlered Shroud"		= /obj/item/clothing/head/roguetown/roguehood/warden/antler,
 			"None"
 		)
-		var/hoodchoice = input("Choose your Shroud.", "HOOD SELECTION") as anything in hoods
+		var/hoodchoice = input(H, "Choose your Shroud.", "HOOD SELECTION") as anything in hoods
 		if(helmchoice != "None")
 			mask = hoods[hoodchoice]

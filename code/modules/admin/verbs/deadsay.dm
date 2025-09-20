@@ -12,7 +12,7 @@
 
 
 /client/proc/get_dead_say()
-	if (!isobserver(mob) || !holder)
+	if (!isobserver(mob) && !holder)
 		to_chat(src, span_danger("I need to be a ghost to use dead-chat!"))
 		return
 
@@ -42,19 +42,19 @@
 			log_admin("[key_name(src)] has attempted to advertise in DSAY: [msg]")
 			return
 
-	if (GLOB.say_disabled)	//This is here to try to identify lag problems
+	if(GLOB.say_disabled)	//This is here to try to identify lag problems
 		to_chat(src, span_danger("Speech is currently admin-disabled."))
 		return
 
-	if (prefs.muted & MUTE_DEADCHAT)
+	if(prefs.muted & MUTE_DEADCHAT)
 		to_chat(src, span_danger("I cannot use DSAY (temp muted)."))
 		return
 
-	if (is_banned_from(ckey, "Deadchat"))
+	if(is_banned_from(ckey, "Deadchat"))
 		to_chat(src, span_danger("I cannot use DSAY (perma muted)."))
 		return
 
-	if (handle_spam_prevention(msg, MUTE_DEADCHAT))
+	if(handle_spam_prevention(msg, MUTE_DEADCHAT))
 		return
 
 	if(!(prefs.chat_toggles & CHAT_DSAY))
@@ -64,7 +64,7 @@
 	msg = copytext(sanitize(msg), 1, MAX_MESSAGE_LEN)
 	mob.log_talk(msg, LOG_DSAY)
 
-	if (!msg)
+	if(!msg)
 		return
 
 	var/rank_name
@@ -80,7 +80,7 @@
 	if(ckey in GLOB.anonymize)
 		player_name = "[adjectives] Spectator"
 
-	for (var/mob/M in GLOB.player_list)
+	for(var/mob/M in GLOB.player_list)
 		if(!(M.client.prefs.chat_toggles & CHAT_DSAY))
 			continue
 

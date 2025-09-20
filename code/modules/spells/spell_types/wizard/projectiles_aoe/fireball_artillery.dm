@@ -5,7 +5,7 @@
 	cost = 6
 	range = 8
 	projectile_type = /obj/projectile/magic/aoe/fireball/rogue/artillery
-	overlay_state = "fireball"
+	overlay_state = "fireball_artillery"
 	sound = list('sound/magic/fireball.ogg')
 	releasedrain = 30
 	chargedrain = 1

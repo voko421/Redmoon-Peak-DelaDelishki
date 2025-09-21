@@ -202,7 +202,7 @@
 
 /datum/crafting_recipe/gemstaff/blacksteelstaffupgrade
 	name = "Refined Blacksteel Staff"
-	results = /obj/item/rogueweapon/woodstaff/diamond/blacksteelstaff
+	result = /obj/item/rogueweapon/woodstaff/diamond/blacksteelstaff
 	reqs = list(/obj/item/rogueweapon/woodstaff/emerald/blacksteelstaff = 1,
 				/obj/item/roguegem/diamond = 1)
 	craftdiff = 0

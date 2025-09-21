@@ -206,7 +206,7 @@
 	traits_applied = list(TRAIT_MAGEARMOR, TRAIT_ARCYNE_T2, TRAIT_INTELLECTUAL, TRAIT_STEELHEARTED)	// Only T2 arcyne so if they get spell points from something they can only pick from the curated spellblade list
 	subclass_stats = list(
 		STATKEY_INT = 3,
-		STATKEY_WIL = 2,
+		STATKEY_WIL = 3,
 		STATKEY_STR = -1,
 		STATKEY_PER = 3,
 		STATKEY_SPD = 1

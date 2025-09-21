@@ -188,11 +188,9 @@
 		return
 	if(!target_location)
 		return
-
-	// Announce ability
 	visible_message(span_danger("[src] unleashes a spiralling wave of floodwaters!"))
 	src.next_ability_use = world.time + src.ability_cooldown
-	// Create the whirlpool effect centered on the target
+	// Create the whirlpool effect centered on the target that handles temporary tiles
 	new /obj/effect/whirlpool(target_location)
 
 /obj/effect/whirlpool
@@ -330,7 +328,6 @@
 						continue
 					knockback(L, dir_to_target, 8)
 				new /obj/effect/temp_visual/gust(T, dir_to_target)
-	// Visual + sound feedback
 	visible_message(span_danger("[src] exhales a violent gust of wind!"))
 	playsound(src, 'sound/weather/rain/wind_6.ogg', 100, TRUE)
 
@@ -338,12 +335,9 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/primordial/air/proc/knockback(mob/living/L, dir, distance)
 	if(!L || !isturf(L.loc))
 		return
-	// Get a turf N tiles away in the given direction
 	var/turf/target_turf = get_ranged_target_turf(L, dir, distance)
 	if(!target_turf)
 		return
-
-	// Actually throw the mob
 	L.throw_at(target_turf, 7, 4)
 
 /obj/effect/temp_visual/gust

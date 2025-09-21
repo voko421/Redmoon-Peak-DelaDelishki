@@ -203,7 +203,7 @@
 	category_tags = list(CTAG_MERCENARY)
 	cmode_music = 'sound/music/combat_grenzelhoft.ogg'
 	subclass_languages = list(/datum/language/grenzelhoftian)
-	traits_applied = list(TRAIT_MAGEARMOR, TRAIT_ARCYNE_T2, TRAIT_INTELLECTUAL, TRAIT_STEELHEARTED)	// Only T2 arcyne so if they get spell points from something they can only pick from the curated spellblade list
+	traits_applied = list(TRAIT_MAGEARMOR, TRAIT_INTELLECTUAL, TRAIT_STEELHEARTED)
 	subclass_stats = list(
 		STATKEY_INT = 3,
 		STATKEY_WIL = 3,
@@ -261,4 +261,15 @@
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/conjure_armor)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/message)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/counterspell)
+	if(H.age == AGE_OLD) // FEAR the old man in a profession where men die young, or something corny like that.
+		H.adjust_skillrank_up_to(/datum/skill/magic/arcane, 5, TRUE)
+		H.change_stat(STATKEY_SPD, -1)
+		H.change_stat(STATKEY_STR, -1)
+		H.change_stat(STATKEY_CON, -2)
+		H.change_stat(STATKEY_PER, 2)
+		H.change_stat(STATKEY_INT, 2)
+		H.mind?.adjust_spellpoints(3)
+		ADD_TRAIT(H, TRAIT_ARCYNE_T3, TRAIT_GENERIC)
+	else
+		ADD_TRAIT(H, TRAIT_ARCYNE_T2, TRAIT_GENERIC) // Only T2 arcyne (Unless they're old) so if they get spell points from something they can only pick from the curated spellblade list
 	H.merctype = 7

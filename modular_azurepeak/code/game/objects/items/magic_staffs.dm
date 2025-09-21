@@ -22,6 +22,7 @@
 		/datum/crafting_recipe/gemstaff/ruby_staff,
 		/datum/crafting_recipe/gemstaff/diamond_staff,
 		/datum/crafting_recipe/gemstaff/riddle_of_steel_staff,
+		/datum/crafting_recipe/gemstaff/blacksteelstaffupgrade,
 		)
 
 	AddElement(
@@ -197,4 +198,11 @@
 	result = /obj/item/rogueweapon/woodstaff/riddle_of_steel
 	reqs = list(/obj/item/rogueweapon/woodstaff = 1,
 				/obj/item/riddleofsteel = 1)
+	craftdiff = 0
+
+/datum/crafting_recipe/gemstaff/blacksteelstaffupgrade
+	name = "Refined Blacksteel Staff"
+	results = /obj/item/rogueweapon/woodstaff/diamond/blacksteelstaff
+	reqs = list(/obj/item/rogueweapon/woodstaff/emerald/blacksteelstaff = 1,
+				/obj/item/roguegem/diamond = 1)
 	craftdiff = 0

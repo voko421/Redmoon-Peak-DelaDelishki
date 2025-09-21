@@ -23,7 +23,7 @@
 /obj/effect/proc_holder/spell/invoked/conjure_primordial/cast(list/targets, mob/living/user)
 	. = ..()
 	if(length(conjured_mobs) >= 2)
-		to_chat(user, span_warning("You can not possibly maintainer your focus on any more primordials!"))
+		to_chat(user, span_warning("You can not possibly maintain your focus on any more primordials!"))
 		revert_cast()
 		return
 	var/turf/T = get_turf(targets[1])

@@ -437,6 +437,22 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		<b>Grand Shaft</b>: [DULLFACTOR_ANTAG]x vs Everything but Smash. 1x vs Smash. Only present on certain special weapons. \n\
 		<b>Conjured Shaft</b>: [DULLFACTOR_COUNTERED_BY]x vs Everything. Present on Conjured or Decrepit weapons. Also meant to represent crumbling weapons. \n\
 		"))
+
+	if(href_list["explaindef"])
+		to_chat(usr, span_info("Each point of defense adds 10% to your parry chance.\n\
+		Your parry chance is increased by 20% per skill level in the weapon, and reduced by 20% per skill level of your attacker.\n\
+		Defense is often increased when you wield a weapon two-handed."))
+
+	if(href_list["explainlength"])
+		to_chat(usr, span_info("A short weapon gains +10% accuracy on hitting any bodypart and can only attack the legs from the ground.\n\
+		A long weapon can hit chest or below from the ground, and can hit the feet while standing.\n\
+		A great weapon can hit any bodypart from anywhere."))
+
+	if(href_list["explainbalance"])
+		to_chat(usr, span_info("A heavy weapon is easier to dodge, and inflicts 2 stamina damage per level of strength differences on a parrying defender. \n\
+		A swift balance weapon reduce the enemy's parry chance by 10% per level of speed difference, by up to 30%, \n\
+		If the defender have higher perception however, the penalty is reduced by 10% per point of difference, down to none.\n\
+		Intelligence also reduces the penalty by 3% per point of difference, down to none."))
 	
 	if(href_list["inspect"])
 		if(!usr.canUseTopic(src, be_close=TRUE))
@@ -457,6 +473,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 				inspec += "Heavy"
 			if(wbalance == WBALANCE_SWIFT)
 				inspec += "Swift"
+			inspec += " <span class='info'><a href='?src=[REF(src)];explainbalance=1'>{?}</a></span>"
 
 		if(wlength != WLENGTH_NORMAL)
 			inspec += "\n<b>LENGTH:</b> "
@@ -467,6 +484,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 					inspec += "Long"
 				if(WLENGTH_GREAT)
 					inspec += "Great"
+			inspec += " <span class='info'><a href='?src=[REF(src)];explainlength=1'>{?}</a></span>"
 
 		if(alt_intents)
 			inspec += "\n<b>ALT-GRIP (RIGHT CLICK WHILE IN HAND)</b>"
@@ -482,7 +500,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 			inspec += "\n<b>BULKY</b>"
 
 		if(can_parry)
-			inspec += "\n<b>DEFENSE:</b> [wdefense_dynamic]"
+			inspec += "\n<b>DEFENSE:</b> [wdefense_dynamic] <span class='info'><a href='?src=[REF(src)];explaindef=1'>{?}</a></span>"
 
 		if(max_blade_int)
 			inspec += "\n<b>SHARPNESS:</b> "

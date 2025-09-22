@@ -320,9 +320,7 @@ SUBSYSTEM_DEF(migrants)
 		if(role_type in client.prefs.migrant.role_preferences)
 			base_priority = 100
 
-		// Add triumph contribution bonus
-		var/triumph_bonus = get_triumph_selection_bonus(client, wave_type)
-		var/final_priority = base_priority + triumph_bonus
+		var/final_priority = base_priority + 100 * get_triumph_selection_bonus(client, wave_type)
 
 		if(final_priority > 0)
 			triumph_weighted[client] = final_priority

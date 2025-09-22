@@ -258,6 +258,12 @@
 /obj/structure/fluff/railing/corner/south_east,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/cave)
+"gQ" = (
+/obj/structure/stairs{
+	dir = 4
+	},
+/turf/open/floor/rogue/twig,
+/area/rogue/indoors/banditcamp)
 "gU" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/dirt/road,
@@ -21239,7 +21245,7 @@ lJ
 JL
 kB
 kB
-kB
+gQ
 Hk
 wG
 ad

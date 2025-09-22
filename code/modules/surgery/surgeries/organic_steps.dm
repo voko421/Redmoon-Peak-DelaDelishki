@@ -103,6 +103,11 @@
 	success_sound = 'sound/surgery/cautery2.ogg'
 
 /datum/surgery_step/cauterize/validate_bodypart(mob/user, mob/living/carbon/target, obj/item/bodypart/bodypart, target_zone)
+	if(islist(user.status_traits) && ("Medicine Expert" in user.status_traits)) // If you have medicine expert, you can caut thru armor.
+		ignore_clothes = TRUE
+	else // IDK if this is necessary but probably good 4 clarification.
+		ignore_clothes = FALSE
+
 	. = ..()
 	if(!.)
 		return

@@ -89,6 +89,21 @@
 	light_power = 1
 	toggle_icon_state = TRUE
 
+/obj/item/clothing/head/roguetown/helmet/leather/shaman_hood/equipped(mob/user, slot)
+	. = ..()
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		H.remove_status_effect(/datum/status_effect/debuff/lost_shaman_hood)
+		H.remove_stress(/datum/stressevent/shamanhoodlost)
+
+/obj/item/clothing/head/roguetown/helmet/leather/shaman_hood/dropped(mob/user)
+	. = ..()
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(H.merctype == 1) //Atgervi
+			H.apply_status_effect(/datum/status_effect/debuff/lost_shaman_hood)
+			H.add_stress(/datum/stressevent/shamanhoodlost)
+
 /obj/item/clothing/head/roguetown/helmet/leather/shaman_hood/Initialize(mapload)
 	. = ..()
 	set_light_on(FALSE)

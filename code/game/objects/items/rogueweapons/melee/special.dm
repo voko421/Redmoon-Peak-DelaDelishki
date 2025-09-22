@@ -722,7 +722,7 @@
 	parrysound = list('sound/combat/parry/bladed/bladedthin (1).ogg', 'sound/combat/parry/bladed/bladedthin (2).ogg', 'sound/combat/parry/bladed/bladedthin (3).ogg')
 	swingsound = list('sound/combat/wooshes/bladed/wooshmed (1).ogg','sound/combat/wooshes/bladed/wooshmed (2).ogg','sound/combat/wooshes/bladed/wooshmed (3).ogg')
 	swingsound = BLADEWOOSH_SMALL
-	wlength = WLENGTH_LONG
+	wlength = WLENGTH_NORMAL
 	w_class = WEIGHT_CLASS_NORMAL
 	associated_skill = /datum/skill/combat/unarmed
 	pickup_sound = 'sound/foley/equip/swordsmall2.ogg'
@@ -746,6 +746,7 @@
 	max_blade_int = 180
 	max_integrity = 200
 	smeltresult = /obj/item/ingot/steel
+	sharpness_mod = 2
 
 /obj/item/rogueweapon/handclaw/gronn
 	name = "Gronn Beast Claws"
@@ -838,7 +839,7 @@
 	hitsound = list('sound/combat/hits/bladed/genslash (1).ogg', 'sound/combat/hits/bladed/genslash (2).ogg', 'sound/combat/hits/bladed/genslash (3).ogg')
 	item_d_type = "slash"
 	misscost = 10
-	intent_intdamage_factor = 0.1
+	intent_intdamage_factor = 0.05
 
 /datum/intent/claw/rend/steel
 	damfactor = 3

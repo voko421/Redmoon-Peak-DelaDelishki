@@ -198,7 +198,7 @@
 	coverage = 80
 	attacked_sound = list('sound/combat/parry/shield/towershield (1).ogg','sound/combat/parry/shield/towershield (2).ogg','sound/combat/parry/shield/towershield (3).ogg')
 	parrysound = list('sound/combat/parry/shield/towershield (1).ogg','sound/combat/parry/shield/towershield (2).ogg','sound/combat/parry/shield/towershield (3).ogg')
-	max_integrity = 250
+	max_integrity = 300
 	experimental_inhand = FALSE
 
 /obj/item/rogueweapon/shield/atgervi/getonmobprop(tag)
@@ -217,6 +217,10 @@
 	righthand_file = 'icons/mob/inhands/weapons/rogue_righthand.dmi'
 	wlength = WLENGTH_LONG
 	experimental_onhip = TRUE
+	wdefense = 5
+	max_blade_int = 250
+	force = 26
+	force_wielded = 33
 
 /obj/item/rogueweapon/stoneaxe/woodcut/steel/atgervi/getonmobprop(tag)
 	. = ..()

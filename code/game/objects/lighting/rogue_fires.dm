@@ -480,16 +480,8 @@
 				user.visible_message(span_info("[user] places an ingot into the crucible."))
 				if(do_after(user, 10, target = src))
 					var/ingot_type = W.type
-
-					// Initialize the count for this ingot type if it doesn't exist
-					if(!crucible.ingots[ingot_type])
-						crucible.ingots[ingot_type] = 0
-
-					// Add the ingot
-					crucible.ingots[ingot_type]++
-					crucible.heat_progress = 0
-					qdel(W)
-					crucible.update_icon()
+					if(crucible.add_ingot(ingot_type, user) > 0)
+						qdel(W)
 				return
 		if(istype(W, /obj/item/reagent_containers/glass/bowl))
 			to_chat(user, "<span class='notice'>Remove the pot from the hearth first.</span>")

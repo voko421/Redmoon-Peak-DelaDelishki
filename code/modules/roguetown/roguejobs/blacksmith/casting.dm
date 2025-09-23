@@ -17,6 +17,50 @@
 	var/heat_rate = 10
 	var/cool_rate = 5
 	var/last_heat_time = 0
+	var/duplication_threshold = 4 // Every 4 ingots deposited will duplicate the last one
+	var/list/ingots_added_total = list()
+
+/obj/item/reagent_containers/glass/crucible/proc/add_ingot(var/ingot_type, var/mob/user)
+	// Initialize counters if they don't exist
+	if(!ingots[ingot_type])
+		ingots[ingot_type] = 0
+	if(!ingots_added_total[ingot_type])
+		ingots_added_total[ingot_type] = 0
+
+	var/current_total = get_total_ingots()
+	var/ingots_to_add = 1
+	var/should_duplicate = FALSE
+
+	// Check if we should duplicate (every 4th ingot of this type added overall)
+	ingots_added_total[ingot_type]++
+	if(ingots_added_total[ingot_type] % duplication_threshold == 0)
+		ingots_added_total[ingot_type] = 0
+		should_duplicate = TRUE
+		ingots_to_add = 2
+
+	var/available_space = max_ingots - current_total
+	var/actual_ingots_added = min(ingots_to_add, available_space)
+	var/extra_ingots = ingots_to_add - actual_ingots_added
+	ingots[ingot_type] += actual_ingots_added
+
+	if(extra_ingots > 0)
+		for(var/i = 1; i <= extra_ingots; i++)
+			var/obj/item/ingot/new_ingot = new ingot_type(get_turf(src))
+			new_ingot.forceMove(get_turf(src))
+			to_chat(user, span_notice("The crucible overflows! An extra [new_ingot.name] falls to the ground."))
+
+	// Give appropriate feedback
+	if(should_duplicate)
+		if(actual_ingots_added == 2)
+			to_chat(user, span_notice("As you add the ingot, it seems to multiply in the crucible!"))
+		else if(actual_ingots_added == 1)
+			to_chat(user, span_notice("The ingot starts to multiply but the crucible is almost full!"))
+	else if(actual_ingots_added == 1)
+		to_chat(user, span_info("You add the ingot to the crucible."))
+
+	heat_progress = 0
+	update_icon()
+	return actual_ingots_added
 
 /obj/item/reagent_containers/glass/crucible/update_icon()
 	cut_overlays()

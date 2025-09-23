@@ -122,7 +122,7 @@
 			skill_quality -= 1 // The more you fuck up, the less quality the end result will be.
 			bar_health -= craftdiff // Difficulty of the recipe adds to how critical the failure is
 			if(parent)
-				var/obj/item/P = parent
+				var/obj/machinery/anvil/P = parent
 				switch(skill_level)
 					if(0)
 						bar_health -= 25 // 4 strikes and you're out, buddy.
@@ -135,7 +135,8 @@
 							bar_health -= craftdiff
 				if(bar_health <= 0)
 					user.visible_message(span_danger("[user] destroys the bar!"))
-					qdel(P)
+					qdel(P.hingot)
+					P.hingot = null
 			return FALSE
 		else
 			user.visible_message(span_warning("[user] fumbles the bar!"))

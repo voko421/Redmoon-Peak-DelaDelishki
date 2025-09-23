@@ -4,26 +4,37 @@
 	icon = 'icons/roguetown/items/anvil_casting.dmi'
 	var/quality = SMELTERY_LEVEL_NORMAL
 	var/datum/anvil_recipe/currecipe
+	var/overlay_color
+
+/obj/item/blade/Initialize()
+    . = ..()
+    if(overlay_color)
+        color = overlay_color
 
 /obj/item/blade/iron_axe
 	name = "iron axe blade"
 	icon_state = "blade_axe"
+	overlay_color = "#808080"
 
 /obj/item/blade/iron_mace
 	name = "iron mace head"
 	icon_state = "blade_mace"
+	overlay_color = "#808080"
 
 /obj/item/blade/iron_sword
 	name = "iron sword blade"
 	icon_state = "blade_sword"
+	overlay_color = "#808080"
 
 /obj/item/blade/iron_knife
 	name = "iron knife blade"
 	icon_state = "blade_knife"
+	overlay_color = "#808080"
 
 /obj/item/blade/iron_polearm
 	name = "iron polearm blade"
 	icon_state = "blade_polearm"
+	overlay_color = "#808080"
 
 /obj/item/blade/steel_axe
 	name = "steel axe blade"

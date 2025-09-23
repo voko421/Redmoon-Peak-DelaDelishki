@@ -290,17 +290,20 @@
 /datum/anvil_recipe/weapons/iron/sword
 	name = "Sword, Iron"
 	req_bar = /obj/item/ingot/iron
+	req_blade = /obj/item/blade/iron_sword
 	created_item = /obj/item/rogueweapon/sword/iron
 
 /datum/anvil_recipe/weapons/iron/swordshort
 	name = "Shortsword, Iron"
 	req_bar = /obj/item/ingot/iron
+	req_blade = /obj/item/blade/iron_sword
 	created_item = /obj/item/rogueweapon/sword/short/iron
 	craftdiff = 0
 
 /datum/anvil_recipe/weapons/iron/messer
 	name = "Messer, Iron"
 	req_bar = /obj/item/ingot/iron
+	req_blade = /obj/item/blade/iron_sword
 	created_item = /obj/item/rogueweapon/sword/short/messer/iron
 	craftdiff = 0
 
@@ -325,6 +328,7 @@
 /datum/anvil_recipe/weapons/iron/zweihander
 	name = "Zweihander, Iron (+2 Iron)"
 	req_bar = /obj/item/ingot/iron
+	req_blade = /obj/item/blade/iron_sword
 	additional_items = list(/obj/item/ingot/iron, /obj/item/ingot/iron)
 	created_item = /obj/item/rogueweapon/greatsword/zwei
 	craftdiff = 3

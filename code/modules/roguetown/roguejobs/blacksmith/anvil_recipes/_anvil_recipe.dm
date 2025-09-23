@@ -8,6 +8,8 @@
 	var/skill_quality = 0 // Accumulated per hit based on calculations, will decide final result.
 	var/appro_skill = /datum/skill/craft/blacksmithing
 	var/atom/req_bar
+	var/atom/req_blade
+	var/using_blade = FALSE
 	var/atom/movable/created_item
 	var/createditem_num = 1 // How many units to make.
 	var/craftdiff = 0
@@ -22,11 +24,36 @@
 	var/numberofbreakthroughs = 0 // How many good hits we got on the metal, advances recipes 50% faster, reduces number of hits total, and restores bar_health
 	var/datum/parent
 
-/datum/anvil_recipe/New(datum/P, ...)
-	parent = P
+/datum/anvil_recipe/New(datum/P, using_blade = FALSE, ...)
+	parent = P // P is now the anvil
 	. = ..()
 
+	// Auto-detect if we're using a blade by checking what's on the anvil
+	var/obj/machinery/anvil/anvil = P
+	if(anvil.hingot != null)
+		if(!using_blade && req_blade && istype(anvil.hingot, req_blade))
+			using_blade = TRUE
+
+	src.using_blade = using_blade
+
+	// If using a blade, reduce material requirements
+	if(using_blade && additional_items.len > 0)
+		// Remove one material requirement when using a blade
+		var/found_ingot = FALSE
+		for(var/i in 1 to additional_items.len)
+			var/path = additional_items[i]
+			if(ispath(path, /obj/item/ingot))
+				additional_items.Cut(i, i+1)
+				found_ingot = TRUE
+				break
+		if(!found_ingot && additional_items.len > 0)
+			// If no ingot found, just remove the first additional item
+			additional_items.Cut(1, 2)
+
 /datum/anvil_recipe/proc/advance(mob/user, breakthrough = FALSE, advance_multiplier = 1)
+	var/obj/machinery/anvil/anvil = parent
+	if(!anvil.hingot)
+		return FALSE
 	if(!isliving(user))
 		return
 	var/mob/living/L = user
@@ -41,6 +68,11 @@
 		to_chat(user, span_info("Now it's time to add a [needed_item_text]."))
 		user.visible_message(span_warning("[user] strikes the bar!"))
 		return FALSE
+	if(using_blade)
+		// Blades are partially pre-formed, so easier to work with
+		proab += 10 // +10% success chance when using blades
+		if(breakthrough)
+			moveup *= 1.2 // Blades respond better to good strikes
 	// Calculate probability of a successful strike, based on smith's skill level
 	if(!skill_level && !craftdiff)
 		proab = 35
@@ -65,6 +97,23 @@
 		needed_item_text = initial(I.name)
 		additional_items -= needed_item
 		progress = 0
+
+	if(progress >= max_progress && !additional_items.len)
+		// Create the item(s)
+		if(createditem_num > 1)
+			for(var/i = 1 to createditem_num)
+				var/obj/item/I = new created_item(get_turf(anvil))
+				handle_creation(I)
+		else
+			var/obj/item/I = new created_item(get_turf(anvil))
+			handle_creation(I)
+
+		// Only clear if we successfully created the item
+		anvil.hingot = null
+		anvil.currecipe = null
+		anvil.hott = null
+		anvil.update_icon()
+		return FALSE
 
 	if(!moveup)
 		user.mind.add_sleep_experience(appro_skill, advance_multiplier*L.STAINT/(craftdiff+3), FALSE) //Pity XP

@@ -2,6 +2,8 @@
 	name = "blade"
 	desc = "A cast blade waiting to be finished."
 	icon = 'icons/roguetown/items/anvil_casting.dmi'
+	var/quality = SMELTERY_LEVEL_NORMAL
+	var/datum/anvil_recipe/currecipe
 
 /obj/item/blade/iron_axe
 	name = "iron axe blade"

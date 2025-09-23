@@ -1731,8 +1731,8 @@
 			STR.remove_from_storage(I, get_turf(src))
 
 /obj/item/clothing/cloak/stabard/grenzelmage
-	name = "\improper Grenzelhoftian Magos Mantle"
-	desc = "A fashionable Mantle often worn by Celestial Academny Magos."
+	name = "grenzelhoftian magos mantle"
+	desc = "A fashionable Mantle often worn by Celestial Academy Magos."
 	color = CLOTHING_WHITE
 	detail_color = CLOTHING_WHITE
 	detail_tag = "_spl"

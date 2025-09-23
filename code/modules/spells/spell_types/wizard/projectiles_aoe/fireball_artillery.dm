@@ -10,13 +10,13 @@
 	releasedrain = 30
 	chargedrain = 1
 	chargetime = 25
-	recharge_time = 30 SECONDS // 10 seconds more than fireball
+	recharge_time = 20 SECONDS // 5 seconds more than fireball
 	warnie = "spellwarning"
 	no_early_release = TRUE
 	movement_interrupt = FALSE
 	charging_slowdown = 3
 	spell_tier = 4 // Court mage can have this as a treat
-	invocations = "Ignis Sphaera directa!"
+	invocations = list("Ignis Sphaera directa!")
 	invocation_type = "shout"
 	glow_color = GLOW_COLOR_FIRE
 	glow_intensity = GLOW_INTENSITY_HIGH
@@ -39,7 +39,7 @@
 	exp_light = 0
 	exp_flash = 0
 	exp_fire = 1
-	damage = 50 // 10 less damage than actual fireball
+	damage = 50 // 10 less damage than actual fireball on direct fire
 	damage_type = BURN
 	npc_simple_damage_mult = 2 // HAHAHA
 	accuracy = 40 // Base accuracy is lower for burn projectiles because they bypass armor
@@ -50,7 +50,7 @@
 
 /obj/projectile/magic/aoe/fireball/rogue/artillery/arc
 	name = "Arced Artillery Fireball"
-	damage = 40 // 20% damage penalty
+	damage = 65 // 5 damage more than actual fireball on arc'd fire hit
 	arcshot = TRUE
 
 /obj/projectile/magic/aoe/fireball/rogue/artillery/on_hit(target)

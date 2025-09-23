@@ -1,6 +1,8 @@
 /obj/effect/proc_holder/spell/invoked/projectile/fireball/artillery
 	name = "Artillery Fireball"
-	desc = "A arc'd fireball that seemingly does far more damage to structures than people."
+	desc = "A arc-able fireball that seemingly does far more damage to structures than people. \n\
+	Damage is increased by 50% versus simple-minded creechurs.\n\
+	Can be fired in an arc over an ally's head with a mage's staff or spellbook on arc intent. It will deals an additional 30% damage that way"
 	clothes_req = FALSE
 	cost = 6
 	range = 8

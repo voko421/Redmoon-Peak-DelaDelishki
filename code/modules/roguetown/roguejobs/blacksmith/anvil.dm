@@ -241,7 +241,6 @@
 			currecipe.max_progress = 100
 			currecipe.material_quality += quality_value
 			previous_material_quality = quality_value
-			to_chat(user, span_info("[currecipe.material_quality]"))
 
 			ui.close()
 			return TRUE

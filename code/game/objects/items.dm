@@ -453,7 +453,26 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		A swift balance weapon reduce the enemy's parry chance by 10% per level of speed difference, by up to 30%, \n\
 		If the defender have higher perception however, the penalty is reduced by 10% per point of difference, down to none.\n\
 		Intelligence also reduces the penalty by 3% per point of difference, down to none."))
+	var/additional_explanation = "This determines the damage dealt by this weapon. Force is increased by strength above / below 10 by 10% per point of differences,\n\
+	decreased by. Each point of strength at 15 or above only applies an additional +3% damage, except on punches. Damage is also multiplied by damage factor on intents. \n\
+	Both multiplication are applied to the base number, and does not multiply each other. Reduced sharpness decrease the contribution of strength\n\
+	Force, combined with armor penetration on an intent determines whether an attack penetrate the target's armor. Armor penetrating attack deals less damage to the armor itself."
+	if(href_list["showforce"])
+		to_chat(usr, span_info("Actual Force: ([force]). [additional_explanation]"))
 	
+	if(href_list["showforcewield"])
+		to_chat(usr, span_info("Wielded Force: ([force_wielded]). [additional_explanation]"))
+
+	if(href_list["explainsharpness"])
+		to_chat(usr, span_info("Bladed weapons have sharpness. At [SHARPNESS_TIER1_THRESHOLD * 100]%, damage factor and strength damage starts to fall off gradually. \n\
+		At [SHARPNESS_TIER1_FLOOR * 100]%, strength and damage factor no longer applies. Below [SHARPNESS_TIER2_THRESHOLD * 100]%, the base damage value also starts to decline\n\
+		Sharpness declines by [SHARPNESS_ONHIT_DECAY] on parry for bladed weapon."))
+
+	if(href_list["explaindurability"])
+		to_chat(usr, span_info("How durable your item is. On weapons, [INTEG_PARRY_DECAY] is lost on parry on a main hand bladed weapon. \n\
+		Blunt weapon or off-hand weapon loses [INTEG_PARRY_DECAY_NOSHARP] per parry instead. \n\
+		On armor, the blunt rating of an armor multiplies its effective durability against blunt damage."))
+
 	if(href_list["inspect"])
 		if(!usr.canUseTopic(src, be_close=TRUE))
 			return
@@ -462,10 +481,10 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 			inspec += "\n<b>MIN.STR:</b> [minstr]"
 		
 		if(force)
-			inspec += "\n<b>FORCE:</b> [get_force_string(force)] ([force])"
+			inspec += "\n<b>FORCE:</b> [get_force_string(force)] <span class='info'><a href='?src=[REF(src)];showforce=1'>{?}</a></span>"
 		if(gripped_intents && !wielded)
 			if(force_wielded)
-				inspec += "\n<b>WIELDED FORCE:</b> [get_force_string(force_wielded)] ([force_wielded])"
+				inspec += "\n<b>WIELDED FORCE:</b> [get_force_string(force_wielded)] <span class='info'><a href='?src=[REF(src)];showforcewield=1'>{?}</a></span>"
 
 		if(wbalance)
 			inspec += "\n<b>BALANCE: </b>"
@@ -505,7 +524,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		if(max_blade_int)
 			inspec += "\n<b>SHARPNESS:</b> "
 			var/percent = round(((blade_int / max_blade_int) * 100), 1)
-			inspec += "[percent]% ([blade_int])"
+			inspec += "[percent]% ([blade_int]) <span class='info'><a href='?src=[REF(src)];explainsharpness=1'>{?}</a></span>"
 
 		if(associated_skill && associated_skill.name)
 			inspec += "\n<b>SKILL:</b> [associated_skill.name]"
@@ -564,6 +583,8 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 			var/ratio =	(eff_currint / eff_maxint)
 			var/percent = round((ratio * 100), 1)
 			inspec += "[percent]% ([floor(eff_currint)])"
+			if(force >= 5) // Durability is rather obvious for non-weapons
+				inspec += " <span class='info'><a href='?src=[REF(src)];explaindurability=1'>{?}</a></span>"
 
 		to_chat(usr, "[inspec.Join()]")
 

@@ -229,8 +229,7 @@
 			// Create the recipe and assign it to the ANVIL
 			currecipe = new recipe.type(src, using_blade)
 
-			// Set initial recipe values - handle quality safely
-			var/quality_value = 1 // Default quality if not defined
+			var/quality_value = 1
 			if(istype(hingot, /obj/item/ingot))
 				var/obj/item/ingot/ingot_ref = hingot
 				quality_value = ingot_ref.quality
@@ -242,6 +241,7 @@
 			currecipe.max_progress = 100
 			currecipe.material_quality += quality_value
 			previous_material_quality = quality_value
+			to_chat(user, span_info("[currecipe.material_quality]"))
 
 			ui.close()
 			return TRUE

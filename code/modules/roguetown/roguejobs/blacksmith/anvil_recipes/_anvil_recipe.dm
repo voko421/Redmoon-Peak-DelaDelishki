@@ -98,23 +98,6 @@
 		additional_items -= needed_item
 		progress = 0
 
-	if(progress >= max_progress && !additional_items.len)
-		// Create the item(s)
-		if(createditem_num > 1)
-			for(var/i = 1 to createditem_num)
-				var/obj/item/I = new created_item(get_turf(anvil))
-				handle_creation(I)
-		else
-			var/obj/item/I = new created_item(get_turf(anvil))
-			handle_creation(I)
-
-		// Only clear if we successfully created the item
-		anvil.hingot = null
-		anvil.currecipe = null
-		anvil.hott = null
-		anvil.update_icon()
-		return FALSE
-
 	if(!moveup)
 		user.mind.add_sleep_experience(appro_skill, advance_multiplier*L.STAINT/(craftdiff+3), FALSE) //Pity XP
 		if(!prob(proab)) // Roll again, this time negatively, for consequences.
@@ -153,6 +136,23 @@
 				bar_health += 20 // Correcting the mistakes, ironing the kinks. Low chance, so rewarding.
 		else
 			user.visible_message(span_info("[user] strikes the bar!"))
+
+		if(progress >= max_progress && !additional_items.len)
+			// Create the item(s)
+			if(createditem_num > 1)
+				for(var/i = 1 to createditem_num)
+					var/obj/item/I = new created_item(get_turf(anvil))
+					handle_creation(I)
+			else
+				var/obj/item/I = new created_item(get_turf(anvil))
+				handle_creation(I)
+
+			// Only clear if we successfully created the item
+			anvil.hingot = null
+			anvil.currecipe = null
+			anvil.hott = null
+			anvil.update_icon()
+			return FALSE
 		return TRUE
 
 /datum/anvil_recipe/proc/item_added(mob/user)

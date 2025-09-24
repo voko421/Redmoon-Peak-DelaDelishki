@@ -36,6 +36,11 @@
 	icon_state = "blade_polearm"
 	overlay_color = "#808080"
 
+/obj/item/blade/iron_plate
+	name = "iron plate"
+	icon_state = "blade_plate"
+	overlay_color = "#808080"
+
 /obj/item/blade/steel_axe
 	name = "steel axe blade"
 	icon_state = "blade_axe"
@@ -55,3 +60,7 @@
 /obj/item/blade/steel_polearm
 	name = "steel polearm blade"
 	icon_state = "blade_polearm"
+
+/obj/item/blade/steel_plate
+	name = "steel plate"
+	icon_state = "blade_plate"

@@ -166,11 +166,6 @@
 	var/list/data = ..()
 
 	data["hingot_type"] = hingot?.type
-
-	if(hingot)
-		to_chat(user, span_notice("DEBUG: Hingot type: [hingot.type]"))
-		to_chat(user, span_notice("DEBUG: Is blade: [istype(hingot, /obj/item/blade)]"))
-
 	return data
 
 /obj/machinery/anvil/ui_static_data(mob/user)
@@ -194,14 +189,6 @@
 				"ref" = REF(R),
 				"icon" = spritesheet.icon_class_name(sanitize_css_class_name("recipe_[REF(R)]"))
 			))
-
-	var/list/recipe_strings = list()
-	for(var/recipe_data in recipes)
-		var/list/R = recipe_data
-		var/recipe_string = "[R["name"]] in category [R["category"]] (req_bar: [R["req_bar"]], req_blade: [R["req_blade"]])"
-		recipe_strings += recipe_string
-
-	to_chat(user, span_notice("Generated Recipes:\n[jointext(recipe_strings, "\n")]"))
 	data["recipes"] = recipes
 	return data
 

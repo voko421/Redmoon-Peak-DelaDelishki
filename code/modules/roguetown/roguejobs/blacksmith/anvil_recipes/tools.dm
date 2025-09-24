@@ -485,3 +485,10 @@
 	created_item = /obj/item/mold/polearm
 	craftdiff = 5
 	i_type = "Casting"
+
+/datum/anvil_recipe/tools/mold_plate
+	name = "Plate Mold"
+	req_bar = /obj/item/ingot/steel
+	created_item = /obj/item/mold/plate
+	craftdiff = 5
+	i_type = "Casting"

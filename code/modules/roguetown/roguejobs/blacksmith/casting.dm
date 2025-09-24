@@ -335,3 +335,13 @@
 		/obj/item/ingot/iron = /obj/item/blade/iron_polearm,
 		/obj/item/ingot/steel = /obj/item/blade/steel_polearm
 	)
+
+/obj/item/mold/plate
+	name = "plate mold"
+	desc = "A steel mold for casting armor plates."
+	icon_state = "base_plate"
+	blade_type = /obj/item/blade/iron_plate
+	metal_to_blade = list(
+		/obj/item/ingot/iron = /obj/item/blade/iron_plate,
+		/obj/item/ingot/steel = /obj/item/blade/steel_plate
+	)

@@ -453,8 +453,8 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		A swift balance weapon reduce the enemy's parry chance by 10% per level of speed difference, by up to 30%, \n\
 		If the defender have higher perception however, the penalty is reduced by 10% per point of difference, down to none.\n\
 		Intelligence also reduces the penalty by 3% per point of difference, down to none."))
-	var/additional_explanation = "This determines the damage dealt by this weapon. Force is increased by strength above / below 10 by 10% per point of differences,\n\
-	decreased by. Each point of strength at 15 or above only applies an additional +3% damage, except on punches. Damage is also multiplied by damage factor on intents. \n\
+	var/additional_explanation = "This determines the damage dealt by this weapon. Force is increased / decrease by strength above / below 10 by 10% per point of differences,\n\
+	Each point of strength at 15 or above only applies an additional +3% damage, except on punches. Damage is also multiplied by damage factor on intents. \n\
 	Both multiplication are applied to the base number, and does not multiply each other. Reduced sharpness decrease the contribution of strength\n\
 	Force, combined with armor penetration on an intent determines whether an attack penetrate the target's armor. Armor penetrating attack deals less damage to the armor itself."
 	if(href_list["showforce"])

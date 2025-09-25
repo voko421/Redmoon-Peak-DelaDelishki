@@ -88,6 +88,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/cakeslice
 	name = "cake slice"
+	desc = "Soft and tender, a delicious slice of plain cake."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
 	icon_state = "cake_slice"
 	slices_num = 0
@@ -172,7 +173,7 @@
 				qdel(src)
 		else
 			to_chat(user, span_warning("You need to put [src] on a table to work it."))
-	if(istype(I, /obj/item/reagent_containers/food/snacks/rogue/preserved/carrot_baked)) //carrot cake
+	if(istype(I, /obj/item/reagent_containers/food/snacks/rogue/preserved/carrot_baked) || istype(I, /obj/item/reagent_containers/food/snacks/grown/carrot)) //carrot cake
 		if(isturf(loc)&& (found_table))
 			playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 40, TRUE, -1)
 			to_chat(user, span_notice("Peeling and mixing the [I] into the frosting and dough..."))
@@ -190,6 +191,17 @@
 			if(do_after(user,long_cooktime, target = src))
 				add_sleep_experience(user, /datum/skill/craft/cooking, user.STAINT)
 				new /obj/item/reagent_containers/food/snacks/rogue/lemoncake(loc)
+				qdel(I)
+				qdel(src)
+		else
+			to_chat(user, span_warning("You need to put [src] on a table to work it."))
+	if(istype(I, /obj/item/reagent_containers/food/snacks/grown/fruit/lime)) //lime cake
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 40, TRUE, -1)
+			to_chat(user, span_notice("Chopping the [I] and mixing it with the cake..."))
+			if(do_after(user,long_cooktime, target = src))
+				add_sleep_experience(user, /datum/skill/craft/cooking, user.STAINT)
+				new /obj/item/reagent_containers/food/snacks/rogue/limecake(loc)
 				qdel(I)
 				qdel(src)
 		else
@@ -268,12 +280,24 @@
 				qdel(src)
 		else
 			to_chat(user, span_warning("You need to put [src] on a table to work it."))
+	if(istype(I, /obj/item/reagent_containers/food/snacks/grown/fruit/tangerine)) //tangerine cake
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 40, TRUE, -1)
+			to_chat(user, span_notice("Chopping the [I] and mixing it with the cake..."))
+			if(do_after(user,long_cooktime, target = src))
+				add_sleep_experience(user, /datum/skill/craft/cooking, user.STAINT)
+				new /obj/item/reagent_containers/food/snacks/rogue/tangerinecake(loc)
+				qdel(I)
+				qdel(src)
+		else
+			to_chat(user, span_warning("You need to put [src] on a table to work it."))
 	//(We could add generic cakes here, using the filling overlays)
 	else
 		return ..()
 
 /obj/item/reagent_containers/food/snacks/rogue/frostedcakeslice
 	name = "frosted cake slice"
+	desc = "Glazed slice with a sugary frosting, ready to be tasted."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
 	icon_state = "frostedcake_slice"
 	slices_num = 0
@@ -325,6 +349,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/applecakeslice
 	name = "apple cake slice"
+	desc = "Glazed slice with a sugary frosting and layered with juicy apples, sweetness and tart."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
 	icon_state = "applecake_slice"
 	slices_num = 0
@@ -359,6 +384,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/applenutcakeslice
 	name = "applenut cake slice"
+	desc = "Frosted slice layered with apples and surrounded in nuts. A spectacle of flavors and textures, with mild stimulant properties."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
 	icon_state = "applenutcake_slice"
 	slices_num = 0
@@ -397,6 +423,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/berrycakeslice
 	name = "berry cake slice"
+	desc = "Sliced cake with a spread of juicy berries dripping into its frosting."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
 	icon_state = "berrycake_slice"
 	slices_num = 0
@@ -434,6 +461,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/blackberrycakeslice
 	name = "blackberry cake slice"
+	desc = "A dark frosted slice of cake topped with blackberries. A fruity treat often paired with raspberry cake."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
 	icon_state = "blackberrycake_slice"
 	slices_num = 0
@@ -469,6 +497,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/carrotcakeslice
 	name = "carrot cake slice"
+	desc = "A surprisingly sweet frosted cake slice with cooked carrot peels stuffed in its tender interior."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
 	icon_state = "carrotcake_slice"
 	slices_num = 0
@@ -503,6 +532,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/lemoncakeslice
 	name = "lemon cake slice"
+	desc = "A frosted cake slice with a rich citrus taste. A thick layer of lemon filling give it a sweet, tangy and zesty flavour."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
 	icon_state = "lemoncake_slice"
 	slices_num = 0
@@ -510,6 +540,41 @@
 	faretype = FARE_FINE
 	w_class = WEIGHT_CLASS_NORMAL
 	tastes = list("cake"=1,"sugary frosting"=1,"lemon"=1)
+	cooked_type = null
+	foodtype = GRAIN | DAIRY | SUGAR | FRUIT
+	bitesize = 3
+	eat_effect = /datum/status_effect/buff/foodbuff
+	rotprocess = SHELFLIFE_LONG
+
+//	..................   Lime cake   ..................
+/obj/item/reagent_containers/food/snacks/rogue/limecake
+	name = "lime cake"
+	desc = "A frosted cake with a rich citrus taste. A thick layer of lime filling give it a sweet, tangy and zesty flavour."
+	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
+	icon_state = "limecake"
+	slices_num = 8
+	slice_path = /obj/item/reagent_containers/food/snacks/rogue/limecakeslice
+	list_reagents = list(/datum/reagent/consumable/nutriment = 48)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("cake"=1,"sugary frosting"=1,"lime"=1)
+	foodtype = GRAIN | DAIRY | SUGAR | FRUIT
+	faretype = FARE_LAVISH
+	slice_batch = TRUE
+	slice_sound = TRUE
+	rotprocess = SHELFLIFE_LONG
+	eat_effect = /datum/status_effect/buff/foodbuff
+	bitesize = 16
+
+/obj/item/reagent_containers/food/snacks/rogue/limecakeslice
+	name = "lime cake slice"
+	desc = "A frosted cake slice with a rich citrus taste. A thick layer of lime filling give it a sweet, tangy and zesty flavour."
+	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
+	icon_state = "limecake_slice"
+	slices_num = 0
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
+	faretype = FARE_FINE
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("cake"=1,"sugary frosting"=1,"lime"=1)
 	cooked_type = null
 	foodtype = GRAIN | DAIRY | SUGAR | FRUIT
 	bitesize = 3
@@ -541,6 +606,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/manacakeslice
 	name = "mana cake slice"
+	desc = "Frosted cake slice with dwindling arcyne potential. Lighter than it should be and rarely consumed for its taste."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
 	icon_state = "manacake_slice"
 	slices_num = 0
@@ -576,6 +642,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/menthacakeslice
 	name = "mentha cake slice"
+	desc = "A frosted cake slice with the fresh taste of mentha and the wyld forests."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
 	icon_state = "menthacake_slice"
 	slices_num = 0
@@ -616,6 +683,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/peacecakeslice
 	name = "peace cake slice"
+	desc = "Imbued with the remaining powers of its decorative bud, a frosted cake slice said to be shared between lovers or after mourning."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
 	icon_state = "peacecake_slice"
 	slices_num = 0
@@ -655,6 +723,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/raspberrycakeslice
 	name = "raspberry cake slice"
+	desc = "A frosted slice of cake topped with beautiful raspberries. A fruity treat often paired with blackberry cake."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
 	icon_state = "raspberrycake_slice"
 	slices_num = 0
@@ -706,6 +775,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/rocknutcakeslice
 	name = "rocknut cake slice"
+	desc = "A simple frosted cake slice with a spread of nuts. Its mild stimulant properties makes-up most of its popularity."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
 	icon_state = "rocknutcake_slice"
 	slices_num = 0
@@ -740,6 +810,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/strawberrycakeslice
 	name = "strawberry cake slice"
+	desc = "A singular sweetened strawberry and strawberry filling over a tender frosted cake slice, simple and elegant."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
 	icon_state = "strawberrycake_slice"
 	slices_num = 0
@@ -747,6 +818,41 @@
 	faretype = FARE_FINE
 	w_class = WEIGHT_CLASS_NORMAL
 	tastes = list("cake"=1,"sugary frosting"=1,"strawberry"=1)
+	cooked_type = null
+	foodtype = GRAIN | DAIRY | SUGAR | FRUIT
+	bitesize = 3
+	eat_effect = /datum/status_effect/buff/foodbuff
+	rotprocess = SHELFLIFE_LONG
+
+//	..................   Tangerine cake   ..................
+/obj/item/reagent_containers/food/snacks/rogue/tangerinecake
+	name = "tangerine cake"
+	desc = "A frosted cake with a rich citrus taste. A thick layer of tangerine filling give it a sweet, tangy and zesty flavour."
+	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
+	icon_state = "tangerinecake"
+	slices_num = 8
+	slice_path = /obj/item/reagent_containers/food/snacks/rogue/tangerinecakeslice
+	list_reagents = list(/datum/reagent/consumable/nutriment = 48)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("cake"=1,"sugary frosting"=1,"tangerine"=1)
+	foodtype = GRAIN | DAIRY | SUGAR | FRUIT
+	faretype = FARE_LAVISH
+	slice_batch = TRUE
+	slice_sound = TRUE
+	rotprocess = SHELFLIFE_LONG
+	eat_effect = /datum/status_effect/buff/foodbuff
+	bitesize = 16
+
+/obj/item/reagent_containers/food/snacks/rogue/tangerinecakeslice
+	name = "tangerine cake slice"
+	desc = "A frosted cake slice with a rich citrus taste. A thick layer of tangerine filling give it a sweet, tangy and zesty flavour."
+	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
+	icon_state = "tangerinecake_slice"
+	slices_num = 0
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
+	faretype = FARE_FINE
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("cake"=1,"sugary frosting"=1,"tangerine"=1)
 	cooked_type = null
 	foodtype = GRAIN | DAIRY | SUGAR | FRUIT
 	bitesize = 3
@@ -788,6 +894,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/hcakeslice
 	name = "ranesheni cake slice"
+	desc = "A slice of cake glazed with honey in the famous Ranesheni fashion, a delicious sweet treat."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
 	icon_state = "honeycake_slice"
 	slices_num = 0
@@ -836,6 +943,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/ccakeslice
 	name = "cheesecake slice"
+	desc = "A simple slice of humenity's favored creation."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_cakes.dmi'
 	icon_state = "cheesecake_slice"
 	slices_num = 0

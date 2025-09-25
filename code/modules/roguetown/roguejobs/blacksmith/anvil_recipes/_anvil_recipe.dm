@@ -30,7 +30,7 @@
 
 	// Auto-detect if we're using a blade by checking what's on the anvil
 	var/obj/machinery/anvil/anvil = P
-	if(anvil.hingot != null)
+	if(anvil && anvil.hingot != null)
 		if(!using_blade && req_blade && istype(anvil.hingot, req_blade))
 			using_blade = TRUE
 

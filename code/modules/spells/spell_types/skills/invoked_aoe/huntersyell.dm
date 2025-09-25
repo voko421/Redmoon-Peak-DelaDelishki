@@ -6,7 +6,7 @@
 	releasedrain = 50
 	chargedrain = 0
 	chargetime = 0
-	recharge_time = 5 MINUTES //useful for driving away beasts but can't be spammed or over used, more of an emergency skill
+	recharge_time = 17 MINUTES //useful for driving away beasts but can't be spammed or over used, more of an emergency skill
 	antimagic_allowed = TRUE
 	cast_without_targets = TRUE
 	sound = 'sound/magic/churn.ogg' //I'd like a shout of some kind to add here.

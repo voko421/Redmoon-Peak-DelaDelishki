@@ -515,7 +515,7 @@
 
 /obj/effect/proc_holder/spell/invoked/resurrect/malum
 	name = "Diligent Revival"
-	desc = "Revive the target at a cost, cast on yourself to check.<br>Targets willpower and strenght will be sapped for a time."
+	desc = "Revive the target at a cost, cast on yourself to check.<br>Targets willpower and strength will be sapped for a time."
 	required_items = list(
 		/obj/item/ingot/iron = 3
 	)
@@ -524,7 +524,7 @@
 
 /obj/effect/proc_holder/spell/invoked/resurrect/ravox
 	name = "Just Revival"
-	desc = "Revive the target at a cost, cast on yourself to check.<br>Targets strenght and speed will be sapped for a time."
+	desc = "Revive the target at a cost, cast on yourself to check.<br>Targets strength and speed will be sapped for a time."
 	// The items here are somewhat hard to pick as it still has to be something a ravox acolyte would reasonably obtain.
 	// Bones insinuate that mayhaps, they went out there to delete some skeletons for justice?
 	required_items = list(

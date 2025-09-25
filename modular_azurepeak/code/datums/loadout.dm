@@ -543,3 +543,8 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Donator Kit - Padded silky dress"
 	path = /obj/item/enchantingkit/zydras
 	ckeywhitelist = list("1ceres")
+
+/datum/loadout_item/donator_eiren
+	name = "Donator Kit - Regret"
+	path = /obj/item/enchantingkit/eiren
+	ckeywhitelist = list("eirenxiv")

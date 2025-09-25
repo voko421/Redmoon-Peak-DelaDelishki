@@ -66,3 +66,9 @@
 	name = "'Gold-Black silky dress morphing elixir"
 	target_items = list(/obj/item/clothing/suit/roguetown/shirt/dress/silkydress)
 	result_item = /obj/item/clothing/suit/roguetown/shirt/dress/silkydress/zydrasdress
+
+//Eiren - Custom zweihander type
+/obj/item/enchantingkit/eiren
+	name = "'Regret' morphing elixir"
+	target_items = list(/obj/item/rogueweapon/greatsword)		//Takes any type of GREATSWORD so estoc etc
+	result_item = /obj/item/rogueweapon/greatsword/eiren

@@ -77,23 +77,25 @@
 				new_claw = new /obj/item/rogueweapon/werewolf_claw/right(user)
 				user.put_in_r_hand(new_claw)
 				extended_claw_record[RIGHT_HANDS] = new_claw
+			RegisterSignal(new_claw, COMSIG_QDELETING, PROC_REF(clear_claw_entry))
 			continue
 		var/claw_entry = extended_claw_record[hand_index]
 		if(claw_entry && current_item != claw_entry)
-			var/msg = "[user] had a bug with their werewolf claws sheathing: Their\
-			 held item for their [(hand_index == LEFT_HANDS ? "left" : "right")] hand wasn't\
-			 the expected value! Expected: [claw_entry], Got: [current_item]"
+			var/msg = "[user] held item wasn't extended_claw_entry as expected; Expected: [claw_entry], Got: [current_item]"
 			log_admin(msg)
 			log_runtime(msg)
-			user.temporarilyRemoveItemFromInventory(I = claw_entry, force = TRUE)
-			qdel(claw_entry)
 		if(istype(current_item, claw_type))
+			if(!claw_entry)
+				var/msg = "[user] had a werewolf claw that wasn't being tracked by the claw entries: [current_item]"
+				log_admin(msg)
+				log_runtime(msg)
 			user.temporarilyRemoveItemFromInventory(I = current_item, force = TRUE)
 			qdel(current_item)
-		extended_claw_record[hand_index] = FALSE
+		extended_claw_record[hand_index] = FALSE		
 	return TRUE
 
-	
-	
-	
-	
+/obj/effect/proc_holder/spell/self/claws/proc/clear_claw_entry(datum/source)
+	SIGNAL_HANDLER
+	var/claw_index = extended_claw_record.Find(source)
+	if(claw_index)
+		extended_claw_record[claw_index] = FALSE

@@ -21,6 +21,8 @@
 	. = ..()
 	if(hingot && hott)
 		. += span_warning("[hingot] is too hot to touch.")
+	if(currecipe)
+		. += span_info("Middle click anvil to clear the active recipe.")
 
 /obj/machinery/anvil/attackby(obj/item/W, mob/living/user, params)
 	if(istype(W, /obj/item/rogueweapon/tongs))
@@ -254,11 +256,14 @@
 		else
 			var/obj/item/I = hingot
 			hingot = null
-			currecipe = null // Only clear when taken by hand (not tongs)
 			hott = null
 			I.forceMove(user.loc)
 			user.put_in_active_hand(I)
 			update_icon()
+
+/obj/machinery/anvil/MiddleClick(mob/user, params)
+	. = ..()
+	currecipe = null
 
 /obj/machinery/anvil/process()
 	if(hott)

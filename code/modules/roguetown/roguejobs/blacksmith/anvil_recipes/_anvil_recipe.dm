@@ -138,20 +138,12 @@
 			user.visible_message(span_info("[user] strikes the bar!"))
 
 		if(progress >= max_progress && !additional_items.len)
-			// Create the item(s)
-			if(createditem_num > 1)
-				for(var/i = 1 to createditem_num)
-					var/obj/item/I = new created_item(get_turf(anvil))
-					handle_creation(I)
+			if(using_blade)
+				// Create the item(s)
+				handle_creation(anvil.loc)
 			else
-				var/obj/item/I = new created_item(get_turf(anvil))
-				handle_creation(I)
-
-			// Only clear if we successfully created the item
-			anvil.hingot = null
-			anvil.currecipe = null
-			anvil.hott = null
-			anvil.update_icon()
+				anvil.hingot.AddComponent(/datum/component/anvil_quenchable, src, anvil.hingot)
+				to_chat(user, span_notice("The bar is ready to be quenched in a bin filled with clean water."))
 			return FALSE
 		return TRUE
 
@@ -160,50 +152,72 @@
 	user.visible_message(span_info("[user] adds [needed_item_text]"))
 	needed_item_text = null
 
-/datum/anvil_recipe/proc/handle_creation(obj/item/I)
-	numberofhits = ceil(numberofhits / num_of_materials) // Divide the hits equally among the number of bars required, rounded up.
-	if(numberofbreakthroughs) // Hitting the bar the perfect way should be rewarding quality-wise
+/datum/anvil_recipe/proc/handle_creation(turf/create_turf)
+	// Calculate the quality once
+	numberofhits = ceil(numberofhits / num_of_materials)
+	if(numberofbreakthroughs)
 		numberofhits -= numberofbreakthroughs
 	material_quality = floor(material_quality/num_of_materials)-4
 	skill_quality = floor((skill_quality/num_of_materials)/1500)+material_quality
-	// Finally, the more hits the thing required, the less quality it will be, to prevent low level smiths from dishing good stuff
 	skill_quality -= floor(numberofhits * 0.25)
-	var/modifier // Multiplier which will determine quality of final product depending on final skill_quality calculation
+	var/modifier
 	switch(skill_quality)
 		if(BLACKSMITH_LEVEL_MIN to BLACKSMITH_LEVEL_SPOIL)
-			I.name = "ruined [I.name]"
 			modifier = 0.3
 		if(BLACKSMITH_LEVEL_AWFUL)
-			I.name = "awful [I.name]"
 			modifier = 0.5
 		if(BLACKSMITH_LEVEL_CRUDE)
-			I.name = "crude [I.name]"
 			modifier = 0.8
 		if(BLACKSMITH_LEVEL_ROUGH)
-			I.name = "rough [I.name]"
 			modifier = 0.9
 		if(BLACKSMITH_LEVEL_COMPETENT)
 			modifier = 1
 		if(BLACKSMITH_LEVEL_FINE)
-			I.name = "fine [I.name]"
 			modifier = 1.1
 		if(BLACKSMITH_LEVEL_FLAWLESS)
-			I.name = "flawless [I.name]"
 			modifier = 1.2
 		if(BLACKSMITH_LEVEL_LEGENDARY to BLACKSMITH_LEVEL_MAX)
-			I.name = "masterwork [I.name]"
 			modifier = 1.3
-			I.polished = 4
-			I.AddComponent(/datum/component/metal_glint)
 			record_round_statistic(STATS_MASTERWORKS_FORGED)
 
-	if(!modifier) // Sanity.
+	if(!modifier)
 		return
 
-	I.sellprice *= modifier
-	if(istype(I, /obj/item/lockpick))
-		var/obj/item/lockpick/L = I
-		L.picklvl = modifier
+	// Create all the items
+	for(var/i = 1 to createditem_num)
+		var/obj/item/I = new created_item(create_turf)
+		// Apply the quality to each item
+		I.name = initial(I.name) // Reset the name first
+		if(modifier != 1)
+			switch(modifier)
+				if(0.3)
+					I.name = "ruined [I.name]"
+				if(0.5)
+					I.name = "awful [I.name]"
+				if(0.8)
+					I.name = "crude [I.name]"
+				if(0.9)
+					I.name = "rough [I.name]"
+				if(1.1)
+					I.name = "fine [I.name]"
+				if(1.2)
+					I.name = "flawless [I.name]"
+				if(1.3)
+					I.name = "masterwork [I.name]"
+					I.polished = 4
+					I.AddComponent(/datum/component/metal_glint)
+
+		I.sellprice *= modifier
+		if(istype(I, /obj/item/lockpick))
+			var/obj/item/lockpick/L = I
+			L.picklvl = modifier
+
+	if(parent)
+		var/obj/machinery/anvil/anvil = parent
+		anvil.hingot = null
+		anvil.currecipe = null
+		anvil.hott = null
+		anvil.update_icon()
 
 /datum/anvil_recipe/proc/show_menu(mob/user)
 	user << browse(generate_html(user),"window=new_recipe;size=500x810")

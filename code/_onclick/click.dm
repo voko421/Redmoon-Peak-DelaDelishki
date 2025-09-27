@@ -353,7 +353,7 @@
 			var/mob/living/L = src
 			var/obj/item/offh = L.get_inactive_held_item()
 			if(offh && HAS_TRAIT(L, TRAIT_DUALWIELDER))
-				if(istype(W, offh) && W != offh && !(L.check_arm_grabbed(L.get_inactive_hand_index())))
+				if((istype(W, offh) || istype(offh, W)) && W != offh && !(L.check_arm_grabbed(L.get_inactive_hand_index())))
 					offh.melee_attack_chain(src, A, params)
 	else
 		if(ismob(A))

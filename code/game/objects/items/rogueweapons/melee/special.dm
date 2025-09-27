@@ -92,6 +92,7 @@
 	smeltresult = /obj/item/ingot/iron
 	swingsound = BLUNTWOOSH_MED
 	minstr = 5
+	COOLDOWN_DECLARE(scepter)
 
 	grid_height = 96
 	grid_width = 32
@@ -131,10 +132,14 @@
 			if(H == HU)
 				return
 
+			if(!COOLDOWN_FINISHED(src, scepter))
+				to_chat(user, span_danger("The [src] is not ready yet! [round(COOLDOWN_TIMELEFT(src, scepter) / 10, 1)] seconds left!"))
+				return
+
 			if(H.anti_magic_check())
 				to_chat(user, span_danger("Something is disrupting the rod's power!"))
 				return
-		
+
 			if(!(H in SStreasury.bank_accounts))
 				to_chat(user, span_danger("The target must have a Meister account!"))
 				return
@@ -143,12 +148,14 @@
 				HU.visible_message(span_warning("[HU] electrocutes [H] with the [src]."))
 				user.Beam(target,icon_state="lightning[rand(1,12)]",time=5)
 				H.electrocute_act(5, src)
+				COOLDOWN_START(src, scepter, 20 SECONDS)
 				to_chat(H, span_danger("I'm electrocuted by the scepter!"))
 				return
 
 			if(istype(user.used_intent, /datum/intent/lord_silence))
 				HU.visible_message("<span class='warning'>[HU] silences [H] with \the [src].</span>")
 				H.set_silence(20 SECONDS)
+				COOLDOWN_START(src, scepter, 10 SECONDS)
 				to_chat(H, "<span class='danger'>I'm silenced by the scepter!</span>")
 				return
 
@@ -661,19 +668,20 @@
 	desc = "At the end of the dae, a knight's bascinet isn't much different than a particularly large stone. After all, both tend to rupture with sobering ease when introduced to a sharpened pickend."
 	force = 20
 	force_wielded = 25
-	possible_item_intents = list(/datum/intent/pick)
+	possible_item_intents = list(/datum/intent/pick/bad)
 	gripped_intents = list(/datum/intent/pick, /datum/intent/stab/militia)
 	icon_state = "milpick"
 	icon = 'icons/roguetown/weapons/32.dmi'
 	sharpness = IS_SHARP
 	wlength = WLENGTH_SHORT
-	max_blade_int = 120
+	max_blade_int = 140
 	max_integrity = 400
 	slot_flags = ITEM_SLOT_HIP
 	associated_skill = /datum/skill/labor/mining
 	anvilrepair = /datum/skill/craft/carpentry
 	smeltresult = /obj/item/ingot/iron
-	wdefense = 1
+	wdefense = 2
+	wdefense_wbonus = 4
 	wbalance = WBALANCE_NORMAL
 
 /obj/item/rogueweapon/pick/militia/steel
@@ -682,12 +690,13 @@
 	name = "militia steel warpick"
 	desc = "At the end of the dae, a knight's bascinet isn't much different than a particularly large stone. After all, both tend to rupture with sobering ease when introduced to a sharpened pickend. This one is honed out of steel parts."
 	icon_state = "milsteelpick"
-	max_blade_int = 150
+	max_blade_int = 180
 	max_integrity = 600
 	associated_skill = /datum/skill/combat/axes
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	smeltresult = /obj/item/ingot/steel
-	wdefense = 5
+	wdefense = 3
+	wdefense_wbonus = 5
 	wbalance = WBALANCE_HEAVY
 
 /obj/item/rogueweapon/sword/falchion/militia

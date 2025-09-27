@@ -161,6 +161,7 @@
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/32x48/atgervi.dmi'
+	bloody_icon = 'icons/effects/blood64.dmi'
 	block2add = null
 	worn_x_dimension = 32
 	worn_y_dimension = 48

@@ -56,6 +56,12 @@
 		/obj/item/storage/belt/rogue/pouch/coins/poor
 		)
 	H.merctype = 5
+
+/datum/outfit/job/roguetown/mercenary/forlorn
+	has_loadout = TRUE
+
+/datum/outfit/job/roguetown/mercenary/forlorn/choose_loadout(mob/living/carbon/human/H)
+	. = ..()
 	var/weapons = list("Warhammer", // The OG
 	"Militia Steel Warpick", // Militia / Peasant weapons to slay the oppressors
 	"Maciejowski (Pair)", 
@@ -66,31 +72,31 @@
 	var/weapon_choice = input(H, "Choose your weapon.", "ARMS TO SLAY THE OPPRESSORS") as anything in weapons
 	switch(weapon_choice)
 		if("Warhammer")
-			beltl = /obj/item/rogueweapon/mace/warhammer/steel
-			backl = /obj/item/rogueweapon/shield/heater
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/mace/warhammer/steel, ITEM_SLOT_HANDS)
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/shield/heater, SLOT_BACK_L)
 			H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_EXPERT)
 		if("Militia Steel Warpick")
-			beltl = /obj/item/rogueweapon/pick/militia/steel // This is super good so you only get ONE
-			backl = /obj/item/rogueweapon/shield/heater
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/pick/militia/steel, SLOT_BELT_L) // This is super good so you only get ONE
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/shield/heater, SLOT_BACK_L)
 			H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_EXPERT)
 		if("Maciejowski (Pair)")
-			beltl = /obj/item/rogueweapon/sword/falchion/militia // I think this is really mid one handed so they get two
-			beltr = /obj/item/rogueweapon/sword/falchion/militia
-			backl = /obj/item/rogueweapon/shield/heater
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/sword/falchion/militia, SLOT_BELT_L) // I think this is really mid one handed so they get two
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/sword/falchion/militia, SLOT_BELT_R)
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/shield/heater, SLOT_BACK_L)
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_EXPERT)
 		if("Militia Spear")
-			r_hand = /obj/item/rogueweapon/spear/militia // Find yer own wheat
-			backl = /obj/item/rogueweapon/scabbard/gwstrap
+			H.put_in_hands(new /obj/item/rogueweapon/spear/militia)
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap, SLOT_BACK_L)
 			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, SKILL_LEVEL_EXPERT)
 		if("Militia War Axe")
-			r_hand = /obj/item/rogueweapon/greataxe/militia
-			backl = /obj/item/rogueweapon/scabbard/gwstrap
+			H.put_in_hands(new /obj/item/rogueweapon/greataxe/militia)
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap, SLOT_BACK_L)
 			H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_EXPERT)
 		if("Militia Thresher")
-			r_hand = /obj/item/rogueweapon/flail/peasantwarflail
-			backl = /obj/item/rogueweapon/scabbard/gwstrap
+			H.put_in_hands(new /obj/item/rogueweapon/flail/peasantwarflail)
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap, SLOT_BACK_L)
 			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, SKILL_LEVEL_EXPERT)
 		if("Militia Goedendag (Pair)")
-			r_hand = /obj/item/rogueweapon/woodstaff/militia
-			backl = /obj/item/rogueweapon/woodstaff/militia
+			H.put_in_hands(new /obj/item/rogueweapon/woodstaff/militia)
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/woodstaff/militia, SLOT_BACK_L)
 			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, SKILL_LEVEL_EXPERT)

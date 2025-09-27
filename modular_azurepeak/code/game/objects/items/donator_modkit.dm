@@ -72,3 +72,9 @@
 	name = "'Regret' morphing elixir"
 	target_items = list(/obj/item/rogueweapon/greatsword/zwei)		//now only takes the zwei and nothing else
 	result_item = /obj/item/rogueweapon/greatsword/zwei/eiren
+
+//pretzel - custom steel greatsword. PSYDON LYVES. PSYDON ENDVRES.
+/obj/item/enchantingkit/waff
+	name = "'Weeper's Lathe' morphing elixir"
+	target_items = list(/obj/item/rogueweapon/greatsword)		// i, uh. i really do promise i'm only gonna use it on steel greatswords.
+	result_item = /obj/item/rogueweapon/greatsword/weeperslathe

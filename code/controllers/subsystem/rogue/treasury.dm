@@ -293,7 +293,7 @@ SUBSYSTEM_DEF(treasury)
 	church_fine_exemption = new_church_fine
 
 	if(yeomen_tax_value != new_yeomen_tax)
-		final_text += "<br>Yeomen tax: [new_yeomen_tax]%. "
+		final_text += "<br>Yeoman tax: [new_yeomen_tax]%. "
 	yeomen_tax_value = new_yeomen_tax
 	if(yeomen_fine_exemption != new_yeomen_fine)
 		final_text += "Yeomen are [new_yeomen_fine ? "now exempt from fines" : "no longer exempt from fines"]."

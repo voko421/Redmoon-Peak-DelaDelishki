@@ -77,4 +77,5 @@
 /obj/item/rogueweapon/greatsword/weeperslathe
 	name = "Weeper's Lathe"
 	desc = "A modern recreation of a giltbronze greatsword. Inscribed on the blade is a simple message: \"I have only a short time to lyve, but I am not afraid to die." 
+	icon_state = "weeperslathe"
 	icon = 'modular_azurepeak/icons/obj/items/donor_weapons_64.dmi'

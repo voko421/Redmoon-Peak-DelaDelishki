@@ -13,6 +13,7 @@
 	if(is_type_in_list(I, target_items))
 		var/obj/item/R = new result_item(get_turf(user))
 		to_chat(user, span_notice("You apply the [src] to [I], using the enchanting dust and tools to turn it into [R]."))
+		R.name += " <font size = 1>([I.name])</font>"
 		remove_item_from_storage(I)
 		qdel(I)
 		user.put_in_hands(R)
@@ -22,7 +23,7 @@
 		return ..()
 
 /////////////////////////////
-// ! Player / Donar Kits ! //
+// ! Player / Donor Kits ! //
 /////////////////////////////
 
 //Plexiant - Custom rapier type

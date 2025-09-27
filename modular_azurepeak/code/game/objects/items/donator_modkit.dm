@@ -70,5 +70,5 @@
 //Eiren - Custom zweihander type
 /obj/item/enchantingkit/eiren
 	name = "'Regret' morphing elixir"
-	target_items = list(/obj/item/rogueweapon/greatsword)		//Takes any type of GREATSWORD so estoc etc
-	result_item = /obj/item/rogueweapon/greatsword/eiren
+	target_items = list(/obj/item/rogueweapon/greatsword/zwei)		//now only takes the zwei and nothing else
+	result_item = /obj/item/rogueweapon/greatsword/zwei/eiren

@@ -50,10 +50,10 @@
 	cloak = /obj/item/clothing/cloak/stabard/surcoat/guard
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
-	belt = /obj/item/storage/belt/rogue/leather/black
+	belt = /obj/item/storage/belt/rogue/leather
 	wrists = /obj/item/clothing/wrists/roguetown/bracers
 	gloves = /obj/item/clothing/gloves/roguetown/plate/iron
-	backr = /obj/item/storage/backpack/rogue/satchel/black
+	backr = /obj/item/storage/backpack/rogue/satchel
 	head = /obj/item/clothing/head/roguetown/helmet/sallet/visored
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
 	id = /obj/item/scomstone/garrison
@@ -133,7 +133,7 @@
 				l_hand = /obj/item/rogueweapon/scabbard/sword
 
 		var/armors = list(
-			"Lightweight Brigandine"		= /obj/item/clothing/suit/roguetown/armor/brigandine/light,
+			"Brigandine"		= /obj/item/clothing/suit/roguetown/armor/brigandine/retinue,
 			"Steel Cuirass"		= /obj/item/clothing/suit/roguetown/armor/plate/half,
 			"Scalemail"	= /obj/item/clothing/suit/roguetown/armor/plate/scale,
 		)

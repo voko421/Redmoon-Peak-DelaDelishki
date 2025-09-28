@@ -41,7 +41,7 @@
 		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT,
 
 	)
-	extra_context = "This subclass is race-limited to: Dark Elves Only. Please note: Drow Society is Matriarchal. You will receive different sets of equipment depending on your character's gender. Women are heavy warriors, men are fast and light assassins."
+	extra_context = "This subclass is race-limited to: Dark Elves Only."
 
 /datum/outfit/job/roguetown/mercenary/anthrax/pre_equip(mob/living/carbon/human/H)
 	..()

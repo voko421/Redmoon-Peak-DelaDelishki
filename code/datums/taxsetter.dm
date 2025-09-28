@@ -18,7 +18,7 @@
 
 /datum/taxsetter/ui_static_data(mob/user)
 	var/list/data = list("taxCategories")
-	for(var/category in temporary_tax_list)
+	for(var/category in SStreasury.taxation_cat_settings)
 		var/list/cat = list(
 			"categoryName" = category,
 			"taxAmount" = SStreasury.taxation_cat_settings[category]["taxAmount"],

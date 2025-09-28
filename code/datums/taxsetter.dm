@@ -16,17 +16,15 @@
 		ui = new(user, src, "TaxSetter", "Set Taxes")
 		ui.open()
 
-/datum/taxsetter/ui_data(mob/user)
-	var/list/data = list(
-		"nobleTax" = SStreasury.noble_tax_value,
-		"nobleFine" = SStreasury.noble_fine_exemption,
-		"churchTax" = SStreasury.church_tax_value,
-		"churchFine" = SStreasury.church_fine_exemption,
-		"yeomenTax" = SStreasury.yeomen_tax_value,
-		"yeomenFine" = SStreasury.yeomen_fine_exemption,
-		"peasantTax" = SStreasury.peasant_tax_value,
-		"peasantFine" = SStreasury.peasant_fine_exemption,
-	)
+/datum/taxsetter/ui_static_data(mob/user)
+	var/list/data = list("taxCategories")
+	for(var/category in temporary_tax_list)
+		var/list/cat = list(
+			"categoryName" = category,
+			"taxAmount" = SStreasury.taxation_cat_settings[category]["taxAmount"],
+			"fineExemption" = SStreasury.taxation_cat_settings[category]["fineExemption"],
+		)
+		data["taxCategories"] += list(cat)
 	return data
 
 /datum/taxsetter/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
@@ -36,14 +34,7 @@
 	switch(action)
 		if("set_taxes")
 			SStreasury.set_taxes(
-				params["nobleTax"],
-				params["nobleFine"],
-				params["yeomenTax"],
-				params["yeomenFine"],
-				params["churchTax"],
-				params["churchFine"],
-				params["peasantTax"],
-				params["peasantFine"],
+				params["taxationCats"],
 				announcement_text
 			)
 

@@ -6,81 +6,78 @@ import {
   Stack,
 } from 'tgui-core/components';
 
-import { useBackend, useLocalState } from '../backend';
+import { BooleanLike } from 'tgui-core/react';
+
+import { useBackend } from '../backend';
+import { useState } from 'react';
+
 import { Window } from '../layouts';
 
+interface TaxCategory {
+  categoryName: string;
+  taxAmount: number;
+  fineExemption: BooleanLike;
+}
 interface Data {
-  nobleTax: number;
-  nobleFine: boolean;
-  churchTax: number;
-  churchFine: boolean;
-  yeomenTax: number;
-  yeomenFine: boolean;
-  peasantTax: number;
-  peasantFine: boolean;
+  taxCategories: TaxCategory[];
 }
 
 export const TaxSetter = (props: any, context: any) => {
   const { act, data } = useBackend<Data>();
 
-  const [nobleTax, setnobleTax] = useLocalState('nobleTax', data.nobleTax);
-  const [nobleFine, setnobleFine] = useLocalState('nobleFine', data.nobleFine);
-  const [churchTax, setchurchTax] = useLocalState('churchTax', data.churchTax);
-  const [churchFine, setchurchFine] = useLocalState(
-    'churchFine',
-    data.churchFine,
-  );
-  const [yeomenTax, setyeomenTax] = useLocalState('yeomenTax', data.yeomenTax);
-  const [yeomenFine, setyeomenFine] = useLocalState(
-    'yeomenFine',
-    data.yeomenFine,
-  );
-  const [peasantTax, setPeasantTax] = useLocalState(
-    'peasantTax',
-    data.peasantTax,
-  );
-  const [peasantFine, setpeasantFine] = useLocalState(
-    'peasantFine',
-    data.peasantFine,
-  );
+  const [taxationCats, setTaxationCats] = useState<{
+    [cat: string]: TaxCategory;
+  }>(() => {
+    if (data.taxCategories) {
+      return Object.fromEntries(
+        data.taxCategories.map((cat) => [cat.categoryName, cat]),
+      );
+    }
+    return {};
+  });
+
+  const setTaxCat = (
+    newCatName: string,
+    newTaxAmount: number,
+    newFineExemption: BooleanLike,
+  ) => {
+    setTaxationCats((prev) => {
+      return {
+        ...prev,
+        [newCatName]: {
+          ...prev[newCatName],
+          taxAmount: newTaxAmount,
+          fineExemption: newFineExemption,
+        },
+      };
+    });
+  };
 
   return (
-    <Window width={530} height={300}>
+    <Window width={300} height={535}>
       <Window.Content>
         <Stack vertical>
           <Stack.Item>
             <Stack>
               <Stack.Item>
-                <TaxBlock
-                  title={'Noble tax'}
-                  taxAmount={nobleTax}
-                  fineExempt={nobleFine}
-                  onTaxChange={(value) => setnobleTax(value)}
-                  onFineChange={() => setnobleFine(!nobleFine)}
-                />
-                <TaxBlock
-                  title={'Church tax'}
-                  taxAmount={churchTax}
-                  fineExempt={churchFine}
-                  onTaxChange={(value) => setchurchTax(value)}
-                  onFineChange={() => setchurchFine(!churchFine)}
-                />
-              </Stack.Item>
-              <Stack.Item>
-                <TaxBlock
-                  title={'Yeomen tax'}
-                  taxAmount={yeomenTax}
-                  fineExempt={yeomenFine}
-                  onTaxChange={(value) => setyeomenTax(value)}
-                  onFineChange={() => setyeomenFine(!yeomenFine)}
-                />
-                <TaxBlock
-                  title={'Peasant tax'}
-                  taxAmount={peasantTax}
-                  fineExempt={peasantFine}
-                  onTaxChange={(value) => setPeasantTax(value)}
-                  onFineChange={() => setpeasantFine(!peasantFine)}
-                />
+                {Object.values(taxationCats)?.map((category, i) => (
+                  <TaxBlock
+                    key={i}
+                    title={category.categoryName}
+                    taxAmount={category.taxAmount}
+                    fineExempt={category.fineExemption}
+                    onFineChange={(
+                      newCatName: string,
+                      newTaxAmount: number,
+                      newFineExemption: BooleanLike,
+                    ) => setTaxCat(newCatName, newTaxAmount, newFineExemption)}
+                    onTaxChange={(
+                      newCatName: string,
+                      newTaxAmount: number,
+                      newFineExemption: BooleanLike,
+                    ) => setTaxCat(newCatName, newTaxAmount, newFineExemption)}
+                  />
+                ))}
               </Stack.Item>
             </Stack>
           </Stack.Item>
@@ -89,18 +86,7 @@ export const TaxSetter = (props: any, context: any) => {
               fluid
               color="good"
               textAlign="Center"
-              onClick={() =>
-                act('set_taxes', {
-                  nobleTax: nobleTax,
-                  nobleFine: nobleFine,
-                  yeomenTax: yeomenTax,
-                  yeomenFine: yeomenFine,
-                  churchTax: churchTax,
-                  churchFine: churchFine,
-                  peasantTax: peasantTax,
-                  peasantFine: peasantFine,
-                })
-              }
+              onClick={() => act('set_taxes', { taxationCats })}
             >
               MAKE IT SO
             </Button.Confirm>
@@ -114,9 +100,17 @@ export const TaxSetter = (props: any, context: any) => {
 interface TaxBlockProps {
   title: string;
   taxAmount: number;
-  fineExempt: boolean;
-  onTaxChange: (action: number) => void;
-  onFineChange: (action: boolean) => void;
+  fineExempt: BooleanLike;
+  onTaxChange: (
+    newCatName: string,
+    newTaxAmount: number,
+    newFineExemption: BooleanLike,
+  ) => void;
+  onFineChange: (
+    newCatName: string,
+    newTaxAmount: number,
+    newFineExemption: BooleanLike,
+  ) => void;
 }
 
 export const TaxBlock = (props: TaxBlockProps) => {
@@ -125,20 +119,20 @@ export const TaxBlock = (props: TaxBlockProps) => {
   return (
     <Section title={title}>
       <LabeledList>
-        <LabeledList.Item label={<b>Tithe</b>}>
+        <LabeledList.Item label={<b>Tax</b>}>
           <NumberInput
             step={1}
             minValue={0}
             maxValue={100}
             value={taxAmount}
-            onChange={(value: number) => onTaxChange(value)}
+            onChange={(value: number) => onTaxChange(title, value, fineExempt)}
           />
         </LabeledList.Item>
         <LabeledList.Item label={<b>Fine exemption</b>}>
           <Button
             content={fineExempt ? 'by my mercy' : 'they shall pay'}
             color={fineExempt ? 'bad' : 'good'}
-            onClick={() => onFineChange(!fineExempt)}
+            onClick={() => onFineChange(title, taxAmount, !fineExempt)}
           />
         </LabeledList.Item>
       </LabeledList>

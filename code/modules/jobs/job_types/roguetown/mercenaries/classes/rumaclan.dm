@@ -46,6 +46,7 @@
 	backpack_contents = list(
 		/obj/item/roguekey/mercenary,
 		/obj/item/flashlight/flare/torch/lantern,
+		/obj/item/storage/belt/rogue/pouch/coins/poor,
 		)
 	H.merctype = 9
 

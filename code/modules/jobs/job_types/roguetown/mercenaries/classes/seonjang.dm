@@ -39,6 +39,7 @@
 	backpack_contents = list(
 		/obj/item/roguekey/mercenary,
 		/obj/item/flashlight/flare/torch/lantern,
+		/obj/item/storage/belt/rogue/pouch/coins/mid,
 		)
 	H.adjust_blindness(-3)
 

@@ -982,7 +982,7 @@
 	minstr = 7
 	wdefense = 9
 	last_used = 0
-	is_silver = TRUE
+	is_silver = FALSE
 	smeltresult = /obj/item/ingot/silver
 	smelt_bar_num = 2
 

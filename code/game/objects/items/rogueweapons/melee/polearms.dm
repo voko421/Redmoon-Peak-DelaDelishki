@@ -935,9 +935,9 @@
 	smeltresult = /obj/item/ingot/aaslag
 
 /obj/item/rogueweapon/greatsword/zwei
-	name = "zweihander"
+	name = "claymore"
 	desc = "This is much longer than a common greatsword, and well balanced too!"
-	icon_state = "zwei"
+	icon_state = "claymore"
 	smeltresult = /obj/item/ingot/iron
 	smelt_bar_num = 3
 	max_blade_int = 220

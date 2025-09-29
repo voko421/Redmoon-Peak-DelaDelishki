@@ -492,7 +492,7 @@
 /obj/item/rogueweapon/huntingknife/idagger/silver/elvish
 	name = "elvish dagger"
 	desc = "This beautiful dagger is of intricate, elvish design. Sharper, too."
-	force = 18
+	force = 22
 	icon_state = "elfdagger"
 	item_state = "elfdag"
 	last_used = 0

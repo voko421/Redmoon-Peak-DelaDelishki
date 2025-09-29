@@ -327,8 +327,8 @@
 	created_item = /obj/item/rogueweapon/huntingknife
 	createditem_num = 1
 
-/datum/anvil_recipe/weapons/iron/zweihander
-	name = "Zweihander, Iron (+2 Iron)"
+/datum/anvil_recipe/weapons/iron/Claymore
+	name = "Claymore, Iron (+2 Iron)"
 	req_bar = /obj/item/ingot/iron
 	req_blade = /obj/item/blade/iron_sword
 	additional_items = list(/obj/item/ingot/iron, /obj/item/ingot/iron)

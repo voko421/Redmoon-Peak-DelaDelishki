@@ -983,7 +983,7 @@
 	wdefense = 9
 	last_used = 0
 	is_silver = FALSE
-	smeltresult = /obj/item/ingot/silver
+	smeltresult = /obj/item/ingot/gold
 	smelt_bar_num = 2
 
 /obj/item/rogueweapon/sword/sabre/shamshir

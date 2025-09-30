@@ -10,7 +10,7 @@
 	chargetime = 0
 	swingdelay = 0
 	damfactor = 1.3
-	clickcd = CLICK_CD_INTENTCAP
+	clickcd = CLICK_CD_FAST
 	item_d_type = "slash"
 
 /datum/intent/katar/thrust
@@ -22,7 +22,7 @@
 	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
 	penfactor = 40
 	chargetime = 0
-	clickcd = CLICK_CD_INTENTCAP
+	clickcd = CLICK_CD_FAST
 	item_d_type = "stab"
 
 /datum/intent/lordbash
@@ -69,7 +69,7 @@
 	damfactor = 1.1
 	clickcd = CLICK_CD_MELEE
 	swingdelay = 8
-	intent_intdamage_factor = 1.8
+	intent_intdamage_factor = 1.35
 	icon_state = "insmash"
 	item_d_type = "blunt"
 /// INTENT DATUMS	^
@@ -92,7 +92,7 @@
 	smeltresult = /obj/item/ingot/iron
 	swingsound = BLUNTWOOSH_MED
 	minstr = 5
-	blade_dulling = DULLING_SHAFT_WOOD
+	COOLDOWN_DECLARE(scepter)
 
 	grid_height = 96
 	grid_width = 32
@@ -132,10 +132,14 @@
 			if(H == HU)
 				return
 
+			if(!COOLDOWN_FINISHED(src, scepter))
+				to_chat(user, span_danger("The [src] is not ready yet! [round(COOLDOWN_TIMELEFT(src, scepter) / 10, 1)] seconds left!"))
+				return
+
 			if(H.anti_magic_check())
 				to_chat(user, span_danger("Something is disrupting the rod's power!"))
 				return
-		
+
 			if(!(H in SStreasury.bank_accounts))
 				to_chat(user, span_danger("The target must have a Meister account!"))
 				return
@@ -144,12 +148,14 @@
 				HU.visible_message(span_warning("[HU] electrocutes [H] with the [src]."))
 				user.Beam(target,icon_state="lightning[rand(1,12)]",time=5)
 				H.electrocute_act(5, src)
+				COOLDOWN_START(src, scepter, 20 SECONDS)
 				to_chat(H, span_danger("I'm electrocuted by the scepter!"))
 				return
 
 			if(istype(user.used_intent, /datum/intent/lord_silence))
 				HU.visible_message("<span class='warning'>[HU] silences [H] with \the [src].</span>")
 				H.set_silence(20 SECONDS)
+				COOLDOWN_START(src, scepter, 10 SECONDS)
 				to_chat(H, "<span class='danger'>I'm silenced by the scepter!</span>")
 				return
 
@@ -272,19 +278,20 @@
 	wlength = WLENGTH_SHORT
 	w_class = WEIGHT_CLASS_SMALL
 	parrysound = list('sound/combat/parry/bladed/bladedsmall (1).ogg','sound/combat/parry/bladed/bladedsmall (2).ogg','sound/combat/parry/bladed/bladedsmall (3).ogg')
-	max_blade_int = 150
+	max_blade_int = 200
 	max_integrity = 80
 	swingsound = list('sound/combat/wooshes/bladed/wooshsmall (1).ogg','sound/combat/wooshes/bladed/wooshsmall (2).ogg','sound/combat/wooshes/bladed/wooshsmall (3).ogg')
 	associated_skill = /datum/skill/combat/unarmed
 	pickup_sound = 'sound/foley/equip/swordsmall2.ogg'
 	throwforce = 12
-	wdefense = 4
+	wdefense = 0	//Meant to be used with bracers
 	wbalance = WBALANCE_SWIFT
 	thrown_bclass = BCLASS_CUT
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	smeltresult = /obj/item/ingot/steel
 	grid_height = 64
 	grid_width = 32
+	sharpness_mod = 2	//Can't parry, so it decays quicker on-hit.
 
 /obj/item/rogueweapon/katar/getonmobprop(tag)
 	. = ..()
@@ -301,7 +308,7 @@
 	desc = "A gift from a creature of the sea. The claw is sharpened to a wicked edge."
 	icon_state = "abyssorclaw"
 	force = 27	//Its thrust will be able to pen 80 stab armor if the wielder has 17 STR. (With softcap)
-	max_integrity = 120
+	max_integrity = 80
 
 /obj/item/rogueweapon/katar/punchdagger
 	name = "punch dagger"
@@ -310,7 +317,7 @@
 	max_integrity = 120		//Steel dagger -30
 	force = 15		//Steel dagger -5
 	throwforce = 8
-	wdefense = 1	//Hell no!
+	wdefense = 0	//Hell no!
 	thrown_bclass = BCLASS_STAB
 	possible_item_intents = list(/datum/intent/dagger/thrust, /datum/intent/dagger/thrust/pick)
 	icon_state = "plug"
@@ -320,23 +327,46 @@
 	desc = "A type of punch dagger of Aavnic make initially designed to level the playing field with an orc in fisticuffs, its serrated edges and longer, thinner point are designed to maximize pain for the recipient. It's aptly given the name of \"corkscrew\", and this specific one has the colours of Szöréndnížina. Can be worn on your ring slot."
 	icon_state = "freiplug"
 	slot_flags = ITEM_SLOT_RING
+
 /obj/item/rogueweapon/katar/psydon
 	name = "psydonian katar"
-	desc = "An exotic weapon taken from the hands of wandering monks, an esoteric design to the Otavan Holy See. Special care was taken into account towards the user's knuckles: silver-tipped steel from tip to edges, and His holy cross reinforcing the heart of the weapon, with curved shoulders to allow its user to deflect incoming blows - provided they lead it in with the blade."
+	desc = "An exotic weapon taken from the hands of wandering monks, an esoteric design to the Otavan Orthodoxy. Special care was taken into account towards the user's knuckles: silver-tipped steel from tip to edges, and His holy cross reinforcing the heart of the weapon, with curved shoulders to allow its user to deflect incoming blows - provided they lead it in with the blade."
 	icon_state = "psykatar"
+	force = 19
+	wdefense = 3
+	is_silver = TRUE
+	smeltresult = /obj/item/ingot/silver
 
 /obj/item/rogueweapon/katar/psydon/ComponentInitialize()
-	. = ..()							//+3 force, +50 int, +1 def, make silver
-	add_psyblessed_component(is_preblessed = FALSE, bonus_force = 3, bonus_sharpness = 0, bonus_integrity = 50, bonus_wdef = 1, make_silver = TRUE)
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_NONE,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 0,\
+		added_int = 50,\
+		added_def = 2,\
+	)
 
 /obj/item/rogueweapon/knuckles/psydon
 	name = "psydonian knuckles"
 	desc = "A simple piece of harm molded in a holy mixture of steel and silver, finished with three stumps - Psydon's crown - to crush the heretics' garments and armor into smithereens."
 	icon_state = "psyknuckle"
+	force = 17
+	wdefense = 5
+	is_silver = TRUE
+	smeltresult = /obj/item/ingot/silver
 
 /obj/item/rogueweapon/knuckles/psydon/ComponentInitialize()
-	. = ..()							//+3 force, +50 int, +1 def, make silver
-	add_psyblessed_component(is_preblessed = FALSE, bonus_force = 3, bonus_sharpness = 0, bonus_integrity = 50, bonus_wdef = 1, make_silver = TRUE)
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_NONE,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 0,\
+		added_int = 50,\
+		added_def = 2,\
+	)
 
 /obj/item/rogueweapon/knuckles
 	name = "steel knuckles"
@@ -351,18 +381,16 @@
 	slot_flags = ITEM_SLOT_HIP
 	parrysound = list('sound/combat/parry/pugilism/unarmparry (1).ogg','sound/combat/parry/pugilism/unarmparry (2).ogg','sound/combat/parry/pugilism/unarmparry (3).ogg')
 	sharpness = IS_BLUNT
-	max_integrity = 300
+	max_integrity = 150
 	swingsound = list('sound/combat/wooshes/punch/punchwoosh (1).ogg','sound/combat/wooshes/punch/punchwoosh (2).ogg','sound/combat/wooshes/punch/punchwoosh (3).ogg')
 	associated_skill = /datum/skill/combat/unarmed
 	throwforce = 12
-	wdefense = 7
-	wbalance = WBALANCE_HEAVY
-	blade_dulling = DULLING_SHAFT_WOOD
+	wdefense = 4
+	wbalance = WBALANCE_NORMAL
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	smeltresult = /obj/item/ingot/steel
 	grid_width = 64
 	grid_height = 32
-	intdamage_factor = 1.2
 
 /obj/item/rogueweapon/knuckles/getonmobprop(tag)
 	. = ..()
@@ -376,7 +404,7 @@
 /obj/item/rogueweapon/knuckles/bronzeknuckles
 	name = "bronze knuckles"
 	desc = "A mean looking pair of bronze knuckles. Mildly heavier than it's steel counterpart, making it a solid defensive option, if less wieldy."
-	force = 20
+	force = 18
 	possible_item_intents = list(/datum/intent/knuckles/strike,/datum/intent/knuckles/smash)
 	icon = 'icons/roguetown/weapons/32.dmi'
 	icon_state = "bronzeknuckle"
@@ -386,24 +414,22 @@
 	slot_flags = ITEM_SLOT_HIP
 	parrysound = list('sound/combat/parry/pugilism/unarmparry (1).ogg','sound/combat/parry/pugilism/unarmparry (2).ogg','sound/combat/parry/pugilism/unarmparry (3).ogg')
 	sharpness = IS_BLUNT
-	max_integrity = 250
+	max_integrity = 200
 	swingsound = list('sound/combat/wooshes/punch/punchwoosh (1).ogg','sound/combat/wooshes/punch/punchwoosh (2).ogg','sound/combat/wooshes/punch/punchwoosh (3).ogg')
 	associated_skill = /datum/skill/combat/unarmed
 	throwforce = 12
 	wdefense = 6
 	wbalance = WBALANCE_HEAVY
-	blade_dulling = DULLING_SHAFT_WOOD
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	smeltresult = /obj/item/ingot/bronze
-	intdamage_factor = 1.2
 
 /obj/item/rogueweapon/knuckles/aknuckles
 	name = "decrepit knuckles"
 	desc = "a set of knuckles made of ancient metals, Aeon's grasp wither their form."
 	icon_state = "aknuckle"
 	force = 12
-	max_integrity = 150
-	wdefense = 5
+	max_integrity = 100
+	wdefense = 4
 	smeltresult = /obj/item/ingot/aalloy
 	blade_dulling = DULLING_SHAFT_CONJURED
 
@@ -435,7 +461,7 @@
 	sharpness = IS_SHARP
 	walking_stick = TRUE
 	wdefense = 6
-	max_blade_int = 80
+	max_blade_int = 140
 
 /obj/item/rogueweapon/woodstaff/militia/getonmobprop(tag)
 	. = ..()
@@ -455,7 +481,7 @@
 	force = 15
 	force_wielded = 25
 	minstr = 10
-	max_blade_int = 100
+	max_blade_int = 130
 	anvilrepair = /datum/skill/craft/carpentry
 	smeltresult = /obj/item/rogueore/coal
 	wdefense = 4
@@ -471,7 +497,7 @@
 	icon_state = "peasantwarspear"
 	icon = 'icons/roguetown/weapons/64.dmi'
 	minstr = 8
-	max_blade_int = 100
+	max_blade_int = 120
 	max_integrity = 200
 	anvilrepair = /datum/skill/craft/carpentry
 	smeltresult = /obj/item/rogueore/coal
@@ -581,7 +607,7 @@
 			if(isliving(target))
 				var/mob/living/M = target
 				M.adjust_fire_stacks(5)
-				M.IgniteMob()
+				M.ignite_mob()
 				ignited = TRUE
 			if(ignited && single_use)
 				is_active = FALSE
@@ -618,11 +644,10 @@
 	wlength = WLENGTH_GREAT
 	w_class = WEIGHT_CLASS_BULKY
 	minstr = 8
-	max_blade_int = 100
+	max_blade_int = 120
 	anvilrepair = /datum/skill/craft/carpentry
 	smeltresult = /obj/item/rogueore/coal
 	associated_skill = /datum/skill/labor/farming
-	blade_dulling = DULLING_SHAFT_WOOD
 	walking_stick = TRUE
 	wdefense = 6
 	thrown_bclass = BCLASS_BLUNT
@@ -644,19 +669,20 @@
 	desc = "At the end of the dae, a knight's bascinet isn't much different than a particularly large stone. After all, both tend to rupture with sobering ease when introduced to a sharpened pickend."
 	force = 20
 	force_wielded = 25
-	possible_item_intents = list(/datum/intent/pick)
+	possible_item_intents = list(/datum/intent/pick/bad)
 	gripped_intents = list(/datum/intent/pick, /datum/intent/stab/militia)
 	icon_state = "milpick"
 	icon = 'icons/roguetown/weapons/32.dmi'
 	sharpness = IS_SHARP
 	wlength = WLENGTH_SHORT
-	max_blade_int = 80
+	max_blade_int = 140
 	max_integrity = 400
 	slot_flags = ITEM_SLOT_HIP
 	associated_skill = /datum/skill/labor/mining
 	anvilrepair = /datum/skill/craft/carpentry
 	smeltresult = /obj/item/ingot/iron
-	wdefense = 1
+	wdefense = 2
+	wdefense_wbonus = 4
 	wbalance = WBALANCE_NORMAL
 
 /obj/item/rogueweapon/pick/militia/steel
@@ -665,12 +691,13 @@
 	name = "militia steel warpick"
 	desc = "At the end of the dae, a knight's bascinet isn't much different than a particularly large stone. After all, both tend to rupture with sobering ease when introduced to a sharpened pickend. This one is honed out of steel parts."
 	icon_state = "milsteelpick"
-	max_blade_int = 160
+	max_blade_int = 180
 	max_integrity = 600
 	associated_skill = /datum/skill/combat/axes
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	smeltresult = /obj/item/ingot/steel
-	wdefense = 5
+	wdefense = 3
+	wdefense_wbonus = 5
 	wbalance = WBALANCE_HEAVY
 
 /obj/item/rogueweapon/sword/falchion/militia

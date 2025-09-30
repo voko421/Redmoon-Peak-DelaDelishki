@@ -4,12 +4,12 @@
 #define STATKEY_PER "perception"
 #define STATKEY_INT "intelligence"
 #define STATKEY_CON "constitution"
-#define STATKEY_END "endurance"
+#define STATKEY_WIL "willpower"
 #define STATKEY_SPD "speed"
 #define STATKEY_LCK "fortune"
 
 //This was previously in vampirelord.dm and mob/living/stats.dm, the person defined it twice because vampirelord came in below that stats file, so now both of them can get it here.
-#define MOBSTATS list("strength", "perception", "intelligence", "constitution", "endurance", "speed", "fortune")
+#define MOBSTATS list(STATKEY_STR, STATKEY_PER, STATKEY_INT, STATKEY_CON, STATKEY_WIL, STATKEY_SPD, STATKEY_LCK)
 
 //Misc mob defines
 
@@ -421,6 +421,9 @@
 #define SKIN_COLOR_LLURTH_DREIR "6a616d"
 #define SKIN_COLOR_TAFRAVMA "5f5f70"
 #define SKIN_COLOR_YUETHINDRYNN "2f2f38"
+#define SKIN_COLOR_KOREDYNN "242871"
+#define SKIN_COLOR_AISEEDRYNN "a3c1c9"
+#define SKIN_COLOR_GRENDUSKRA "969696"
 
 //WOOD ELF SKIN TONES
 #define SKIN_COLOR_GRENZEL_WOODS "fff0e9"
@@ -451,6 +454,12 @@
 #define SKIN_COLOR_NALEDI "4e3729"
 #define SKIN_COLOR_KAZENGUN "dbcca9"
 #define SKIN_COLOR_NALEDI_LIGHT "5d4c41"
+
+//DULLAHAN SKIN TONES
+#define SKIN_COLOR_PALE_GRENZELHOFT "ebdad2"
+#define SKIN_COLOR_PALE_HAMMERHOLD "ffe0d1"
+#define SKIN_COLOR_PALE_EBON "54463d"
+#define SKIN_COLOR_PALE_KAZENGUN "c9a893"
 
 //AASIMAR SKIN TONES
 #define SKIN_COLOR_CULTOR "b5a4a4"

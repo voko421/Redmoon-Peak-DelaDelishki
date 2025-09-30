@@ -86,8 +86,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK_L
 	resistance_flags = FIRE_PROOF
-	gripped_intents = list(/datum/intent/use, /datum/intent/mace/strike)
-	force = 1
+	force = 0
 	throwforce = 0
 	sellprice = 10
 	var/storage_type = /datum/component/storage/concrete/roguetown/saddle
@@ -174,9 +173,9 @@
 	icon2step = 10
 
 /obj/item/natural/cured/essence
-	name = "essense of wilderness"
+	name = "essence of wilderness"
 	icon_state = "wessence"
-	desc = "A mystical essense embued with the power of Dendor. Merely holding it transports one's mind to ancient times."
+	desc = "A large drop of mystical sap said to contain Dendor's own energies, often carried by hunters and other wildsmen as a token of luck."
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20

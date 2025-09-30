@@ -126,6 +126,10 @@
 	if(ishuman(usr))
 		var/mob/living/carbon/human/H = usr
 		if(modifiers["right"])
+			var/area/A = get_area(H)
+			if(!A.can_craft_here())
+				to_chat(H, span_warning("You cannot craft here."))
+				return
 			if(H.craftingthing && (H.mind?.lastrecipe != null))
 				last_craft = world.time
 				var/datum/component/personal_crafting/C = H.craftingthing
@@ -136,7 +140,10 @@
 			if(H.craftingthing)
 				last_craft = world.time
 				var/datum/component/personal_crafting/C = H.craftingthing
-				C.roguecraft(location, control, params, H)
+				if(H.client.legacycraft)
+					C.roguecraft(location, control, params, H)
+				else
+					C.ui_interact(H)
 			else
 				testing("what")
 
@@ -947,7 +954,14 @@
 	var/overlay_icon = 'icons/mob/roguehud64.dmi'
 	var/static/list/hover_overlays_cache = list()
 	var/hovering
+	var/obj/effect/overlay/flash_layer
 	var/arrowheight = 0
+
+/atom/movable/screen/zone_sel/New()
+	..()
+	flash_layer = new
+	flash_layer.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	vis_contents += flash_layer
 
 /atom/movable/screen/zone_sel/Click(location, control,params)
 	if(isobserver(usr))
@@ -1280,9 +1294,10 @@
 
 	if(hud.mymob.stat != DEAD && ishuman(hud.mymob))
 		var/mob/living/carbon/human/H = hud.mymob
+		var/list/missing_bodyparts_zones = H.get_missing_limbs()
 		for(var/X in H.bodyparts)
 			var/obj/item/bodypart/BP = X
-			if(BP.body_zone in H.get_missing_limbs())
+			if(BP.body_zone in missing_bodyparts_zones)
 				continue
 			if(HAS_TRAIT(H, TRAIT_NOPAIN))
 				var/mutable_appearance/limby = mutable_appearance('icons/mob/roguehud64.dmi', "[H.gender == "male" ? "m" : "f"]-[BP.body_zone]")
@@ -1299,13 +1314,37 @@
 			. += limby
 			if(BP.get_bleed_rate())
 				. += mutable_appearance('icons/mob/roguehud64.dmi', "[H.gender == "male" ? "m" : "f"]-[BP.body_zone]-bleed") //apply healthy limb
-		for(var/X in H.get_missing_limbs())
+		for(var/X in missing_bodyparts_zones)
 			var/mutable_appearance/limby = mutable_appearance('icons/mob/roguehud64.dmi', "[H.gender == "male" ? "m" : "f"]-[X]") //missing limb
 			limby.color = "#2f002f"
 			. += limby
 
 	. += mutable_appearance(overlay_icon, "[hud.mymob.gender == "male" ? "m" : "f"]_[hud.mymob.zone_selected]")
 //	. += mutable_appearance(overlay_icon, "height_arrow[hud.mymob.aimheight]")
+
+/atom/movable/screen/zone_sel/proc/flash_limb(zone, limb_color="#FF0000") //Flashes when an attack hits a limb
+	if(!zone || !hud?.mymob)
+		return
+
+	var/gender_prefix = (hud.mymob.gender == FEMALE) ? "f" : "m"
+
+	var/obj/effect/overlay/highlight = new
+	highlight.icon = 'icons/mob/roguehud64.dmi'
+	highlight.icon_state = "[gender_prefix]-[zone]"
+	highlight.color = limb_color
+	highlight.alpha = 180
+	highlight.layer = ABOVE_HUD_LAYER
+	highlight.plane = ABOVE_HUD_PLANE-0.1
+	highlight.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+	flash_layer.vis_contents += highlight
+
+	animate(highlight, alpha = 0, time = 20, easing = EASE_IN)
+
+	spawn(20)
+		if(highlight in flash_layer.vis_contents)
+			flash_layer.vis_contents -= highlight
+		qdel(highlight)
 
 /atom/movable/screen/zone_sel/robot
 	icon = 'icons/mob/screen_cyborg.dmi'

@@ -9,7 +9,7 @@
 	desc = "Bleed for the target, taking their wounds and refilling their blood level."
 	movement_interrupt = FALSE
 	sound = 'sound/magic/psydonbleeds.ogg'
-	invocation = "I BLEED, SO THAT YOU MIGHT ENDURE!"
+	invocations = list("I BLEED, SO THAT YOU MIGHT ENDURE!")
 	invocation_type = "shout"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = FALSE
@@ -99,8 +99,6 @@
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
 	sound = null
-	invocation = ". . ."
-	invocation_type = "none"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = FALSE
 	recharge_time = 5 SECONDS
@@ -204,8 +202,6 @@
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
 	sound = null
-	invocation = ". . ."
-	invocation_type = "none"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = FALSE
 	recharge_time = 5 SECONDS
@@ -309,7 +305,7 @@
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
 	sound = 'sound/magic/psyabsolution.ogg'
-	invocation = "BE ABSOLVED!"
+	invocations = list("BE ABSOLVED!")
 	invocation_type = "shout"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = FALSE
@@ -367,7 +363,7 @@
 			H.emote("breathgasp")
 			H.Jitter(100)
 			H.update_body()
-			GLOB.azure_round_stats[STATS_LUX_REVIVALS]++
+			record_round_statistic(STATS_LUX_REVIVALS)
 			ADD_TRAIT(H, TRAIT_IWASREVIVED, "[type]")
 			H.apply_status_effect(/datum/status_effect/buff/psyvived)
 			user.apply_status_effect(/datum/status_effect/buff/psyvived)

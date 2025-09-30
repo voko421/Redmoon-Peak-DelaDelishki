@@ -93,6 +93,18 @@
     verbage = "strings together"
     craftdiff = 4
 
+/datum/crafting_recipe/roguetown/survival/longbow_warden
+	name = "blackhorn longbow"
+	category = "Ranged"
+	result = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/longbow/warden
+	reqs = list(
+		/obj/item/gun/ballistic/revolver/grenadelauncher/bow/longbow = 1,
+		/obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve/warden = 1,
+	)
+	verbage_simple = "re-string"
+	verbage = "re-strings"
+	craftdiff = 2
+
 /datum/crafting_recipe/roguetown/survival/stonearrow
     name = "stone arrow"
     category = "Ranged"
@@ -126,6 +138,16 @@
     reqs = list(
                 /obj/item/ammo_casing/caseless/rogue/arrow/iron = 1,
                 /datum/reagent/stampoison = 5
+                )
+    req_table = TRUE
+
+/datum/crafting_recipe/roguetown/survival/blessedbolt
+    name = "holy water bolt"
+    category = "Ranged"
+    result = /obj/item/ammo_casing/caseless/rogue/bolt/holy
+    reqs = list(
+                /obj/item/ammo_casing/caseless/rogue/bolt = 1,
+                /datum/reagent/water/blessed = 5
                 )
     req_table = TRUE
 

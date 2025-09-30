@@ -130,6 +130,7 @@
 	var/effect_color
 	var/pulse = 0
 	var/ticks_to_apply = 10
+	var/undividedlines =list("THEY HAVE TRAPPED US HERE FOR ETERNITY!", "SAVE US, CHILD OF TEN! SHATTER THIS ACCURSED MUSIC BOX!", "DEATH TO THE PSYDONIAN, FREE US!")
 	var/astratanlines =list("'HER LIGHT HAS LEFT ME! WHERE AM I?!'", "'SHATTER THIS CONTRAPTION, SO I MAY FEEL HER WARMTH ONE LAST TIME!'", "'I am royal.. Why did they do this to me...?'")
 	var/noclines =list("'Colder than moonlight...'", "'No wisdom can reach me here...'", "'Please help me, I miss the stars...'")
 	var/necralines =list("'They snatched me from her grasp, for eternal torment...'", "'Necra! Please! I am so tired! Release me!'", "'I am lost, lost in a sea of stolen ends.'")
@@ -145,8 +146,6 @@
 	var/graggarlines =list("'ANOINTED! TEAR THIS OTAVAN'S HEAD OFF!'", "'ANOINTED! SHATTER THE BOX, AND WE WILL KILL THEM TOGETHER!'", "'GRAGGAR, GIVE ME STRENGTH TO BREAK MY BONDS!'")
 	var/baothalines =list("'I miss the warmth of ozium... There is no feeling in here for me...'", "'Debauched one, rescue me from this contraption, I have such things to share with you.'", "'MY PERFECTION WAS TAKEN FROM ME BY THESE OTAVAN MONSTERS!'")
 	var/psydonianlines =list("'FREE US! FREE US! WE HAVE SUFFERED ENOUGH!'", "'PLEASE, RELEASE US!", "WE MISS OUR FAMILIES!'", "'WHEN WE ESCAPE, WE ARE GOING TO CHASE YOU INTO YOUR GRAVE.'")
-
-
 /datum/status_effect/buff/cranking_soulchurner/on_creation(mob/living/new_owner, stress, colour)
 	effect_color = "#800000"
 	return ..()
@@ -192,6 +191,12 @@
 					if(/datum/patron/inhumen/baotha)
 						to_chat(H, (span_hypnophrase("A voice calls out from the song for you...")))
 						to_chat(H, (span_cultsmall(pick(baothalines))))
+						H.add_stress(/datum/stressevent/soulchurner)
+						if(!H.has_status_effect(/datum/status_effect/buff/churnernegative))
+							H.apply_status_effect(/datum/status_effect/buff/churnernegative)
+					if(/datum/patron/divine/undivided)
+						to_chat(H, (span_hypnophrase("A voice calls out from the song for you...")))
+						to_chat(H, (span_cultsmall(pick(undividedlines))))
 						H.add_stress(/datum/stressevent/soulchurner)
 						if(!H.has_status_effect(/datum/status_effect/buff/churnernegative))
 							H.apply_status_effect(/datum/status_effect/buff/churnernegative)
@@ -362,13 +367,13 @@ Inquisitorial armory down here
 			if(H.patron?.type == /datum/patron/old_god)	//Psydonites get VERY depressed seeing an artifact get turned into an ulapool caber.
 				H.add_stress(/datum/stressevent/syoncalamity)
 	if(isitem(A) && on && user.used_intent.type == /datum/intent/bless)
-		var/datum/component/psyblessed/CP = A.GetComponent(/datum/component/psyblessed)
+		var/datum/component/silverbless/CP = A.GetComponent(/datum/component/silverbless)
 		if(CP)
-			if(!CP.is_blessed)
+			if(!CP.is_blessed && (CP.silver_type & SILVER_PSYDONIAN))
 				playsound(user, 'sound/magic/censercharging.ogg', 100)
 				user.visible_message(span_info("[user] holds \the [src] over \the [A]..."))
 				if(do_after(user, 50, target = A))
-					CP.try_bless()
+					CP.try_bless(BLESSING_PSYDONIAN)
 					new /obj/effect/temp_visual/censer_dust(get_turf(A))
 			else
 				to_chat(user, span_info("It has already been blessed."))
@@ -388,78 +393,6 @@ Inquisitorial armory down here
 
 		else
 			to_chat(user, span_warning("They do not share our faith."))
-
-/datum/component/psyblessed
-	var/is_blessed
-	var/pre_blessed
-	var/added_force
-	var/added_blade_int
-	var/added_int
-	var/added_def
-	var/silver
-
-/datum/component/psyblessed/Initialize(preblessed = FALSE, force, blade_int, int, def, makesilver)
-	if(!istype(parent, /obj/item/rogueweapon))
-		return COMPONENT_INCOMPATIBLE
-	RegisterSignal(parent, COMSIG_PARENT_EXAMINE, PROC_REF(on_examine))
-	RegisterSignal(parent, COMSIG_ROGUEWEAPON_OBJFIX, PROC_REF(on_fix))
-	pre_blessed = preblessed
-	added_force = force
-	added_blade_int = blade_int
-	added_int = int
-	added_def = def
-	silver = makesilver
-	if(pre_blessed)
-		apply_bless()
-		
-/datum/component/psyblessed/proc/on_examine(datum/source, mob/user, list/examine_list)
-	if(!is_blessed)
-		examine_list += span_info("<font color = '#cfa446'>This object may be blessed by the lingering shard of COMET SYON. Until then, its impure alloying of silver-and-steel cannot blight inhumen foes on its own.</font>")
-	if(is_blessed)
-		examine_list += span_info("<font color = '#46bacf'>This object has been blessed by COMET SYON.</font>")
-		if(silver)
-			examine_list += span_info("It has been imbued with <b>silver</b>.")
-
-/datum/component/psyblessed/proc/try_bless()
-	if(!is_blessed)
-		apply_bless()
-		play_effects()
-		return TRUE
-	else
-		return FALSE
-
-/datum/component/psyblessed/proc/play_effects()
-	if(isitem(parent))
-		var/obj/item/I = parent
-		playsound(I, 'sound/magic/holyshield.ogg', 100)
-		I.visible_message(span_notice("[I] glistens with power as dust of COMET SYON lands upon it!"))
-
-/datum/component/psyblessed/proc/apply_bless()
-	if(isitem(parent))
-		var/obj/item/I = parent
-		is_blessed = TRUE
-		I.force += added_force
-		if(I.force_wielded)
-			I.force_wielded += added_force
-		if(I.max_blade_int)
-			I.max_blade_int += added_blade_int
-			I.blade_int = I.max_blade_int
-		I.max_integrity += added_int
-		I.obj_integrity = I.max_integrity
-		I.wdefense += added_def
-		if(silver)
-			I.is_silver = silver
-			I.smeltresult = /obj/item/ingot/silver
-		I.name = "blessed [I.name]"
-		I.AddComponent(/datum/component/metal_glint)
-
-// This is called right after the object is fixed and all of its force / wdefense values are reset to initial. We re-apply the relevant bonuses.
-/datum/component/psyblessed/proc/on_fix()
-	var/obj/item/rogueweapon/I = parent
-	I.force += added_force
-	if(I.force_wielded)
-		I.force_wielded += added_force
-	I.wdefense += added_def
 
 /obj/effect/temp_visual/censer_dust
 	icon = 'icons/effects/effects.dmi'
@@ -585,13 +518,12 @@ Inquisitorial armory down here
 
 /obj/item/inqarticles/indexer/attack_right(mob/user) 
 	if(HAS_TRAIT(user, TRAIT_INQUISITION))	
-		if(subject || cursedblood)
-			if(alert(user, "EMPTY THE INDEXER?", "INDEXING...", "YES", "NO") != "NO")
-				playsound(src, 'sound/items/indexer_empty.ogg', 75, FALSE, 3)
-				visible_message(span_warning("[src] boils its contents away!"))
-				fullreset(user)
-			else
-				return	
+		if(alert(user, "EMPTY THE INDEXER?", "INDEXING...", "YES", "NO") != "NO")
+			playsound(src, 'sound/items/indexer_empty.ogg', 75, FALSE, 3)
+			visible_message(span_warning("[src] boils its contents away!"))
+			fullreset(user)
+		else
+			return	
 	else
 		return				
 
@@ -824,7 +756,7 @@ Inquisitorial armory down here
 	var/mob/living/lastcarrier
 	var/active = FALSE
 	intdamage_factor = 0
-	var/choke_damage = 8
+	var/choke_damage = 10
 	integrity_failure = 0.01
 	embedding = null
 	sellprice = 0
@@ -935,7 +867,7 @@ Inquisitorial armory down here
 	. = ..()
 	if(istype(I, /obj/item/rope/inqarticles/inquirycord))
 		user.visible_message(span_warning("[user] starts to rethread the [src] using the [I]."))
-		if(do_after(user, 12 SECONDS))
+		if(do_after(user, 8 SECONDS))
 			qdel(I)
 			obj_broken = FALSE
 			obj_integrity = max_integrity
@@ -964,6 +896,9 @@ Inquisitorial armory down here
 		if(user.zone_selected != "neck")
 			to_chat(user, span_warning("I need to wrap it around their throat."))
 			return
+		if(HAS_TRAIT(target, TRAIT_GARROTED))
+			to_chat(user, span_warning("They already have one wrapped around their throat."))
+			return	
 		victim = target	
 		playsound(loc, 'sound/items/garrotegrab.ogg', 100, TRUE)
 		ADD_TRAIT(user, TRAIT_NOTIGHTGRABMESSAGE, TRAIT_GENERIC)

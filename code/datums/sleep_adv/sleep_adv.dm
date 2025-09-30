@@ -7,6 +7,8 @@
 	var/retained_dust = 0
 	var/list/sleep_exp = list()
 	var/datum/mind/mind = null
+	COOLDOWN_DECLARE(xp_show)
+	COOLDOWN_DECLARE(level_up)
 
 /datum/sleep_adv/New(datum/mind/passed_mind)
 	. = ..()
@@ -29,7 +31,7 @@
 
 /datum/sleep_adv/proc/adjust_sleep_xp(skill, adjust)
 	var/current_xp = get_sleep_xp(skill)
-	var/target_xp = current_xp + (HAS_TRAIT(mind?.current, TRAIT_JACKOFALLTRADES) ? (adjust * 1.5) : adjust)
+	var/target_xp = current_xp + ((adjust > 0 && HAS_TRAIT(mind?.current, TRAIT_JACKOFALLTRADES)) ? (adjust * 1.5) : adjust)
 	var/cap_exp = get_requried_sleep_xp_for_skill(skill, 2)
 	target_xp = clamp(target_xp, 0, cap_exp)
 	sleep_exp[skill] = target_xp
@@ -68,25 +70,65 @@
 	return needed_xp
 
 /datum/sleep_adv/proc/add_sleep_experience(skill, amt, silent = FALSE)
-	if((mind.current.get_skill_level(skill) < SKILL_LEVEL_APPRENTICE) && !is_considered_sleeping())
-		mind.current.adjust_experience(skill, amt)
+	var/mob/living/L = mind.current
+	var/show_xp = TRUE
+	if(!(L.client?.prefs.floating_text_toggles & XP_TEXT))
+		show_xp = FALSE
+	if((L.get_skill_level(skill) < SKILL_LEVEL_APPRENTICE) && !is_considered_sleeping())
+		var/org_lvl = L.get_skill_level(skill)
+		L.adjust_experience(skill, amt)
+		var/new_lvl = L.get_skill_level(skill)
+		var/capped_post_check = enough_sleep_xp_to_advance(skill, 2)
+		if(COOLDOWN_FINISHED(src, xp_show))
+			if(org_lvl == new_lvl && !capped_post_check && show_xp)
+				L.balloon_alert(L, "[amt] XP")
+				COOLDOWN_START(src, xp_show, XP_SHOW_COOLDOWN)
 		return
+	var/datum/skill/skillref = GetSkillRef(skill)
+	var/trait_capped_level = FALSE
+	if(length(skillref.trait_restrictions))
+		for(var/trait in skillref.trait_restrictions)
+			trait_capped_level = skillref.trait_restrictions[trait]
+			if(!HAS_TRAIT(mind.current, trait) && mind.current.get_skill_level(skill) >= skillref.trait_restrictions[trait])	//We don't have the trait & we're at the skill limit.
+				return
 	var/capped_pre = enough_sleep_xp_to_advance(skill, 2)
 	var/can_advance_pre = enough_sleep_xp_to_advance(skill, 1)
+
+	if(can_advance_pre && trait_capped_level && (trait_capped_level <= (mind.current.get_skill_level(skill) + 1)))
+		amt = 0
+
 	adjust_sleep_xp(skill, amt)
 	var/can_advance_post = enough_sleep_xp_to_advance(skill, 1)
 	var/capped_post = enough_sleep_xp_to_advance(skill, 2)
-	var/datum/skill/skillref = GetSkillRef(skill)
+
+	if(capped_post || capped_pre || L.get_skill_level(skill) == SKILL_LEVEL_LEGENDARY)
+		show_xp = FALSE
 	if(!can_advance_pre && can_advance_post && !silent)
 		to_chat(mind.current, span_nicegreen(pick(list(
 			"I'm getting a better grasp at [lowertext(skillref.name)]...",
 			"With some rest, I feel like I can get better at [lowertext(skillref.name)]...",
 			"[skillref.name] starts making more sense to me...",
 		))))
+		if(!COOLDOWN_FINISHED(src, level_up))
+			if((L.client?.prefs.floating_text_toggles & XP_TEXT))
+				L.balloon_alert(L, "<font color = '#9BCCD0'>Level up...</font>")
+			L.playsound_local(L, pick(LEVEL_UP_SOUNDS), 100, TRUE)
+			COOLDOWN_START(src, level_up, XP_SHOW_COOLDOWN)
+		show_xp = FALSE
 	if(!capped_pre && capped_post && !silent)
 		to_chat(mind.current, span_nicegreen(pick(list(
 			"My [lowertext(skillref.name)] can no longer improve without some rest and meditation...",
 		))))
+		if(!COOLDOWN_FINISHED(src, level_up))
+			if((L.client?.prefs.floating_text_toggles & XP_TEXT))
+				L.balloon_alert(L, "<font color = '#9BCCD0'>Level up...</font>")
+			L.playsound_local(L, pick(LEVEL_UP_SOUNDS), 100, TRUE)
+			COOLDOWN_START(src, level_up, XP_SHOW_COOLDOWN)
+		show_xp = FALSE
+	if(COOLDOWN_FINISHED(src, xp_show))
+		if(amt && show_xp && (L.client?.prefs.floating_text_toggles & XP_TEXT))
+			L.balloon_alert(L, "[amt] XP")
+			COOLDOWN_START(src, xp_show, XP_SHOW_COOLDOWN)
 
 /datum/sleep_adv/proc/advance_cycle()
 	// Stuff
@@ -221,7 +263,7 @@
 	sleep_adv_points -= get_skill_cost(skill_type)
 	adjust_sleep_xp(skill_type, -get_requried_sleep_xp_for_skill(skill_type, 1))
 	mind.current.adjust_skillrank(skill_type, 1, FALSE)
-	GLOB.azure_round_stats[STATS_SKILLS_DREAMED]++
+	record_round_statistic(STATS_SKILLS_DREAMED)
 
 /datum/sleep_adv/proc/grant_inspiration_xp(skill_amt)
 	var/list/viable_skills = list()

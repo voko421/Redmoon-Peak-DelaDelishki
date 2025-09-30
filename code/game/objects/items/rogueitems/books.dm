@@ -168,11 +168,16 @@
 	..()
 
 /obj/item/book/rogue/bibble
-	name = "The Book"
+	name = "The Verses and Acts of the Ten"
+	desc = "The collected verses and acts of the DIVINE PANTHEON. Split into three parts.</br>VISAGE - The OLD, THE FIRST ACTS OF THE TEN UPON PSYDONIA, BEFORE THE COMET SYON </br>DECANOMICON - THE ERA OF GLEAM, THE HOLY CELESTIAL EMPIRE - </br>NEW DAWN - Modern Era, the foundation of the HOLY SEE and ONWARDS."
 	icon_state = "bibble_0"
 	base_icon_state = "bibble"
-	title = "bible"
+	title = "The Verses and Acts of the Ten"
 	dat = "gott.json"
+	possible_item_intents = list(
+		/datum/intent/use, 
+		/datum/intent/bless,
+	)
 
 /obj/item/book/rogue/bibble/read(mob/user)
 	if(!open)
@@ -186,25 +191,55 @@
 		return
 	if(in_range(user, src) || isobserver(user))
 		user.changeNext_move(CLICK_CD_MELEE)
+		var/list/choices = list("Visage", "Decanomicon", "New Dawn")
+		var/section_choice = input(user,"Which section shall I read from?", "DIVINE ENLIGHTENMENT") as anything in choices
+		var/chosentxt
+		switch(section_choice)
+			if("Visage")
+				chosentxt = 'strings/visage.txt'
+			if("Decanomicon")
+				chosentxt = 'strings/decanomicon.txt'
+			if("New Dawn")
+				chosentxt = 'strings/newdawn.txt'
 		var/m
-		var/list/verses = world.file2list("strings/bibble.txt")
+		var/list/verses = world.file2list(chosentxt)
 		m = pick(verses)
 		if(m)
 			user.say(m)
 
-/obj/item/book/rogue/bibble/attack(mob/living/M, mob/user)
-	if(user.mind && user.mind.assigned_role == "Bishop")
+/obj/item/book/rogue/bibble/attack(atom/M, mob/user)
+	if(user.mind?.assigned_role == "Bishop" && user.used_intent?.type == /datum/intent/bless && isliving(M))
 		if(!user.can_read(src))
 			to_chat(user, span_warning("I don't understand these scribbly black lines."))
 			return
-		M.apply_status_effect(/datum/status_effect/buff/blessed)
-		M.add_stress(/datum/stressevent/blessed)
+		var/mob/living/to_bless = M
+		to_bless.apply_status_effect(/datum/status_effect/buff/blessed)
+		to_bless.add_stress(/datum/stressevent/blessed)
 		user.visible_message(span_notice("[user] blesses [M]."))
 		playsound(user, 'sound/magic/bless.ogg', 100, FALSE)
 		return
 
+/obj/item/book/rogue/bibble/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	. = ..()
+	if(user.mind?.assigned_role == "Bishop" && isitem(target) && user.used_intent?.type == /datum/intent/bless)
+		var/datum/component/silverbless/CP = target.GetComponent(/datum/component/silverbless)
+		if(!CP)
+			to_chat(user, span_info("\The [target] can not be blessed."))
+			return
+		else if(!CP.is_blessed && (CP.silver_type & SILVER_TENNITE))
+			playsound(user, 'sound/magic/censercharging.ogg', 100)
+			user.visible_message(span_info("[user] holds \the [src] over \the [target]..."))
+			if(do_after(user, 5 SECONDS, target = target))
+				CP.try_bless(BLESSING_TENNITE)
+				new /obj/effect/temp_visual/censer_dust(get_turf(target))
+			return
+		else
+			to_chat(user, span_info("It has already been blessed."))
+			return
+
 /obj/item/book/rogue/bibble/psy
 	name = "Of Psydon"
+	desc = "And HE WEEPS. Not for you, not for me, but for it all."
 	icon_state = "psyble_0"
 	base_icon_state = "psyble"
 	title = "psyble"
@@ -236,7 +271,7 @@
 					user.say("PSY 23:4... And so, ZEZUS wept; for he had been struck down by the silvered javelin of JVDAS, PSYDON's most devout.")
 					user.psydo_nyte()
 				else
-					user.say(m)	
+					user.say(m)
 
 /obj/item/book/rogue/bibble/psy/MiddleClick(mob/user, params)
 	. = ..()
@@ -253,7 +288,7 @@
 /datum/status_effect/buff/blessed
 	id = "blessed"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/blessed
-	effectedstats = list("fortune" = 1)
+	effectedstats = list(STATKEY_LCK = 1)
 	duration = 20 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/blessed
@@ -306,6 +341,13 @@
 	icon_state ="book6_0"
 	base_icon_state = "book6"
 	bookfile = "thefireisgone.json"
+
+/obj/item/book/rogue/blackoak
+	name = "The Noblest Struggle"
+	desc = "A small black book. All Black Oaks carry this close."
+	icon_state ="book_0"
+	base_icon_state = "book"
+	bookfile = "blackoak.json"
 
 //player made books
 /obj/item/book/rogue/tales1

@@ -28,7 +28,9 @@
 					/obj/effect/proc_holder/spell/invoked/lesser_heal 					= CLERIC_T1,
 					/obj/effect/proc_holder/spell/invoked/blood_heal					= CLERIC_T1,
 					/obj/effect/proc_holder/spell/invoked/projectile/profane/miracle 	= CLERIC_T1,
-					/obj/effect/proc_holder/spell/invoked/raise_lesser_undead/miracle 	= CLERIC_T2,
+					/obj/effect/proc_holder/spell/invoked/raise_undead_formation/miracle= CLERIC_T2,
+					/obj/effect/proc_holder/spell/invoked/raise_undead_guard/miracle	= CLERIC_T2,
+					/obj/effect/proc_holder/spell/invoked/tame_undead/miracle			= CLERIC_T3,
 					/obj/effect/proc_holder/spell/invoked/rituos/miracle 				= CLERIC_T3,
 					/obj/effect/proc_holder/spell/invoked/wound_heal					= CLERIC_T3,
 	)
@@ -67,7 +69,7 @@
 	desc = "The Man who stole fire from the sun and used it in his pursuit of immortality; exchanging the knowledge of how to make fire with the lessers for safety in doing so. He guides those who live in the dark, away from the flame of civilization; and those who believe in his cause bring the wealth of the undeserving in the light to the deserving in the dark."
 	worshippers = "Highwaymen, Alchemists, Downtrodden Peasants, and Merchants"
 	crafting_recipes = list(/datum/crafting_recipe/roguetown/sewing/bandithood)
-	mob_traits = list(TRAIT_COMMIE, TRAIT_MATTHIOS_EYES)
+	mob_traits = list(TRAIT_COMMIE, TRAIT_MATTHIOS_EYES, TRAIT_SEEPRICES_SHITTY)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison					= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/invoked/appraise						= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/targeted/touch/lesserknock/miracle	= CLERIC_T0,
@@ -192,7 +194,7 @@
 	to_chat(follower, span_danger("For Matthios to hear my prayers I must either be in the church of the abandoned, near an inverted psycross, flaunting wealth upon me of at least 100 mammon, or offer a coin of at least five mammon up to him!"))
 	return FALSE
 
-// Baotha 
+// Baotha
 /datum/patron/inhumen/baotha/can_pray(mob/living/follower)
 	. = ..()
 	// Allows prayer in the Zzzzzzzurch(!)

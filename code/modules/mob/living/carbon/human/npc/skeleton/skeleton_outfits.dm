@@ -19,12 +19,40 @@
 /mob/living/carbon/human/species/skeleton/npc/hard
 	skel_outfit = /datum/outfit/job/roguetown/skeleton/npc/hard
 
+// For Duke Manor & Zizo Manor - Ground based spread, so no pirate in pool!
+/mob/living/carbon/human/species/skeleton/npc/mediumspread/Initialize()
+	var/outfit = rand(1, 4)
+	switch(outfit)
+		if(1)
+			skel_outfit = /datum/outfit/job/roguetown/skeleton/npc/supereasy
+		if(2)
+			skel_outfit = /datum/outfit/job/roguetown/skeleton/npc/easy
+		if(3)
+			skel_outfit = /datum/outfit/job/roguetown/skeleton/npc/medium
+		if(4)
+			skel_outfit = /datum/outfit/job/roguetown/skeleton/npc/hard
+	..()
+
+// for Lich Dungeon
+/mob/living/carbon/human/species/skeleton/npc/hardspread/Initialize()
+	var/outfit = rand(1,4)
+	switch(outfit)
+		if(1)
+			skel_outfit = /datum/outfit/job/roguetown/skeleton/npc/hard
+		if(2)
+			skel_outfit = /datum/outfit/job/roguetown/skeleton/npc/medium
+		if(3)
+			skel_outfit = /datum/outfit/job/roguetown/skeleton/npc/pirate
+		if(4)
+			skel_outfit = /datum/outfit/job/roguetown/skeleton/npc/hard
+	..()
+
 /datum/outfit/job/roguetown/skeleton/npc/supereasy/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.STASTR = 10
 	H.STASPD = 8
 	H.STACON = 4
-	H.STAEND = 10
+	H.STAWIL = 10
 	H.STAINT = 1
 	name = "Skeleton"
 	if(prob(50))
@@ -61,7 +89,7 @@
 	H.STASTR = 14
 	H.STASPD = 8
 	H.STACON = 4 // Same statblock as before easily killed
-	H.STAEND = 15
+	H.STAWIL = 15
 	H.STAINT = 1
 	name = "Skeleton Footsoldier"
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/aalloy
@@ -93,7 +121,7 @@
 	H.STASTR = 14
 	H.STASPD = 8
 	H.STACON = 4 // Same statblock as before easily killed
-	H.STAEND = 15
+	H.STAWIL = 15
 	H.STAINT = 1
 	name = "Skeleton Pirate"
 	head =  /obj/item/clothing/head/roguetown/helmet/tricorn
@@ -122,7 +150,7 @@
 	H.STASTR = 14
 	H.STASPD = 8
 	H.STACON = 6 // Slightly tougher now!
-	H.STAEND = 15
+	H.STAWIL = 15
 	H.STAINT = 1
 	name = "Skeleton Soldier"
 	cloak = /obj/item/clothing/cloak/stabard/surcoat/guard // Ooo Spooky Old Dead MAA
@@ -134,7 +162,8 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots/aalloy
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/iron/aalloy
 	gloves = /obj/item/clothing/gloves/roguetown/chain/aalloy
-	l_hand = /obj/item/rogueweapon/shield/tower/metal/alloy
+	if(prob(33)) // 33% chance of shield, so ranged don't get screwed over entirely
+		l_hand = /obj/item/rogueweapon/shield/tower/metal/alloy
 	if(prob(33))
 		r_hand = /obj/item/rogueweapon/spear/aalloy
 	else if(prob(33))
@@ -156,7 +185,7 @@
 	..()
 	H.STASTR = 14
 	H.STACON = 8 // Woe, actual limb health.
-	H.STAEND = 15
+	H.STAWIL = 15
 	H.STAINT = 1
 	name = "Skeleton Dreadnought"
 	// This combines the khopesh  and withered dreadknight

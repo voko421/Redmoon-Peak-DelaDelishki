@@ -364,11 +364,11 @@
 	desc = span_green("I'm wielding a BLESSED weapon!")
 
 /datum/stressevent/naledimasklost
-	stressadd = 8
+	stressadd = 3
 	desc = span_boldred("The mask! Anyone here could be a djinn. I'm exposed.")
 	timer = 999 MINUTES
 
 /datum/stressevent/shamanhoodlost
-	stressadd = 8
+	stressadd = 3
 	desc = span_boldred("The hood! My faith wavers without it. I feel ashamed.")
 	timer = 999 MINUTES

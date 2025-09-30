@@ -82,7 +82,7 @@
 	name = "master's rod"
 	desc = "Bend the knee. Can't be used outside of the manor."
 	icon_state = "scepter"
-	icon = 'icons/roguetown/weapons/32.dmi'
+	icon = 'icons/roguetown/weapons/misc32.dmi'
 	sharpness = IS_BLUNT
 	//dropshrink = 0.75
 	wlength = WLENGTH_NORMAL
@@ -163,6 +163,7 @@
 	force = 15
 	force_wielded = 15
 	name = "stunmace"
+	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "stunmace0"
 	desc = "Pain is our currency here."
 	gripped_intents = null
@@ -671,7 +672,7 @@
 	possible_item_intents = list(/datum/intent/pick/bad)
 	gripped_intents = list(/datum/intent/pick, /datum/intent/stab/militia)
 	icon_state = "milpick"
-	icon = 'icons/roguetown/weapons/32.dmi'
+	icon = 'icons/roguetown/weapons/misc32.dmi'
 	sharpness = IS_SHARP
 	wlength = WLENGTH_SHORT
 	max_blade_int = 140

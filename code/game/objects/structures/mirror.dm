@@ -868,5 +868,5 @@
 		H.add_stress(/datum/stressevent/unseemly)
 	// Apply Xylix buff when examining someone with the beautiful trait
 	if(HAS_TRAIT(H, TRAIT_XYLIX) && !H.has_status_effect(/datum/status_effect/buff/xylix_joy) && H.has_stress_event(/datum/stressevent/beautiful))
-			H.apply_status_effect(/datum/status_effect/buff/xylix_joy)
-			to_chat(H, span_info("My beauty brings a smile to my face, and fortune to my steps!"))
+		H.apply_status_effect(/datum/status_effect/buff/xylix_joy)
+		to_chat(H, span_info("My beauty brings a smile to my face, and fortune to my steps!"))

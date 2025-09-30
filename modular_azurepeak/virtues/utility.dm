@@ -13,16 +13,20 @@
 /datum/virtue/utility/beautiful
 	name = "Beautiful"
 	desc = "Wherever I go, I turn heads, such is my natural beauty. I am also rather good in bed, though they always say that."
-	custom_text = "Incompatible with Ugly virtue."
+	custom_text = "Incompatible with Ugly virtue. Has a special interaction with Revenants."
 	added_traits = list(TRAIT_BEAUTIFUL,TRAIT_GOODLOVER)
 	added_stashed_items = list(
 		"Hand Mirror" = /obj/item/handmirror)
 
 /datum/virtue/utility/beautiful/handle_traits(mob/living/carbon/human/recipient)
 	..()
+	if(isdullahan(recipient))
+		REMOVE_TRAIT(recipient, TRAIT_BEAUTIFUL, TRAIT_VIRTUE)
+		ADD_TRAIT(recipient, TRAIT_BEAUTIFUL_UNCANNY, TRAIT_VIRTUE)
 	if(HAS_TRAIT(recipient, TRAIT_UNSEEMLY))
 		to_chat(recipient, "Your attractiveness is cancelled out! You become normal.")
-		REMOVE_TRAIT(recipient, TRAIT_BEAUTIFUL, TRAIT_VIRTUE)
+		if(HAS_TRAIT(recipient, TRAIT_BEAUTIFUL))
+			REMOVE_TRAIT(recipient, TRAIT_BEAUTIFUL, TRAIT_VIRTUE)
 		REMOVE_TRAIT(recipient, TRAIT_UNSEEMLY, TRAIT_VIRTUE)
 
 /datum/virtue/utility/deadened

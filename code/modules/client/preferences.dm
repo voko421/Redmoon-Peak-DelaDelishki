@@ -1312,7 +1312,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 		if(!user.check_agevet())
 			to_chat(usr, span_warning("You are not age verified. Other players can see your age verification status. To become age verified, open a ticket in Azure Peak's community Discord server.</b>"))
 		else
-			to_chat(usr, span_nicegreen("You are already Age Verified. <b>Yippee!</b>"))
+			to_chat(usr, span_nicegreen("You are already age verified. <b>Yippee!</b>"))
 
 	else if(href_list["preference"] == "culinary")
 		show_culinary_ui(user)

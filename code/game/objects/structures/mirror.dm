@@ -862,7 +862,7 @@
 		else 
 			if(!H.has_stress_event(/datum/stressevent/beautiful))
 				H.add_stress(/datum/stressevent/uncanny)
-				H.visible_message(span_notice("[H] admires [H.p_their()] reflection in [src]."), span_smallwarning("I look awful!"))
+				H.visible_message(span_notice("[H] admires [H.p_their()] reflection in [src]."), span_warning("I look awful!"))
 	if(HAS_TRAIT(H, TRAIT_UNSEEMLY))
 		to_chat(H, span_warning("Another reminder of my own horrid visage."))
 		H.add_stress(/datum/stressevent/unseemly)

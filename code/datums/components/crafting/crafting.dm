@@ -112,12 +112,16 @@
 			.["tool_behaviour"] += I.tool_behaviour
 			.["other"][I.type] += 1
 		else
-			if(istype(I, /obj/item/reagent_containers))
-				var/obj/item/reagent_containers/RC = I
+			if(istype(I, /obj/item/reagent_containers/glass))
+				var/obj/item/reagent_containers/glass/RC = I
 				if(RC.is_drainable())
 					for(var/datum/reagent/A in RC.reagents.reagent_list)
 						.["other"][A.type] += A.volume
-			.["other"][I.type] += 1
+				// Only count glass bottles themselves as a valid crafting item if it's empty
+				if(istype(RC, /obj/item/reagent_containers/glass) && RC.reagents.total_volume == 0)
+					.["other"][I.type] += 1
+			else
+				.["other"][I.type] += 1
 
 /datum/component/personal_crafting/proc/check_tools(mob/user, datum/crafting_recipe/R, list/contents)
 	if(!R.tools.len)
@@ -435,6 +439,17 @@
 						Deletion += I
 						surroundings -= I
 						amt--
+			else if(ispath(A, /obj/item/reagent_containers/glass)) //Don't eat bottles with reagents in them
+				var/atom/movable/I
+				while(amt > 0)
+					I = locate(A) in surroundings
+					var/obj/item/reagent_containers/glass/RC = I
+					if(RC.reagents?.total_volume > 0)
+						surroundings -= I
+						continue
+					Deletion += I
+					surroundings -= I
+					amt--
 			else
 				var/atom/movable/I
 				while(amt > 0)

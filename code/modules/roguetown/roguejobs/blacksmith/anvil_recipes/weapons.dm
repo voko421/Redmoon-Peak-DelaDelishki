@@ -684,9 +684,9 @@
 
 // SILVER
 /datum/anvil_recipe/weapons/silver/elfsaber
-	name = "Sabre, Elvish (+1 Silver)"
+	name = "Sabre, Elvish (+1 Gold)"
 	req_bar = /obj/item/ingot/silver
-	additional_items = list(/obj/item/ingot/silver)
+	additional_items = list(/obj/item/ingot/gold)
 	created_item = /obj/item/rogueweapon/sword/sabre/elf
 
 /datum/anvil_recipe/weapons/silver/elfdagger

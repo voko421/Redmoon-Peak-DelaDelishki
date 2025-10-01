@@ -54,7 +54,7 @@
 	if(HAS_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN) && (zone == BODY_ZONE_L_LEG || zone == BODY_ZONE_R_LEG))
 		chance2hit += 24
 	if(target.pulledby || target.pulling)
-		chance2hit += 24
+		chance2hit += 40
 	if(!(target.mobility_flags & MOBILITY_STAND))
 		chance2hit += 24
 	// If you're floored, you will aim feet and legs easily. There's a check for whether the victim is laying down already.

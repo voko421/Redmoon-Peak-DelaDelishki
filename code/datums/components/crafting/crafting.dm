@@ -112,13 +112,15 @@
 			.["tool_behaviour"] += I.tool_behaviour
 			.["other"][I.type] += 1
 		else
-			if(istype(I, /obj/item/reagent_containers/glass))
-				var/obj/item/reagent_containers/glass/RC = I
+			if(istype(I, /obj/item/reagent_containers))
+				var/obj/item/reagent_containers/RC = I
 				if(RC.is_drainable())
 					for(var/datum/reagent/A in RC.reagents.reagent_list)
 						.["other"][A.type] += A.volume
-				// Only count glass bottles themselves as a valid crafting item if it's empty
-				if(istype(RC, /obj/item/reagent_containers/glass) && RC.reagents.total_volume == 0)
+				if(istype(RC, /obj/item/reagent_containers/glass)) // Only count glass bottles themselves as a valid crafting item if it's empty
+					if(RC.reagents.total_volume == 0)
+						.["other"][I.type] += 1
+				else
 					.["other"][I.type] += 1
 			else
 				.["other"][I.type] += 1

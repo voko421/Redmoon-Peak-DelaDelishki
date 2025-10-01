@@ -825,6 +825,14 @@
 	createditem_num = 10
 	i_type = "Ammo"
 
+/datum/anvil_recipe/weapons/iron/bluntbolts
+	name = "Bolts, Blunt (+2 Stick) (x10)"
+	req_bar = /obj/item/ingot/iron
+	additional_items = list(/obj/item/grown/log/tree/stick, /obj/item/grown/log/tree/stick)
+	created_item = /obj/item/ammo_casing/caseless/rogue/bolt/blunt
+	createditem_num = 10
+	i_type = "Ammo"
+
 // BOW
 
 /datum/anvil_recipe/weapons/iron/arrows

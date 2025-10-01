@@ -341,7 +341,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	if(QDELETED(recruit) || QDELETED(recruiter))
 		return FALSE
 	if(HAS_TRAIT(recruit, TRAIT_NOBLE))
-		if(!(recruit.job in list("Adventurer", "Mercenary", "Bandit", "Wretch","Inquisitor","Suitor","Orthodoxist","Migrant")))
+		if(!(recruit.job in GLOB.foreign_positions))
 			recruiter.say("I HEREBY STRIP YOU, [uppertext(recruit.name)], OF NOBILITY!!")
 			REMOVE_TRAIT(recruit, TRAIT_NOBLE, TRAIT_GENERIC)
 			REMOVE_TRAIT(recruit, TRAIT_NOBLE, TRAIT_VIRTUE)

@@ -124,7 +124,7 @@
 	icon_state = "fire_runedust"
 	major_pot = /datum/alch_cauldron_recipe/str_potion
 	med_pot = /datum/alch_cauldron_recipe/con_potion
-	minor_pot = /datum/alch_cauldron_recipe/spd_potion
+	minor_pot = /datum/alch_cauldron_recipe/fire_potion
 
 /obj/item/alch/sinew
 	name = "sinew"
@@ -269,6 +269,15 @@
 	major_pot = /datum/alch_cauldron_recipe/doompoison
 	med_pot = /datum/alch_cauldron_recipe/big_mana_potion
 	minor_pot = /datum/alch_cauldron_recipe/big_stam_poison
+
+/obj/item/alch/infernaldust
+	name = "infernal dust"
+	desc =
+	icon_state = "evildust"
+
+	major_pot =
+	med_pot = 
+	minor_pot =
 
 /obj/item/alch/berrypowder
 	name = "berry powder"

@@ -483,7 +483,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 
 /datum/reagent/fire_resist
 	name = "Fire Resistance"
-	color = "#fd1a5e"
+	color = "#ff7300"
 	taste_description = "burning coal"
 
 /datum/reagent/fire_resist/on_mob_life(mob/living/carbon/M)

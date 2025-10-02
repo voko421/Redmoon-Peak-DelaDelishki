@@ -75,7 +75,7 @@
 
 /datum/alch_cauldron_recipe/per_potion
 	name = "Potion of Keen Eye"
-	smells_like = "desolation"
+	smells_like = "fire"
 	skill_required = SKILL_LEVEL_EXPERT
 	output_reagents = list(/datum/reagent/buff/perception = 30)
 
@@ -111,6 +111,6 @@
 
 /datum/alch_cauldron_recipe/fire_potion
 	name = "Potion of Fire Warding"
-	smells_like = "fire"
+	smells_like = "authority"
 	skill_required = SKILL_LEVEL_EXPERT
 	output_reagents =list(/datum/reagent/fire_resist = 30)

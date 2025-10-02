@@ -84,7 +84,7 @@
 	name = "Fyritius"
 	valid_input = /obj/item/reagent_containers/food/snacks/grown/rogue/fyritius
 	valid_outputs = list(/obj/item/alch/firedust = 1)
-	bonus_chance_outputs = list()
+	bonus_chance_outputs = list(/obj/item/alch/solardust = 50)
 
 /datum/alch_grind_recipe/poppy
 	name = "Poppy"
@@ -111,6 +111,12 @@
 	valid_input = /obj/item/reagent_containers/powder/ozium
 	valid_outputs = list(/obj/item/alch/ozium = 1)
 	bonus_chance_outputs = list(/obj/item/alch/airdust =25,/obj/item/alch/ozium = 25)
+
+/datum/alch_grind_recipe/sunflower
+	name = "Sunflower"
+	valid_input = /obj/item/reagent_containers/food/snacks/grown/sunflower
+	valid_outputs = list(/obj/item/alch/solardust = 1)
+	bonus_chance_outputs = list(/obj/item/alch/firedust = 25)
 
 //Ores -> dust
 /datum/alch_grind_recipe/gold_ore
@@ -178,7 +184,7 @@
 	valid_outputs = list(/obj/item/alch/manabloompowder = 1)
 	bonus_chance_outputs = list(/obj/item/alch/manabloompowder = 25)
 
-/datum/alch_grind_recipe/
+/datum/alch_grind_recipe/infernaldust
 	name = "Infernal Dust"
 	valid_input = /datum/crafting_recipe/roguetown/arcana/hellhoundfang
 	valid_outputs = list(/obj/item/alch/infernaldust = 1)

@@ -272,12 +272,21 @@
 
 /obj/item/alch/infernaldust
 	name = "infernal dust"
-	desc =
-	icon_state = "evildust"
+	desc = "The remains of an abyssal tether to this plane, banished or slain. Best handled with gloves."
+	icon_state = "infernaldust"
 
-	major_pot =
-	med_pot = 
-	minor_pot =
+	major_pot = /datum/alch_cauldron_recipe/fire_potion
+	med_pot = /datum/alch_cauldron_recipe/int_potion
+	minor_pot = /datum/alch_cauldron_recipe/per_potion
+
+/obj/item/alch/solardust
+	name = "solar dust"
+	desc = "A pinch of Astrata worked into radiant matter. Looking at it hurts your eyes."
+	icon_state = "solardust"
+
+	major_pot = /datum/alch_cauldron_recipe/fire_potion
+	med_pot = /datum/alch_cauldron_recipe/int_potion
+	minor_pot = /datum/alch_cauldron_recipe/per_potion
 
 /obj/item/alch/berrypowder
 	name = "berry powder"

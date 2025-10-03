@@ -10,7 +10,7 @@ The naturally inquisitive mind of a Gnome inclines them towards arcane pursuits,
 Gnomish folk have an earned reputation for being brilliant tradespeople and crafters, although their rapid thoughts often lead to them seeming scatterbrained to the other beings of Azuria.<br>\
 Gnomes are typically a mixed race of Dwarves and a magical race, typically Elves when the two aren't arguing, but some are born with fae blood as well. <br>\
 Even though they are of mixed blood and smaller than typical dwarves, most gnomes and dwarves still regard each other as kin.<br>\
-	(+1 Intelligence, +1 Perception, -1 Constitution)"
+	(+1 Intelligence, +1 Perception)"
 
 	skin_tone_wording = "Skintone"
 
@@ -29,14 +29,16 @@ Even though they are of mixed blood and smaller than typical dwarves, most gnome
 	soundpack_m = /datum/voicepack/male/elf
 	soundpack_f = /datum/voicepack/female/elf
 	use_f = TRUE
+	use_m = TRUE
 	custom_clothes = TRUE
 	clothes_id = "dwarf"
 	offset_features = list(
-		OFFSET_ID = list(0,0), OFFSET_GLOVES = list(0,0), OFFSET_WRISTS = list(0,0),\
+		OFFSET_ID = list(0,0), OFFSET_GLOVES = list(0,-4), OFFSET_WRISTS = list(0,-4),\
 		OFFSET_CLOAK = list(0,0), OFFSET_FACEMASK = list(0,-5), OFFSET_HEAD = list(0,-5), \
 		OFFSET_FACE = list(0,-5), OFFSET_BELT = list(0,-5), OFFSET_BACK = list(0,-4), \
-		OFFSET_NECK = list(0,-5), OFFSET_MOUTH = list(0,-6), OFFSET_PANTS = list(0,0), \
-		OFFSET_SHIRT = list(0,0), OFFSET_ARMOR = list(0,0), OFFSET_HANDS = list(0,-3), \
+		OFFSET_NECK = list(0,-5), OFFSET_MOUTH = list(0,-5), OFFSET_PANTS = list(0,0), \
+		OFFSET_SHIRT = list(0,0), OFFSET_ARMOR = list(0,0), OFFSET_HANDS = list(0,-4), \
+		
 		OFFSET_ID_F = list(0,-4), OFFSET_GLOVES_F = list(0,-4), OFFSET_WRISTS_F = list(0,-4), OFFSET_HANDS_F = list(0,-4), \
 		OFFSET_CLOAK_F = list(0,0), OFFSET_FACEMASK_F = list(0,-5), OFFSET_HEAD_F = list(0,-5), \
 		OFFSET_FACE_F = list(0,-5), OFFSET_BELT_F = list(0,-5), OFFSET_BACK_F = list(0,-5), \

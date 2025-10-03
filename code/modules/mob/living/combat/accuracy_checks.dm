@@ -15,6 +15,8 @@
 		return zone
 	if( (target.dir == turn(get_dir(target,user), 180)))
 		return zone
+	if(target.stat == UNCONSCIOUS || target.stat == DEAD)
+		return zone
 
 	var/chance2hit = 0
 

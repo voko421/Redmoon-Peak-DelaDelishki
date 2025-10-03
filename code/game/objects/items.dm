@@ -1543,13 +1543,12 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		visible_message(span_info("Peel count lost on [src]!"))
 	peel_count = 0
 
-/obj/item/proc/reduce_peel(amt, silent = FALSE)
+/obj/item/proc/reduce_peel(amt)
 	if(peel_count > amt)
 		peel_count -= amt
 	else
 		peel_count = 0
-	if(!silent)
-		visible_message(span_info("Peel reduced to [peel_count == 0 ? "none" : "[peel_count]"] on [src]!"))
+	visible_message(span_info("Peel reduced to [peel_count == 0 ? "none" : "[peel_count]"] on [src]!"))
 
 /proc/attackzone2coveragezone(location)
 	switch(location)

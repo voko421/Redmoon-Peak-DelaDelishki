@@ -27,19 +27,19 @@
     conditional_buff,
     situational_bonus
 )
-    *message_out = span_info("Foul fumes billow outward as [target] is restored!")
-    *message_self = span_notice("A noxious scent burns my nostrils, but I feel better!")
+	*message_out = span_info("Foul fumes billow outward as [target] is restored!")
+	*message_self = span_notice("A noxious scent burns my nostrils, but I feel better!")
 
-    var/bonus = 0
+	var/bonus = 0
 
-    for(var/obj/effect/decal/cleanable/blood/blood in oview(5, target))
-        bonus = min(bonus + 0.1, 2.5)
-
+	for(var/obj/effect/decal/cleanable/blood/blood in oview(5, target))
+		bonus = min(bonus + 0.1, 2.5)
+	
 	if(!bonus)
 		return
 		
-    *situational_bonus = bonus
-    *conditional_buff = TRUE
+	*situational_bonus = bonus
+	*conditional_buff = TRUE
 
 /datum/patron/inhumen/graggar/on_gain(mob/living/living)
 	. = ..()

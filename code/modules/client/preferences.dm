@@ -1310,9 +1310,9 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 
 	else if(href_list["preference"] == "agevet")
 		if(!user.check_agevet())
-			to_chat(usr, span_info("- This value doesn't affect you, your whitelist, or your mechanics in <i>any</i> way. If you'd like to show others that you've verified your date-of-birth with a censored ID, however, just open a ticket in Azure Peak's #vet-here channel.</b>"))
+			to_chat(usr, span_info("This value doesn't affect you, your whitelist, or your mechanics in any way. If you'd like to show others that you've verified your date-of-birth with a censored ID, however, just open a ticket in Azure Peak's <b>#vet-here</b> channel."))
 		else
-			to_chat(usr, span_love("- You have been <i>successfully</i> verified! Go get some, champ!"))
+			to_chat(usr, span_love("You have been successfully verified! Go get some, champ!"))
 
 	else if(href_list["preference"] == "culinary")
 		show_culinary_ui(user)

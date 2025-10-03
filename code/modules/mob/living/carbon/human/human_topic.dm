@@ -35,7 +35,7 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 			dat += "<center><i><font color = '#b9b9b9'; font size = 1>This is a LEGACY profile from the naive daes of Psydon!</font></i></center>"
 		var/agevetted = client.check_agevet()
 		if(agevetted)
-			dat += "<center><i><font color = '#74cde0'; font size = 1>This profile belongs to a VERIFIED traveler of Azuria!</font></i></center>"
+			dat += "<center><i><font color = '#74cde0'; font size = 1>This profile belongs to an AGE-VERIFIED traveler of Azuria!</font></i></center>"
 		if(valid_headshot_link(null, headshot_link, TRUE))
 			dat += ("<div align='center'><img src='[headshot_link]' width='325px' height='325px'></div>")
 		if(flavortext)

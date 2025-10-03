@@ -103,5 +103,29 @@
 			"dependsOn": "dm: reparse",
 			"label": "Build All (low memory mode)"
 		},
+		{
+            "type": "process",
+            "command": "tools/build/build",
+            "args": ["-DUNIT_TESTS -DLOCALTEST"],
+            "windows": {
+                "command": ".\\tools\\build\\build.bat",
+                "args": ["-DUNIT_TESTS -DLOCALTEST"]
+            },
+            "options": {
+                "env": {
+                    "DM_EXE": "${config:dreammaker.byondPath}"
+                }
+            },
+            "problemMatcher": [
+                "$dreammaker",
+                "$tsc",
+                "$eslint-stylish"
+            ],
+            "group": {
+                "kind": "build"
+            },
+            "dependsOn": "dm: reparse",
+            "label": "Build All (unit tests)"
+        },
 	]
 }

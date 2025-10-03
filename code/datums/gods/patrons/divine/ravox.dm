@@ -20,6 +20,7 @@
 		"THROUGH PERSISTENCE, GLORY!",
 	)
 	storyteller = /datum/storyteller/ravox
+	COOLDOWN_DECLARE(lesser_heal_buff_cooldown)
 
 // Near a knight statue, cross, or within the church
 /datum/patron/divine/ravox/can_pray(mob/living/follower)
@@ -52,15 +53,17 @@
 
 	var/bonus = 0
 
-	if(!target.stat)
-		bonus += 1.5
-
-	if(target.STASTR < 10 || user.STASTR > target.STASTR)
+	if(istype(target.rmb_intent, /datum/rmb_intent/strong))
 		bonus++
-
-	if(HAS_TRAIT(target, TRAIT_PACIFISM))
+	
+	if(istype(target.get_active_held_item(), /obj/item/weapon))
+		bonus += 0.5
+	
+	if(target == user && target.blood_volume <= BLOOD_VOLUME_OKAY && COOLDOWN_FINISHED(src, lesser_heal_buff_cooldown))
+		user.emote("warcry")
+		user.blood_volume += BLOOD_VOLUME_SURVIVE / 3
 		bonus += 2
-		*message_self = span_notice("I feel strange powers guarding my way!")
+		COOLDOWN_START(src, lesser_heal_buff_cooldown, 30 SECONDS)
 
 	if(!bonus)
 		return

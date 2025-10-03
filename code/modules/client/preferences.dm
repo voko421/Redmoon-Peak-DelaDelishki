@@ -1310,9 +1310,9 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 
 	else if(href_list["preference"] == "agevet")
 		if(!user.check_agevet())
-			to_chat(usr, span_info("- You are a whitelisted player with full access to the server's features. If you'd also like to show others that you've <b>VERIFIED</b> your date-of-birth with a censored ID, you can open a ticket in Azure Peak's <b>#vet-here</b> channel. Note that this is a <i>purely optional process</i> which - besides awarding a special header for your flavortext - doesn't affect your whitelist or mechanics in any way."))
+			to_chat(usr, span_info("- You are a whitelisted player with full access to the server's features. If you'd also like to show others that you've been <b>AGE-vERIFIED</b> with a censored ID, you can open a ticket in Azure Peak's <b>#vet-here</b> channel. Note that this is a purely optional process, and - besides awarding a special header for your flavortext - doesn't affect you in any other way."))
 		else
-			to_chat(usr, span_love("- You have been successfully <b>VERIFIED!</b>"))
+			to_chat(usr, span_love("- You have been successfully <b>AGE-VERIFIED!</b>"))
 
 	else if(href_list["preference"] == "culinary")
 		show_culinary_ui(user)

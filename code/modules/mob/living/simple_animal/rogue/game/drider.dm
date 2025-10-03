@@ -32,6 +32,7 @@
 	can_saddle = TRUE
 	can_buckle = TRUE
 	aggressive = 1
+	move_to_delay = 8
 
 /mob/living/simple_animal/hostile/retaliate/rogue/drider/tame
 	tame = TRUE

@@ -30,14 +30,14 @@
     *message_out = span_info("Foul fumes billow outward as [target] is restored!")
     *message_self = span_notice("A noxious scent burns my nostrils, but I feel better!")
 
-    var/bonus = 0 // to avoid many derefs in loop
+    var/bonus = 0
 
     for(var/obj/effect/decal/cleanable/blood/blood in oview(5, target))
-        if(bonus == 2.5)
-            break
-        
-        bonus += 0.1
+        bonus = min(bonus + 0.1, 2.5)
 
+	if(!bonus)
+		return
+		
     *situational_bonus = bonus
     *conditional_buff = TRUE
 

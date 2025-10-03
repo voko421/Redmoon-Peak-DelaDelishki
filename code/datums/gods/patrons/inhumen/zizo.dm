@@ -56,16 +56,16 @@
 	*message_out = span_info("Vital energies are sapped towards [target]!")
 	*message_self = span_notice("The life around me pales as I am restored!")
 
-	var/buff = 0
+	var/bonus = 0
 
 	for(var/obj/item/natural/bone/bone in oview(5, user))
-		buff += 0.5
+		bonus += 0.5
 
 	for(var/obj/item/natural/bundle/bone/bone in oview(5, user))
-		buff += (bone.amount * 0.5)
+		bonus += (bone.amount * 0.5)
 
-	if(!buff)
+	if(!bonus)
 		return
 
 	*conditional_buff = TRUE
-	*situational_bonus = min(buff, 5)
+	*situational_bonus = min(bonus, 5)

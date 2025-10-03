@@ -54,20 +54,20 @@
 	*message_self = span_notice("I'm infused with primal energies!")
 				
 	var/list/natural_stuff = list(/obj/structure/flora/roguegrass, /obj/structure/flora/roguetree, /obj/structure/flora/rogueshroom, /obj/structure/soil, /obj/structure/flora/newtree, /obj/structure/flora/tree, /obj/structure/glowshroom)
-	var/buff = 0
+	var/bonus = 0
 
 	// the more natural stuff around US, the more we heal
 	for (var/obj/obj in oview(5, user))
-		if(!(obj in natural_stuff))
+		if(!(obj.type in natural_stuff))
 			continue
 
-		buff = min(buff + 0.1, 2)
+		bonus = min(bonus + 0.1, 2)
 
 	for(var/obj/structure/flora/roguetree/wise/tree in oview(5, user))
-		buff += 1.5
+		bonus += 1.5
 
-	if(!buff)
+	if(!bonus)
 		return
 
 	*conditional_buff = TRUE
-	*situational_bonus = buff
+	*situational_bonus = bonus

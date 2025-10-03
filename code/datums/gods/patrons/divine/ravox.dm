@@ -50,20 +50,20 @@
 	*message_out = span_info("An air of righteous defiance rises near [target]!")
 	*message_self = span_notice("I'm filled with an urge to fight on!")
 
-	var/buff = 0
+	var/bonus = 0
 
 	if(!target.stat)
-		buff += 1.5
+		bonus += 1.5
 
 	if(target.STASTR < 10 || user.STASTR > target.STASTR)
-		buff++
+		bonus++
 
 	if(HAS_TRAIT(target, TRAIT_PACIFISM))
-		buff += 2
-		*message_self = span_notice("I can feel, some strange powers guards me!")
+		bonus += 2
+		*message_self = span_notice("I feel strange powers guarding my way!")
 
-	if(!buff)
+	if(!bonus)
 		return
 
-	*conditional_buff = buff
-	*situational_bonus = TRUE
+	*conditional_buff = TRUE
+	*situational_bonus = bonus

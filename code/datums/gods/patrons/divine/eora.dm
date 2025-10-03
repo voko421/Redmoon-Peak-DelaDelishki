@@ -57,16 +57,16 @@
 	*message_out = span_info("An emanance of love blossoms around [target]!")
 	*message_self = span_notice("I'm filled with the restorative warmth of love!")
 
-	var/buff = 0
+	var/bonus = 0
 
 	if(HAS_TRAIT(target, TRAIT_PACIFISM))
-		buff += 2.5
+		bonus += 2.5
 
 	if(HAS_TRAIT(user, TRAIT_PACIFISM))
-		buff += 1.5
+		bonus += 1.5
 
-	if(!buff)
+	if(!bonus)
 		return
 
-	*situational_bonus = buff
+	*situational_bonus = bonus
 	*conditional_buff = TRUE

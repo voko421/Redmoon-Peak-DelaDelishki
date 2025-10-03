@@ -59,17 +59,17 @@
 	*message_self = span_info("I feel the heat of a forge soothing my pains!")
 
 	var/list/firey_stuff = list(/obj/machinery/light/rogue/torchholder, /obj/machinery/light/rogue/campfire, /obj/machinery/light/rogue/hearth, /obj/machinery/light/rogue/wallfire, /obj/machinery/light/rogue/wallfire/candle, /obj/machinery/light/rogue/forge)
-	var/buff = 0
+	var/bonus = 0
 
 	// extra healing for every source of fire/light near us
 	for(var/obj/obj in oview(5, user))
 		if(!(obj.type in firey_stuff))
 			continue
 
-		buff = min(buff + 0.5, 2.5)
+		bonus = min(bonus + 0.5, 2.5)
 
-	if(!buff)
+	if(!bonus)
 		return
 
-	*situational_bonus = TRUE
-	*conditional_buff = buff
+	*situational_bonus = bonus
+	*conditional_buff = TRUE

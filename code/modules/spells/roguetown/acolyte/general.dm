@@ -73,8 +73,7 @@
 		break
 
 	if(!no_embeds)
-		message_out = span_warning("The wounds tear and rip around the embedded objects!")
-		message_self = span_warning("Agonising pain shoots through your body as magycks try to sew around the embedded objects!")
+		target.visible_message("The wounds tear and rip around the embedded objects!", "Agonising pain shoots through your body as magycks try to sew around the embedded objects!")
 		human.adjustBruteLoss(20)
 		playsound(target, 'sound/combat/dismemberment/dismem (2).ogg', 100)
 		human.emote("agony")

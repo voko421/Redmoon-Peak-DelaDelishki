@@ -35,7 +35,11 @@
 	STALUC = 15
 	loot = list(/obj/effect/temp_visual/lich_dying)
 	projectiletype = /obj/projectile/magic
-	var/allowed_projectile_types = list(/obj/projectile/magic/lightning, /obj/projectile/magic/sickness, /obj/projectile/magic/arcane_barrage, /obj/projectile/magic/acidsplash)
+	var/allowed_projectile_types = list(/obj/projectile/magic/lightning, 
+	/obj/projectile/magic/sickness,
+	/obj/projectile/magic/arcane_barrage, 
+	/obj/projectile/magic/acidsplash,
+	/obj/projectile/magic/aoe/fireball/spitfire)
 	patron = /datum/patron/inhumen/zizo
 	footstep_type = FOOTSTEP_MOB_SHOE
 	stat_attack = UNCONSCIOUS

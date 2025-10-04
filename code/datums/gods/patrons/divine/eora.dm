@@ -23,7 +23,7 @@
 	traits_tier = list(TRAIT_EORAN_CALM = CLERIC_T0, TRAIT_EORAN_SERENE = CLERIC_T2)
 	storyteller = /datum/storyteller/eora
 
-// Near a gambling machine, cross, or within the church
+// Near a psycross, inside the church, holding poppy flowers, or has pacifism trait
 /datum/patron/divine/eora/can_pray(mob/living/follower)
 	. = ..()
 	// Allows prayer near psycross

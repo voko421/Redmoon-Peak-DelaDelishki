@@ -66,19 +66,14 @@
 
 
 /obj/item/clothing/head/roguetown/helmet/heavy/guard
-	name = "steel savoyard"
+	name = "savoyard"
 	desc = "A helmet with a menacing visage."
-	icon_state = "steelsavoyard"
+	icon_state = "guardhelm"
 	emote_environment = 3
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
 	block2add = FOV_BEHIND
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
-
-/obj/item/clothing/head/roguetown/helmet/heavy/guard/bogman
-	name = "steel bogman's helmet"
-	desc = "A helmet featuring the face of a snarling goblin. Once worn by the Bogmen, now a relic of old Azuria."
-	icon_state = "guardhelm"
 
 /obj/item/clothing/head/roguetown/helmet/heavy/guard/aalloy
 	name = "decrepit savoyard"

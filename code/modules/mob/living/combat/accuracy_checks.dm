@@ -62,6 +62,8 @@
 	// If you're floored, you will aim feet and legs easily. There's a check for whether the victim is laying down already.
 	if(!(user.mobility_flags & MOBILITY_STAND) && (zone in list(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG, BODY_ZONE_PRECISE_R_FOOT, BODY_ZONE_PRECISE_L_FOOT)))
 		chance2hit += 32
+	if(!target.mind)	//Bandaid / cope change to alleviate lack of forced accuracy
+		chance2hit += 24
 
 	chance2hit = CLAMP(chance2hit, 5, 93)
 

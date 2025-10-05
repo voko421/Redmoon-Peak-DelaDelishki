@@ -1,4 +1,4 @@
-#define BAOTHA_PAIN_DIVIDER 5.7 // max bonus at 200 pain and pain_mod = 1
+#define BAOTHA_PAIN_DIVIDER 4 // max bonus at 100 pain and pain_mod = 1
 
 /datum/patron/inhumen/baotha
 	name = "Baotha"
@@ -62,7 +62,7 @@
 	*message_out = span_info("Hedonistic impulses and emotions throb all about from [target].")
 	*message_self = span_notice("An intoxicating rush of narcotic delight wipes away my pains!")
 
-	if(HAS_TRAIT(target, TRAIT_NOPAIN) || !ishuman(target))
+	if((HAS_TRAIT(target, TRAIT_NOPAIN) && !HAS_TRAIT(target, TRAIT_CRACKHEAD)) || !ishuman(target))
 		*message_self = span_notice("An intoxicating rush of narcotic delight flows through me!")
 		return
 

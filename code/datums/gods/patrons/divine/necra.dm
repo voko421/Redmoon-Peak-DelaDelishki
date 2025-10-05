@@ -49,31 +49,8 @@
 	*message_out = span_info("A sense of quiet respite radiates from [target]!")
 	*message_self = span_notice("I feel the Undermaiden's gaze turn from me for now!")
 
-	var/bonus = 0
-	var/list/undeads = list()
-	var/max_range = 5
-
-	for(var/mob/living/living in oview(max_range, user))
-		if(living.mob_biotypes & MOB_UNDEAD)
-			undeads += living
-			continue
-
-		if(living.stat != DEAD)
-			continue
-		
-		bonus += 0.5
-
-	if(LAZYLEN(undeads))
-		bonus += target == user ? 2.5 : 1
-
-		var/mob/living/undead = pick(undeads)
-		var/distance = get_dist(undead, user)
-		var/slowdown_duration = undead.mind && undead.mind.has_antag_datum(/datum/antagonist/vampirelord) ? 0 : max(1, (max_range + 1) - distance)
-        
-		undead.Slowdown(slowdown_duration)
-
-	if(!bonus)
-		return
-
-	*conditional_buff = TRUE
-	*situational_bonus = min(bonus, 2.5)
+	if(iscarbon(target))
+		var/mob/living/carbon/carbon = target
+		if(carbon.health <= (carbon.maxHealth * 0.25))
+			*conditional_buff = TRUE
+			*situational_bonus = 2.5

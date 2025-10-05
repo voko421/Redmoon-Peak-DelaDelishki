@@ -1,3 +1,5 @@
+#define BAOTHA_LESSER_HEAL_DIVIDER 5.7 // max heal at 200 pain
+
 /datum/patron/inhumen/baotha
 	name = "Baotha"
 	domain = "Goddess of Hedonism, Addiction, Anguish, and Heartbreak"
@@ -60,7 +62,23 @@
 	*message_out = span_info("Hedonistic impulses and emotions throb all about from [target].")
 	*message_self = span_notice("An intoxicating rush of narcotic delight wipes away my pains!")
 
-	if(iscarbon(target))
-		if(target.health <= (target.maxHealth * 0.5))
-			*conditional_buff = TRUE
-			*situational_bonus = 2.5
+	if(HAS_TRAIT(target, TRAIT_NOPAIN) || !ishuman(target))
+		*message_self = span_notice("An intoxicating rush of narcotic delight flows through me!")
+		return
+
+	var/mob/living/carbon/human/human = target
+	var/bonus = 0
+
+	for(var/datum/wound/wound in human.get_wounds())
+		bonus += wound.woundpain
+
+	if(!bonus)
+		return
+
+	var/pure_bonus = sqrt(bonus) / BAOTHA_LESSER_HEAL_DIVIDER
+	bonus = HAS_TRAIT(target, TRAIT_DEPRAVED) ? pure_bonus : pure_bonus * human.physiology.pain_mod
+
+	*conditional_buff = TRUE
+	*situational_bonus = min(bonus, 2.5)
+
+#undef BAOTHA_LESSER_HEAL_DIVIDER

@@ -46,11 +46,33 @@
     conditional_buff,
     situational_bonus
 )
-	*message_out = span_info("A sense of quiet respite radiates from [target]!")
-	*message_self = span_notice("I feel the Undermaiden's gaze turn from me for now!")
-				
-	if(iscarbon(target))
-		var/mob/living/carbon/carbon = target
-		if(carbon.health <= (carbon.maxHealth * 0.25))
-			*conditional_buff = TRUE
-			*situational_bonus = 2.5
+    *message_out = span_info("A sense of quiet respite radiates from [target]!")
+    *message_self = span_notice("I feel the Undermaiden's gaze turn from me for now!")
+
+    var/bonus = 0
+    var/mob/living/undead
+    var/max_range = 5
+
+    for(var/mob/living/living in oview(max_range, user))
+        if(living.mob_biotypes & MOB_UNDEAD)
+            undead = living
+            break
+
+        if(living.stat != DEAD)
+            continue
+
+        bonus += 0.5
+
+    if(undead)
+        bonus += target == user ? 2.5 : 1
+        
+        var/distance = get_dist(undead, user)
+        var/slowdown_duration = max(1, (max_range + 1) - distance)
+        
+        undead.Slowdown(slowdown_duration SECONDS)
+
+    if(!bonus)
+        return
+
+    *conditional_buff = TRUE
+    *situational_bonus = min(bonus, 2.5)

@@ -69,6 +69,7 @@
 		/obj/item/natural/fibers = 1,
 		)
 	sellprice = 20
+	craftdiff = 3
 
 /datum/crafting_recipe/roguetown/leather/armor/helmet/advanced
 	name = "hardened leather helmet"

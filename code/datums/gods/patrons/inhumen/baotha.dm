@@ -1,4 +1,4 @@
-#define BAOTHA_LESSER_HEAL_DIVIDER 5.7 // max heal at 200 pain
+#define BAOTHA_PAIN_DIVIDER 5.7 // max heal at 200 pain
 
 /datum/patron/inhumen/baotha
 	name = "Baotha"
@@ -67,18 +67,18 @@
 		return
 
 	var/mob/living/carbon/human/human = target
-	var/bonus = 0
+	var/raw_pain = 0
 
 	for(var/datum/wound/wound in human.get_wounds())
-		bonus += wound.woundpain
+		raw_pain += wound.woundpain
 
-	if(!bonus)
+	if(!raw_pain)
 		return
 
-	var/pure_bonus = sqrt(bonus) / BAOTHA_LESSER_HEAL_DIVIDER
-	bonus = HAS_TRAIT(target, TRAIT_DEPRAVED) ? pure_bonus : pure_bonus * human.physiology.pain_mod
+	var/pain = sqrt(raw_pain) / BAOTHA_PAIN_DIVIDER
+	var/bonus = HAS_TRAIT(target, TRAIT_DEPRAVED) ? pain : pain * human.physiology.pain_mod
 
 	*conditional_buff = TRUE
 	*situational_bonus = min(bonus, 2.5)
 
-#undef BAOTHA_LESSER_HEAL_DIVIDER
+#undef BAOTHA_PAIN_DIVIDER

@@ -1,4 +1,4 @@
-#define BAOTHA_PAIN_DIVIDER 5.7 // max heal at 200 pain
+#define BAOTHA_PAIN_DIVIDER 5.7 // max bonus at 200 pain and pain_mod = 1
 
 /datum/patron/inhumen/baotha
 	name = "Baotha"

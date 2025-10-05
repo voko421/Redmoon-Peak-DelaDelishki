@@ -10,6 +10,7 @@
 	experimental_inhand = FALSE
 	grid_width = 64
 	grid_height = 32
+	obj_flags = UNIQUE_RENAME
 
 /*
 NEW SYSTEM

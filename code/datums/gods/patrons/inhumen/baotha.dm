@@ -60,25 +60,31 @@
     situational_bonus
 )
 	*message_out = span_info("Hedonistic impulses and emotions throb all about from [target].")
-	*message_self = span_notice("An intoxicating rush of narcotic delight wipes away my pains!")
+	*message_self = span_notice("An intoxicating rush of narcotic delight wipes away my suffering!")
 
 	if((HAS_TRAIT(target, TRAIT_NOPAIN) && !HAS_TRAIT(target, TRAIT_CRACKHEAD)) || !ishuman(target))
 		*message_self = span_notice("An intoxicating rush of narcotic delight flows through me!")
 		return
 
-	var/mob/living/carbon/human/human = target
+	var/mob/living/carbon/human/human_target = target
+	var/bonus = 0
+
+	if(human_target.has_status_effect(/datum/status_effect/buff/druqks) || human_target.has_status_effect(/datum/status_effect/buff/drunk))
+		bonus += 0.5
+
+	if(!human_target.get_stress_amount())
+		bonus += 0.5
+
 	var/raw_pain = 0
 
-	for(var/datum/wound/wound in human.get_wounds())
+	for(var/datum/wound/wound in human_target.get_wounds())
 		raw_pain += wound.woundpain
 
-	if(!raw_pain)
-		return
-
-	var/pain = sqrt(raw_pain) / BAOTHA_PAIN_DIVIDER
-	var/bonus = HAS_TRAIT(target, TRAIT_DEPRAVED) ? pain : pain * human.physiology.pain_mod
+	if(raw_pain)
+		var/pain = sqrt(raw_pain) / BAOTHA_PAIN_DIVIDER
+		bonus += min(HAS_TRAIT(target, TRAIT_DEPRAVED) ? pain : pain * human_target.physiology.pain_mod, 1.5)
 
 	*conditional_buff = TRUE
-	*situational_bonus = min(bonus, 2.5)
+	*situational_bonus = bonus
 
 #undef BAOTHA_PAIN_DIVIDER

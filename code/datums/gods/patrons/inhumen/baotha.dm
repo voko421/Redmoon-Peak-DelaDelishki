@@ -62,7 +62,7 @@
 	*message_out = span_info("Hedonistic impulses and emotions throb all about from [target].")
 	*message_self = span_notice("An intoxicating rush of narcotic delight wipes away my suffering!")
 
-	if((HAS_TRAIT(target, TRAIT_NOPAIN) && !HAS_TRAIT(target, TRAIT_CRACKHEAD)) || !ishuman(target))
+	if(!ishuman(target))
 		*message_self = span_notice("An intoxicating rush of narcotic delight flows through me!")
 		return
 
@@ -75,12 +75,12 @@
 	if(!human_target.get_stress_amount())
 		bonus += 0.5
 
-	var/raw_pain = 0
+	if(!HAS_TRAIT(target, TRAIT_NOPAIN) || (HAS_TRAIT(target, TRAIT_NOPAIN) && HAS_TRAIT(target, TRAIT_CRACKHEAD)))
+		var/raw_pain = 0
 
-	for(var/datum/wound/wound in human_target.get_wounds())
-		raw_pain += wound.woundpain
+		for(var/datum/wound/wound in human_target.get_wounds())
+			raw_pain += wound.woundpain
 
-	if(raw_pain)
 		var/pain = sqrt(raw_pain) / BAOTHA_PAIN_DIVIDER
 		bonus += min(HAS_TRAIT(target, TRAIT_DEPRAVED) ? pain : pain * human_target.physiology.pain_mod, 1.5)
 

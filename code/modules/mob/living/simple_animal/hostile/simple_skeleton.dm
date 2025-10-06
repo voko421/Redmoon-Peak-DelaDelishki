@@ -35,6 +35,8 @@
 	faction = list("undead")
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
 	del_on_death = TRUE
+	var/start_take_damage = FALSE
+	var/damage_check
 
 	can_have_ai = FALSE //disable native ai
 	AIStatus = AI_OFF
@@ -134,11 +136,23 @@
 		if(lich_antag && user.real_name)
 			faction |= "[user.real_name]_faction"
 
+	damage_check = world.time
+	addtimer(CALLBACK(src, PROC_REF(deathtime)), 1 MINUTES)
+
+/mob/living/simple_animal/hostile/rogue/skeleton/proc/deathtime()
+	start_take_damage = TRUE
+	var/newcolor = rgb(207, 135, 255)
+	src.add_atom_colour(newcolor, TEMPORARY_COLOUR_PRIORITY)
+	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, remove_atom_colour), TEMPORARY_COLOUR_PRIORITY, newcolor), 1 MINUTES)
+
 /mob/living/simple_animal/hostile/rogue/skeleton/Life()
 	. = ..()
 	if(!target)
 		if(prob(60))
 			emote(pick("idle"), TRUE)
+	if(start_take_damage == TRUE)
+		if(world.time > damage_check + 5 SECONDS)
+			src.adjustFireLoss(2.5) //+- one minute for 100 HP (any skeleton) and two minute for guard skeleton (200 HP)
 
 /mob/living/simple_animal/hostile/rogue/skeleton/taunted(mob/user)
 	emote("aggro")

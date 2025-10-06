@@ -12,6 +12,11 @@
 	grid_height = 32
 	obj_flags = UNIQUE_RENAME
 
+
+/obj/item/cooking/platter/examine()
+	. = ..()
+	. += span_info("Can be renamed with a feather. Name will be overridden by plating or finishing food.")
+
 /*
 NEW SYSTEM
 What it does:

@@ -37,6 +37,8 @@
 	del_on_death = TRUE
 	var/start_take_damage = FALSE
 	var/damage_check
+	var/wither = 2.5
+	var/newcolor = rgb(207, 135, 255) //used for livetime code.
 
 	can_have_ai = FALSE //disable native ai
 	AIStatus = AI_OFF
@@ -127,32 +129,48 @@
 		else
 			summoner = user.name
 	if (is_summoned || cabal_affine)
-		faction |= "cabal"
+		faction = list("cabal") //No mix undead faction and cabal, summoned skeletons can attack any undead, mark your friends
 	// adds the name of the summoner to the faction, to avoid the hooded "Unknown" bug with Skeleton IDs
 	if(user && user.mind && user.mind.current)
-		faction |= "[user.mind.current.real_name]_faction"
+		faction = list("[user.mind.current.real_name]_faction") //if you summon this, he not affected on cabal. This skeletons can attack any undead and other zizo affected characters
 		// lich also gets to have friendlies, as a treat
 		var/datum/antagonist/lich/lich_antag = user.mind.has_antag_datum(/datum/antagonist/lich)
 		if(lich_antag && user.real_name)
-			faction |= "[user.real_name]_faction"
+			faction = list("undead", "[user.mind.current.real_name]_faction", "[user.real_name]_faction") //no changes. Undead faction + lich_name faction
 
 	damage_check = world.time
 	addtimer(CALLBACK(src, PROC_REF(deathtime)), 1 MINUTES)
 
 /mob/living/simple_animal/hostile/rogue/skeleton/proc/deathtime()
 	start_take_damage = TRUE
-	var/newcolor = rgb(207, 135, 255)
 	src.add_atom_colour(newcolor, TEMPORARY_COLOUR_PRIORITY)
-	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, remove_atom_colour), TEMPORARY_COLOUR_PRIORITY, newcolor), 1 MINUTES)
 
-/mob/living/simple_animal/hostile/rogue/skeleton/Life()
+#define NECRO_SEE "necro_see"
+
+/mob/living/simple_animal/hostile/rogue/skeleton/Life(mob/user)
 	. = ..()
 	if(!target)
 		if(prob(60))
 			emote(pick("idle"), TRUE)
+	var/list/mobs_in_range
+	mobs_in_range = oview(8, src)
+	if(world.time > damage_check + 10 SECONDS)
+		for(user in mobs_in_range)
+			if(user && user.mind && user.mind.current)
+				wither = 2.5
+				src.remove_filter(NECRO_SEE)
+				if(start_take_damage == TRUE)
+					src.add_atom_colour(newcolor, TEMPORARY_COLOUR_PRIORITY)
+			else
+				wither = 0
+				src.add_filter(NECRO_SEE, 2, list("type" = "outline", "color" = "#8a0deaff", "alpha" = 80, "size" = 1))
+				if(start_take_damage == TRUE)
+					src.remove_atom_colour(TEMPORARY_COLOUR_PRIORITY)
 	if(start_take_damage == TRUE)
 		if(world.time > damage_check + 5 SECONDS)
-			src.adjustFireLoss(2.5) //+- one minute for 100 HP (any skeleton) and two minute for guard skeleton (200 HP)
+			src.adjustFireLoss(wither) //+- one minute for 100 HP (any skeleton) and two minute for guard skeleton (200 HP)
+
+#undef NECRO_SEE
 
 /mob/living/simple_animal/hostile/rogue/skeleton/taunted(mob/user)
 	emote("aggro")

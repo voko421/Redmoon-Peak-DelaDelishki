@@ -982,7 +982,7 @@
 /obj/item/rogueweapon/greatsword/grenz/flamberge
 	name = "steel flamberge"
 	desc = "A close relative of the Grenzelhoftian \"zweihander\", favored by Otavan nobility. The name comes from its unique, flame-shaped blade; a labor only surmountable by Psydonia's finest weaponsmiths."
-	icon_state = "steelflamb"
+	icon_state = "steelflamberge"
 	max_blade_int = 180
 	max_integrity = 130
 	wdefense = 6

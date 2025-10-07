@@ -139,7 +139,8 @@
 			faction = list("undead", "[user.mind.current.real_name]_faction", "[user.real_name]_faction") //no changes. Undead faction + lich_name faction
 
 	damage_check = world.time
-	addtimer(CALLBACK(src, PROC_REF(deathtime)), 1 MINUTES)
+	if(is_summoned) //check, if it NOT summoned skeleton, he lifetime - infinity. For mapping-spawned skeltons
+		addtimer(CALLBACK(src, PROC_REF(deathtime)), 1 MINUTES)
 
 /mob/living/simple_animal/hostile/rogue/skeleton/proc/deathtime()
 	start_take_damage = TRUE
@@ -158,7 +159,7 @@
 		for(user in mobs_in_range)
 			if(HAS_TRAIT(user, TRAIT_CABAL)) //any zizo-lover near him
 				if(user && user.mind && user.mind.current)
-					wither = 2.5
+					wither = 8
 					src.remove_filter(NECRO_SEE)
 					if(start_take_damage == TRUE)
 						src.add_atom_colour(newcolor, TEMPORARY_COLOUR_PRIORITY)

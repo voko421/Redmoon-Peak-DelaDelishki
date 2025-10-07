@@ -75,7 +75,7 @@
 	if(!human_target.get_stress_amount())
 		bonus += 0.5
 
-	if(!HAS_TRAIT(target, TRAIT_NOPAIN) || (HAS_TRAIT(target, TRAIT_NOPAIN) && HAS_TRAIT(target, TRAIT_CRACKHEAD)))
+	if(!HAS_TRAIT(target, TRAIT_NOPAIN) || HAS_TRAIT(target, TRAIT_CRACKHEAD))
 		var/raw_pain = 0
 
 		for(var/datum/wound/wound in human_target.get_wounds())

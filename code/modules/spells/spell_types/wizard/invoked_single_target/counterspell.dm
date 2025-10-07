@@ -4,7 +4,7 @@
 	cost = 3
 	releasedrain = 35
 	chargedrain = 1
-	chargetime = 15
+	chargetime = 0
 	recharge_time = 80 SECONDS
 	warnie = "spellwarning"
 	no_early_release = TRUE

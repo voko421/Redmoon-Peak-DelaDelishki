@@ -1,5 +1,3 @@
-#define BAOTHA_PAIN_DIVIDER 4 // max bonus at 100 pain and pain_mod = 1
-
 /datum/patron/inhumen/baotha
 	name = "Baotha"
 	domain = "Goddess of Hedonism, Addiction, Anguish, and Heartbreak"
@@ -51,6 +49,8 @@
 	to_chat(follower, span_danger("For Baotha to hear my prayers I must either be in the church of the abandoned, near an inverted psycross, within the town's bathhouse, or actively partaking in one of various types of nose-candy!"))
 	return FALSE
 
+#define BAOTHA_SUFFERING_DIVIDER 4.714 // max bonus at 50 pain/bleedrate and pain_mod = 1
+
 /datum/patron/inhumen/baotha/on_lesser_heal(
     mob/living/user,
     mob/living/target,
@@ -76,15 +76,15 @@
 		bonus += 0.5
 
 	if(!HAS_TRAIT(target, TRAIT_NOPAIN) || HAS_TRAIT(target, TRAIT_CRACKHEAD))
-		var/raw_pain = 0
+		var/raw_suffering = 0
 
 		for(var/datum/wound/wound in human_target.get_wounds())
-			raw_pain += wound.woundpain
+			raw_suffering += wound.woundpain + wound.bleed_rate
 
-		var/pain = sqrt(raw_pain) / BAOTHA_PAIN_DIVIDER
-		bonus += min(HAS_TRAIT(target, TRAIT_DEPRAVED) ? pain : pain * human_target.physiology.pain_mod, 1.5)
+		var/suffering = sqrt(raw_suffering) / BAOTHA_SUFFERING_DIVIDER
+		bonus += min(HAS_TRAIT(target, TRAIT_DEPRAVED) ? suffering : suffering * human_target.physiology.pain_mod, 1.5)
 
 	*conditional_buff = TRUE
 	*situational_bonus = bonus
 
-#undef BAOTHA_PAIN_DIVIDER
+#undef BAOTHA_SUFFERING_DIVIDER

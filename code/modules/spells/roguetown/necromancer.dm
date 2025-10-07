@@ -200,7 +200,7 @@
 		revert_cast()
 		return FALSE
 
-	target.faction |= list("cabal", "[user.mind.current.real_name]_faction")
+	target.faction = list("[user.mind.current.real_name]_faction") //only user faction
 	target.visible_message(span_notice("[target] turns its head to pay heed to [user]!"))
 	if(!target.ai_controller)
 		target.ai_controller = /datum/ai_controller/undead

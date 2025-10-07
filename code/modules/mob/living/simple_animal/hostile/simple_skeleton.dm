@@ -156,11 +156,12 @@
 	mobs_in_range = oview(8, src)
 	if(world.time > damage_check + 10 SECONDS)
 		for(user in mobs_in_range)
-			if(user && user.mind && user.mind.current)
-				wither = 2.5
-				src.remove_filter(NECRO_SEE)
-				if(start_take_damage == TRUE)
-					src.add_atom_colour(newcolor, TEMPORARY_COLOUR_PRIORITY)
+			if(HAS_TRAIT(user, TRAIT_CABAL)) //any zizo-lover near him
+				if(user && user.mind && user.mind.current)
+					wither = 2.5
+					src.remove_filter(NECRO_SEE)
+					if(start_take_damage == TRUE)
+						src.add_atom_colour(newcolor, TEMPORARY_COLOUR_PRIORITY)
 			else
 				wither = 0
 				src.add_filter(NECRO_SEE, 2, list("type" = "outline", "color" = "#8a0deaff", "alpha" = 80, "size" = 1))

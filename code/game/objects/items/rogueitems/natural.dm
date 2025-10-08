@@ -61,6 +61,9 @@
 	var/base_width = 32
 	var/base_height = 32
 
+/obj/item/natural/bundle/burn()
+	. = ..(amount)
+
 /obj/item/natural/bundle/attackby(obj/item/W, mob/living/user)
 	if(item_flags & IN_STORAGE)
 		return

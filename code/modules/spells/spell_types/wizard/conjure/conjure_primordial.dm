@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/invoked/conjure_primordial
 	name = "Conjure Primordial"
-	desc = "Consume a handful of fire, water, or air essence and conjures that type of Primordial."
+	desc = "Consume a handful of fire, water, or air essentia and conjures that type of Primordial."
 	clothes_req = FALSE
 	overlay_state = "rune0"
 	range = 7

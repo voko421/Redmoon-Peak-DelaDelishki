@@ -1,6 +1,7 @@
 /obj/effect/proc_holder/spell/invoked/conjure_primordial
 	name = "Conjure Primordial"
-	desc = "Consume a handful of fire, water, or air essentia and conjures that type of Primordial."
+	desc = "Consume a handful of fire, water, or air essentia and conjures that type of Primordial.\n\
+	This spell cannot be refunded."
 	clothes_req = FALSE
 	overlay_state = "rune0"
 	range = 7
@@ -11,7 +12,7 @@
 	no_early_release = TRUE
 	charging_slowdown = 1
 	refundable = FALSE
-	cost = 4
+	cost = 9
 	spell_tier = 3 // Mage tier
 	chargedloop = /datum/looping_sound/invokegen
 	gesture_required = TRUE // Summon spell

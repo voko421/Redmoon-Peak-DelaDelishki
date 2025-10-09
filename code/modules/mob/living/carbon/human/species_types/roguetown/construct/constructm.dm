@@ -83,6 +83,8 @@
 		/datum/body_marking/construct_psyclops_eye,
 	)
 
+	restricted_virtues = list(/datum/virtue/utility/noble)
+
 /datum/species/construct/metal/check_roundstart_eligible()
 	return TRUE
 	

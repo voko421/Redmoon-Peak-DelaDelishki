@@ -23,7 +23,6 @@
 	var/mob/living/carbon/H = user
 	if(icon_state == "[initial(icon_state)]_snout")
 		icon_state = initial(icon_state)
-		flags_inv &= ~HIDESNOUT
 		H.update_inv_wear_mask()
 		update_icon()
 		return
@@ -33,7 +32,6 @@
 	for(var/icon_s in istates)
 		if(findtext(icon_s, "[icon_state]_snout"))
 			icon_state += "_snout"
-			flags_inv &= HIDESNOUT
 			H.update_inv_wear_mask()
 			update_icon()
 			return
@@ -419,11 +417,6 @@
 	desc = "Polished gilbranze, molded into an intimidating visage. Touch the cheek; it is warm, like flesh. But it is not flesh. Not yet."
 	icon_state = "ancientmask"
 	smeltresult = /obj/item/ingot/aaslag
-
-/obj/item/clothing/mask/rogue/facemask/steel/hound
-	name = "steel hound mask"
-	desc = "A steel mask, made for those who have snouts, protecting the eyes, nose and muzzle while obscuring the face."
-	icon_state = "smask_hound"
 
 /obj/item/clothing/mask/rogue/facemask/steel/steppesman
 	name = "steppesman war mask"

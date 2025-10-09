@@ -2049,7 +2049,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 
 				if("race_bonus_select")
 					if(length(pref_species.custom_selection))
-						var/choice = tgui_input_list(user, "What has faith blessed your race with?", "BONUS", pref_species.custom_selection)
+						var/choice = tgui_input_list(user, "What has fate blessed your race with?", "BONUS", pref_species.custom_selection)
 						if(choice)
 							race_bonus = pref_species.custom_selection[choice]
 

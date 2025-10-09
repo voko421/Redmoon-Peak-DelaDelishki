@@ -2021,7 +2021,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							continue
 						if (V.name == virtue.name || V.name == virtuetwo.name)
 							continue
-						if(length(pref_species.restricted_virtues) && (V in pref_species.restricted_virtues))
+						if(length(pref_species.restricted_virtues) && (V.type in pref_species.restricted_virtues))
 							continue
 						if (istype(V, /datum/virtue/heretic) && !istype(selected_patron, /datum/patron/inhumen))
 							continue

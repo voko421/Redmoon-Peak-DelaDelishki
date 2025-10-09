@@ -172,7 +172,7 @@
 			icon_state = icon3
 	grid_height = base_height
 	grid_width = base_width
-	if((maxamount / 2) < amount)
+	if(FLOOR(maxamount / 2, 1) < amount)
 		grid_width += base_width
 	if(item_flags & IN_STORAGE)
 		var/obj/item/location = loc

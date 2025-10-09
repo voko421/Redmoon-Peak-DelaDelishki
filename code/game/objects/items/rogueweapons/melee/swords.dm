@@ -79,6 +79,10 @@
 	damfactor = 1
 	item_d_type = "blunt"
 
+// A weaker strike for sword with high damage so that it don't end up becoming better than mace
+/datum/intent/sword/strike/bad
+	damfactor = 0.7 
+
 /datum/intent/sword/peel
 	name = "armor peel"
 	icon_state = "inpeel"

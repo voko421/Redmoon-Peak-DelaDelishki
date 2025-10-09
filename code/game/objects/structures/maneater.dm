@@ -116,7 +116,7 @@
 		else
 			victim.run_armor_check(zone, BCLASS_CUT, damage = 20)
 
-	if(victim.stat == DEAD)
+	if(victim.stat == DEAD || victim.stat == UNCONSCIOUS)
 		if(!victim.mind)
 			victim.gib()
 			seednutrition += 50

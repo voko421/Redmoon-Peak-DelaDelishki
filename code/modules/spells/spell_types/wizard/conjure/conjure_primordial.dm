@@ -12,7 +12,7 @@
 	no_early_release = TRUE
 	charging_slowdown = 1
 	refundable = FALSE
-	cost = 9
+	cost = 6 // 6 points seems relatively fair for a low potency tank simplemobs.
 	spell_tier = 3 // Mage tier
 	chargedloop = /datum/looping_sound/invokegen
 	gesture_required = TRUE // Summon spell

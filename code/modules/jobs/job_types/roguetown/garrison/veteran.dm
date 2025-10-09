@@ -88,9 +88,8 @@
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
 	pants = /obj/item/clothing/under/roguetown/chainlegs
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
-	l_hand = /obj/item/rogueweapon/sword/long
-	beltl = /obj/item/rogueweapon/scabbard/sword
 	beltr = /obj/item/storage/keyring/guardcastle
+	beltl = /obj/item/rogueweapon/scabbard/sword
 	backr = /obj/item/storage/backpack/rogue/satchel/black
 	cloak = /obj/item/clothing/cloak/half/vet
 	belt = /obj/item/storage/belt/rogue/leather/black
@@ -105,6 +104,16 @@
 		H.change_stat(STATKEY_WIL, 1)
 
 	H.verbs |= /mob/proc/haltyell
+	H.adjust_blindness(-3)
+	if(H.mind)
+		var/weapons = list("Longsword","Sabre")
+		var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+		H.set_blindness(0)
+		switch(weapon_choice)
+			if("Longsword")
+				r_hand = /obj/item/rogueweapon/sword/long
+			if("Sabre")
+				r_hand = /obj/item/rogueweapon/sword/sabre
 
 /datum/advclass/veteran/footman
 	name = "Retired Footman"

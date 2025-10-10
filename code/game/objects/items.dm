@@ -473,6 +473,12 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		Blunt weapon or off-hand weapon loses [INTEG_PARRY_DECAY_NOSHARP] per parry instead. \n\
 		On armor, the blunt rating of an armor multiplies its effective durability against blunt damage."))
 
+	if(href_list["explainintdamage"])
+		to_chat(usr, span_info("Multiplies the damage done to armor on hit."))
+
+	if(href_list["explaindemolitionmod"])
+		to_chat(usr, span_info("Multiplies the damage done to objects when hitting them."))
+
 	if(href_list["inspect"])
 		if(!usr.canUseTopic(src, be_close=TRUE))
 			return
@@ -530,7 +536,10 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 			inspec += "\n<b>SKILL:</b> [associated_skill.name]"
 		
 		if(intdamage_factor != 1 && force >= 5)
-			inspec += "\n<b>INTEGRITY DAMAGE:</b> [intdamage_factor * 100]%"
+			inspec += "\n<b>INTEGRITY DAMAGE:</b> [intdamage_factor * 100]% <span class='info'><a href='?src=[REF(src)];explainintdamage=1'>{?}</a></span>"
+
+		if(demolition_mod != 1 && force >= 5)
+			inspec += "\n<b>ANTI-OBJECT MOD:</b> [demolition_mod * 100]% <span class='info'><a href='?src=[REF(src)];explaindemolitionmod=1'>{?}</a></span>"
 
 //**** CLOTHING STUFF
 

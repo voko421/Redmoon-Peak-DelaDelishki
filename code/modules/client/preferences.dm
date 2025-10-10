@@ -418,9 +418,9 @@ GLOBAL_LIST_EMPTY(chosen_names)
 //			dat += "<b><a href='?_src_=prefs;preference=name;task=random'>Random Name</A></b><BR>"
 			if(length(pref_species.restricted_virtues))
 				if(virtue.type in pref_species.restricted_virtues)
-					virtue = "None"
+					virtue = new /datum/virtue/none
 				if(virtuetwo.type in pref_species.restricted_virtues)
-					virtuetwo = "None"
+					virtuetwo = new /datum/virtue/none
 			dat += "<b>Virtue:</b> <a href='?_src_=prefs;preference=virtue;task=input'>[virtue]</a><BR>"
 			if(statpack.name == "Virtuous")
 				dat += "<b>Second Virtue:</b> <a href='?_src_=prefs;preference=virtuetwo;task=input'>[virtuetwo]</a><BR>"

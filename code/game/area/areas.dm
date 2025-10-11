@@ -417,7 +417,8 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 		return
 	if(!client)
 		return
-	if(A.detail_text)
+	// Avoid any trivial text
+	if(A.first_time_text && A.detail_text)
 		to_chat(client, span_info("You enter <a href='?src=[REF(A)];getdescription=1'>[A.name]</a>."))
 	else
 		to_chat(client, span_info("You enter [A.name]."))

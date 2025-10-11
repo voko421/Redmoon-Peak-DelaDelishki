@@ -1,6 +1,6 @@
 // Areas for Mount Decap
 /area/rogue/outdoors/mountains/decap
-	name = "mt decapitation"
+	name = "Mount Decapitation"
 	icon_state = "decap"
 	ambush_mobs = list(
 				new /datum/ambush_config/pair_of_direbear = 10,

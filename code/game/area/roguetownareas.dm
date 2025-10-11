@@ -152,6 +152,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	deathsight_message = "somewhere in the wilds, next to towering walls"
 	warden_area = TRUE
 	threat_region = THREAT_REGION_AZURE_BASIN
+	detail_text = "Hello world"
 
 /area/rogue/druidsgrove
 	name = "Druids grove"

@@ -239,7 +239,7 @@
 			if(L.STAINT > 9 && L.STAPER > 9)
 				. += span_redtext("<i>[m1] critically fragile!</i>")
 
-	if(user != src && HAS_TRAIT(user, TRAIT_MATTHIOS_EYES))
+	if(user != src && HAS_TRAIT(user, TRAIT_MATTHIOS_EYES) && (!HAS_TRAIT(src, TRAIT_DECEIVING_MEEKNESS)))
 		var/atom/item = get_most_expensive()
 		if(item)
 			. += span_notice("You get the feeling [m2] most valuable possession is \a [item].")

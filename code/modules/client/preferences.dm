@@ -1558,7 +1558,10 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 						var/datum/statpack/statpack = GLOB.statpacks[path]
 						if (!statpack.name)
 							continue
-						statpacks_available[statpack.name] = statpack
+						var/index = statpack.name
+						if(length(statpack.stat_array))
+							index += " \n[statpack.generate_modifier_string()]"
+						statpacks_available[index] = statpack
 
 					statpacks_available = sort_list(statpacks_available)
 

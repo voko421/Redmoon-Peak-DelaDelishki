@@ -418,12 +418,14 @@ GLOBAL_LIST_EMPTY(chosen_names)
 //			dat += "<b><a href='?_src_=prefs;preference=name;task=random'>Random Name</A></b><BR>"
 			if(length(pref_species.restricted_virtues))
 				if(virtue.type in pref_species.restricted_virtues)
-					virtue = new /datum/virtue/none
+					virtue = GLOB.virtues[/datum/virtue/none]
 				if(virtuetwo.type in pref_species.restricted_virtues)
-					virtuetwo = new /datum/virtue/none
+					virtuetwo = GLOB.virtues[/datum/virtue/none]
 			dat += "<b>Virtue:</b> <a href='?_src_=prefs;preference=virtue;task=input'>[virtue]</a><BR>"
 			if(statpack.name == "Virtuous")
 				dat += "<b>Second Virtue:</b> <a href='?_src_=prefs;preference=virtuetwo;task=input'>[virtuetwo]</a><BR>"
+			else
+				virtuetwo = GLOB.virtues[/datum/virtue/none]
 			dat += "<b>Vice:</b> <a href='?_src_=prefs;preference=charflaw;task=input'>[charflaw]</a><BR>"
 			var/datum/faith/selected_faith = GLOB.faithlist[selected_patron?.associated_faith]
 			dat += "<b>Faith:</b> <a href='?_src_=prefs;preference=faith;task=input'>[selected_faith?.name || "FUCK!"]</a><BR>"
@@ -1998,7 +2000,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 						var/datum/virtue/V = GLOB.virtues[path]
 						if (!V.name)
 							continue
-						if (V.name == virtue.name || V.name == virtuetwo.name)
+						if ((V.name == virtue.name || V.name == virtuetwo.name) && !istype(V, /datum/virtue/none))
 							continue
 						if (istype(V, /datum/virtue/heretic) && !istype(selected_patron, /datum/patron/inhumen))
 							continue
@@ -2019,7 +2021,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 						var/datum/virtue/V = GLOB.virtues[path]
 						if (!V.name)
 							continue
-						if (V.name == virtue.name || V.name == virtuetwo.name)
+						if ((V.name == virtue.name || V.name == virtuetwo.name) && !istype(V, /datum/virtue/none))
 							continue
 						if(length(pref_species.restricted_virtues) && (V.type in pref_species.restricted_virtues))
 							continue

@@ -428,6 +428,7 @@
 /obj/item/clothing/mask/rogue/facemask/steel/steppesman/anthro
 	name = "steppesman beast mask"
 	desc = "A steel mask shaped like the face of a rather charismatic beastman! Pronounced cheeks, a nose, and small spikes for whiskers. Well, people outside of Aavnr don't think you'd look charismatic at all wearing this."
+	icon_state = "steppemask_snout"
 
 /obj/item/clothing/mask/rogue/facemask/goldmask
 	name = "Gold Mask"

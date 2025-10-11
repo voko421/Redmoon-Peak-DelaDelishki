@@ -25,6 +25,7 @@
 		var/mob/living/carbon/M = loc
 		if(M.legcuffed == src)
 			M.legcuffed = null
+			M.remove_movespeed_modifier(MOVESPEED_ID_NET_SLOWDOWN, TRUE)
 			M.update_inv_legcuffed()
 			if(M.has_status_effect(/datum/status_effect/debuff/netted))
 				M.remove_status_effect(/datum/status_effect/debuff/netted)

@@ -905,8 +905,8 @@
 	if(alert("Prolong the end of the round by 30 minutes. This delays the vote, or delays the end after the vote is successful. Are you sure?",,"Yes","Cancel") == "Cancel")
 		return
 
-	if((GLOB.round_timer > world.time + 90 MINUTES) || SSgamemode.round_ends_at - world.time > 90 MINUTES)
-		to_chat(usr, "<span class='notice'>Failsafe! Round end is already over 90 minutes out! Ignoring.</span>")
+	if((GLOB.round_timer > world.time + (3 * ROUND_EXTENSION_TIME)) || SSgamemode.round_ends_at - world.time > (3 * ROUND_EXTENSION_TIME))
+		to_chat(usr, "<span class='notice'>Failsafe! Round end is already over 3 times out! Ignoring.</span>")
 		return
 	if(SSgamemode.round_ends_at != 0) // End round is already ticking.
 		SSgamemode.round_ends_at += ROUND_EXTENSION_TIME

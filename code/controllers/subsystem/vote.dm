@@ -389,6 +389,8 @@ SUBSYSTEM_DEF(vote)
 			return
 		if("cancel")
 			if(usr.client.holder)
+				if(mode == "endround")
+					GLOB.round_timer = GLOB.round_timer + ROUND_EXTENSION_TIME // admin cancels an endround, defaults to same as continue playing
 				reset()
 		if("toggle_restart")
 			if(usr.client.holder && trialmin)

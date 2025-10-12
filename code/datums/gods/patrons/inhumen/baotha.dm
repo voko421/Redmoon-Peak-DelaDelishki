@@ -49,7 +49,7 @@
 	to_chat(follower, span_danger("For Baotha to hear my prayers I must either be in the church of the abandoned, near an inverted psycross, within the town's bathhouse, or actively partaking in one of various types of nose-candy!"))
 	return FALSE
 
-#define BAOTHA_SUFFERING_DIVIDER 4.714 // max bonus at 50 pain/bleedrate and pain_mod = 1
+#define BAOTHA_SUFFERING_DIVIDER 3.535 // max bonus at 50 pain/bleedrate and pain_mod = 1
 
 /datum/patron/inhumen/baotha/on_lesser_heal(
     mob/living/user,
@@ -60,7 +60,7 @@
     situational_bonus
 )
 	*message_out = span_info("Hedonistic impulses and emotions throb all about from [target].")
-	*message_self = span_notice("An intoxicating rush of narcotic delight wipes away my suffering!")
+	*message_self = span_notice("An intoxicating rush of narcotic delight soothes suffering!")
 
 	if(!ishuman(target))
 		*message_self = span_notice("An intoxicating rush of narcotic delight flows through me!")
@@ -69,10 +69,11 @@
 	var/mob/living/carbon/human/human_target = target
 	var/bonus = 0
 
-	if(human_target.has_status_effect(/datum/status_effect/buff/druqks) || human_target.has_status_effect(/datum/status_effect/buff/drunk))
+	if(human_target.has_status_effect(/datum/status_effect/buff/druqks) \
+	|| human_target.has_status_effect(/datum/status_effect/buff/drunk))
 		bonus += 0.5
 
-	if(!human_target.get_stress_amount())
+	if(human_target.get_stress_event(/datum/stressevent/lasthigh))
 		bonus += 0.5
 
 	if(!HAS_TRAIT(target, TRAIT_NOPAIN) || HAS_TRAIT(target, TRAIT_CRACKHEAD))
@@ -82,7 +83,8 @@
 			raw_suffering += wound.woundpain + wound.bleed_rate
 
 		var/suffering = sqrt(raw_suffering) / BAOTHA_SUFFERING_DIVIDER
-		bonus += min(HAS_TRAIT(target, TRAIT_DEPRAVED) ? suffering : suffering * human_target.physiology.pain_mod, 1.5)
+		var/to_add = HAS_TRAIT(target, TRAIT_DEPRAVED) ? suffering : suffering * human_target.physiology.pain_mod
+		bonus += min(to_add, 2)
 
 	*conditional_buff = TRUE
 	*situational_bonus = bonus

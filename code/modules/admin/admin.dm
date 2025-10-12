@@ -894,9 +894,9 @@
 
 	message_admins("[key_name(usr)] used Toggle Wake In View.")
 
-/datum/admins/proc/prolong_round()
-	set name = "Prolong Round"
-	set category = "-GameMaster-"
+/datum/admins/proc/extend_round()
+	set name = "Extend Round"
+	set category = "-Server-"
 	set hidden = FALSE
 
 	if(!check_rights(R_ADMIN))
@@ -912,5 +912,5 @@
 		SSgamemode.round_ends_at += ROUND_EXTENSION_TIME
 	else //We push back the automated endround vote.
 		GLOB.round_timer = GLOB.round_timer + ROUND_EXTENSION_TIME
-	log_admin("[key_name(usr)] prolonged the round by 30 minutes.")
-	message_admins("[key_name(usr)] prolonged the round by 30 minutes.")
+	log_admin("[key_name(usr)] extended the round by 30 minutes.")
+	message_admins("[key_name(usr)] extended the round by 30 minutes.")

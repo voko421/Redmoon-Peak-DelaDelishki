@@ -60,7 +60,7 @@
     situational_bonus
 )
 	*message_out = span_info("Hedonistic impulses and emotions throb all about from [target].")
-	*message_self = span_notice("An intoxicating rush of narcotic delight soothes suffering!")
+	*message_self = span_notice("An intoxicating rush of narcotic delight soothes my suffering!")
 
 	if(!ishuman(target))
 		*message_self = span_notice("An intoxicating rush of narcotic delight flows through me!")

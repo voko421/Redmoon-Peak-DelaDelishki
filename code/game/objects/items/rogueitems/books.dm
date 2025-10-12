@@ -589,8 +589,10 @@
 		var/icon_input = show_radial_menu(user, src, icon_choice, require_near = TRUE, tooltips = FALSE)
 		if(icon_input)
 			icon_state = icon_input
+			base_icon_state = replacetextEx(icon_input, regex(@"_[0-1]"), "")
 			if(alert(user, "Are you happy with this?", "Book Cover", "Yes", "No") != "Yes")
 				icon_state = initial(icon_state)
+				base_icon_state = initial(base_icon_state)
 				return
 		stage++
 		return

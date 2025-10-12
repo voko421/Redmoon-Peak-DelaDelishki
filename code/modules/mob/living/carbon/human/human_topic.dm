@@ -121,6 +121,12 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 			to_chat(usr, span_warning("I can't reach that! Something is covering it."))
 			return
 
+	if(href_list["species_lore"])
+		if(!dna?.species?.desc)
+			return
+		to_chat(usr, span_notice(dna.species.desc))
+		return
+
 	if(href_list["undiesthing"]) //canUseTopic check for this is handled by mob/Topic()
 		if(!get_location_accessible(src, BODY_ZONE_PRECISE_GROIN, skipundies = TRUE))
 			to_chat(usr, span_warning("I can't reach that! Something is covering it."))

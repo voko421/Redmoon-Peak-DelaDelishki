@@ -161,7 +161,7 @@ SUBSYSTEM_DEF(vote)
 					log_game("LOG VOTE: ROUNDVOTEEND [REALTIMEOFDAY]")
 					to_chat(world, "\n<font color='purple'>[ROUND_END_TIME_VERBAL]</font>")
 					SSgamemode.roundvoteend = TRUE
-					SSgamemode.round_ends_at = GLOB.round_timer + ROUND_END_TIME
+					SSgamemode.round_ends_at = world.time + ROUND_END_TIME
 			if("storyteller")
 				SSgamemode.storyteller_vote_result(.)
 
@@ -391,7 +391,10 @@ SUBSYSTEM_DEF(vote)
 			if(usr.client.holder)
 				if(mode == "endround")
 					GLOB.round_timer = GLOB.round_timer + ROUND_EXTENSION_TIME // admin cancels an endround, defaults to same as continue playing
+					log_admin("[key_name(usr)] canceled end round vote.")
+					message_admins("[key_name(usr)] canceled end round vote.")
 				reset()
+
 		if("toggle_restart")
 			if(usr.client.holder && trialmin)
 				CONFIG_SET(flag/allow_vote_restart, !CONFIG_GET(flag/allow_vote_restart))

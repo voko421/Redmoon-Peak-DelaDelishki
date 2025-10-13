@@ -58,4 +58,13 @@
 	name = "Magickal Whip-Wine"
 	cost = 30
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/whipwine)
-	
+
+/datum/supply_pack/rogue/drugs/zigbox
+	name = "Zigbox, empty"
+	cost = 5
+	contains = list(/obj/item/quiver/zigs)
+
+/datum/supply_pack/rogue/drugs/fermented_crab
+	name = "Fermented crab"
+	cost = 50
+	contains = list(/obj/item/reagent_containers/glass/bottle/alchemical/fermented_crab)

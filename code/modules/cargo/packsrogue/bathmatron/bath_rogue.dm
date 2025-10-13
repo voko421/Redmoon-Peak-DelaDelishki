@@ -8,7 +8,7 @@
 
 // Same as merchant
 /datum/supply_pack/rogue/bath_rogue/chains
-	name = "Chains"
+	name = "Chains (x3)"
 	cost = 15
 	contains = list(
 		/obj/item/rope/chain,
@@ -27,7 +27,7 @@
 	contains = list(/obj/item/lockpick/goldpin/silver)
 
 /datum/supply_pack/rogue/bath_rogue/smokebomb
-	name = "Smoke Bomb"
+	name = "Smoke Bomb (x3)"
 	cost = 25
 	contains = list(
 		/obj/item/bomb/smoke,
@@ -35,7 +35,7 @@
 		/obj/item/bomb/smoke)
 
 /datum/supply_pack/rogue/bath_rogue/waterarrows
-	name = "Water Arrow"
+	name = "Water Arrows (x10)"
 	cost = 20
 	contains = list (
 		/obj/item/ammo_casing/caseless/rogue/arrow/water,
@@ -48,7 +48,13 @@
 		/obj/item/ammo_casing/caseless/rogue/arrow/water,
 		/obj/item/ammo_casing/caseless/rogue/arrow/water,
 		/obj/item/ammo_casing/caseless/rogue/arrow/water,
-		/obj/item/ammo_casing/caseless/rogue/arrow/water,
+	)
+
+/datum/supply_pack/rogue/bath_rogue/waterbolts
+	name = "Water Bolts (x10)"
+	cost = 20
+	contains = list (
+		/obj/item/ammo_casing/caseless/rogue/bolt/water,
 		/obj/item/ammo_casing/caseless/rogue/arrow/water,
 		/obj/item/ammo_casing/caseless/rogue/arrow/water,
 		/obj/item/ammo_casing/caseless/rogue/arrow/water,
@@ -59,6 +65,18 @@
 		/obj/item/ammo_casing/caseless/rogue/arrow/water,
 		/obj/item/ammo_casing/caseless/rogue/arrow/water,
 	)
+
+/datum/supply_pack/rogue/bath_rogue/quiver
+	name = "Empty Quiver"
+	cost = 5
+	contains = list(/obj/item/quiver)
+
+/datum/supply_pack/rogue/bath_rogue/net
+	name = "Net"
+	cost = 20
+	contains = list(
+					/obj/item/net,
+				)
 
 /datum/supply_pack/rogue/bath_rogue/grappler
 	name = "Grappler"

@@ -2,7 +2,7 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/wolf/badger
 	icon = 'icons/roguetown/mob/monster/badger.dmi'
 	name = "badger"
-	desc = "An hostile little thing, it can put some volfs to shame with it's aggression."
+	desc = "A hostile little thing, it can put some volfs to shame with it's aggression."
 	icon_state = "badger"
 	icon_living = "badger"
 	icon_dead = "badger_dead"

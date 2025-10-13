@@ -412,8 +412,8 @@
 	I.item_flags |= BEING_REMOVED
 	breakouttime = I.slipouttime
 	if((STASTR > 10))
-		var/time_mod = breakouttime * min(0, (STASTR - 10) / 10)
-		breakouttime -= time_mod
+		var/time_mod = breakouttime * (STASTR - 10) * 0.2
+		breakouttime = max(0, breakouttime - time_mod)
 	if(mind && mind.has_antag_datum(/datum/antagonist/zombie))
 		breakouttime = 10 SECONDS
 	if(STASTR > 15)
@@ -421,14 +421,14 @@
 		breakouttime = I.breakouttime
 	if(!cuff_break)
 		to_chat(src, "<span class='notice'>I attempt to remove [I]...</span>")
-		if(move_after(src, breakouttime, 0, target = src))
+		if(do_after(src, breakouttime, 0, target = src))
 			clear_cuffs(I, cuff_break)
 		else
 			to_chat(src, "<span class='danger'>I fail to remove [I]!</span>")
 
 	else if(cuff_break == FAST_CUFFBREAK)
 		to_chat(src, "<span class='notice'>I attempt to break [I]...</span>")
-		if(move_after(src, breakouttime, 0, target = src))
+		if(do_after(src, breakouttime, 0, target = src))
 			clear_cuffs(I, cuff_break)
 		else
 			to_chat(src, "<span class='danger'>I fail to break [I]!</span>")

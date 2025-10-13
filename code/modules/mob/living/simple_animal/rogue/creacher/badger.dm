@@ -1,7 +1,7 @@
 //Badgers are about a little stronger than raccoons, but still weak compared to wolfs and foxes.
 /mob/living/simple_animal/hostile/retaliate/rogue/wolf/badger
 	icon = 'icons/roguetown/mob/monster/badger.dmi'
-	name = "badger"
+	name = "bauson"
 	desc = "A hostile little thing, it can put some volfs to shame with it's aggression."
 	icon_state = "badger"
 	icon_living = "badger"

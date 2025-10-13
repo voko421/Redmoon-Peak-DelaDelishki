@@ -17,6 +17,7 @@
 
 // Themes
 @include meta.load-css('./themes/azure_default.scss');
+@include meta.load-css('./themes/azure_green.scss');
 
 // Interfaces
 @include meta.load-css('./interfaces/AlertModal.scss');

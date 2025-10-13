@@ -60,7 +60,7 @@
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/whipwine)
 
 /datum/supply_pack/rogue/drugs/zigbox
-	name = "Zigbox, empty"
+	name = "Zigbox (Empty)"
 	cost = 5
 	contains = list(/obj/item/quiver/zigs)
 

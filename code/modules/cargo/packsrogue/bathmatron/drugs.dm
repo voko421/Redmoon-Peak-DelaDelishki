@@ -80,6 +80,6 @@
 	contains = list(/obj/item/quiver/zigs/cannabis)
 
 /datum/supply_pack/rogue/drugs/fermented_crab
-	name = "Fermented crab"
+	name = "Fermented Crab"
 	cost = 50
 	contains = list(/obj/item/reagent_containers/glass/bottle/alchemical/fermented_crab)

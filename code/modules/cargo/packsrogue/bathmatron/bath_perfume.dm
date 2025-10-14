@@ -79,21 +79,21 @@
 */
 
 /datum/supply_pack/rogue/bath_perfume/red_lipstik
-	name = "Red lipstick"
+	name = "Red Lipstick"
 	cost = 33
 	contains = list(/obj/item/azure_lipstick)
 
 /datum/supply_pack/rogue/bath_perfume/jade_lipstik
-	name = "Jade lipstick"
+	name = "Jade Lipstick"
 	cost = 33
 	contains = list(/obj/item/azure_lipstick/jade)
 
 /datum/supply_pack/rogue/bath_perfume/purple_lipstik
-	name = "Purple lipstick"
+	name = "Purple Lipstick"
 	cost = 33
 	contains = list(/obj/item/azure_lipstick/purple)
 
 /datum/supply_pack/rogue/bath_perfume/black_lipstik
-	name = "Black lipstick"
+	name = "Black Lipstick"
 	cost = 33
 	contains = list(/obj/item/azure_lipstick/black)

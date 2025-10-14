@@ -74,9 +74,7 @@
 /datum/supply_pack/rogue/bath_rogue/net
 	name = "Net"
 	cost = 20
-	contains = list(
-					/obj/item/net,
-				)
+	contains = list(/obj/item/net)
 
 /datum/supply_pack/rogue/bath_rogue/grappler
 	name = "Grappler"

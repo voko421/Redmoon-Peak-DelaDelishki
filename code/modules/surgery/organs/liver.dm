@@ -52,7 +52,6 @@
 	if(damage > maxHealth)//cap liver damage
 		damage = maxHealth
 
-
 #undef HAS_SILENT_TOXIN
 #undef HAS_NO_TOXIN
 #undef HAS_PAINFUL_TOXIN

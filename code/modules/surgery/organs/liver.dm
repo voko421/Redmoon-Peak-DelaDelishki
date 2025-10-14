@@ -52,6 +52,10 @@
 	if(damage > maxHealth)//cap liver damage
 		damage = maxHealth
 
+obj/item/organ/liver/Remove(mob/living/carbon/carbon, special = FALSE, drop_if_replaced = TRUE)
+	. = ..()
+	carbon.liver_failure()
+
 #undef HAS_SILENT_TOXIN
 #undef HAS_NO_TOXIN
 #undef HAS_PAINFUL_TOXIN

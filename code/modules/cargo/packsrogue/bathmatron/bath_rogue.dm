@@ -8,7 +8,7 @@
 
 // Same as merchant
 /datum/supply_pack/rogue/bath_rogue/chains
-	name = "Chains (x3)"
+	name = "Chains"
 	cost = 15
 	contains = list(
 		/obj/item/rope/chain,
@@ -27,7 +27,7 @@
 	contains = list(/obj/item/lockpick/goldpin/silver)
 
 /datum/supply_pack/rogue/bath_rogue/smokebomb
-	name = "Smoke Bomb (x3)"
+	name = "Smoke Bomb"
 	cost = 25
 	contains = list(
 		/obj/item/bomb/smoke,
@@ -35,7 +35,7 @@
 		/obj/item/bomb/smoke)
 
 /datum/supply_pack/rogue/bath_rogue/waterarrows
-	name = "Water Arrows (x10)"
+	name = "Water Arrows"
 	cost = 20
 	contains = list (
 		/obj/item/ammo_casing/caseless/rogue/arrow/water,
@@ -51,7 +51,7 @@
 	)
 
 /datum/supply_pack/rogue/bath_rogue/waterbolts
-	name = "Water Bolts (x10)"
+	name = "Water Bolts"
 	cost = 20
 	contains = list (
 		/obj/item/ammo_casing/caseless/rogue/bolt/water,

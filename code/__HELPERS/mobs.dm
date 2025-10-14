@@ -168,12 +168,6 @@ GLOBAL_LIST_EMPTY(species_list)
 		return 0
 	user.doing = 1
 
-	var/user_loc = user.loc
-
-	var/drifting = 0
-	if(!user.Process_Spacemove(0) && user.inertia_dir)
-		drifting = 1
-
 	var/target_loc = target.loc
 
 	var/holding = user.get_active_held_item()
@@ -204,11 +198,7 @@ GLOBAL_LIST_EMPTY(species_list)
 		if(uninterruptible)
 			continue
 
-		if(drifting && !user.inertia_dir)
-			drifting = 0
-			user_loc = user.loc
-
-		if((!drifting && user.loc != user_loc) || (double_progress && target.loc != target_loc) || user.get_active_held_item() != holding || user.incapacitated() || (extra_checks && !extra_checks.Invoke()))
+		if((double_progress && target.loc != target_loc) || user.get_active_held_item() != holding || user.incapacitated() || (extra_checks && !extra_checks.Invoke()))
 			. = 0
 			break
 	user.doing = 0
@@ -276,8 +266,6 @@ GLOBAL_LIST_EMPTY(species_list)
 	var/original_dir = user.dir
 
 	var/drifting = FALSE
-	if(!user.Process_Spacemove(0) && user.inertia_dir)
-		drifting = TRUE
 
 	var/holding = user.get_active_held_item()
 
@@ -298,10 +286,6 @@ GLOBAL_LIST_EMPTY(species_list)
 		stoplag(1)
 		if (progress)
 			progbar.update(world.time - starttime)
-
-		if(drifting && !user.inertia_dir)
-			drifting = FALSE
-			Uloc = user.loc
 
 		if(QDELETED(user) || user.stat || (!drifting && user.loc != Uloc) || (extra_checks && !extra_checks.Invoke()) || (same_direction && user.dir != original_dir))
 			. = FALSE
@@ -353,8 +337,6 @@ GLOBAL_LIST_EMPTY(species_list)
 	var/original_dir = user.dir
 
 	var/drifting = 0
-	if(!user.Process_Spacemove(0) && user.inertia_dir)
-		drifting = 1
 
 	var/holding = user.get_active_held_item()
 
@@ -375,10 +357,6 @@ GLOBAL_LIST_EMPTY(species_list)
 		stoplag(1)
 		if (progress)
 			progbar.update(world.time - starttime)
-
-		if(drifting && !user.inertia_dir)
-			drifting = 0
-			Uloc = user.loc
 
 		Uloc = user.loc
 		Tloc = target.loc
@@ -433,8 +411,6 @@ GLOBAL_LIST_EMPTY(species_list)
 	var/user_loc = user.loc
 
 	var/drifting = 0
-	if(!user.Process_Spacemove(0) && user.inertia_dir)
-		drifting = 1
 
 	var/list/originalloc = list()
 	for(var/atom/target in targets)
@@ -465,10 +441,6 @@ GLOBAL_LIST_EMPTY(species_list)
 
 			if(uninterruptible)
 				continue
-
-			if(drifting && !user.inertia_dir)
-				drifting = 0
-				user_loc = user.loc
 
 			if(L && !CHECK_MULTIPLE_BITFIELDS(L.mobility_flags, required_mobility_flags))
 				. = 0

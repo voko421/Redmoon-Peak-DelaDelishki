@@ -524,9 +524,10 @@
 				var/mob/living/carbon/human/O = target
 				if(iself(O) || ishalfelf(O) || isdarkelf(O))
 					if(!O.cmode)
-						to_chat(target, span_love("I'm in ecstasy..."))
+						to_chat(target, span_love("It tickles..."))
 			else if(J.zone_selected == BODY_ZONE_PRECISE_GROIN)
 				message_param = "licks %t between the legs."
+				to_chat(target, span_love("It somewhat stimulating..."))
 			else if(J.zone_selected == BODY_ZONE_HEAD)
 				message_param = "licks %t cheek"
 			else

@@ -68,6 +68,7 @@
 				leprosy = 3
 	//heart attack stuff
 	handle_heart()
+	handle_liver()
 	update_stamina()
 	update_energy()
 	if(charflaw && !charflaw.ephemeral && mind)

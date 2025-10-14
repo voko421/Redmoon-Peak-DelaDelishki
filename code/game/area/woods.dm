@@ -51,8 +51,8 @@
 /area/rogue/outdoors/woods/northeast
 	name = "Azure Grove - Northeast"
 	ambush_mobs = list(
-			/mob/living/simple_animal/hostile/retaliate/rogue/badger = 10
-			/mob/living/simple_animal/hostile/retaliate/rogue/raccoon = 30
+			/mob/living/simple_animal/hostile/retaliate/rogue/badger = 10,
+			/mob/living/simple_animal/hostile/retaliate/rogue/raccoon = 30,
 			/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 40,
 			/mob/living/carbon/human/species/skeleton/npc/easy = 10,
 			/mob/living/carbon/human/species/skeleton/npc/pirate = 10,

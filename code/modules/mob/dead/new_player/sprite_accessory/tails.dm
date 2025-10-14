@@ -396,7 +396,7 @@
 	name = "Swallow"
 	icon_state = "swallow"
 
-/datum/sprite_accessory/tail/zorzor // Sprite ported from Chompers
+/datum/sprite_accessory/tail/zorzor
 	name = "Zorgoia"
 	icon_state = "zorgoia"
 	color_keys = 3

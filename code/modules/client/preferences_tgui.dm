@@ -7,12 +7,13 @@
 		// "azure_gold" = "Lirvas",
 		"azure_purple" = "Raneshen",
 		// "azure_gilbranze" = "Gilbranze", - Coming soon :tm:
+		"trey_liam" = "Trey Liam"
     )
     return theme_names[tgui_theme] || tgui_theme
 
 // Cycle through TGUI styles
 /datum/preferences/proc/setTguiStyle(mob/user)
-    var/static/list/styles = list("azure_default", "azure_green", "azure_lane", "azure_purple")
+    var/static/list/styles = list("azure_default", "azure_green", "azure_lane", "azure_purple", "trey_liam")
     var/current_index = styles.Find(tgui_theme)
     if(!current_index)
         current_index = 1

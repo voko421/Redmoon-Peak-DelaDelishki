@@ -600,7 +600,7 @@
 /datum/status_effect/debuff/liver_failure
 	id = "liver_failure"
 	alert_type = null
-	tick_interval = 0
+	tick_interval = -1
 
 /datum/status_effect/debuff/liver_failure/on_apply()
 	if(!iscarbon(owner))

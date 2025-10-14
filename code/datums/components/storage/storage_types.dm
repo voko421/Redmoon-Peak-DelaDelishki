@@ -189,7 +189,7 @@
 /datum/component/storage/concrete/tray
 	insert_preposition = "on"
 	max_w_class = WEIGHT_CLASS_NORMAL
-	screen_max_rows = 6
+	screen_max_rows = 3
 	screen_max_columns = 4
 	allow_quick_gather = TRUE
 	allow_quick_empty = TRUE
@@ -199,7 +199,7 @@
 
 /datum/component/storage/concrete/tray/New(datum/P, ...)
 	. = ..()
-	can_hold = typecacheof(list(/obj/item/cooking, /obj/item/reagent_containers/glass/cup, /obj/item/kitchen, /obj/item/reagent_containers/food, /obj/item/reagent_containers/glass/bottle))
+	can_hold = typecacheof(list(/obj/item/cooking, /obj/item/reagent_containers/glass/bowl, /obj/item/reagent_containers/glass/cup, /obj/item/kitchen, /obj/item/reagent_containers/food, /obj/item/reagent_containers/glass/bottle))
 
 /datum/component/storage/concrete/grid/headhook
 	max_w_class = WEIGHT_CLASS_NORMAL

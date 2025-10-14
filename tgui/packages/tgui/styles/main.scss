@@ -18,6 +18,8 @@
 // Themes
 @include meta.load-css('./themes/azure_default.scss');
 @include meta.load-css('./themes/azure_green.scss');
+@include meta.load-css('./themes/azure_lane.scss');
+@include meta.load-css('./themes/azure_purple.scss');
 
 // Interfaces
 @include meta.load-css('./interfaces/AlertModal.scss');

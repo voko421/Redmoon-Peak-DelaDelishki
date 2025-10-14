@@ -2,13 +2,17 @@
 /datum/preferences/proc/get_tgui_theme_display_name()
     var/static/list/theme_names = list(
         "azure_default" = "Ascendant",
-        "azure_green" = "Undivided"
+        "azure_green" = "Undivided",
+		"azure_lane" = "Azuria",
+		// "azure_gold" = "Lirvas",
+		"azure_purple" = "Raneshen",
+		// "azure_gilbranze" = "Gilbranze", - Coming soon :tm:
     )
     return theme_names[tgui_theme] || tgui_theme
 
 // Cycle through TGUI styles
 /datum/preferences/proc/setTguiStyle(mob/user)
-    var/static/list/styles = list("azure_default", "azure_green")
+    var/static/list/styles = list("azure_default", "azure_green", "azure_lane", "azure_purple")
     var/current_index = styles.Find(tgui_theme)
     if(!current_index)
         current_index = 1

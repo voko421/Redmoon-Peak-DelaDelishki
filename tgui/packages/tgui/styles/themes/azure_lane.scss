@@ -3,18 +3,18 @@
   src: url('~roguefont/pterra.ttf');
 }
 
-.theme-azure_green:root {
-  --color-base: #141b15;
-  --color-base-start: #141b15;
-  --color-base-end: #141b15;
+.theme-azure_lane:root {
+  --color-base: #141820;
+  --color-base-start: #141820;
+  --color-base-end: #141820;
 
   --font-size: 14px;
   --font-family: 'Pterra';
-  --color-text: #d0d4cc;
+  --color-text: #c8d4e0;
   --line-height: 170%;
 
-  /* Semantic colors */ 
-  --color-label: #d0d4cc;
+  /* Semantic colors */
+  --color-label: #7284a8;
 
 
   // Basics
@@ -24,12 +24,12 @@
   }
 
   .TitleBar {
-    background-image: url('../assets/azure_default/topbar_green.svg');
+    background-image: url('../assets/azure_default/topbar_shifted.svg');
     background-repeat: repeat-x;
     background-size: 64px;
     background-color: #000000;
     box-shadow: none;
-
+    filter: grayscale(100%) brightness(0.8) sepia(1) hue-rotate(200deg) saturate(3);
     &__title {
       font-size: 1.6rem;
     }
@@ -43,13 +43,13 @@
   }
 
   // Component overrides
-  --section-separator-color: #619940;
+  --section-separator-color: #4a7ba7;
 
   .Button {
     transition: all 0.5s;
-    --color-text: #897472;
-  --button-background-default: #343f35;
-  --button-background-selected: #447544;
+    --color-text: #7284a8;
+    --button-background-default: #2d4a6f;
+    --button-background-selected: #4a7ba7;
   }
 
   .input-button {
@@ -58,7 +58,7 @@
       font-weight: 600;
     }
     &__submit:hover {
-      background: rgba(74, 140, 74, 0.3);
+      background: rgba(74, 116, 140, 0.3);
       transition: all 0.5s;
     }
     &__cancel:hover {
@@ -67,8 +67,8 @@
     }
   }
 
-  --input-border-color: #56853e;
-  --input-border-color-focus: #56853e;
+  --input-border-color: #3d6b99;
+  --input-border-color-focus: #5a8cbf;
 
   .Window__contentPadding {
     margin-left: 1rem;
@@ -76,8 +76,7 @@
   }
 
   .Divider {
-    border-color: #619940;
+    border-color: #4a7ba7;
   }
 
 }
-

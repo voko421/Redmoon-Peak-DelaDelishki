@@ -233,6 +233,7 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 			playsound(loc,'sound/misc/eat.ogg', rand(30,60), TRUE)
 			qdel(O)
 			food = min(food + 30, 100)
+			adjustHealth(-rand(10,20))
 			if(tame && owner == user)
 				return
 			var/realchance = tame_chance

@@ -418,7 +418,7 @@
 
 /datum/crafting_recipe/roguetown/sewing/stabard/guardhood
 	name = "guard hood"
-	results = list(/obj/item/clothing/cloak/stabard/guardhood)
+	result = list(/obj/item/clothing/cloak/stabard/guardhood)
 
 /datum/crafting_recipe/roguetown/sewing/poncho
 	name = "cloth poncho"

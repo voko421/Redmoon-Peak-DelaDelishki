@@ -1202,6 +1202,8 @@
 		else
 			if(HAS_TRAIT(L, TRAIT_BLACKBAGGER))
 				combat_modifier -= 0.3
+				if(HAS_TRAIT(src, TRAIT_BAGGED))
+					combat_modifier -= 0.3
 	for(var/obj/item/grabbing/G in grabbedby)
 		if(G.chokehold == TRUE)
 			combat_modifier -= 0.15

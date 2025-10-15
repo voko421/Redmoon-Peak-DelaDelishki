@@ -158,6 +158,9 @@
 	if(to_grind)
 		to_chat(user, "<span class='warning'>[src] is full!</span>")
 		return
+	if(I.grind_results == null && I.juice_results == null)
+		to_chat(user, "<span class='warning'>[I] can't be grind!!</span>")
+		return
 	if(!user.transferItemToLoc(I,src))
 		to_chat(user, "<span class='warning'>[I] is stuck to my hand!</span>")
 		return
@@ -166,6 +169,7 @@
 		to_grind = I
 		return
 	..()
+
 ///Looks through all the alch grind recipes to find what it should create, returns the correct one.
 /obj/item/reagent_containers/glass/mortar/proc/find_recipe()
 	for(var/datum/alch_grind_recipe/grindRec in GLOB.alch_grind_recipes)

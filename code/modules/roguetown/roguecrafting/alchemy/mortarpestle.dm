@@ -160,7 +160,7 @@
 		return
 	var/recipe = find_recipe(I)
 	if(recipe == null && I.grind_results == null && I.juice_results == null)
-		to_chat(user, "<span class='warning'>[I] can't be grind!!</span>")
+		to_chat(user, "<span class='warning'>[I] can't be ground!!</span>")
 		return
 	if(!user.transferItemToLoc(I,src))
 		to_chat(user, "<span class='warning'>[I] is stuck to my hand!</span>")

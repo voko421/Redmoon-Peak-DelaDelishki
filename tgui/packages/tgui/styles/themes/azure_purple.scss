@@ -75,4 +75,28 @@
     border-color: #702963;
   }
 
+   a:link {
+    color: #892a2b;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:visited {
+    color: #e19d9e;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:hover {
+    color: #c94f51;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: #c94f51;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
 }

@@ -36,9 +36,9 @@
 /datum/outfit/job/roguetown/wretch/heretic/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, span_warning("You father your unholy cause through the most time-tested of ways: hard, heavy steel in both arms and armor."))
-	H.mind.current.faction += "[H.name]_faction"
 	H.set_blindness(0)
 	if(H.mind)
+		H.mind.current.faction += "[H.name]_faction"
 		var/weapons = list("Longsword", "Mace", "Flail", "Axe", "Billhook")
 		var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 		switch(weapon_choice)
@@ -234,7 +234,6 @@
 /datum/outfit/job/roguetown/wretch/hereticspy/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, span_warning("Nimble of dagger and foot both, you are the shadowy herald of the cabal. They will not see you coming."))
-	H.mind.current.faction += "[H.name]_faction"
 	cloak = /obj/item/clothing/cloak/raincloak/mortus
 	backl = /obj/item/storage/backpack/rogue/satchel
 	belt = /obj/item/storage/belt/rogue/leather
@@ -251,6 +250,7 @@
 		)
 	H.cmode_music = 'sound/music/cmode/antag/combat_cutpurse.ogg'
 	if(H.mind)
+		H.mind.current.faction += "[H.name]_faction"
 		var/weapons = list("Rapier","Dagger", "Bow", "Crossbow")
 		var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 		H.set_blindness(0)

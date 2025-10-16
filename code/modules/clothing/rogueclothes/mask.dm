@@ -558,17 +558,19 @@
 	icon_state = "blindfold"
 	item_state = "blindfold"
 	body_parts_covered = EYES
+	var/actually_blinds = TRUE
 	sewrepair = TRUE
 	tint = 3
 	mob_overlay_icon = 'icons/mob/clothing/eyes.dmi'
 	icon = 'icons/obj/clothing/glasses.dmi'
 
-/obj/item/clothing/mask/rogue/blindfoldfake
+/obj/item/clothing/mask/rogue/fakeblindfold
 	name = "blindfold"
 	desc = "A strip of thin fabric tied around the eyes."
 	icon_state = "blindfold"
 	item_state = "blindfold"
 	body_parts_covered = EYES
+	var/actually_blinds = FALSE
 	sewrepair = TRUE
 	tint = 3
 	mob_overlay_icon = 'icons/mob/clothing/eyes.dmi'
@@ -576,12 +578,13 @@
 
 /obj/item/clothing/mask/rogue/blindfold/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
-	if(slot == ITEM_SLOT_MASK)
+	if(slot == ITEM_SLOT_MASK && actually_blinds)
 		user.become_blind("blindfold_[REF(src)]")
 
 /obj/item/clothing/mask/rogue/blindfold/dropped(mob/living/carbon/human/user)
 	..()
-	user.cure_blind("blindfold_[REF(src)]")
+	if(actually_blinds)
+		user.cure_blind("blindfold_[REF(src)]")
 
 /obj/item/clothing/mask/rogue/duelmask
 	name = "duelist's mask"

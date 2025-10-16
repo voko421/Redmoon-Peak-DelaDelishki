@@ -426,7 +426,7 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Cloth Blindfold"
 	path = /obj/item/clothing/mask/rogue/blindfold
 
-/obj/item/clothing/mask/rogue/fake_blindfold
+/datum/loadout_item/fake_blindfold
 	name = "Fake Blindfold"
 	path = /obj/item/clothing/mask/rogue/blindfold/fake
 

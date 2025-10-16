@@ -563,6 +563,17 @@
 	mob_overlay_icon = 'icons/mob/clothing/eyes.dmi'
 	icon = 'icons/obj/clothing/glasses.dmi'
 
+/obj/item/clothing/mask/rogue/blindfoldfake
+	name = "blindfold"
+	desc = "A strip of thin fabric tied around the eyes."
+	icon_state = "blindfold"
+	item_state = "blindfold"
+	body_parts_covered = EYES
+	sewrepair = TRUE
+	tint = 3
+	mob_overlay_icon = 'icons/mob/clothing/eyes.dmi'
+	icon = 'icons/obj/clothing/glasses.dmi'
+
 /obj/item/clothing/mask/rogue/blindfold/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_MASK)

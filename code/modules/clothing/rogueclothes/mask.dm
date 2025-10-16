@@ -564,17 +564,9 @@
 	mob_overlay_icon = 'icons/mob/clothing/eyes.dmi'
 	icon = 'icons/obj/clothing/glasses.dmi'
 
-/obj/item/clothing/mask/rogue/fakeblindfold
-	name = "blindfold"
-	desc = "A strip of thin fabric tied around the eyes."
-	icon_state = "blindfold"
-	item_state = "blindfold"
-	body_parts_covered = EYES
-	var/actually_blinds = FALSE
-	sewrepair = TRUE
-	tint = 3
-	mob_overlay_icon = 'icons/mob/clothing/eyes.dmi'
-	icon = 'icons/obj/clothing/glasses.dmi'
+/obj/item/clothing/mask/rogue/blindfold/fake
+	desc = "A strip of cloth tied around the eyes. It's too transparent to block vision."
+	actually_blinds = FALSE
 
 /obj/item/clothing/mask/rogue/blindfold/equipped(mob/living/carbon/human/user, slot)
 	. = ..()

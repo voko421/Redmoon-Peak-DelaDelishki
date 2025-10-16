@@ -286,7 +286,7 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 		move_to_delay = initial(move_to_delay)
 		return
 	var/health_deficiency = getBruteLoss() + getFireLoss()
-	if(health_deficiency >= ( maxHealth - (maxHealth*0.75) ))
+	if(health_deficiency >= ( maxHealth - (maxHealth*0.50) ))
 		move_to_delay = initial(move_to_delay) + 2
 	else
 		move_to_delay = initial(move_to_delay)

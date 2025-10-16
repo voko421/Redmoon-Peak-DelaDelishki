@@ -473,6 +473,16 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		Blunt weapon or off-hand weapon loses [INTEG_PARRY_DECAY_NOSHARP] per parry instead. \n\
 		On armor, the blunt rating of an armor multiplies its effective durability against blunt damage."))
 
+	if(href_list["explainintdamage"])
+		to_chat(usr, span_info("Multiplies the damage done to armor on hit."))
+
+	if(href_list["explaindemolitionmod"])
+		to_chat(usr, span_info("Multiplies the damage done to objects when hitting them."))
+
+	if(href_list["explainskill"])
+		to_chat(usr, span_info("The skill associated with this weapon. Each level gives +20% to your parry chance, -20% to your opponent's parry chance. \n\
+		The same is applied to dodge but with a +/-10% bonus. It also adds +8% chance to hit the body part you're aiming for."))
+
 	if(href_list["inspect"])
 		if(!usr.canUseTopic(src, be_close=TRUE))
 			return
@@ -527,10 +537,13 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 			inspec += "[percent]% ([blade_int]) <span class='info'><a href='?src=[REF(src)];explainsharpness=1'>{?}</a></span>"
 
 		if(associated_skill && associated_skill.name)
-			inspec += "\n<b>SKILL:</b> [associated_skill.name]"
+			inspec += "\n<b>SKILL:</b> [associated_skill.name] <span class='info'><a href='?src=[REF(src)];explainskill=1'>{?}</a></span>"
 		
 		if(intdamage_factor != 1 && force >= 5)
-			inspec += "\n<b>INTEGRITY DAMAGE:</b> [intdamage_factor * 100]%"
+			inspec += "\n<b>INTEGRITY DAMAGE:</b> [intdamage_factor * 100]% <span class='info'><a href='?src=[REF(src)];explainintdamage=1'>{?}</a></span>"
+
+		if(demolition_mod != 1 && force >= 5)
+			inspec += "\n<b>ANTI-OBJECT MOD:</b> [demolition_mod * 100]% <span class='info'><a href='?src=[REF(src)];explaindemolitionmod=1'>{?}</a></span>"
 
 //**** CLOTHING STUFF
 

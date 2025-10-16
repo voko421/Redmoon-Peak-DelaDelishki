@@ -558,7 +558,6 @@
 	icon_state = "blindfold"
 	item_state = "blindfold"
 	body_parts_covered = EYES
-	var/actually_blinds = TRUE
 	sewrepair = TRUE
 	tint = 3
 	mob_overlay_icon = 'icons/mob/clothing/eyes.dmi'
@@ -566,7 +565,7 @@
 
 /obj/item/clothing/mask/rogue/blindfold/fake
 	desc = "A strip of cloth tied around the eyes. It's too transparent to block vision."
-	actually_blinds = FALSE
+	tint = 0
 
 /obj/item/clothing/mask/rogue/duelmask
 	name = "duelist's mask"

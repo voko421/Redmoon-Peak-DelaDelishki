@@ -3,23 +3,19 @@
   src: url('~roguefont/pterra.ttf');
 }
 
-.theme-azure_default:root {
-  --color-base: #000000;
-  --color-base-start: #000000;
-  --color-base-end: #000000;
+.theme-azure_lane:root {
+  --color-base: #141820;
+  --color-base-start: #141820;
+  --color-base-end: #141820;
 
   --font-size: 14px;
   --font-family: 'Pterra';
-  --color-text: #897472;
+  --color-text: #c8d4e0;
   --line-height: 170%;
-  --color-scrollbar-thumb: #7b5353;
 
+  /* Semantic colors */
+  --color-label: #7284a8;
 
-  /* Semantic colors */ 
-  --color-label: #897472;
-
-  // Scrollbar
-  scrollbar-color: #511111 #000000;
 
   // Basics
   .Layout__content {
@@ -28,15 +24,11 @@
   }
 
   .TitleBar {
-    background-image: url('../assets/azure_default/topbar_red.svg');
+    background-image: url('../assets/azure_default/topbar_blue.svg');
     background-repeat: repeat-x;
     background-size: 64px;
     background-color: #000000;
     box-shadow: none;
-
-    &__title {
-      font-size: 1.6rem;
-    }
   }
 
   .TitleBar__title {
@@ -47,20 +39,13 @@
   }
 
   // Component overrides
+  --section-separator-color: #4a7ba7;
 
-  --section-separator-color: #7b5353;
-
-  // Button
-  --button-background: #511111 ;
-  --button-background-default: #511111;
-  --button-background-selected: #511111;
   .Button {
     transition: all 0.5s;
-    --color-text: #897472;
-  }
-  .Button--color--transparent {
-    --button-background-hover: #7b5353;
-    --button-background-active: #7b5353;
+    --color-text: #7284a8;
+    --button-background-default: #2d4a6f;
+    --button-background-selected: #4a7ba7;
   }
 
   .input-button {
@@ -69,7 +54,7 @@
       font-weight: 600;
     }
     &__submit:hover {
-      background: rgba(74, 140, 74, 0.3);
+      background: rgba(74, 116, 140, 0.3);
       transition: all 0.5s;
     }
     &__cancel:hover {
@@ -78,9 +63,8 @@
     }
   }
 
-  // Input
-  --input-border-color: #7b5353;
-  --input-border-color-focus: #7b5353;
+  --input-border-color: #3d6b99;
+  --input-border-color-focus: #5a8cbf;
 
   .Window__contentPadding {
     margin-left: 1rem;
@@ -88,10 +72,10 @@
   }
 
   .Divider {
-    border-color: #7b5353;
+    border-color: #4a7ba7;
   }
-  
-  a:link {
+
+   a:link {
     color: #892a2b;
     background-color: transparent;
     text-decoration: underline;
@@ -116,4 +100,3 @@
   }
 
 }
-

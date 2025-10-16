@@ -397,7 +397,7 @@
 	for (var/Z in list(/obj/item/roguekey/roomhunt))
 		var/obj/F = new Z(src)
 		held_items[F] = list()
-		held_items[F]["NAME"] = Q.name
+		held_items[F]["NAME"] = F.name
 		held_items[F]["PRICE"] = 200
 
 	update_icon()

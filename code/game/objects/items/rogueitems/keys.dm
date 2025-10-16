@@ -300,7 +300,7 @@
 	icon_state = "brownkey"
 	lockid = "roomvi"
 
-/obj/item/roguekey/roompenthouse
+/obj/item/roguekey/roomhunt
 	name = "HUNT room key"
 	desc = "The key to the HUNT room, the penthouse suite of the local inn."
 	icon_state = "brownkey"

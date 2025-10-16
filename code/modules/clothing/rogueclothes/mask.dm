@@ -568,16 +568,6 @@
 	desc = "A strip of cloth tied around the eyes. It's too transparent to block vision."
 	actually_blinds = FALSE
 
-/obj/item/clothing/mask/rogue/blindfold/equipped(mob/living/carbon/human/user, slot)
-	. = ..()
-	if(slot == ITEM_SLOT_MASK && actually_blinds)
-		user.become_blind("blindfold_[REF(src)]")
-
-/obj/item/clothing/mask/rogue/blindfold/dropped(mob/living/carbon/human/user)
-	..()
-	if(actually_blinds)
-		user.cure_blind("blindfold_[REF(src)]")
-
 /obj/item/clothing/mask/rogue/duelmask
 	name = "duelist's mask"
 	desc = "A black cloth mask for those masked duelists, doesn't grant any protection, but covers your eyes, and your identity... somehow."

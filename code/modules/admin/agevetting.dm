@@ -9,14 +9,14 @@ GLOBAL_PROTECT(agevetted_list)
 /client/proc/check_agevet()
 	if(LAZYACCESS(GLOB.agevetted_list, ckey) || holder)
 		return TRUE
-	return FALSE
+	return TRUE
 
 /mob/proc/check_agevet()
 	if(client)
 		return client.check_agevet()
 	if(LAZYACCESS(GLOB.agevetted_list, ckey) || copytext(key,1,2)=="@") //aghosted people stay verified
 		return TRUE
-	return FALSE
+	return TRUE
 
 /client/proc/agevet_player()
 	set category = "-Server-"

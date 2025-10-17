@@ -119,6 +119,15 @@
 		to_chat(src, "You will no longer hear music in the lobby.")
 		mob.stop_sound_channel(CHANNEL_LOBBYMUSIC)
 
+/client/proc/toggle_barks()
+	set name = "Toggle Barks"
+	set category = "Options"
+	set desc = ""
+	if(prefs)
+		prefs.toggles ^= SOUND_BARK
+		prefs.save_preferences()
+		to_chat(usr, "You will [(prefs.toggles & SOUND_BARK) ? "now" : "no longer"] hear a barks.")
+
 /client/verb/toggle_roleplay_ads()
 	set name = "Roleplay Ads (Toggle)"
 	set category = "OOC"

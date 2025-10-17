@@ -251,7 +251,7 @@
 
 /obj/item/book/rogue/bibble/psy/read(mob/living/carbon/human/user)
 	if(!open)
-		to_chat(user, span_info("Open it first."))
+		to_chat(user, span_info("Открой её."))
 		return FALSE
 	if(!user.client || !user.hud_used)
 		return
@@ -268,21 +268,21 @@
 			if(m)
 				if(prob(1) && sect == "sect1")
 					user.playsound_local(user, 'sound/misc/psydong.ogg', 100, FALSE)
-					user.say("PSY 23:4... And so, ZEZUS wept; for he had been struck down by the silvered javelin of JVDAS, PSYDON's most devout.")
+					user.say("ПСАЙ 66:6... +_Всеотец_+ изрёк: «Я прощаю тебя, ибо люблю тебя как отец любит свою дочь». И кровь стекала по лезвию и из груди е-.. откуда это здесь?!")
 					user.psydo_nyte()
 				else
 					user.say(m)
 
 /obj/item/book/rogue/bibble/psy/MiddleClick(mob/user, params)
 	. = ..()
-	var/sects = list("PSALMS", "GENESIS", "INVOCATIONS")
-	var/sect_choice = input(user, "SELECT YOUR TESTAMENT", "OF PSYDONIA") as anything in sects
+	var/sects = list("ЗАВЕТ ПСАЙДОНА", "ЖИТИЁ ПСАЙДОНА", "ЗАВЕТ ОТАВИКА")
+	var/sect_choice = input(user, "Выберите Завет", "О ПСАЙДОНИИ") as anything in sects
 	switch(sect_choice)
-		if("PSALMS")
+		if("ЗАВЕТ ПСАЙДОНА")
 			sect = "sect1"
-		if("GENESIS")
+		if("ЖИТИЁ ПСАЙДОНА")
 			sect = "sect2"
-		if("INVOCATIONS")
+		if("ЗАВЕТ ОТАВИКА")
 			sect = "sect3"
 
 /datum/status_effect/buff/blessed

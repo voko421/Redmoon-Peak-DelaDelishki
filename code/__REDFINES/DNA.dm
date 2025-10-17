@@ -1,0 +1,15 @@
+#define DEFAULT_BUTT_SIZE 0
+#define MIN_BUTT_SIZE 0
+#define MAX_BUTT_SIZE 4 //5 available, above 4 may be too big.
+#define TOTAL_BUTT_SIZE 5
+
+// #define PENIS_TYPE_PLAIN 1
+// #define PENIS_TYPE_KNOTTED 2
+// #define PENIS_TYPE_EQUINE 3
+// #define PENIS_TYPE_TAPERED 4
+// #define PENIS_TYPE_TAPERED_DOUBLE 5
+// #define PENIS_TYPE_TAPERED_DOUBLE_KNOTTED 6
+// #define PENIS_TYPE_BARBED 7
+// #define PENIS_TYPE_BARBED_KNOTTED 8
+// #define PENIS_TYPE_TENTACLE 9
+#define PENIS_TYPE_TAPERED_KNOTTED 10

@@ -1,0 +1,3 @@
+//Bark bits
+GLOBAL_LIST_EMPTY(bark_list)
+GLOBAL_LIST_EMPTY(bark_random_list)

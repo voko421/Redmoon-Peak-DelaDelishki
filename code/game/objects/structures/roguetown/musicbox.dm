@@ -28,6 +28,22 @@
 	"Venture" = 'sound/music/jukeboxes/oldschool/Venture.ogg',\
 	"Yesteryear" = 'sound/music/jukeboxes/oldschool/Yesteryear.ogg'\
 )
+#define MUSIC_TAVCAT_FUCK list(\
+	"Cure4Sorrow" = 'sound/music/jukeboxes/fuck/cure4sorrow.ogg',\
+	"Dangerous Radiation" = 'sound/music/jukeboxes/fuck/dangeradiation.ogg',\
+	"Pandora's Box" = 'sound/music/jukeboxes/fuck/fb-pandora.ogg',\
+	"Anthem" = 'sound/music/jukeboxes/fuck/partyrock.ogg',\
+	"Raspberry jam" = 'sound/music/jukeboxes/fuck/raspberryjam.ogg'\
+)
+#define MUSIC_TAVCAT_PARTY list(\
+	"A Winter Kiss" = 'sound/music/jukeboxes/party/a_winter_kiss.ogg',\
+	"Analogic Tale Bearer" = 'sound/music/jukeboxes/party/ac-atb.ogg',\
+	"Allt Jag Vill" = 'sound/music/jukeboxes/party/allt_jag_vill.ogg',\
+	"Invisible" = 'sound/music/jukeboxes/party/av_invis.ogg',\
+	"Kick the Beat" = 'sound/music/jukeboxes/party/av_ktb.ogg',\
+	"dAnCe nAtion" = 'sound/music/jukeboxes/party/dance_nation_remix.ogg',\
+	"Imagine" = 'sound/music/jukeboxes/party/imagine.ogg'\
+)
 
 /datum/looping_sound/musloop
 	mid_sounds = list()
@@ -115,7 +131,7 @@
 		toggle_music()
 
 	if(button_selection=="Change Song")
-		var/songlists_selection = input(user, "Which song list?", "\The [src]") as null | anything in list("OTHERWORLDLY"=MUSIC_TAVCAT_OTHERWORLDLY, "GENERIC"=MUSIC_TAVCAT_GENERIC, "OLDSCHOOL"=MUSIC_TAVCAT_OLDSCHOOL)
+		var/songlists_selection = input(user, "Which song list?", "\The [src]") as null | anything in list("OTHERWORLDLY"=MUSIC_TAVCAT_OTHERWORLDLY, "GENERIC"=MUSIC_TAVCAT_GENERIC, "OLDSCHOOL"=MUSIC_TAVCAT_OLDSCHOOL, "FUCK"=MUSIC_TAVCAT_FUCK, "PARTY"=MUSIC_TAVCAT_PARTY)
 		playsound(loc, pick('sound/misc/keyboard_select (1).ogg','sound/misc/keyboard_select (2).ogg','sound/misc/keyboard_select (3).ogg','sound/misc/keyboard_select (4).ogg'), 100, FALSE, -1)
 		user.visible_message(span_info("[user] presses a button on \the [src]."),span_info("I press a button on \the [src]."))
 		var/chosen_songlists_selection = null
@@ -125,6 +141,10 @@
 			chosen_songlists_selection = MUSIC_TAVCAT_GENERIC
 		if(songlists_selection=="OLDSCHOOL")
 			chosen_songlists_selection = MUSIC_TAVCAT_OLDSCHOOL
+		if(songlists_selection=="FUCK")
+			chosen_songlists_selection = MUSIC_TAVCAT_FUCK
+		if(songlists_selection=="PARTY")
+			chosen_songlists_selection = MUSIC_TAVCAT_PARTY
 		var/song_selection = input(user, "Which song do I play?", "\The [src]") as null | anything in chosen_songlists_selection
 		if(!Adjacent(user))
 			return

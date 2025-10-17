@@ -129,6 +129,39 @@
 		if((HAS_TRAIT(user, TRAIT_RACISMISBAD) && !(src.dna.species.name == "Elf" || src.dna.species.name == "Dark Elf" || src.dna.species.name == "Half Elf")))
 			. += span_phobia("An invader...")
 
+		// Knotted effect message
+		if(has_status_effect(/datum/status_effect/knot_tied))
+			. += span_warning("Мы связаны. Придётся таскаться, как какие-то животные...")
+
+		// Facial/Creampie effect message
+		var/datum/status_effect/facial/facial = has_status_effect(/datum/status_effect/facial)
+		var/datum/status_effect/facial/internal/creampie = null
+		if(observer_privilege || get_location_accessible(src, BODY_ZONE_PRECISE_GROIN, skipundies = TRUE))
+			creampie = has_status_effect(/datum/status_effect/facial/internal)
+		if(facial && creampie)
+			var/facial_wet_or_dry = !facial?.has_dried_up ? "высохшим семенем" : "семенем"
+			var/creampie_wet_or_dry = !creampie?.has_dried_up ? "капает" : "стекает"
+			var/we_wet_or_dry = facial?.has_dried_up && creampie?.has_dried_up ? "высохшая семень" : "семень"
+			if(user != src && isliving(user))
+				var/mob/living/L = user
+				. += (L.STAPER >= 8 && L.STAINT >= 5) ? span_aiprivradio("[m1] [facial_wet_or_dry] and [creampie_wet_or_dry] [we_wet_or_dry]!") : span_warning("[m1] covered in something glossy!")
+			else
+				. += span_aiprivradio("Лицо [m1] покрыто [facial_wet_or_dry] и на внутренней стороне бёдер [creampie_wet_or_dry] [we_wet_or_dry]!")
+		else if(facial)
+			var/wet_or_dry = !facial?.has_dried_up ? "высохшим семенем" : "семенем"
+			if(user != src && isliving(user))
+				var/mob/living/L = user
+				. += (L.STAPER >= 8 && L.STAINT >= 5) ? span_aiprivradio("Лицо [m1] покрыто [wet_or_dry]!") : span_warning("Лицо [m1] намазано чем-то блестящим!")
+			else
+				. += span_aiprivradio("[m1] [wet_or_dry]!")
+		else if(creampie)
+			var/wet_or_dry = !creampie?.has_dried_up ? "капает" : "стекает"
+			if(user != src && isliving(user))
+				var/mob/living/L = user
+				. += (L.STAPER >= 8 && L.STAINT >= 5) ? span_aiprivradio("[m1] [wet_or_dry]!") : span_warning("Бёдра [m1] измазаны чем-то блестящим!")
+			else
+				. += span_aiprivradio("На внутренней стороне бёдер [m1] [wet_or_dry] семя!")
+
 		//For tennite schism god-event
 		if(length(GLOB.tennite_schisms))
 			var/datum/tennite_schism/S = GLOB.tennite_schisms[1]

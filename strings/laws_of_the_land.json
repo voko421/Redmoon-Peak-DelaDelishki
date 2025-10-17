@@ -1,68 +1,67 @@
 {
 	"lawsets": {
 		"ten_commandments": {
-			"name": "The Ten Commandments",
+			"name": "Десять Заповедей",
 			"laws": [
-				"Thou shalt have no other gods before me.",
-				"Thou shalt not make unto thee any graven image, or any likeness of any thing that is in heaven above, or that is in the earth beneath, or that is in the water under the earth.",
-				"Thou shalt not take the name of the Lord thy God in vain; for the Lord will not hold him guiltless that taketh his name in vain.",
-				"Remember the sabbath day, to keep it holy. Six days shalt thou labour, and do all thy work: But the seventh day is the sabbath of the Lord thy God: in it thou shalt not do any work, thou, nor thy son, nor thy daughter, thy manservant, nor thy maidservant, nor thy cattle, nor thy stranger that is within thy gates.",
-				"Honour thy father and thy mother: that thy days may be long upon the land which the Lord thy God giveth thee.",
-				"Honour thy father and thy mother: that thy days may be long upon the land which the Lord thy God giveth thee.",
-				"Thou shalt not commit adultery.",
-				"Thou shalt not steal.",
-				"Thou shalt not bear false witness against thy neighbour.",
-				"Thou shalt not covet thy neighbour's house, thou shalt not covet thy neighbour's wife, nor his manservant, nor his maidservant, nor his ox, nor his ass, nor any thing that is thy neighbors."
+				"Да не будет у тебя других богов пред лицем Моим",
+				"Не делай себе никакого кумира или какого-либо подобия того, что на небе вверху, или того, что на земле внизу, или того, что в воде под землей.",
+				"Не произноси имени Господа, Бога твоего, всуе, ибо Господь не оставит без наказания того, кто произносит имя Его всуе.",
+				"Помни день субботний, чтобы свято хранить его. Шесть дней работай и делай все дела твои, а седьмой день - суббота Господу Богу твоему: в этот день не делай никакой работы ни ты, ни сын твой, ни дочь твоя, ни раб твой, ни рабыня твоя, ни скот твой, ни пришелец твой, который у твоих ворот.",
+				"Почитай отца твоего и мать твою, чтобы продлились дни твои на земле, которую Господь, Бог твой, дает тебе.",
+				"Не прелюбодействуй.",
+				"Не укради.",
+				"Ты не должен лжесвидетельствовать против своего ближнего своего.",
+				"Не желай дома ближнего твоего; не желай жены ближнего твоего, ни раба его, ни рабыни его, ни вола его, ни осла его, ничего, что у ближнего твоего»"
 			],
 			"weight": 3
 		},
 		"code of hammurabi": {
-			"name": "Code of Hamurabi",
+			"name": "Кодекс Хамураби",
 			"laws": [
-				"If a man put out the eye of another man, his eye shall be put out.",
-				"If any one is committing a robbery and is caught, then he shall be put to death.",
-				"If a man has betrothed a bride to his son and his son has known her, and if afterwards he (the father) lies in her bosom, and they seize him, this man shall be put to death; the woman shall go free.",
-				"If a builder builds a house for a man and does not make its construction firm, and the house which he has built collapses and causes the death of the owner of the house, that builder shall be put to death.",
-				"If any one take over a field to till it as a renter, he shall pay the corn rent of the field to its owner.",
-				"If any one place his property with another for safekeeping, and there at the place of safekeeping the property be lost, the owner of the house shall make restitution to the owner for the property that was lost.",
-				"If any one take a male or female slave of the court, or a male or female slave of a freed man, outside the city gates, he shall be put to death.",
-				"If a son strike his father, his hands shall be hewn off.",
-				"If any one be too lazy to maintain his dam and does not strengthen it, and a break be made in his dam and the water flood the plantation, the man in whose dam the break has been made shall replace the grain which he has caused to be ruined.",
-				"If any one steal cattle or sheep, or an ass, or a pig or a goat, if it belong to a god or to the court, the thief shall pay thirtyfold; if they belonged to a freed man of the king he shall pay tenfold; if the thief has nothing with which to pay he shall be put to death."
+				"Если человек лишит глаза другого человека, то он также должен лишиться глаза.",
+				"Если кто-либо совершает грабёж и его поймают, то он должен быть казнён.",
+				"Если мужчина обручил невесту со своим сыном, и его сын познал ее, и если после этого он (отец) возляжет с ней, и они схватят его, этот мужчина должен быть предан смерти; женщина должна быть освобождена.",
+				"Если строитель строит дом для человека и не делает его прочным, и дом, который он построил, разрушается и становится причиной смерти владельца дома, то этот строитель должен быть предан смерти.",
+				"Если кто-либо возьмет в аренду поле для его обработки, он должен выплачивать арендную плату за зерно с этого поля его владельцу.",
+				"Если кто-либо передаст свое имущество другому на хранение, и там, в месте хранения, имущество будет утрачено, владелец дома обязан возместить владельцу утраченное имущество.",
+				"Если кто-либо выведет придворного раба или рабыню вольноотпущенника за городские ворота, он должен быть предан смерти.",
+				"Если сын ударит своего отца, ему должны быть отрублены руки.",
+				"Если кто-то будет слишком ленив, чтобы поддерживать свою плотину, и не укрепит ее, и в его плотине произойдет прорыв, и вода затопит плантацию, человек, в чьей плотине произошел прорыв, должен заменить зерно, которое по его вине погибло.",
+				"Если кто-нибудь украдет крупный рогатый скот, или овцу, или осла, или свинью, или козу, если они принадлежат богу или двору, вор заплатит в тридцатикратном размере; если они принадлежали вольноотпущеннику короля, он заплатит в десятикратном размере; если вору нечем заплатить он будет предан смерти."
 			],
 			"weight": 1
 		},
 		"asimov": {
-			"name": "The Three Laws of Aasimar",
+			"name": "Три Закона Аасимара",
 			"laws": [
-				"A peasant may not injure a noble or, through inaction, allow a noble to come to harm.",
-				"A peasant must obey the orders given it by nobles except where such orders would conflict with the First Law.",
-				"A peasant must protect their own existence as long as such protection does not conflict with the First or Second Law."
+				"Крестьянин не может причинить вред дворянину или своим бездействием допустить, чтобы дворянин пострадал.",
+				"Крестьянин должен подчиняться приказам знати, за исключением тех случаев, когда такие приказы противоречат Первому закону.",
+				"Крестьянин должен защищать свое собственное существование до тех пор, пока такая защита не противоречит Первому или Второму закону."
 			],
 			"weight": 2
 		},
 		"bill_of_rights": {
-			"name": "Bill of Rights",
+			"name": "Хартия Полномочий",
 			"laws": [
-				"Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.",
-				"A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.",
-				"No Soldier shall, in time of peace be quartered in any house, without the consent of the Owner, nor in time of war, but in a manner to be prescribed by law.",
-				"The right of the people to be secure in their persons, houses, papers, and effects,[a] against unreasonable searches and seizures, shall not be violated, and no Warrants shall issue, but upon probable cause, supported by Oath or affirmation, and particularly describing the place to be searched, and the persons or things to be seized.",
-				"No person shall be held to answer for a capital, or otherwise infamous crime, unless on a presentment or indictment of a Grand Jury, except in cases arising in the land or naval forces, or in the Militia, when in actual service in time of War or public danger; nor shall any person be subject for the same offence to be twice put in jeopardy of life or limb; nor shall be compelled in any criminal case to be a witness against himself, nor be deprived of life, liberty, or property, without due process of law; nor shall private property be taken for public use, without just compensation.",
-				"In all criminal prosecutions, the accused shall enjoy the right to a speedy and public trial, by an impartial jury of the State and district wherein the crime shall have been committed, which district shall have been previously ascertained by law, and to be informed of the nature and cause of the accusation; to be confronted with the witnesses against him; to have compulsory process for obtaining witnesses in his favor, and to have the Assistance of Counsel for his defence.",
-				"In Suits at common law, where the value in controversy shall exceed twenty dollars, the right of trial by jury shall be preserved, and no fact tried by a jury, shall be otherwise re-examined in any Court of the United States, than according to the rules of the common law.",
-				"Excessive bail shall not be required, nor excessive fines imposed, nor cruel and unusual punishments inflicted.",
-				"The enumeration in the Constitution, of certain rights, shall not be construed to deny or disparage others retained by the people.",
-				"The powers not delegated to the United States by the Constitution, nor prohibited by it to the States, are reserved to the States respectively, or to the people."
+				"Конгресс не должен издавать законов, устанавливающих какую-либо религию или запрещающих её свободное исповедание, ограничивающих свободу слова или печати или право народа мирно собираться и обращаться к правительству с петициями об удовлетворении жалоб.",
+				"Поскольку хорошо организованное ополчение необходимо для безопасности свободного государства, право народа хранить и носить оружие не должно нарушаться.",
+				"Ни один солдат не должен в мирное время размещаться на постой в каком-либо доме без согласия владельца; в военное время это допускается только в порядке, установленном законом.",
+				"Право народа на охрану личности, жилища, бумаг и имущества от необоснованных обысков и арестов не должно нарушаться.",
+				"Никто не должен привлекаться к ответственности за караемое смертью или иным образом позорящее преступление иначе, как по представлению или обвинительному заключению Большого жюри, за исключением дел, возбуждаемых в сухопутных или военно-морских силах либо в ополчении, когда оно призвано на действительную службу во время войны на период опасного для общества положения. Никто не должен за одно и то же правонарушение дважды подвергаться угрозе лишения жизни или нарушения телесной неприкосновенности. Никто не должен принуждаться в уголовном деле свидетельствовать против самого себя. Никто не может быть лишён жизни, свободы или собственности без надлежащей правовой процедуры. Частная собственность не должна изыматься для общественного пользования без справедливого возмещения.",
+				"При всяком уголовном преследовании обвиняемый имеет право на скорый и публичный суд беспристрастных присяжных того штата и округа, ранее установленного законом, где было совершено преступление. Обвиняемый имеет право быть осведомлённым о сущности и основаниях обвинения, право на очную ставку со свидетелями, дающими показания против него, право на принудительный вызов свидетелей со своей стороны и на помощь адвоката для своей защиты.",
+				"Во всех исковых производствах, основанных на общем праве, где оспариваемая цена иска превышает двадцать долларов, сохраняется право на суд присяжных. Ни один факт, рассмотренный присяжными, не может быть пересмотрен каким-либо судом Соединённых Штатов иначе, как в соответствии с нормами общего права",
+				"Не должны требоваться ни чрезмерный залог, ни налагаемые чрезмерные штрафы, ни жестокие и необычные наказания.",
+				"Перечисление в Конституции определённых прав не должно толковаться как отрицание или умаление других прав, сохраняемых народом.",
+				"Полномочия, не делегированные Соединённым Штатам настоящей Конституцией и не запрещённые для отдельных штатов, сохраняются соответственно за штатами либо за народом."
 			],
 			"weight": 0
 		},
 		"human_supremacy": {
-			"name": "Divine Supremacy",
+			"name": "Божественное Верховенство",
 			"laws": [
-				"Thou shalt not worship the inhumen. All that that is inhumen is lesser.",
-				"Thou shalt not associate with inhumen worshipers, those who do that do so forsake their faith.",
-				"Those who worship the inhumen must be erradicated."
+				"Ты не должен поклоняться нелюдям. Все, кто является нелюдем, являются меньшинством.",
+				"Ты не должен общаться с верующими-нелюдями, те, кто поступает подобным образом, отрекаются от своей веры.",
+				"Те, кто поклоняется нелюдю, должны быть изгнаны."
 			],
 			"weight": 1
 		}

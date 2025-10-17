@@ -93,7 +93,7 @@
 	for(var/datum/bounty/removing_bounty in GLOB.head_bounties)
 		if(removing_bounty.target == target_name && user.real_name == removing_bounty.employer)
 			GLOB.head_bounties -= removing_bounty
-			scom_announce("The bounty posting on [target_name] has been removed.")
+			scom_announce("Награда за голову [target_name] была стёрта.")
 			message_admins("[ADMIN_LOOKUPFLW(user)] has removed the bounty on [ADMIN_LOOKUPFLW(target_name)]")
 			return
 	say("Error. Bounty no longer active.") 
@@ -169,7 +169,7 @@
 
 	//Announce it locally and on scomm
 	playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
-	var/bounty_announcement = "The Excidium hungers for [target]."
+	var/bounty_announcement = "Эксидиум жаждет [target]."
 	say(bounty_announcement)
 	scom_announce(bounty_announcement)
 

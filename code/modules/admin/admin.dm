@@ -454,11 +454,12 @@
 	if(!check_rights(0))
 		return
 
-	var/message = input("Global message to send:", "Admin Announce", null, null)  as message
+	var/title = input("Кто вещает?", "Admin Announce")
+	if(!title)
+		title = "Псайдон"
+	var/message = input("Что вещает?", "Admin Announce", null, null)  as message
 	if(message)
-		if(!check_rights(R_SERVER,0))
-			message = adminscrub(message,500)
-		to_chat(world, "<span class='adminnotice'><b>[usr.client.holder.fakekey ? "Administrator" : usr.key] Announces:</b></span>\n \t [message]")
+		priority_announce("[message]", title = "[title]", sound = 'sound/misc/bell.ogg')
 		log_admin("Announce: [key_name(usr)] : [message]")
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Announce") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 

@@ -1017,6 +1017,10 @@ h2.alert {
 	color: #d146f5;
 	font-size: 75%;
 }
+.lovebold	{
+	color: #e7bed8;	
+	font-weight: bold;
+}
 /*
 @keyframes hypnocolor {
 	0%		{color: #202020;}

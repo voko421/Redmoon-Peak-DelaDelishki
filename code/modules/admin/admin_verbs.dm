@@ -56,10 +56,10 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/client/proc/hide_most_verbs,		/*hides all our hideable adminverbs*/
 	/client/proc/debug_variables,		/*allows us to -see- the variables of any instance in the game. +VAREDIT needed to modify*/
 	/client/proc/investigate_show,		/*various admintools for investigation. Such as a singulo grief-log*/
-	/client/proc/secrets,				/* Almost entirely non-functional after Azure Peak Debloatening. Final few are redundant, but keeping just in case */
+	/client/proc/secrets,				/* Almost entirely non-functional after Scarlet Dawn Debloatening. Final few are redundant, but keeping just in case */
 	/client/proc/toggle_hear_radio,		/*allows admins to hide all radio output*/
 	/client/proc/reload_admins,
-	/client/proc/reload_whitelist,
+	// /client/proc/reload_whitelist,
 	/client/proc/reestablish_db_connection, /*reattempt a connection to the database*/
 	/client/proc/cmd_admin_pm_context,	/*right-click adminPM interface*/
 	/client/proc/cmd_admin_pm_panel,		/*admin-pm list*/
@@ -276,7 +276,7 @@ GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 	/client/proc/enable_debug_verbs,
 	/proc/possess,
 	/proc/release,
-	/client/proc/reload_whitelist,
+	// /client/proc/reload_whitelist,
 	/client/proc/panicbunker,
 //	/client/proc/admin_change_sec_level,
 	/client/proc/cmd_display_del_log,
@@ -898,7 +898,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	for(var/datum/bounty/removing_bounty in GLOB.head_bounties)
 		if(removing_bounty.target == target_name)
 			GLOB.head_bounties -= removing_bounty
-			scom_announce("An unknown force has erased the bounty on [target_name]. The gods are displeased.")
+			scom_announce("Неизвестная сила стёрла награду за голову [target_name]. Боги недовольны.")
 			message_admins("[ADMIN_LOOKUPFLW(src)] has removed the bounty on [ADMIN_LOOKUPFLW(target_name)]")
 			return
 	to_chat(src, "Error. Bounty no longer active.") 

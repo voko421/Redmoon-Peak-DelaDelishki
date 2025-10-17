@@ -36,12 +36,28 @@ GLOBAL_LIST_INIT(freqtospan, list(
 
 /atom/movable/proc/send_speech(message, range = 7, obj/source = src, bubble_type, list/spans, datum/language/message_language = null, message_mode)
 	var/rendered = compose_message(src, message_language, message, , spans, message_mode)
-	for(var/atom/movable/hearing_movable as anything in get_hearers_in_view(range, source))
+	var/list/hearers = get_hearers_in_view(range, source)
+	for(var/atom/movable/hearing_movable as anything in hearers)
 		if(!hearing_movable) // Should not get nulls, but just in case.
 			stack_trace("somehow theres a null returned from get_hearers_in_view() in send_speech!")
 			continue
 
 		hearing_movable.Hear(rendered, src, message_language, message, , spans, message_mode)
+
+	if(SEND_SIGNAL(src, COMSIG_MOVABLE_QUEUE_BARK, hearers, args) || vocal_bark || vocal_bark_id)
+		for(var/mob/M in hearers)
+			if(!M.client)
+				continue
+			if(!(M.client.prefs.toggles & SOUND_BARK))
+				hearers -= M
+		var/barks = min(round((LAZYLEN(message) / vocal_speed)) + 1, BARK_MAX_BARKS)
+		var/total_delay
+		vocal_current_bark = world.time
+		for(var/i in 1 to barks)
+			if(total_delay > BARK_MAX_TIME)
+				break
+			addtimer(CALLBACK(src, PROC_REF(bark), hearers, range, vocal_volume, BARK_DO_VARY(vocal_pitch, vocal_pitch_range), vocal_current_bark), total_delay)
+			total_delay += rand(DS2TICKS(vocal_speed / BARK_SPEED_BASELINE), DS2TICKS(vocal_speed / BARK_SPEED_BASELINE) + DS2TICKS(vocal_speed / BARK_SPEED_BASELINE)) TICKS
 
 /atom/movable/proc/compose_message(atom/movable/speaker, datum/language/message_language, raw_message, radio_freq, list/spans, message_mode, face_name = FALSE)
 	//This proc uses text() because it is faster than appending strings. Thanks BYOND.

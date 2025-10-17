@@ -84,7 +84,7 @@
 		SStreasury.log_to_steward("-[amt] imported [D.name]")
 		record_round_statistic(STATS_STOCKPILE_IMPORTS_VALUE, amt)
 		if(amt >= 100) //Only announce big spending.
-			scom_announce("Azure Peak imports [D.name] for [amt] mammon.", )
+			scom_announce("Алый Рассвет импортирует [D.name] за [amt] маммон.", )
 		D.raise_demand()
 		addtimer(CALLBACK(src, PROC_REF(do_import), D.type), 10 SECONDS)
 	if(href_list["export"])
@@ -112,7 +112,7 @@
 					return
 				newtax = CLAMP(newtax, 0, 999)
 				if(newtax > D.payout_price)
-					scom_announce("The bounty for [D.name] was increased.")
+					scom_announce("Награда за [D.name] была повышена.")
 				D.payout_price = newtax
 		else
 			var/newtax = input(usr, "Set a new percent for [D.name]", src, D.payout_price) as null|num
@@ -123,7 +123,7 @@
 					return
 				newtax = CLAMP(newtax, 1, 99)
 				if(newtax > D.payout_price)
-					scom_announce("The bounty for [D.name] was increased.")
+					scom_announce("Награда за [D.name] была повышена.")
 				D.payout_price = newtax
 	if(href_list["setprice"])
 		var/datum/roguestock/D = locate(href_list["setprice"]) in SStreasury.stockpile_datums
@@ -138,7 +138,7 @@
 					return
 				newtax = CLAMP(newtax, 0, 999)
 				if(newtax < D.withdraw_price)
-					scom_announce("The withdraw price for [D.name] was decreased.")
+					scom_announce("Награда за [D.name] была понижена.")
 				D.withdraw_price = newtax
 	if(href_list["setlimit"])
 		var/datum/roguestock/D = locate(href_list["setlimit"]) in SStreasury.stockpile_datums
@@ -151,7 +151,7 @@
 			if(findtext(num2text(newlimit), "."))
 				return
 			newlimit = CLAMP(newlimit, 0, 999)
-			scom_announce("The stockpile limit for [D.name] was changed to [newlimit].")
+			scom_announce("Лимит запаса для [D.name] был изменён на [newlimit].")
 			D.stockpile_limit = newlimit
 	if(href_list["givemoney"])
 		var/X = locate(href_list["givemoney"])

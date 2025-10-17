@@ -46,7 +46,7 @@
 		return FALSE
 	if(already_known(user))
 		return FALSE
-/*	AZURE PEAK REMOVAL -- UNUSED ANYWAY
+/*	SCARLET DAWN REMOVAL -- UNUSED ANYWAY
 	if(user.STAINT < 12)
 			to_chat(user, span_warning("You can't make sense of the sprawling runes!"))
 			return FALSE */

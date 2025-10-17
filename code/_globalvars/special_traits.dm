@@ -158,7 +158,8 @@ GLOBAL_LIST_INIT(special_traits, build_special_traits())
 	if(!isnull(special.restricted_jobs) && job && (job.type in special.restricted_jobs))
 		return FALSE
 	if(!isnull(special.allowed_races) && !(character.dna.species.type in special.allowed_races))
-		return FALSE
+		if(!(player.triumph_ids.Find("race_all")))
+			return FALSE
 	if(!isnull(special.allowed_migrants))
 		if(!character.migrant_type)
 			return FALSE

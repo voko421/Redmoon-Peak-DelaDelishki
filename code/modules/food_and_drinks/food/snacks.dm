@@ -180,8 +180,12 @@ All foods are distributed among various categories. Use common sense.
 	if(!input)
 		return
 	if(cooktime)
+		var/added_input = input
+		// Pick flat burninput instead of skill-scaled input so high cooking skill doesn't make food burn faster 
+		if(!cooked_type && !fried_type) 
+			added_input = burninput
 		if(cooking < cooktime)
-			cooking = cooking + input
+			cooking = cooking + added_input
 			if(cooking >= cooktime)
 				return heating_act(A)
 			warming = 5 MINUTES

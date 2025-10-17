@@ -1292,7 +1292,7 @@
 						thegroom.adjust_triumphs(1)
 						thebride.adjust_triumphs(1)
 						//Bite the apple first if you want to be the groom.
-						priority_announce("[thegroom.real_name] has married [bridefirst]!", title = "Holy Union!", sound = 'sound/misc/bell.ogg')
+						priority_announce("[thegroom.real_name] заключает Эоров союз с [thebride.real_name]!", title = "Святое Объединение!", sound = 'sound/misc/bell.ogg')
 						marriage = TRUE
 						qdel(A)
 

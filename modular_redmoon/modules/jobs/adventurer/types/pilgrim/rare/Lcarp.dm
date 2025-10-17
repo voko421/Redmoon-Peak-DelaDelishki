@@ -2,6 +2,6 @@
 
 /datum/advclass/mastercarpenter
 	name = "Master Carpenter"
-	tutorial = "A master carpenter, unlike the masons you went to discover the secrets of the wood. \
-	The elves, created by Dendor ,who taught you how to transform the wood into anything you wish, \
-	but you swore to chop down trees only when it is necessary."
+	tutorial = "Будучи мастером-плотником, в отличие от каменщиков, вы отправились познавать секреты дерева. \
+	Эльфы, созданные Дендором, который научил вас превращать дерево во все, что вы пожелаете, \
+	но вы поклялись рубить деревья только тогда, когда это необходимо."

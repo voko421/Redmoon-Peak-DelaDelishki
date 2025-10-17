@@ -1,8 +1,8 @@
 /datum/job/roguetown/manorguard
 	title = "Man at Arms"
-	tutorial = "Having proven yourself loyal and capable, you are entrusted to defend the town and enforce its laws. \
-				Trained regularly in combat and siege warfare, you deal with threats - both within and without. \
-				Obey your Sergeant-at-Arms, the Marshal, and the Crown. Show the nobles and knights your respect, so that you may earn it in turn. Not as a commoner, but as a soldier.."
+	tutorial = "Доказав свою преданность и способности, вам доверяют защищать город и обеспечивать соблюдение его законов. \
+				Регулярно тренируясь в ведении боевых действий и осад, вы справляетесь с угрозами - как внутренними, так и внешними. \
+				Повинуйтесь своему старшине, маршалу и короне. Проявляйте уважение к дворянам и рыцарям, чтобы заслужить его в свою очередь. Не как простой человек, а как солдат.."
 	min_pq = 0
 	max_pq = null
 	round_contrib_points = 5
@@ -12,12 +12,12 @@
 
 /datum/advclass/manorguard/footsman
 	name = "Footman"
-	tutorial = "You are a professional soldier of the realm, specializing in melee warfare. Stalwart and hardy, your body can both withstand and dish out powerful strikes.."
+	tutorial = "Вы профессиональный солдат королевства, специализирующийся на ближнем бою. Крепкое и выносливое, ваше тело способно как выдерживать, так и отражать мощные удары.."
 
 /datum/advclass/manorguard/skirmisher
 	name = "Skirmisher"
-	tutorial = "You are a professional soldier of the realm, specializing in ranged implements. You sport a keen eye, looking for your enemies weaknesses."
+	tutorial = "Вы профессиональный солдат королевства, специализирующийся на оружии дальнего боя. У вас острый глаз, выискивающий слабые места ваших врагов."
 
 /datum/advclass/manorguard/cavalry
 	name = "Cavalryman"
-	tutorial = "You are a professional soldier of the realm, specializing in the steady beat of hoof falls. Lighter and more expendable then the knights, you charge with lance in hand."
+	tutorial = "Вы профессиональный солдат королевства, специализирующийся на ровном стуке копыт. Вы легче и незаменимее рыцарей, вы атакуете с копьем в руке."

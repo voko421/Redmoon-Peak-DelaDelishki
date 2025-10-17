@@ -1,9 +1,9 @@
 /datum/job/roguetown/churchling
 	title = "Churchling"
-	tutorial = "Your family were zealots. They scolded you with a studded belt and prayed like sinners every waking hour of the day they weren't toiling in the fields. You escaped them by becoming a churchling--and a guaranteed education isn't so bad."
+	tutorial = "Твои предки были фанатиками. Они ругали тебя ремнём с клёпками и молились, как еретики, каждый час дня, когда не трудились в поле. Ты спасся от них, став представителем Церкви. Представляемое ими образование не так уж и плохо."
 	min_pq = -20
 	max_pq = null
 
 /datum/advclass/churchling
 	name = "Churchling"
-	tutorial = "Your family were zealots. They scolded you with a studded belt and prayed like sinners every waking hour of the day they weren't toiling in the fields. You escaped them by becoming a churchling--and a guaranteed education isn't so bad."
+	tutorial = "Твои предки были фанатиками. Они ругали тебя ремнём с клёпками и молились, как еретики, каждый час дня, когда не трудились в поле. Ты спасся от них, став представителем Церкви. Представляемое ими образование не так уж и плохо."

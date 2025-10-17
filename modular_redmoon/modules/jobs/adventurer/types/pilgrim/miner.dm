@@ -1,3 +1,3 @@
 /datum/advclass/miner
 	name = "Miner"
-	tutorial = "Swing the pick. Heave. Swing. Heave. Deep underground where the days lose their meaning, the work is grueling, the tunnels cramped, and the stale air full of coal dust, yet tales abound of the lucky few who persevered, and found enough precious gems to set them for life." 
+	tutorial = "Взмахни киркой. Поднимаю кирку. Копай. Поднимай кирку. Глубоко под землей, где дни теряют смысл, работа изнурительна, туннели тесны, а спертый воздух наполнен угольной пылью, но есть множество историй о немногих счастливчиках, которые проявили упорство и нашли достаточно драгоценных камней, чтобы сохранить их на всю жизнь." 

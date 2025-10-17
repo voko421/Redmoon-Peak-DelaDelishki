@@ -832,7 +832,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 						spawn(6000)
 							GLOB.todoverride = null
 							sunstolen = FALSE
-						priority_announce("The Sun is torn from the sky!", "Terrible Omen", 'sound/misc/astratascream.ogg')
+						priority_announce("Кто-то вырвал с неба Солнце!", "Ужасное Предзнаменование", 'sound/misc/astratascream.ogg')
 						SSParticleWeather?.run_weather(/datum/particle_weather/blood_rain_storm)
 						addomen(OMEN_SUNSTEAL)
 						for(var/mob/living/carbon/human/astrater in GLOB.human_list)

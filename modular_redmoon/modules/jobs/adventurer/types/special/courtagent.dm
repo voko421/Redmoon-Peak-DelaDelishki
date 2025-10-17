@@ -1,4 +1,4 @@
 /datum/job/roguetown/adventurer/courtagent
 	title = "Court Agent"
-	tutorial = "Whether acquired by merit, shrewd negotiation or fulfilled bounties, you have found yourself under the underhanded employ of the Hand. Fulfill desires and whims of the court that they would rather not be publicly known. Your position is anything but secure, and any mistake can leave you disowned and charged like the petty criminal are. Garrison and Court members know who you are."
+	tutorial = "Независимо от того, были ли вы приобретены благодаря заслугам, умелым переговорам или щедрым вознаграждениям, вы оказались в коварной власти Десницы. Исполняйте желания и прихоти придворных, которые они предпочли бы не афишировать. Ваше положение далеко не безопасно, и любая ошибка может привести к тому, что от вас отрекутся и предъявят обвинение, как мелкому преступнику. Гарнизон и члены суда знают, кто вы такой."
 	min_pq = 0

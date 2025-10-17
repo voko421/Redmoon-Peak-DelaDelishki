@@ -1,6 +1,6 @@
 /datum/advclass/crusader
 	name = "Crusader"
-	tutorial = "The crusaders... Knights who have pledged \
-	their wealth and lands to the church, taking up the banner \
-	of one of the rival Orders dedicated to retaking the holy land. \
-	The 451st crusade is sure to be the last."
+	tutorial = "Крестоносцы... Рыцари, давшие обет \
+	свои богатства и земли они отдали церкви, подняв знамя \
+	член одного из соперничающих орденов, посвятивших себя возвращению святой земли. \
+	451-й крестовый поход наверняка станет последним."

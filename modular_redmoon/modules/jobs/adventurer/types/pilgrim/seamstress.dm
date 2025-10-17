@@ -1,3 +1,3 @@
 /datum/advclass/seamstress
 	name = "Seamster"
-	tutorial = "You know your trade by the passage of a needle through cloth and leather alike. Mend and sew garments for the townsfolk - Coats, pants, hats, hoods, and so much more. So what if you overcharge? You're the reason everyone looks good in the first place."
+	tutorial = "Вы разбираетесь в своем ремесле, проводя иглой как по ткани, так и по коже. Чините и шьете одежду для горожан - пальто, брюки, шляпы, капюшоны и многое другое. А что, если вы переплатите? В первую очередь, из-за тебя все так хорошо выглядят."

@@ -1,3 +1,3 @@
 /datum/advclass/mercenary/forlorn
 	name = "Forlorn Hope Mercenary"
-	tutorial = "The Order of the Forlorn Hope, a order formed off the back of a Ranesheni slave revolt. Drawing from all walks of life, this mercenary company now takes ranks from both purchased and liberated slaves. Coin is power, and power is the path to freedom."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Орден Безнадежной надежды - орден, созданный в результате восстания рабов-ранешени. В этом отряде наемников, состоящем из представителей всех слоев общества, теперь служат как купленные, так и освобожденные рабы. Деньги - это власть, а власть - это путь к свободе."

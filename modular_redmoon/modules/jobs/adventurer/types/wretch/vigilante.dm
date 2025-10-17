@@ -1,3 +1,3 @@
 /datum/advclass/wretch/vigilante
 	name = "Masked Lunatic"
-	tutorial = "You were a disenfranchised pauper, sickened by the rampant corruption of the garrison - or perhaps, just a crazed vagrant in a costume? Whether those brutalized 'thieves' were justified in their acts is up to YOU to decide, not them! You specialize in utilizing your various gadgets and thrown projectiles to dote out JUSTICE, however you see it fit."
+	tutorial = "Вы были бесправным нищим, которого тошнило от безудержной коррупции в гарнизоне, или, возможно, просто сумасшедшим бродягой в маскарадном костюме? Были ли эти озверевшие "воры" оправданы в своих действиях, решать ВАМ, а не им! Вы специализируетесь на использовании своих различных гаджетов и метательных снарядов для свершения ПРАВОСУДИЯ так, как считаете нужным."

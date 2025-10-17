@@ -1,3 +1,3 @@
 /datum/advclass/drunkard
 	name = "Gambler"
-	tutorial = "You are a gambler. Everyone in your life has given up on you, and the stress of losing it all over and over has taken its toll on your body. All you have left to your name are some cards, dice and whatever is in this bottle. At least you're still in Baotha's good graces, whether you reciprocate such feelings or not..."
+	tutorial = "Вы азартный игрок. Все в вашей жизни разочаровались в вас, и стресс от постоянных проигрышей сказался на вашем организме. Все, что у вас осталось, - это несколько карт, игральных костей и все, что есть в этой бутылке. По крайней мере, ты по-прежнему пользуешься благосклонностью Баоты, независимо от того, отвечаешь ли ты взаимностью на такие чувства или нет..."

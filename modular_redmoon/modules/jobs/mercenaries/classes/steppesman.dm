@@ -1,3 +1,3 @@
 /datum/advclass/mercenary/steppesman
 	name = "Steppesman"
-	tutorial = "Once serving a Hetmen from the frontiers, you have been rented out as a mercenary in the distant realm of Azuria to bring coin home. There are three things you value most; saigas, freedom, and money."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Когда-то вы служили гетману с пограничья, а теперь вас наняли наемником в далекие Мёртвые Земли, чтобы вы приносили домой деньги. Есть три вещи, которые вы цените больше всего: сайгаков, свободу и деньги."

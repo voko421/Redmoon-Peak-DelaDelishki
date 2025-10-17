@@ -1,3 +1,3 @@
 /datum/advclass/mercenary/routier
 	name = "Otavan Routiers"
-	tutorial = "The Routiers are a formidable Otavan mercenary band, a brotherhood of knights from noble families serving lords who seek to profit in peacetime. The Otavan nobility at large and even some of the clergy eagerly awaits to hear about your feats, they expect you to ENDURE, to be the champion of their faith and represent the true values of nobility, will you?"
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Рутьеры - грозная отаванская банда наемников, братство рыцарей из благородных семей, служащих лордам, которые стремятся к наживе в мирное время. Отаванская знать, в целом, и даже некоторые представители духовенства с нетерпением ждут известий о ваших подвигах, они ожидают, что вы будете СТОЙКИМИ, будете защитником их веры и будете представлять истинные ценности благородства, не так ли?"

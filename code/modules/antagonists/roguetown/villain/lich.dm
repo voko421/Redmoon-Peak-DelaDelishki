@@ -293,6 +293,6 @@
 	if(!calltext)
 		return FALSE
 
-	priority_announce("[calltext]", title = "Your Lich King Commands", sound = 'sound/misc/deadbell.ogg', sender = user, receiver = /mob/living/carbon/human/species/skeleton)
+	priority_announce("[calltext]", title = "Приказ Короля-Лича", sound = 'sound/misc/deadbell.ogg', sender = user, receiver = /mob/living/carbon/human/species/skeleton)
 
 	..()

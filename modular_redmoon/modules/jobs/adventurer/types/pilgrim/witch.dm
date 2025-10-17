@@ -1,3 +1,3 @@
 /datum/advclass/witch
 	name = "Witch"
-	tutorial = "You are a witch, seen as wisefolk to some and a demon to many. Ostracized and sequestered for wrongthinks or outright heresy, your potions are what the commonfolk turn to when all else fails, and for this they tolerate you — at an arm's length. Take care not to end 'pon a pyre, for the church condemns your left handed arts."
+	tutorial = "Ты ведьма, которую некоторые считают мудрой, а многие - демоном. Подвергнутая остракизму и изоляции за неправильные мысли или откровенную ересь, твои зелья — это то, к чему обращаются простые люди, когда все остальное терпит неудачу, и за это они терпят тебя на расстоянии вытянутой руки. Будьте осторожны, чтобы не сгореть на погребальном костре, потому что церковь осуждает ваши занятия левшой."

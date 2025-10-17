@@ -1,7 +1,7 @@
 /datum/advclass/mercenary/blackoak
 	name = "Black Oak's Guardian"
-	tutorial = "A shady guardian of the Black Oaks. Half mercenary band, half irregular militia fighting for control of their ancestral elven homeland of the Peaks. Thankfully, you are not here today to shed the blood of the Duke's men — unless someone pays you to..."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Мрачный страж Черных дубов. Наполовину банда наемников, наполовину нерегулярное ополчение, сражающееся за контроль над своей исконной эльфийской родиной Пиками. К счастью, вы здесь сегодня не для того, чтобы проливать кровь людей герцога - если только кто-то вам за это не заплатит..."
 
 /datum/advclass/mercenary/blackoak/ranger
 	name = "Black Oak's Ranger"
-	tutorial = "A shady guardian of the Black Oaks. Half mercenary band, half irregular militia fighting for control of their ancestral elven homeland of the Peaks. Thankfully, you are not here today to shed the blood of the Duke's men — unless someone pays you to..."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Мрачный страж Черных дубов. Наполовину банда наемников, наполовину нерегулярное ополчение, сражающееся за контроль над своей исконной эльфийской родиной Пиками. К счастью, вы здесь сегодня не для того, чтобы проливать кровь людей герцога - если только кто-то вам за это не заплатит..."

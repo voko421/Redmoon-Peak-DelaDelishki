@@ -282,7 +282,7 @@ SUBSYSTEM_DEF(treasury)
 	if(isnull(final_text))
 		return
 
-	priority_announce(final_text, "The Generous Lord Decrees", pick('sound/misc/royal_decree.ogg', 'sound/misc/royal_decree2.ogg'), "Captain", strip_html = FALSE)
+	priority_announce(final_text, "Щедрый Господь постановляет", pick('sound/misc/royal_decree.ogg', 'sound/misc/royal_decree2.ogg'), "Маршал", strip_html = FALSE)
 
 /// Returns correct tax (0, 100) for a living mob based on its traits & job
 /datum/controller/subsystem/treasury/proc/get_tax_value_for(mob/living/person)

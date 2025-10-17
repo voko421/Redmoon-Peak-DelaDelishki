@@ -1,3 +1,3 @@
 /datum/advclass/vagabond_courier
 	name = "Ambushed Courier"
-	tutorial = "Entrusted with a message of great import, your fortunes fell by the roadside at the behest of a group of Matthiosian scum. Bereft of mount and master, you now wander the realm for purpose and sustenance."
+	tutorial = "Получив поручение с чрезвычайно важным посланием, ты оказался на обочине по воле шайки маттиоситских отбросов. Лишившись скакуна и хозяина, ты теперь скитаешься по герцогству в поисках цели и пропитания."

@@ -1,11 +1,11 @@
 /datum/advclass/mercenary/warscholar
 	name = "Naledi Hierophant"
-	tutorial = "You are a Naledi Hierophant, a magician who studied under cloistered sages, well-versed in all manners of arcyne. You prioritize enhancing your teammates and distracting foes while staying in the backline."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Вы иерофант Наледи, маг, обучавшийся у мудрецов-отшельников, хорошо разбирающийся во всех тонкостях аркайна. Вы уделяете приоритетное внимание усилению своих товарищей по команде и отвлекаете врагов, оставаясь в тылу."
 
 /datum/advclass/mercenary/warscholar/pontifex
 	name = "Naledi Pontifex"
-	tutorial = "You are a Naledi Pontifex, a warrior trained into a hybridized style of movement-controlling magic and hand-to-hand combat. Though your abilities in magical fields are lacking, you are far more dangerous than other magi in a straight fight. You manifest your calm, practiced skill into a killing intent that takes the shape of an arcyne blade."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Вы - понтифекс Наледи, воин, обученный гибридному стилю владения магией, контролирующей движения, и рукопашному бою. Хотя вам не хватает способностей в магических областях, в прямом бою вы гораздо опаснее других магов. Вы проявляете свое спокойное, отработанное мастерство в стремлении к убийству, которое принимает форму аркайнского клинка."
 
 /datum/advclass/mercenary/warscholar/vizier
 	name = "Naledi Vizier"
-	tutorial = "You are a Naledi Vizier. Your research into miracles and holy incantations has lead you to esoteric magycks. Though psydonians have long struggled to channel their all-father's divinity, a combination of the saint's power may be similar enough."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Вы - визирь Наледи. Ваши исследования чудес и священных заклинаний привели вас к эзотерической магии. Хотя Псайдонцы долгое время пытались использовать божественность своего всеотца, сочетание силы святого может быть достаточно похожим."

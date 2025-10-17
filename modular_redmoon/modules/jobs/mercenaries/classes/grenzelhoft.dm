@@ -1,15 +1,15 @@
 /datum/advclass/mercenary/grenzelhoft
 	name = "Doppelsoldner"
-	tutorial = "You are a Doppelsoldner - \"Double-pay Mercenary\" - an experienced frontline swordsman trained by the Zenitstadt fencing guild."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Вы - Доппельсолднер - 'Наемник с двойным жалованьем' - опытный фехтовальщик на передовой, прошедший подготовку в Зенитштадтской гильдии фехтования."
 
 /datum/advclass/mercenary/grenzelhoft/halberdier
 	name = "Halberdier"
-	tutorial = "You're an experienced soldier skilled in the use of polearms and axes. Your equals make up the bulk of the mercenary guild's forces."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Вы опытный солдат, умеющий обращаться с древковым оружием и топорами. Равные вам составляют основную часть сил гильдии наемников."
 
 /datum/advclass/mercenary/grenzelhoft/crossbowman
 	name = "Armbrustschutze"
-	tutorial = "You're a proved marksman with a crossbow, and learned how to set up camp and defenses in the wild. The guild needs you."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Ты опытный стрелок из арбалета и научился разбивать лагерь, и устраивать оборону в дикой местности. Ты нужен гильдии."
 
 /datum/advclass/mercenary/grenzelhoft/mage
 	name = "Gefechtsgelehrter"
-	tutorial = "You are a Gefechtsgelehrter - \"Combat Scholar\" - A proud magos from the Celestial Academy of Magos, who's skills in Siege Magic and Arcyne Physics are unmatched."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Вы - Гефехтсгелехертер - 'Боевой Ученый' - гордый магос из Небесной Академии Магосов, чьи навыки в осадной магии и физике Аркайнов не имеют себе равных."

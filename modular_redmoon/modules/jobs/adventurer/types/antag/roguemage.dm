@@ -1,3 +1,3 @@
 /datum/advclass/roguemage
 	name = "Rogue Mage"
-	tutorial = "Those fools at the academy laughed at you and cast you from the ivory tower of higher learning and magickal practice. No matter - you will ascend to great power one day, but first you need wealth - vast amounts of it. Show those fools in the town what REAL magic looks like."
+	tutorial = "Эти дураки в академии посмеялись над тобой и вышвырнули тебя из башни высшего знания и магической практики из слоновой кости. Не имеет значения, однажды ты достигнешь великой власти, но сначала тебе нужно богатство - в огромных количествах. Покажи этим дуракам в городе, как выглядит НАСТОЯЩАЯ магия."

@@ -1,7 +1,7 @@
 /datum/advclass/wretch/deserter
 	name = "Disgraced Knight"
-	tutorial = "You were once a venerated and revered knight - now, a traitor who abandoned your liege. You lyve the lyfe of an outlaw, shunned and looked down upon by society."
+	tutorial = "Когда-то ты был почитаемым рыцарем, а теперь стал предателем, покинувшим своего сеньора. Ты живешь жизнью преступника, которого общество избегает и на которого смотрят свысока."
 
 /datum/advclass/wretch/deserter/maa
 	name = "Disgraced Man at Arms"
-	tutorial = "You had your post. You had your duty. Dissatisfied, lacking in morale, or simply thinking yourself better than it. - You decided to walk. Now it follows you everywhere you go."
+	tutorial = "У вас был свой пост. У вас был свой долг. Вы были недовольны, испытывали упадок духа или просто считали себя выше этого. Вы решили уйти. Теперь ваше бремя преследует вас повсюду, куда бы вы ни пошли."

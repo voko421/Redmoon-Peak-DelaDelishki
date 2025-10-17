@@ -1,18 +1,18 @@
 /datum/job/roguetown/nightmaiden
 	title = "Bathhouse Attendant"
 	f_title = "Bathhouse Attendant"
-	tutorial = "Dancing, music, or practicioners of the body. You've worked up a reputation as an entertainer, and sometime in life, the bathmaster has chosen to onboard you for one of these talents. In the bathhouse, your place on the hierarchy is determined by how long you've been in the game - and how much mammon you're worth."
+	tutorial = "Танцы, музыка или телесные практики. Вы заработали репутацию артиста и в какой-то момент жизни банщик решил пробудить в вас один из этих талантов. В бане ваше место в иерархии определяется тем, как долго вы в игре - и насколько богаты вы."
 	min_pq = -25
 	max_pq = null
 
 /datum/advclass/nightmaiden
 	name = "Bath Attendant"
-	tutorial = "A fresh initiate, most would decry the humble bath maid as a desperate fool tempting others into bedsheets for money--only sometimes, you say! You work underneath your betters in the communal bathhouse, keeping it and the guests in turn as tidy as they please. Wash laundry, tend mild wounds, and deftly wash your patrons with soap, for this is your craft."
+	tutorial = "Большинство людей сочли бы скромную банщицу, недавно вступившую в ряды работников, отчаянной дурочкой, которая за деньги заманивает других в постель. Но это не всегда так! Вы работаете в общественной бане, обслуживая своих клиентов и поддерживая чистоту. Стирайте бельё, обрабатывайте лёгкие раны и ловко мойте своих клиентов с мылом, ибо это ваше ремесло."
 
 /datum/advclass/nightmaiden/concubine
 	name = "Concubine"
-	tutorial = "Unlike your fellow bath attendants who maintain a professional facade, you have abandoned all pretense. You are a prized possession of the nobility, adorned in exotic silks and gold. Your role is to provide companionship, entertainment, and pleasure. Working underneath the finespun courtesans, you're a step above the bath attendants in your craft."
+	tutorial = "В отличие от других банщиц, которые стараются выглядеть профессионально, вы отказались от всякого притворства. Вы - ценное приобретение знати, облачённое в экзотический шёлк и золото. Ваша роль - обеспечивать общение, развлечения и удовольствие. Ты работаешь под началом изысканных куртизанок, но в своём ремесле на шаг выше обычных банщиц."
 
 /datum/advclass/nightmaiden/courtesan
 	name = "Courtesan"
-	tutorial = "Overcoming mind games, deceit and competition, you came into your own as one of the bathhouse's most prized moneymakers and socialites. Dressed in lavish gifts left behind by your patrons, not just anyone can have you. Under the matron, you do most of the social heavylifting and provide entertainment of all forms - behind a heavy price tag. "
+	tutorial = "Преодолевая психологические игры, обман и конкуренцию, вы стали одной из самых ценных и популярных в банях личностей, приносящих прибыль. Вы одеты в роскошные подарки, оставленные вашими покровителями, и не каждому выпадает честь быть рядом с вами. Под руководством матушки вы выполняете большую часть тяжелой социальной работы и предоставляете развлечения всех форм - за высокую цену."

@@ -1,11 +1,11 @@
 /datum/advclass/noble
 	name = "Aristocrat"
-	tutorial = "You are a traveling noble visiting foreign lands. With wealth, come the poor, ready to pilfer you of your hard earned (inherited) coin, so tread lightly unless you want to meet a grizzly end."
+	tutorial = "Вы путешествующий дворянин, посещающий чужие земли. С богатством приходят бедняки, готовые украсть у вас с трудом заработанные (унаследованные) деньги, так что действуйте осторожно, если не хотите встретить конец."
 
 /datum/advclass/noble/knighte
 	name = "Knight Errant"
-	tutorial = "You are a knight from a distant land, a scion of a noble house visiting Azuria for one reason or another."
+	tutorial = "Вы - рыцарь из далекой страны, отпрыск благородного дома, посетивший Азурию по той или иной причине."
 
 /datum/advclass/noble/squire
 	name = "Squire Errant"
-	tutorial = "You are a squire who has traveled far in search of a master to train you and a lord to knight you."
+	tutorial = "Вы - оруженосец, который проделал долгий путь в поисках мастера, который обучил бы вас, и лорда, который посвятил бы вас в рыцари."

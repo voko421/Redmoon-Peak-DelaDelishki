@@ -6,7 +6,7 @@
 	total_positions = 0
 	spawn_positions = 0 //disables round-start spawn of pilgrims but allows migrant waves
 	allowed_races = RACES_ALL_KINDS
-	tutorial = "Fleeing misfortune you head your way towards Scarlet Dawn, you're not a soldier or an explorer, but a humble migrant trying to look for a better life, if you get to survive the trip that is."
+	tutorial = "Спасаясь от несчастья, ты направляешься навстречу Алому Рассвету, ты не солдат и не исследователь, а скромный мигрант, пытающийся найти лучшую жизнь, если тебе удастся пережить это путешествие."
 
 	outfit = null
 	outfit_female = null

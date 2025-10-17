@@ -1,5 +1,5 @@
 /datum/advclass/farmermaster
 	name = "Master Farmer"
-	tutorial = "A master farmer, a story simlar to the likes of Goliath and David, \
-	You, a simple peasent, through sheer determination have conquered nature \
-	and made it bow before your green thumb."
+	tutorial = "Искусный фермер, история которого похожа на историю Голиафа и Давида, \
+	Вы, простой крестьянин, благодаря своей целеустремленности покорили природу \
+	и заставил его склониться перед твоим зеленым пальцем."

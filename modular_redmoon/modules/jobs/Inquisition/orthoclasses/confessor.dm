@@ -1,3 +1,3 @@
 /datum/advclass/confessor
 	name = "Confessor"
-	tutorial = "Psydonite hunters, unmatched in the fields of subterfuge and investigation. There is no suspect too powerful to investigate, no room too guarded to infiltrate, and no weakness too hidden to exploit."
+	tutorial = "Охотники на псайдонитов, которым нет равных в области уловок и расследований. Нет подозреваемого, который был бы слишком могущественен, чтобы его расследовать, нет комнаты, в которую было бы невозможно проникнуть, и нет слишком скрытой слабости, которой можно было бы воспользоваться."

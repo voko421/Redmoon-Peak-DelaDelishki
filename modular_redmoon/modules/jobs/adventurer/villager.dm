@@ -1,3 +1,3 @@
 /datum/job/roguetown/villager
 	title = "Towner"
-	tutorial = "You've lived in this shithole for effectively all your life. You are not an explorer, nor exactly a warrior in many cases. You're just some average poor bastard who thinks they'll be something someday. Respect the nobles and yeomen alike for they are your superiors - should you find yourself in trouble your Elder is your best hope."
+	tutorial = "Ты прожил в этой дыре практически всю свою жизнь. Ты не исследователь и, во многих случаях, не воин. Ты просто обычный бедолага, который думает, что когда-нибудь чего-то добьется. Уважайте как дворян, так и йоменов, потому что они ваши начальники - если вы окажетесь в беде, ваша лучшая надежда - на старшего по званию."

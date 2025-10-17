@@ -1,5 +1,5 @@
 /datum/job/roguetown/lady
 	title = "Consort"
-	tutorial = "Picked out of your political value rather than likely any form of love, you have become the Grand Duke's most trusted confidant--and likely friend--throughout your marriage. Your loyalty and perhaps even your love will be tested this day... for the daggers that threaten your beloved are as equally pointed at your own throat."
+	tutorial = "Выбранный скорее из-за вашей политической значимости, чем, вероятно, из-за какой-либо формы любви, вы стали самым доверенным лицом великого герцога - и, вероятно, другом. Ваша верность и, возможно, даже ваша любовь будут подвергнуты испытанию в этот день... ибо кинжалы в равной степени нацелены и на ваше собственное горло."
 	min_pq = 0
 	max_pq = null

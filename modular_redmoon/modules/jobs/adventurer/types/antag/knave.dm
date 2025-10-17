@@ -1,3 +1,7 @@
 /datum/advclass/knave
 	name = "Knave"
-	tutorial = "Not all followers of Matthios take by force. Thieves, poachers, and ne'er-do-wells of all forms steal from others from the shadows, long gone before their marks realize their misfortune."
+	tutorial = "Не все последователи Маттиоса забирают силой. Воры, браконьеры и бездельники всех мастей крадут у других из тени, исчезая задолго до того, как их жертвы осознают свое несчастье."
+
+/datum/outfit/job/roguetown/bandit/knave/pre_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.adjust_skillrank(/datum/skill/combat/firearms, 4, TRUE)

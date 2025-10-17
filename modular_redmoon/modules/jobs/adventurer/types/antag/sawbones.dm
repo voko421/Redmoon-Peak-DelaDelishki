@@ -1,3 +1,3 @@
 /datum/advclass/sawbones
 	name = "Sawbones"
-	tutorial = "It was an accident! Your patient wasn't using his second kidney, anyway. After an unfortunate 'misunderstanding' with the town and your medical practice, you know practice medicine on the run with your new associates. Business has never been better!"
+	tutorial = "Это был несчастный случай! В любом случае, ваш пациент не пользовался своей второй почкой. После досадного "недоразумения" с городом и вашей врачебной практикой, вы, как известно, занимаетесь врачебной практикой в бегах со своими новыми коллегами. Бизнес никогда не был лучше!"

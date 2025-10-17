@@ -1,3 +1,3 @@
 /datum/advclass/homesteader
 	name = "Homesteader"
-	tutorial = "Azure population's tendency to take up arms and become unwashed beastslayers had forced you to take up jobs, small and large of most professions.\n A jack of all trades, what will you be known as this week?"
+	tutorial = "Склонность населения Лазури браться за оружие и становиться немытыми истребителями зверей вынудила вас заняться любой работой, как мелкой, так и крупной, по большинству профессий.\n Мастер на все руки, как вы будете известны на этой неделе?"

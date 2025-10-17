@@ -1,28 +1,28 @@
 /datum/advclass/trader
 	name = "Jeweler"
-	tutorial = "You make your coin peddling exotic jewelry, gems, and shiny things."
+	tutorial = "Ты зарабатываешь себе на хлеб, торгуя экзотическими украшениями, драгоценными камнями и блестящими вещицами."
 
 /datum/advclass/trader/doomsayer
 	name = "Doomsayer"
-	tutorial = "THE WORLD IS ENDING!!! At least, that's what you want your clients to believe. You'll offer them a safe place in the new world, of course - built by yours truly."
+	tutorial = "НАСТУПАЕТ КОНЕЦ СВЕТА!!! По крайней мере, ты хочешь, чтобы твои клиенты в это верили. Ты предложишь им безопасное место в новом мире, конечно же, построенное их покорным слугой."
 
 /datum/advclass/trader/scholar
 	name = "Scholar"
-	tutorial = "You are a scholar traveling the world in order to write a book about your ventures. You trade in stories and tales of your travels."
+	tutorial = "Ты ученый, путешествующий по миру с целью написать книгу о своих приключениях. Ты публикуешь рассказы о своих путешествиях."
 
 /datum/advclass/trader/harlequin
 	name = "Harlequin"
-	tutorial = "You are a travelling entertainer - a jester by trade. Where you go, chaos follows - and mischief is made."
+	tutorial = "Ты странствующий артист эстрады, шут по профессии. Куда бы ты ни отправился, везде царит хаос и творится зло."
 
 /datum/advclass/trader/peddler
 	name = "Peddler"
-	tutorial = "You make your coin peddling in spices and performing back-alley 'medical' procedures. Hope your patient didn't need that kidney."
+	tutorial = "Ты зарабатываешь деньги, торгуя специями и выполняя подпольные "медицинские" процедуры. Надеюсь, от твоего пациента не убудет с пропажи этой почка."
 
 /datum/advclass/trader/brewer
 	name = "Brewer"
-	tutorial = "You make your coin peddling imported alcohols from all over the world, though you're no stranger to the craft, and have experience brewing your own ale in a pinch. You have the equipments and know how on how to make your own distiller, too."
+	tutorial = "Ты зарабатываешь себе на хлеб, продавая импортные алкогольные напитки со всего мира, хотя ты не новичок в этом ремесле и в случае необходимости имеешь опыт приготовления собственного эля. У тебя есть оборудование и знания о том, как сделать свой собственный дистиллятор."
 
 /datum/advclass/trader/cuisiner
 	name = "Cuisiner"
-	tutorial = "Whether a disciple of a culinary school, a storied royal chef, or a mercenary cook for hire, your trade is plied at the counter, \
-	the cutting board, and the hearth."
+	tutorial = "Независимо от того, являешься ли ты учеником кулинарной школы, легендарным королевским шеф-поваром или поваром-наемником, твое дело - работать за прилавком, \
+	разделочной доской, и очагом."

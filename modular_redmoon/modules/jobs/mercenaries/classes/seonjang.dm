@@ -1,3 +1,3 @@
 /datum/advclass/mercenary/seonjang
 	name = "Seonjang"
-	tutorial = "The respected leader and singular representative of the Ruma clan, you're an experienced swordsman. It matters not where the coin comes from, so long as you can make enough to support the clan in its survival from the Xinyi Dynasty and its conflicts, now in strange lands."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Уважаемый лидер и единственный в своем роде представитель клана Рума, вы опытный фехтовальщик. Не имеет значения, откуда взялись деньги, главное, чтобы вы могли заработать достаточно, чтобы поддержать клан в его выживании после правления династии Синьи и ее конфликтов, которые сейчас происходят в чужих землях."

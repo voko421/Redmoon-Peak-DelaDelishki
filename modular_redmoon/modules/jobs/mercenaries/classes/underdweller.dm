@@ -1,3 +1,3 @@
 /datum/advclass/mercenary/underdweller
 	name = "Underdweller"
-	tutorial = "A member of the Underdwellers, you've taken many of the deadliest contracts known to man in literal underground circles. Drow or Dwarf, you've put your differences aside for coin and adventure."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Будучи членом Подземного Мира, вы заключали многие из самых смертоносных контрактов, известных людям в подпольных кругах. Дроу или дворф, вы забыли о своих различиях ради денег и приключений."

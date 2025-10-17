@@ -193,7 +193,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 		var/dispjob = mind.assigned_role
 		removeomen(OMEN_NOLORD)
 		say("By the authority of the gods, I pronounce you Ruler of all Azuria!")
-		priority_announce("[real_name] the [dispjob] has named [HU.real_name] the inheritor of SCARLET DAWN!", title = "Long Live [HU.real_name]!", sound = 'sound/misc/bell.ogg')
+		priority_announce("[real_name], [dispjob], [HU.real_name] объявляется новым наследником Алого Предела!", title = "Долгой жизни [HU.real_name]!", sound = 'sound/misc/bell.ogg')
 		var/datum/job/roguetown/nomoredukes = SSjob.GetJob("Grand Duke")
 		if(nomoredukes)
 			nomoredukes.total_positions = -1000 //We got what we got now.
@@ -220,7 +220,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 		visible_message(span_warning("[src] takes a deep breath, preparing to make an announcement.."))
 		if(do_after(src, 15 SECONDS, target = src)) // Reduced to 15 seconds from 30 on the original Herald PR. 15 is well enough time for sm1 to shove you.
 			say(announcementinput)
-			priority_announce("[announcementinput]", "The Bishop Preaches", 'sound/misc/bell.ogg', sender = src)
+			priority_announce("[announcementinput]", "Верховный Жрец Вещает", 'sound/misc/bell.ogg', sender = src)
 			COOLDOWN_START(src, priest_announcement, PRIEST_ANNOUNCEMENT_COOLDOWN)
 		else
 			to_chat(src, span_warning("Your announcement was interrupted!"))
@@ -339,7 +339,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 
 	if (inputty in GLOB.apostasy_players)
 		GLOB.apostasy_players -= inputty
-		priority_announce("[real_name] has forgiven [inputty]. Their patron hears their prayer once more!", title = "APOSTASY LIFTED", sound = 'sound/misc/bell.ogg')
+		priority_announce("[real_name] прощает [inputty]. Покровитель снова слышит молитвы [inputty]!", title = "СЛАВА ДЕСЯТИ!", sound = 'sound/misc/bell.ogg')
 		message_admins("APOSTASY: [real_name] ([ckey]) has used forgiven apostasy at [H.real_name] ([H.ckey])")
 		log_game("APOSTASY: [real_name] ([ckey]) has used forgiven apostasy at [H.real_name] ([H.ckey])")
 
@@ -372,7 +372,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 		else
 			to_chat(H, span_warning("A holy silence falls upon you..."))
 
-		priority_announce("[real_name] has placed mark of shame upon [inputty]. Their prayers fall on deaf ears.", title = "APOSTASY", sound = 'sound/misc/excomm.ogg')
+		priority_announce("[real_name] объявляет [inputty] отступником. Святая Тишина - ваш покровитель.", title = "ПОЗОР", sound = 'sound/misc/excomm.ogg')
 		message_admins("APOSTASY: [real_name] ([ckey]) has used apostasy at [H.real_name] ([H.ckey])")
 		log_game("APOSTASY: [real_name] ([ckey]) has used apostasy at [H.real_name] ([H.ckey])")
 		return TRUE
@@ -408,7 +408,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 
 	if (inputty in GLOB.excommunicated_players)
 		GLOB.excommunicated_players -= inputty
-		priority_announce("[real_name] has reconciled [inputty] with the Church. They are once again part of the flock!", title = "RECONCILIATION", sound = 'sound/misc/bell.ogg')
+		priority_announce("[real_name] прощает [inputty]. Покровитель снова слышит молитвы [inputty]!", title = "СЛАВА ДЕСЯТИ!", sound = 'sound/misc/bell.ogg')
 		message_admins("EXCOMMUNICATION: [real_name] ([ckey]) has reconciled [H.real_name] ([H.ckey])")
 		log_game("EXCOMMUNICATION: [real_name] ([ckey]) has reconciled [H.real_name] ([H.ckey])")
 
@@ -444,7 +444,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 			return FALSE
 
 	GLOB.excommunicated_players += inputty
-	priority_announce("[real_name] has excommunicated [inputty]! SHAME!", title = "EXCOMMUNICATION", sound = 'sound/misc/excomm.ogg')
+	priority_announce("[real_name] отлучает [inputty] от церкви!", title = "ПОЗОР!", sound = 'sound/misc/excomm.ogg')
 	message_admins("EXCOMMUNICATION: [real_name] ([ckey]) has excommunicated [H.real_name] ([H.ckey])")
 	log_game("EXCOMMUNICATION: [real_name] ([ckey]) has excommunicated [H.real_name] ([H.ckey])")
 
@@ -494,7 +494,7 @@ code\modules\admin\verbs\divinewrath.dm has a variant with all the gods so keep 
 
 		if (H.is_cursed(temp))
 			H.remove_curse(temp)
-			priority_announce("[real_name] has lifted [curse_pick] from [H.real_name]! They are once again part of the flock!", title = "REDEMPTION", sound = 'sound/misc/bell.ogg')
+			priority_announce("[real_name] прощает [H.real_name]!", title = "Милосердие Веры", sound = 'sound/misc/bell.ogg')
 			message_admins("DIVINE CURSE: [real_name] ([ckey]) has removed [curse_pick] from [H.real_name]) ") //[ADMIN_LOOKUPFLW(user)] Maybe add this here if desirable but dunno.
 			log_game("DIVINE CURSE: [real_name] ([ckey]) has removed [curse_pick] from [H.real_name])")
 		else
@@ -515,7 +515,7 @@ code\modules\admin\verbs\divinewrath.dm has a variant with all the gods so keep 
 			COOLDOWN_START(src, priest_curse, PRIEST_CURSE_COOLDOWN)
 			H.add_curse(curse_type)
 			
-			priority_announce("[real_name] has stricken [H.real_name] with [curse_pick]! SHAME!", title = "JUDGEMENT", sound = 'sound/misc/excomm.ogg')
+			priority_announce("[real_name] насылает проклятие [curse_pick] на [H.real_name]!", title = "Божественный Суд", sound = 'sound/misc/excomm.ogg')
 			message_admins("DIVINE CURSE: [real_name] ([ckey]) has stricken [H.real_name] ([H.ckey] with [curse_pick])")
 			log_game("DIVINE CURSE: [real_name] ([ckey]) has stricken [H.real_name] ([H.ckey] with [curse_pick])")
 
@@ -590,8 +590,8 @@ code\modules\admin\verbs\divinewrath.dm has a variant with all the gods so keep 
 	user.apply_status_effect(/datum/status_effect/debuff/devitalised)
 	target.apply_status_effect(/datum/status_effect/debuff/devitalised)
 
-	var/announcement_text = "[user.real_name] has brought [target.real_name] back into the fold of the church! [target.real_name] now follows [user.patron.name]!"
-	priority_announce(announcement_text, title = "REDEMPTION", sound = 'sound/misc/bell.ogg')
+	var/announcement_text = "[user.real_name] возвращает [target.real_name] обратно под крыло Церкви Десяти! [target.real_name] следует Покровителю [user.patron.name]!"
+	priority_announce(announcement_text, title = "ИСКУПЛЕНИЕ", sound = 'sound/misc/bell.ogg')
 	message_admins("HERETIC CONVERSION: [user.real_name] ([user.ckey]) has converted [target.real_name] ([target.ckey]) to [user.patron.name]")
 	log_game("HERETIC CONVERSION: [user.real_name] ([user.ckey]) converted [target.real_name] ([target.ckey]) to [user.patron.name]")
 	to_chat(user, span_danger("You've converted [target.name] to follow [user.patron.name]!"))

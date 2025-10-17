@@ -1,30 +1,30 @@
 /datum/job/roguetown/veteran
 	title = "Veteran"
-	tutorial = "You've known combat your entire life. There isn't a way to kill a man you havent practiced in the tapestries of war itself. You wouldn't call yourself a hero--those belong to the men left rotting in the fields where you honed your ancient trade. You don't sleep well at night anymore, you don't like remembering what you've had to do to survive. Trading adventure for stable pay was the only logical solution, and maybe someday you'll get to lay down the blade and rest your weary body..."
+	tutorial = "Ты всю свою жизнь участвовал в боях. Нет такого способа убить человека, которого ты не знал бы на 'гобеленах войны'. Ты бы не назвал себя героем - это люди, которых оставили гнить на полях, где ты оттачивал свое древнее ремесло. Вы больше не спите спокойно по ночам, вам не нравится вспоминать о том, что вам приходилось делать, чтобы выжить. Торговля ради стабильной зарплаты была единственным логичным решением, и, возможно, когда-нибудь вы сможете сложить оружие и дать отдых своему уставшему телу..."
 	min_pq = 0
 	max_pq = null
 	round_contrib_points = 5
 
 /datum/advclass/veteran/battlemaster
 	name = "Veteran Battlemaster"
-	tutorial = "You have served under a hundred masters, some good, some bad. You were a general once. A marshal, a captain. To some a hero, others a monster. Something of the sorts. You made strategies, tactics, new innovations of war. A thousand new ways for one man to kill another. It still keeps you up at night."
+	tutorial = "Вы служили под началом сотни мастеров, как хороших, так и плохих. Когда-то вы были генералом. Маршалом, капитаном. Для одних - героем, для других - чудовищем. Что-то в этом роде. Вы разрабатывали стратегии, тактику, новые приемы ведения войны. Тысяча новых способов, которыми один человек может убить другого. Это все еще не дает тебе спать по ночам."
 
 /datum/advclass/veteran/footman
 	name = "Retired Footman"
-	tutorial = "You served on the fields of battle as no heroic knight steadfast in shining armor, but a mere mortal clad in whatever cheap armor coin could buy. You fought in formation as a member of a unit, and through discipline, have won numerous battles. Maybe one day you even served as the captain of your unit. You specialize in polearms and bows."
+	tutorial = "Вы сражались на полях сражений не как героический рыцарь в сверкающих доспехах, а как простой смертный, облаченный в самую дешевую броню, какую только можно купить за деньги. Вы сражались в строю как член подразделения и благодаря дисциплине выиграли множество сражений. Возможно, однажды вы даже были капитаном своего подразделения. Вы специализируетесь на древковом оружии и луках."
 
 /datum/advclass/veteran/calvaryman
 	name = "Tarnished Knight"
-	tutorial = "You were once a member of a knightly calvary regiment, a prestigious title. You were ontop of the world, the townspeople rejoiced when you rode through their streets. Now, all you can hear is the screams of your brothers-in-arms as they fell. You specialize in mounted warfare."
+	tutorial = "Когда-то вы были членом рыцарского полка на Голгофе, это был престижный титул. Вы были на вершине мира, горожане радовались, когда вы проезжали по их улицам. Теперь все, что вы можете услышать, - это крики ваших братьев по оружию, когда они падали. Вы специализируетесь на конной войне."
 
 /datum/advclass/veteran/merc
 	name = "Retired Mercenary"
-	tutorial = "You were a sell-sword, a warrior of coin. Your pockets were never light, you always had a warm place to stay and food in your belly, but you knew that every battle could be your last. You're the last of your unit, and you can't help but regret it. You specialize in swords and polearms, or axes and polearms."
+	tutorial = "Ты был наемником, воином с деньгами. Твои карманы никогда не были пустыми, у тебя всегда было теплое пристанище и еда в желудке, но ты знал, что каждая битва может стать для тебя последней. Ты последний в своем отряде, и ты не можешь не сожалеть об этом. Вы специализируетесь на мечах и древковом оружии, или на топорах и древковом оружии с шестами."
 
 /datum/advclass/veteran/scout
 	name = "Former Scout"
-	tutorial = "You and your unit maneuvered ahead of the main force, ever-watchful for traps and ambushes. You never thought of what would happen should you actually walk into one. You specialize in archery and axes."
+	tutorial = "Вы и ваш отряд маневрировали впереди основных сил, постоянно опасаясь ловушек и засад. Вы никогда не думали о том, что произойдет, если вы на самом деле попадете в одну из них. Вы специализируетесь на стрельбе из лука и использовании топоров."
 
 /datum/advclass/veteran/spy
 	name = "Ex-Spy"
-	tutorial = "You didn't serve on the frontlines, you were an informant, a spy, an assassin. You wove your way through enemy courts, finding information, neutralizing loose ends. You lived old in a career that many die young. It's a miracle you stand here today. You specialize in knives, whips, and stealth."
+	tutorial = "Вы не служили на передовой, вы были информатором, шпионом, наемным убийцей. Вы пробирались через вражеские суды, добывая информацию, обезвреживая незавершенные дела. Вы прожили долгую жизнь, занимаясь карьерой, в которой многие умирают молодыми. Это чудо, что вы стоите здесь сегодня. Вы специализируетесь на ножах, хлыстах и скрытности."

@@ -1,11 +1,11 @@
 /datum/advclass/mercenary/desert_rider
 	name = "Desert Rider Janissary"
-	tutorial = "The Janissaries are the Empire's elite infantry units, wielding mace and shield. We do not break."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Янычары - элитные пехотные подразделения империи, вооруженные булавами и щитами. Мы не сдаемся."
 
 /datum/advclass/mercenary/desert_rider/zeybek
 	name = "Desert Rider Zeybek"
-	tutorial = "Ranesheni 'Blade Dancers' are famed and feared the world over. Their expertise in blades both long and short is well known."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Ранешени, 'Танцоры на Клинках', знамениты и внушают страх всему миру. Их опыт владения как длинными, так и короткими клинками хорошо известен."
 
 /datum/advclass/mercenary/desert_rider/almah
 	name = "Desert Rider Almah"
-	tutorial = "Almah are those skilled in both magyck and swordsmanship, but excelling in nothing."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Альма - это те, кто искусен как в магии, так и во владении мечом, но ни в чем не преуспевает."

@@ -1,15 +1,15 @@
 /datum/advclass/rogue
 	name = "Treasure Hunter"
-	tutorial = "You are a treasure hunter trained in hunting for valuables. Discern what is treasure or not, your fortune could be hidden anywhere."
+	tutorial = "Ты - охотник за сокровищами, обученный охоте за ценностями. Разберитесь, что является сокровищем, а что нет, ваше состояние может быть спрятано где угодно."
 
 /datum/advclass/rogue/thief
 	name = "Thief"
-	tutorial = "You are a scoundrel and a thief. A master in getting into places you shouldn't be and taking things that aren't rightfully yours."
+	tutorial = "Ты негодяй и вор. Ты мастер проникать туда, где тебя быть не должно, и брать то, что тебе не принадлежит по праву."
 
 /datum/advclass/rogue/bard
 	name = "Bard"
-	tutorial = "You make your fortune in brothels, flop houses, and taverns – gaining fame for your songs and legends. If there is any truth to them, that is."
+	tutorial = "Ты зарабатываешь свое состояние в борделях, ночлежках и тавернах, прославляясь своими песнями и легендами. Если в них есть хоть капля правды, то это так."
 
 /datum/advclass/rogue/swashbuckler
 	name = "Swashbuckler"
-	tutorial = "You are a daring rogue of the seas! Swashbucklers wield agile swordplay and acrobatic prowess - fighting dirty to outmaneuver foes with flair."
+	tutorial = "Ты - отважный морской разбойник! Ты ловко владеешь мечом и акробатическим мастерством - сражаешься грязно, чтобы перехитрить противника с помощью таланта."

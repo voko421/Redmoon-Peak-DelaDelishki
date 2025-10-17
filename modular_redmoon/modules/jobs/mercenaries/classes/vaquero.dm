@@ -1,3 +1,3 @@
 /datum/advclass/mercenary/vaquero
 	name = "Vaquero"
-	tutorial = "Originating in the vibrant Kingdom of Etrusca, a 'vaquero' had originally been a mere cattle-driver... Now, though, it has become a title for roaming swashbucklers. Whether they set out as a defender of the commonfolk or a pilferer of purses, the Vaquero is defined by the tale they carve across continents - and more frequently - by their story's violent end."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Родом из оживленного королевства Этруска, 'Вакеро' изначально был простым погонщиком скота... однако теперь это название стало обозначать бродячих головорезов. Независимо от того, выступают ли они в роли защитников простых людей или воришек кошельков, Вакеро характеризуются историей, которую они рассказывают на разных континентах, и чаще всего - жестоким концом своей истории."

@@ -1,3 +1,3 @@
 /datum/advclass/vagabond_beggar
 	name = "Beggar"
-	tutorial = "You are without coin and without worth. The pity of others is your bread, and their mercy is your butter. Having sat by waystones and watched many a traveller pass in the hopes for alms, you've nursed a surprising talent for thievery, and have even cajoled knowledge of lockpicking out of an especially sentimental rogue."
+	tutorial = "Ты без гроша и ничего не стоишь. Жалость других - твой хлеб, а их милосердие - твоё масло. Сидя у дорожных камней и наблюдая за множеством проходящих путников, ты смотришь на них в надежде на милостыню. Ты развил в себе удивительный талант к воровству и даже выпросил у особенно сентиментального мошенника умение взламывать замки."

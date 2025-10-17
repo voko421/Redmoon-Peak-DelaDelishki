@@ -1,22 +1,21 @@
 /datum/job/roguetown/knight
 	title = "Knight"
-	tutorial = "Having proven yourself both loyal and capable, you have been knighted to serve the realm as the royal family's sentry. \
-				You listen to your Liege, the Marshal, and the Knight Captain, defending your Lord and realm - the last beacon of chivalry in these dark times."
+	tutorial = "Доказав свою преданность и способности, вы были посвящены в рыцари, чтобы служить королевству в качестве стража королевской семьи. Вы слушаетесь своего герцога, маршала и рыцаря-капитана, защищая своего лорда и королевство - последний оплот рыцарства в эти темные времена."
 	min_pq = 0
 	max_pq = null
 
 /datum/advclass/knight/heavy
 	name = "Heavy Knight"
-	tutorial = "You've trained thoroughly and hit far harder than most - adept with massive swords, axes, maces, and polearms. People may fear the mounted knights, but they should truly fear those who come off their mount..."
+	tutorial = "Вы тщательно тренировались и наносите удары гораздо сильнее, чем большинство искусных в обращении с массивными мечами, топорами, булавами и древками. Люди могут бояться конных рыцарей, но по-настоящему они должны бояться тех, кто соскакивает со своего коня..."
 
 /datum/advclass/knight/footknight
 	name = "Foot Knight"
-	tutorial = "You are accustomed to traditional foot-soldier training in one-handed weapons such as flails, swords, and maces. Your fortitude and mastery with the versatile combination of a shield and weapon makes you a fearsome opponent to take down!"
+	tutorial = "Вы привыкли к традиционным тренировкам пехотинцев по владению одноручным оружием, таким как цепы, мечи и булавы. Ваша стойкость и мастерство в сочетании с универсальным сочетанием щита и оружия делают вас грозным противником, с которым не легко справиться!"
 
 /datum/advclass/knight/mountedknight
 	name = "Mounted Knight"
-	tutorial = "You are the picture-perfect knight from a high tale, knowledgeable in riding steeds into battle. You specialize in weapons most useful on a saiga including spears, swords, maces, and a variety of ranged weaponry."
+	tutorial = "Вы - идеальный рыцарь из сказок, умеющий вести бой скакунов. Вы специализируетесь на оружии, наиболее удобном в использовании в связке с сайгаком, включая копья, мечи, булавы и различное оружие дальнего боя."
 
 /datum/advclass/knight/irregularknight
 	name = "Royal Champion"
-	tutorial = "Your skillset is abnormal for a knight. Your swift maneuvers and masterful technique impress both lords and ladies alike, and you have a preference for quicker, more elegant blades. While you are an effective fighting force in medium armor, your evasive skills will only truly shine if you don even lighter protection."
+	tutorial = "Ваш набор навыков необычен для рыцаря. Ваши быстрые маневры и мастерская техника производят впечатление как на лордов, так и на леди, и вы предпочитаете более быстрые и элегантные клинки. Несмотря на то, что вы являетесь эффективной боевой силой в средней броне, ваши навыки уклонения по-настоящему проявятся только в том случае, если вы наденете еще более легкую защиту."

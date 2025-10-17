@@ -1,19 +1,19 @@
 /datum/advclass/sfighter
 	name = "Battlemaster"
-	tutorial = "You are a seasoned weapon specialist, clad in maille, with years of experience in warfare and battle under your belt."
+	tutorial = "Ты опытный специалист по оружию, облаченный в кольчугу, с многолетним опытом ведения боевых действий."
 
 /datum/advclass/sfighter/duelist
 	name = "Duelist"
-	tutorial = "You are an esteemed swordsman who foregoes armor in exchange for a more nimble fighting style."
+	tutorial = "Ты уважаемый фехтовальщик, который отказывается от доспехов в обмен на более ловкий стиль боя."
 
 /datum/advclass/sfighter/barbarian
 	name = "Barbarian"
-	tutorial = "You are a brutal warrior who foregoes armor in order to showcase your raw strength. You specialize in unarmed combat and wrestling."
+	tutorial = "Ты - жестокий воин, который отказывается от доспехов, чтобы продемонстрировать свою силу. Ты специализируешься в рукопашном бою и рестлинге."
 
 /datum/advclass/sfighter/ironclad
 	name = "Ironclad"
-	tutorial = "You are a warrior who puts their trust in durable armor. The best offense is a good defense."
+	tutorial = "Ты - воин, который полагается на прочные доспехи. Лучшее нападение - это хорошая защита."
 
 /datum/advclass/sfighter/mhunter
 	name = "Exorcist"
-	tutorial = "You are a specialist who hunts terrible monsters; nitebeasts, vampyres, deadites and more. Your humenity might be limiting - but with silver weapons and steel maille, you may yet slight the odds in your favor."
+	tutorial = "Вы специалист по охоте на ужасных монстров: нитетварей, вампиров, мертвецов и многих других. Возможно, ваши возможности ограничены, но с серебряным оружием и стальными кольчугами шансы в вашу пользу могут быть весомые."

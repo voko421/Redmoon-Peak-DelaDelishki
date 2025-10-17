@@ -1,3 +1,3 @@
 /datum/advclass/disciple
 	name = "Disciple"
-	tutorial = "Psydonite monks, practiced in both martiality and scripture. Spilling blood on sacred grounds is considered 'sinful' to the clergymen, though no qualms are spared towards knocking someone's lights out."
+	tutorial = "Монахи-Псайдонисты, практикующие как боевые искусства, так и священное писание. Пролитие крови на священных землях считается священнослужителями 'греховным', хотя они не жалеют сил, чтобы вырубить кого-нибудь."

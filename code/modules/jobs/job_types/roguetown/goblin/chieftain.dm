@@ -45,6 +45,6 @@
 		if(!istype(get_area(src), /area/rogue/indoors/shelter/mountains/decap))
 			to_chat(src, span_warning("I need to do this from the Goblin Kingdom."))
 			return FALSE
-		priority_announce("[inputty]", title = "The Goblin King Squeals", sound = 'sound/misc/dun.ogg', sender = src)
+		priority_announce("[inputty]", title = "Король Гоблинов Визжит", sound = 'sound/misc/dun.ogg', sender = src)
 
 

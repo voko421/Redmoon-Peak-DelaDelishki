@@ -2,6 +2,6 @@
 
 /datum/advclass/masterwoodcutter
 	name = "Master Lumberjack"
-	tutorial = "The strongest and wisest Lumberjack, trained in the art of both chopping and transforming wood. \
-	With your mighty hands you chopped countless trees, Dendor fears you, the elves tell the children stories about you, \
-	so they don't wander in the forest."
+	tutorial = "Самый сильный и мудрый лесоруб, обученный искусству рубки и переработки древесины. \
+	Своими могучими руками ты срубил бесчисленное множество деревьев, Дендор боится тебя, эльфы рассказывают детям истории о тебе, \
+	чтобы они не бродили по лесу."

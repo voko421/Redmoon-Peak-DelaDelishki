@@ -1,20 +1,20 @@
 /datum/job/roguetown/bogguardsman
 	title = "Warden"
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
-	tutorial = "Typically a denizen of the sparsely populated Azurian woods, you volunteered up with the wardens--a group of ranger types who keep a vigil over the untamed wilderness. \
-				While Wardens have no higher authority, operating as a fraternity of rangers, you will be called upon as members of the garrison by the Marshal or the Crown. \
-				Serve their will and recieve what a ranger craves the most - freedom and safety."
+	tutorial = "Будучи обычным жителем малонаселенных азурийских лесов, вы добровольно вступили в ряды стражей - группы рейнджеров, которые охраняют дикую природу. \
+				Хотя стражи не имеют высших полномочий и действуют как братство рейнджеров, маршал или корона призовут вас в качестве членов гарнизона. \
+				Подчиняйся их воле и получай то, чего рейнджер жаждет больше всего - свободу и безопасность."
 	min_pq = 0
 	max_pq = null
 	round_contrib_points = 5
 
 /datum/advclass/bogguardsman/ranger
 	name = "Ranger"
-	tutorial = "You are a ranger, a hunter who volunteered to become a part of the wardens. You have experience using bows and daggers."
+	tutorial = "Вы рейнджер, охотник, который добровольно вступил в ряды стражей. У вас есть опыт обращения с луками и кинжалами."
 
 /datum/advclass/bogguardsman/forester
 	name = "Forester"
-	tutorial = "You are a forester, a woodsman who volunteered to become a part of the wardens. You have experience using axes and polearms."
+	tutorial = "Вы лесничий, дровосек, который добровольно вступил в ряды стражей. У вас есть опыт обращения с топорами и древковым оружием."
 
 /datum/outfit/job/roguetown/bogguardsman/ranger/pre_equip(mob/living/carbon/human/H)
 	..()

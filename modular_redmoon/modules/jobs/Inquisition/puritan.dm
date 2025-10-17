@@ -1,13 +1,13 @@
 /datum/job/roguetown/puritan
 	title = "Inquisitor"
-	tutorial = "You are a puritan of unmatched aptitude, adherent to the Psydonic doctrine and entrusted with the authority to lead a local sect. Otava - the largest Psydonic kingdom left on this world - has seen it fit to treat you like a silver-tipped olive branch, gifted to Azuria to ward off the encroaching darkness. Tread carefully when pursuing your missives, lest the faithless strap you to the pyre as well."
+	tutorial = "Вы - инквизитор с непревзойденными способностями, приверженец психодинамической доктрины, которому доверена власть возглавлять местную секту. Отава - крупнейшее Психодоническое королевство, оставшееся в этом мире, - сочло нужным относиться к вам как к оливковой ветви с серебряным наконечником, подаренной Азурии, чтобы защитить ее от надвигающейся тьмы. Действуйте осторожно, отправляя свои послания, чтобы неверующие не привязали и вас к погребальному костру."
 	min_pq = 15
 	max_pq = null
 
 /datum/advclass/puritan/inspector
 	name = "Inquisitor"
-	tutorial = "Investigators and diplomats, oft-selected from Confessors who've shown their aptitude in a variety of skills. A precise strike is all that's needed to forward the Orthodoxy's missive; whether it's struck with a diplomat's charm or a rapier's tip, however, is up to you."
+	tutorial = "Следователи и дипломаты, которых часто выбирают из числа Духовников, проявивших свои способности в самых разных областях. Точный удар - это все, что нужно для отправки послания Ортодоксии; однако будет ли оно нанесено с помощью обаяния дипломата или острия рапиры, решать вам."
 
 /datum/advclass/puritan/ordinator
 	name = "Ordinator"
-	tutorial = "Adjudicator-Sergeants, hailing from the neighboring Psydonic Orders. Oft-mistaken for golems due to the lethargy imposed by their blessed plate armor, these holy knights have forsaken every other pursuit for a singular purpose: to break the inhumen against their knee."
+	tutorial = "Судьи-сержанты, происходящие из соседних психодонических орденов. Эти святые рыцари, которых часто принимают за големов из-за летаргии, вызванной их благословенными пластинчатыми доспехами, отказались от всех других занятий ради единственной цели: сломить нелюдя о колено."

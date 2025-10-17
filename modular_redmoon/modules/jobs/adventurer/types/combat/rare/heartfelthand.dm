@@ -1,4 +1,4 @@
 /datum/advclass/heartfelthand
 	name = "Hand of Heartfelt"
-	tutorial = "You serve your lord as the royal hand, taking care of all diplomatic actions in your relm. \
-	maybe one day you will become lord too."
+	tutorial = "Вы служите своему господину как королевская десница, заботясь обо всех дипломатических действиях в вашей стране. \
+	может быть, однажды ты тоже станешь лордом."

@@ -1,26 +1,25 @@
 /datum/job/roguetown/lord
 	title = "Grand Duke"
 	f_title = "Grand Duchess"
-	tutorial = "Elevated upon your throne through a web of intrigue and political upheaval, you are the absolute authority of these lands and at the center of every plot within it. Every man, woman and child is envious of your position and would replace you in less than a heartbeat: Show them the error of their ways."
+	tutorial = "Взойдя на трон благодаря хитрости и политическим интригам, вы стали абсолютным правителем этих земель и центром всех заговоров. Каждый мужчина, женщина и ребенок завидуют вашему положению и готовы заменить вас в мгновение ока: покажите им, что они ошибаются."
 	min_pq = 0
 	max_pq = null
 
 /datum/advclass/lord/warrior
 	name = "Valiant Warrior"
-	tutorial = "You're a noble warrior. You rose to your rank through your own strength and skill, whether by leading your men or by fighting alongside them. Or perhaps you are none of that, but simply a well-trained heir elevated to the position of Lord. You're trained in the usage of heavy armor, and knows swordsmanship well."
+	tutorial = "Ты - благородный воин. Ты достиг своего положения благодаря собственной силе и мастерству, будь то командуя своими людьми или сражаясь бок о бок с ними. Или, возможно, ты не такой, как все, а просто хорошо обученный наследник, возведенный в ранг герцога. Вы обучены обращению с тяжелыми доспехами и хорошо владеете мечом."
 
 /datum/advclass/lord/merchant
 	name = "Merchant Lord"
-	tutorial = "You were always talented with coins and trade. And your talents have brought you to the position of the Lord of Scarlet Dawn. You could be a merchant who bought his way into nobility and power, or an exceptionally talented noble who were inclined to be good with coins. Fighting directly is not your forte\
-	But you have plenty of wealth, keen ears, and know a good deal from a bad one."
+	tutorial = "Ты всегда был талантлив в обращении с монетами и торговле. И твои таланты привели тебя к положению герцога Алого Рассвета. Ты мог быть купцом, который купил себе дворянство и власть, или исключительно талантливым дворянином, который умел обращаться с монетами. Прямая борьба - не ваша сильная сторона, но у вас много денег, острый слух и вы умеете отличать хорошее от плохого."
 
 /datum/advclass/lord/mage
 	name = "Mage Lord"
-	tutorial = "Despite spending your younger years focused on reading and the wonders of the arcyne, it came the time for you to take the throne. Now you rule not only by crown and steel, but by spell and wit, show those who doubted your time buried in books was well spent how wrong they were."
+	tutorial = "Несмотря на то, что в юности ты посвятил себя чтению и чудесам арканы, пришло твое время занять трон. Теперь ты правишь не только короной и сталью, но и заклинаниями и умом, покажи тем, кто сомневался, что ты не зря провел время, уткнувшись в книги, как они ошибались."
 
 /datum/advclass/lord/inbred
 	name = "Inbred Lord"
-	tutorial = "Psydon and Astrata smiles upon you. For despite your inbred and weak body, and your family's conspiracies to remove you from succession, you have somehow become the Lord of Scarlet Dawn. May your reign lasts a hundred years."
+	tutorial = "Псайдон и Астрата улыбаются тебе. Ибо, несмотря на твое врожденное, слабое тело и заговоры твоей семьи, направленные на то, чтобы лишить тебя права наследования, ты каким-то образом стал Великим Герцогом Алого Рассвета. Пусть твое правление продлится сотни лет."
 
 /datum/outfit/job/roguetown/lord/pre_equip(mob/living/carbon/human/H)
 	. = ..()

@@ -2,6 +2,6 @@
 
 /datum/advclass/masterchef
 	name = "Master Chef"
-	tutorial = "A master chef, one of the best cooks to ever live. \
-	With noble origins, you were taught by cooking masters in the secretive League of Fine Dining in exotic meals from all around the world \
-	Now you wander, free to experiment, cook exotic dishes and gourmet meals, worthy for a king"
+	tutorial = "Шеф-повар, один из лучших поваров, когда-либо живших на свете. \
+	Обладая благородным происхождением, вы учились у кулинарных мастеров из тайной Лиги изысканной кухни приготовлению экзотических блюд со всего мира \
+	Теперь вы можете свободно экспериментировать, готовить экзотические блюда и изысканные кушанья, достойные короля"

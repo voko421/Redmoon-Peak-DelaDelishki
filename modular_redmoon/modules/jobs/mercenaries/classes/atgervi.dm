@@ -1,7 +1,7 @@
 /datum/advclass/mercenary/atgervi
 	name = "Atgervi"
-	tutorial = "You are a Varangian of the Gronn Highlands. Warrior-Traders whose exploits into the Raneshen Empire will be forever remembered by historians."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Вы - варяг с Гроннского нагорья. Воины-торговцы, чьи подвиги в империи Ранешен навсегда останутся в памяти историков."
 
 /datum/advclass/mercenary/atgervi/shaman
 	name = "Atgervi Shaman"
-	tutorial = "You are a Shaman of the Fjall, The Northern Empty. Savage combatants who commune with the Ecclesical Beast gods through ritualistic violence, rather than idle prayer."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Вы - шаман племени фьяллей, Северного племени Пустоты. Дикие воины, которые общаются с церковными Звериными богами посредством ритуального насилия, а не праздной молитвы."

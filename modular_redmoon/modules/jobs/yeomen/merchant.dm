@@ -1,12 +1,12 @@
 /datum/job/roguetown/merchant
 	title = "Merchant"
-	tutorial = "You were born into wealth, learning from before you could talk about the basics of mathematics. Counting coins is a simple pleasure for any person, but you've made it an art form. These people are addicted to your wares, and you are the literal beating heart of this economy: Don't let these filth-covered troglodytes ever forget that."
+	tutorial = "Вы родились в богатстве и учились ещё до того, как научились говорить об основах математики. Счёт монет - простое удовольствие для любого человека, но вы превратили его в настоящее искусство. Эти люди помешаны на ваших товарах, а вы - буквально пульсирующее сердце этой экономики: не позволяйте этим покрытым грязью троглодитам никогда об этом забыть."
 	min_pq = 0
 	max_pq = null
 
 /datum/advclass/merchant
 	name = "Merchant"
-	tutorial = "You were born into wealth, learning from before you could talk about the basics of mathematics. \
-	Counting coins is a simple pleasure for any person, but you've made it an art form. \
-	These people are addicted to your wares, and you are the literal beating heart of this economy: \
-	Don't let these filth-covered troglodytes ever forget that."
+	tutorial = "Вы родились в богатстве и учились ещё до того, как научились говорить об основах математики. \
+				Счёт монет - простое удовольствие для любого человека, но вы превратили его в настоящее искусство. \
+				Эти люди помешаны на ваших товарах, а вы — буквально бьющееся сердце этой экономики: \
+				не позволяйте этим покрытым грязью троглодитам никогда об этом забыть."

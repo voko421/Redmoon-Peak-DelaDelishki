@@ -1,7 +1,7 @@
 /datum/advclass/wretch/outlaw
 	name = "Outlaw"
-	tutorial = "You are the person folk fear at night - use your cunning and speed to strike fast and get out with your spoils before anyone notices."
+	tutorial = "Вы тот, кого люди боятся по ночам - используйте свою хитрость и скорость, чтобы нанести быстрый удар и уйти со своей добычей прежде, чем кто-либо заметит."
 
 /datum/advclass/wretch/outlaw/marauder
 	name = "Marauder"
-	tutorial = "You are a brigand and a pillager - you prefer to get your coins with direct means from unfortunate victims."
+	tutorial = "Вы разбойник и мародер - вы предпочитаете получать свои монеты прямым путем от несчастных жертв."

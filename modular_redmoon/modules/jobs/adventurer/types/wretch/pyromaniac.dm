@@ -1,3 +1,3 @@
 /datum/advclass/wretch/pyromaniac
 	name = "Pyromaniac"
-	tutorial = "A notorious arsonist with a penchant for fire, you wield your own personal vendetta against the chaotic forces within Azuria. Bring mayhem and destruction with flame and misfortune! Just... try not to hit yourself with your explosives - you aren't fireproof, after all."
+	tutorial = "Известный поджигатель со склонностью к пожарам, вы ведете свою личную войну с силами хаоса в Азурии. Несите хаос и разрушения с помощью пламени и несчастий! Только... постарайтесь не задеть себя взрывчаткой - в конце концов, вы не огнеупорны."

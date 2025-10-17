@@ -1,3 +1,3 @@
 /datum/advclass/wretch/plaguebearer
 	name = "Plaguebearer"
-	tutorial = "A disgraced physician forced into exile and years of hardship, you have turned to a private practice surrounding the only things you've ever known - poisons and plague. Revel in the spreading of blight, and unleash craven pestilence."
+	tutorial = "Опозоренный врач, вынужденный жить в изгнании и переживать годы лишений, вы занялись частной практикой, связанной с единственными вещами, которые вы когда-либо знали, - ядами и чумой. Наслаждайтесь распространением мора и дайте волю малодушному мору."

@@ -1,3 +1,3 @@
 /datum/advclass/wretch/necromancer
 	name = "Necromancer"
-	tutorial = "You have been ostracized and hunted by society for your dark magics and perversion of life."
+	tutorial = "Общество подвергло вас остракизму и охоте за вашей темной магией и извращенным образом жизни."

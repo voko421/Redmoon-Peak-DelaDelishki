@@ -2,4 +2,4 @@
 
 /datum/advclass/minermaster
 	name = "Master Miner"
-	tutorial = "A master miner, you are capable of cutting stone like butter, and forging rocks into anything you can think of"
+	tutorial = "Мастер-шахтер, вы способны резать камень, как масло, и превращать его во все, что только сможете придумать."

@@ -1,3 +1,3 @@
 /datum/advclass/wretch/poacher
 	name = "Poacher"
-	tutorial = "You have rejected society and its laws, choosing life in the wilderness instead. Simple thieving highwayman or freedom fighter, you take from those who have and give to the have-nots. Fancy, how the latter includes yourself!"
+	tutorial = "Вы отвергли общество и его законы, выбрав вместо этого жизнь в глуши. Простой воришка с большой дороги или борец за свободу, вы забираете у тех, у кого есть, и отдаете неимущим. Представьте себе, что к последним относитесь и вы сами!"

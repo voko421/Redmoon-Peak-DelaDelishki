@@ -1,3 +1,3 @@
 /datum/advclass/thug
 	name = "Thug"
-	tutorial = "Maybe you've never been the smartest person in town, but you may have been the sturdiest; Good enough for soilers to pay you to cart around saigashit, good enough for miners to offload some of their work to you, good enough for a carpenter who doesn't want to pay top mams for chopped wood, and good enough for just about anyone who wants a meathead to look scary with."
+	tutorial = "Возможно, вы никогда не были самым умным человеком в городе, но, возможно, вы были самым стойким; достаточно хорошим, чтобы земледельцы платили вам за то, чтобы вы возили их по Сайгашиту, достаточно хорошим, чтобы шахтеры перекладывали на вас часть своей работы, достаточно хорошим для плотника, который не хочет платить старшим мамам за нарубленные дрова, и достаточно хорош практически для любого, кто хочет, чтобы рядом с ним тупица выглядел устрашающе."

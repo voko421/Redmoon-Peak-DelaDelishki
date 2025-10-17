@@ -1,3 +1,3 @@
-/datum/advclass/psydoniantemplar // A templar, but for the Inquisition
+/datum/advclass/psydoniantemplar
 	name = "Adjudicator"
-	tutorial = "Psydonite knights, clad in fluted chainmaille and blessed with the capacity to invoke lesser miracles. In lieu of greater miracles and rituals, they compensate through martial discipline and blessed weaponry."
+	tutorial = "Рыцари-Псайдонисты, облаченные в рифленые кольчуги и наделенные способностью вызывать меньшие чудеса. Вместо больших чудес и ритуалов они компенсируют это боевой дисциплиной и благословенным оружием."

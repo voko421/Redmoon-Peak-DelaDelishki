@@ -1,4 +1,4 @@
 /datum/advclass/woodworker
 	name = "Woodworker"
-	tutorial = "You are a strong Woodworker, armed with an axe, you can gather wood \
-	either for yourself, or for others. You are an expert carpenter too, so you can bend wood into items you need."
+	tutorial = "Вы сильный столяр, вооруженный топором, вы можете собирать дрова \
+	либо для себя, либо для других. Вы тоже опытный плотник, поэтому можете гнуть дерево для изготовления нужных вам изделий."

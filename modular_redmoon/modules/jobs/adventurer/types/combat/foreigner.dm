@@ -1,23 +1,23 @@
 /datum/advclass/foreigner
 	name = "Eastern Warrior"
-	tutorial = "A warrior hailing from the distant land of Kazengun, far across the eastern sea."
+	tutorial = "Воин, родом из далекой страны Казенгун, расположенной далеко за восточным морем."
 
 /datum/advclass/foreigner/yoruku
 	name = "Eastern Assassin"
-	tutorial = "The Yoruku are Kazengun agents trained in assassination, sabotage, and irregular combat. You are armed with daggers or a short sword, perfect \
-	for combat in the tight confines of castles and back alleys."
+	tutorial = "Йоруку - агенты Казенгун, обученные убийствам, саботажу и ведению нерегулярных боевых действий. Вы вооружены кинжалами или коротким мечом, что идеально \
+	для ведения боя в тесных помещениях замков и глухих переулках."
 
 /datum/advclass/foreigner/repentant
 	name = "Otavan Repentant"
-	tutorial = "An exile from the Holy See of Otava, accused of heresy and cast out of your homeland as penance. \
-	Some consider yours a fate worse than death; the metal alloy mask seared onto your face serving as a permanent reminder of your sins. \
-	You are a living example of what becomes of those who stand in defiance of the Otavan inquisition."
+	tutorial = "Изгнанник из Святого престола Отавы, обвиненный в ереси и изгнанный из своей родины в качестве наказания. \
+	Некоторые считают, что твоя участь хуже смерти; маска из металлического сплава, прижженная к твоему лицу, служит постоянным напоминанием о твоих грехах. \
+	Вы - живой пример того, что происходит с теми, кто бросает вызов отаванской инквизиции."
 
 /datum/advclass/foreigner/refugee
 	name = "Naledi Refugee"
-	tutorial = "An asylum-seeker from the war-torn deserts of Naledi, driven north as your homeland continues to be ravaged by an endless conflict against the Djinn."
+	tutorial = "Проситель убежища из раздираемых войной пустынь Наледи, вынужденный отправиться на север, в то время как ваша родина продолжает разоряться из-за бесконечного конфликта с Джиннами."
 
 /datum/advclass/foreigner/slaver
 	name = "Ranesheni Slaver"
-	tutorial = "In parts of Psydonia, the practice of slavery is still a common sight. \
-	You hail from the Ranesheni Empire, where the market of flesh is ancient and unbroken, and your coin is earned in the trade of living souls."
+	tutorial = "В некоторых частях Псайдонии практика рабства по-прежнему является обычным явлением. \
+	Вы родом из империи Ранешени, где рынок плоти существует с незапамятных времен, а ваши деньги зарабатываются на торговле живыми душами."

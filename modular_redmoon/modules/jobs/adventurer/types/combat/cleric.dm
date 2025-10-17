@@ -1,15 +1,15 @@
 /datum/advclass/cleric
 	name = "Monk"
-	tutorial = "You are a wandering acolyte, versed in both miracles and martial arts. You forgo the heavy armor worn by paladins in favor of a more nimble approach to combat, utilizing your fists."
+	tutorial = "Вы странствующий послушник, сведущий как в чудесах, так и в боевых искусствах. Вы отказываетесь от тяжелой брони, которую носят паладины, в пользу более ловкого подхода к бою, использующего ваши кулаки."
 
 /datum/advclass/cleric/paladin
 	name = "Paladin"
-	tutorial = "A holy warrior. Where others of the clergy may have spent their free time studying scriptures, you have instead honed your skills with a blade."
+	tutorial = "Святой воин. В то время как другие представители духовенства, возможно, проводили свое свободное время за изучением Священных Писаний, вы вместо этого оттачивали свои навыки владения клинком."
 
 /datum/advclass/cleric/cantor
 	name = "Cantor"
-	tutorial = "You were a bard once - but you've found a new calling. Your eyes have been opened to the divine, now you wander from city to city singing songs and telling tales of your patron's greatness."
+	tutorial = "Когда-то ты был бардом, но нашел новое призвание. Твои глаза открылись божественному, и теперь ты странствуешь из города в город, распевая песни и рассказывая истории о величии своего покровителя."
 
 /datum/advclass/cleric/missionary
 	name = "Missionary"
-	tutorial = "You are a devout worshipper of the divine with a strong connection to your patron god. You've spent years studying scriptures and serving your deity - now you wander into foreign lands, spreading the word of your faith."
+	tutorial = "Вы истово поклоняетесь божественному и имеете тесную связь со своим богом-покровителем. Вы потратили годы на изучение Священных Писаний и служение своему божеству, а теперь отправляетесь в чужие страны, распространяя слово своей веры."

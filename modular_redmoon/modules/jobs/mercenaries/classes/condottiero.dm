@@ -1,3 +1,3 @@
 /datum/advclass/mercenary/condottiero
 	name = "Condottiero Guildsman"
-	tutorial = "Hailing from the Kingdom of Etrusca, Condottieri are soldiers of fortune oft found in the employ of powerful merchants. Without a war to fight back home, the Grand Duchy has become a much-needed source of contracts. Afterall, this land is rich in coin yet poor in manpower..."
+	tutorial = "Ты - представитель Гильдии Наёмников. Соблюдай гильдейский кодекс. Родом из королевства Этруска, кондотьеры - это солдаты удачи, которых часто нанимают влиятельные купцы. Без войны на родине Великое герцогство стало крайне необходимым источником контрактов. В конце концов, эта земля богата деньгами, но бедна рабочей силой..."

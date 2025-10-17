@@ -1,3 +1,3 @@
 /datum/advclass/barbersurgeon
 	name = "Barber Surgeon"
-	tutorial = "Wielding crude tools and accumulated knowledge, you are something of a 'freelance physician' even if the local apothecary declined your application, and over the yils have probably cut into more people than the average knight."
+	tutorial = "Владея примитивными инструментами и накопленными знаниями, вы становитесь кем-то вроде "внештатного врача", даже если местный аптекарь отклонил ваше заявление, и за прошедшие годы, вероятно, наняли больше людей, чем среднестатистический рыцарь."

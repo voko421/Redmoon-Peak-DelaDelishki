@@ -1,5 +1,5 @@
 /datum/job/roguetown/orthodoxist
 	title = "Orthodoxist"
-	tutorial = "Praise. Atone. Mourn. A hundred different paths across a hundred different lyves, all ending the same; with you swearing fealty to Psydon, and your admittance into the Inquisitor's retinue. Root the abberants out from wherever they dwell, and - whether with a clenched fist or open palm - bring them back to the light."
-	min_pq = 10
+	tutorial = "Хвалить. Искупать. Горевать. Сотня разных путей через сотню разных жизней, и все они заканчиваются одинаково: вы присягаете на верность Псайдону и принимаетесь в свиту инквизитора. Искорените аберрантов, где бы они ни обитали, и - сжатым кулаком или открытой ладонью - верните их к свету."
+	min_pq = 0
 	max_pq = null

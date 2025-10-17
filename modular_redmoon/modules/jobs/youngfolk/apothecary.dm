@@ -1,9 +1,9 @@
 /datum/job/roguetown/apothecary
 	title = "Apothecary"
-	tutorial = "You are an accomplished physician, trained and practiced in the art of medicine. You answer to the Head Physician, who enables your practice. Woe betide the one who suffers your scalpel."
+	tutorial = "Вы - опытный врач, обученный и практикующий в области медицины. Вы подчиняетесь главному врачу, который обеспечивает вашу практику. Горе тому, кто пострадает от вашего скальпеля."
 	min_pq = 0
 	max_pq = null
 
 /datum/advclass/apothecary
 	name = "Apothecary"
-	tutorial = "You are an accomplished physician, trained and practiced in the art of medicine. You answer to the Head Physician, who enables your practice. Woe betide the one who suffers your scalpel."
+	tutorial = "Вы - опытный врач, обученный и практикующий в области медицины. Вы подчиняетесь главному врачу, который обеспечивает вашу практику. Горе тому, кто пострадает от вашего скальпеля."

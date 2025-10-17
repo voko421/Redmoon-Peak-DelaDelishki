@@ -71,10 +71,6 @@
 	anchored = TRUE
 	density = TRUE
 
-/obj/structure/underworld/carriage_normal/Initialize()
-	. = ..()
-	set_light(5, 3, 15, l_color = "#f9ad80")
-
 /obj/structure/underworld/carriage
 	name = "Carriage"
 	desc = "The Undermaiden awaits."

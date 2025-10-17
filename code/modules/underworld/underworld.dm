@@ -73,7 +73,7 @@
 
 /obj/structure/underworld/carriage_normal/Initialize()
 	. = ..()
-	set_light(5, 3, 30, l_color = LIGHT_COLOR_ORANGE)
+	set_light(5, 3, 15, l_color = LIGHT_COLOR_ORANGE)
 
 /obj/structure/underworld/carriage
 	name = "Carriage"

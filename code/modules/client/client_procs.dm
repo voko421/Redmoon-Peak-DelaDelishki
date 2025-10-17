@@ -472,7 +472,7 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 	check_ip_intel()
 	validate_key_in_db()
 
-//	send_resources()
+	send_resources()
 
 
 	generate_clickcatcher()

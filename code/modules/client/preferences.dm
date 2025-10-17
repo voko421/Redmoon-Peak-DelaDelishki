@@ -2695,7 +2695,6 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 	character.vocal_pitch = bark_pitch // ! REDMOON
 	character.vocal_pitch_range = bark_variance // ! REDMOON
 
-	character.is_legacy = is_legacy
 	character.erpprefs = erpprefs
 
 	character.img_gallery = img_gallery

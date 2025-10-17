@@ -158,6 +158,11 @@ GLOBAL_LIST_EMPTY(tennite_schisms)
 
 	// Promote the selected priest if we found one
 	if(selected_priest)
+		var/male
+		if(selected_priest.gender == FEMALE)
+			male = FALSE
+		else
+			male = TRUE
 		selected_priest.job = "Vice Bishop"
 		selected_priest.advjob = "Vice Bishop"
 		selected_priest.migrant_type = null

@@ -95,8 +95,8 @@
 
 
 /obj/item/gun/ballistic/firearm/shoot_live_shot(mob/living/user as mob|obj, pointblank = 0, mob/pbtarget = null, message = 1)
-	fire_sound = pick("sound/arquebus/arquefire.ogg", "sound/arquebus/arquefire2.ogg", "sound/arquebus/arquefire3.ogg",
-				"sound/arquebus/arquefire4.ogg", "sound/arquebus/arquefire5.ogg")
+	fire_sound = pick("modular_redmoon/sound/arquebus/arquefire.ogg", "modular_redmoon/sound/arquebus/arquefire2.ogg", "modular_redmoon/sound/arquebus/arquefire3.ogg",
+				"modular_redmoon/sound/arquebus/arquefire4.ogg", "modular_redmoon/sound/arquebus/arquefire5.ogg")
 	. = ..()
 
 /obj/item/gun/ballistic/firearm/attack_right(mob/user)
@@ -192,7 +192,7 @@
 			return
 		if((loc == user) && (user.get_inactive_held_item() != src))
 			return
-		playsound(src, "sound/arquebus/insert.ogg",  100)
+		playsound(src, "modular_redmoon/sound/arquebus/insert.ogg",  100)
 		user.visible_message("<span class='notice'>[user] forces a [A] down the barrel of the [src].</span>")
 		..()
 
@@ -201,7 +201,7 @@
 			user.visible_message("<span class='notice'>The [src] is already filled with gunpowder!</span>")
 			return
 		else
-			playsound(src, "sound/arquebus/pour_powder.ogg",  100)
+			playsound(src, "modular_redmoon/sound/arquebus/pour_powder.ogg",  100)
 			if(do_after(user, load_time_skill, src))
 				user.visible_message("<span class='notice'>[user] fills the [src] with gunpowder.</span>")
 				gunpowder = TRUE
@@ -211,7 +211,7 @@
 		if(!reloaded)
 			if(chambered)
 				user.visible_message("<span class='notice'>[user] begins ramming the [R.name] down the barrel of the [src] .</span>")
-				playsound(src, "sound/arquebus/ramrod.ogg",  100)
+				playsound(src, "modular_redmoon/sound/arquebus/ramrod.ogg",  100)
 				if(do_after(user, load_time_skill, src))
 					user.visible_message("<span class='notice'>[user] has finished reloading the [src].</span>")
 					reloaded = TRUE
@@ -219,12 +219,12 @@
 		if(reloaded && !myrod)
 			user.transferItemToLoc(R, src)
 			myrod = R
-			playsound(src, "sound/foley/musketload.ogg",  100)
+			playsound(src, "modular_redmoon/sound/arquebus/musketload.ogg",  100)
 			user.visible_message("<span class='notice'>[user] stows the [R.name] under the barrel of the [src].</span>")
 		if(!chambered && !myrod)
 			user.transferItemToLoc(R, src)
 			myrod = R
-			playsound(src, "sound/foley/musketload.ogg",  100)
+			playsound(src, "modular_redmoon/sound/arquebus/musketload.ogg",  100)
 			user.visible_message("<span class='notice'>[user] stows the [R.name] under the barrel of the [src] without chambering it.</span>")
 		if(!myrod == null)
 			to_chat(user, span_warning("There's already a [R.name] inside of the [name]."))
@@ -375,7 +375,7 @@
 	reloaded = FALSE
 	spark_act()
 
-	playsound(src, "sound/arquebus/fuse.ogg", 100)
+	playsound(src, "modular_redmoon/sound/arquebus/fuse.ogg", 100)
 	spawn(rand(10,20))
 		..()
 		spawn (1)

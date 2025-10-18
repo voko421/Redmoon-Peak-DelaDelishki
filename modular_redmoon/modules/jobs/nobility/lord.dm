@@ -34,6 +34,12 @@
 	backpack_contents += /obj/item/storage/keyring/lord
 	backpack_contents += /obj/item/rogueweapon/huntingknife/idagger/steel/special
 
+/datum/outfit/job/roguetown/lord/mage/pre_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.adjust_skillrank(/datum/skill/combat/firearms, 4, TRUE)
+	backpack_contents += /obj/item/storage/keyring/lord
+	backpack_contents += /obj/item/rogueweapon/huntingknife/idagger/steel/special
+
 /datum/outfit/job/roguetown/lord/merchant/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	H.adjust_skillrank(/datum/skill/combat/firearms, 4, TRUE)

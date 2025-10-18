@@ -3,7 +3,7 @@
 	#define MINIMUM_OOC_NOTES 0
 #endif
 #ifndef LOCALTEST
-	#define MINIMUM_FLAVOR_TEXT		200
+	#define MINIMUM_FLAVOR_TEXT		5
 	#define MINIMUM_OOC_NOTES 		5 //Just put something in there
 #endif
 

@@ -69,6 +69,14 @@
 	icon_state = "holsterbelt_full"
 	update_icon()
 
+/obj/item/storage/belt/rogue/leather/holsterbelt/marshal/New()
+	. = ..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/gun/ballistic/firearm/arquebus_pistol/A = new()
+		pistol += A
+	icon_state = "holsterbelt_full"
+	update_icon()
+
 /obj/item/storage/belt/rogue/leather/holsterbelt/runelock/New()
 	. = ..()
 	for(var/i in 1 to max_storage)

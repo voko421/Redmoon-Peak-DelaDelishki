@@ -16,7 +16,7 @@
 	..()
 	H.adjust_skillrank(/datum/skill/combat/firearms, 3, TRUE)
 	neck = /obj/item/storage/belt/rogue/pouch/coins/rich
-	belt = /obj/item/storage/belt/rogue/leather/holsterbelt
+	belt = /obj/item/storage/belt/rogue/leather/holsterbelt/marshal
 	beltl = /obj/item/powderflask/artificer
 	beltr = /obj/item/quiver/bullet/lead
 	backpack_contents += list(/obj/item/storage/keyring/sheriff)
@@ -25,7 +25,7 @@
 	..()
 	H.adjust_skillrank(/datum/skill/combat/firearms, 3, TRUE)
 	neck = /obj/item/storage/belt/rogue/pouch/coins/rich
-	belt = /obj/item/storage/belt/rogue/leather/holsterbelt
+	belt = /obj/item/storage/belt/rogue/leather/holsterbelt/marshal
 	beltl = /obj/item/powderflask/artificer
 	beltr = /obj/item/quiver/bullet/lead
 	backpack_contents += list(/obj/item/storage/keyring/sheriff)

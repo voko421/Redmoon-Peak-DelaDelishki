@@ -4,6 +4,7 @@
 	min_pq = 0
 	max_pq = null
 	round_contrib_points = 5
+	whitelist_req = FALSE
 
 /datum/advclass/veteran/battlemaster
 	name = "Veteran Battlemaster"

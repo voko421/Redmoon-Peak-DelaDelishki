@@ -4,7 +4,8 @@
 				Позаботьтесь о своих подчиненных и заполните пробелы, которые рыцари оставляют после себя. Выполняйте приказы своего маршала и короны."
 	min_pq = 0
 	max_pq = null
-	round_contrib_points = 3
+	round_contrib_points = 5
+	whitelist_req = FALSE
 
 /datum/advclass/sergeant/sergeant
 	name = "Sergeant-at-Arms"

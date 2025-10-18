@@ -5,6 +5,7 @@
 		Как представитель высшего класса, вы должны относиться к знати с уважением. У вас есть доступ, чтобы учесть это."
 	min_pq = 0
 	max_pq = null
+	whitelist_req = FALSE
 
 /datum/advclass/physician
 	name = "Head Physician"

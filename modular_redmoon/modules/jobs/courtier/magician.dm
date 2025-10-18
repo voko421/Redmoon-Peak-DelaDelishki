@@ -5,7 +5,7 @@
 		В свою очередь, вы снова и снова доказывали, что являетесь юстициарием и доверенным советником при их правлении."
 	min_pq = 0
 	max_pq = null
-
+	whitelist_req = FALSE
 
 /datum/advclass/courtmage
 	name = "Court Magician"

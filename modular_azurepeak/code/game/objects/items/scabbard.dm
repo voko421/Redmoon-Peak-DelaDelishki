@@ -281,7 +281,10 @@
 /obj/item/rogueweapon/scabbard/sheath/weapon_check(mob/living/user, obj/item/A)
 	. = ..()
 	if(.)
-		if(!sheathe_icon)
+		if(!istype(A, /obj/item/rogueweapon))
+			return
+		var/obj/item/rogueweapon/sheathing = A
+		if(!sheathing.sheathe_icon)
 			return FALSE
 
 /obj/item/rogueweapon/scabbard/sheath/getonmobprop(tag)
@@ -512,8 +515,12 @@
 /obj/item/rogueweapon/scabbard/sheath/weapon_check(mob/living/user, obj/item/A)
 	. = ..()
 	if(.)
-		if(!sheathe_icon)
+		if(!istype(A, /obj/item/rogueweapon))
+			return
+		var/obj/item/rogueweapon/sheathing = A
+		if(!sheathing.sheathe_icon)
 			return FALSE
+
 
 /*
 	KAZENGUN

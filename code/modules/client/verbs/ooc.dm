@@ -14,10 +14,10 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	if(!mob)
 		return
 
-	if(CONFIG_GET(flag/usewhitelist))
-		if(whitelisted() != 1)
-			to_chat(src, span_danger("I can't use that."))
-			return
+	// if(CONFIG_GET(flag/usewhitelist))
+	// 	if(whitelisted() != 1)
+	// 		to_chat(src, span_danger("I can't use that."))
+	// 		return
 
 	if(blacklisted())
 		to_chat(src, span_danger("I can't use that."))
@@ -140,10 +140,10 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	if(!mob)
 		return
 
-	if(CONFIG_GET(flag/usewhitelist))
-		if(whitelisted() != 1)
-			to_chat(src, span_danger("I can't use that."))
-			return
+	// if(CONFIG_GET(flag/usewhitelist))
+	// 	if(whitelisted() != 1)
+	// 		to_chat(src, span_danger("I can't use that."))
+	// 		return
 
 	if(blacklisted())
 		to_chat(src, span_danger("I can't use that."))

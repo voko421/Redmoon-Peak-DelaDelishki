@@ -25,6 +25,7 @@
 	. = ..()
 	equip_bandit()
 	finalize_bandit()
+	move_to_spawnpoint() // ! REDMOON
 
 /datum/antagonist/bandit/proc/finalize_bandit()
 	owner.current.playsound_local(get_turf(owner.current), 'sound/music/traitor.ogg', 60, FALSE, pressure_affected = FALSE)

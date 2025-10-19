@@ -117,3 +117,14 @@
 	name = "Pair"
 	icon_state = "pair"
 	color_key_defaults = list(KEY_SKIN_COLOR)
+
+/obj/item/organ/penis/human
+	name = "human penis"
+	penis_type = PENIS_TYPE_PLAIN
+	sheath_type = SHEATH_TYPE_NONE
+
+/datum/customizer_choice/organ/penis/human
+	organ_type = /obj/item/organ/penis/human
+
+/datum/customizer_choice/organ/penis/human_anthro
+	organ_type = /obj/item/organ/penis/human

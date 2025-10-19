@@ -68,7 +68,7 @@
 /datum/sex_controller/proc/get_manual_arousal_string()
 	switch(manual_arousal)
 		if(SEX_MANUAL_AROUSAL_DEFAULT)
-			return "<font color='#eac8de'>ПЕРЕМЕННАЯ ЭРЕКЦИЯ</font>" // влияет на спрайт
+			return "<font color='#eac8de'>ПЕРЕМЕННАЯ ЭРЕКЦИЯ</font>"
 		if(SEX_MANUAL_AROUSAL_UNAROUSED)
 			return "<font color='#e9a8d1'>СЛАБАЯ ЭРЕКЦИЯ</font>"
 		if(SEX_MANUAL_AROUSAL_PARTIAL)

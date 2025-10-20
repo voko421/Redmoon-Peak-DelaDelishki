@@ -171,6 +171,13 @@
 /datum/job/proc/special_job_check(mob/dead/new_player/player)
 	return TRUE
 
+/datum/job/proc/get_used_title(mob/player)
+	var/pronouns = player.pronouns
+	var/used_name = display_title || title
+	if((pronouns == SHE_HER || pronouns == THEY_THEM_F) && f_title)
+		used_name = f_title
+	return used_name
+
 /client/proc/job_greet(var/datum/job/greeting_job)
 	if(mob.job == greeting_job.title)
 		greeting_job.greet(mob)
@@ -180,7 +187,8 @@
 		return
 	if(!job_greet_text)
 		return
-	to_chat(player, span_notice("You are the <b>[title]</b>"))
+	var/used_title = get_used_title(player)
+	to_chat(player, span_notice("You are the <b>[used_title]</b>"))
 	if(tutorial)
 		to_chat(player, span_notice("*-----------------*"))
 		to_chat(player, span_notice(tutorial))

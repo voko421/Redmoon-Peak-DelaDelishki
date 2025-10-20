@@ -20,6 +20,8 @@
 	/// Jobs that have title adjustments. Don't adjust the title title, only display_title /datum/job = list(\
 	list(display_title = "Lord Commander", f_title = "Lady Commander"))
 	var/list/title_adjust
+	/// Job that have tutorial adjustments /datum/job = list("Good")
+	var/list/tutorial_adjust
 	/// Jobs that have species adjustments /datum/job = list("humen")
 	var/list/species_adjust
 	/// Jobs that have gender adjustments /datum/job = list(MALE, FEMALE)
@@ -42,6 +44,9 @@
 		var/datum/job/J = SSjob.GetJobType(job)
 		J.display_title = title_adjust[job]["display_title"]
 		J.f_title = title_adjust[job]["f_title"]
+	for(var/job as anything in tutorial_adjust)
+		var/datum/job/J = SSjob.GetJobType(job)
+		J?.tutorial = tutorial_adjust[job]
 	for(var/job as anything in species_adjust)
 		var/datum/job/J = SSjob.GetJobType(job)
 		J?.allowed_races = species_adjust[job]

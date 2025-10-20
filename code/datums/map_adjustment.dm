@@ -10,9 +10,20 @@
 */
 /datum/map_adjustment
 	/// key of map_adjustment. It is used to check if '/datum/map_config/var/map_file' is matched
-	var/map_file_name = "some_station_map.dmm" // change yourself
-	/// Jobs that this station map won't use
-	var/list/blacklisted_jobs
+	var/map_file_name // = "vanderlin.dmm"
+	/// Jobs that this map won't use
+	var/list/blacklist
+	/// Jobs that have slots changed /datum/job = num
+	var/list/slot_adjust
+	/// Jobs that have title adjustments /datum/job = list(\
+	list(title = "Lord Commander", f_title = "Lady Commander"))
+	var/list/title_adjust
+	/// Jobs that have species adjustments /datum/job = list("humen")
+	var/list/species_adjust
+	/// Jobs that have gender adjustments /datum/job = list(MALE, FEMALE)
+	var/list/sexes_adjust
+	/// Jobs that have age adjustments /datum/job = list(AGE_CHILD, AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
+	var/list/ages_adjust
 
 /// called on map config is loaded.
 /// You need to change things manually here.
@@ -21,9 +32,23 @@
 
 /// called upon job datum creation. Override this proc to change.
 /datum/map_adjustment/proc/job_change()
-	for(var/jobType in blacklisted_jobs)
-		change_job_position(jobType, 0)
-	return
+	for(var/job as anything in slot_adjust)
+		change_job_position(job, slot_adjust[job])
+	for(var/job as anything in blacklist)
+		change_job_position(job, 0)
+	for(var/job as anything in title_adjust)
+		var/datum/job/J = SSjob.GetJobType(job)
+		J.display_title = title_adjust[job]["display_title"]
+		J.f_title = title_adjust[job]["f_title"]
+	for(var/job as anything in species_adjust)
+		var/datum/job/J = SSjob.GetJobType(job)
+		J?.allowed_races = species_adjust[job]
+	for(var/job as anything in sexes_adjust)
+		var/datum/job/J = SSjob.GetJobType(job)
+		J?.allowed_sexes = sexes_adjust[job]
+	for(var/job as anything in ages_adjust)
+		var/datum/job/J = SSjob.GetJobType(job)
+		J?.allowed_ages = ages_adjust[job]
 
 /**
  * job_type`</datum/job/J>`: Type of the job that's being adjusted \

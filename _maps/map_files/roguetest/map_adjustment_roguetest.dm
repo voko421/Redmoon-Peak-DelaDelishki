@@ -4,9 +4,12 @@
 	These 'map_adjustment.dm' files shouldn't be included in 'dme'
 */
 
-/datum/map_adjustment/template
+/datum/map_adjustment/template/roguetest
 	map_file_name = "roguetest.dmm"
-
-/datum/map_adjustment/template/job_change()
-	. = ..()
-	change_job_position(/datum/job/roguetown/adventurer, 100)
+	slot_adjust = list(
+		/datum/job/roguetown/villager = 42,
+		/datum/job/roguetown/adventurer = 69
+	)
+	title_adjust = list(
+		/datum/job/roguetown/lord = list(display_title = "Lord Commander", f_title = "Lady Commander")
+	)

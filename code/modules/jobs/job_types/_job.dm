@@ -1,6 +1,9 @@
 /datum/job
 	//The name of the job , used for preferences, bans and more. Make sure you know what you're doing before changing this.
 	var/title = "NOPE"
+	// Display title - If empty, uses the proper title instead
+	var/display_title
+	// Display only title for feminine character
 	var/f_title
 
 	//Job access. The use of minimal_access or access is determined by a config setting: config.jobs_have_minimal_access
@@ -215,7 +218,7 @@
 			H.mind.i_know_person(MF)
 
 	if(H.islatejoin && announce_latejoin)
-		var/used_title = title
+		var/used_title = display_title || title
 		if((H.pronouns == SHE_HER || H.pronouns == THEY_THEM_F) && f_title)
 			used_title = f_title
 		scom_announce("[H.real_name] the [used_title] arrives to Azure Peak.")
@@ -444,7 +447,7 @@
 	if(mob.gender == FEMALE && f_title)
 		return f_title
 
-	return title
+	return display_title || title
 
 /datum/job/Topic(href, list/href_list)
 	if(href_list["explainjob"])

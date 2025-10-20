@@ -759,10 +759,11 @@ SUBSYSTEM_DEF(ticker)
 /// Wrapper for setting rulermob and rulertype
 /datum/controller/subsystem/ticker/proc/set_ruler_mob(mob/newruler)
 	rulermob = newruler
+	var/datum/job/lord_job = SSjob.GetJob("Grand Duke")
 	if(should_wear_femme_clothes(rulermob))
-		SSticker.rulertype = "Grand Duchess"
+		SSticker.rulertype = lord_job?.f_title || lord_job.title
 	else
-		SSticker.rulertype = "Grand Duke"
+		SSticker.rulertype = lord_job?.display_title || lord_job?.title
 	SEND_GLOBAL_SIGNAL(COMSIG_TICKER_RULERMOB_SET, rulermob)
 
 /// Wrapper for sunsteal proc

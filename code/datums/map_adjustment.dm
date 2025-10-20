@@ -10,7 +10,7 @@
 */
 /datum/map_adjustment
 	/// key of map_adjustment. It is used to check if '/datum/map_config/var/map_file' is matched
-	var/map_file_name // = "vanderlin.dmm"
+	var/map_file_name
 	/// Name of the realm/location for announcements (e.g., "Azure Peak", "Azure Bleak", etc.)
 	var/realm_name = "Azure Peak"
 	/// Jobs that this map won't use

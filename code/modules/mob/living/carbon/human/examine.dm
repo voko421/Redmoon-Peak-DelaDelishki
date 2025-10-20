@@ -103,12 +103,6 @@
 			else
 				. = list(span_info("ø ------------ ø\nThis is the <EM>[used_name]</EM>, the [race_name]."))
 
-		if(HAS_TRAIT(src, TRAIT_DNR) && src != user)
-			if(HAS_TRAIT(src, TRAIT_DEATHSIGHT))
-				. += span_danger("They extrude a pale aura. Their soul [user.stat == DEAD ? "was not" : "is not"] clean. This is it for them.")
-			else if(user.stat == DEAD)
-				. += span_danger("This was their only chance at lyfe.")
-
 		if(HAS_TRAIT(src, TRAIT_WITCH))
 			if(HAS_TRAIT(user, TRAIT_NOBLE) || HAS_TRAIT(user, TRAIT_INQUISITION) || HAS_TRAIT(user, TRAIT_WITCH))
 				. += span_warning("A witch! Their presence brings an unsettling aura.")
@@ -214,6 +208,15 @@
 
 		if(leprosy == 1)
 			. += span_necrosis("A LEPER...")
+
+		if(HAS_TRAIT(src, TRAIT_DNR) && src != user)
+			if(HAS_TRAIT(src, TRAIT_DEATHSIGHT))
+				. += span_danger("They extrude a pale aura. Their soul [user.stat == DEAD ? "was not" : "is not"] clean. This is it for them.")
+			// Real medical role can tell at a glance it is a waste of time, but only if the Necra message don't come first.
+			else if(user.get_skill_level(/datum/skill/misc/medicine) >= SKILL_LEVEL_MASTER && src.stat == DEAD)
+				. += span_danger("Their body holds not even a glimmer of life. No medicine can bring them back.")
+			else if(user.stat == DEAD)
+				. += span_danger("This was their only chance at lyfe.")
 
 		if (HAS_TRAIT(src, TRAIT_BEAUTIFUL))
 			switch (pronouns)

@@ -209,15 +209,6 @@
 		if(leprosy == 1)
 			. += span_necrosis("A LEPER...")
 
-		if(HAS_TRAIT(src, TRAIT_DNR) && src != user)
-			if(HAS_TRAIT(src, TRAIT_DEATHSIGHT))
-				. += span_danger("They extrude a pale aura. Their soul [user.stat == DEAD ? "was not" : "is not"] clean. This is it for them.")
-			// Real medical role can tell at a glance it is a waste of time, but only if the Necra message don't come first.
-			else if(user.get_skill_level(/datum/skill/misc/medicine) >= SKILL_LEVEL_MASTER && src.stat == DEAD)
-				. += span_danger("Their body holds not even a glimmer of life. No medicine can bring them back.")
-			else if(user.stat == DEAD)
-				. += span_danger("This was their only chance at lyfe.")
-
 		if (HAS_TRAIT(src, TRAIT_BEAUTIFUL))
 			switch (pronouns)
 				if (HE_HIM)
@@ -235,6 +226,15 @@
 					. += span_redtext("[m1] repugnant!")
 				if (THEY_THEM, THEY_THEM_F, IT_ITS)
 					. += span_redtext("[m1] repulsive!")
+
+	if(HAS_TRAIT(src, TRAIT_DNR) && src != user)
+		if(HAS_TRAIT(user, TRAIT_DEATHSIGHT))
+			. += span_danger("They extrude a pale aura. Their soul [src.stat == DEAD ? "was not" : "is not"] clean. This is it for them.")
+		// Real medical role can tell at a glance it is a waste of time, but only if the Necra message don't come first.
+		else if(user.get_skill_level(/datum/skill/misc/medicine) >= SKILL_LEVEL_MASTER && src.stat == DEAD)
+			. += span_danger("Their body holds not even a glimmer of life. No medicine can bring them back.")
+		else if(user.stat == DEAD)
+			. += span_danger("This was their only chance at lyfe.")
 
 	if (HAS_TRAIT(src, TRAIT_CRITICAL_WEAKNESS) && (!HAS_TRAIT(src, TRAIT_VAMP_DREAMS)))
 		if(isliving(user))

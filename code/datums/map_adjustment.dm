@@ -17,8 +17,7 @@
 	var/list/blacklist
 	/// Jobs that have slots changed /datum/job = num
 	var/list/slot_adjust
-	/// Jobs that have title adjustments. Don't adjust the title title, only display_title /datum/job = list(\
-	list(display_title = "Lord Commander", f_title = "Lady Commander"))
+	/// Jobs that have title adjustments. Don't adjust the title title, only display_title /datum/job = list(display_title = "Lord Commander", f_title = "Lady Commander"))
 	var/list/title_adjust
 	/// Job that have tutorial adjustments /datum/job = list("Good")
 	var/list/tutorial_adjust

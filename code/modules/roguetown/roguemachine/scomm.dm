@@ -50,16 +50,15 @@
 	if(scom_number)
 		. += "Its designation is #[scom_number][scom_tag ? ", labeled as [scom_tag]" : ""]."
 	. += "<a href='?src=[REF(src)];directory=1'>Directory</a>"
-	if(user.loc == loc)
-		. += "<b>THE LAWS OF THE LAND:</b>"
-		if(!length(GLOB.laws_of_the_land))
-			. += span_danger("The land has no laws! <b>We are doomed!</b>")
-			return
-		if(!user.is_literate())
-			. += span_warning("Uhhh... I can't read them...")
-			return
-		for(var/i in 1 to length(GLOB.laws_of_the_land))
-			. += span_small("[i]. [GLOB.laws_of_the_land[i]]")
+	. += "<b>THE LAWS OF THE LAND:</b>"
+	if(!length(GLOB.laws_of_the_land))
+		. += span_danger("The land has no laws! <b>We are doomed!</b>")
+		return
+	if(!user.is_literate())
+		. += span_warning("Uhhh... I can't read them...")
+		return
+	for(var/i in 1 to length(GLOB.laws_of_the_land))
+		. += span_small("[i]. [GLOB.laws_of_the_land[i]]")
 
 /obj/structure/roguemachine/scomm/Topic(href, href_list)
 	..()

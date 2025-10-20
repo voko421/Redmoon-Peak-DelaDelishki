@@ -11,12 +11,14 @@
 /datum/map_adjustment
 	/// key of map_adjustment. It is used to check if '/datum/map_config/var/map_file' is matched
 	var/map_file_name // = "vanderlin.dmm"
+	/// Name of the realm/location for announcements (e.g., "Azure Peak", "Azure Bleak", etc.)
+	var/realm_name = "Azure Peak"
 	/// Jobs that this map won't use
 	var/list/blacklist
 	/// Jobs that have slots changed /datum/job = num
 	var/list/slot_adjust
-	/// Jobs that have title adjustments /datum/job = list(\
-	list(title = "Lord Commander", f_title = "Lady Commander"))
+	/// Jobs that have title adjustments. Don't adjust the title title, only display_title /datum/job = list(\
+	list(display_title = "Lord Commander", f_title = "Lady Commander"))
 	var/list/title_adjust
 	/// Jobs that have species adjustments /datum/job = list("humen")
 	var/list/species_adjust

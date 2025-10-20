@@ -6,6 +6,7 @@
 
 /datum/map_adjustment/template/roguetest
 	map_file_name = "roguetest.dmm"
+	realm_name = "Roguetest"
 	slot_adjust = list(
 		/datum/job/roguetown/villager = 42,
 		/datum/job/roguetown/adventurer = 69

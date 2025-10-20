@@ -102,18 +102,6 @@
 	new /obj/item/reagent_containers/glass/bottle/rogue/healthpot(src)
 	new /obj/item/reagent_containers/glass/bottle/rogue/healthpot(src)
 
-/datum/inqports/supplies/lifebloodvials
-	name = "3 Vials of Strong Red"
-	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/sredvials
-	maximum = 4
-	marquescost = 10
-
-/obj/structure/closet/crate/chest/inqcrate/supplies/sredvials/Initialize()
-	. = ..()
-	new /obj/item/reagent_containers/glass/bottle/alchemical/healthpotnew(src)
-	new /obj/item/reagent_containers/glass/bottle/alchemical/healthpotnew(src)
-	new /obj/item/reagent_containers/glass/bottle/alchemical/healthpotnew(src)
-
 /datum/inqports/supplies/bluepotions
 	name = "3 Bottles of Blue"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/bluepots
@@ -124,18 +112,6 @@
 	new /obj/item/reagent_containers/glass/bottle/rogue/manapot(src)
 	new /obj/item/reagent_containers/glass/bottle/rogue/manapot(src)
 	new /obj/item/reagent_containers/glass/bottle/rogue/manapot(src)
-
-/datum/inqports/supplies/strongbluevials
-	name = "3 Vials of Strong Blue"
-	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/sbluevials
-	maximum = 4
-	marquescost = 16
-
-/obj/structure/closet/crate/chest/inqcrate/supplies/sbluevials/Initialize()
-	. = ..()
-	new /obj/item/reagent_containers/glass/bottle/alchemical/strongmanapot(src)
-	new /obj/item/reagent_containers/glass/bottle/alchemical/strongmanapot(src)
-	new /obj/item/reagent_containers/glass/bottle/alchemical/strongmanapot(src)
 
 /datum/inqports/supplies/smokes
 	name = "4 Smokebombs"

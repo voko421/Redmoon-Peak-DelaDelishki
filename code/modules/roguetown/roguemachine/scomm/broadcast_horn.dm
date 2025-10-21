@@ -1,3 +1,6 @@
+#define TOWNER_BROADCAST_COST 1
+#define NON_TOWNER_BROADCAST_COST 5
+
 /obj/structure/broadcast_horn
 	name = "\improper Streetpipe"
 	desc = "Also known as the People's Mouth, so long as the people can afford the ratfeed to pay for it."
@@ -17,11 +20,11 @@
 /obj/structure/broadcast_horn/examine(mob/user)
 	. = ..()
 	if(listening)
-		. += "There's a faint skittering coming out of it."
+		. += span_info("There's a faint skittering coming out of it.")
 	else
-		. += "The rats within are quiet."
+		. += span_info("The rats within are quiet.")
 	if(broadcaster_tag)
-		. += "It's[broadcaster_tag ? " labeled as [broadcaster_tag]" : ""]."
+		. += span_info("It's[broadcaster_tag ? " labeled as [broadcaster_tag]" : ""].")
 
 /obj/structure/broadcast_horn/redstone_triggered()
 	toggle_horn()
@@ -104,10 +107,25 @@
 
 /obj/structure/broadcast_horn/paid
 	name = "\improper Streetpipe"
-	desc = "Also known as the People's Mouth, so long as the people can afford the ratfeed to pay for it. Insert a ziliqua to broadcast a message to every SCOM."
+	desc = "Also known as the People's Mouth, so long as the people can afford the ratfeed to pay for it."
 	icon_state = "broadcaster_crass"
 	icon = 'icons/roguetown/misc/machines.dmi'
 	var/is_locked = FALSE
+
+/obj/structure/broadcast_horn/paid/examine()
+	. = ..()
+	. += span_info("A noble, yeoman, churchman, retinue member, or courtier can use this for a zenny. Others must insert a ziliqua.")
+
+/obj/structure/broadcast_horn/paid/proc/get_broadcast_cost(mob/user)
+	var/datum/job/user_job = SSjob.GetJob(user.job)
+	if(!user_job)
+		return NON_TOWNER_BROADCAST_COST
+	if(user_job.department_flag & (NOBLEMEN|YEOMEN|GARRISON|CHURCHMEN|COURTIERS))
+		return TOWNER_BROADCAST_COST
+	if(HAS_TRAIT(user, TRAIT_NOBLE))
+		// Noble privilege! 
+		return TOWNER_BROADCAST_COST
+	return NON_TOWNER_BROADCAST_COST
 
 /obj/structure/broadcast_horn/paid/attackby(obj/item/P, mob/user, params)
 	// Handle locking/unlocking with crier key
@@ -130,9 +148,11 @@
 			say("Coin already loaded.")
 			playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 			return
+		
+		var/cost = get_broadcast_cost(user)
 
-		if(C.get_real_price() != 5)
-			to_chat(user, span_warning("Invalid payment! Insert coin worth 5 mammon."))
+		if(C.get_real_price() != cost)
+			to_chat(user, span_warning("Invalid payment! Insert coin worth [cost] mammon."))
 			playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 			return
 
@@ -141,7 +161,7 @@
 
 		// Route payments to rousmaster
 		for(var/obj/structure/roguemachine/crier/Crier in world)
-			Crier.total_payments += 5
+			Crier.total_payments += cost
 			break // Safety. Prevents a runtime if more than 1 rousmaster exists.
 
 		playsound(src, 'sound/misc/coininsert.ogg', 100, FALSE, -1)
@@ -157,3 +177,6 @@
 /obj/structure/broadcast_horn/Destroy()
 	lose_hearing_sensitivity()
 	return ..()
+
+#undef TOWNER_BROADCAST_COST
+#undef NON_TOWNER_BROADCAST_COST

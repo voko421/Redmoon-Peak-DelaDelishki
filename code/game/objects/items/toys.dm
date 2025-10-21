@@ -119,7 +119,7 @@
 
 /obj/item/toy/cards/deck/examine()
 	. = ..()
-	. += span_notice("Use the deck in your hand to shuffle the cards. Draw a card by clicking on it with an empty hand.")
+	. += span_smallnotice("Use the deck in your hand to shuffle the cards. Draw a card by clicking on it with an empty hand.")
 
 /obj/item/toy/cards/deck/Initialize()
 	. = ..()

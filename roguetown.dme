@@ -2345,7 +2345,6 @@
 #include "code\modules\roguetown\roguemachine\questing\types\kill\quest_kill_easy.dm"
 #include "code\modules\roguetown\roguemachine\questing\types\kill\quest_outlaw.dm"
 #include "code\modules\roguetown\roguemachine\questing\types\kill\quest_raid.dm"
->>>>>>> 4036a55912b5da996aae7027d137d467bbcfab6b
 #include "code\modules\roguetown\roguemachine\steward\steward.dm"
 #include "code\modules\roguetown\roguemachine\stockpile\stockpile.dm"
 #include "code\modules\roguetown\roguemachine\stockpile\withdraw_tab.dm"

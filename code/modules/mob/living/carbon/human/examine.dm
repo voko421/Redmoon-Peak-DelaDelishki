@@ -133,28 +133,28 @@
 		if(observer_privilege || get_location_accessible(src, BODY_ZONE_PRECISE_GROIN, skipundies = TRUE))
 			creampie = has_status_effect(/datum/status_effect/facial/internal)
 		if(facial && creampie)
-			var/facial_wet_or_dry = !facial?.has_dried_up ? "высохшим семенем" : "семенем"
+			var/facial_wet_or_dry = !facial?.has_dried_up ? "высохшей генитальной субстанцией" : "генитальной субстанцией"
 			var/creampie_wet_or_dry = !creampie?.has_dried_up ? "капает" : "стекает"
-			var/we_wet_or_dry = facial?.has_dried_up && creampie?.has_dried_up ? "высохшая семень" : "семень"
+			var/we_wet_or_dry = facial?.has_dried_up && creampie?.has_dried_up ? "высохшая генитальная субстанция" : "генитальная субстанция"
 			if(user != src && isliving(user))
 				var/mob/living/L = user
-				. += (L.STAPER >= 8 && L.STAINT >= 5) ? span_aiprivradio("[m1] [facial_wet_or_dry] and [creampie_wet_or_dry] [we_wet_or_dry]!") : span_warning("[m1] covered in something glossy!")
+				. += (L.STAPER >= 8 && L.STAINT >= 5) ? span_aiprivradio("Лицо покрыто [facial_wet_or_dry]. С бёдер [creampie_wet_or_dry] [we_wet_or_dry]!") : span_warning("Всё тело измазано чем-то блестящим!")
 			else
-				. += span_aiprivradio("Лицо [m1] покрыто [facial_wet_or_dry] и на внутренней стороне бёдер [creampie_wet_or_dry] [we_wet_or_dry]!")
+				. += span_aiprivradio("Моё лицо покрыто [facial_wet_or_dry] и на внутренней стороне бёдер [creampie_wet_or_dry] [we_wet_or_dry]!")
 		else if(facial)
-			var/wet_or_dry = !facial?.has_dried_up ? "высохшим семенем" : "семенем"
+			var/wet_or_dry = !facial?.has_dried_up ? "высохшей генитальной субстанцией" : "генитальной субстанцией"
 			if(user != src && isliving(user))
 				var/mob/living/L = user
-				. += (L.STAPER >= 8 && L.STAINT >= 5) ? span_aiprivradio("Лицо [m1] покрыто [wet_or_dry]!") : span_warning("Лицо [m1] намазано чем-то блестящим!")
+				. += (L.STAPER >= 8 && L.STAINT >= 5) ? span_aiprivradio("Лицо покрыто [wet_or_dry]!") : span_warning("Лицо намазано чем-то блестящим!")
 			else
-				. += span_aiprivradio("[m1] [wet_or_dry]!")
+				. += span_aiprivradio("Моё лицо покрыто [wet_or_dry]!")
 		else if(creampie)
 			var/wet_or_dry = !creampie?.has_dried_up ? "капает" : "стекает"
 			if(user != src && isliving(user))
 				var/mob/living/L = user
-				. += (L.STAPER >= 8 && L.STAINT >= 5) ? span_aiprivradio("[m1] [wet_or_dry]!") : span_warning("Бёдра [m1] измазаны чем-то блестящим!")
+				. += (L.STAPER >= 8 && L.STAINT >= 5) ? span_aiprivradio("С бёдер [wet_or_dry] генитальная субстанция!") : span_warning("Бёдра измазаны чем-то блестящим!")
 			else
-				. += span_aiprivradio("На внутренней стороне бёдер [m1] [wet_or_dry] семя!")
+				. += span_aiprivradio("На внутренней стороне бёдер [wet_or_dry] генитальная субстанция!")
 
 		//For tennite schism god-event
 		if(length(GLOB.tennite_schisms))

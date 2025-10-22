@@ -41,6 +41,9 @@
 			if(I.obj_broken && I.obj_integrity >= I.max_integrity)
 				I.obj_integrity = I.max_integrity
 				I.obj_fix()
+		else if(I.peel_count)
+			I.peel_count--
+			to_chat(user, span_info("[I]'s shorn layers mend together. ([I.peel_count])."))
 		else
 			to_chat(user, span_info("[I] appears to be in perfect condition."))
 			revert_cast()

@@ -53,7 +53,7 @@
 	name = "gilded gauntlets"
 	desc = "Many a man his life hath sold,"
 	icon_state = "matthiosgloves"
-	max_integrity = ARMOR_INT_SIDE_BLACKSTEEL
+	max_integrity = ARMOR_INT_SIDE_ANTAG
 
 /obj/item/clothing/gloves/roguetown/plate/matthios/Initialize()
 	. = ..()
@@ -70,7 +70,7 @@
 	name = "avantyne gauntlets"
 	desc = "avantyne plate gauntlets. Called forth from the edge of what should be known. In Her name."
 	icon_state = "zizogauntlets"
-	max_integrity = ARMOR_INT_SIDE_BLACKSTEEL
+	max_integrity = ARMOR_INT_SIDE_ANTAG
 
 /obj/item/clothing/gloves/roguetown/plate/zizo/Initialize()
 	. = ..()

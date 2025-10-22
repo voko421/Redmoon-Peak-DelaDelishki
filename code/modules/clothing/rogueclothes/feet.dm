@@ -267,7 +267,7 @@
 
 
 /obj/item/clothing/shoes/roguetown/boots/armor/matthios
-	max_integrity = ARMOR_INT_SIDE_BLACKSTEEL
+	max_integrity = ARMOR_INT_SIDE_ANTAG
 	name = "gilded boots"
 	desc = "Gilded tombs do worm enfold."
 	icon_state = "matthiosboots"
@@ -284,7 +284,7 @@
 	qdel(src)
 
 /obj/item/clothing/shoes/roguetown/boots/armor/zizo
-	max_integrity = ARMOR_INT_SIDE_BLACKSTEEL
+	max_integrity = ARMOR_INT_SIDE_ANTAG
 	name = "avantyne boots"
 	desc = "Plate boots. Called forth from the edge of what should be known. In Her name."
 	icon_state = "zizoboots"

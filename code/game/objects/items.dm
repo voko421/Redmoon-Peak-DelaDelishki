@@ -243,6 +243,8 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	/// Angle of the icon while wielded, these are used for attack animations. Generally it's flat, but not always.
 	var/icon_angle_wielded = 0
 
+	var/no_use_cd = FALSE //if true, no cooldown when interacting with it
+
 /obj/item/Initialize()
 	. = ..()
 	if(!pixel_x && !pixel_y && !bigboy)

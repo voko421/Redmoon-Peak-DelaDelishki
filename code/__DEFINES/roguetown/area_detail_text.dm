@@ -41,7 +41,7 @@ One must wonder if those stygian-filligreed constructs have survived in the peat
 #define DETAIL_TEXT_CITY_COAST "Close enough to the city that I can see its torchlight. It is easy to imagine why they say the Comet Syon landed here. The bay yawns like a giant concave lens; the hinted epicenter of ego-death. \n\\n\ The salted ocean air carries a bitter taste, here."
 
 // Mount Decap & Dungeons
-#define DETAIL_TEXT_DECAP "Mount Golgotha and its lava-flows stretches to the north. An impossibly-tall sinewave of earth, screaming upwards at the sky with acrid smoke and jagged cliffs. The old alps (old- too old for rage) have cracks in them that break the massif northwards and spill a river with cool, clear water. \n\ Tarichea, o, glowing monument!, once powered by the lava flows of Mount Golgotha, now lays drowned in them."
+#define DETAIL_TEXT_DECAP "Mount Golgotha and its lava-flows stretches to the north. An impossibly-tall sinewave of earth, full of rage at its severed futures. It is still, after a thousand years, screaming upwards at the sky; acrid smoke tries to choke the firmament above and jagged cliffs try to pierce its nebulous hide. The ancient alps (old- too old for rage) have cracks in them that break the massif northwards and spill a river with cool, clear water. \n\ Tarichea, o, glowing monument!, once powered by the lava flows of Mount Golgotha, now lays drowned in them."
 #define DETAIL_TEXT_DECAP_TARICHEA ""
 #define DETAIL_TEXT_DECAP_GUNDU_ZIRAK ""
 #define DETAIL_TEXT_DECAP_DRAGONDEN ""

@@ -447,10 +447,25 @@
 	desc = "A wood mask carved in the visage of the fox spirits said to ply their tricks in the forests of Kazengun."
 	icon_state = "kitsune"
 
+/obj/item/clothing/mask/rogue/facemask/steel/kazengun
+	name = "soldier's half-mask"
+	desc = "\"The first lesson of war is that it would be better to live in peace.\""
+	block2add = null
+	armor = ARMOR_PLATE_BAD // because it's only half
+	icon_state = "kazengunmouthguard"
+	item_state = "kazengunmouthguard"
+
+/obj/item/clothing/mask/rogue/facemask/steel/kazengun/full
+	name = "ogre mask"
+	desc = "\"The second lesson: Rich men have dreams. Poor men die to make them come true.\""
+	icon_state = "kazengunfaceguard"
+	item_state = "kazengunfaceguard"
+
 /obj/item/clothing/mask/rogue/shepherd
 	name = "halfmask"
 	icon_state = "shepherd"
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
+	block2add = null
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
 	adjustable = CAN_CADJUST
 	toggle_icon_state = TRUE

@@ -88,3 +88,37 @@
 	icon_state = "shadowgauntlets"
 	allowed_race = NON_DWARVEN_RACE_TYPES
 	body_parts_covered = HANDS|ARMS //For "heavy" drow merc
+
+/obj/item/clothing/gloves/roguetown/plate/kote
+	name = "jjajeungna gauntlets"
+	desc = "A set of reinforced Kazengunite gauntlets. Difficult to do much other than fight in, but not entirely arresting."
+	icon_state = "kazengungauntlets"
+	item_state = "kazengungauntlets"
+	body_parts_covered = HANDS|ARMS
+	detail_tag = "_detail"
+	color = "#FFFFFF"
+	detail_color = "#FFFFFF"
+	var/picked = FALSE
+
+/obj/item/clothing/gloves/roguetown/plate/kote/attack_right(mob/user)
+	..()
+	if(!picked)
+		var/choice = input(user, "Choose a color.", "Uniform colors") as anything in colorlist
+		var/playerchoice = colorlist[choice]
+		picked = TRUE
+		detail_color = playerchoice
+		detail_tag = "_detail"
+		update_icon()
+		if(loc == user && ishuman(user))
+			var/mob/living/carbon/H = user
+			H.update_inv_armor()
+			H.update_icon()
+
+/obj/item/clothing/gloves/roguetown/plate/kote/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)

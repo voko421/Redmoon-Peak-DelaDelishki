@@ -314,6 +314,39 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/iron
 
+/obj/item/clothing/shoes/roguetown/boots/leather/reinforced/kazengun
+	name = "armored sandals"
+	desc = "Leather sandals, with steel ankle-protectors and socks of sturdy cloth."
+	icon_state = "kazengunboots"
+	item_state = "kazengunboots"
+	detail_tag = "_detail"
+	color = "#FFFFFF"
+	detail_color = "#FFFFFF"
+	var/picked = FALSE
+
+/obj/item/clothing/shoes/roguetown/boots/leather/reinforced/kazengun/attack_right(mob/user)
+	..()
+	if(!picked)
+		var/choice = input(user, "Choose a color.", "Uniform colors") as anything in colorlist
+		var/playerchoice = colorlist[choice]
+		picked = TRUE
+		detail_color = playerchoice
+		detail_tag = "_detail"
+		update_icon()
+		if(loc == user && ishuman(user))
+			var/mob/living/carbon/H = user
+			H.update_inv_armor()
+			H.update_icon()
+
+/obj/item/clothing/shoes/roguetown/boots/leather/reinforced/kazengun/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
 /obj/item/clothing/shoes/roguetown/jester
 	name = "funny shoes"
 	desc = "The bells add a jostling jingle jangle to each step."

@@ -2,8 +2,6 @@
 
 // STYLE GUIDE (these are SUGGESTIONS, NOT hard rules)
 
-// big inspos so far have been qud, a canticle for liebowitz, moonbound (robert sloan in general), saul williams' poetry, and a spattering of other authors
-
 // people who click on this stuff obviously want to be told more abt the world. you should reward ppl for showing interest: evocative language/background info, or any combo of the two
 // avoid just restating what an area looks like; roguetown is already dripping with visual/audio atmosphere. using that to set tone is good, but there should be more to the entry beyond that
 

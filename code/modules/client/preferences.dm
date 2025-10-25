@@ -394,9 +394,9 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			if(!(AGENDER in pref_species.species_traits))
 				var/dispGender
 				if(gender == MALE)
-					dispGender = "Мускулистое" // LETHALSTONE EDIT: repurpose gender as bodytype, display accordingly
+					dispGender = "Мужское" // LETHALSTONE EDIT: repurpose gender as bodytype, display accordingly
 				else if(gender == FEMALE)
-					dispGender = "Женственный" // LETHALSTONE EDIT: repurpose gender as bodytype, display accordingly
+					dispGender = "Женственное" // LETHALSTONE EDIT: repurpose gender as bodytype, display accordingly
 				else
 					dispGender = "Другое"
 				dat += "<b>Телосложение:</b> <a href='?_src_=prefs;preference=gender'>[dispGender]</a><BR>"

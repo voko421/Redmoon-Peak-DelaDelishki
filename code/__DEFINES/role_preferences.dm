@@ -6,20 +6,20 @@
 
 //These are synced with the Database, if you change the values of the defines
 //then you MUST update the database!
-#define ROLE_MANIAC				"Maniac"
-#define ROLE_WEREWOLF			"Werewolf"
-#define ROLE_VAMPIRE			"Vampire"
-#define ROLE_NBEAST				"Vampire Lord"
-#define ROLE_BANDIT				"Bandit"
-#define ROLE_DELF				"Dark Elf"
-#define ROLE_PREBEL				"Peasant Rebel"
-#define ROLE_ASPIRANT			"Aspirant"
-#define ROLE_LICH				"Lich"
-#define ROLE_DREAMWALKER		"Dreamwalker"
-#define ROLE_ASCENDANT			"Ascendant"
-#define ROLE_WRETCH				"Wretch"
-#define ROLE_UNBOUND_DEATHKNIGHT "Unbound Death Knight"
-#define ROLE_DARK_ITINERANT "Dark Itinerant"
+#define ROLE_MANIAC				"Маньяк"
+#define ROLE_WEREWOLF			"Оборотень"
+#define ROLE_VAMPIRE			"Вампир"
+#define ROLE_NBEAST				"Лорд Вампиров"
+#define ROLE_BANDIT				"Бандит"
+#define ROLE_DELF				"Тёмный Эльф"
+#define ROLE_PREBEL				"Мятежник"
+#define ROLE_ASPIRANT			"Притязатель"
+#define ROLE_LICH				"Лич"
+#define ROLE_DREAMWALKER		"Сновидец"
+#define ROLE_ASCENDANT			"Возносящийся"
+#define ROLE_WRETCH				"Отверженный"
+#define ROLE_UNBOUND_DEATHKNIGHT "Свободный рыцарь смерти"
+#define ROLE_DARK_ITINERANT "Тёмный путешественник"
 
 #define ROLE_SYNDICATE			"Syndicate"
 #define ROLE_TRAITOR			"Traitor"
@@ -49,10 +49,10 @@
 #define ROLE_DEATHSQUAD			"Deathsquad"
 #define ROLE_LAVALAND			"Lavaland"
 #define ROLE_INTERNAL_AFFAIRS	"Internal Affairs Agent"
-#define ROLE_NECRO_SKELETON		"Necromancer Skeleton"
-#define ROLE_LICH_SKELETON		"Lich Skeleton"
-#define ROLE_CHOSEN				"Chosen"
-#define ROLE_VAMPIRE_SUMMON		"Vampire Summon"
+#define ROLE_NECRO_SKELETON		"Скелет Некроманта"
+#define ROLE_LICH_SKELETON		"Скелет Лича"
+#define ROLE_CHOSEN				"Избранный"
+#define ROLE_VAMPIRE_SUMMON		"Существо Вамипира"
 
 GLOBAL_LIST_INIT(special_roles_rogue, list(
 	ROLE_MANIAC = /datum/antagonist/maniac,
@@ -68,5 +68,5 @@ GLOBAL_LIST_INIT(special_roles_rogue, list(
 
 //Job defines for what happens when you fail to qualify for any job during job selection
 #define BEOVERFLOW 	1
-#define BERANDOMJOB "Be Random Role"
-#define RETURNTOLOBBY 	"Return to Lobby"
+#define BERANDOMJOB "Получить случайную роль"
+#define RETURNTOLOBBY 	"Вернуться в лобби"
